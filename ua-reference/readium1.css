@@ -1,0 +1,101 @@
+/* Readium 1 
+
+   Inline styles -> stylesheet
+   Classes used for + readability
+
+   Source: https://github.com/readium/readium-shared-js/wiki/ContentModifications */
+
+/* Fixed Layout */
+
+html.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: var(--meta-content-width);
+  width: var(--meta-content-width);
+  min-height: var(--meta-content-height);
+  height: var(--meta-content-height);
+}
+
+body {
+  width: var(--meta-content-width);
+  height: var(--meta-content-height);
+}
+
+:root.zoom {
+  transform: scale(var(--user-zoom));
+  transform-origin: 0px 0px 0px;
+  opacity: 1;
+}
+
+/* Reflow */
+
+html {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 100%;
+  opacity: 1;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 1160px;
+  min-height: 806px;
+  height: 806px;
+  max-height: 806px;
+}
+
+html.page {
+  column-count: auto;
+  column-width: 550px;
+}
+
+html.spread {
+  column-count: 2;
+  column-width: auto;
+  column-gap: 60px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body.theme {
+  color: var(--user-theme-color);
+  background: var(--user-theme-background);
+}
+
+p, div, span, h1, h2, h3, h4, h5, h6, li, blockquote, td, pre {
+  font-size: var(--user-font-size);
+  line-height: var(--matching-line-height);
+} 
+
+img {
+  width: auto;
+  max-width: 98%;
+  height: auto;
+  max-height: 98%;
+}
+
+/* Media overlays */
+
+.mo-active-default {
+  background-color: yellow !important;
+  color: black !important;
+  border-radius: 0.4em;
+}
+
+/* Annotation highlights */
+
+.rd-highlight.test-highlight {
+  position: absolute;
+  opacity: 0.2;
+  background-color: red;
+}
+
+.rd-highlight.hover-test-highlight {
+  position: absolute;
+  opacity: 0.4;
+  background-color: red;
+}

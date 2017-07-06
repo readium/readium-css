@@ -10,7 +10,7 @@
 
 /* Fixed Layout */
 
-/* Every page is a new iframe */
+/* Every page is a new iframe (FOR FIXED LAYOUT ONLY) */
 html {
   position: absolute;
   top: 0; 
@@ -36,6 +36,7 @@ body {
 
 /* Reflow */
 
+/* Unlike fixed-layout, 1 page ≠ 1 iframe */
 html {
   margin: 0px;
   padding: 0px;

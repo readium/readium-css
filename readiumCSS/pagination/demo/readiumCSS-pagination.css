@@ -41,7 +41,6 @@ body {
      it will be a lot better to manage the iframe/webview size
      If we can have both in sync, it will be a huge win */
   margin: 0 auto;
-  max-width: 35em;
 
   position: relative;
   overflow: hidden;

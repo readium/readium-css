@@ -7,11 +7,11 @@
 /* 001 
    Hidden elements */
 
-[hidden], head, link, meta, rp, script, source, style, title {
+[hidden], head, link, meta, rp, script, style, title {
   display: none;
 }
 
-noscript {
+noscript, source {
   display: inline;
 }
 
@@ -317,6 +317,7 @@ dd, dl, dt, ol, ul {
 
 li { 
   display: list-item; 
+  text-align: -webkit-match-parent;
 }
 
 dl, ol, ul { 
@@ -411,7 +412,6 @@ table {
   box-sizing: content-box;
   border-spacing: 2px;
   border-collapse: separate;
-  text-indent: 0;
 }
 
 td, th { 
@@ -420,7 +420,7 @@ td, th {
 
 th { 
   font-weight: bold;
-  text-align: center;
+  text-align: -internal-center;
 }
 
 thead, tbody, tfoot { 
@@ -431,7 +431,7 @@ tr, td, th {
   vertical-align: inherit; 
 }
 
-table, td, th { 
+table { 
   border-color: grey; 
 }
 

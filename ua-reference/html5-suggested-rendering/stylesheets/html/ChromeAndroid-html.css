@@ -1,4 +1,4 @@
-/* HTML5 Suggested rendering versus Safari UA Stylesheet (Version 10.1.1)
+/* HTML5 Suggested rendering versus Chrome UA Stylesheet (version 59 Android 6)
 
    Source: https://www.w3.org/TR/html5/rendering.html */
 
@@ -7,11 +7,11 @@
 /* 001 
    Hidden elements */
 
-[hidden], head, link, meta, rp, script, source, style, template, title {
+[hidden], head, link, meta, rp, script, style, title {
   display: none;
 }
 
-noscript {
+noscript, source {
   display: inline;
 }
 
@@ -85,11 +85,11 @@ sub, sup {
 }
 
 ruby { 
-  display: inline;
+  display: inline; 
   text-indent: 0;
 }
 
-rb   { 
+rb { 
   display: inline; 
   white-space: normal; 
 }
@@ -97,7 +97,8 @@ rb   {
 rt {
   display: block;
   white-space: normal;
-  font-size: -webkit-ruby-text;
+  font-size: 50%;
+  line-height: normal;
   text-indent: 0;
   -webkit-text-emphasis-style: none;
   -webkit-text-emphasis-color: initial;
@@ -145,7 +146,7 @@ mark {
 }
 
 abbr[title], acronym[title] { 
-  text-decoration: none; 
+  text-decoration: underline dotted initial; 
 }
 
 ins, u { 
@@ -199,12 +200,12 @@ nobr wbr {
 address, blockquote, div, figure, figcaption, footer, form,
 header, hr, legend, p, pre, article, aside, h1, h2, h3, h4, h5, h6, 
 main, nav, section, table, caption, colgroup, col, thead, tbody, 
-tfoot, tr, td, th, dd, dl, dt, ol, ul, li {
+tfoot, tr, td, th, dd, dl, dt, ol, ul, li, bdi {
   unicode-bidi: normal;
 }
 
 [dir=ltr i], [dir=rtl i], [dir=auto i] {
-  unicode-bidi: embed; 
+  unicode-bidi: isolate; 
 }
 
 bdi, bdi[dir] {
@@ -411,7 +412,6 @@ table {
   box-sizing: content-box;
   border-spacing: 2px;
   border-collapse: separate;
-  text-indent: 0;
 }
 
 td, th { 
@@ -420,6 +420,7 @@ td, th {
 
 th { 
   font-weight: bold;
+  text-align: -internal-center;
 }
 
 thead, tbody, tfoot { 
@@ -431,7 +432,7 @@ tr, td, th {
 }
 
 table { 
-  border-color: gray; 
+  border-color: grey; 
 }
 
 thead, tbody, tfoot, tr { 
@@ -441,7 +442,7 @@ thead, tbody, tfoot, tr {
 /* 010
    Form controls */
 
-input, select, option, optgroup, button, textarea, keygen {
+input, select, button, textarea, keygen {
   text-indent: 0px;
 }
 
@@ -496,8 +497,8 @@ canvas {
 }
 
 audio[controls] {
-  width: 200px;
-  height: 25px;
+  width: 300px;
+  height: 48px;
 }
 
 video[controls] {

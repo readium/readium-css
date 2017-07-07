@@ -1,4 +1,4 @@
-/* HTML5 Suggested rendering versus Safari UA Stylesheet (Version 10.1.1)
+/* HTML5 Suggested rendering versus Safari UA Stylesheet (Version 11 - iOS)
 
    Source: https://www.w3.org/TR/html5/rendering.html */
 
@@ -441,7 +441,7 @@ thead, tbody, tfoot, tr {
 /* 010
    Form controls */
 
-input, select, option, optgroup, button, textarea, keygen {
+input, select, button, textarea, keygen {
   text-indent: 0px;
 }
 
@@ -489,6 +489,7 @@ iframe {
 
 video { 
   object-fit: contain; 
+  -webkit-tap-highlight-color: transparent;
 }
 
 canvas {
@@ -496,17 +497,17 @@ canvas {
 }
 
 audio[controls] {
-  width: 200px;
-  height: 25px;
+  min-width: 260px;
+  height: 39px;
 }
 
 video[controls] {
-
+  -webkit-user-select: none;
 }
 
 /* 014 
    Images */
 
 img {
-
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

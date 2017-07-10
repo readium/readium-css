@@ -64,7 +64,7 @@ You can also use them in media queries.
   --defaultFontSize: 16px;
 }
 
-@media (screen) and (max-width: 560px) {
+@media screen and (max-width: 560px) {
   :root {
     --defaultFontSize: 14px;
   }
@@ -201,12 +201,12 @@ body {
   --breakpoint: medium;
 }
 
-@media (screen) and (max-width: 30em) {
+@media screen and (max-width: 30em) {
   body {
     --breakpoint: small;
   }
 }
-@media (screen) and (min-width: 50em) {
+@media screen and (min-width: 50em) {
   body {
     --breakpoint: large;
   }

@@ -102,7 +102,7 @@ button {
 
 That could be managed via JavaScript though, so that you don’t need to maintain fallbacks in pure CSS.
 
-It is important to note the `var()` function provides a fallback mechanism itself, in case you’re custom property is not set. 
+It is important to note the `var()` function provides a fallback mechanism itself, in case your custom property is not set. 
 
 The function looks like this: 
 

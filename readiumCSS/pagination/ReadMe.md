@@ -77,7 +77,7 @@ html {
 
 ```
 
-You could use `:root` to define default values then override them for specific selectors.
+To sum things up, variables bring a lot of flexibility and customization to CSS. It can also simplify your stylesheets and make them much more maintainable. 
 
 ## Fallback
 
@@ -225,8 +225,20 @@ You could probably leverage such a hack to implement some kind of `column-width`
 document.documentElement.style.setProperty("--primary-color", "var(--secondary-color)");
 ```
 
+### Abusing CSS variables to make them read and acted on by JavaScript
+
+[As seen in the spec itself (example 3)](https://drafts.csswg.org/css-variables/#syntax), you could create values which sole purpose is to be read and acted on by JavaScript.
+
+While the following variable would obviously be useless as a variable (invalid value):
+
+```
+--foo: if(x > 5) this.width = 10;
+```
+
+You could use it in JavaScript since it’s still a valid custom property.
+
 ### User themes
 
-You could even go the extra mile and implement custom styles inputs (color pickers, font family, etc.) in the UI so that users can create their own theme on the fly, then manage it more easily (storing the user theme as a style element with an id in `localStorage` for instance).
+You could even go the extra mile and provide an “important theme feature” or implement custom styles inputs (color pickers, font family, etc.) in the UI so that users can create their own theme on the fly, then manage it more easily (storing the user theme as a style element with an id in `localStorage` for instance).
 
 [See this CSS-Tricks’ article for use cases and demos](https://css-tricks.com/css-custom-properties-theming/).

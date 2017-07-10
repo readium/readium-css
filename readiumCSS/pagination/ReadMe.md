@@ -239,6 +239,6 @@ You could use it in JavaScript since it’s still a valid custom property.
 
 ### User themes
 
-You could even go the extra mile and provide an “important theme feature” or implement custom styles inputs (color pickers, font family, etc.) in the UI so that users can create their own theme on the fly, then manage it more easily (storing the user theme as a style element with an id in `localStorage` for instance).
+You could even go the extra mile and provide an “import theme” feature or implement custom styles inputs (color pickers, font family, etc.) in the UI so that users can create their own theme on the fly, then manage it more easily (storing the user theme as a style element with an id in `localStorage` for instance).
 
 [See this CSS-Tricks’ article for use cases and demos](https://css-tricks.com/css-custom-properties-theming/).

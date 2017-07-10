@@ -1,5 +1,8 @@
 /* Readium CSS 
    Pagination module
+
+   A set of styles to paginate ePublications
+
    Repo: https://github.com/readium/readium-css */
 
 :root {
@@ -18,7 +21,7 @@
   column-gap: 0;
   -moz-column-fill: auto;
   column-fill: auto;
-  -webkit-line-box-contain: block glyphs replaced;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -27,8 +30,4 @@ body {
   position: relative;
   overflow: hidden;
   padding: 0 10px;
-}
-
-a, h1, h2, h3, h4, h5, h6 {
-  word-break: break-word !important;
 }

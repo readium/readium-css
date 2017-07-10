@@ -1,0 +1,66 @@
+/* Readium CSS 
+   Safeguards module
+
+   A set of styles to prevent common issues in pagination
+
+   Repo: https://github.com/readium/readium-css */
+
+
+/* Config */
+:root {
+  /* max-width for media, you can override that via JS if not compiled to static */
+  --maxMediaWidth: 100%;
+
+  /* max-height for media, you can override that via JS if not compiled to static 
+     Please consider figures might have a figcaption, which is why 95vh in the first place */
+  --maxMediaHeight: 95vh;
+
+  /* value for medias’ page-break-inside */
+  --breakMedia: avoid;
+
+  /* value for medias’ box-sizing */
+  --boxSizingMedia: border-box;
+
+  /* value for table’s box-sizing */
+  --boxSizingTable: border-box;
+}
+
+/* Sanitize line-heights in webkit e.g. raised cap without a declared line-height
+   See effect by checking this demo in Safari: https://codepen.io/JayPanoz/pen/gRmzrE
+   Note: glyphs will have to to be reset to inline for CJK */
+html {
+  -webkit-line-box-contain: block glyphs replaced;
+}
+
+/* Wrap long strings if larger than line-length */
+a, h1, h2, h3, h4, h5, h6 {
+  word-break: break-word;
+}
+
+/* Size medias */
+img, svg, audio, video {
+  /* We probably don’t need to use modern box-sizing as auto behaves like it */
+  box-sizing: var(--boxSizingMedia);
+
+  width: auto;
+  height: auto;
+
+  /* Some files don’t have max-width */
+  max-width: var(--maxMediaWidth);
+
+  /* We’re setting a max-height, especially for covers */
+  max-height: var(--maxMediaHeight);
+
+  /* Object-fit allows us to keep the correct aspect-ratio */
+  object-fit: contain;
+
+  /* For page-break, we must use those 3 */
+  -webkit-column-break-inside: var(--breakMedia);
+  page-break-inside: var(--breakMedia);
+  break-inside: var(--breakMedia);
+}
+
+/* Try preventing border being cut-off, webkit + blink have content-box by default */
+table {
+  box-sizing: var(--boxSizingTable);
+}

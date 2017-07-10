@@ -30,8 +30,7 @@
   -moz-column-fill: auto;
   column-fill: auto;
 
-  /* Sanitizes line-heights */
-  -webkit-line-box-contain: block glyphs replaced;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -49,9 +48,4 @@ body {
      Currently implemented using padding -> we must switch to the new box model.
      If we can use margin, we won’t mess with the box model authors might expect. */
   padding: 0 10px;
-}
-
-/* wrap long strings if larger than line-length */
-a, h1, h2, h3, h4, h5, h6 {
-  word-break: break-word !important;
 }

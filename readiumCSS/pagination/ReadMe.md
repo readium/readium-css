@@ -36,6 +36,7 @@ Global references:
 - [CSS Custom Properties in Microsoft Edge](https://blogs.windows.com/msedgedev/2017/03/24/css-custom-properties/#fjMpiOekgjsGVp4S.97)
 - [PostCSS plugin to transform CSS variables into a static representation](https://www.npmjs.com/package/postcss-css-variables)
 - [JS Perf — CSS Variables vs. Inline Styles](https://jsperf.com/css-variables-vs-inline-styles)
+- [CSS Variables are a game changer](http://slides.com/gregoradams/css-variables-are-a-game-changer#/)
 
 ## Cascade and inheritance
 

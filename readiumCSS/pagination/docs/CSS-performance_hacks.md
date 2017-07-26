@@ -41,7 +41,7 @@ Indicates that the author expects to animate or change something about the eleme
 
 A browser might take this value as a signal to cache less aggressively on the element, or avoid caching at all and just continually re-render the element from scratch.
 
-#### <custom-ident>
+#### custom-ident
 
 Indicates that the author expects to animate or change the property with the given name on the element in the near future.
 

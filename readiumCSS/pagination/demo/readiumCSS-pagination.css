@@ -63,13 +63,13 @@
 
   /* Init pagination */
   /* TODO: document columns’ logic cos it might feel weird at first */
-  -webkit-column-width: var(--RS__colWidth);
-  -moz-column-width: var(--RS__colWidth);
-  column-width: var(--RS__colWidth);
-
   -webkit-column-count: var(--RS__colCount);
   -moz-column-count: var(--RS__colCount);
   column-count: var(--RS__colCount);
+
+  -webkit-column-width: var(--RS__colWidth);
+  -moz-column-width: var(--RS__colWidth);
+  column-width: var(--RS__colWidth);
 
   -webkit-column-gap: var(--RS__colGap);
   -moz-column-gap: var(--RS__colGap);
@@ -90,7 +90,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+/*  height: 100%; bug fix: blank pages after one-page html files */
 
   /* Limit line-length but we have to reset when 2 columns and control the viewport.
      By using max-width + margin auto, margins will shrink when font-size increases,

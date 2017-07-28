@@ -1,0 +1,47 @@
+/* Readium CSS 
+   Base module
+
+   A minimal stylesheet for all ebooks
+
+   Repo: https://github.com/readium/readium-css */
+
+:root {
+  /* Default font-stacks */
+  --RS__oldStyleTf: "Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif;
+  --RS__modernTf: Athelas, Constantia, Georgia, serif;
+  --RS__sansTf: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --RS__humanistTf: Seravek, Calibri, Roboto, Arial, sans-serif;
+  --RS__monospaceTf: "Andale Mono", Consolas, monospace;
+  
+  --RS__jp-gothicTf: "HiraKakuPro-W3", "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "游ゴシック", YuGothic, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", sans-serif;
+  --RS__jp-minchoTf: "HiraMinPro-W3", "Hiragino Mincho Pro W3", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", "MS Mincho", serif;
+  --RS__zh-gothicTf: "PingFang SC", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", sans-serif;
+  --RS__zh-minchoTf: "儷宋 Pro", "LiSong Pro", "PMingLiU", "MingLiU", serif;
+  --RS__arabicTf: "Al Nile", "Arabic Typesetting", sans-serif;
+  --RS__hebrewTf: "Arial Hebrew", "Arial Unicode MS", Arial, sans-serif;
+
+  /* Config */
+  --RS__baseFontFamily: var(--RS__oldStyleTf);
+  --RS__textColor: #121212;
+  --RS__backgroundColor: #FEFEFE;
+}
+
+/* Default colors */
+:root {
+  color: var(--RS__textColor) !important;
+  background-color: var(--RS__backgroundColor) !important;
+}
+
+/* Base typeface, which will be overridden by the authors’ CSS or not */
+/* CJK/RTL is a WIP, the two following declarations serve as examples */
+:root:lang(jp) {
+  --RS__baseFontFamily: var(--RS__jp-minchoTf);
+}
+
+:root:lang(zh) {
+  --RS__baseFontFamily: var(--RS__zh-minchoTf);
+}
+
+body {
+  font-family: var(--RS__baseFontFamily);
+}

@@ -6,9 +6,6 @@
    Repo: https://github.com/readium/readium-css */
 
 
-@namespace "http://www.w3.org/1999/xhtml";
-@namespace svg "http://www.w3.org/2000/svg";
-
 /* CONFIG */
 
 :root {
@@ -51,7 +48,8 @@
   color: var(--THEME__visitedColor) !important;
 }
 
-:root *[class*="gaiji"] {
+:root img[class*="gaiji"],
+:root *[epub|type~="titlepage"] img {
   -webkit-filter: invert(1);
   filter: invert(1);
 }

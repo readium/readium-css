@@ -25,12 +25,13 @@
   background-color: var(--RS__backgroundColor) !important;
 }
 
-/* Set default font for the doc’s body */
+/* Set default font for the doc’s body, it will be overridden by the authors’s stylesheet */
 body {
   font-family: var(--RS__baseFontFamily);
 }
 
-/* Language Overrides */
+/* Language Overrides
+   That will only work if either html or body have a (xml:)lang attribute, not for inline overrides */
 
 :lang(am) {
   --RS__baseFontFamily: Kefa, Nyala, Roboto, Noto, "Noto Sans Ethiopic", serif;
@@ -120,6 +121,7 @@ body {
   --RS__baseFontFamily: "Thonburi", "Leelawadee UI", "Cordia New", Roboto, Noto, "Noto Sans Thai", sans-serif;
 }
 
+/* The following will also work for zh-Hans */
 :lang(zh) {
   --RS__baseFontFamily: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
 }

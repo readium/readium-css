@@ -18,14 +18,10 @@
 
 /* STYLES */
 
-/* Colors */
-
 :root {
   background: var(--THEME__backgroundColor) !important;
   color: var(--THEME__textColor) !important;
 }
-
-/* Typo */
 
 :root *:not(a) {
   background-color: transparent !important;

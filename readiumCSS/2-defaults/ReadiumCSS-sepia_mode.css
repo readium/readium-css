@@ -1,7 +1,7 @@
 /* Readium CSS 
    Sepia mode
 
-   An preset theme for seipa mode
+   An preset theme for sepia mode
 
    Repo: https://github.com/readium/readium-css */
 
@@ -38,9 +38,7 @@
   color: var(--THEME__visitedColor);
 }
 
-/* It fails either with multiply or darken in the demo for some reason… iframe?
 :root svg,
 :root img {
   mix-blend-mode: multiply;
 }
-*/

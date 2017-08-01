@@ -1,0 +1,57 @@
+/* Readium CSS 
+   Night mode
+
+   An preset theme for night mode
+
+   Repo: https://github.com/readium/readium-css */
+
+
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace svg "http://www.w3.org/2000/svg";
+
+/* CONFIG */
+
+:root {
+  --THEME__backgroundColor: #000000;
+  --THEME__textColor: #FEFEFE;
+
+  --THEME__linkColor: #63caff;
+  --THEME__visitedColor: #0099E5;
+}
+
+/* STYLES */
+
+/* Colors */
+
+:root {
+  background: var(--THEME__backgroundColor) !important;
+  color: var(--THEME__textColor) !important;
+}
+
+/* Typo */
+
+:root *:not(a) {
+  background-color: transparent !important;
+  color: var(--THEME__textColor) !important;
+  border-color: currentColor !important;
+}
+
+:root svg|text {
+  fill: var(--THEME__textColor) !important;
+  stroke: none !important;
+}
+
+:root a:link,
+:root a:link * {
+  color: var(--THEME__linkColor) !important;
+}
+
+:root a:visited,
+:root a:visited * {
+  color: var(--THEME__visitedColor) !important;
+}
+
+:root *[class*="gaiji"] {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}

@@ -1,0 +1,53 @@
+/* Readium CSS 
+   Sepia mode
+
+   An preset theme for seipa mode
+
+   Repo: https://github.com/readium/readium-css */
+
+
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace svg "http://www.w3.org/2000/svg";
+
+/* CONFIG */
+
+:root {
+  --THEME__backgroundColor: #faf4e8;
+  --THEME__textColor: #121212;
+
+  --THEME__linkColor: #0000EE;
+  --THEME__visitedColor: #551A8B;
+}
+
+/* STYLES */
+
+/* Colors */
+
+:root {
+  background: var(--THEME__backgroundColor) !important;
+  color: var(--THEME__textColor) !important;
+}
+
+/* Typo */
+
+:root body {
+  background-color: transparent;
+  color: var(--THEME__textColor);
+}
+
+:root a:link,
+:root a:link * {
+  color: var(--THEME__linkColor);
+}
+
+:root a:visited,
+:root a:visited * {
+  color: var(--THEME__visitedColor);
+}
+
+/* It fails either with multiply or darken in the demo for some reason… iframe?
+:root svg,
+:root img {
+  mix-blend-mode: multiply;
+}
+*/

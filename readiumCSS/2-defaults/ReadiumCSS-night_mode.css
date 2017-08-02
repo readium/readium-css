@@ -49,3 +49,13 @@
   -webkit-filter: invert(1);
   filter: invert(1);
 }
+
+/* I’d like to try this as an opt-in mechanism for authors and see how it can work, but I need to know how we’ll manage user settings
+SVG is not supported in blink and webkit though…
+
+img.readiumCSS-invert {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+*/

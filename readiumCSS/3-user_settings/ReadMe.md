@@ -164,7 +164,7 @@ The user can set `margin-top`, `margin-bottom` and `text-indent` for paragraphs.
 --USER__paraSpacing
 ```
 
-Possible values: `0` | `0.375rem` | `0.75rem` | `1.2rem` | `1.5rem` | `1.65rem` | `1.75rem` | `2rem`
+Possible values: `0` | `0.375rem` | `0.75rem` | `1rem` | `1.25rem` | `1.5rem` | `1.65rem` | `1.75rem` | `2rem`
 
 #### Paragraphs’ indent
 
@@ -193,6 +193,12 @@ Possible values: `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
 ```
 
 Possible values: `0.0675rem` | `0.125rem` | `0.1875rem`
+
+## Themes
+
+In this model, themes are just a set of variables with specific values.
+
+It becomes even easier to override them for the user as the values are already user settings.
 
 ## Alternative options
 

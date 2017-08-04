@@ -9,14 +9,11 @@
 /* CONFIG */
 
 :root {
-  --THEME__backgroundColor: #faf4e8;
-  --THEME__textColor: #121212;
-
-  --THEME__linkColor: #0000EE;
-  --THEME__visitedColor: #551A8B;
+  --THEME__backgroundSepia: #faf4e8;
+  --THEME__textSepia: #121212;
 }
 
-/* STYLES */
+/* STYLES
 
 :root {
   background: var(--THEME__backgroundColor) !important;
@@ -42,3 +39,4 @@
 :root img {
   mix-blend-mode: multiply;
 }
+*/

@@ -9,14 +9,14 @@
 /* CONFIG */
 
 :root {
-  --THEME__backgroundColor: #000000;
-  --THEME__textColor: #FEFEFE;
+  --THEME__backgroundNight: #000000;
+  --THEME__textNight: #FEFEFE;
 
-  --THEME__linkColor: #63caff;
-  --THEME__visitedColor: #0099E5;
+  --THEME__linkNight: #63caff;
+  --THEME__visitedNight: #0099E5;
 }
 
-/* STYLES */
+/* STYLES
 
 :root {
   background: var(--THEME__backgroundColor) !important;
@@ -49,9 +49,6 @@
   -webkit-filter: invert(1);
   filter: invert(1);
 }
-
-/* I’d like to try this as an opt-in mechanism for authors and see how it can work, but I need to know how we’ll manage user settings
-SVG is not supported in blink and webkit though…
 
 img.readiumCSS-invert {
   -webkit-filter: invert(1);

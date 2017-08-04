@@ -209,7 +209,7 @@
 :root[style*="--USER__wordSpacing"] h6,
 :root[style*="--USER__wordSpacing"] p,
 :root[style*="--USER__wordSpacing"] li,
-:root[style*="--USER__wordSpacing"] div, {
+:root[style*="--USER__wordSpacing"] div {
   word-spacing: var(--USER__wordSpacing);
 }
 
@@ -221,7 +221,7 @@
 :root[style*="--USER__letterSpacing"] h6,
 :root[style*="--USER__letterSpacing"] p,
 :root[style*="--USER__letterSpacing"] li,
-:root[style*="--USER__letterSpacing"] div, {
+:root[style*="--USER__letterSpacing"] div {
   letter-spacing: var(--USER__letterSpacing);
 }
 

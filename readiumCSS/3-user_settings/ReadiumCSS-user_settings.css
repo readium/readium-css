@@ -140,37 +140,37 @@
 
 /* 1.2 value for typescale is probably the one we want as a default as it covers most publishers’ CSS */
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] h1 {
-  font-size: calc(((var(--USER__fontSize) * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale));
+  font-size: calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale));
 }
 
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] h2 {
-  font-size: calc((var(--USER__fontSize) * var(--USER__typeScale)) * var(--USER__typeScale));
+  font-size: calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale));
 }
 
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] h3 {
-  font-size: calc(var(--USER__fontSize) * var(--USER__typeScale));
+  font-size: calc(1rem * var(--USER__typeScale));
 }
 
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] h4 {
-  font-size: var(--USER__fontSize);
+  font-size: 1rem;
 }
 
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] h5,
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] small {
-  font-size: calc(var(--USER__fontSize) / var(--USER__typeScale));
+  font-size: calc(1rem / var(--USER__typeScale));
 }
 
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] h6,
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] sub,
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] sup {
-  font-size: calc((var(--USER__fontSize) / var(--USER__typeScale)) / var(--USER__typeScale));
+  font-size: calc((1rem / var(--USER__typeScale)) / var(--USER__typeScale));
 }
 
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] p,
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] li,
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] div,
 :root[style*="--USER__fontSize"][style*="--USER__typeScale"] pre {
-  font-size: var(--USER__fontSize);
+  font-size: 1rem;
 }
 
 /* Line height */

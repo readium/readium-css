@@ -1,0 +1,78 @@
+/* Readium CSS 
+   Default highlights
+
+   A stylesheet for user highlights
+
+   Repo: https://github.com/readium/readium-css */
+
+
+/* Reference
+
+   Neon -> Light modes
+
+   Yellow 72/24    | #F9EF80 | rgb(249, 239, 128) | #ffff99
+   Green 72/33     | #A0CC88 | rgb(160, 204, 136) | #99cc99
+   Orange 72/54    | #FAC991 | rgb(250, 201, 145) | #ffcc99
+   Pink 72/56      | #F0839A | rgb(240, 131, 154) | #ff9999
+   Magenta 72/58   | #EC7AAD | rgb(240, 131, 154) | #ff9999
+
+   Original -> Dark modes
+
+   Yellow 70/24    | #F1E740 | rgb(241, 231, 64)  | #ffff33  | Yellow
+   Blue 70/31      | #3AAFDC | rgb(58, 175, 220)  | #3399cc  | (too close to ::selection)
+   Green 70/33     | #2BA727 | rgb(43, 167, 39)   | #339933  |
+   Red 70/40       | #E94F58 | rgb(233, 79, 88)   | #ff6666  |
+   Torquoise 70/51 | #009E6C | rgb(0, 158, 108)   | #009966  | Green
+   Orange 70/54    | #F39539 | rgb(243, 149, 57)  | #ff9933  | Orange
+   Lavender 70/55  | #85569C | rgb(133, 86, 156)  | #996699  |
+   Pink 70/56      | #EA5A79 | rgb(234, 90, 121)  | #ff6666  |
+   Lilac 70/58     | #D72E83 | rgb(215, 46, 131)  | #cc3399  | Pink
+
+*/
+
+/* Default */
+
+.readiumCSS-yellow-highlight {
+  background-color: #F9EF80;
+}
+
+.readiumCSS-green-highlight {
+  background-color: #A0CC88;
+}
+
+.readiumCSS-orange-highlight {
+  background-color: #FAC991;
+}
+
+.readiumCSS-pink-highlight {
+  background-color: #F0839A;
+}
+
+/* Night mode */
+
+:root[style*="--USER__backgroundColor"][style*="#000000"] .readiumCSS-yellow-highlight {
+  background-color: #F1E740;
+}
+
+:root[style*="--USER__backgroundColor"][style*="#000000"] .readiumCSS-green-highlight {
+  background-color: #009E6C;
+}
+
+:root[style*="--USER__backgroundColor"][style*="#000000"] .readiumCSS-orange-highlight {
+  background-color: #F39539;
+}
+
+:root[style*="--USER__backgroundColor"][style*="#000000"] .readiumCSS-pink-highlight {
+  background-color: #D72E83;
+}
+
+/* Media overlays */
+
+.-epub-media-overlay-active {
+  background-color: yellow;
+  color: black !important;
+}
+
+:root.-epub-media-overlay-playing * {
+  color: gray;
+}

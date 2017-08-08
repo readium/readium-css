@@ -1,245 +1,157 @@
-# How to use CSS custom properties (a.k.a. variables)
+# Inject and paginate EPUB contents
 
 [Implementers doc] [CSS authors info]
 
-Note: CSS variables **are not and won’t be supported in IE11.** You can either create a static stylesheet for all UA browsers or decide to leverage them in most UA browsers + use a JS fallback for IE11—you can test for CSS variables support in JS and set inline styles if they’re not.
+## Injection
 
-## What are CSS variables?
+Depending on the platform and version you’re developing for, contents must be injected into: 
 
-CSS variables allow an author to assign arbitrary values to a property with an author-chosen name. This custom property must start with `--`. The `var()` function then allows the author to use those values elsewhere in the document.
+- a web view;
+- a chrome view;
+- an iframe.
 
-```
-:root {
-  --primaryColor: red;
-}
+Indeed, we must provide authors with a reliable context in which their styles and scripts are scoped.
 
-a {
-  color: var(--primaryColor);
-}
+### Margins and dimensions
 
-button {
-  color: white;
-  background-color: var(--primaryColor);
-}
+Since we must take viewport units into account, especially `vh` (viewport height), at least the top and bottom margins must be set on this container, and not inside it.
 
-```
+You may also want to set left and right margins on this container so that all margins are equal in the two-column view.
 
-If you’re familiar with CSS pre-processors (LESS, SASS, Stylus, etc.), you’re probably using variables already. The major difference is that CSS variables are supported in the browser and, consequently, you can access and edit them in real-time using JavaScript.
+Finally, on larger screens, you’ll have to set dimensions on this container so that it doesn’t become too large.
 
-* * *
+### Background color
 
-Global references:
+Please note you must deal with the `background-color` outside this container, especially as the user can set reading modes (night, sepia, etc.). In other words, it must be synced with this user setting so that the entire screen is the same `background-color`.
 
-- [CSS Custom Properties spec](https://drafts.csswg.org/css-variables/)
-- [Can I Use](http://caniuse.com/#feat=css-variables)
-- [CSS Variables: Why should you care](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care) — developers.google.com
-- [CSS Custom Properties in Microsoft Edge](https://blogs.windows.com/msedgedev/2017/03/24/css-custom-properties/#fjMpiOekgjsGVp4S.97)
-- [PostCSS plugin to transform CSS variables into a static representation](https://www.npmjs.com/package/postcss-css-variables)
-- [JS Perf — CSS Variables vs. Inline Styles](https://jsperf.com/css-variables-vs-inline-styles)
-- [CSS Variables are a game changer](http://slides.com/gregoradams/css-variables-are-a-game-changer#/)
+## Pagination
 
-## Cascade and inheritance
+Contents are paginated using [CSS multicolumns](https://www.w3.org/TR/css3-multicol/), for several reasons: 
 
-Custom properties follow standard cascading rules. In other words, you can define the same property at different levels of specificity. 
+- [it’s been cross-platform for a long time](http://caniuse.com/#feat=multicolumn);
+- it’s responsive;
+- it’s tried and tested;
+- it brings some kind of interoperability since it has been used by a lot of Reading Systems and authors have been designing against them.
 
-```
-:root {
-  --fontSize: 16px;
-}
+### Default
 
-aside {
-  --fontSize: 12px;
-}
+Pagination is responsive by default, which means it is using relative values in order to adapt layout to the viewport and the current font size.
 
-body, aside {
-  font-size: var(--fontSize);
-  /* Will be 16px for body and 12px for aside */
-}
+We’ve chosen this approach since it appears setting everything in pixels is more likely to create rounding errors and rendering issues (e.g. cut-off text) than letting the rendering engine deal with relative units on its own.
 
-```
+The responsive design provide other benefits. For instance, if the reader is using an iPad in landscape mode and sets a bigger font size, the two-column view will automatically switch to a single-page view if needed.
 
-You can also use them in media queries.
+You can also limit line-length by setting a `max-width` for `body`.
 
-```
-:root {
-  --defaultFontSize: 16px;
-}
+Please note a user setting for the number of columns has been designed so that users can set the layout as they wish.
 
-@media screen and (max-width: 560px) {
-  :root {
-    --defaultFontSize: 14px;
-  }
-}
+### The RS owns :root and part of body
 
-html {
-  font-size: var(--defaultFontSize);
-  /* Will be 14px if the viewport max-width < 560px and 16px otherwise */
-}
+Since we must inject contents and columns are implemented at the `:root` level (i.e. `html`), the Reading System owns the entire styling for this selector.
+
+Font size is an important metric since the responsive design relies entirely on `rem` (root `em`) so this style must be enforced by any means necessary.
+
+For `body`, we own: 
+
+- `overflow`;
+- sizing: `(min-|max-) width`, `(min-|max-) height`, `box-sizing`;
+- spacing: `margin` and `padding`.
+
+You can control horizontal margins in several ways: 
+
+1. using `column-gap` and `padding` for `:root`;
+2. using `column-gap` and `margin` for the web view/chrome view/iframe;
+3. using `padding` for `:root` and/or `body`.
+
+Please note that when using `padding`, you must take it into account when sizing `:root` and/or `body`. Their widths contains the padding set for the element.
+
+#### Variables you can set
+
+Please note those variables’ value can be redefined using media queries. You don’t need to redeclare entire declarations.
 
 ```
-
-To sum things up, variables bring a lot of flexibility and customization to CSS. It can also simplify your stylesheets and make them much more maintainable. 
-
-## Fallback
-
-In case you want to use them, you’ll have to hardcode values for IE11 (and Edge 14).
-
-```
-:root {
-  --primaryColor: red;
-}
-
-a {
-  color: red; /* Fallback */
-  color: var(--primaryColor);
-}
-
-button {
-  color: white;
-  background-color: red; /* Fallback */
-  background-color: var(--primaryColor);
-}
+--RS__colWidth
 ```
 
-That could be managed via JavaScript though, so that you don’t need to maintain fallbacks in pure CSS.
-
-It is important to note the `var()` function provides a fallback mechanism itself, in case your custom property is not set. 
-
-The function looks like this: 
+The optimal column’s width. It serves as a floor in our design.
 
 ```
-var(<custom-property-name> [, <declaration-value> ]? )
+--RS__colCount
 ```
 
-```
-:root {
-  /* No --primaryColor in there */
-}
-
-a {
-  color: var(--primaryColor, red); /* In which red is the fallback */
-}
-
-button {
-  color: white;
-  background-color: var(--primaryColor, red); /* In which red is the fallback */
-}
-```
-
-That could be useful for theming for instance, by setting default values as fallback then declaring custom properties using JavaScript.
-
-Although browsers have been optimized to deal with CSS variables, please note performance might suffer in some browsers if you have a lot of variables with a fallback.
-
-## Using CSS variables in JavaScript
-
-### Feature detect
-
-[As seen in this article by Michael Scharnagl](https://justmarkup.com/log/2016/02/theme-switcher-using-css-custom-properties/), if you want to test for support, you can do the following:
+The optimal number of columns (depending on the columns’ width).
 
 ```
-if (window.CSS && window.CSS.supports && window.CSS.supports('--a', 0)) {
-  // CSS custom properties supported.
-} else {
-  // CSS custom properties not supported
-}
+--RS__colGap
 ```
 
-Since CSS features queries are not supported by IE11, the previous snippet will return false.
+The gap between columns. It must be set in pixels so that it won’t resize with font size. 
 
-It will return true for browsers which support feature queries since `@supports` only checks if the syntax is correct (and don’t bother checking if the custom property exists).
+You must account for this gap when scrolling.
 
-### Retrieve values
-
-You can retrieve values by using `getPropertyValue("--name_of_the_variable")` (it is a computed style).
-
-```
-var myColor = window.getComputedStyle(document.documentElement).getPropertyValue("--textColor");
+```    
+--RS__pageGutter
 ```
 
-### Set values
-
-You can set values by using `setProperty("--name_of_the_variable", "value")`.
+The horizontal page margins. It must be set in pixels so that it won’t resize with font size.
 
 ```
-document.documentElement.style.setProperty("--textColor", "#000");
+--RS__maxLineLength
 ```
 
-If you’re appending a style element in the `head` of the document, you can also change the value in there, especially if you have a lot of elements to manage. For instance, if a `--maxImageHeight` variable is defined in the CSS for `img`, you could do the following:
+The optimal line-length. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
+
+### Patch and safeguards
+
+We’ve designed two extras for pagination: 
+
+1. a patch for HTML5 Suggested Rendering, which takes care of paged media;
+2. safeguards, which make sure some elements will be managed as expected by authors in columns.
+
+#### Patch
+
+The HTML5 patch deals with: 
+
+- fragmentation (`widows`, `orphans` and `page-break`);
+- hyphenation;
+- open type features;
+- horizontal margins (pixels have been converted to %);
+- normalization of `abbr` and `wbr`.
+
+You can use it with or without pagination, it should not make any difference.
+
+#### Safeguards
+
+Safeguards deal with:
+
+- media sizing (e.g. `img`, `svg`, `audio`, `video`);
+- word wrap for long strings (headings and links);
+- large table’s overflow.
+
+Once again, you can use it with or without pagination, it should not make any difference.
+
+#### Variables you can set
 
 ```
-var newStyles = document.createElement('style');
-newStyles.id = "overrides";
-
-var docHeight = window.getComputedStyle(document.body).getPropertyValue("height") + "px";
-var newMaxImageHeight = document.createTextNode("img {--maxImageHeight: " + docHeight + ";}");
-
-newStyles.appendChild(newMaxImageHeight);
-document.head.appendChild(newStyles);
+--RS__maxMediaWidth
 ```
 
-This will override the value in the original CSS since the `img` selector is more specific. It is important to notice you could hardcode styles here for browsers which don’t support variables (adding `max-height: docHeight` to the textNode you’re appending in the stylesheet).
-
-## Interesting hacks
-
-CSS variables offer a lot of flexibility. 
-
-### Avoid JS concatenation
-
-[As seen in this article by Zack Bloom](https://eager.io/blog/communicating-between-javascript-and-css-with-css-variables/), if you want to avoid managing concatenation (value + unit) in JavaScript, you could use the `calc()` function in CSS.
+The `max-width` for media elements i.e. `img`, `svg`, `audio` and `video`.
 
 ```
-.element {
-  height: calc(var(--element-height) * 1px);
-}
+--RS__maxMediaHeight
 ```
 
-### Testing active breakpoints
-
-As seen in [this article by Eric Ponto](https://www.ericponto.com/blog/2014/09/17/share-css-variables-with-javascript/), you could create a `--breakpoint` variable to “emulate” something like container/element queries.
+The `max-height` for media elements i.e. `img`, `svg`, `audio` and `video`.
 
 ```
-body {
-  --breakpoint: medium;
-}
-
-@media screen and (max-width: 30em) {
-  body {
-    --breakpoint: small;
-  }
-}
-@media screen and (min-width: 50em) {
-  body {
-    --breakpoint: large;
-  }
-}
+--RS__boxSizingMedia
 ```
 
-Then create a function to return the breakpoint and append styles accordingly.
-
-You could probably leverage such a hack to implement some kind of `column-width` media query in paginated view, but it would require CSS authors to provide specific stylesheets with this non-standard media as a `link` attribute—otherwise, performance will be really really bad as you would have to hijack the entire stylesheet to retrieve media queries first.
-
-### Setting another variable as a value
-
-[As seen in the developers.google.com article](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care), you can set the value of the variable to refer to another variable at runtime by using the `var()` function in your call to `setProperty()`.
+The box model (`box-sizing`) you want to use for media elements.
 
 ```
-document.documentElement.style.setProperty("--primary-color", "var(--secondary-color)");
+--RS__boxSizingTable
 ```
 
-### Abusing CSS variables to make them read and acted on by JavaScript
-
-[As seen in the spec itself (example 3)](https://drafts.csswg.org/css-variables/#syntax), you could create values which sole purpose is to be read and acted on by JavaScript.
-
-While the following variable would obviously be useless as a variable (invalid value):
-
-```
---foo: if(x > 5) this.width = 10;
-```
-
-You could use it in JavaScript since it’s still a valid custom property.
-
-### User themes
-
-You could even go the extra mile and provide an “import theme” feature or implement custom styles inputs (color pickers, font family, etc.) in the UI so that users can create their own theme on the fly, then manage it more easily (storing the user theme as a style element with an id in `localStorage` for instance).
-
-[See this CSS-Tricks’ article for use cases and demos](https://css-tricks.com/css-custom-properties-theming/).
+The box model (`box-sizing`) you want to use for tables.

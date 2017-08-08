@@ -4,7 +4,7 @@ Defaults is currently made of 4 stylesheets:
 
 - 1 base stylesheet for all ebooks;
 - 1 default stylesheet for unstyled ebooks;
-- 2 preset themes for night and sepia modes.
+- 1 stylesheet for user highlights and media overlays.
 
 Only the base stylesheet can be automatically added to HTML files.
 
@@ -43,21 +43,17 @@ It makes use of a typescale so that you can change it dynamically (depending on 
 
 **Maybe it can also be a user setting?**
 
-## Preset Themes
+## User highlights and media overlays
 
-Sepia and night modes are currently two different stylesheets. They must be added after author’s stylesheets.
+You’ll find classic highlighters’ colors in there:
 
-However, this is likely to change in the future so that we can deal with those as mere user settings, it will depend on how we manage those (custom attributes or inline CSS variables).
+- yellow;
+- green;
+- orange;
+- pink.
 
-To put it simply, those 2 themes are prototypes to see what works and what doesn’t. We’ll redesign and refine them as we go along.
+There’s no blue since it is too close to the default `::selection`.
 
-Night mode overrides anything related to color: 
+Values are declared in `rgba` so that those colors don’t have to be redefined in night modes.
 
-- `background-color`;
-- `color`;
-- `border-color`;
-- `fill` (svg text);
-- `stroke` (svg text);
-- `invert()` filter for gaiji.
-
-Please note authors may use `background-image` and `-webkit-text-fill-color` to force their own colors.
+At first sight, contrast is OK for those colors in default and night mode, but it will obviously depend on the `background-color` and `color` values you’re using for themes.

@@ -26,11 +26,7 @@
 
 /* Media overlays */
 
-.-epub-media-overlay-active {
-  background-color: yellow;
+.readiumCSS-mo-active-default {
+  background-color: yellow !important;
   color: black !important;
-}
-
-:root.-epub-media-overlay-playing * {
-  color: gray;
 }

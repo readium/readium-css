@@ -233,7 +233,8 @@ When the spec was published, the *Financial Times* immediately switched to [its 
 - support of `column-span: <integer>`;
 - better fragmentation (column breaks);
 - grouping of columns into pages;
-- enforce a baseline grid.
+- enforce a baseline grid;
+- better handling of `box-shadow` and `outline`.
 
 As far as I can tell, this implementation might create some issues, especially when it comes to a11y because it duplicates and hides part of elements to manage fragmentation.
 
@@ -250,3 +251,12 @@ It is my understanding the [Opera implementation of `overflow: -o-paged-x` in Pr
 [An editor’s draft of CSS multicolumn Layout Module Level 2 exists](https://drafts.csswg.org/css-multicol-2/) but it is quite empty at the moment. 
 
 From experience, I can also report there tends to be implementation-specific bugs with newer layout specs e.g. flexbox, grid, etc.
+
+### Missing pieces
+
+There are several shortcomings we must deal with: 
+
+- the `column-gap` applies to adjacent column boxes, but there is nothing to set a `columns-start-margin` and `columns-end-margin`: this is particularly problematic when columns are set at the `:root` level and overflow;
+- there is no JavaScript API available, we don’t even know the number of columns which have been created and their real width;
+- since we can’t use `overflow: paged-x`, there is no way we can force the `scrollWidth` to be a multiple of the viewport, we must force the creation of an extra column if needed.
+- the lack of “column queries” makes it really difficult for authors to do responsive design.

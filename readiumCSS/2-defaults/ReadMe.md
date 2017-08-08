@@ -1,6 +1,6 @@
 # Defaults
 
-Defaults is currently made of 4 stylesheets:
+Defaults is currently made of 3 stylesheets:
 
 - 1 base stylesheet for all ebooks;
 - 1 default stylesheet for unstyled ebooks;

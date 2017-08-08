@@ -24,6 +24,14 @@ Finally, on larger screens, you’ll have to set dimensions on this container so
 
 Please note you must deal with the `background-color` outside this container, especially as the user can set reading modes (night, sepia, etc.). In other words, it must be synced with this user setting so that the entire screen is the same `background-color`.
 
+As a friendly reminder, you can allow transparency for the iframe if you’re using one. That should help deal with `background-color` at the global level.
+
+```
+<iframe src="source.xhtml" allowtransparency="true"></iframe>
+```
+
+Then set the `--RS__backgroundColor` variable to `transparent` in `ReadiumCSS-base.css`, although you will have to modify the current user settings stylesheet so that it can work this way.
+
 ## Pagination
 
 Contents are paginated using [CSS multicolumns](https://www.w3.org/TR/css3-multicol/), for several reasons: 

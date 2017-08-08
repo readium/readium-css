@@ -12,14 +12,13 @@
   --RS__compFontFamily: var(--RS__baseFontFamily);
   --RS__codeFontFamily: var(--RS__monospaceTf);
 
+  --RS__typeScale: 1.125; /* 1.067 | 1.125 | 1.2 | 1.25 | 1.333 | 1.414 | 1.5 | 1.618 */
   --RS__baseFontSize: 16px;
   --RS__baseLineHeight: 1.5;
 
   --RS__flowSpacing: 1.5rem;
   --RS__paraSpacing: 0;
   --RS__paraIndent: 1em;
-
-  --RS__typeScale: 1.125; /* 1.067 | 1.125 | 1.2 | 1.25 | 1.333 | 1.414 | 1.5 | 1.618 */
 
   --RS__linkColor: #0000EE;
   --RS__visitedColor: #551A8B;

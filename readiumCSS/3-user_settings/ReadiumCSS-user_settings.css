@@ -58,12 +58,12 @@
 
 :root[style*="--USER__backgroundColor"][style*="#000000"] a:link,
 :root[style*="--USER__backgroundColor"][style*="#000000"] a:link * {
-  color: #63caff !important;
+  color: var(--RS__darkLinkColor) !important;
 }
 
 :root[style*="--USER__backgroundColor"][style*="#000000"] a:visited,
 :root[style*="--USER__backgroundColor"][style*="#000000"] a:visited * {
-  color: #0099E5 !important;
+  color: var(--RS__darkVisitedColor) !important;
 }
 
 :root[style*="--USER__backgroundColor"][style*="#000000"] img[class*="gaiji"],

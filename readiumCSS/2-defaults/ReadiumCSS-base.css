@@ -22,6 +22,9 @@
   --RS__baseFontFamily: var(--RS__oldStyleTf);
   --RS__textColor: #121212;
   --RS__backgroundColor: #FFFFFF;
+
+  --RS__darkLinkColor: #63caff;
+  --RS__darkVisitedColor: #0099E5;
 }
 
 /* Default colors */

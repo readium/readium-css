@@ -69,8 +69,29 @@
 :root[style*="--USER__backgroundColor"][style*="#000000"] img[class*="gaiji"],
 :root[style*="--USER__backgroundColor"][style*="#000000"] *[epub\:type~="titlepage"] img,
 :root[style*="--USER__backgroundColor"][style*="#000000"] img.readiumCSS-invert {
-  -webkit-filter: invert(1);
-  filter: invert(1);
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+/* Darken all images on user’s demand */
+:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__darkenImages"] img,
+:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__darkenImages"] svg {
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+}
+
+/* Invert all images on user’s demand */
+:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__invertImages"] img,
+:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__invertImages"] svg {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+/* Darken and invert on user’s demand */
+:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__darkenImages"][style*="--USER__invertImages"] img
+:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__darkenImages"][style*="--USER__invertImages"] svg {
+  -webkit-filter: brightness(80%) invert(100%);
+  filter: brightness(80%) invert(100%);
 }
 
 /* Sepia Mode*/

@@ -85,20 +85,6 @@ The default `color` for body copy’s text.
 
 The default `background-color` for pages.
 
-#### Hyperlinks’ color in night modes
-
-```
---RS__darkLinkColor
-```
-
-The default `color` for hyperlinks in night mode.
-
-```
---RS__darkVisitedColor
-```
-
-The default `color` for visited hyperlinks in night mode.
-
 ## Default
 
 The default stylesheet was designed for unstyled ebooks. It is based on HTML5 Suggested Rendering and can be customized. 

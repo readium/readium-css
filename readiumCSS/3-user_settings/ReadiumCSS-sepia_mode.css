@@ -1,7 +1,7 @@
 /* Readium CSS 
    Sepia mode
 
-   An preset theme for sepia mode
+   A preset theme for sepia mode
 
    Repo: https://github.com/readium/readium-css */
 
@@ -9,11 +9,15 @@
 /* CONFIG */
 
 :root {
-  --THEME__backgroundSepia: #faf4e8;
-  --THEME__textSepia: #121212;
+  --THEME__backgroundColor: #faf4e8;
+  --THEME__textColor: #121212;
+
+  --THEME__linkColor: #0000EE;
+  --THEME__visitedColor: #551A8B;
 }
 
-/* STYLES
+/* STYLES */
+/* :root is used so that you can quickly add a class or attribute if you prefer e.g. `:root[data-rs-sepia]` */
 
 :root {
   background: var(--THEME__backgroundColor) !important;
@@ -22,7 +26,7 @@
 
 :root body {
   background-color: transparent;
-  color: var(--THEME__textColor);
+  color: inherit;
 }
 
 :root a:link,
@@ -39,4 +43,3 @@
 :root img {
   mix-blend-mode: multiply;
 }
-*/

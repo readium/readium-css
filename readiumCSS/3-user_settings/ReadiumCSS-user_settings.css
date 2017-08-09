@@ -28,93 +28,40 @@
   padding: 0 var(--USER__pageMargins) !important;
 }
 
-/* Colors/Themes */
-/* Night mode: #000000 + #FEFEFE */
-/* Sepia mode: #faf4e8 + #121212 */
+/* Colors */
 
 :root[style*="--USER__backgroundColor"] {
   background-color: var(--USER__backgroundColor) !important;
+}
+
+:root[style*="--USER__backgroundColor"] *,
+:root[style*="background-color"] * {
+  background-color: transparent !important;
 }
 
 :root[style*="--USER__textColor"] {
   color: var(--USER__textColor) !important;
 }
 
-:root[style*="--USER__textColor"] *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre) {
+:root[style*="--USER__textColor"] *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre),
+:root[style*="color"] *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre) {
   color: inherit !important;
 }
 
-/* Night mode */
-:root[style*="--USER__backgroundColor"][style*="#000000"] *:not(a) {
-  background-color: transparent !important;
-  color: var(--USER__textColor) !important;
-  border-color: currentColor !important;
-}
+/* Night mode is another stylesheet */
 
-:root[style*="--USER__backgroundColor"][style*="#000000"] svg text {
-  fill: var(--USER__textColor) !important;
-  stroke: none !important;
-}
-
-:root[style*="--USER__backgroundColor"][style*="#000000"] a:link,
-:root[style*="--USER__backgroundColor"][style*="#000000"] a:link * {
-  color: var(--RS__darkLinkColor) !important;
-}
-
-:root[style*="--USER__backgroundColor"][style*="#000000"] a:visited,
-:root[style*="--USER__backgroundColor"][style*="#000000"] a:visited * {
-  color: var(--RS__darkVisitedColor) !important;
-}
-
-:root[style*="--USER__backgroundColor"][style*="#000000"] img[class*="gaiji"],
-:root[style*="--USER__backgroundColor"][style*="#000000"] *[epub\:type~="titlepage"] img,
-:root[style*="--USER__backgroundColor"][style*="#000000"] img.readiumCSS-invert {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
-
-/* Darken all images on user’s demand */
-:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__darkenImages"] img,
-:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__darkenImages"] svg {
-  -webkit-filter: brightness(80%);
-  filter: brightness(80%);
-}
-
-/* Invert all images on user’s demand */
-:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__invertImages"] img,
-:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__invertImages"] svg {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
-
-/* Darken and invert on user’s demand */
-:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__darkenImages"][style*="--USER__invertImages"] img
-:root[style*="--USER__backgroundColor"][style*="#000000"][style*="--USER__darkenImages"][style*="--USER__invertImages"] svg {
-  -webkit-filter: brightness(80%) invert(100%);
-  filter: brightness(80%) invert(100%);
-}
-
-/* Sepia Mode*/
-:root[style*="--USER__backgroundColor"][style*="#faf4e8"] body {
-  background-color: transparent;
-  color: var(--USER__textColor);
-}
-
-:root[style*="--USER__backgroundColor"][style*="#faf4e8"] svg,
-:root[style*="--USER__backgroundColor"][style*="#faf4e8"] img {
-  mix-blend-mode: multiply;
-}
+/* Sepia Mode is another stylesheet */
 
 /* Text Align */
 
 :root[style*="--USER__textAlign"] {
-  text-align: var(--USER__textAlign) !important;
+  text-align: var(--USER__textAlign);
 }
 
-:root[style*="--USER__textAlign"] body,
-:root[style*="--USER__textAlign"] *:not(blockquote):not(figcaption) p, 
-:root[style*="--USER__textAlign"] li {
-  text-align: inherit;
+:root[style*="--USER__textAlign"] body, :root[style*="text-align"] body,
+:root[style*="--USER__textAlign"] *:not(blockquote):not(figcaption) p, :root[style*="text-align"] *:not(blockquote):not(figcaption) p, 
+:root[style*="--USER__textAlign"] li, :root[style*="text-align"] li {
+  text-align: inherit !important;
 }
 
 /* Hyphens (none | auto) */
@@ -127,10 +74,11 @@
   hyphens: var(--USER__bodyHyphens) !important;
 }
 
-:root[style*="--USER__bodyHyphens"] body,
-:root[style*="--USER__bodyHyphens"] p,
-:root[style*="--USER__bodyHyphens"] li,
-:root[style*="--USER__bodyHyphens"] div {
+/* Sorry, we can’t use `:matches`, `:-moz-any` or `:-webkit-any` because MS doesn’t support it yet */
+:root[style*="--USER__bodyHyphens"] body, :root[style*="hyphens"] body,
+:root[style*="--USER__bodyHyphens"] p, :root[style*="hyphens"] p,
+:root[style*="--USER__bodyHyphens"] li, :root[style*="hyphens"] li,
+:root[style*="--USER__bodyHyphens"] div, :root[style*="hyphens"] div {
   -webkit-hyphens: inherit;
   -moz-hyphens: inherit;
   -ms-hyphens: inherit;
@@ -144,12 +92,12 @@
   font-family: var(--USER__fontFamily) !important;
 }
 
-:root[style*="--USER__fontFamily"] body,
-:root[style*="--USER__fontFamily"] p,
-:root[style*="--USER__fontFamily"] li,
-:root[style*="--USER__fontFamily"] div,
-:root[style*="--USER__fontFamily"] dt,
-:root[style*="--USER__fontFamily"] dd {
+:root[style*="--USER__fontFamily"] body, :root[style*="font-family"] body,
+:root[style*="--USER__fontFamily"] p, :root[style*="font-family"] p,
+:root[style*="--USER__fontFamily"] li, :root[style*="font-family"] li,
+:root[style*="--USER__fontFamily"] div, :root[style*="font-family"] div,
+:root[style*="--USER__fontFamily"] dt, :root[style*="font-family"] dt,
+:root[style*="--USER__fontFamily"] dd, :root[style*="font-family"] dd {
   font-family: inherit !important;
 }
 
@@ -159,51 +107,16 @@
   font-size: var(--USER__fontSize) !important;
 }
 
-/* 1.2 value for typescale is probably the one we want as a default as it covers most publishers’ CSS */
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] h1 {
-  font-size: calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale));
-}
-
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] h2 {
-  font-size: calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale));
-}
-
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] h3 {
-  font-size: calc(1rem * var(--USER__typeScale));
-}
-
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] h4 {
-  font-size: 1rem;
-}
-
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] h5,
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] small {
-  font-size: calc(1rem / var(--USER__typeScale));
-}
-
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] h6,
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] sub,
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] sup {
-  font-size: calc((1rem / var(--USER__typeScale)) / var(--USER__typeScale));
-}
-
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] p,
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] li,
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] div,
-:root[style*="--USER__fontSize"][style*="--USER__typeScale"] pre {
-  font-size: 1rem;
-}
-
 /* Line height */
 
 :root[style*="--USER__lineHeight"] {
   line-height: var(--USER__lineHeight) !important;
 }
 
-:root[style*="--USER__lineHeight"] body,
-:root[style*="--USER__lineHeight"] p,
-:root[style*="--USER__lineHeight"] li
-:root[style*="--USER__lineHeight"] div {
+:root[style*="--USER__lineHeight"] body, :root[style*="line-height"] body,
+:root[style*="--USER__lineHeight"] p, :root[style*="line-height"] p,
+:root[style*="--USER__lineHeight"] li, :root[style*="line-height"] li,
+:root[style*="--USER__lineHeight"] div, :root[style*="line-height"] div {
   line-height: inherit;
 }
 
@@ -246,9 +159,7 @@
   letter-spacing: var(--USER__letterSpacing);
 }
 
-/* If/Else Territory depending on whether a variable is set or not…
-
-If/else can be emulated with attributes such as p[style*="family"]
+/* Check if this is necessary or not (inline styles)
 
 p[style] {
   color: unset !important;

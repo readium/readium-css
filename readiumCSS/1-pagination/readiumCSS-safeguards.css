@@ -48,7 +48,7 @@ img, svg, audio, video {
   max-width: var(--RS__maxMediaWidth);
 
   /* We’re setting a max-height, especially for covers */
-  max-height: var(--RS__maxMediaHeight);
+  max-height: var(--RS__maxMediaHeight) !important;
 
   /* Object-fit allows us to keep the correct aspect-ratio */
   object-fit: contain;

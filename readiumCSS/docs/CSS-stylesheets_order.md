@@ -24,6 +24,6 @@ The following modules must be appended after the author’s stylesheets, in this
 
 ## Append if there is no author’s styles
 
-The following modules must be appended if there is no external stylesheet, internal stylesheet (`<style>`) or inline styles (`style=" "`), in this exact order: 
+The following modules must be appended if there is no external stylesheet (`<link>`), internal stylesheet (`<style>`) or inline styles (`style=" "`), in this exact order: 
 
 1. `ReadiumCSS-default.css`

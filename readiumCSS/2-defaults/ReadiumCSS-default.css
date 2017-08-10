@@ -13,7 +13,7 @@
   --RS__codeFontFamily: var(--RS__monospaceTf);
 
   --RS__typeScale: 1.125; /* 1.067 | 1.125 | 1.2 | 1.25 | 1.333 | 1.414 | 1.5 | 1.618 */
-  --RS__baseFontSize: 16px;
+  --RS__baseFontSize: 100%;
   --RS__baseLineHeight: 1.5;
 
   --RS__flowSpacing: 1.5rem;
@@ -121,14 +121,17 @@ h4 {
 h5 {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: var(--RS__flowSpacing);
-  font-size: calc(var(--RS__baseFontSize) / var(--RS__typeScale));
+  font-size: var(--RS__baseFontSize);
+  font-variant: small-caps;
 }
 
 h6 {
   margin-top: var(--RS__flowSpacing);
-  margin-bottom: var(--RS__flowSpacing);
+  margin-bottom: 0;
   /* The following is base font size / typescale power of 2 */
-  font-size: calc((var(--RS__baseFontSize) / var(--RS__typeScale)) / var(--RS__typeScale));
+  font-size: var(--RS__baseFontSize);
+  text-transform: lowercase;
+  font-variant: small-caps;
 }
 
 /* Lists */

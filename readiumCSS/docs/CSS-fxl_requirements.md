@@ -37,3 +37,9 @@ If the pixel values defined by `x`, `y`, `height` and `width` exceed the viewpor
 #### Both
 
 The coordinate system defined by the `viewbox` is mapped to the viewport, keeping the aspect ratio.
+
+## Notes
+
+The `rendition:spread portrait` and `rendition:viewport` [are deprecated in EPUB 3.1](http://www.idpf.org/epub/31/spec/epub-packages.html#app-obs-deprecated).
+
+Consequently, the `rendition:spread-portrait` spine override is deprecated as well.

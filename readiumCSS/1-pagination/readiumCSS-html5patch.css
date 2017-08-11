@@ -118,3 +118,11 @@ abbr[title], acronym[title] {
 nobr wbr {
   white-space: normal;
 }
+
+/* Make ruby text and parentheses non-selectable (TBC) */
+ruby > rt, ruby > rp {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

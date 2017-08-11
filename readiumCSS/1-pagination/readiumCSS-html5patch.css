@@ -34,6 +34,10 @@ figure, tr {
 /* Hyphenation */
 
 body {
+  -webkit-hyphenate-character: "\002D";
+  -moz-hyphenate-character: "\002D";
+  -ms-hyphenate-character: "\002D";
+  hyphenate-character: "\002D";
   -webkit-hyphenate-limit-lines: 3;
   -ms-hyphenate-limit-lines: 3;
   hyphenate-limit-lines: 3;

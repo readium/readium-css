@@ -33,6 +33,7 @@
 /* Set default font for the doc’s body, it will be overridden by the authors’s stylesheet */
 body {
   font-family: var(--RS__baseFontFamily);
+  text-rendering: optimizeLegibility;
 }
 
 /* Set default font for Math */

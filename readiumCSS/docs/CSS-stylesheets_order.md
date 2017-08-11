@@ -28,5 +28,6 @@ The following modules must be appended after the author’s stylesheets, in this
 2. `ReadiumCSS-pagination.css`
 3. `ReadiumCSS-scroll.css`(if needed)
 4. `ReadiumCSS-night_mode.css` or `ReadiumCSS-sepia_mode.css` (if needed)
-5. `ReadiumCSS-user_settings.css`
-6. `ReadiumCSS-fs_normalize.css` (if needed)
+5. `ReadiumCSS-os_a11y.css`
+6. `ReadiumCSS-user_settings.css`
+7. `ReadiumCSS-fs_normalize.css` (if needed)

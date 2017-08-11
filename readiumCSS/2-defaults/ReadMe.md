@@ -1,12 +1,13 @@
 # Defaults
 
-Defaults is currently made of 3 stylesheets:
+Defaults is currently made of 4 stylesheets:
 
 - 1 base stylesheet for all ebooks;
 - 1 default stylesheet for unstyled ebooks;
-- 1 stylesheet for user highlights and media overlays.
+- 1 stylesheet for user highlights and media overlays;
+- 1 stylesheet to deal with the OS’ a11y modes.
 
-Only the base stylesheet can be automatically added to HTML files.
+**Note:** The default stylesheet should not be appended if there are author styles in the EPUB file.
 
 ## Base
 
@@ -226,3 +227,13 @@ We’re using the same one as Readium 1 for interop reasons.
 ```
 
 It has been prefixed with `readiumCSS-` but you can get rid of it if needed.
+
+### OS’ a11y modes
+
+This stylesheet is intended to deal with a11y settings users can set at the OS level, whenever possible: 
+
+- high-contrast mode;
+- monochrome;
+- reduced motion.
+
+For `monochrome`, we’ll have to adjust reading modes (night, sepia, etc.) in their specific stylesheet; we’ll see if we can at least manage some more global settings in there.

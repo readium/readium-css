@@ -36,6 +36,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+:lang(ja) {
+  word-wrap: break-word;
+  -webkit-line-break: strict;
+  -epub-line-break: strict;
+  line-break: strict;
+}
+
 /* Set default font for Math */
 
 math {

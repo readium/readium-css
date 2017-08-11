@@ -38,6 +38,11 @@
   --RS__maxLineLength: 40rem;
 }
 
+/* Reset page margins for Forward compatibility */
+@page {
+  margin: 0 !important;
+}
+
 /* :root selector has same specificity as a class i.e. 0010
    We might have to change that to html / context 
    -> https://css-tricks.com/almanac/selectors/r/root/ */

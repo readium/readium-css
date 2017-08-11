@@ -35,6 +35,12 @@ body {
   font-family: var(--RS__baseFontFamily);
 }
 
+/* Set default font for Math */
+
+math {
+  font-family: STIXGeneral, Symbol, Times;
+}
+
 /* Language Overrides
    That will only work if either html or body have a (xml:)lang attribute, not for inline overrides */
 

@@ -12,18 +12,21 @@ The following modules must be inserted before the author’s stylesheets, in thi
 2. `ReadiumCSS-html5patch.css`
 3. `ReadiumCSS-safeguards.css`
 
+## Append if there is no author’s styles
+
+The following modules must be appended if there is no external stylesheet (`<link>`), internal stylesheet (`<style>`) or inline styles (`style=" "`), in this exact order: 
+
+1. `ReadiumCSS-default.css`
+
+This default must be appended before all other stylesheets in the next section.
+
 ## Append after the author’s stylesheets
 
 The following modules must be appended after the author’s stylesheets, in this exact order: 
 
 1. `ReadiumCSS-highlights.css`
 2. `ReadiumCSS-pagination.css`
-3. `ReadiumCSS-night_mode.css` or `ReadiumCSS-sepia_mode.css`
-4. `ReadiumCSS-user_settings.css`
-5. `ReadiumCSS-fs_normalize.css`
-
-## Append if there is no author’s styles
-
-The following modules must be appended if there is no external stylesheet (`<link>`), internal stylesheet (`<style>`) or inline styles (`style=" "`), in this exact order: 
-
-1. `ReadiumCSS-default.css`
+3. `ReadiumCSS-scroll.css`(if needed)
+4. `ReadiumCSS-night_mode.css` or `ReadiumCSS-sepia_mode.css` (if needed)
+5. `ReadiumCSS-user_settings.css`
+6. `ReadiumCSS-fs_normalize.css` (if needed)

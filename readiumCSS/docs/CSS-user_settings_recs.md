@@ -4,21 +4,20 @@
 
 User settings are a complex issue as CSS authoring is liberal by nature.
 
-In theory, this issue should be easily solvable using user stylesheets as [they turn precedence upside down for `!important`](https://www.w3.org/TR/CSS2/cascade.html#cascade). In practice, we don’t have any universal mechanism to set a stylesheet as an UA or user stylesheet: all the stylesheets we manipulate are created equal in scope; they are considered author’s stylesheet by the rendering engine.
+In theory, this issue should be easily solvable using UA and user stylesheets as [they turn precedence upside down for `!important`](https://www.w3.org/TR/css3-cascade/#cascading). In practice, we don’t have any universal mechanism to set a stylesheet as an UA or user stylesheet: all the stylesheets we manipulate are created equal in scope; they are considered author’s stylesheet by the rendering engine.
 
 The following list is the behaviour we should emulate: 
 
-1. user agent declarations;
-2. user normal declarations;
-3. author normal declarations;
-4. author important declarations;
-5. user important declarations.
-
-Please note this other recommendation: 
-
-> User agents must give the user the ability to turn off the influence of specific author style sheets, e.g., through a pull-down menu.
-
-This is something quite complex to implement but themes or a more global “opt-in” mechanism for ignoring some authors’ styles may well fit in there.
+1. transition declarations;
+2. important user agent declarations;
+3. important user declarations;
+4. important override declarations;
+5. important author declarations;
+6. animation declarations;
+7. normal override declarations;
+8. normal author declarations;
+9. normal user declarations;
+10. normal user agent declarations.
 
 ## Managing conflicts
 

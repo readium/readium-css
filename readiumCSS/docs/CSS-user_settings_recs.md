@@ -21,7 +21,7 @@ The following list is the behaviour we should emulate:
 
 ## Managing conflicts
 
-We’re referring to the [W3C’s priority of Constituencies](https://www.w3.org/TR/html-design-principles/#priority-of-constituencies). In other words: 
+We’re referring to the [W3C’s priority of constituencies](https://www.w3.org/TR/html-design-principles/#priority-of-constituencies). In other words: 
 
 ```
 Users’ styles > Authors’ styles > Implementers’ styles

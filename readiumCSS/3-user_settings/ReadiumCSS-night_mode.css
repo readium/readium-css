@@ -21,7 +21,7 @@
 
 :root {
   background-color: var(--THEME__backgroundColor) !important;
-  color: var(--USER__textColor) !important;
+  color: var(--THEME__textColor) !important;
 }
 
 :root *:not(a) {

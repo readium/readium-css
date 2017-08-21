@@ -17,9 +17,15 @@
   columns: auto auto !important;
 
   --RS__currentColNumber: 0;
+
+  /* Max-height for media in scroll mode
+     This is currently a magic number, which: 
+     1. is bad;
+     2. is not supported in Trident/EdgeHTML */
+  --RS__maxMediaHeight: 100vmax;
 }
 
-/* Enforce max-width for body, no matter which media query overrides it in pagination */
+/* TODO: Enforce max-width for body, no matter which media query overrides it in pagination */
 body {
   max-width: var(--RS__maxLineLength) !important;
 }

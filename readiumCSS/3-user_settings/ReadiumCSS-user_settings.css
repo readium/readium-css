@@ -15,11 +15,20 @@
   column-count: var(--USER__colNumber);
 }
 
+:root[style*="--USER__colNumber: 1"] body,
+:root[style*="--USER__colNumber:1"] body {
+  max-width: var(--RS__maxLineLength);
+
+  --RS__currentColNumber: 1;
+}
+
 :root[style*="--USER__colNumber: 2"],
 :root[style*="--USER__colNumber:2"] {
   -webkit-column-width: auto;
   -moz-column-width: auto;
   column-width: auto;
+
+  --RS__currentColNumber: 2;
 }
 
 /* Page Margins */
@@ -84,6 +93,16 @@
   -ms-hyphens: inherit;
   -epub-hyphens: inherit;
   hyphens: inherit;
+}
+
+/* Prevent hyphens in inline code */
+:root[style*="--USER__bodyHyphens"] code, :root[style*="hyphens"] code,
+:root[style*="--USER__bodyHyphens"] var, :root[style*="hyphens"] var {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -epub-hyphens: none;
+  hyphens: none;
 }
 
 /* Font family (typeface) */
@@ -157,6 +176,7 @@
 :root[style*="--USER__letterSpacing"] li,
 :root[style*="--USER__letterSpacing"] div {
   letter-spacing: var(--USER__letterSpacing);
+  font-variant: none;
 }
 
 /* Check if this is necessary or not (inline styles)

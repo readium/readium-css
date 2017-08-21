@@ -92,7 +92,7 @@
 }
 
 body {
-  overflow: hidden;
+/*  overflow: hidden; bugfix: contents won’t paginate in Firefox and one sample in Safari */
   width: 100%;
 
   /* Limit line-length but we have to reset when 2 columns and control the viewport.

@@ -15,6 +15,13 @@
 /* STYLES */
 /* :root is used so that you can quickly add a class or attribute if you prefer e.g. `:root[data-rs-normalize]` */
 
+:root p,
+:root li,
+:root div,
+:root pre {
+  font-size: 1rem !important;
+}
+
 :root h1 {
   /* Fallback if browser doesn’t support vars */
   font-size: 1.75rem !important;
@@ -36,13 +43,6 @@
 :root h4,
 :root h5,
 :root h6 {
-  font-size: 1rem !important;
-}
-
-:root p,
-:root li,
-:root div,
-:root pre {
   font-size: 1rem !important;
 }
 

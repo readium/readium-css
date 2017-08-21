@@ -39,7 +39,9 @@
   color: var(--THEME__visitedColor);
 }
 
+/* Disable for proto as there are hardware-, platform- and browser-specific bugs (some or all images won’t render in Blink/Webkit)  
 :root svg,
 :root img {
   mix-blend-mode: multiply;
 }
+*/

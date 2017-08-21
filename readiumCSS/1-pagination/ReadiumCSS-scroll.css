@@ -17,24 +17,11 @@
   columns: auto auto !important;
 
   --RS__currentColNumber: 0;
-
-  /* Max-height for media in scroll mode
-     This is currently a magic number, which is bad.
-     Should be the browser’s height, but based on iframe… */
-  --RS__maxMediaHeight: 1500px;
 }
 
 /* TODO: Enforce max-width for body, no matter which media query overrides it in pagination */
 body {
   max-width: var(--RS__maxLineLength) !important;
-}
-
-/* Try resetting image + figcaption */
-div > img:only-of-type:not(:only-child),
-p > img:only-of-type:not(:only-child),
-figure img:only-of-type:not(:only-child) {
-  min-height: 0;
-  max-height: var(--RS__maxMediaHeight);
 }
 
 /* Scroll mode horizontal */

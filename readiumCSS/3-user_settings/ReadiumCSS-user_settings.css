@@ -116,7 +116,13 @@
 :root[style*="--USER__fontFamily"] li, :root[style*="font-family"] li,
 :root[style*="--USER__fontFamily"] div, :root[style*="font-family"] div,
 :root[style*="--USER__fontFamily"] dt, :root[style*="font-family"] dt,
-:root[style*="--USER__fontFamily"] dd, :root[style*="font-family"] dd {
+:root[style*="--USER__fontFamily"] dd, :root[style*="font-family"] dd,
+:root[style*="--USER__fontFamily"] i:not(:lang), :root[style*="font-family"] i:not(:lang),
+:root[style*="--USER__fontFamily"] em:not(:lang), :root[style*="font-family"] em:not(:lang),
+:root[style*="--USER__fontFamily"] cite:not(:lang), :root[style*="font-family"] cite:not(:lang),
+:root[style*="--USER__fontFamily"] b:not(:lang), :root[style*="font-family"] b:not(:lang),
+:root[style*="--USER__fontFamily"] strong:not(:lang), :root[style*="font-family"] strong:not(:lang),
+:root[style*="--USER__fontFamily"] span:not(:lang), :root[style*="font-family"] span:not(:lang) {
   font-family: inherit !important;
 }
 

@@ -79,7 +79,7 @@ We’re currently using the three following prefix:
 - `--THEME__` for reading mode variables (sepia, night);
 - `--USER__` for user settings.
 
-The variable itself must use camelCase (e.g. `--RS__textColor`, `--THEME__background-color`, `--USER__fontSize`).
+The variable itself must use camelCase (e.g. `--RS__textColor`, `--THEME__backgroundColor`, `--USER__fontSize`).
 
 Of course all values don’t have to be variables, variables should be used if: 
 
@@ -160,6 +160,7 @@ Explain the problem and include additional details to help maintainers reproduce
 ![Screenshots and GIFs which follow reproduction steps to demonstrate the problem](url)
 
 **Stylesheets impacted:** [namelist]
+
 **Platform or browser:** [platform and/or browser, and version]
 
 **Fix**
@@ -200,14 +201,14 @@ First and foremost, check if those enhancements have already been suggested (che
 
 **Screenshots and GIFs**
 
-![Screenshots and GIFs which demonstrate the steps or part of Atom the enhancement suggestion is related to](url)
+![Screenshots and GIFs which demonstrate the steps or part the enhancement suggestion is related to](url)
 ```
 
 ### Your First Code Contribution
 
 Unsure where to begin contributing to the Readium CSS Project? You can start by looking through the `feedback-required` issues or the [Roadmap section](#roadmap).
 
-Then fork the repo and implement your modifications.
+Then fork the repo, create a branch named after the issue you’re trying to solve, and implement your modifications.
 
 If needed, do not hesitate to ask questions. We’re here to help.
 

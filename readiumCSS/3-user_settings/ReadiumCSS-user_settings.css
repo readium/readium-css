@@ -90,7 +90,8 @@
 :root[style*="--USER__bodyHyphens"] body, :root[style*="hyphens"] body,
 :root[style*="--USER__bodyHyphens"] p, :root[style*="hyphens"] p,
 :root[style*="--USER__bodyHyphens"] li, :root[style*="hyphens"] li,
-:root[style*="--USER__bodyHyphens"] div, :root[style*="hyphens"] div {
+:root[style*="--USER__bodyHyphens"] div, :root[style*="hyphens"] div,
+:root[style*="--USER__bodyHyphens"] dd, :root[style*="hyphens"] dd {
   -webkit-hyphens: inherit;
   -moz-hyphens: inherit;
   -ms-hyphens: inherit;

@@ -18,7 +18,8 @@
 :root p,
 :root li,
 :root div,
-:root pre {
+:root pre,
+:root dd {
   font-size: 1rem !important;
 }
 

@@ -71,6 +71,9 @@
 :root[style*="--USER__textAlign"] *:not(blockquote):not(figcaption) p, :root[style*="text-align"] *:not(blockquote):not(figcaption) p, 
 :root[style*="--USER__textAlign"] li, :root[style*="text-align"] li {
   text-align: inherit !important;
+  -moz-text-align-last: auto !important;
+  -epub-text-align-last: auto !important;
+  text-align-last: auto !important;
 }
 
 /* Hyphens (none | auto) */

@@ -266,7 +266,9 @@ Scope: `html`
 
 Horizontal margins (`padding-left` and `padding-right`) the user wants to set.
 
-Scope: `body`
+Scope: `html`
+
+It impacts `body`.
 
 ```
 --USER__backgroundColor

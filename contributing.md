@@ -23,7 +23,7 @@ Readium CSS has been design following 4 principles:
 1. **Modularity:** Readium CSS is not a monolithic stylesheet but a set of modules;
 2. **Separation of Reading System’s Concerns:** those modules are task-oriented e.g. paginate, apply default styles, intercept styles for user settings, apply a reading mode or user setting, etc.;
 3. **Daisy-chainability:** those modules can be loaded and daisy-chained (cascade), depending on conditions;
-4. **Customizability:** modules can be customized either before or during runtime (CSS variables).
+4. **Customization:** modules can be customized either before or during runtime (CSS variables).
 
 Please keep those principles in mind before making a pull request. If you have any doubt, please feel free to contact [Jiminy Panoz](mailto:readium-css@edrlab.org).
 

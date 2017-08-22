@@ -1,6 +1,8 @@
 # Readium CSS Variables API
 
-Priority: 
+[Implementers’ doc]
+
+As a reminder, the priority is: 
 
 ```
 USER > THEME > RS
@@ -401,3 +403,23 @@ A filter to invert images in night mode. It behaves as a switch i.e. if it is pr
 Scope: `html`
 
 It impacts all `img` elements in the DOM.
+
+## How to set and remove user preferences
+
+### Setting a user preference
+
+```
+var root = document.documentElement; 
+
+root.style.setProperty("--USER__var", "value");
+```
+
+You don’t need to remove the variable before setting another value, the new value will simply override the existing one.
+
+#### Removing a user preference
+
+```
+var root = document.documentElement; 
+
+root.style.removeProperty("--USER__var");
+```

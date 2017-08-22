@@ -27,7 +27,7 @@ We’ve done our utmost to follow EPUB and CSS recommendations to the letter, bu
 
 Besides, we’ve checked other major EPUB implementations to provide authors with the best interoperability possible. Indeed, they may design their stylesheet against those implementations so we gave priority to building a reliable environment. 
 
-We wanted to bring EPUB closer to the web though, and decided to leverage HTML5 Suggeted Rendering and to improve the current situation whenever possible.
+We wanted to bring EPUB closer to the web though, and decided to leverage HTML5 Suggested Rendering and improve the current situation whenever possible.
 
 ## 3. Leverage Modern CSS
 

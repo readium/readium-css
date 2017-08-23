@@ -216,6 +216,8 @@ We’ll finally review your pull request to check if everything is OK.
 
 ### Pull Requests
 
+First, make sure you have signed and sent the [Readium ICLA](http://readium.github.io/documents/Individual%20Contributor%20License%20Agreement.pdf) (for Individual Contributor License Agreement).
+
 - QA new code (see [platform support](https://github.com/readium/readium-css/wiki/Platform-Support) in the Wiki).
 - Please update from master before proposing a pull request so that we don’t have to deal with conflicts.
 - Use a clear and descriptive title.

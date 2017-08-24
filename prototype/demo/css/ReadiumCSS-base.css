@@ -10,6 +10,16 @@
 @namespace m url(http://www.w3.org/1998/Math/MathML/);
 @namespace svg url(http://www.w3.org/2000/svg);
 
+/* Define viewport, HTML5-style */
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
 :root {
   /* Default font-stacks */
   --RS__oldStyleTf: "Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif;
@@ -33,6 +43,20 @@
 /* Set default font for the doc’s body, it will be overridden by the authors’s stylesheet */
 body {
   font-family: var(--RS__baseFontFamily);
+  text-rendering: optimizeLegibility;
+}
+
+:lang(ja) {
+  word-wrap: break-word;
+  -webkit-line-break: strict;
+  -epub-line-break: strict;
+  line-break: strict;
+}
+
+/* Set default font for Math */
+
+math {
+  font-family: STIXGeneral, Symbol, Times;
 }
 
 /* Language Overrides

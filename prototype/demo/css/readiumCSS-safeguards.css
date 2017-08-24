@@ -25,9 +25,13 @@
 
 /* Sanitize line-heights in webkit e.g. raised cap without a declared line-height
    See effect by checking this demo in Safari: https://codepen.io/JayPanoz/pen/gRmzrE
-   Note: glyphs will have to to be reset to inline for CJK */
+   Note: glyphs has to be reset to inline for CJK */
 html {
   -webkit-line-box-contain: block glyphs replaced;
+}
+
+:lang(ja) {
+  -webkit-line-box-contain: block inline replaced;
 }
 
 /* Wrap long strings if larger than line-length */
@@ -48,7 +52,7 @@ img, svg, audio, video {
   max-width: var(--RS__maxMediaWidth);
 
   /* We’re setting a max-height, especially for covers */
-  max-height: var(--RS__maxMediaHeight);
+  max-height: var(--RS__maxMediaHeight) !important;
 
   /* Object-fit allows us to keep the correct aspect-ratio */
   object-fit: contain;
@@ -59,6 +63,17 @@ img, svg, audio, video {
   page-break-inside: avoid;
   break-inside: avoid;
 }
+
+/* Try managing image + figcaption, primarily for portrait images (only of type image but not only child in div/figure 
+Disabled as it may create issues (min-height)
+
+div > img:only-of-type:not(:only-child),
+p > img:only-of-type:not(:only-child),
+figure img:only-of-type:not(:only-child) {
+  min-height: 75vh;
+  max-height: calc(100vh - 3rem);
+}
+*/
 
 /* Try preventing border being cut-off, webkit + blink have content-box by default */
 table {

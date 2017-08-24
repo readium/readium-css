@@ -34,6 +34,10 @@ figure, tr {
 /* Hyphenation */
 
 body {
+  -webkit-hyphenate-character: "\002D";
+  -moz-hyphenate-character: "\002D";
+  -ms-hyphenate-character: "\002D";
+  hyphenate-character: "\002D";
   -webkit-hyphenate-limit-lines: 3;
   -ms-hyphenate-limit-lines: 3;
   hyphenate-limit-lines: 3;
@@ -113,4 +117,12 @@ abbr[title], acronym[title] {
 
 nobr wbr {
   white-space: normal;
+}
+
+/* Make ruby text and parentheses non-selectable (TBC) */
+ruby > rt, ruby > rp {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

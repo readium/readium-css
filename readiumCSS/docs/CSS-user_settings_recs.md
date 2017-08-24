@@ -6,18 +6,16 @@ User settings are a complex issue as CSS authoring is liberal by nature.
 
 In theory, this issue should be easily solvable using UA and user stylesheets as [they turn precedence upside down for `!important`](https://www.w3.org/TR/css3-cascade/#cascading). In practice, we don’t have any universal mechanism to set a stylesheet as an UA or user stylesheet: all the stylesheets we manipulate are created equal in scope; they are considered author’s stylesheet by the rendering engine.
 
-The following list is the behaviour we should emulate: 
+The following list is the order of priority we should emulate: 
 
 1. transition declarations;
 2. important user agent declarations;
 3. important user declarations;
-4. important override declarations;
-5. important author declarations;
-6. animation declarations;
-7. normal override declarations;
-8. normal author declarations;
-9. normal user declarations;
-10. normal user agent declarations.
+4. important author declarations;
+5. animation declarations;
+6. normal author declarations;
+7. normal user declarations;
+8. normal user agent declarations.
 
 ## Managing conflicts
 

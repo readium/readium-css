@@ -107,7 +107,7 @@ In other words, we’re following the priority of constituencies whenever possib
 User > Author > User Agent
 ```
 
-This also applies to the custom properties:
+This applies to the custom properties as well:
 
 ```
 --USER__var > --THEME__var > --RS__var
@@ -122,6 +122,12 @@ User settings must also abide by [those recommendations](https://github.com/read
 ### Reporting Bugs
 
 First and foremost, check if your issue has already been reported (don’t forget to check closed issues too). If it has, add a comment to the existing issue instead of opening a new one.
+
+Before opening any issue… 
+
+- **Ensure your EPUB is valid.** Always validate your EPUB against [EPUBCheck](http://validator.idpf.org). If there are errors or warnings, please fix those before submitting an issue.
+- **Create an isolated and reproducible test case.** Be sure the problem exists in Readium CSS (try your HTML in the browser). Try providing a [reduced test case](https://css-tricks.com/reduced-test-cases/).
+- **Share as much information as possible.** See below.
 
 #### Submitting a Good Bug Report
 
@@ -218,8 +224,9 @@ We’ll finally review your pull request to check if everything is OK.
 
 First, make sure you have signed and sent the [Readium ICLA](http://readium.github.io/documents/Individual%20Contributor%20License%20Agreement.pdf) (for Individual Contributor License Agreement).
 
-- QA new code (see [platform support](https://github.com/readium/readium-css/wiki/Platform-Support) in the Wiki).
-- Please update from master before proposing a pull request so that we don’t have to deal with conflicts.
+- Test your code (see [platform support](https://github.com/readium/readium-css/wiki/Platform-Support) in the Wiki).
+- Pull requests should **always** be created against the develop branch - never the master.
+- Please update from the develop branch before proposing a pull request so that we don’t have to deal with conflicts.
 - Use a clear and descriptive title.
 - List all fixes and enhancements the pull request provides.
 - Include screenshots and/or animated GIF whenever possible—no need to do that for correcting typos in docs for instance.

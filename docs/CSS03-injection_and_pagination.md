@@ -138,7 +138,7 @@ Safeguards deal with:
 
 Once again, you can use it with or without pagination, it should not make any difference.
 
-#### Variables you can set
+##### Variables you can set
 
 ```
 --RS__maxMediaWidth

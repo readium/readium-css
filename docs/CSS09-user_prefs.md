@@ -44,10 +44,9 @@ var root = document.documentElement;
 root.style.removeProperty("name of var");
 ```
 
-### Caveats
+### Caveat
 
-- Attribute selectors don’t scale particularly well. We’ll have to pay attention to performance, especially on mobile.
-- Some reading modes’ styles are tied to super specific color HEX values, which might become an issue when it comes to maintenance.
+Attribute selectors don’t scale particularly well. We’ll have to pay attention to performance, especially on mobile.
 
 ## List of variables 
 

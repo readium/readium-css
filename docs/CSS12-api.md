@@ -416,7 +416,7 @@ root.style.setProperty("--USER__var", "value");
 
 You don’t need to remove the variable before setting another value, the new value will simply override the existing one.
 
-#### Removing a user preference
+### Removing a user preference
 
 ```
 var root = document.documentElement; 

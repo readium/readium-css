@@ -127,14 +127,6 @@ function removeHint() {
 }
 ```
 
-### TO DO
-
-- Check if it could be useful for user settings (user displaying menu should be reliable enough)
-- Check if scroll could benefit from it (pagination)
-- Check combo with CSS containment, if there is anything we can do with the latter
-- Check if it doesn’t add too much complexity at the JS level
-- Find (inventive) ways to leverage it on mobile, should it gives interesting results
-
 ### References
 
 - [CSS Will Change Module Level 1](https://www.w3.org/TR/css-will-change-1/)

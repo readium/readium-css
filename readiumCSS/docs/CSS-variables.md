@@ -1,6 +1,6 @@
 # How to use CSS custom properties (a.k.a. variables)
 
-[Implementers doc] [CSS authors info]
+[Implementers’ doc]
 
 Note: CSS variables **are not and won’t be supported in IE11.** You can either create a static stylesheet for all UA browsers or decide to leverage them in most UA browsers + use a JS fallback for IE11—you can test for CSS variables support in JS and set inline styles if they’re not.
 

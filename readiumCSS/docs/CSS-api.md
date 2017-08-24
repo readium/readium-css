@@ -1,6 +1,6 @@
 # Readium CSS Variables API
 
-[Implementers’ doc]
+[Implementers’ doc] [WIP]
 
 As a reminder, the priority is: 
 

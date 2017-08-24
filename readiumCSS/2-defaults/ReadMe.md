@@ -1,5 +1,7 @@
 # Defaults
 
+[Implementers’ doc] [Authors’ info] [WIP]
+
 Defaults is currently made of 4 stylesheets:
 
 - 1 base stylesheet for all ebooks;

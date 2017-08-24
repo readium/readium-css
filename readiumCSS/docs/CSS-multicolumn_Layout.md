@@ -1,6 +1,6 @@
 # How the multicolumn layout works
 
-[Implementers doc] [CSS authors info]
+[Implementers’ doc] [Authors’ doc]
 
 Global References: 
 

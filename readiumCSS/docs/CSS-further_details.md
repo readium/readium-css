@@ -1,5 +1,7 @@
 # Readium CSS Further Details: Explaining the CSS Voodoo
 
+[Implementers’ doc] [WIP]
+
 Some parts of Readium CSS might feel like CSS voodoo at first sight. The goal of this document is to clarify how those parts actually work.
 
 ## The Internal Framework

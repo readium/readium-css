@@ -1,6 +1,6 @@
 # Inject and paginate EPUB contents
 
-[Implementers doc] [CSS authors info]
+[Implementers’ doc] [Authors’ info] [WIP]
 
 ## Injection
 

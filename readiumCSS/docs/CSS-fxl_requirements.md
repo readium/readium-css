@@ -1,6 +1,6 @@
 # Fixed-layouts’ Reading Systems Requirements
 
-[Implementers’ doc] [Authors’ info]
+[Implementers’ doc] [Authors’ doc]
 
 Source: [EPUB Content Documents 3.1](http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-fixed-layouts)
 

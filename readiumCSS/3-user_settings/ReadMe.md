@@ -1,5 +1,7 @@
 # User Settings, Reading modes and Themes
 
+[Implementers’ doc] [Authors’ info] [WIP]
+
 Currently, user settings and reading modes are different stylesheets.
 
 The idea is:

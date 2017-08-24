@@ -1,6 +1,6 @@
 # Order in which to append Readium CSS Reflowable Stylesheets
 
-[Implementers’ doc] [WIP]
+[Implementers’ doc] [Authors’ info] [WIP]
 
 Readium CSS is leveraging the cascade in order to provide authors with defaults, paginate contents and apply user overrides and themes. As a consequence, there is a specific order in which reflowable stylesheets must be added. Indeed, conformance with [CSS Cascading and Inheritance Level 3](https://www.w3.org/TR/css3-cascade/) requires that we make authors’ stylesheets an integral part of our cascade.
 

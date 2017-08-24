@@ -12,9 +12,9 @@ Readium CSS is a set of reference stylesheets for EPUB Reading Systems. It provi
 
 ## Introduction
 
-You’ll find Readium CSS modules (stylesheets) in the `src` folder, a basic demo to test it using the console in the `demo` folder, and extended documentation in the `docs` folder.
+The following sections explain how Readium CSS basically works at the moment. Extended documentation is available in the `docs` folder.
 
-The following sections explain how Readium CSS basically works at the moment. Please feel free to file issues if you have any. 
+Please feel free to file issues if you have any.
 
 ## How To
 

@@ -126,7 +126,7 @@ button {
 }
 ```
 
-That could be useful for theming for instance, by setting default values as fallback then declaring custom properties using JavaScript.
+That could be useful for theming for instance, by setting default values as fallbacks then declaring custom properties using JavaScript.
 
 Although browsers have been optimized to deal with CSS variables, please note performance might suffer in some browsers if you have a lot of variables with a fallback.
 
@@ -144,7 +144,7 @@ if (window.CSS && window.CSS.supports && window.CSS.supports('--a', 0)) {
 }
 ```
 
-Since CSS features queries are not supported by IE11, the previous snippet will return false.
+Since CSS feature queries are not supported by IE11, the previous snippet will return false.
 
 It will return true for browsers which support feature queries since `@supports` only checks if the syntax is correct (and don’t bother checking if the custom property exists).
 
@@ -216,7 +216,7 @@ body {
 
 Then create a function to return the breakpoint and append styles accordingly.
 
-You could probably leverage such a hack to implement some kind of `column-width` media query in paginated view, but it would require CSS authors to provide specific stylesheets with this non-standard media as a `link` attribute—otherwise, performance will be really really bad as you would have to hijack the entire stylesheet to retrieve media queries first.
+You could probably leverage such a hack to implement some kind of `column-width` media query in paged view, but it would require CSS authors to provide specific stylesheets with this non-standard media as a `link` attribute—otherwise, performance will be really really bad as you would have to hijack the entire stylesheet to retrieve media queries first.
 
 ### Setting another variable as a value
 

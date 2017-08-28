@@ -57,7 +57,7 @@ For a11y-related typefaces (Open Dyslexic, bold style of sans-serif family), the
 
 ### Author’s intent
 
-Declaring a `font-family` for `body` or `p` + `p.class` is so common that it should not be considered an intent per se. While `p.class` is debatable, it is so widespread in practice (some authoring tools output `font-family` for every paragraph style) that it can’t be considered an intent in pure CSS.
+Declaring a `font-family` for `body`, `p` and `p.class` is so common that it should not be considered an intent per se. While `p.class` is debatable, it is so widespread in practice (some authoring tools output `font-family` for every paragraph style) that it can’t be considered an intent in pure CSS.
 
 A different `font-family` can be set for headings (`h1`, `h2`, `h3` etc.), `blockquote`, `i`, `span`, etc.
 

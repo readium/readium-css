@@ -8,15 +8,15 @@ This document serves as an introduction, it explains the fundamental concepts us
 
 **In the context of EPUB, we must assume the role of the User Agent.**
 
-Indeed, EPUB it is not supported natively so we must build on top of web browsers’ rendering engine.
+Indeed, EPUB is not supported natively so we must build on top of web browsers’ rendering engine.
 
 With such a role comes great responsibility: we must try to behave like browsers are behaving—i.e. be liberal in what we accept from authors—, and find a sensible balance between authors’ stylesheets and users’ overrides.
 
 Authors and users have expectations though, and we had to take those into account. For instance, they are used to having EPUB contents laid out in a paged view, with reading modes (paper, sepia, night) and a minimal set of common settings.
 
-By serving as a User Agent, we must:
+By serving as a User Agent, we must make sure:
 
-1. make sure authors’ EPUB contents are rendered as expected (e.g. their styles are scoped, we don’t override them unless strictly necessary, etc.);
+1. authors’ EPUB contents are rendered as expected (e.g. their styles are scoped, we don’t override them unless strictly necessary, etc.);
 2. we do serve as a user’s agent by providing a Graphical User Interface to writing a user stylesheet (i.e. user settings) and applying those styles as expected.
 
 ## 2. Aim at Interoperability
@@ -40,7 +40,7 @@ Readium CSS has been be designed following 4 core principles:
 3. **Daisy-chainability:** those modules can be loaded and daisy-chained (cascade) depending on conditions;
 4. **Customization:** modules can be customized either before or during runtime (CSS variables), which implies themes can be generated within minutes.
 
-We’ve also made sure that, for any “hardcoded” style you might add when CSS variables are not supported (internal stylesheet or inline styles), user settings can still be applied (leveraging inheritance).
+We’ve also made sure that, for most “hardcoded” styles you might add when CSS variables are not supported (internal stylesheet or inline styles), user settings can still be applied (leveraging inheritance).
 
 ## 4. Openness and Transparency
 

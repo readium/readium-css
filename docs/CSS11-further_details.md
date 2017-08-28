@@ -12,7 +12,7 @@ This stylesheet is based on [HTML Suggested Rendering](https://www.w3.org/TR/htm
 
 If you’re familiar with CSS preprocessors (LESS, SASS, Stylus, etc.), you already know how to use it. It indeed relies on variables and functions, which are available in vanilla CSS today.
 
-What’s noteworthy is that you can customize the entire publication by setting CSS variables (a.k.a. custom properties) and either use AS-IS on runtime or compile as a static representation before runtime (PostCSS config coming soon).
+What’s noteworthy is that you can customize the entire publication by setting CSS variables (a.k.a. custom properties) and either use AS-IS at runtime or compile as a static representation before runtime (PostCSS config coming soon).
 
 The stylesheet will then use those variables defined at the `:root` level. 
 

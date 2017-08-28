@@ -86,13 +86,13 @@ The default `color` for body copy’s text.
 --RS__backgroundColor
 ```
 
-The default `background-color` for pages.
+The default `background-color` for screens.
 
 ## Default
 
 The default stylesheet was designed for unstyled ebooks. It is based on HTML5 Suggested Rendering and can be customized. 
 
-Although it should not be used for styled ebooks, it should not impact the author’s styles if it is added before its stylesheet(s).
+Although it must not be used for styled ebooks, it should not impact the author’s styles if it is added before its stylesheet(s).
 
 You can customize: 
 

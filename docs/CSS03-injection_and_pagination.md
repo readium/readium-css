@@ -47,7 +47,7 @@ Pagination is responsive by default, which means it is using relative values in 
 
 We’ve chosen this approach since it appears setting everything in pixels is more likely to create rounding errors and rendering issues (e.g. cut-off text) than letting the rendering engine deal with relative units on its own.
 
-The responsive design provide other benefits. For instance, if the reader is using an iPad in landscape mode and sets a bigger font size, the two-column view will automatically switch to a single-page view if needed.
+The responsive design provides other benefits. For instance, if the reader is using an iPad in landscape mode and sets a bigger font size, the two-column view will automatically switch to a single-page view if needed.
 
 You can also limit line-length by setting a `max-width` for `body`.
 
@@ -62,7 +62,7 @@ Font size is an important metric since the responsive design relies entirely on 
 For `body`, we own: 
 
 - `overflow`;
-- sizing: `(min-|max-) width`, `(min-|max-) height`, `box-sizing`;
+- sizing: `(min-|max-)width`, `(min-|max-)height`, `box-sizing`;
 - spacing: `margin` and `padding`.
 
 You can control horizontal margins in several ways: 
@@ -71,7 +71,7 @@ You can control horizontal margins in several ways:
 2. using `column-gap` and `margin` for the web view/chrome view/iframe;
 3. using `padding` for `:root` and/or `body`.
 
-Please note that when using `padding`, you must take it into account when sizing `:root` and/or `body`. Their widths contains the padding set for the element.
+Please note that when using `padding`, you must take it into account when sizing `:root` and/or `body`. Their widths contain the padding set for the element.
 
 #### Variables you can set
 

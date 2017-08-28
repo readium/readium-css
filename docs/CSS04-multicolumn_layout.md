@@ -37,7 +37,7 @@ body {
 
 ## The multi-column model
 
-**Multi-column layout introduces a new type of container between the content box and the content, the column box.** This is a significant departure from the traditional box model. 
+**Multi-column layout introduces a new type of container between the content box and the content: the column box.** This is a significant departure from the traditional box model. 
 
 The content of a multicol element is flowed into column boxes, which are arranged into rows, like table cells (inline direction). Consequently: 
 
@@ -100,7 +100,7 @@ This is the shorthand property for setting `column-width` and `column-count`. Om
 
 ### Pseudo-algorithm
 
-The pseudo-algorithm below determines the used values for ‘column-count’ (N) and ‘column-width’ (W). There are two other variables in the pseudo-algorithm:
+The pseudo-algorithm below determines the used values for `column-count` (N) and `column-width` (W). There are two other variables in the pseudo-algorithm:
 
 - `available-width`, it is unknown if the multi-column element is floating with a `width` of `auto`, it is the same as the used width of the multi-column element—in vertical text, the used height replaces used width in this calculation.
 - `shrink-to-fit`, the result of a shrink-to-fit computation.

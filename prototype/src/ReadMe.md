@@ -45,7 +45,15 @@ Currently, user settings are managed using two mechanisms:
 
 ### Extra Stylesheets
 
-Scroll, reading modes (sepia and night), and font-size normalize require specific stylesheets. You should consequently append and remove them.
+Scroll, reading modes (sepia and night), and font-size normalize require specific stylesheets.
+
+**It is up to you to decide how you want to manage those settings.** 
+
+You can:
+
+- use them as-is, appending/removing stylesheets dynamically;
+- use classes or attributes for `html` (don’t forget to modify stylesheets’ selectors accordingly);
+- use CSS variables if you prefer consistency (we’re currently trying this approach for the iOS reference implementation).
 
 ### User variables
 

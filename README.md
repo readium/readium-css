@@ -20,9 +20,9 @@ See [license.txt](https://github.com/readium/readium-css/blob/master/LICENSE).
 
 ## Scope of this project
 
-The major goal of Readium CSS is to provide implementers with reliable and modern styles for EPUB 2 and EPUB 3 publications, and authors with good interoperability. 
+The major goal of Readium CSS is to provide implementers and authors with reliable and modern styles for EPUB 2 and EPUB 3 publications, with good interoperability. 
 
-Those stylesheets were not designed and should not be used for (Portable) Web Publications, or other existing formats like FB2, PRC, Mobi, TEI, etc.
+Those stylesheets were not designed and should not be used for other existing formats like FB2, PRC, Mobi, TEI, etc., and works in progress like Web Publications or Portable Web Publications.
 
 Some issues, which may be raised during development, will be documented so that they can serve as a reference for future specifications.
 
@@ -36,7 +36,7 @@ Please note you’ll have to manually inject stylesheets and apply settings via 
 
 There is no public implementation of Readium CSS so far. 
 
-Consequently, if you are encountering rendering issues with Readium, please report them on the [Readium-shared-js repository](https://github.com/readium/readium-shared-js).
+Consequently, if you are encountering rendering issues with Readium, please report them on the [github section dedicated to the proper Readium project](https://github.com/readium) (readium-js, readium-shared-js, readium-sdk, etc.).
 
 ## Docs
 

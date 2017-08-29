@@ -1,5 +1,7 @@
 # Quick start
 
+**This folder contains files for the current iOS (reference) implementation, it is modified for this implementation only.**
+
 Readium CSS is a set of reference stylesheets for EPUB Reading Systems. It provides: 
 
 - a CSS normalize for EPUB contents;

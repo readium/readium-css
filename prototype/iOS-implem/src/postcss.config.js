@@ -10,47 +10,15 @@ module.exports = (ctx) => ({
         , "number-max-precision": 3
         , "unit-blacklist": ["pt"]
         , "custom-property-pattern": "(RS|THEME|USER)__.+"
-        , "declaration-block-single-line-max-declarations": 1
         , "selector-max-empty-lines": 0
-        , "color-hex-case": "lower"
         , "color-hex-length": "long"
         , "font-family-name-quotes": "always-where-recommended"
-        , "function-comma-space-after": "always"
-        , "function-comma-space-before": "never"
-        , "function-max-empty-lines": 0
-        , "function-name-case": "lower"
-        , "function-parentheses-newline-inside": "never-multi-line"
         , "function-url-quotes": "always"
         , "number-leading-zero": "always"
         , "number-no-trailing-zeros": true
         , "length-zero-no-unit": true
         , "unit-case": "lower"
-        , "value-list-max-empty-lines": 0
-        , "property-case": "lower"
-        , "declaration-empty-line-before": "never"
-        , "declaration-colon-space-after": "always"
-        , "declaration-colon-space-before": "never"
-        , "declaration-bang-space-before": "always"
-        , "declaration-block-semicolon-newline-after": "always-multi-line"
-        , "declaration-block-trailing-semicolon": "always"
-        , "block-closing-brace-empty-line-before": "never"
-        , "block-closing-brace-newline-after": "always"
-        , "block-closing-brace-newline-before": "always"
-        , "block-opening-brace-newline-after": "always"
-        , "block-opening-brace-newline-before": "never-multi-line"
-        , "block-opening-brace-space-before": "always"
         , "selector-attribute-quotes": "always"
-        , "selector-combinator-space-after": "always"
-        , "selector-combinator-space-before": "always"
-        , "selector-pseudo-class-case": "lower"
-        , "selector-pseudo-element-case": "lower"
-        , "selector-type-case": "lower"
-        , "selector-list-comma-space-after": "always-single-line"
-        , "rule-empty-line-before": ["always", {
-            "except": ["first-nested"]
-          , "ignore": ["after-comment"]
-        }]
-        , "media-query-list-comma-newline-after": "always"
         , "comment-whitespace-inside": "always"
         , "max-empty-lines": 1
         , "indentation": 2

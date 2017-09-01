@@ -120,7 +120,10 @@
 :root[style*="--USER__fontFamily"] li, :root[style*="font-family"] li,
 :root[style*="--USER__fontFamily"] div, :root[style*="font-family"] div,
 :root[style*="--USER__fontFamily"] dt, :root[style*="font-family"] dt,
-:root[style*="--USER__fontFamily"] dd, :root[style*="font-family"] dd,
+:root[style*="--USER__fontFamily"] dd, :root[style*="font-family"] dd {
+  font-family: inherit !important;
+}
+
 :root[style*="--USER__fontFamily"] i:not(:lang), :root[style*="font-family"] i:not(:lang),
 :root[style*="--USER__fontFamily"] em:not(:lang), :root[style*="font-family"] em:not(:lang),
 :root[style*="--USER__fontFamily"] cite:not(:lang), :root[style*="font-family"] cite:not(:lang),

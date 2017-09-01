@@ -30,6 +30,8 @@
 
   /* Config */
   --RS__baseFontFamily: var(--RS__oldStyleTf);
+  --RS__baseLineHeight: 1.5;
+
   --RS__textColor: #121212;
   --RS__backgroundColor: #FFFFFF;
 }
@@ -43,7 +45,13 @@
 /* Set default font for the doc’s body, it will be overridden by the authors’s stylesheet */
 body {
   font-family: var(--RS__baseFontFamily);
+  line-height: var(--RS__baseLineHeight);
   text-rendering: optimizeLegibility;
+}
+
+/* 1.5 being too loose with larger font-sizes, we reset headings to normal (which value is 1.125–1.375 for our font-stacks) */
+h1, h2, h3 {
+  line-height: normal;
 }
 
 :lang(ja) {

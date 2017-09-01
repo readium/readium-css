@@ -14,7 +14,6 @@
 
   --RS__typeScale: 1.125; /* 1.067 | 1.125 | 1.2 | 1.25 | 1.333 | 1.414 | 1.5 | 1.618 */
   --RS__baseFontSize: 100%;
-  --RS__baseLineHeight: 1.5;
 
   --RS__flowSpacing: 1.5rem;
   --RS__paraSpacing: 0;
@@ -33,7 +32,6 @@
 
 body {
   font-size: var(--RS__baseFontSize);
-  line-height: var(--RS__baseLineHeight);
 }
 
 h1, h2, h3, h4, h5, h6 {

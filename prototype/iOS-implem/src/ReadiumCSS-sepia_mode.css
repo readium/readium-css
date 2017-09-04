@@ -8,7 +8,8 @@
 
 /* CONFIG */
 
-:root[style*="--USER__appearance"][style*="readium-sepia"] {
+/* [style*="--USER__appearance"] can be used to increase specificity but performance hit */
+:root[style*="readium-sepia-on"] {
   --THEME__backgroundColor: #faf4e8;
   --THEME__textColor: #121212;
 
@@ -16,29 +17,29 @@
   --THEME__visitedColor: #551A8B;
 }
 
-:root[style*="--USER__appearance"][style*="readium-sepia"] {
+:root[style*="readium-sepia-on"] {
   background: var(--THEME__backgroundColor) !important;
   color: var(--THEME__textColor) !important;
 }
 
-:root[style*="--USER__appearance"][style*="readium-sepia"] body {
+:root[style*="readium-sepia-on"] body {
   background-color: transparent;
   color: inherit;
 }
 
-:root[style*="--USER__appearance"][style*="readium-sepia"] a:link,
-:root[style*="--USER__appearance"][style*="readium-sepia"] a:link * {
+:root[style*="readium-sepia-on"] a:link,
+:root[style*="readium-sepia-on"] a:link * {
   color: var(--THEME__linkColor);
 }
 
-:root[style*="--USER__appearance"][style*="readium-sepia"] a:visited,
-:root[style*="--USER__appearance"][style*="readium-sepia"] a:visited * {
+:root[style*="readium-sepia-on"] a:visited,
+:root[style*="readium-sepia-on"] a:visited * {
   color: var(--THEME__visitedColor);
 }
 
 /* Disable for proto as there are hardware-, platform- and browser-specific bugs (some or all images won’t render in Blink/Webkit)  
-:root[style*="--USER__appearance"][style*="readium-sepia"] svg,
-:root[style*="--USER__appearance"][style*="readium-sepia"] img {
+:root[style*="readium-sepia-on"] svg,
+:root[style*="readium-sepia-on"] img {
   mix-blend-mode: multiply;
 }
 */

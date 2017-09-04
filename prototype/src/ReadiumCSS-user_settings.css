@@ -124,12 +124,18 @@
   font-family: inherit !important;
 }
 
-:root[style*="--USER__fontFamily"] i:not(:lang), :root[style*="font-family"] i:not(:lang),
-:root[style*="--USER__fontFamily"] em:not(:lang), :root[style*="font-family"] em:not(:lang),
-:root[style*="--USER__fontFamily"] cite:not(:lang), :root[style*="font-family"] cite:not(:lang),
-:root[style*="--USER__fontFamily"] b:not(:lang), :root[style*="font-family"] b:not(:lang),
-:root[style*="--USER__fontFamily"] strong:not(:lang), :root[style*="font-family"] strong:not(:lang),
-:root[style*="--USER__fontFamily"] span:not(:lang), :root[style*="font-family"] span:not(:lang) {
+:root[style*="--USER__fontFamily"] i:not([lang]), :root[style*="font-family"] i:not([lang]),
+:root[style*="--USER__fontFamily"] i:not([xml\:lang]), :root[style*="font-family"] i:not([xml\:lang]),
+:root[style*="--USER__fontFamily"] em:not([lang]), :root[style*="font-family"] em:not([lang]),
+:root[style*="--USER__fontFamily"] em:not([xml\:lang]), :root[style*="font-family"] em:not([xml\:lang]),
+:root[style*="--USER__fontFamily"] cite:not([lang]), :root[style*="font-family"] cite:not([lang]),
+:root[style*="--USER__fontFamily"] cite:not([xml\:lang]), :root[style*="font-family"] cite:not([xml\:lang]),
+:root[style*="--USER__fontFamily"] b:not([lang]), :root[style*="font-family"] b:not([lang]),
+:root[style*="--USER__fontFamily"] b:not([xml\:lang]), :root[style*="font-family"] b:not([xml\:lang]),
+:root[style*="--USER__fontFamily"] strong:not([lang]), :root[style*="font-family"] strong:not([lang]),
+:root[style*="--USER__fontFamily"] strong:not([xml\:lang]), :root[style*="font-family"] strong:not([xml\:lang]),
+:root[style*="--USER__fontFamily"] span:not([lang]), :root[style*="font-family"] span:not([lang]),
+:root[style*="--USER__fontFamily"] span:not([xml\:lang]), :root[style*="font-family"] span:not([xml\:lang]) {
   font-family: inherit !important;
 }
 

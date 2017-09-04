@@ -273,7 +273,7 @@ Scope: `html`
 It impacts `body`.
 
 ```
---USER__scroll
+--USER__view
 ```
 
 Enables scroll mode.
@@ -321,6 +321,14 @@ Scope: `html`
 It impacts `body`, `p`, `li`, `div` and `dd`.
 
 ```
+--USER__fontOverride
+```
+
+Scope: `html`
+
+It impacts the `--USER__fontFamily` variable.
+
+```
 --USER__fontFamily
 ```
 
@@ -337,6 +345,14 @@ It impacts `body`, `p`, `li`, `div`, `dt`, `dd` and phrasing elements which donâ
 Increasing and decreasing the root `font-size`. It will serve as a reference for the cascade.
 
 Scope: `html`
+
+```
+--USER__advancedSettings
+``` 
+
+Scope: `html`
+
+It impacts the `--USER__typescale` variable.
 
 ```
 --USER__typeScale

@@ -48,6 +48,7 @@
 }
 
 /* Set default font for the doc’s body, it will be overridden by the authors’s stylesheet */
+
 body {
   font-family: var(--RS__baseFontFamily);
   line-height: var(--RS__baseLineHeight);
@@ -55,6 +56,7 @@ body {
 }
 
 /* 1.5 being too loose with larger font-sizes, we reset headings to normal (which value is 1.125–1.375 for our font-stacks) */
+
 h1, h2, h3 {
   line-height: normal;
 }

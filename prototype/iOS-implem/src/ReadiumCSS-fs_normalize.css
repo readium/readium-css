@@ -9,43 +9,44 @@
 /* STYLES */
 /* :root is used so that you can quickly add a class or attribute if you prefer e.g. `:root[data-rs-normalize]` */
 
-:root[style*="--USER__typeScale"] p,
-:root[style*="--USER__typeScale"] li,
-:root[style*="--USER__typeScale"] div,
-:root[style*="--USER__typeScale"] pre,
-:root[style*="--USER__typeScale"] dd {
+/* [style*="--USER__advancedSettings"] can be used to increase specificity but performance hit */
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] p,
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] li,
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] div,
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] pre,
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] dd {
   font-size: 1rem !important;
 }
 
-:root[style*="--USER__typeScale"] h1 {
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h1 {
   /* Fallback if browser doesn’t support vars */
   font-size: 1.75rem !important;
   font-size: calc(((1rem * var(--USER__typeScale, 1.2)) * var(--USER__typeScale, 1.2)) * var(--USER__typeScale, 1.2)) !important;
 }
 
-:root[style*="--USER__typeScale"] h2 {
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h2 {
   /* Fallback if browser doesn’t support vars */
   font-size: 1.5rem !important;
   font-size: calc((1rem * var(--USER__typeScale, 1.2)) * var(--USER__typeScale, 1.2)) !important;
 }
 
-:root[style*="--USER__typeScale"] h3 {
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3 {
   /* Fallback if browser doesn’t support vars */
   font-size: 1.25rem !important;
   font-size: calc(1rem * var(--USER__typeScale, 1.2)) !important;
 }
 
-:root[style*="--USER__typeScale"] h4,
-:root[style*="--USER__typeScale"] h5,
-:root[style*="--USER__typeScale"] h6 {
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h4,
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h5,
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h6 {
   font-size: 1rem !important;
 }
 
-:root[style*="--USER__typeScale"] small {
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] small {
   font-size: smaller !important;
 }
 
-:root[style*="--USER__typeScale"] sub,
-:root[style*="--USER__typeScale"] sup {
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] sub,
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] sup {
   font-size: 67.5% !important;
 }

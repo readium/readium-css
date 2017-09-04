@@ -6,7 +6,8 @@
 
    Repo: https://github.com/readium/readium-css */
 
-:root[style*="--USER__scroll"][style*="readium-scroll-on"] {
+/* [style*="--USER__view"] can be used to increase specificity but performance hit */
+:root[style*="readium-scroll-on"] {
   /* Reset html size so that the user can scroll */
   width: auto !important;
   height: auto !important;
@@ -20,7 +21,7 @@
 }
   
 /* TODO: Enforce max-width for body, no matter which media query overrides it in pagination */
-:root[style*="--USER__scroll"][style*="readium-scroll-on"] body {
+:root[style*="readium-scroll-on"] body {
   max-width: var(--RS__maxLineLength) !important;
 }
   

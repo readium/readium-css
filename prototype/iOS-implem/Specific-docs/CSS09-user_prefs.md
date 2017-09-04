@@ -48,6 +48,70 @@ root.style.removeProperty("name of var");
 
 Attribute selectors don’t scale particularly well. We’ll have to pay attention to performance, especially on mobile.
 
+## Switches
+
+Some variables behave like switches. You could use custom `data-*` attributes to manage the following ones.
+
+### User view
+
+Allows to switch between paged and scroll view.
+
+```
+--USER__view
+```
+
+Possible values: `readium-paged-on` | `readium-scroll-on`
+
+### Font Family override
+
+Acts as an explicit switch to override the publisher’s `font-family`.
+
+It must be set if the user changes `font-family`.
+
+```
+--USER__fontOverride
+```
+
+Possible values: `readium-font-on` | `readium-font-off`
+
+### Advanced Settings
+
+Acts as an explicit switch to overrides publisher’s styles.
+
+It must be set if the user changes `font-family` or `font-size`.
+
+```
+--USER__advancedSettings
+``` 
+
+Possible values: `readium-advanced-on` | `readium-advanced-off`
+
+### Reading Modes
+
+We currently have two reading modes for night and sepia.
+
+```
+--USER__appearance
+```
+
+Possible values: `readium-default-on` | `readium-sepia-on` | `readium-night-on`
+
+### Filters
+
+Please note night mode provides two extra specific variables: 
+
+```
+--USER__darkenFilter
+```
+
+Possible values: `readium-darken-on` | `readium-darken-off`
+
+```
+--USER__invertFilter
+```
+
+Possible values: `readium-invert-on` | `readium-invert-off`
+
 ## List of variables 
 
 ### Layout 
@@ -61,14 +125,6 @@ The user can set the number of columns and page margins.
 ```
 
 Possible values: `1` | `2`
-
-#### Scroll
-
-```
---USER__scroll
-```
-
-Possible values: `readium-scroll-on` | `readium-scroll-off`
 
 #### Page margins
 
@@ -121,7 +177,7 @@ The user can set `font-family`, `font-size` and `line-height` for body copy cont
 --USER__fontFamily
 ```
 
-Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)`
+Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)` | `<string>`
 
 #### Font size and type scale
 
@@ -192,32 +248,6 @@ Possible values: `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
 ```
 
 Possible values: `0.0675rem` | `0.125rem` | `0.1875rem` | `0.25rem`
-
-## Reading Modes
-
-We currently have two reading modes for night and sepia.
-
-```
---USER__appearance
-```
-
-Possible values: `readium-default` | `readium-sepia` | `readium-night`
-
-## Filters
-
-Please note night mode provides two extra specific variables: 
-
-```
---USER__darkenFilter
-```
-
-Possible values: `readium-darken-on` | `readium-darken-off`
-
-```
---USER__invertFilter
-```
-
-Possible values: `readium-invert-on` | `readium-invert-off`
 
 ## Themes
 

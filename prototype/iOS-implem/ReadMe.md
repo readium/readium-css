@@ -72,6 +72,7 @@ First, append `ReadiumCSS-fs_normalize.css` at the head of `head`.
 Then:
 
 ```
+root.style.setProperty("--USER__advancedSettings", "readium-advanced-on");
 root.style.setProperty("--USER__typeScale", "1.067");
 ```
 

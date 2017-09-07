@@ -8,33 +8,35 @@
 /* Variables are added to html (setProperty -> style) */
 
 /* Number of columns = 1 | 2 */
+/* We still need to see if we allow users to force number of columns for all configs, currently it behaves as an "auto" setting */
 
-:root[style*="--USER__colNumber"] {
-  -webkit-column-count: var(--USER__colNumber);
-  -moz-column-count: var(--USER__colNumber);
-  column-count: var(--USER__colNumber);
+/* apply col setting except for tablet portrait */
+@media screen and (min-width: 60em),
+screen and (max-width: 47em) and (orientation: landscape) {
+  :root[style*="--USER__colNumber"] {
+    -webkit-column-count: var(--USER__colNumber);
+    -moz-column-count: var(--USER__colNumber);
+    column-count: var(--USER__colNumber);
+  }
 }
 
-:root[style*="--USER__colNumber: 1"] body,
-:root[style*="--USER__colNumber:1"] body {
-  max-width: var(--RS__maxLineLength);
-
-  --RS__currentColNumber: 1;
+/* If one column, make sure we limit line-length */
+:root[style*="--USER__colNumber: 1"],
+:root[style*="--USER__colNumber:1"] {
+  --RS__maxLineLength: 40rem !important;
 }
 
-:root[style*="--USER__colNumber: 2"],
-:root[style*="--USER__colNumber:2"] {
-  -webkit-column-width: auto;
-  -moz-column-width: auto;
-  column-width: auto;
-
-  --RS__currentColNumber: 2;
+/* If smartphone landscape, and 2 columns, col width the same as iPad landscape + desktop */
+@media screen and (max-width: 47em) and (orientation: landscape) {
+  :root[style*="--USER__colNumber: 2"],
+  :root[style*="--USER__colNumber:2"] {
+    --RS__colWidth: 20em; /* The size at which you want to switch to 1 column (compute against user-setting) */
+  }
 }
 
-/* Page Margins */
-
+/* Page Margins: the user margin is a factor of the page gutter e.g. 0.5, 0.75, 1, 1.25, 1.5, etc. */
 :root[style*="--USER__pageMargins"] body {
-  padding: 0 var(--USER__pageMargins) !important;
+  padding: 0 calc(var(--RS__pageGutter) * var(--USER__pageMargins)) !important;
 }
 
 /* Colors */

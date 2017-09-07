@@ -73,6 +73,22 @@ You can control horizontal margins in several ways:
 
 Please note that when using `padding`, you must take it into account when sizing `:root` and/or `body`. Their widths contain the padding set for the element.
 
+### The auto pagination model
+
+The following illustrations are the two models you’ll have to deal with.
+
+![Single Page Model](/assets/page-model.jpg)
+
+A single page is just a column which can grow to the entire width of the web view/iframe since it is declared for `html`.
+
+Page margins are part of `body`, hence `--RS__maxLineLength`. Contents are centered using the `auto` value for `body` margins.
+
+![Two-Column Spread Model](/assets/spread-model.jpg)
+
+In the spread model, i.e. two columns, the `--RS__colWidth` is a floor: once the minimum width available can’t contain 2 columns (the value is computed from the `font-size` user setting), we switch to the single page model.
+
+Since we still limit line-length, you might want to limit the web view/iframe size so that you don’t end up with a huge gap on large screens (or add `padding` to `root` and take it into account when scrolling).
+
 #### Variables you can set
 
 Please note those variables’ value can be redefined using media queries. You don’t need to redeclare entire declarations.

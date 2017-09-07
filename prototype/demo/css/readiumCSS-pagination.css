@@ -5,37 +5,29 @@
 
    Repo: https://github.com/readium/readium-css */
 
-/* 
-   Note: implementers feedback greatly appreciated, want to validate this approach before 
-   fine-tuning margins, columns, etc. On larger screens, you might want to resize the viewport
-   i.e. the web view / iframe so that you still get 2 columns.
-   
-   Tried to make the most out of the multicol’s logic, which is responsive by default,
-   but since columns have a floor but no ceiling, we have to find another way to limit line-length, 
-   manage margins, etc.
-   
-   I wish something like :nth-column(odd | even) existed to manage padding on body more efficitely
-   but we’ll have to do without it so having evenly-distributed spacing (left, column gap and right)
-   must be implemented in another way if you want that.
-*/
-
 /* Config */
 
 /* Columns are responsive by default, even if column-width is set in pixels, 
    which means two-page spread will switch to single page depending on current font-size.
    If you want more control, I’m afraid you’ll have to update colWidth/colGap dynamically, 
    which is how a significant amount of RS do at the moment. */
+
+/* Default for smartphone portrait (small screens) */
 :root {
   /* Your columns’ width floor */
-  --RS__colWidth: 30em;
+  --RS__colWidth: 45em; /* The width at which we’ll switch to 2 columns by default. PS: you can’t set it in rem */
+
   /* Ideal number of columns (depending on columns’ width floor) */
-  --RS__colCount: 2; /* Can be undefined */
+  --RS__colCount: 1;
+
   /* Gap between columns (in pixels so that it won’t resize with font-size) */
   --RS__colGap: 0px;
-  /* Default page horizontal margins (in pixels so that it won’t resize with font-size) */
-  --RS__pageGutter: 20px; /* See if colGap and pageGutter can be the same var */
+
   /* Optimal line-length (rem will take :root font-size into account, whatever the body’s font-size) */
   --RS__maxLineLength: 40rem;
+
+  /* Default page horizontal margins (in pixels so that it won’t resize with font-size) */
+  --RS__pageGutter: 20px; /* See if colGap and pageGutter can be the same var */
 }
 
 /* Reset page margins for Forward compatibility */
@@ -85,10 +77,6 @@
   column-fill: auto;
 
   -webkit-text-size-adjust: 100%;
-
-  /* Since columns do their thing at the browser level, 
-  provide a variable to check if there is 1 or 2 columns */
-  --RS__currentColNumber: 1;
 }
 
 body {
@@ -98,25 +86,49 @@ body {
   /* Limit line-length but we have to reset when 2 columns and control the viewport.
      By using max-width + margin auto, margins will shrink when font-size increases,
      which is what would be expected in terms of typography. */
-  /* TODO: some authors might have a max-width declared already, see how we can deal with it. */
   max-width: var(--RS__maxLineLength) !important;
   margin: 0 auto !important;
 
   /* We need a minimum padding on body so that descandants/ascendants in italic/script are not cut-off.
-     It also serves as a margin on small screens.
      Drawback: we have to use border-box so that it doesn’t screw the box model,
      which means it impacts colWidth and max-width */
   box-sizing: border-box;
   padding: 0 var(--RS__pageGutter) !important;
 }
 
-/* If viewport can fit 2 columns (+ colGap) */
-@media screen and (min-width: 61.5em) {
+/* We’ll now redefine margins and columns depending on the minimum width available
+   The goal is having the simplest model possible and avoid targeting devices */
+
+/* Smartphone landscape */
+@media screen and (min-width: 35em) {
   :root {
-    --RS__maxLineLength: none; /* Reset max-width */
-    --RS__colGap: 0px;
-    --RS__pageGutter: 50px;
-    
-    --RS__currentColNumber: 2;
+    --RS__pageGutter: 30px;
   }
 }
+  
+/* Tablet portrait */
+@media screen and (min-width: 45em) {
+  :root {
+    --RS__pageGutter: 40px;
+  }
+}
+  
+/* Desktop small + tablet landscape */
+@media screen and (min-width: 60em) {
+  :root {
+    /* The size at which we want 2 columns to switch to 1 (depending on font-size) */
+    --RS__colWidth: 20em; /* 20 * 16 = 320px but 20 * 28 = 560px so it will switch to 1 col @ 175% font-size (user-setting) on an iPad */
+    /* We constrain to 2 columns so that we can never get 3 or 4, etc.*/
+    --RS__colCount: 2;
+  }
+}
+  
+/* Desktop + tablet large */
+/* We get the previous settings, we just change the margins */
+@media screen and (min-width: 75em) {
+  :root {
+    --RS__pageGutter: 50px;
+  }
+}
+
+/* At this point (80em or so), constraining line length must be done at the web view/iframe level, or by limiting the size of :root itself */

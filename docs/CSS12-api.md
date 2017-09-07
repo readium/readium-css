@@ -266,7 +266,7 @@ Scope: `html`
 --USER__pageMargins
 ```
 
-Horizontal margins (`padding-left` and `padding-right`) the user wants to set.
+A factor applied to horizontal margins (`padding-left` and `padding-right`) the user wants to set.
 
 Scope: `html`
 

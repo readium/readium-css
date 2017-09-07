@@ -15,13 +15,11 @@
   -webkit-columns: auto auto !important;
   -moz-columns: auto auto !important;
   columns: auto auto !important;
-
-  --RS__currentColNumber: 0;
 }
 
-/* TODO: Enforce max-width for body, no matter which media query overrides it in pagination */
+/* You could change de line-length if you wish */
 body {
-  max-width: var(--RS__maxLineLength) !important;
+  --RS__maxLineLength: 40rem !important; 
 }
 
 /* Scroll mode horizontal */

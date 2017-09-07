@@ -15,14 +15,12 @@
   /* Reset columns, auto + auto = columns can’t be created */
   -webkit-columns: auto auto !important;
   -moz-columns: auto auto !important;
-  columns: auto auto !important;
-  
-  --RS__currentColNumber: 0;
+  columns: auto auto !important;  
 }
   
 /* TODO: Enforce max-width for body, no matter which media query overrides it in pagination */
 :root[style*="readium-scroll-on"] body {
-  max-width: var(--RS__maxLineLength) !important;
+  --RS__maxLineLength: 40rem !important; 
 }
   
 /* Scroll mode horizontal */

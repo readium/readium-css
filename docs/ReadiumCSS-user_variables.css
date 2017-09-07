@@ -8,7 +8,7 @@
 
 :root {
   --USER__colNumber: ;        /* 1, 2 */
-  --USER__pageMargins: ;      /* Depends on pagination + 1/2 cols */
+  --USER__pageMargins: ;      /* a factor of the reference we set */
 
   --USER__backgroundColor: ;  /* Custom color (not preset mode) */
   --USER__textColor: ;        /* Custom color (not preset mode) */

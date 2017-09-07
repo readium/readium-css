@@ -77,13 +77,13 @@ Please note that when using `padding`, you must take it into account when sizing
 
 The following illustrations are the two models you’ll have to deal with.
 
-![Single Page Model](/assets/page-model.jpg)
+![Single Page Model](assets/Page-Model.jpg)
 
 A single page is just a column which can grow to the entire width of the web view/iframe since it is declared for `html`.
 
 Page margins are part of `body`, hence `--RS__maxLineLength`. Contents are centered using the `auto` value for `body` margins.
 
-![Two-Column Spread Model](/assets/spread-model.jpg)
+![Two-Column Spread Model](assets/spread-model.jpg)
 
 In the spread model, i.e. two columns, the `--RS__colWidth` is a floor: once the minimum width available can’t contain 2 columns (the value is computed from the `font-size` user setting), we switch to the single page model.
 

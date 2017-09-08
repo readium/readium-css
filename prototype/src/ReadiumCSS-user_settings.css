@@ -12,7 +12,7 @@
 
 /* apply col setting except for tablet portrait */
 @media screen and (min-width: 60em),
-screen and (max-width: 47em) and (orientation: landscape) {
+screen and (min-width: 36em) and (max-width: 47em) and (orientation: landscape) {
   :root[style*="--USER__colNumber: 1"],
   :root[style*="--USER__colNumber:1"],
   :root[style*="--USER__colNumber: 2"],
@@ -21,7 +21,6 @@ screen and (max-width: 47em) and (orientation: landscape) {
     -moz-column-count: var(--USER__colNumber);
     column-count: var(--USER__colNumber);
   }
-}
 
 /* If one column, make sure we limit line-length */
 :root[style*="--USER__colNumber: 1"],
@@ -31,8 +30,6 @@ screen and (max-width: 47em) and (orientation: landscape) {
 }
 
 /* If smartphone landscape, and 2 columns, col width the same as iPad landscape + desktop */
-@media screen and (min-width: 60em),
-screen and (max-width: 47em) and (orientation: landscape) {
   :root[style*="--USER__colNumber: 2"],
   :root[style*="--USER__colNumber:2"] {
     --RS__colWidth: auto; /* User explicitely tells he/she wants 2 columns, we reset floor value */

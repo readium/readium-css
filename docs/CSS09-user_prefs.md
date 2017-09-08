@@ -60,13 +60,13 @@ The user can set the number of columns and page margins.
 --USER__colNumber
 ```
 
-Possible values: `1` | `2`
-
-**Warning:** You can’t currently set any other value.
+Possible values: `1` | `2` | `auto`
 
 By default, this setting behaves as an `auto` value, it will switch to 1 or 2 columns depending on the minimum `width` available and `font-size`.
 
 It is up to implementers to decide whether they want this setting to be available and override any configuration or only some (e.g. setting only available in landscape and/or larger screens).
+
+**Warning:** it is currently disabled for tablet in portrait orientation.
 
 #### Page margins
 

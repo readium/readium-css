@@ -18,7 +18,7 @@
   columns: auto auto !important;  
 }
   
-/* TODO: Enforce max-width for body, no matter which media query overrides it in pagination */
+/* Make sure line-length is limited in all configs */
 :root[style*="readium-scroll-on"] body {
   --RS__maxLineLength: 40rem !important; 
 }

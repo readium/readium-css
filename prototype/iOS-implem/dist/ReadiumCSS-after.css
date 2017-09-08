@@ -120,14 +120,15 @@ body {
 
 /* Desktop small + tablet landscape */
 
-@media screen and (min-width: 60em) {
-    :root {
-      /* The size at which we want 2 columns to switch to 1 (depending on font-size) */
-      --RS__colWidth: 20em; /* 20 * 16 = 320px but 20 * 28 = 560px so it will switch to 1 col @ 175% font-size (user-setting) on an iPad */
-      /* We constrain to 2 columns so that we can never get 3 or 4, etc.*/
-      --RS__colCount: 2;
-    }
+@media screen and (min-width: 60em), screen and (max-width: 47em) and (orientation: landscape) {
+  :root {
+    /* The size at which we want 2 columns to switch to 1 (depending on font-size) */
+    --RS__colWidth: 20em; /* 20 * 16 = 320px but 20 * 28 = 560px so it will switch to 1 col @ 175% font-size (user-setting) on an iPad */
+    /* We constrain to 2 columns so that we can never get 3 or 4, etc.*/
+    --RS__colCount: 2;
+    --RS__maxLineLength: none; /* If we don’t use this, colNumber user setting won’t work in Safari… */
   }
+}
 
 /* Desktop + tablet large */
 
@@ -162,7 +163,7 @@ body {
   height: auto !important;  
 }
 
-/* TODO: Enforce max-width for body, no matter which media query overrides it in pagination */
+/* Make sure line-length is limited in all configs */
 
 :root[style*="readium-scroll-on"] body {
   --RS__maxLineLength: 40rem !important; 
@@ -342,7 +343,10 @@ body {
 /* apply col setting except for tablet portrait */
 
 @media screen and (min-width: 60em), screen and (max-width: 47em) and (orientation: landscape) {
-  :root[style*="--USER__colNumber"] {
+  :root[style*="--USER__colNumber: 1"],
+  :root[style*="--USER__colNumber:1"],
+  :root[style*="--USER__colNumber: 2"],
+  :root[style*="--USER__colNumber:2"] {
     -webkit-column-count: var(--USER__colNumber);
     -moz-column-count: var(--USER__colNumber);
     column-count: var(--USER__colNumber);
@@ -353,15 +357,16 @@ body {
 
 :root[style*="--USER__colNumber: 1"],
 :root[style*="--USER__colNumber:1"] {
-  --RS__maxLineLength: 40rem !important;
+  --RS__maxLineLength: 40rem !important; /* This is the only way for the user setting to work in webkit… */
+  --RS__colWidth: 100vw;
 }
 
 /* If smartphone landscape, and 2 columns, col width the same as iPad landscape + desktop */
 
-@media screen and (max-width: 47em) and (orientation: landscape) {
+@media screen and (min-width: 60em), screen and (max-width: 47em) and (orientation: landscape) {
   :root[style*="--USER__colNumber: 2"],
   :root[style*="--USER__colNumber:2"] {
-    --RS__colWidth: 20em; /* The size at which you want to switch to 1 column (compute against user-setting) */
+    --RS__colWidth: auto; /* User explicitely tells he/she wants 2 columns, we reset floor value */
   }
 }
 

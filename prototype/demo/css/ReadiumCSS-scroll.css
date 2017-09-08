@@ -17,7 +17,7 @@
   columns: auto auto !important;
 }
 
-/* You could change de line-length if you wish */
+/* Make sure line-length is limited in all configs */
 body {
   --RS__maxLineLength: 40rem !important; 
 }

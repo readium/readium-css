@@ -87,7 +87,7 @@ Page margins are part of `body`, hence `--RS__maxLineLength`. Contents are cente
 
 In the spread model, i.e. two columns, the `--RS__colWidth` is a floor: once the minimum width available can’t contain 2 columns (the value is computed from the `font-size` user setting), we switch to the single page model.
 
-Since we still limit line-length, you might want to limit the web view/iframe size so that you don’t end up with a huge gap on large screens (or add `padding` to `root` and take it into account when scrolling).
+Since we don’t limit line-length anymore, you might want to limit the web view/iframe size so that you don’t end up with wide columns on large screens (or add `padding` to `root` and take it into account when scrolling).
 
 #### Variables you can set
 

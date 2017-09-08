@@ -113,15 +113,17 @@
     }
   }
     
-  /* Desktop small + tablet landscape */
-  @media screen and (min-width: 60em) {
-    :root {
-      /* The size at which we want 2 columns to switch to 1 (depending on font-size) */
-      --RS__colWidth: 20em; /* 20 * 16 = 320px but 20 * 28 = 560px so it will switch to 1 col @ 175% font-size (user-setting) on an iPad */
-      /* We constrain to 2 columns so that we can never get 3 or 4, etc.*/
-      --RS__colCount: 2;
-    }
+/* Desktop small + tablet landscape */
+@media screen and (min-width: 60em),
+screen and (max-width: 47em) and (orientation: landscape) {
+  :root {
+    /* The size at which we want 2 columns to switch to 1 (depending on font-size) */
+    --RS__colWidth: 20em; /* 20 * 16 = 320px but 20 * 28 = 560px so it will switch to 1 col @ 175% font-size (user-setting) on an iPad */
+    /* We constrain to 2 columns so that we can never get 3 or 4, etc.*/
+    --RS__colCount: 2;
+    --RS__maxLineLength: none; /* If we don’t use this, colNumber user setting won’t work in Safari… */
   }
+}
     
   /* Desktop + tablet large */
   /* We get the previous settings, we just change the margins */

@@ -7,8 +7,8 @@
    Repo: https://github.com/readium/readium-css */
 
 :root {
-  --USER__colNumber: ;        /* 1, 2 */
-  --USER__pageMargins: ;      /* a factor of the reference we set */
+  --USER__colCount: ;         /* 1, 2, auto */
+  --USER__pageMargins: ;      /* 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2 */
 
   --USER__backgroundColor: ;  /* Custom color (not preset mode) */
   --USER__textColor: ;        /* Custom color (not preset mode) */

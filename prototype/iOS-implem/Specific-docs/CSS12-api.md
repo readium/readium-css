@@ -255,7 +255,7 @@ The `color` for visited links in the reading mode.
 Custom properties for user settings are prefixed with `--USER__`.
 
 ```
---USER__colNumber
+--USER__colCount
 ```
 
 The number of columns (`column-count`) the user wants displayed (one-page view or two-page spread)

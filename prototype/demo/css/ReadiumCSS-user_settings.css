@@ -13,25 +13,25 @@
 /* apply col setting except for tablet portrait */
 @media screen and (min-width: 60em),
 screen and (min-width: 36em) and (max-width: 47em) and (orientation: landscape) {
-  :root[style*="--USER__colNumber: 1"],
-  :root[style*="--USER__colNumber:1"],
-  :root[style*="--USER__colNumber: 2"],
-  :root[style*="--USER__colNumber:2"] {
-    -webkit-column-count: var(--USER__colNumber);
-    -moz-column-count: var(--USER__colNumber);
-    column-count: var(--USER__colNumber);
+  :root[style*="--USER__colCount: 1"],
+  :root[style*="--USER__colCount:1"],
+  :root[style*="--USER__colCount: 2"],
+  :root[style*="--USER__colCount:2"] {
+    -webkit-column-count: var(--USER__colCount);
+    -moz-column-count: var(--USER__colCount);
+    column-count: var(--USER__colCount);
   }
 
 /* If one column, make sure we limit line-length */
-:root[style*="--USER__colNumber: 1"],
-:root[style*="--USER__colNumber:1"] {
+:root[style*="--USER__colCount: 1"],
+:root[style*="--USER__colCount:1"] {
   --RS__maxLineLength: 40rem !important; /* This is the only way for the user setting to work in webkit… */
   --RS__colWidth: 100vw;
 }
 
 /* If smartphone landscape, and 2 columns, col width the same as iPad landscape + desktop */
-  :root[style*="--USER__colNumber: 2"],
-  :root[style*="--USER__colNumber:2"] {
+  :root[style*="--USER__colCount: 2"],
+  :root[style*="--USER__colCount:2"] {
     --RS__colWidth: auto; /* User explicitely tells he/she wants 2 columns, we reset floor value */
   }
 }

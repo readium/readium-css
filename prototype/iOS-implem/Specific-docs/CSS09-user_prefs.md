@@ -121,10 +121,10 @@ The user can set the number of columns and page margins.
 #### Number of columns
 
 ```
---USER__colNumber
+--USER__colCount
 ```
 
-Possible values: `1` | `2`
+Possible values: `1` | `2` | `auto`
 
 #### Page margins
 
@@ -132,7 +132,7 @@ Possible values: `1` | `2`
 --USER__pageMargins
 ```
 
-Possible values: TBD
+Possible values: `0.5` | `0.75` | `1` | `1.25` | `1.5` | `1.75` | `2`
 
 ### Themes (background and text colors)
 

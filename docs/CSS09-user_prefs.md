@@ -57,7 +57,7 @@ The user can set the number of columns and page margins.
 #### Number of columns
 
 ```
---USER__colNumber
+--USER__colCount
 ```
 
 Possible values: `1` | `2` | `auto`

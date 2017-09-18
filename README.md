@@ -34,9 +34,11 @@ Please note you’ll have to manually inject stylesheets and apply settings via 
 
 ## Known implementations
 
-There is no public implementation of Readium CSS so far. 
+There is no public implementation of Readium CSS so far.
 
 Consequently, if you are encountering rendering issues with Readium, please report them on the [github section dedicated to the proper Readium project](https://github.com/readium) (readium-js, readium-shared-js, readium-sdk, etc.).
+
+An [iOS test app](https://github.com/readium/r2-testapp-swift) for the Swift implementation of Readium-2 is using Readium CSS and can be tested through TestFlight. Please contact us if you want to be part of the test program.
 
 ## Docs
 

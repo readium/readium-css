@@ -9,44 +9,65 @@
 /* STYLES */
 /* :root is used so that you can quickly add a class or attribute if you prefer e.g. `:root[data-rs-normalize]` */
 
+/* We create a default so that you don’t need to explicitly set one in the DOM.
+   Once the “Publisher’s styles” checkbox is unchecked, the normalize is applied automatically */
+:root[style*="readium-advanced-on"] {
+  --USER__typeScale: 1.2; /* This is the default type scale you’ll find in most publications */
+}
+
 /* [style*="--USER__advancedSettings"] can be used to increase specificity but performance hit */
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] p,
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] li,
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] div,
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] pre,
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] dd {
+:root[style*="readium-advanced-on"] p,
+:root[style*="readium-advanced-on"] li,
+:root[style*="readium-advanced-on"] div,
+:root[style*="readium-advanced-on"] pre,
+:root[style*="readium-advanced-on"] dd {
   font-size: 1rem !important;
 }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h1 {
+:root[style*="readium-advanced-on"] h1 {
   /* Fallback if browser doesn’t support vars */
   font-size: 1.75rem !important;
-  font-size: calc(((1rem * var(--USER__typeScale, 1.2)) * var(--USER__typeScale, 1.2)) * var(--USER__typeScale, 1.2)) !important;
+  font-size: calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
 }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h2 {
+:root[style*="readium-advanced-on"] h2 {
   /* Fallback if browser doesn’t support vars */
   font-size: 1.5rem !important;
-  font-size: calc((1rem * var(--USER__typeScale, 1.2)) * var(--USER__typeScale, 1.2)) !important;
+  font-size: calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
 }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3 {
+:root[style*="readium-advanced-on"] h3 {
   /* Fallback if browser doesn’t support vars */
   font-size: 1.25rem !important;
-  font-size: calc(1rem * var(--USER__typeScale, 1.2)) !important;
+  font-size: calc(1rem * var(--USER__typeScale)) !important;
 }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h4,
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h5,
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h6 {
+:root[style*="readium-advanced-on"] h4,
+:root[style*="readium-advanced-on"] h5,
+:root[style*="readium-advanced-on"] h6 {
   font-size: 1rem !important;
 }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] small {
+:root[style*="readium-advanced-on"] small {
   font-size: smaller !important;
 }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] sub,
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] sup {
+:root[style*="readium-advanced-on"] sub,
+:root[style*="readium-advanced-on"] sup {
   font-size: 67.5% !important;
+}
+
+/* The following styles kick in if you define the typeScale variable in the DOM. 
+    No need to repeat declarations which don’t make use of the variable */
+
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h1 {
+  font-size: calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+}
+
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h2 {
+  font-size: calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+}
+
+:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3 {
+  font-size: calc(1rem * var(--USER__typeScale)) !important;
 }

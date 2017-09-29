@@ -481,6 +481,25 @@ body {
   font-family: inherit !important;
 }
 
+/* A11y fonts */
+
+/* For AccessibleDfa, we need to normalize font-weight and font-style since only the normal style is available */
+
+:root[style*="readium-font-on"][style*="AccessibleDfa"] {
+  /* We won’t use the variable there since we need fallbacks for missing characters */
+  font-family: "AccessibleDFA", Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Targeting everything except code. Note that Open Dyslexic has a monospaced font for code */
+
+:root[style*="readium-font-on"][style*="AccessibleDfa"] *:not(code):not(var):not(kbd):not(samp) {
+  font-family: inherit !important;
+  font-style: inherit !important;
+  font-weight: inherit !important;
+}
+
 /* Font size */
 
 :root[style*="--USER__fontSize"] {

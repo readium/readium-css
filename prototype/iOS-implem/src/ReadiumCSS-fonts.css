@@ -1,0 +1,21 @@
+/* Readium CSS 
+   Fonts module
+
+   A stylesheet for embedded fonts
+
+   Repo: https://github.com/readium/readium-css */
+
+/* /!\ Mind the path (relative to the folders in which you have stylesheets and the fonts) */
+
+@font-face {
+  font-family: "AccessibleDfa";
+  src: local("AccessibleDfa"),
+       url("../fonts/AccessibleDfA.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* If you have different weights/styles, 
+   use `font-weight` and `font-style`, 
+   not prefixes in the font-family name, 
+   or else it will be a nightmare to manage in user settings. */

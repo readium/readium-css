@@ -167,6 +167,9 @@ body {
 
 :root[style*="readium-scroll-on"] body {
   --RS__maxLineLength: 40rem !important; 
+
+  margin-top: var(--RS__pageGutter) !important;
+  margin-bottom: var(--RS__pageGutter) !important;
 }
 
 /* Scroll mode horizontal */
@@ -414,6 +417,28 @@ body {
   text-align-last: auto !important;
 }
 
+/* Managing hyphenation automatically */
+
+:root[style*="readium-advanced-on"][style*="--USER__textAlign: justify"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign:justify"] body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -epub-hyphens: auto;
+  hyphens: auto;
+}
+
+:root[style*="readium-advanced-on"][style*="--USER__textAlign: left"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign:left"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign: right"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign:right"] body {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -epub-hyphens: none;
+  hyphens: none;
+}
+
 /* Hyphens (none | auto) */
 
 :root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] {
@@ -498,6 +523,20 @@ body {
   font-family: inherit !important;
   font-style: inherit !important;
   font-weight: inherit !important;
+}
+
+/* Normalizing text-decoration, subs and sups */
+
+:root[style*="readium-font-on"][style*="AccessibleDfa"] * {
+  text-decoration: none !important;
+  font-variant-numeric: normal !important;  
+  font-variant-position: normal !important;
+}
+
+:root[style*="readium-font-on"][style*="AccessibleDfa"] sup,
+:root[style*="readium-font-on"][style*="AccessibleDfa"] sub {
+  font-size: 1rem !important;
+  vertical-align: baseline !important;
 }
 
 /* Font size */

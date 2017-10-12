@@ -47,6 +47,12 @@ body {
   font-family: var(--RS__baseFontFamily);
   line-height: var(--RS__baseLineHeight);
   text-rendering: optimizeLegibility;
+
+  /* Disable text-selection in CSS until it’s managed in touchHandler.js */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* 1.5 being too loose with larger font-sizes, we reset headings to normal (which value is 1.125–1.375 for our font-stacks) */

@@ -15,7 +15,7 @@
 
 /* apply col setting except for tablet portrait */
 @media screen and (min-width: 60em),
-screen and (min-width: 36em) and (max-width: 47em) and (orientation: landscape) {
+screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientation: landscape) {
   :root[style*="--USER__colCount: 1"],
   :root[style*="--USER__colCount:1"],
   :root[style*="--USER__colCount: 2"],

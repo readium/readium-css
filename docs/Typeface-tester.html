@@ -45,7 +45,13 @@
       font-weight: normal;
     }
 
-    .comparator {
+    .fonts-setting {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+
+    .metrics-comparator {
       font-size: 4rem;
       line-height: 1;
       background-image: -webkit-linear-gradient(top, rgba(122,122,122,0) 92%,rgba(122,122,122,0.6) 100%); 
@@ -58,6 +64,32 @@
       align-items: center;
       height: 120px;
       padding-left: 5vmin;
+      position: relative;
+    }
+
+    #baseline {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .para-comparator {
+      font-size: 1rem;
+      line-height: 1.5;
+      background-image: -webkit-linear-gradient(top, rgba(122,122,122,0) 92%,rgba(122,122,122,0.6) 100%); 
+      background-image: linear-gradient(to bottom, rgba(122,122,122,0) 92%,rgba(122,122,122,0.6) 100%);
+      background-size: 100% 1.5rem;
+      background-position: top 0 left 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 5vmin;
+      align-items: bottom;
+      padding: 3rem 2.5vmin 1.5rem 2.5vmin;
+      margin: 2rem 0;
+    }
+
+    .para-comparator p {
+      margin: 0;
     }
 
     .default-typeface {
@@ -146,17 +178,157 @@
 
     <p class="warning">⚠️ Please make sure to have the latest version of the browser you’re currently using. ⚠️</p>
   </header>
+
+  <div class="fonts-setting">
+    <input id="default-font" type="text" placeholder="Default Font" />
+    <input id="custom-font" type="text" placeholder="Custom Font" />
+  </div>
+
   <section id="comparison">
     <h2>Comparison</h2>
 
-    <div class="comparator">
-      <div class="default-typeface">
+    <div class="metrics-comparator">
+      <input id="baseline" type="number" value="0" step="0.05"/>
+
+      <div class="default-typeface" contenteditable="" id="edit-metrics">
         Body
       </div>
 
-      <div class="custom-typeface">
+      <div class="custom-typeface" id="clone-metrics">
         Body
       </div>
+    </div>
+
+    <div class="para-comparator">
+      <p class="default-typeface" contenteditable="" id="edit-para">Call me Ishmael. Some years ago – never mind how long precisely – having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+
+      <p class="custom-typeface" id="clone-para">Call me Ishmael. Some years ago – never mind how long precisely – having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+    </div>
+  </section>
+
+  <section id="latin">
+    <h2>Latin</h2>
+
+    <h3>Alphabet</h3>
+
+    <div class="char-grid">
+      <span>A</span>
+      <span>B</span>
+      <span>C</span>
+      <span>D</span>
+      <span>E</span>
+      <span>F</span>
+      <span>G</span>
+      <span>H</span>
+      <span>I</span>
+      <span>J</span>
+      <span>K</span>
+      <span>L</span>
+      <span>M</span>
+      <span>N</span>
+      <span>O</span>
+      <span>P</span>
+      <span>Q</span>
+      <span>R</span>
+      <span>S</span>
+      <span>T</span>
+      <span>U</span>
+      <span>V</span>
+      <span>W</span>
+      <span>X</span>
+      <span>Y</span>
+      <span>Z</span>
+      <span>a</span>
+      <span>b</span>
+      <span>c</span>
+      <span>d</span>
+      <span>e</span>
+      <span>f</span>
+      <span>g</span>
+      <span>h</span>
+      <span>i</span>
+      <span>j</span>
+      <span>k</span>
+      <span>l</span>
+      <span>m</span>
+      <span>n</span>
+      <span>o</span>
+      <span>p</span>
+      <span>q</span>
+      <span>r</span>
+      <span>s</span>
+      <span>t</span>
+      <span>u</span>
+      <span>v</span>
+      <span>w</span>
+      <span>x</span>
+      <span>y</span>
+      <span>z</span>
+      <span>0</span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+    </div>
+
+    <h3>Punctuation and Misc</h3>
+
+    <div class="char-grid">
+      <span>?</span>
+      <span>¿</span>
+      <span>!</span>
+      <span>¡</span>
+      <span>'</span>
+      <span>‘</span>
+      <span>’</span>
+      <span>"</span>
+      <span>“</span>
+      <span>”</span>
+      <span>„</span>
+      <span>«</span>
+      <span>»</span>
+      <span>°</span>
+      <span>…</span>
+      <span>&amp;</span>
+      <span>-</span>
+      <span>–</span>
+      <span>—</span>
+      <span>#</span>
+      <span>¶</span>
+      <span>†</span>
+      <span>‡</span>
+      <span>@</span>
+      <span>%</span>
+      <span>‰</span>
+      <span>|</span>
+      <span>/</span>
+      <span>\</span>
+      <span>~</span>
+      <span>*</span>
+      <span>(</span>
+      <span>)</span>
+      <span>[</span>
+      <span>]</span>
+      <span>{</span>
+      <span>}</span>
+      <span>•</span>
+      <span>+</span>
+      <span>×</span>
+      <span>÷</span>
+      <span>±</span>
+      <span>=</span>
+      <span>®</span>
+      <span>©</span>
+      <span>™</span>
+      <span>$</span>
+      <span>€</span>
+      <span>¥</span>
+      <span>£</span>
     </div>
   </section>
 
@@ -192,6 +364,7 @@
     <div class="char-grid">
       <span>Á</span>
       <span>Č</span>
+      <span>Ď</span>
       <span>É</span>
       <span>Ě</span>
       <span>Í</span>
@@ -199,6 +372,7 @@
       <span>Ó</span>
       <span>Ř</span>
       <span>Š</span>
+      <span>Ť</span>
       <span>Ú</span>
       <span>Ů</span>
       <span>Ž</span>
@@ -375,7 +549,7 @@
       <span>Ā</span>
       <span>Č</span>
       <span>Ē</span>
-      <span>Ǵ</span>
+      <span>Ģ</span>
       <span>Ī</span>
       <span>Ķ</span>
       <span>Ļ</span>
@@ -401,7 +575,7 @@
     <div class="char-grid">
       <span>Ą</span>
       <span>Č</span>
-      <span>Ȩ</span>
+      <span>Ę</span>
       <span>Ė</span>
       <span>Į</span>
       <span>Š</span>
@@ -409,7 +583,7 @@
       <span>Ž</span>
       <span>ą</span>
       <span>č</span>
-      <span>ȩ</span>
+      <span>ę</span>
       <span>ė</span>
       <span>į</span>
       <span>š</span>
@@ -447,7 +621,7 @@
     <div class="char-grid">
       <span>Ą</span>
       <span>Ć</span>
-      <span>Ȩ</span>
+      <span>Ę</span>
       <span>Ł</span>
       <span>Ń</span>
       <span>Ó</span>
@@ -456,7 +630,7 @@
       <span>Ż</span>
       <span>ą</span>
       <span>ć</span>
-      <span>ȩ</span>
+      <span>ę</span>
       <span>ł</span>
       <span>ń</span>
       <span>ó</span>
@@ -515,6 +689,7 @@
       <span>Á</span>
       <span>Ä</span>
       <span>Č</span>
+      <span>Ď</span>
       <span>É</span>
       <span>Í</span>
       <span>Ĺ</span>
@@ -524,6 +699,7 @@
       <span>Ô</span>
       <span>Ŕ</span>
       <span>Š</span>
+      <span>Ť</span>
       <span>Ú</span>
       <span>Ý</span>
       <span>Ž</span>
@@ -780,6 +956,46 @@
       </tr>
     </table>
   </section>
-</body>
 
+<script type="text/javascript">
+  var metrics = document.getElementById("edit-metrics"),
+      metricsClone = document.getElementById("clone-metrics"),
+      para = document.getElementById("edit-para"),
+      paraClone = document.getElementById("clone-para"),
+      baselineAdjust = document.getElementById("baseline"),
+      defaultFont = document.getElementById("default-font"),
+      customFont = document.getElementById("custom-font");
+
+      metrics.addEventListener("keypress", function(e) {
+		    if (e.keyCode == 13) {  // Return key
+          e.preventDefault();
+			    newWord = metrics.textContent;
+			    metricsClone.innerHTML = newWord;
+		    }
+	    }, false);
+
+      para.addEventListener("keypress", function(e) {
+		    if (e.keyCode == 13) {  // Return key
+          e.preventDefault();
+			    newPara = para.textContent;
+			    paraClone.innerHTML = newPara;
+		    }
+	    }, false);
+
+      baselineAdjust.addEventListener("change", function(e) {
+        newPos = baselineAdjust.value;
+        document.documentElement.style.setProperty("--comparator-position", newPos + "rem");
+      }, false);
+
+      defaultFont.addEventListener("change", function(e) {
+        newDefault = defaultFont.value;
+        document.documentElement.style.setProperty("--default-font", newDefault);
+      }, false);
+
+      customFont.addEventListener("change", function(e) {
+        newCustom = customFont.value;
+        document.documentElement.style.setProperty("--custom-font", newCustom);
+      }, false);
+</script>
+</body>
 </html>

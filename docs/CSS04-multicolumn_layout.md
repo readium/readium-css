@@ -4,7 +4,7 @@
 
 Global References: 
 
-- [W3C Spec](https://www.w3.org/TR/css3-multicol/)
+- [W3C Spec](https://www.w3.org/TR/2017/WD-css-multicol-1-20171005/)
 - [W3C Mailing List — css-multicol](https://www.w3.org/Search/Mail/Public/search?keywords=%5Bcss-multicol%5D)
 
 ## Introduction
@@ -46,13 +46,14 @@ The content of a multicol element is flowed into column boxes, which are arrange
 - all column boxes in a row have the same column width and column height;
 - adjacent column boxes are separated by a column gap, which may contain a column rule;
 - all column gaps (and column rules) in the same row are equal;
-- column rules only appear between columns that both have content;
+- column rules only appear between columns that both have content.
 
 Critical shortcomings can be pointed out in the column box model:
 
 1. it is not possible to set properties/values on column boxes, which is why you can’t set the background of one specific column;
 2. the column box has no concept of padding, margin or borders;
-3. column boxes don’t establish containing blocks for elements with `position: fixed || absolute`.
+3. column boxes don’t establish containing blocks for elements with `position: fixed || absolute`;
+4. multicol elements with column heights larger than the viewport may pose accessibility issues.
 
 However, floats inside multi-column layouts are positioned with regard to the column box where they appear.
 
@@ -81,7 +82,7 @@ The actual column width may be wider (to fill the available space), or narrower.
 #### Notes
 
 - To ensure that `column-width` can be used with vertical text, column width means the length of the line boxes inside the columns.
-- To set an exact column width, all length values (`width`, `column-width`, `column-gap`, and `column-rule-width`) must be specified.
+- To set an exact column width, all length values (`width`, `column-width`, and `column-gap`) must be specified.
 
 ### Column count
 
@@ -100,40 +101,22 @@ This is the shorthand property for setting `column-width` and `column-count`. Om
 
 ### Pseudo-algorithm
 
-The pseudo-algorithm below determines the used values for `column-count` (N) and `column-width` (W). There are two other variables in the pseudo-algorithm:
+The pseudo-algorithm below determines the used values for `column-count` (N) and `column-width` (W). There is one other variable in the pseudo-algorithm: the used width of the multi-column element (U).
 
-- `available-width`, it is unknown if the multi-column element is floating with a `width` of `auto`, it is the same as the used width of the multi-column element—in vertical text, the used height replaces used width in this calculation.
-- `shrink-to-fit`, the result of a shrink-to-fit computation.
+The used width of the multi-column element (U) can depend on the element’s contents, in which case it also depends on the computed values of the `column-count` and `column-width` properties. The specification does not define how U is calculated.
 
 ```
 (01)  if ((column-width = auto) and (column-count = auto)) then
-(02)        exit; /* not a multicol element */
-
-(03)  if ((available-width = unknown) and (column-count = auto)) then
-(04)    exit; /* no columns */
-
-(05)  if (available-width = unknown) and (column-count != auto) and (column-width != auto) then
-(06)    N := column-count;  
-(07)    W := column-width;
-(08)  exit;
-
-(09)  if (available-width = unknown) then
-(10)    available-width := shrink-to-fit;
-
-(11)  if (column-width = auto) and (column-count != auto) then
-(12)    N := column-count;
-(13)    W := max(0, (available-width - ((N - 1) * column-gap)) / N);
-(14)  exit;
-
-(15)  if (column-width != auto) and (column-count = auto) then
-(16)    N := max(1, floor((available-width + column-gap) / (column-width + column-gap)));
-(17)    W := ((available-width + column-gap) / N) - column-gap;
-(18)  exit;
-
-(19)  if (column-width != auto) and (column-count != auto) then
-(20)    N := min(column-count, floor((available-width + column-gap) / (column-width + column-gap)))
-(21)    W := ((available-width + column-gap) / N) - column-gap;
-(22)  exit
+(02)      exit; /* not a multicol element */
+(03)  if column-width = auto then
+(04)      N := column-count
+(05)  else if column-count = auto then
+(06)      N := max(1,
+(07)        floor((U + column-gap)/(column-width + column-gap)))
+(08)  else
+(09)      N := min(column-count, max(1,
+(10)        floor((U + column-gap)/(column-width + column-gap))))
+(11)  W := max(0, ((U + column-gap)/N - column-gap))
 ```
 
 What is important to understand there is that the `column-width` can either be a floor or a ceiling, depending on the value of `column-count`.
@@ -141,7 +124,7 @@ What is important to understand there is that the `column-width` can either be a
 Let’s take some examples.
 
 ```
-/* Condition starting at line 11 applies */
+/* Condition starting at line 3 applies */
 body {
   column-width: auto;
   column-count: 2;
@@ -150,22 +133,22 @@ body {
 
 The column width is not set, it entirely depends on `column-count` and `column-gap` (which suggested default is `1em`).
 
-Columns theoretically have a floor (`0`) and a ceiling (line 13)
+Columns theoretically have a floor (which is suggested to be `1px` or less) and a ceiling (line 11).
 
 ```
-/* Condition starting at line 15 applies */
+/* Condition starting at line 5 applies */
 body {
   column-width: 300px;
   column-count: auto;
 }
 ```
 
-In this example, the number of columns is computed depending on the column width.
+In this example, the number of columns is computed depending on the column width and gap.
 
 In other words, the column width is a ceiling: it can’t be larger than `300px` but can shrink if the available width is less.
 
 ```
-/* Condition starting at line 19 applies */
+/* Condition starting at line 8 applies */
 body {
   column-width: 300px;
   column-count: 2;
@@ -173,6 +156,12 @@ body {
 ```
 
 In this example, the column width is a floor: if 2 columns (2 × column width and the gap) can fit, `column-count` will be honored, else `column-width` grows to the width available. If there is additional width available when 2 columns fit, `column-width` will grow as well.
+
+It’s worth noting that the used value for `column-count` is calculated without regard for explicit column breaks or constrained column heights, while the actual value takes these into consideration.
+
+### Stacking contexts
+
+Column boxes do not establish new stacking contexts.
 
 ## Column gaps and rules
 
@@ -188,9 +177,11 @@ As regards column rules:
 
 ## Fragmentation (column break)
 
+This has been moved to the [CSS Fragmentation module](https://www.w3.org/TR/css-break-3/).
+
 When a page or column break splits a box, the box’s margins, borders, and paddings have no visual effect where the split occurs. It is important to remark `outline` and `box-shadow` are not discussed at all in the spec. 
 
-The spec says “the margin immediately after a forced page or column break will be preserved” but that isn’t necessarily the case in practice, CSS authors often having to resolve to `padding-top` to force a margin after a page break.
+In the previous spec, it was stated that “the margin immediately after a forced page or column break will be preserved” but that isn’t necessarily the case in practice, CSS authors often having to resolve to `padding-top` to force a margin after a page break.
 
 From experience, avoiding a `break-inside` elements flowing in 2 or 3 columns can also be problematic (the element vertical alignment is completely off).
 
@@ -220,7 +211,7 @@ It’s worth noting User Agents should try to honor `widows` and `orphans` in an
 
 What is important to remark is that: 
 
-- content that extends into column gaps is clipped in the middle of the column gap;
+- content that extends into column gaps is not clipped to the column box;
 - a multicol element can have more columns that it has room for, additional column boxes are created in the inline direction (page or column break, constrained height, etc.);
 - columns that appear outside the multicol element are called overflow columns.
 
@@ -248,7 +239,7 @@ It is my understanding the [Opera implementation of `overflow: -o-paged-x` in Pr
 - overflow, by switching to paged media;
 - implementing [CSS figures](https://figures.spec.whatwg.org) as a bonus.
 
-[An editor’s draft of CSS multicolumn Layout Module Level 2 exists](https://drafts.csswg.org/css-multicol-2/) but it is quite empty at the moment. 
+It is important to note the spec [has been republished as a Working Draft](https://www.w3.org/blog/CSS/2017/10/05/css-multi-column-layout-level-1-republished-as-a-working-draft/). It is very unlikely a level 2 spec will tackle those problems in the short term.
 
 From experience, I can also report there tends to be implementation-specific bugs with newer layout specs e.g. flexbox, grid, etc.
 

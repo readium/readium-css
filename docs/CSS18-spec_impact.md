@@ -14,6 +14,12 @@ Readium CSS’ fundamental approach has been reviewed and should be future proof
 - Impact: Global (a11y)
 - [CSSWG Issues](https://github.com/w3c/csswg-drafts/issues?utf8=✓&q=is%3Aissue%20is%3Aopen%20%5Bmediaqueries%5D%20)
 
+## Logical Properties and Values
+
+- [Source](https://drafts.csswg.org/css-logical/)
+- Impact: Global (esp. vertical writing and RTL)
+- [CSSWG Issues](https://github.com/w3c/csswg-drafts/issues?utf8=✓&q=%5Bcss-logical-1%5D)
+
 ## Calc notation: min() and max()
 
 - [Source](https://drafts.csswg.org/css-values/#calc-notation)

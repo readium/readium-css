@@ -463,17 +463,6 @@ body {
   hyphens: inherit;
 }
 
-/* Prevent hyphens in inline code */
-
-:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] code, :root[style*="hyphens"] code,
-:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] var, :root[style*="hyphens"] var {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -epub-hyphens: none;
-  hyphens: none;
-}
-
 /* Font family (typeface) */
 
 /* [style*="--USER__fontOverride"] can be used to increase specificity but performance hit */

@@ -60,7 +60,7 @@ The user can set the number of columns and page margins.
 --USER__colCount
 ```
 
-Possible values: `1` | `2` | `auto`
+Possible values: `1` | `2` | `auto` (default)
 
 By default, this setting behaves as an `auto` value, it will switch to 1 or 2 columns depending on the minimum `width` available and `font-size`.
 
@@ -74,7 +74,7 @@ It is up to implementers to decide whether they want this setting to be availabl
 --USER__pageMargins
 ```
 
-Possible values: `0.5` | `0.75` | `1` | `1.25` | `1.5` | `1.75` | `2`
+Possible values: `0.5` | `0.75` | `1` (default) | `1.25` | `1.5` | `1.75` | `2`
 
 The user margins are a factor of the reference we set. 
 
@@ -104,6 +104,8 @@ The user can set `text-align` and `hyphens` for body copy contents.
 ```
 
 Possible values: `left` (LTR) or `right` (RTL) | `justify`
+
+Note: the value `start` can be used to let all rendering engines, excepted Trident (IE11) and EdgeHTML (Edge), automatically deal with `left` and `right` based on the direction (`dir` attribute) set for the document and its nested elements.
 
 #### Hyphens
 
@@ -138,7 +140,7 @@ Although it might be an issue to authors at first sight, this approach is backed
 --USER__typeScale
 ```
 
-Possible values for font-size: `75%` | `87.5%` | `100%` | `112.5%` | `137.5%` | `150%` | `162.5%` | `175%` | `200%` | `225%` | `250%`
+Possible values for font-size: `75%` | `87.5%` | `100%` (default) | `112.5%` | `137.5%` | `150%` | `162.5%` | `175%` | `200%` | `225%` | `250%`
 
 Possible values for type scale: `1` | `1.067` | `1.125` | `1.2` (suggested default) | `1.25` | `1.333` | `1.414` | `1.5` | `1.618`
 
@@ -184,7 +186,7 @@ The user can set `word-spacing` and `letter-spacing` for headings and body copy 
 --USER__wordSpacing
 ```
 
-Possible values: `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
+Possible values: `0` | `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
 
 #### Letter spacing
 
@@ -192,7 +194,7 @@ Possible values: `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
 --USER__letterSpacing
 ```
 
-Possible values: `0.0675rem` | `0.125rem` | `0.1875rem` | `0.25rem`
+Possible values: `0` | `0.0675rem` | `0.125rem` | `0.1875rem` | `0.25rem`
 
 ## Reading Modes
 

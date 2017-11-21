@@ -1,6 +1,6 @@
 # Typefaces and font-stacks
 
-[Implementers’ doc] [Authors’ info] [WIP]
+[Implementers’ doc] [Authors’ info]
 
 In order to get the best performance and language support possible, we tried to design off-the-rack font-stacks using pre-installed system fonts.
 
@@ -406,7 +406,65 @@ font-family: "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei 
 
 ## Dyslexic
 
-TBD
+This is a tricky topic, and it needs quite some expertise, so those won’t be recommendations *per se* but mere insights, since extended research is currently being done in this field. As a consequence, implementers willing to provide the best experience possible should try to keep up-to-date. 
+
+### Typefaces don’t work in a vacuum
+
+[From research conducted by Charles Bigelow](http://bigelowandholmes.typepad.com/bigelow-holmes/2014/11/typography-dyslexia.html) – who designed Lucida and Wingdings with Kris Holmes –, on a corpus of existing scientific research and books: 
+
+> In the scientific literature, I found no evidence that special dyslexia fonts confer statistically significant improvements in reading speed compared to standard, run-of-the-mill fonts. Some studies found that for certain subsets of reading errors, special dyslexia fonts do reduce error rates for dyslexic readers, yet for other subsets of errors, special dyslexic fonts were no better, or in some cases worse; hence, the findings on reading errors are mixed.
+
+Typography is indeed a system and other factors have to be taken into account:
+
+> […] the sizing, spacing, and arrangement of type, but not typeface design *per se* – a few scientific papers found that certain variations in typography offer statistically significant benefits to dyslexic readers.
+
+If needed, the sources of papers and studies available online at the time of this research are [listed in this companion article](http://bigelowandholmes.typepad.com/bigelow-holmes/2014/11/web-links-urls-for-typography-dyslexia-post.html). 
+
+### General tips
+
+It is important to emphasize that the user settings (and their values) implementers will offer users is as equally – if not more – important as the typefaces themselves. 
+
+[A list of general tips:](http://adrianroselli.com/2015/03/typefaces-for-dyslexia.html) 
+
+- avoid justified text (`text-align` setting);
+- use generous line spacing / leading (`line-height` setting);
+- use generous letter spacing (`letter-spacing` setting);
+- avoid italics;
+- generally use sans serif faces (`font-family` setting);
+- use larger text (`font-size` setting);
+- use good contrast (`background-` and `color` settings, reading modes, themes);
+- use clear, concise writing.
+
+[The WCAG 2.1 spec](https://www.w3.org/TR/WCAG21/), especially [the “Adapting text” section](https://www.w3.org/TR/WCAG21/#adapting-text), can serve as a starting point to choose the values you might at least offer to users for those settings.
+
+We’ve been trying to define a baseline for a11y-related user settings, and you’ll find further information and extra features you might want to implement in the “Baseline for a11y-related user settings” document (e.g. alternated colors for lines of text or words, etc.). 
+
+### On typefaces themselves
+
+Although typefaces specifically designed for dyslexia exist, users might prefer system fonts they are used to. [The following system typefaces are almost always listed as good for dyslexia](http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf): 
+
+- Arial/Helvetica
+- Trebuchet MS
+- Verdana
+
+Those fonts are available on both Windows and MacOS/iOS so it would be a good idea to have at least 2 of them available in the typeface user setting. 
+
+More importantly, preference is a key factor, and implementers might want to give access to user-installed fonts if the platform allows. When doing research, some participants indeed emphasized they installed a specific font for dyslexia, and they want to be able to use it in the reading app as well.
+
+### Conclusion
+
+It’s not just about fonts, it’s about typography and user settings allowing its customization. 
+
+At the very minimum, you might want to provide: 
+
+- 2–3 system fonts listed as good for dyslexia;
+- a font specifically designed for dyslexia;
+- a reliable `font-size` setting (i.e. that will work for all reflowable EPUB files);
+- a `line-height` setting;
+- a `text-align` setting;
+- a `letter-spacing` setting.
+
+It is noteworthy that everything extra will have to be implemented with great care: too many settings might create a cognitive overload for some users, so UX research should be conducted accordingly.
 
 ## Math
 

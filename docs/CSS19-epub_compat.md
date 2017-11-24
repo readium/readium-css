@@ -109,7 +109,7 @@ Supported display options are:
 
 ## Metadata
 
-iBooks is usings specific metadata for embedded fonts, versioning, gaiji, and the EPUB3 files created with iBooks Author. 
+iBooks is usings specific metadata for embedded fonts, versioning, gaiji, scroll axis, and the EPUB3 files created with iBooks Author. 
 
 This metadata has an `ibooks:` prefix.
 
@@ -154,6 +154,16 @@ Gaiji are small, inline images that represent characters that are not available 
 Some authors may have used this metadata to force sizing for specific images, and not only gaiji. Moreover, some might use it to invert specific images like illustrations in night mode, since iBooks does it automatically in order for gaiji to be the same color as text’s.
 
 Docs: [iBooks Asset Guide](https://help.apple.com/itc/booksassetguide/?lang=en#/itca71ad3c33)
+
+### Scroll axis
+
+```
+<meta property="ibooks:scroll-axis">vertical | horizontal | default</meta>
+```
+
+iBooks’ scroll theme scrolls vertically for books with horizontal text, and scrolls horizontally for books with vertical text. By default, Japanese and Chinese books will thus scroll horizontally, while all other languages scroll vertically. This meta allows authors to redefine the scroll direction.
+
+Docs: [iBooks Asset Guide](https://help.apple.com/itc/booksassetguide/#/itccf6b30e09)
 
 ### iBooks Author EPUB3 output
 

@@ -80,6 +80,7 @@ sup {
 }
 
 em {
+  -webkit-text-emphasis: sesame;
   -epub-text-emphasis: sesame;
   text-emphasis: sesame;
 }

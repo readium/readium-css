@@ -89,6 +89,7 @@ sup {
 }
 
 em {
+  -webkit-text-emphasis: dot;
   -epub-text-emphasis: dot;
   text-emphasis: dot;
 }

@@ -59,6 +59,12 @@ body {
   font-variant-numeric: oldstyle-nums proportional-nums;
 }
 
+:lang(ja) body,
+:lang(zh) body,
+:lang(ko) body {
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
 h1, h2, h3, h4, h5, h6, dt {
   font-variant-numeric: lining-nums proportional-nums;
 }
@@ -74,6 +80,10 @@ code, var {
 
 rt {
   font-variant-east-asian: ruby;
+}
+
+:lang(ar) {
+  font-variant-ligatures: common-ligatures;
 }
 
 /* Night mode */
@@ -125,4 +135,21 @@ ruby > rt, ruby > rp {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+/* Internationalization */
+
+*:lang(ja),
+*:lang(zh),
+*:lang(ko),
+:lang(ja) cite, :lang(ja) dfn, :lang(ja) em, :lang(ja) i,  
+:lang(zh) cite, :lang(zh) dfn, :lang(zh) em, :lang(zh) i,
+:lang(ko) cite, :lang(ko) dfn, :lang(ko) em, :lang(ko) i {
+  font-style: normal;
+}
+
+:lang(ja) a,  
+:lang(zh) a,
+:lang(ko) a {
+  text-decoration: none;
 }

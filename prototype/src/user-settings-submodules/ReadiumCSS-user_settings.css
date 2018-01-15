@@ -1,0 +1,21 @@
+/* Readium CSS 
+   User Overrides
+
+   A customizable stylesheet to manage user settings
+
+   Repo: https://github.com/readium/readium-css */
+
+/* Variables are added to html (setProperty -> style) */
+
+@import "ReadiumCSS-colNumber_pref.css";
+@import "ReadiumCSS-pageMargins_pref.css";
+@import "ReadiumCSS-customColors_pref.css";
+@import "ReadiumCSS-textAlign_pref.css";
+@import "ReadiumCSS-bodyHyphens_pref.css";
+@import "ReadiumCSS-fontFamily_pref.css";
+@import "ReadiumCSS-fontSize_pref.css";
+@import "ReadiumCSS-lineHeight_pref.css";
+@import "ReadiumCSS-paraSpacing_pref.css";
+@import "ReadiumCSS-paraIndent_pref.css";
+@import "ReadiumCSS-wordSpacing_pref.css";
+@import "ReadiumCSS-letterSpacing_pref.css";

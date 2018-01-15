@@ -1,6 +1,6 @@
-# PostCSS Config
+# How to generate one stylesheet out of the submodules
 
-[Proto] [iOS Implem] [WIP]
+You’ll need PostCSS and a couple of plugins.
 
 ## Install
 
@@ -14,9 +14,7 @@ npm install postcss-sorting --save-dev
 ## Process
 
 ```
-postcss /path/to/src/ReadiumCSS-before.css -o ~/path/to/dist/ReadiumCSS-before.css
-postcss /path/to/src/ReadiumCSS-default.css -o ~/path/to/dist/ReadiumCSS-default.css
-postcss /path/to/src/ReadiumCSS-after.css -o ~/path/to/dist/ReadiumCSS-after.css
+postcss /path/to/src/ReadiumCSS-user_settings.css -o ~/path/to/dist/ReadiumCSS-user_settings.css
 ```
 
 ## Docs

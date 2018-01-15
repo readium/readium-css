@@ -1,0 +1,28 @@
+/* Readium CSS 
+   Hyphenation pref
+
+   A submodule managing hyphens for user settings
+   Part of “User Overrides Advanced” class – “readium-advanced-on” flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] {
+  -webkit-hyphens: var(--USER__bodyHyphens) !important;
+  -moz-hyphens: var(--USER__bodyHyphens) !important;
+  -ms-hyphens: var(--USER__bodyHyphens) !important;
+  -epub-hyphens: var(--USER__bodyHyphens) !important;
+  hyphens: var(--USER__bodyHyphens) !important;
+}
+
+/* Sorry, we can’t use `:matches`, `:-moz-any` or `:-webkit-any` because MS doesn’t support it yet */
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] body, :root[style*="hyphens"] body,
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] p, :root[style*="hyphens"] p,
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] li, :root[style*="hyphens"] li,
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] div, :root[style*="hyphens"] div,
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] dd, :root[style*="hyphens"] dd {
+  -webkit-hyphens: inherit;
+  -moz-hyphens: inherit;
+  -ms-hyphens: inherit;
+  -epub-hyphens: inherit;
+  hyphens: inherit;
+}

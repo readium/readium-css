@@ -273,6 +273,14 @@ Scope: `html`
 It impacts `body`.
 
 ```
+--USER__view
+```
+
+Enables scroll mode.
+
+Scope: `html`
+
+```
 --USER__backgroundColor
 ```
 
@@ -313,6 +321,14 @@ Scope: `html`
 It impacts `body`, `p`, `li`, `div` and `dd`.
 
 ```
+--USER__fontOverride
+```
+
+Scope: `html`
+
+It impacts the `--USER__fontFamily` variable.
+
+```
 --USER__fontFamily
 ```
 
@@ -329,6 +345,14 @@ It impacts `body`, `p`, `li`, `div`, `dt`, `dd` and phrasing elements which donâ
 Increasing and decreasing the root `font-size`. It will serve as a reference for the cascade.
 
 Scope: `html`
+
+```
+--USER__advancedSettings
+``` 
+
+Scope: `html`
+
+It impacts the `--USER__typescale` variable.
 
 ```
 --USER__typeScale
@@ -385,6 +409,14 @@ Increasing space between letters (`letter-spacing`, related to a11y).
 Scope: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `li`, `div`
 
 ```
+--USER__appearance
+```
+
+Manages reading modes
+
+Scope: `html`
+
+```
 --USER__darkenImages
 ```
 
@@ -403,6 +435,16 @@ A filter to invert images in night mode. It behaves as a switch i.e. if it is pr
 Scope: `html`
 
 It impacts all `img` elements in the DOM.
+
+```
+--USER__a11yNormalize
+```
+
+A flag to normalize text contents for dyslexia.
+
+Scope: `html`
+
+It impacts font style, weight and variant, text decoration, super and subscripts.
 
 ## How to set and remove user preferences
 

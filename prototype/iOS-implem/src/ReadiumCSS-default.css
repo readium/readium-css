@@ -126,7 +126,6 @@ h5 {
 h6 {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: 0;
-  /* The following is base font size / typescale power of 2 */
   font-size: var(--RS__baseFontSize);
   text-transform: lowercase;
   font-variant: small-caps;

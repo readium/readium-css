@@ -67,7 +67,9 @@ h1, h2, h3 {
   line-height: normal;
 }
 
-:lang(ja) {
+:lang(ja),
+:lang(zh),
+:lang(ko) {
   word-wrap: break-word;
   -webkit-line-break: strict;
   -epub-line-break: strict;

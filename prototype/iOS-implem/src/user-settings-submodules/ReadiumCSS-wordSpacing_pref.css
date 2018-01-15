@@ -1,0 +1,19 @@
+/* Readium CSS 
+   Word spacing pref
+
+   A submodule managing word-spacing for user settings
+   Part of “User Overrides Advanced” class – “readium-advanced-on” flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] h1,
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] h2,
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] h3,
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] h4,
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] h5,
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] h6,
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] p,
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] li,
+:root[style*="readium-advanced-on"][style*="--USER__wordSpacing"] div {
+  word-spacing: var(--USER__wordSpacing);
+}

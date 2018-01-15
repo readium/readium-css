@@ -33,11 +33,20 @@
   /* Should we also set user highlights? */
 }
 
+@media screen and (-ms-high-contrast: white-on-black) { 
+  :root[style*="readium-night-on"][style*="readium-invert-on"] img {
+    -webkit-filter: none !important;
+    filter: none !important;
+  }
+  :root[style*="readium-night-on"][style*="readium-darken-on"][style*="readium-invert-on"] img {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+}
+
 /* We probably don’t need this
 
 @media screen and (-ms-high-contrast: black-on-white) { }
-
-@media screen and (-ms-high-contrast: white-on-black) { }
 
 */
 

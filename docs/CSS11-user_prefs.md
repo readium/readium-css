@@ -48,6 +48,80 @@ root.style.removeProperty("name of var");
 
 Attribute selectors don’t scale particularly well. We’ll have to pay attention to performance, especially on mobile.
 
+## Flags
+
+Some variables behave like flags. You could also use custom `data-*` attributes to manage the following ones.
+
+### User view
+
+Allows to switch between paged and scroll view.
+
+```
+--USER__view
+```
+
+Possible values: `readium-paged-on` | `readium-scroll-on`
+
+### Font Family override
+
+Acts as an explicit switch to override the publisher’s `font-family`.
+
+It must be set if the user changes `font-family`.
+
+```
+--USER__fontOverride
+```
+
+Possible values: `readium-font-on` | `readium-font-off`
+
+### Advanced Settings
+
+Acts as an explicit switch to overrides publisher’s styles.
+
+It must be set if the user changes `font-family` or `font-size`.
+
+```
+--USER__advancedSettings
+``` 
+
+Possible values: `readium-advanced-on` | `readium-advanced-off`
+
+### Reading Modes
+
+We currently have two reading modes for night and sepia.
+
+```
+--USER__appearance
+```
+
+Possible values: `readium-default-on` | `readium-sepia-on` | `readium-night-on`
+
+### Filters
+
+Please note night mode provides two extra specific variables: 
+
+```
+--USER__darkenFilter
+```
+
+Possible values: `readium-darken-on` | `readium-darken-off`
+
+```
+--USER__invertFilter
+```
+
+Possible values: `readium-invert-on` | `readium-invert-off`
+
+### Accessibility Normalization
+
+Users may want to normalize text (no bold, no italics, etc.) for accessibility reasons, using a non a11y-specific typeface.
+
+```
+--USER__a11yNormalize
+```
+
+Possible values: `readium-a11y-on` | `readium-a11y-off`
+
 ## List of variables 
 
 ### Layout 
@@ -195,30 +269,6 @@ Possible values: `0` | `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
 ```
 
 Possible values: `0` | `0.0675rem` | `0.125rem` | `0.1875rem` | `0.25rem`
-
-## Reading Modes
-
-We currently have two reading modes for night and sepia.
-
-Those are stylesheets you can add/remove in the document.
-
-Please note night mode provides two extra specific variables: 
-
-```
---USER__darkenImages
-```
-
-This variable allows the user to darken images à little bit.
-
-Any value can be set, the property itself is the signal.
-
-```
---USER__invertImages
-```
-
-This variable allows the user to invert images.
-
-Any value can be set, the property itself is the signal.
 
 ## Themes
 

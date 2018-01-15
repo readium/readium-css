@@ -74,6 +74,18 @@
   column-fill: auto;
 
   -webkit-text-size-adjust: 100%;
+
+  /* Ensure the correct writing-mode is used */
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+:root:lang(mn) {
+  /* Ensure the correct writing-mode is used for mongolian */
+  -ms-writing-mode: tb-lr;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 
 body {

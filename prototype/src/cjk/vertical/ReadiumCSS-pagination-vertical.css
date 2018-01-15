@@ -79,6 +79,8 @@
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
+
+  hanging-punctuation: last allow-end;
 }
 
 :root:lang(mn) {

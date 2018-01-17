@@ -75,6 +75,9 @@
 
   -webkit-text-size-adjust: 100%;
 
+  /* The reason why we don’t force -webkit-column-axis is that it switches the column-box model to a paged overflow model.
+     In other words, columns become useless, the sizing of the :root itself will be used for pagination */
+
   /* Ensure the correct writing-mode is used */
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;

@@ -1,7 +1,7 @@
 /* Readium CSS 
-   Scroll module
+   Scroll module for vertical-writing
 
-   A set of styles to scroll ePublications
+   A set of styles to scroll ePublications in “writing-mode: vertical-*”
    This module overrides pagination
 
    Repo: https://github.com/readium/readium-css */
@@ -27,7 +27,5 @@
 }
   
 /* Scroll mode horizontal */
-  
-/* Vertical writing needs body height set */
   
 /* Do we add a top/bottom margin for body in vertical scroll or not? */

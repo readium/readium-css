@@ -30,7 +30,11 @@
 
   /* Config */
   --RS__baseFontFamily: var(--RS__oldStyleTf);
-  --RS__baseLineHeight: 1.5;
+
+  /* Dynamic leading based on typeface metrics + font-size setting */
+  --RS__baseLineHeight: calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667));
+  /* For CJK, the line-height is usually 15–20% more than for Latin */
+  --RS__cjkCompensation: 1.1667;
 
   --RS__textColor: #121212;
   --RS__backgroundColor: #FFFFFF;
@@ -45,6 +49,8 @@
 /* Set default font for the html doc, so that it can be overridden by the authors’s stylesheet */
 html {
   font-family: var(--RS__baseFontFamily);
+  /* Fallback line-height */
+  line-height: 1.6; /* Fits a little bit better for all languages than 1.5 */
   line-height: var(--RS__baseLineHeight);
   text-rendering: optimizeLegibility;
 }
@@ -122,7 +128,7 @@ math {
   
   :lang(ja) {
     --RS__baseFontFamily: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
-    --RS__baseLineHeight: 1.75;
+    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
   }
   
   :lang(km) {
@@ -135,7 +141,7 @@ math {
   
   :lang(ko) {
     --RS__baseFontFamily: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans CJK KR", sans-serif;
-    --RS__baseLineHeight: 1.75;
+    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
   }
   
   :lang(lo) {
@@ -173,16 +179,16 @@ math {
   /* The following will also work for zh-Hans */
   :lang(zh) {
     --RS__baseFontFamily: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
-    --RS__baseLineHeight: 1.75;
+    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
   }
   
   :lang(zh-Hant),
   :lang(zh-TW) {
     --RS__baseFontFamily: "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-    --RS__baseLineHeight: 1.75;
+    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
   }
   
   :lang(zh-HK) {
     --RS__baseFontFamily: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-    --RS__baseLineHeight: 1.75;
+    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
   }

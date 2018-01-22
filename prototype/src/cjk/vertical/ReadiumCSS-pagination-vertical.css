@@ -50,8 +50,12 @@
 
   /* Switch to newer box model (not inherited by authors’ styles) */
   box-sizing: border-box;
+  min-width: 100%;
   width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
   height: 100vh;
+  max-height: 100vh;
   margin: 0 !important;
   padding: 0 var(--RS__pageGutter) !important;
 
@@ -87,7 +91,7 @@
 }
 
 :root:lang(mn) {
-  /* Ensure the correct writing-mode is used for mongolian */
+  /* Ensure the correct writing-mode is used for mongolian if vertical */
   -ms-writing-mode: tb-lr;
   -webkit-writing-mode: vertical-lr;
   writing-mode: vertical-lr;

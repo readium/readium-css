@@ -9,7 +9,9 @@
 /* [style*="--USER__view"] can be used to increase specificity but performance hit */
 :root[style*="readium-scroll-on"] {
   /* Reset html size so that the user can scroll */
+  min-width: 0 !important;
   width: auto !important;
+  max-width: none !important;
   max-height: 100vh !important;
   
   /* Reset columns, auto + auto = columns can’t be created */

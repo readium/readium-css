@@ -44,6 +44,18 @@
   }
 }
 
+/* Will be true on recent versions of iOS and MacOS if inverted setting enabled by the user */
+@media screen and (inverted-colors) {
+  :root[style*="readium-night-on"][style*="readium-invert-on"] img {
+    -webkit-filter: none !important;
+    filter: none !important;
+  }
+  :root[style*="readium-night-on"][style*="readium-darken-on"][style*="readium-invert-on"] img {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+}
+
 /* We probably don’t need this
 
 @media screen and (-ms-high-contrast: black-on-white) { }

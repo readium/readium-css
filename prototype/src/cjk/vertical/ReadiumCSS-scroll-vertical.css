@@ -25,7 +25,7 @@
   
 /* Make sure line-length is limited in all configs */
 :root[style*="readium-scroll-on"] body {
-  --RS__maxLineLength: 40rem !important; 
+  --RS__maxLineLength: 40.01rem !important; /* Fixes fragmentation update issues in Webkit i.e. value must be slightly different than the one for pagination */
 }
   
 /* Scroll mode horizontal */

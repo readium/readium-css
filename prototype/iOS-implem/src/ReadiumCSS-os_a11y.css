@@ -34,6 +34,11 @@
 }
 
 @media screen and (-ms-high-contrast: white-on-black) { 
+  :root[style*="readium-night-on"] img[class*="gaiji"],
+  :root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child {
+    -webkit-filter: none !important;
+    filter: none !important;
+  }
   :root[style*="readium-night-on"][style*="readium-invert-on"] img {
     -webkit-filter: none !important;
     filter: none !important;
@@ -46,6 +51,11 @@
 
 /* Will be true on recent versions of iOS and MacOS if inverted setting enabled by the user */
 @media screen and (inverted-colors) {
+  :root[style*="readium-night-on"] img[class*="gaiji"],
+  :root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child {
+    -webkit-filter: none !important;
+    filter: none !important;
+  }
   :root[style*="readium-night-on"][style*="readium-invert-on"] img {
     -webkit-filter: none !important;
     filter: none !important;

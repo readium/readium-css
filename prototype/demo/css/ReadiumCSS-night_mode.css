@@ -44,7 +44,7 @@
 }
 
 :root[style*="readium-night-on"] img[class*="gaiji"],
-:root[style*="readium-night-on"] *[epub\:type~="titlepage"] img {
+:root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child {
   -webkit-filter: invert(100%);
   filter: invert(100%);
 }

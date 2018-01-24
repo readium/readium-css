@@ -9,6 +9,11 @@
 /* CONFIG */
 
 :root {
+  /* Extra variables for Japanese font-stacks
+     They can be used instead of --RS__baseFontFamily and --RS__compFontFamily */
+  --RS__serif-ja: "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif;
+  --RS__sans-serif-ja: "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif;
+
   --RS__compFontFamily: var(--RS__baseFontFamily);
   --RS__codeFontFamily: var(--RS__monospaceTf);
 

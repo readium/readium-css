@@ -86,6 +86,10 @@ rt {
   font-variant-ligatures: common-ligatures;
 }
 
+:lang(ko) {
+  font-kerning: normal;
+}
+
 /* Night mode */
 
 hr {

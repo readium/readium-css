@@ -19,8 +19,6 @@
   -webkit-columns: auto auto !important;
   -moz-columns: auto auto !important;
   columns: auto auto !important;
-  
-  padding: 0 !important;
 }
   
 /* Make sure line-length is limited in all configs */

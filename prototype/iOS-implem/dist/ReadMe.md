@@ -52,7 +52,6 @@ It is also important the `xml:lang` be appended to the `html` element of each do
 
 Disabled user settings: 
 
-- `column-count` (number of columns);
 - `text-align`;
 - `hyphens`;
 - paragraphs’ indent;

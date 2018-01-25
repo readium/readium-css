@@ -7,6 +7,7 @@
 
 /* Variables are added to html (setProperty -> style) */
 
+@import "ReadiumCSS-colNumber_pref.css";
 @import "ReadiumCSS-pageMargins_pref.css";
 @import "ReadiumCSS-customColors_pref.css";
 @import "ReadiumCSS-fontFamily_pref.css";

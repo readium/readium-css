@@ -318,6 +318,10 @@ rt {
   font-variant-ligatures: common-ligatures;
 }
 
+:lang(ko) {
+  font-kerning: normal;
+}
+
 /* Night mode */
 
 hr {
@@ -335,13 +339,46 @@ figure, blockquote {
   margin: 1em 5%;
 }
 
+/* 
+
+:lang(ja) figure, :lang(ja) blockquote,
+:lang(zh-Hant) figure, :lang(zh-Hant) blockquote,
+:lang(zh-TW) figure, :lang(zh-TW) blockquote,
+:lang(mn) figure, :lang(mn) blockquote {
+  margin: 5% 1em;  
+}
+
+*/
+
 ul, ol {
   padding-left: 5%;
 }
 
+/* 
+
+:lang(ja) ul, :lang(ja) ol,
+:lang(zh-Hant) ul, :lang(zh-Hant) ol,
+:lang(zh-TW) ul, :lang(zh-TW) ol,
+:lang(mn) ul, :lang(mn) ol   {
+  padding-top: 5%;  
+}
+
+*/
+
 dd {
   margin-left: 5%;
 }
+
+/* 
+
+:lang(ja) dd,
+:lang(zh-Hant) dd,
+:lang(zh-TW) dd, 
+:lang(mn) dd {
+  margin-top: 5%;  
+}
+
+*/
 
 pre {
   white-space: pre-wrap;

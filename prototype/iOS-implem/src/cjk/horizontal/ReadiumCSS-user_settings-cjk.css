@@ -1,0 +1,130 @@
+/* Readium CSS 
+   User Overrides for CJK
+
+   A customizable stylesheet to manage user settings
+
+   Repo: https://github.com/readium/readium-css */
+
+/* Variables are added to html (setProperty -> style) */
+
+/* Readium CSS 
+   Page margins pref
+
+   A submodule managing page margins for user settings
+   Part of “Chrome Advanced” class – no flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+/* Page Margins: the user margin is a factor of the page gutter e.g. 0.5, 0.75, 1, 1.25, 1.5, etc. */
+
+:root[style*="--USER__pageMargins"] body {
+  padding: 0 calc(var(--RS__pageGutter) * var(--USER__pageMargins)) !important;
+}
+
+/* Readium CSS 
+   Custom colors pref
+
+   A submodule managing custom colors for user settings
+   Part of “Chrome Advanced” class – no flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+:root[style*="--USER__backgroundColor"] {
+  background-color: var(--USER__backgroundColor) !important;
+}
+
+:root[style*="--USER__backgroundColor"] *,
+:root[style*="background-color"] * {
+  background-color: transparent !important;
+}
+
+:root[style*="--USER__textColor"] {
+  color: var(--USER__textColor) !important;
+}
+
+:root[style*="--USER__textColor"] *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre),
+:root[style*="color"] *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre) {
+  color: inherit !important;
+}
+
+/* Readium CSS 
+   Font Family pref
+
+   A submodule managing font-family for user settings
+   Part of “User Overrides” class – “readium-font-on” flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+/* [style*="--USER__fontOverride"] can be used to increase specificity but performance hit */
+
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] {
+  font-family: var(--USER__fontFamily) !important;
+}
+
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] body, :root[style*="font-family"] body,
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] p, :root[style*="font-family"] p,
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] li, :root[style*="font-family"] li,
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] div, :root[style*="font-family"] div,
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] dt, :root[style*="font-family"] dt,
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] dd, :root[style*="font-family"] dd {
+  font-family: inherit !important;
+}
+
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] i:not([lang]), :root[style*="font-family"] i:not([lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] i:not([xml\:lang]), :root[style*="font-family"] i:not([xml\:lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] em:not([lang]), :root[style*="font-family"] em:not([lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] em:not([xml\:lang]), :root[style*="font-family"] em:not([xml\:lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] cite:not([lang]), :root[style*="font-family"] cite:not([lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] cite:not([xml\:lang]), :root[style*="font-family"] cite:not([xml\:lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] b:not([lang]), :root[style*="font-family"] b:not([lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] b:not([xml\:lang]), :root[style*="font-family"] b:not([xml\:lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] strong:not([lang]), :root[style*="font-family"] strong:not([lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] strong:not([xml\:lang]), :root[style*="font-family"] strong:not([xml\:lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] span:not([lang]), :root[style*="font-family"] span:not([lang]),
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] span:not([xml\:lang]), :root[style*="font-family"] span:not([xml\:lang]) {
+  font-family: inherit !important;
+}
+
+/* Readium CSS 
+   Font size pref
+
+   A submodule managing font-size for user settings
+   Part of “User Overrides” class – no flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+:root[style*="--USER__fontSize"] {
+  font-size: var(--USER__fontSize) !important;
+}
+
+/* Readium CSS 
+   Line height pref
+
+   A submodule managing line-height for user settings
+   Part of “User Overrides Advanced” class – “readium-advanced-on” flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+:root[style*="readium-advanced-on"][style*="--USER__lineHeight"] {
+  line-height: var(--USER__lineHeight) !important;
+}
+
+:root[style*="readium-advanced-on"][style*="--USER__lineHeight"] body, :root[style*="line-height"] body,
+:root[style*="readium-advanced-on"][style*="--USER__lineHeight"] p, :root[style*="line-height"] p,
+:root[style*="readium-advanced-on"][style*="--USER__lineHeight"] li, :root[style*="line-height"] li,
+:root[style*="readium-advanced-on"][style*="--USER__lineHeight"] div, :root[style*="line-height"] div {
+  line-height: inherit;
+}
+
+/* Readium CSS 
+   Para spacing pref
+
+   A submodule managing paragraphs’ top and bottom margins for user settings
+   Part of “User Overrides Advanced” class – “readium-advanced-on” flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+:root[style*="readium-advanced-on"][style*="--USER__paraSpacing"] p {
+  margin-top: var(--USER__paraSpacing) !important;
+  margin-bottom: var(--USER__paraSpacing) !important;
+}

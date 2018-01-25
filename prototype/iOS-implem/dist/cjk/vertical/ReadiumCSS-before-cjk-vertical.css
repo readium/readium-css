@@ -6,11 +6,15 @@
    Repo: https://github.com/readium/readium-css */
 
 @namespace url(http://www.w3.org/1999/xhtml);
+
 @namespace epub url(http://www.idpf.org/2007/ops);
+
 @namespace m url(http://www.w3.org/1998/Math/MathML/);
+
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* Define viewport, HTML5-style */
+
 @-ms-viewport {
   width: device-width;
 }
@@ -41,12 +45,14 @@
 }
 
 /* Default colors */
+
 :root {
   color: var(--RS__textColor) !important;
   background-color: var(--RS__backgroundColor) !important;
 }
 
 /* Set default font for the html doc, so that it can be overridden by the authors’s stylesheet */
+
 html {
   font-family: var(--RS__baseFontFamily);
   /* Fallback line-height */
@@ -56,6 +62,7 @@ html {
 }
 
 /* Disable text-selection in CSS until it’s managed in touchHandler.js */
+
 body {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -64,6 +71,7 @@ body {
 }
 
 /* 1.5 being too loose with larger font-sizes, we reset headings to normal (which value is 1.125–1.375 for our font-stacks) */
+
 h1, h2, h3 {
   line-height: normal;
 }
@@ -183,6 +191,7 @@ math {
 }
 
 /* The following will also work for zh-Hans */
+
 :lang(zh) {
   --RS__baseFontFamily: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
   --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
@@ -197,4 +206,263 @@ math {
 :lang(zh-HK) {
   --RS__baseFontFamily: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
   --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+}
+
+/* Readium CSS 
+   Fonts module
+
+   A stylesheet for embedded fonts
+
+   Repo: https://github.com/readium/readium-css */
+
+/* /!\ Mind the path (relative to the folders in which you have stylesheets and the fonts) */
+
+@font-face {
+  font-family: "AccessibleDfa";
+  font-style: normal;
+  font-weight: normal;
+  src: local("AccessibleDfa"),
+       url("../fonts/AccessibleDfA.otf") format("opentype");
+}
+
+/* If you have different weights/styles, 
+   use `font-weight` and `font-style`, 
+   not prefixes in the font-family name, 
+   or else it will be a nightmare to manage in user settings. */
+
+/* Readium CSS 
+   HTML5 SR Patch stylesheet
+
+   A set of style to adjust HTML5 Suggested Rendering to paginated content
+
+   Repo: https://github.com/readium/readium-css */
+
+/* Fragmentation */
+
+body {
+  widows: 2;
+  orphans: 2;
+}
+
+figcaption, th, td {
+  widows: 1;
+  orphans: 1;
+}
+
+h2, h3, h4, h5, h6, dt,
+hr, caption {
+  -webkit-column-break-after: avoid;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+h1, h2, h3, h4, h5, h6, dt, 
+figure, tr {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Hyphenation */
+
+body {
+  -webkit-hyphenate-character: "\002D";
+  -moz-hyphenate-character: "\002D";
+  -ms-hyphenate-character: "\002D";
+  hyphenate-character: "\002D";
+  -webkit-hyphenate-limit-lines: 3;
+  -ms-hyphenate-limit-lines: 3;
+  hyphenate-limit-lines: 3;
+}
+
+h1, h2, h3, h4, h5, h6, dt,
+figcaption, pre, caption, address,
+center, code, var {
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  -epub-hyphens: none;
+  hyphens: none;
+}
+
+/* OTF */
+
+body {
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+:lang(ja) body,
+:lang(zh) body,
+:lang(ko) body {
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+h1, h2, h3, h4, h5, h6, dt {
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+table {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+code, var {
+  font-variant-ligatures: none;
+  font-variant-numeric: lining-nums tabular-nums slashed-zero;
+}
+
+rt {
+  font-variant-east-asian: ruby;
+}
+
+:lang(ar) {
+  font-variant-ligatures: common-ligatures;
+}
+
+/* Night mode */
+
+hr {
+  color: inherit;
+  border-color: currentColor;
+}
+
+table, th, td {
+  border-color: currentColor;
+}
+
+/* Horizontal Spacing */
+
+figure, blockquote {
+  margin: 1em 5%;
+}
+
+ul, ol {
+  padding-left: 5%;
+}
+
+dd {
+  margin-left: 5%;
+}
+
+pre {
+  white-space: pre-wrap;
+  -ms-tab-size: 2;
+  -moz-tab-size: 2;
+  -webkit-tab-size: 2;
+  tab-size: 2;
+}
+
+/* Normalization */
+
+abbr[title], acronym[title] {
+  text-decoration: dotted underline;
+}
+
+nobr wbr {
+  white-space: normal;
+}
+
+/* Make ruby text and parentheses non-selectable (TBC) */
+
+ruby > rt, ruby > rp {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Internationalization */
+
+*:lang(ja),
+*:lang(zh),
+*:lang(ko),
+:lang(ja) cite, :lang(ja) dfn, :lang(ja) em, :lang(ja) i,  
+:lang(zh) cite, :lang(zh) dfn, :lang(zh) em, :lang(zh) i,
+:lang(ko) cite, :lang(ko) dfn, :lang(ko) em, :lang(ko) i {
+  font-style: normal;
+}
+
+:lang(ja) a,  
+:lang(zh) a,
+:lang(ko) a {
+  text-decoration: none;
+}
+
+/* Readium CSS 
+   Safeguards module for vertical writing
+
+   A set of styles to prevent common issues in pagination
+
+   Repo: https://github.com/readium/readium-css */
+
+/* Config */
+
+/* We’ll be using an "RS__" prefix so that we can prevent collisions with authors’ CSS */
+
+:root {
+  /* max-width for media, you can override that via JS if not compiled to static */
+  --RS__maxMediaWidth: 100%;
+
+  /* max-height for media, you can override that via JS if not compiled to static  */
+  --RS__maxMediaHeight: 100%;
+
+  /* value for medias’ box-sizing */
+  --RS__boxSizingMedia: border-box;
+
+  /* value for table’s box-sizing */
+  --RS__boxSizingTable: border-box;
+}
+
+/* Sanitize line-heights in webkit e.g. raised cap without a declared line-height
+   See effect by checking this demo in Safari: https://codepen.io/JayPanoz/pen/gRmzrE
+   Note: glyphs has to be reset to inline for CJK */
+
+html {
+  -webkit-line-box-contain: block glyphs replaced;
+}
+
+:lang(ja) {
+  -webkit-line-box-contain: block inline replaced;
+}
+
+/* Wrap long strings if larger than line-length */
+
+a, h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+}
+
+/* Size medias */
+
+/* You can override CSS variables by re-defining it for all elements or a specific one */
+
+img, svg, audio, video {
+
+  /* Object-fit allows us to keep the correct aspect-ratio */
+  object-fit: contain;
+
+  width: auto;
+  height: auto;
+
+  /* We’re setting a max-height, especially for covers */
+  max-width: var(--RS__maxMediaHeight);
+
+  /* Some files don’t have max-width */
+  max-height: var(--RS__maxMediaWidth) !important;
+  /* We probably don’t need to use modern box-sizing as auto behaves like it */
+  box-sizing: var(--RS__boxSizingMedia);
+
+  /* For page-break, we must use those 3
+     We can’t use a variable there, webkit seems to no support them for those properties */
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Try preventing border being cut-off, webkit + blink have content-box by default */
+
+table {
+
+  /* We might want to set at least overflow-y to auto in case the table doesn't fit,
+     max-height is not necessarily the best solution there, but maybe we could investigate transform scale */
+  overflow-y: auto;
+  box-sizing: var(--RS__boxSizingTable);
 }

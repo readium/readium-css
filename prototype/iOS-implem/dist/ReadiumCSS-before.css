@@ -94,112 +94,119 @@ math {
 /* Language Overrides
    That will only work if either html or body have a (xml:)lang attribute, not for inline overrides */
 
-   :lang(am) {
-    --RS__baseFontFamily: Kefa, Nyala, Roboto, Noto, "Noto Sans Ethiopic", serif;
-  }
-  
-  :lang(ar) {
-    --RS__baseFontFamily: "Geeza Pro", "Arabic Typesetting", Roboto, Noto, "Noto Naskh Arabic", "Times New Roman", serif;
-  }
-  
-  :lang(bn) {
-    --RS__baseFontFamily: "Kohinoor Bangla", "Bangla Sangam MN", Vrinda, Roboto, Noto, "Noto Sans Bengali", sans-serif;
-  }
-  
-  :lang(bo) {
-    --RS__baseFontFamily: Kailasa, "Microsoft Himalaya", Roboto, Noto, "Noto Sans Tibetan", sans-serif;
-  }
-  
-  :lang(chr) {
-    --RS__baseFontFamily: "Plantagenet Cherokee", Roboto, Noto, "Noto Sans Cherokee";
-  }
-  
-  :lang(gu) {
-    --RS__baseFontFamily: "Gujarati Sangam MN", "Nirmala UI", Shruti, Roboto, Noto, "Noto Sans Gujarati", sans-serif;
-  }
-  
-  :lang(he) {
-    --RS__baseFontFamily: "New Peninim MT", "Arial Hebrew", Gisha, "Times New Roman", Roboto, Noto, "Noto Sans Hebrew" sans-serif;
-  }
-  
-  :lang(hi) {
-    --RS__baseFontFamily: "Kohinoor Devanagari", "Devanagari Sangam MN", Kokila, "Nirmala UI", Roboto, Noto, "Noto Sans Devanagari", sans-serif;
-  }
-  
-  :lang(hy) {
-    --RS__baseFontFamily: Mshtakan, Sylfaen, Roboto, Noto, "Noto Serif Armenian", serif;
-  }
-  
-  :lang(iu) {
-    --RS__baseFontFamily: "Euphemia UCAS", Euphemia, Roboto, Noto, "Noto Sans Canadian Aboriginal", sans-serif;
-  }
-  
-  :lang(ja) {
-    --RS__baseFontFamily: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
-    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
-  }
-  
-  :lang(km) {
-    --RS__baseFontFamily: "Khmer Sangam MN", "Leelawadee UI", "Khmer UI", Roboto, Noto, "Noto Sans Khmer", sans-serif;
-  }
-  
-  :lang(kn) {
-    --RS__baseFontFamily: "Kannada Sangam MN", "Nirmala UI", Tunga, Roboto, Noto, "Noto Sans Kannada", sans-serif;
-  }
-  
-  :lang(ko) {
-    --RS__baseFontFamily: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans CJK KR", sans-serif;
-    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
-  }
-  
-  :lang(lo) {
-    --RS__baseFontFamily: "Lao Sangam MN", "Leelawadee UI", "Lao UI", Roboto, Noto, "Noto Sans Lao", sans-serif;
-  }
-  
-  :lang(ml) {
-    --RS__baseFontFamily: "Malayalam Sangam MN", "Nirmala UI", Kartika, Roboto, Noto, "Noto Sans Malayalam", sans-serif;
-  }
-  
-  :lang(or) {
-    --RS__baseFontFamily: "Oriya Sangam MN", "Nirmala UI", Kalinga, Roboto, Noto, "Noto Sans Oriya", sans-serif;
-  }
-  
-  :lang(pa) {
-    --RS__baseFontFamily: "Gurmukhi MN", "Nirmala UI", Kartika, Roboto, Noto, "Noto Sans Gurmukhi", sans-serif;
-  }
-  
-  :lang(si) {
-    --RS__baseFontFamily: "Sinhala Sangam MN", "Nirmala UI", "Iskoola Pota", Roboto, Noto, "Noto Sans Sinhala", sans-serif;
-  }
-  
-  :lang(ta) {
-    --RS__baseFontFamily: "Tamil Sangam MN", "Nirmala UI", Latha, Roboto, Noto, "Noto Sans Tamil", sans-serif;
-  }
-  
-  :lang(te) {
-    --RS__baseFontFamily: "Kohinoor Telugu", "Telugu Sangam MN", "Nirmala UI", Gautami, Roboto, Noto, "Noto Sans Telugu", sans-serif;
-  }
-  
-  :lang(th) {
-    --RS__baseFontFamily: "Thonburi", "Leelawadee UI", "Cordia New", Roboto, Noto, "Noto Sans Thai", sans-serif;
-  }
-  
-  /* The following will also work for zh-Hans */
-  :lang(zh) {
-    --RS__baseFontFamily: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
-    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
-  }
-  
-  :lang(zh-Hant),
-  :lang(zh-TW) {
-    --RS__baseFontFamily: "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
-  }
-  
-  :lang(zh-HK) {
-    --RS__baseFontFamily: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-    --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
-  }
+:lang(am) {
+  --RS__baseFontFamily: Kefa, Nyala, Roboto, Noto, "Noto Sans Ethiopic", serif;
+}
+
+:lang(ar) {
+  --RS__baseFontFamily: "Geeza Pro", "Arabic Typesetting", Roboto, Noto, "Noto Naskh Arabic", "Times New Roman", serif;
+}
+
+:lang(bn) {
+  --RS__baseFontFamily: "Kohinoor Bangla", "Bangla Sangam MN", Vrinda, Roboto, Noto, "Noto Sans Bengali", sans-serif;
+}
+
+:lang(bo) {
+  --RS__baseFontFamily: Kailasa, "Microsoft Himalaya", Roboto, Noto, "Noto Sans Tibetan", sans-serif;
+}
+
+:lang(chr) {
+  --RS__baseFontFamily: "Plantagenet Cherokee", Roboto, Noto, "Noto Sans Cherokee";
+}
+
+:lang(gu) {
+  --RS__baseFontFamily: "Gujarati Sangam MN", "Nirmala UI", Shruti, Roboto, Noto, "Noto Sans Gujarati", sans-serif;
+}
+
+:lang(he) {
+  --RS__baseFontFamily: "New Peninim MT", "Arial Hebrew", Gisha, "Times New Roman", Roboto, Noto, "Noto Sans Hebrew" sans-serif;
+}
+
+:lang(hi) {
+  --RS__baseFontFamily: "Kohinoor Devanagari", "Devanagari Sangam MN", Kokila, "Nirmala UI", Roboto, Noto, "Noto Sans Devanagari", sans-serif;
+}
+
+:lang(hy) {
+  --RS__baseFontFamily: Mshtakan, Sylfaen, Roboto, Noto, "Noto Serif Armenian", serif;
+}
+
+:lang(iu) {
+  --RS__baseFontFamily: "Euphemia UCAS", Euphemia, Roboto, Noto, "Noto Sans Canadian Aboriginal", sans-serif;
+}
+
+:lang(ja) {
+  --RS__baseFontFamily: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
+  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+
+  /* Extra variables for Japanese font-stacks as we may want to reuse them for user settings + default */
+  --RS__serif-ja: "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif;
+  --RS__sans-serif-ja: "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif;
+  --RS__serif-ja-v: "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif;
+  --RS__sans-serif-ja-v: "ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif;
+}
+
+:lang(km) {
+  --RS__baseFontFamily: "Khmer Sangam MN", "Leelawadee UI", "Khmer UI", Roboto, Noto, "Noto Sans Khmer", sans-serif;
+}
+
+:lang(kn) {
+  --RS__baseFontFamily: "Kannada Sangam MN", "Nirmala UI", Tunga, Roboto, Noto, "Noto Sans Kannada", sans-serif;
+}
+
+:lang(ko) {
+  --RS__baseFontFamily: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans CJK KR", sans-serif;
+  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+}
+
+:lang(lo) {
+  --RS__baseFontFamily: "Lao Sangam MN", "Leelawadee UI", "Lao UI", Roboto, Noto, "Noto Sans Lao", sans-serif;
+}
+
+:lang(ml) {
+  --RS__baseFontFamily: "Malayalam Sangam MN", "Nirmala UI", Kartika, Roboto, Noto, "Noto Sans Malayalam", sans-serif;
+}
+
+:lang(or) {
+  --RS__baseFontFamily: "Oriya Sangam MN", "Nirmala UI", Kalinga, Roboto, Noto, "Noto Sans Oriya", sans-serif;
+}
+
+:lang(pa) {
+  --RS__baseFontFamily: "Gurmukhi MN", "Nirmala UI", Kartika, Roboto, Noto, "Noto Sans Gurmukhi", sans-serif;
+}
+
+:lang(si) {
+  --RS__baseFontFamily: "Sinhala Sangam MN", "Nirmala UI", "Iskoola Pota", Roboto, Noto, "Noto Sans Sinhala", sans-serif;
+}
+
+:lang(ta) {
+  --RS__baseFontFamily: "Tamil Sangam MN", "Nirmala UI", Latha, Roboto, Noto, "Noto Sans Tamil", sans-serif;
+}
+
+:lang(te) {
+  --RS__baseFontFamily: "Kohinoor Telugu", "Telugu Sangam MN", "Nirmala UI", Gautami, Roboto, Noto, "Noto Sans Telugu", sans-serif;
+}
+
+:lang(th) {
+  --RS__baseFontFamily: "Thonburi", "Leelawadee UI", "Cordia New", Roboto, Noto, "Noto Sans Thai", sans-serif;
+}
+
+/* The following will also work for zh-Hans */
+
+:lang(zh) {
+  --RS__baseFontFamily: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+}
+
+:lang(zh-Hant),
+:lang(zh-TW) {
+  --RS__baseFontFamily: "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
+  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+}
+
+:lang(zh-HK) {
+  --RS__baseFontFamily: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
+  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+}
 
 /* Readium CSS 
    Fonts module

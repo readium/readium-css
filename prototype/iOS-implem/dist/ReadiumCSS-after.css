@@ -772,3 +772,5 @@ body {
 :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3 {
   font-size: calc(1rem * var(--USER__typeScale)) !important;
 }
+
+/* @import "ReadiumCSS-os_a11y.css" */

@@ -86,6 +86,49 @@
 }
 
 /* Readium CSS 
+   Text align pref
+
+   A submodule managing text-align for user settings
+   Part of “User Overrides Advanced” class – “readium-advanced-on” flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+:root[style*="readium-advanced-on"][style*="--USER__textAlign"] {
+  text-align: var(--USER__textAlign);
+}
+
+:root[style*="readium-advanced-on"][style*="--USER__textAlign"] body, :root[style*="text-align"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign"] *:not(blockquote):not(figcaption) p, :root[style*="text-align"] *:not(blockquote):not(figcaption) p, 
+:root[style*="readium-advanced-on"][style*="--USER__textAlign"] li, :root[style*="text-align"] li {
+  text-align: inherit !important;
+  -moz-text-align-last: auto !important;
+  -epub-text-align-last: auto !important;
+  text-align-last: auto !important;
+}
+
+/* In case something goes wrong at the programmatic level + rtl for body + rtl in ltr */
+
+:root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign: left"], 
+:root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign:left"],
+:root[style*="readium-advanced-on"][dir="rtl"][style*="text-align: left"],
+:root[style*="readium-advanced-on"][dir="rtl"][style*="text-align:left"],
+:root[style*="readium-advanced-on"][style*="--USER__textAlign: left"] *[dir="rtl"], 
+:root[style*="readium-advanced-on"][style*="--USER__textAlign:left"] *[dir="rtl"],
+:root[style*="readium-advanced-on"][style*="text-align: left"] *[dir="rtl"],
+:root[style*="readium-advanced-on"][style*="text-align:left"] *[dir="rtl"] {
+  text-align: right;
+}
+
+/* IE 11, if logical value is used, think of it as a polyfill. For LTR, it will fall back to the default, which is left */
+
+:root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign: start"], 
+:root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign:start"],
+:root[style*="readium-advanced-on"][dir="rtl"][style*="text-align: start"],
+:root[style*="readium-advanced-on"][dir="rtl"][style*="text-align:start"] {
+  text-align: right;
+}
+
+/* Readium CSS 
    Font Family pref
 
    A submodule managing font-family for user settings

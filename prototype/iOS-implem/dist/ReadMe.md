@@ -47,7 +47,7 @@ Then stylesheets in the `cjk/horizontal` subfolder should be used.
 
 It is also important the `xml:lang` be appended to the `html` element of each document if needed.
 
-### User settings
+#### User settings
 
 Disabled user settings: 
 
@@ -79,7 +79,7 @@ This means that taps/swipes should behave as usual in horizontal writing i.e. `x
 
 This is consistent with the Readium 1 implementation so the same logic can apply.
 
-### User settings
+#### User settings
 
 Disabled user settings: 
 

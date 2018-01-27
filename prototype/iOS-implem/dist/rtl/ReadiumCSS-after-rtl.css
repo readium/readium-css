@@ -461,6 +461,60 @@ body {
 }
 
 /* Readium CSS 
+   Hyphenation pref
+
+   A submodule managing hyphens for user settings
+   Part of “User Overrides Advanced” class – “readium-advanced-on” flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+/* Managing hyphenation automatically for text-align values */
+
+:root[style*="readium-advanced-on"][style*="--USER__textAlign: justify"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign:justify"] body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -epub-hyphens: auto;
+  hyphens: auto;
+}
+
+:root[style*="readium-advanced-on"][style*="--USER__textAlign: left"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign:left"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign: right"] body,
+:root[style*="readium-advanced-on"][style*="--USER__textAlign:right"] body {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -epub-hyphens: none;
+  hyphens: none;
+}
+
+/* Managing the user override */
+
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] {
+  -webkit-hyphens: var(--USER__bodyHyphens) !important;
+  -moz-hyphens: var(--USER__bodyHyphens) !important;
+  -ms-hyphens: var(--USER__bodyHyphens) !important;
+  -epub-hyphens: var(--USER__bodyHyphens) !important;
+  hyphens: var(--USER__bodyHyphens) !important;
+}
+
+/* Sorry, we can’t use `:matches`, `:-moz-any` or `:-webkit-any` because MS doesn’t support it yet */
+
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] body, :root[style*="hyphens"] body,
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] p, :root[style*="hyphens"] p,
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] li, :root[style*="hyphens"] li,
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] div, :root[style*="hyphens"] div,
+:root[style*="readium-advanced-on"][style*="--USER__bodyHyphens"] dd, :root[style*="hyphens"] dd {
+  -webkit-hyphens: inherit;
+  -moz-hyphens: inherit;
+  -ms-hyphens: inherit;
+  -epub-hyphens: inherit;
+  hyphens: inherit;
+}
+
+/* Readium CSS 
    Font Family pref
 
    A submodule managing font-family for user settings

@@ -121,7 +121,7 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
     --RS__colWidth: 20em; /* 20 * 16 = 320px but 20 * 28 = 560px so it will switch to 1 col @ 175% font-size (user-setting) on an iPad */
     /* We constrain to 2 columns so that we can never get 3 or 4, etc.*/
     --RS__colCount: 2;
-    --RS__maxLineLength: none; /* If we don’t use this, colNumber user setting won’t work in Safari… */
+    --RS__maxLineLength: 39.99rem; /* If we don’t use this, colNumber user setting won’t work in Safari… */
   }
 }
   

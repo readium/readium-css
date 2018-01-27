@@ -10,17 +10,18 @@
 
 /* [style*="--USER__appearance"] can be used to increase specificity but performance hit */
 :root[style*="readium-night-on"] {
-  --THEME__backgroundColor: #000000;
-  --THEME__textColor: #FEFEFE;
+  --RS__backgroundColor: #000000;
+  --RS__textColor: #FEFEFE;
 
-  --THEME__linkColor: #63caff;
-  --THEME__visitedColor: #0099E5;
+  --RS__linkColor: #63caff;
+  --RS__visitedColor: #0099E5;
+
+  /* This can be customized but initial will re-use default value of the browser */
+  --RS__selectionBackgroundColor: #b4d8fe;
+  --RS__selectionTextColor: inherit;
 }
 
-:root[style*="readium-night-on"] {
-  background-color: var(--THEME__backgroundColor) !important;
-  color: var(--THEME__textColor) !important;
-}
+/* we don’t need to redeclare bg-color and color for :root since we will inherit and update from day/default mode */
 
 :root[style*="readium-night-on"] *:not(a) {
   background-color: transparent !important;
@@ -35,12 +36,12 @@
 
 :root[style*="readium-night-on"] a:link,
 :root[style*="readium-night-on"] a:link * {
-  color: var(--THEME__linkColor) !important;
+  color: var(--RS__linkColor) !important;
 }
 
 :root[style*="readium-night-on"] a:visited,
 :root[style*="readium-night-on"] a:visited * {
-  color: var(--THEME__visitedColor) !important;
+  color: var(--RS__visitedColor) !important;
 }
 
 :root[style*="readium-night-on"] img[class*="gaiji"],

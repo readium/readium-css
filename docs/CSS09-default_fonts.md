@@ -473,3 +473,55 @@ This is the font-stack used by Webkit, it tries to leverage fonts users might ha
 ```
 font-family: "Latin Modern Math", "STIX Two Math", "XITS Math", "STIX Math", "Libertinus Math", "TeX Gyre Termes Math", "TeX Gyre Bonum Math", "TeX Gyre Schola", "DejaVu Math TeX Gyre", "TeX Gyre Pagella Math", "Asana Math", "Cambria Math", "Lucida Bright Math", "Minion Math", STIXGeneral, STIXSizeOneSym, Symbol, "Times New Roman", serif;
 ```
+
+## Specific variables for Japanese
+
+We’re providing 4 extra CSS variables for Japanese publications, which are mapped on the EBPAJ guide implementation.
+
+### Serif (Mincho) + horizontal writing
+
+```
+--RS__serif-ja
+```
+
+For which the font-stack is:
+
+```
+font-family: "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif;
+```
+
+### Serif (Mincho) + vertical writing
+
+```
+--RS__sans-serif-ja
+```
+
+For which the font-stack is:
+
+```
+font-family: "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif;
+```
+
+### Sans Serif (Gothic) + horizontal writing
+
+```
+--RS__serif-ja-v
+```
+
+For which the font-stack is:
+
+```
+font-family: "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif;
+```
+
+### Sans Serif (Gothic) + vertical writing
+
+```
+--RS__sans-serif-ja-v
+```
+
+For which the font-stack is:
+
+```
+font-family: "ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif;
+```

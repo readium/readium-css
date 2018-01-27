@@ -15,16 +15,17 @@ Readium CSS is a set of reference stylesheets for EPUB Reading Systems. It provi
 Inject ReadiumCSS stylesheets into the `<head>` of (X)HTML documents. 
 
 1. `ReadiumCSS-base.css`
-2. `ReadiumCSS-html5patch.css`
-3. `ReadiumCSS-safeguards.css`
-4. Authors’ stylesheet(s)
-5. `ReadiumCSS-highlights.css`
-6. `ReadiumCSS-pagination.css`
-7. `ReadiumCSS-scroll.css`(if needed, must override pagination)
-8. `ReadiumCSS-night_mode.css` or `ReadiumCSS-sepia_mode.css` (if needed)
-9. `ReadiumCSS-os_a11y.css`
-10. `ReadiumCSS-user_settings.css`
-11. `ReadiumCSS-fs_normalize.css` (if needed)
+2. `ReadiumCSS-day_mode.css`
+3. `ReadiumCSS-html5patch.css`
+4. `ReadiumCSS-safeguards.css`
+5. Authors’ stylesheet(s)
+6. `ReadiumCSS-highlights.css`
+7. `ReadiumCSS-pagination.css`
+8. `ReadiumCSS-scroll.css`(if needed, must override pagination)
+9. `ReadiumCSS-night_mode.css` or `ReadiumCSS-sepia_mode.css` (if needed)
+10. `ReadiumCSS-os_a11y.css`
+11. `ReadiumCSS-user_settings.css`
+12. `ReadiumCSS-fs_normalize.css` (if needed)
 
 Check the `CSS-stylesheets_order.md` document for further details.
 

@@ -5,6 +5,7 @@
 Defaults is currently made of 4 stylesheets:
 
 - 1 base stylesheet for all ebooks;
+- 1 default reading mode stylesheet for all ebooks (day mode);
 - 1 default stylesheet for unstyled ebooks;
 - 1 stylesheet for user highlights and media overlays;
 - 1 stylesheet to deal with the OS’ a11y modes.
@@ -15,7 +16,7 @@ Defaults is currently made of 4 stylesheets:
 
 The base stylesheet deals with: 
 
-1. default colors (text and background)
+1. default typography;
 2. default font-family depending on the language.
 
 Those values are obviously customizable.
@@ -77,16 +78,48 @@ The default typeface for body copy in case the ebook doesn’t have one declared
 Please note some languages have a specific font-stack (japanese, chinese, hindi, etc.)
 
 ```
---RS__textColor
+--RS__baseLineHeight
 ```
 
-The default `color` for body copy’s text.
+The default line-height for body copy in case the ebook doesn’t have one declared.
+
+We’re using a dynamic algorithm to find the ideal `line-height` for the current font based on its metrics.
+
+Please note CJK languages have a specific implementation, with a compensation factor (`--RS__cjkCompensation`).
+
+## Day Mode
+
+The `ReadiumCSS-day_mode.css` stylesheet serves as a default and handles `background-color` and `color` for `:root` and `::selection`.
+
+### Variables you can set
 
 ```
 --RS__backgroundColor
 ```
 
-The default `background-color` for screens.
+The `background-color` for the entire viewport.
+
+```
+--RS__textColor
+```
+
+The `color` for body copy.
+
+```
+--RS__selectionBackgroundColor
+```
+
+The `background-color` for selected text.
+
+It is worth noting it can be customized for each reading mode.
+
+```
+--RS__selectionTextColor
+```
+
+The `color` for selected text.
+
+It is worth noting it can be customized for each reading mode.
 
 ## Default
 
@@ -235,6 +268,7 @@ It has been prefixed with `readiumCSS-` but you can get rid of it if needed.
 This stylesheet is intended to deal with a11y settings users can set at the OS level, whenever possible: 
 
 - high-contrast mode;
+- inverted colors;
 - monochrome;
 - reduced motion.
 

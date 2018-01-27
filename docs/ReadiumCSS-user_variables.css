@@ -30,4 +30,6 @@
   /* Night mode specific */
   --USER__darkenImages: ;     /* any value */
   --USER__invertImages: ;     /* any value */
+
+  --USER__ligatures: ;        /* none | common-ligatures */
 }

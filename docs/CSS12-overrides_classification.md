@@ -36,6 +36,7 @@ Those types can help you decide which settings should be applied to every book, 
 - Paragraph indent
 - Letter-spacing
 - Word-spacing
+- Arabic ligatures
 - Type scale
 
 Please note this classification might change and items could be added in the near future.

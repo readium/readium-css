@@ -270,6 +270,14 @@ Possible values: `0` | `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
 
 Possible values: `0` | `0.0675rem` | `0.125rem` | `0.1875rem` | `0.25rem`
 
+#### Arabic Ligatures
+
+```
+--USER__ligatures
+```
+
+Possible values: `none` | `common-ligatures`
+
 ## Themes
 
 In this model, themes are just a set of user variables with specific values.

@@ -11,8 +11,9 @@ This order might evolve at some point in development, to make it easier to manag
 The following modules must be inserted before the author’s stylesheets, in this exact order: 
 
 1. `ReadiumCSS-base.css`
-2. `ReadiumCSS-html5patch.css`
-3. `ReadiumCSS-safeguards.css`
+2. `ReadiumCSS-day_mode.css`
+3. `ReadiumCSS-html5patch.css`
+4. `ReadiumCSS-safeguards.css`
 
 ## Append if there is no author’s styles
 

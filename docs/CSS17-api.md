@@ -2,10 +2,10 @@
 
 [Implementers’ doc] [WIP]
 
-As a reminder, the priority is: 
+As a reminder, the priority is, in general: 
 
 ```
-USER > THEME > RS
+USER > AUTHOR > RS
 ```
 
 ## Reading System Styles
@@ -125,6 +125,16 @@ The default typeface for body copy in case the ebook doesn’t have one declared
 Please note some languages have a specific font-stack (japanese, chinese, hindi, etc.)
 
 ```
+--RS__baseLineHeight
+```
+
+The default line-height for body copy in case the ebook doesn’t have one declared.
+
+Please note CJK languages have a specific implementation.
+
+### Default colors for all ebooks
+
+```
 --RS__textColor
 ```
 
@@ -135,6 +145,22 @@ The default `color` for body copy’s text.
 ```
 
 The default `background-color` for pages.
+
+```
+--RS__selectionBackgroundColor
+```
+
+The `background-color` for selected text.
+
+It is worth noting it can be customized for each reading mode.
+
+```
+--RS__selectionTextColor
+```
+
+The `color` for selected text.
+
+It is worth noting it can be customized for each reading mode.
 
 ### Default styles for unstyled publications
 
@@ -224,31 +250,43 @@ An optional secondary accentuation `color` you could use for any element of your
 
 ## Reading Modes
 
-Custom properties for reading modes are prefixed with `--THEME__`.
+Custom properties for reading modes are prefixed with `--RS__`.
 
 ```
---THEME__backgroundColor
+--RS__backgroundColor
 ```
 
 The `background-color` for the screen in the reading mode.
 
 ```
---THEME__textColor
+--RS__textColor
 ```
 
 The `color` for text in the reading mode.
 
 ```
---THEME__linkColor
+--RS__linkColor
 ```
 
 The `color` for the links in the reading mode.
 
 ```  
---THEME__visitedColor
+--RS__visitedColor
 ```
 
 The `color` for visited links in the reading mode.
+
+```
+--RS__selectionBackgroundColor
+```
+
+The `background-color` for selected text.
+
+```
+--RS__selectionTextColor
+```
+
+The `color` for selected text.
 
 ## User Settings
 
@@ -407,6 +445,16 @@ Scope: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `li`, `div`
 Increasing space between letters (`letter-spacing`, related to a11y).
 
 Scope: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `li`, `div`
+
+```
+--USER__ligatures
+```
+
+Enabling and disabling ligatures in Arabic (related to a11y).
+
+Scope: `html`
+
+It impacts all text.
 
 ```
 --USER__appearance

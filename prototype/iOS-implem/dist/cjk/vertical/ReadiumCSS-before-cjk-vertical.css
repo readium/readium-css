@@ -39,16 +39,6 @@
   --RS__baseLineHeight: calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667));
   /* For CJK, the line-height is usually 15–20% more than for Latin */
   --RS__cjkCompensation: 1.1667;
-
-  --RS__textColor: #121212;
-  --RS__backgroundColor: #FFFFFF;
-}
-
-/* Default colors */
-
-:root {
-  color: var(--RS__textColor) !important;
-  background-color: var(--RS__backgroundColor) !important;
 }
 
 /* Set default font for the html doc, so that it can be overridden by the authors’s stylesheet */
@@ -206,6 +196,41 @@ math {
 :lang(zh-HK) {
   --RS__baseFontFamily: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
   --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+}
+
+/* Readium CSS 
+   Day/Default mode
+
+   A preset theme for day mode, which is the default
+
+   Repo: https://github.com/readium/readium-css */
+
+/* CONFIG */
+
+:root {
+  --RS__backgroundColor: #FFFFFF;
+  --RS__textColor: #121212;
+
+  /* This can be customized but initial will re-use default value of the browser */
+  --RS__selectionBackgroundColor: #b4d8fe;
+  --RS__selectionTextColor: inherit;
+}
+
+:root {
+  color: var(--RS__textColor) !important;
+  background-color: var(--RS__backgroundColor) !important;
+}
+
+/* Note: Though `::selection` was present in drafts of CSS Selectors Level 3, it was removed during the Candidate Recommendation phase because its behavior was under-specified (especially with nested elements) and interoperability wasn’t achieved. Source: https://developer.mozilla.org/en-US/docs/Web/CSS/::selection */
+
+::-moz-selection {
+  color: var(--RS__selectionTextColor);
+  background-color: var(--RS__selectionBackgroundColor);
+}
+
+::selection {
+  color: var(--RS__selectionTextColor);
+  background-color: var(--RS__selectionBackgroundColor);
 }
 
 /* Readium CSS 

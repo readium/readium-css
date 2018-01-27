@@ -35,15 +35,6 @@
   --RS__baseLineHeight: calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667));
   /* For CJK, the line-height is usually 15–20% more than for Latin */
   --RS__cjkCompensation: 1.1667;
-
-  --RS__textColor: #121212;
-  --RS__backgroundColor: #FFFFFF;
-}
-
-/* Default colors */
-:root {
-  color: var(--RS__textColor) !important;
-  background-color: var(--RS__backgroundColor) !important;
 }
 
 /* Set default font for the html doc, so that it can be overridden by the authors’s stylesheet */

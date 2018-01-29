@@ -95,7 +95,7 @@
 
 :root:lang(mn) {
   /* Ensure the correct writing-mode is used for mongolian if vertical */
-  -ms-writing-mode: tb-lr;
+  -ms-writing-mode: tb;
   -webkit-writing-mode: vertical-lr;
   writing-mode: vertical-lr;
 }

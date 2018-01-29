@@ -82,7 +82,7 @@ Both files contain:
 
 Those two edge cases raise interoperability issues in the EPUB ecosystem. As of January 2018, expected results are:
 
-1. Mixed direction: rendition based on the `page-progression-direction`, with every document forced on a `rtl` direction;
+1. Mixed directions: rendition based on the `page-progression-direction`, with every document forced on a `rtl` direction;
 2. Mixed writing modes: rendition based on the `page-progression-direction`, with every document forced on a `vertical-rl` writing mode.
 
 ## Reporting issues

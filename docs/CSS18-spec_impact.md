@@ -20,6 +20,13 @@ Readium CSS’ fundamental approach has been reviewed and should be future proof
 - Impact: Global (esp. vertical writing and RTL)
 - [CSSWG Issues](https://github.com/w3c/csswg-drafts/issues?utf8=✓&q=%5Bcss-logical-1%5D)
 
+## CSS Extensions
+
+- [Source](https://drafts.csswg.org/css-extensions/)
+- Impact: Global (CSS architecture)
+- [CSSWG issues](https://github.com/w3c/csswg-drafts/issues?utf8=✓&q=%5Bcss-extensions%5D)
+- Note: this specification defines methods for extending several CSS features (custom selectors, custom properties, custom functions, custom combinators, custom @ rules). 
+
 ## Calc notation: min() and max()
 
 - [Source](https://drafts.csswg.org/css-values/#calc-notation)

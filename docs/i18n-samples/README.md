@@ -70,7 +70,7 @@ Both files contain:
 - 1 `<dc:title>` item for the publication (in Arabic and Japanese);
 - 1 `alternate script` for the title (in English);
 - 2 `<dc:language>` (Arabic || Japanese && English);
-- 1 `page-progression-direction` attribute on the `<spine>` and which value is `rtl`;
+- 1 `page-progression-direction` attribute on the `<spine>` and whose value is `rtl`;
 - 1 table of content (`nav`) in the primary language (Arabic or Japanese);
 - 1 title page in the primary language (Arabic or Japanese);
 - 1 document in the primary language (Arabic or Japanese), with the following: 

@@ -9,7 +9,7 @@ This is a temporary solution to a complex issue (i18n), which is aligned with ou
 If the publication has:
 
 - a `page-progression-direction` with the value set to `rtl`;
-- and language is either Arabic (`ar`) or Hebrew (`he`).
+- and language is either Arabic (`ar`), Farsi (`fa`) or Hebrew (`he`).
 
 Then stylesheets in the `rtl` folder should be used.
 

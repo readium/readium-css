@@ -97,6 +97,10 @@ math {
   --RS__baseFontFamily: "Plantagenet Cherokee", Roboto, Noto, "Noto Sans Cherokee";
 }
 
+:lang(fa) {
+  --RS__baseFontFamily: "Geeza Pro", "Arabic Typesetting", Roboto, Noto, "Noto Naskh Arabic", "Times New Roman", serif;
+}
+
 :lang(gu) {
   --RS__baseFontFamily: "Gujarati Sangam MN", "Nirmala UI", Shruti, Roboto, Noto, "Noto Sans Gujarati", sans-serif;
 }

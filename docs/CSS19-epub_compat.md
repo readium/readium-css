@@ -113,10 +113,12 @@ Supported display options are:
 
 Calibre is using specific metadata for series and rating.
 
+This metadata has a `calibre:` prefix.
+
 #### Series
 
 ```
-<meta content="Name of the Series" name="calibre:series" />
+<meta content="Title of the Series" name="calibre:series" />
 ```
 
 This item indicates the series the publication is part of.

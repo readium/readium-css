@@ -67,7 +67,7 @@ Consequently, two samples are provided to test those two edge cases:
 
 Both files contain:
 
-- 1 `<dc:title>` item for the publication (in Arabic and Japanese);
+- 1 `<dc:title>` item for the publication (in Arabic or Japanese);
 - 1 `alternate script` for the title (in English);
 - 2 `<dc:language>` (Arabic || Japanese && English);
 - 1 `page-progression-direction` attribute on the `<spine>` and whose value is `rtl`;

@@ -109,7 +109,37 @@ Supported display options are:
 
 ## Metadata
 
-iBooks is usings specific metadata for embedded fonts, versioning, gaiji, scroll axis, and the EPUB3 files created with iBooks Author. 
+### Calibre
+
+Calibre is using specific metadata for series and rating.
+
+#### Series
+
+```
+<meta content="Name of the Series" name="calibre:series" />
+```
+
+This item indicates the series the publication is part of.
+
+#### Series index
+
+```
+<meta content="1.0" name="calibre:series_index" />
+```
+
+This item designates the position (index) of the publication in this series.
+
+#### Rating
+
+```
+<meta content="10.0" name="calibre:rating" />
+```
+
+This item stores the rating the user has explicitely set for the publication. `2.0` is one star, `10.0` is five.
+
+### iBooks
+
+iBooks is using specific metadata for embedded fonts, versioning, gaiji, scroll axis, and the EPUB3 files created with iBooks Author. 
 
 This metadata has an `ibooks:` prefix.
 
@@ -121,7 +151,7 @@ prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensi
 
 Then, they can use the ibooks-specific metadata. 
 
-### Book versioning
+#### Book versioning
 
 ```
 <meta property="ibooks:version">1.0.0</meta>
@@ -133,7 +163,7 @@ Unfortunately, there is no way to retrieve the changelog for each version since 
 
 Docs: [iBooks Asset Guide](https://help.apple.com/itc/booksassetguide/?lang=en#/itc88a04b8d6)
 
-### Embedded fonts
+#### Embedded fonts
 
 ```
 <meta property="ibooks:specified-fonts">true</meta>
@@ -143,7 +173,7 @@ Authors can use the `specified-fonts` attribute to indicate the EPUB files conta
 
 Docs: [iBooks Asset Guide](https://help.apple.com/itc/booksassetguide/?lang=en#/itc2cf4d26eb)
 
-### Gaiji and image sizing
+#### Gaiji and image sizing
 
 ```
 <meta property="ibooks:respect-image-size-class">className</meta>
@@ -155,7 +185,7 @@ Some authors may have used this metadata to force sizing for specific images, an
 
 Docs: [iBooks Asset Guide](https://help.apple.com/itc/booksassetguide/?lang=en#/itca71ad3c33)
 
-### Scroll axis
+#### Scroll axis
 
 ```
 <meta property="ibooks:scroll-axis">vertical | horizontal | default</meta>
@@ -165,7 +195,7 @@ iBooks’ scroll theme scrolls vertically for books with horizontal text, and sc
 
 Docs: [iBooks Asset Guide](https://help.apple.com/itc/booksassetguide/#/itccf6b30e09)
 
-### iBooks Author EPUB3 output
+#### iBooks Author EPUB3 output
 
 ```
 <meta property="ibooks:format">RMT</meta>

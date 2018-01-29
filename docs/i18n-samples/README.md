@@ -84,3 +84,7 @@ Those two edge cases raise interoperability issues in the EPUB ecosystem. As of 
 
 1. Mixed direction: rendition based on the `page-progression-direction`, with every document forced on a `rtl` direction;
 2. Mixed writing modes: rendition based on the `page-progression-direction`, with every document forced on a `vertical-rl` writing mode.
+
+## Reporting issues
+
+An [i18n-specific issue](https://github.com/readium/readium-css/issues/26) has been opened to deal with issues, documentation and support. Please feel free to raise any global issue you may encounter.

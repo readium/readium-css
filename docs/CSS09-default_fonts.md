@@ -210,6 +210,16 @@ font-family: "Plantagenet Cherokee", Roboto, Noto, "Noto Sans Cherokee";
 unicode-range: U+13A0-13FF;
 ```
 
+## Persian (fa)
+
+```
+font-family "Geeza Pro", "Arabic Typesetting", Roboto, Noto, "Noto Naskh Arabic", "Times New Roman", serif;
+```
+
+```
+unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF;
+```
+
 ## Gujarati (gu)
 
 ```

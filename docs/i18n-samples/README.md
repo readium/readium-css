@@ -85,6 +85,34 @@ Those two edge cases raise interoperability issues in the EPUB ecosystem. As of 
 1. Mixed directions: rendition based on the `page-progression-direction`, with every document forced on a `rtl` direction;
 2. Mixed writing modes: rendition based on the `page-progression-direction`, with every document forced on a `vertical-rl` writing mode.
 
+#### Poorlyfill for reverse column-progression.
+
+Webkit has a specific `-webkit-column-progression` CSS property whose value can be `normal` or `reverse`. This is non-standard and only supported in Webkit – it was indeed removed from Blink in 2014.
+
+This property is used in the `setPagination` API available in the old `UIWebView` (iOS), so that left-to-right documents in a right-to-left publication can follow the natural `page-progression-direction` set on the spine (`rtl`).
+
+There is a trick to emulate this CSS property, but it hasn’t been tested extensively. The logic is the following:
+
+1. if the publication is EPUB3;
+2. it has a `page-progression-direction="rtl"` (`spine` item);
+3. the primary language (`<dc:language>` item) of the publication is Arabic, Hebrew, or Persian (there may be additional scripts/languages to take into account);
+4. the document has:
+    1. an explicit `xml:lang` or `lang` attribute set on either `html` or `body`, which differs from the publication;
+    2. lacks a `dir` attribute or has an explicit `dir="ltr"` attribute set on either `html` or `body`;
+    3. an explicit `direction="ltr"` CSS property is used by the author if no `dir` attribute can be found.
+5. the `dir="rtl"` attribute is set for `html`;
+6. the `dir="ltr"` attribute can be set for `body` in order to reverse the column progression.
+
+Columns, set on `html` will consequently follow the `rtl` direction while contents `body` will follow the `lrt` direction so the first “page” for instance will be on the right, the second one on the left, etc. in a spread view.
+
+#### Poorlyfill for column-axis
+
+Webkit has a specific `-webkit-column-axis` CSS property whose value can be `auto`, `horizontal` or `vertical`. This is non-standard and only supported in Webkit – it was indeed removed from Blink in 2014.
+
+This property is used in the `setPagination` API available in the old `UIWebView` (iOS), so that documents with a `vertical-*` writing mode can be laid out in columns on the `x-axis`. Column axis indeed automatically follow the axis of the `writing-mode` set.
+
+Unfortunately, there is currently no way to emulate this CSS property, and `html` will even acquire the `writing-mode` set for `body`.
+
 ## Reporting issues
 
 An [i18n-specific issue](https://github.com/readium/readium-css/issues/26) has been opened to deal with issues, documentation and support. Please feel free to raise any global issue you may encounter.

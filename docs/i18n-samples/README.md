@@ -85,7 +85,7 @@ Those two edge cases raise interoperability issues in the EPUB ecosystem. As of 
 1. Mixed directions: rendition based on the `page-progression-direction`, with every document forced on a `rtl` direction;
 2. Mixed writing modes: rendition based on the `page-progression-direction`, with every document forced on a `vertical-rl` writing mode.
 
-#### Poorlyfill for reverse column-progression.
+#### Poorlyfill for reverse column-progression
 
 Webkit has a specific `-webkit-column-progression` CSS property whose value can be `normal` or `reverse`. This is non-standard and only supported in Webkit – it was indeed removed from Blink in 2014.
 

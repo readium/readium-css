@@ -75,6 +75,13 @@ Please note that when using `padding`, you must take it into account when sizing
 
 ### The auto pagination model
 
+By default, responsive columns are built into Readium CSS, which means the layout will automatically switch from a single page to a two-column spread depending on: 
+
+1. the size of the viewport (minumum `width` is `60em` or the smartphone is in landscape orientation);
+2. the `font-size` currently set by the user.
+
+The spread will consequently switch to a single page once the user sets a `font-size` which is too large for two columns.
+
 The following illustrations are the two models you’ll have to deal with.
 
 ![Single Page Model](assets/Page-Model.jpg)
@@ -85,9 +92,11 @@ Page margins are part of `body`, hence `--RS__maxLineLength`. Contents are cente
 
 ![Two-Column Spread Model](assets/spread-model.jpg)
 
-In the spread model, i.e. two columns, the `--RS__colWidth` is a floor: once the minimum width available can’t contain 2 columns (the value is computed from the `font-size` user setting), we switch to the single page model.
+In the spread model, i.e. two columns, the `--RS__colWidth` is a floor: once the minimum width available (viewport) can’t contain 2 columns (the value is computed from the `font-size` user setting), we switch to the single page model.
 
-Since we don’t limit line-length anymore, you might want to limit the web view/iframe size so that you don’t end up with wide columns on large screens (or add `padding` to `root` and take it into account when scrolling).
+For instance, if `--RS__colWidth` is `20em` and the `font-size`, `100%` (`16px`), then the floor is `320px`. If 2 columns can fit in the viewport, the spread model is applied. If they can’t, the page model is applied. Hence, if the user sets the `font-size` at `200%` (`32px`), the floor is `640px`, which means the viewport should be at least `1240px`-wide to apply the spread model.
+
+Since we still limit line-length in the spread model, you might want to limit the web view/iframe size so that you don’t end up with wide gaps on large screens (or add `padding` to `:root`, and take it into account when scrolling).
 
 #### Variables you can set
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <style type="text/css" id="styles">
+  html, body {margin: 0; padding: 0;}
+  
+  .main {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+.main > * {
+  flex: 0 0 50%;
+}
+.text {
+  font-family: "Iowan Old Style";
+  max-width: 60ch;
+  margin: 0 auto;
+}
+p {
+  font-size: 1em;
+  line-height: calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667));
+  /* 1 line + (2 x-height - 1 character width) - ((current font-size - base font-size) * scale)
+     As a result, the line-height is based on the font proportions and the current font-size
+     i.e. the larger the font-size, the smaller the line-height */
+  margin: calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) 2%;
+}
+#console {
+  box-sizing: border-box;
+  border: 1px solid gray;
+  font-family: monospace, monospace;
+  font-size: 16px;
+  align-self: stretch;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+#console span {
+  display: block;
+  margin: 16px 0;
+}
+#settings {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+}
+button {
+  padding: 0.5em 1em;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 10;
+}
+input {
+  display: block;
+  margin: 16px 0;
+}
+  </style>
+</head>
+<body>
+
+<!-- Type a font family name or a font-size (e.g. 200%) and return -->
+
+<div id="settings">
+<input type="text" id="fontInput" placeholder="Font Family"></input>
+<input type="text" id="fontSizer" placeholder="Font Size e.g. 200%"></input>
+<button type="button">Write values</button>
+</div>
+<div class="main">
+  <div class="text">
+    <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it?</p>
+
+    <p>No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+
+    <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
+  </div>
+
+<div id="console">
+</div>
+</div>
+<script type="text/javascript">
+var button = document.getElementsByTagName("button")[0],
+    textSample = document.getElementsByTagName("p")[0],
+    fontInput = document.getElementById("fontInput"),
+    fontSizer = document.getElementById("fontSizer"),
+    logger = document.getElementById("console"),
+    style = document.getElementById("styles");
+    button.addEventListener("click", function(e) {
+      e.preventDefault();
+      var ff = window.getComputedStyle(textSample, null).getPropertyValue("font-family"),
+          fs = window.getComputedStyle(textSample, null).getPropertyValue("font-size"),
+          lh = window.getComputedStyle(textSample, null).getPropertyValue("line-height"),
+          ratio = parseFloat(lh) / parseFloat(fs);
+      logger.innerHTML += "<span>font-family: " + ff + ";<br/>font-size: " + fs + ";<br/>line-height: " + lh + ";<br/>ratio: " + ratio + ";</span>";
+    }, false);
+    fontInput.addEventListener("keyup", function(e) {
+		  if (e.keyCode == 13) {				// Return key
+			  newFont = fontInput.value;
+			  fontToTest = document.createTextNode("p { font-family: " + newFont + "; }");
+			  style.appendChild(fontToTest);
+		  }
+	  }, false);
+    fontSizer.addEventListener("keyup", function(e) {
+		  if (e.keyCode == 13) {				// Return key
+			  newSize = fontSizer.value;
+			  sizeToTest = document.createTextNode(":root { font-size: " + newSize + "; }");
+			  style.appendChild(sizeToTest);
+		  }
+	  }, false);
+</script>
+</body>
+</html>

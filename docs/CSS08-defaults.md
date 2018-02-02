@@ -83,9 +83,40 @@ Please note some languages have a specific font-stack (japanese, chinese, hindi,
 
 The default line-height for body copy in case the ebook doesn’t have one declared.
 
-We’re using a dynamic algorithm to find the ideal `line-height` for the current font based on its metrics.
+We’re using an algorithm to find the ideal `line-height` for the current font based on its metrics (see details in the next subsection below).
 
 Please note CJK languages have a specific implementation, with a compensation factor (`--RS__cjkCompensation`).
+
+### Dynamic leading (line-height)
+
+If we don’t provide a base `line-height` and the author hasn’t explicitely set one, then the `normal` value will be applied. On average, it is less than `1.2`, which makes leading quite solid and can quickly become a readability issue with some fonts, especially the ones with a large x-height.
+
+Readium CSS consequently uses an algorithm to find the ideal leading for each font by default (with a fallback value accomodating every script/language it supports).
+
+This algorithm tries to:
+
+1. automagically adjust the `line-height` to the current typeface;
+2. adjust this ideal `line-height` it has just computed to the current `font-size` the user has set.
+
+```
+calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667))
+```
+
+Please note that for CJK, the algorithm has been modified:
+
+```
+calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation))
+```
+
+In which, `--RS__cjkCompensation` is a factor whose default is `1.1667`. Indeed, the `line-height` is usually 15–20% larger in CJK than in other scripts/languages.
+
+The results we could get for the vast majority of fonts can be described as good in terms of typographic color. Here is Iowan Old Style for instance.
+
+![Iowan Old Style dynamic leading](assets/dynamic-leading.jpg)
+
+This isn’t a perfect solution though, and this algorithm may be revisited in the future.
+
+See [Further Details](CSS16-further_details.md) for an extensive explanation.
 
 ## Day Mode
 

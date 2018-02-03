@@ -105,6 +105,8 @@ There is a trick to emulate this CSS property, but it hasn’t been tested exten
 
 Columns, set on `html` will consequently follow the `rtl` direction while contents `body` will follow the `lrt` direction so the first “page” for instance will be on the right, the second one on the left, etc. in a spread view.
 
+This solution won’t work for Trident/EdgeHTML engines though, and will fail in IE11/Edge.
+
 #### Poorlyfill for column-axis
 
 Webkit has a specific `-webkit-column-axis` CSS property whose value can be `auto`, `horizontal` or `vertical`. This is non-standard and only supported in Webkit – it was indeed removed from Blink in 2014.

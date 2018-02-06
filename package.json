@@ -1,0 +1,42 @@
+{
+  "name": "readium-css",
+  "description": "A set of reference stylesheets for EPUB Reading Systems",
+  "version": "0.7.9",
+  "homepage": "https://github.com/readium/readium-css",
+  "keywords": [
+    "epub",
+    "epub3",
+    "epub-reader",
+    "ebook-reader",
+    "css"
+  ],
+  "author": {
+    "name": "readium",
+    "email": "readium-css@edrlab.org",
+    "url": "http://www.edrlab.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/readium/readium-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/readium/readium-css/issues"
+  },
+  "licenses": [
+    {
+      "type": "BSD 3-Clause",
+      "url": "https://github.com/readium/readium-css/blob/master/LICENSE"
+    }
+  ],
+  "main": "src/ReadiumCSS-config.css",
+  "devDependencies": {
+    "stylelint": "latest",
+    "postcss-cli": "latest",
+    "postcss-import": "latest",
+    "postcss-sorting": "latest",
+    "postcss-custom-selectors": "latest"
+  },
+  "scripts": {
+    "build": "postcss src/ReadiumCSS-before.css -o dist/ReadiumCSS-before.css && postcss src/ReadiumCSS-default.css -o dist/ReadiumCSS-default.css && postcss src/ReadiumCSS-after.css -o dist/ReadiumCSS-after.css"
+  }
+}

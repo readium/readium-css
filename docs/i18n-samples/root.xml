@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:dcterms="http://purl.org/dc/terms/" xmlns:thr="http://purl.org/syndication/thread/1.0" xmlns:opds="http://opds-spec.org/2010/catalog" xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/2005/Atom">
+  <id>root.xml</id>
+  <title>i18n Samples Catalog Root</title>
+  <updated>2018-02-08T14:00:00Z</updated>
+  <author>
+    <name>Jiminy Panoz</name>
+    <uri>https://github.com/readium/readium-css</uri>
+  </author>
+  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="self" href="root.xml" />
+  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="start" href="root.xml" />
+
+  <entry>
+    <title>Amharic</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/amharic</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/amharic.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Arabic</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/arabic</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/arabic.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Armenian</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/armenian</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/armenian.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+  
+  <entry>
+    <title>Bengali</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/bengali</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/bengali.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Cherokee</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/cherokee</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/cherokee.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Chinese</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/chinese</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/chinese.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Gujarati</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/gujarati</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/gujarati.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Hebrew</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/hebrew</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/hebrew.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Hindi</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/hindi</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/hindi.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Inuktitut</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/inuktitut</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/inuktitut.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Japanese Vertical</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/japanese-vertical</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/japanese-vertical.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Japanese</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/japanese</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/japanese.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Kannada</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/kannada</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/kannada.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Khmer</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/khmer</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/khmer.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Korean</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/korean</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/korean.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Lao</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/lao</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/lao.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Latin</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/latin</id>
+    <updated>2018-01-28T14:35:24Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/latin.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Malayalam</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/malayalam</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/malayalam.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Mixed Directions</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/mixed-directions</id>
+    <updated>2018-01-28T14:35:24Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/mixed-directions.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Mixed Writing Modes</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/mixed-writing-modes</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/mixed-writing-modes.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Mongolian</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/mongolian</id>
+    <updated>2018-01-28T13:40:12Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/mongolian.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Oriya</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/oriya</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/oriya.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Persian/Farsi</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/persian</id>
+    <updated>2018-01-28T21:35:27Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/persian.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Punjabi</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/punjabi</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/punjabi.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Sinhalese</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/sinhalese</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/sinhalese.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Tamil</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/tamil</id>
+    <updated>2018-02-03T13:53:35Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/tamil.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Telugu</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/telugu</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/telugu.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Thai</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/thai</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/thai.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+
+  <entry>
+    <title>Tibetan</title>
+    <id>https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/tibetan</id>
+    <updated>2018-01-28T12:04:13Z</updated>
+    <link type="application/epub+zip" href="https://github.com/readium/readium-css/blob/develop/docs/i18n-samples/tibetan.epub" rel="http://opds-spec.org/acquisition"/>
+  </entry>
+</feed>

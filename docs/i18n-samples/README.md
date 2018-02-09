@@ -105,7 +105,11 @@ There is a trick to emulate this CSS property, but it hasn’t been tested exten
 
 Columns, set on `html` will consequently follow the `rtl` direction while contents `body` will follow the `lrt` direction so the first “page” for instance will be on the right, the second one on the left, etc. in a spread view.
 
-This solution won’t work for Trident/EdgeHTML engines though, and will fail in IE11/Edge.
+This solution won’t work for Trident/EdgeHTML engines though, and will fail in IE11/Edge. This looks like the correct interpretation of the [CSS Writing Modes Level 3](https://www.w3.org/TR/css-writing-modes-3/#principal-flow):
+
+> As a special case for handling HTML documents, if the `:root` element has a `<body>` child element, the principal writing mode is instead taken from the values of `writing-mode` and `direction` on the first such child element instead of taken from the root element.
+
+What this means is that the `dir` attribute (or the `direction` CSS property) set for `body` will override the one set for `html`. Unlike most other CSS properties, which don’t impact the parent element, the `dir` attribute (or the `direction` CSS property) should propagate.
 
 #### Poorlyfill for column-axis
 

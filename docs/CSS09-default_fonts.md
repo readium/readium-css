@@ -13,6 +13,10 @@ Those font-stacks cover:
 
 The unicode ranges to be found in this document are specifically scoped to their language and are provided in case you want to use other typefaces: it can help you check support and extended coverage, and subset if needed.
 
+## Test files
+
+Test files can be retrieved from [the Readium CSS’ i18n-samples OPDS feed](https://raw.githubusercontent.com/readium/readium-css/develop/docs/i18n-samples/root.xml).
+
 ## Fundamentals
 
 UA defaults if no `font-family` is set usually are: 

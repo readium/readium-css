@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog" xml:lang="en" xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog" xml:lang="en" xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:2FBCE724-ABA7-4AB1-AA5F-5EDD4088A56D</id>
   <title>Readium CSS i18n Samples Catalog</title>
   <updated>2018-02-09T09:44:00Z</updated>

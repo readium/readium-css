@@ -7,8 +7,8 @@
     <name>Jiminy Panoz</name>
     <uri>https://github.com/readium/readium-css</uri>
   </author>
-  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="self" href="/i18n-samples/root.xml" />
-  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="start" href="/i18n-samples/root.xml" />
+  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="self" href="root.xml" />
+  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="start" href="root.xml" />
 
   <entry>
     <title>Amharic</title>

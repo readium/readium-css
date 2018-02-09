@@ -98,6 +98,42 @@ For instance, if `--RS__colWidth` is `20em` and the `font-size`, `100%` (`16px`)
 
 Since we still limit line-length in the spread model, you might want to limit the web view/iframe size so that you don’t end up with wide gaps on large screens (or add `padding` to `:root`, and take it into account when scrolling).
 
+#### Variables you can set
+
+Please note those variables’ value can be redefined using media queries. You don’t need to redeclare entire declarations.
+
+```
+--RS__colWidth
+```
+
+The optimal column’s width. It serves as a floor in our design.
+
+```
+--RS__colCount
+```
+
+The optimal number of columns (depending on the columns’ width).
+
+```
+--RS__colGap
+```
+
+The gap between columns. It must be set in pixels so that it won’t resize with font size. 
+
+You must account for this gap when scrolling.
+
+```    
+--RS__pageGutter
+```
+
+The horizontal page margins. It must be set in pixels so that it won’t resize with font size.
+
+```
+--RS__maxLineLength
+```
+
+The optimal line-length. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
+
 ### Right-to-left progression
 
 The auto pagination model will take care of itself if the correct `dir` attribute is set on `html` and `body`.
@@ -128,7 +164,7 @@ The current implementation is limited to the following combinations:
 
 [IANA Language Subtag registery](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
-We may add others at some point in the future. Please feel free to report the languages or scripts missing in this mapping. Please bear in mind a list of default (preferably system) fonts will greatly help to add support for those languages and scripts. See [Default Fonts](../docs/CS09-default_fonts.md)
+We may add others at some point in the future. Please feel free to report the languages or scripts missing in this mapping. Please bear in mind a list of default (preferably system) fonts will greatly help to add support for those languages and scripts. See [Default Fonts](../docs/CS09-default_fonts.md).
 
 Test files can be retrieved from [the Readium CSS’ i18n-samples OPDS feed](https://raw.githubusercontent.com/readium/readium-css/develop/docs/i18n-samples/root.xml).
 
@@ -245,42 +281,6 @@ body {
 ```
 
 We MUST consequently force the `writing-mode` for all documents in the publication, and can’t manage `horizontal-tb` documents in a `vertical-rl` publication.
-
-#### Variables you can set
-
-Please note those variables’ value can be redefined using media queries. You don’t need to redeclare entire declarations.
-
-```
---RS__colWidth
-```
-
-The optimal column’s width. It serves as a floor in our design.
-
-```
---RS__colCount
-```
-
-The optimal number of columns (depending on the columns’ width).
-
-```
---RS__colGap
-```
-
-The gap between columns. It must be set in pixels so that it won’t resize with font size. 
-
-You must account for this gap when scrolling.
-
-```    
---RS__pageGutter
-```
-
-The horizontal page margins. It must be set in pixels so that it won’t resize with font size.
-
-```
---RS__maxLineLength
-```
-
-The optimal line-length. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
 
 ### Patch and safeguards
 

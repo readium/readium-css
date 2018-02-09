@@ -2,13 +2,13 @@
 <feed xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog" xml:lang="en" xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:2FBCE724-ABA7-4AB1-AA5F-5EDD4088A56D</id>
   <title>Readium CSS i18n Samples Catalog</title>
-  <updated>2018-02-09T13:12:00Z</updated>
+  <updated>2018-02-09T13:55:00Z</updated>
   <author>
     <name>Jiminy Panoz</name>
     <uri>https://github.com/readium/readium-css</uri>
   </author>
-  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="self" href="root.xml" />
-  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="start" href="root.xml" />
+  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="self" href="root.atom" />
+  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" rel="start" href="root.atom" />
 
   <entry>
     <title>Amharic</title>

@@ -30,7 +30,7 @@ Occasionally, when an app does support a language, it can put some constraints o
 
 Supporting the maximum amount of languages and scripts is a complex process. 
 
-As a consequence, work for internationalization should be tackled early, as the changes and adaptations needed will have a significant impact on an existing implementation. It indeed impact the entire implementation, and not only CSS.
+As a consequence, work for internationalization should be tackled early, as the changes and adaptations needed will have a significant impact on an existing implementation. It indeed impacts the entire implementation, and not only CSS.
 
 ### Retrieving the significant information in the OPF
 
@@ -131,7 +131,7 @@ The following process must be implemented:
 
 Readium CSS provides implementers with specific stylesheets for RTL scripts and CJK (including the Mongolian script), those styles must be loaded accordingly. Otherwise, styles for LTR scripts in the horizontal writing mode will apply.
 
-Guidance can be found in the [Injection and Pagination document](../CSS03-injection_and_pagination.md).
+Guidance can be found in the [Injection and Pagination document](../docs/CSS03-injection_and_pagination.md).
 
 ### Modifying the UI of the app
 
@@ -162,7 +162,7 @@ Although the UI can keep an `ltr` direction with a `horizontal-tb` writing mode,
 - implementers might want to allow authors to set a `vertical-*` writing mode for the navigation document (`nav.xhtml`); 
 - implementers might want to localize the interface based on the language set at the system level, or at least fall back to English.
 
-Moreover, some user settings should be removed if used (`text-align`, `hyphens`, `letter-` and `word-spacing`, number of columns in vertical writing, etc.). See [User Prefs for further details](../CSS11-user_prefs.md).
+Moreover, some user settings should be removed if used (`text-align`, `hyphens`, `letter-` and `word-spacing`, number of columns in vertical writing, etc.). See [User Prefs for further details](../docs/CSS11-user_prefs.md).
 
 ### Internationalize features
 
@@ -172,7 +172,7 @@ Another issue to take into account is that input methods might not allow users t
 
 ### Fonts
 
-Implementers should make sure they offer at least two options: the publisher’s font and the default. If they want to extend the list of fonts they provide for some languages, they should follow guidance in the [Default Fonts doc](../CSS09-default_fonts.md).
+Implementers should make sure they offer at least two options: the publisher’s font and the default. If they want to extend the list of fonts they provide for some languages, they should follow guidance in the [Default Fonts doc](../docs/CSS09-default_fonts.md).
 
 ## How authors can help
 
@@ -228,7 +228,7 @@ Longer terms issues include:
 - mixed directions (LTR document in a RTL publication) and mixed writing modes (`horizontal-tb` document in a `vertical-rl` publication);
 - support for alternate stylesheets, which is critical if the implementer wants to offer a horizontal/vertical-writing user setting;
 - support for `rendition: align-x-center`;
-- support for `ibooks:respect-image-size-class` (gaiji) and `ibooks:scroll-axis` metadata items (see [EPUB Compat doc](../CSS19-epub_compat.md#gaiji-and-image-sizing));
+- support for `ibooks:respect-image-size-class` (gaiji) and `ibooks:scroll-axis` metadata items (see [EPUB Compat doc](../docs/CSS19-epub_compat.md#gaiji-and-image-sizing));
 - `rendition: flow` of `scrolled-doc`.
 
 ## Out of scope

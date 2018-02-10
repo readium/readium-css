@@ -299,7 +299,7 @@ Indeed, it doesn’t make sense to have some user settings in some languages, an
 
 ### All languages other than Latin
 
-Implementers will need to load different list of fonts based on the languages listed in [Default Fonts](../CSS09-default_fonts.md).
+Implementers will need to load different list of fonts based on the languages listed in [Default Fonts](../docs/CSS09-default_fonts.md).
 
 The most complex issue is finding fonts for those languages, especially as mobile systems often ship with the minimum amount of fonts possible to support Indic, Arabic, Hebrew, CJK, etc. And when the platform provides an extended selection, users often have to download them beforehand.
 

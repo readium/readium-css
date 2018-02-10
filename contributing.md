@@ -73,13 +73,12 @@ Every stylesheet must contain a header using the following template:
 
 We’re using custom properties, also known as CSS variables, to make Readium CSS customizable. See the `CSS-api.md` file in docs for a complete list.
 
-We’re currently using the three following prefix:
+We’re currently using the two following prefix:
 
 - `--RS__` for Reading System variables;
-- `--THEME__` for reading mode variables (sepia, night);
 - `--USER__` for user settings.
 
-The variable itself must use camelCase (e.g. `--RS__textColor`, `--THEME__backgroundColor`, `--USER__fontSize`).
+The variable itself must use camelCase (e.g. `--RS__textColor`, and `--USER__fontSize`).
 
 Of course all values don’t have to be variables, variables should be used if: 
 
@@ -110,7 +109,7 @@ User > Author > User Agent
 This applies to the custom properties as well:
 
 ```
---USER__var > --THEME__var > --RS__var
+--USER__var > --RS__var
 ```
 
 If possible, user settings must be inherited from the `--USER__variable` set on `:root`. This obviously can’t be done for all user settings as it depends on the scope (the elements targeted).
@@ -225,11 +224,11 @@ We’ll finally review your pull request to check if everything is OK.
 First, make sure you have signed and sent the [Readium ICLA](http://readium.github.io/documents/Individual%20Contributor%20License%20Agreement.pdf) (for Individual Contributor License Agreement).
 
 - Test your code (see [platform support](https://github.com/readium/readium-css/wiki/Platform-Support) in the Wiki).
-- Pull requests should **always** be created against the develop branch - never the master.
+- Pull requests should **always** be created against the develop branch – never the master.
 - Please update from the develop branch before proposing a pull request so that we don’t have to deal with conflicts.
 - Use a clear and descriptive title.
 - List all fixes and enhancements the pull request provides.
-- Include screenshots and/or animated GIF whenever possible—no need to do that for correcting typos in docs for instance.
+- Include screenshots and/or animated GIF whenever possible – no need to do that for correcting typos in docs for instance.
 - Document new code.
 
 ## Roadmap

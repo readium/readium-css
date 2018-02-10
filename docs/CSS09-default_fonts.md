@@ -488,54 +488,13 @@ This is the font-stack used by Webkit, it tries to leverage fonts users might ha
 font-family: "Latin Modern Math", "STIX Two Math", "XITS Math", "STIX Math", "Libertinus Math", "TeX Gyre Termes Math", "TeX Gyre Bonum Math", "TeX Gyre Schola", "DejaVu Math TeX Gyre", "TeX Gyre Pagella Math", "Asana Math", "Cambria Math", "Lucida Bright Math", "Minion Math", STIXGeneral, STIXSizeOneSym, Symbol, "Times New Roman", serif;
 ```
 
-## Specific variables for Japanese
+## EBPAJ patch for Japanese
 
-We’re providing 4 extra CSS variables for Japanese publications, which are mapped on the EBPAJ guide implementation.
+The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What it does in this polyfill is keeping the default value used in EBPAJ templates and providing fallbacks for all platforms.
 
-### Serif (Mincho) + horizontal writing
+Implementers might want to load this polyfill only if they find one of the following metadata items in the OPF package:
 
-```
---RS__serif-ja
-```
+- version 1: `<dc:description id="ebpaj-guide">ebpaj-guide-1.0</dc:description>`
+- version 1.1: `<meta property="ebpaj:guide-version">1.1</meta>`
 
-For which the font-stack is:
-
-```
-font-family: "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif;
-```
-
-### Serif (Mincho) + vertical writing
-
-```
---RS__sans-serif-ja
-```
-
-For which the font-stack is:
-
-```
-font-family: "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif;
-```
-
-### Sans Serif (Gothic) + horizontal writing
-
-```
---RS__serif-ja-v
-```
-
-For which the font-stack is:
-
-```
-font-family: "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif;
-```
-
-### Sans Serif (Gothic) + vertical writing
-
-```
---RS__sans-serif-ja-v
-```
-
-For which the font-stack is:
-
-```
-font-family: "ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif;
-```
+Since `@font-face` must be used to align with EBPAJ’s specific implementation (rendering engines have to go through 9–11 `local` sources in the worst-case scenario), implementers should expect a performance debt.

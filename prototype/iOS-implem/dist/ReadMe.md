@@ -104,7 +104,8 @@ Since we must use `@font-face` to align with their specific implementation (we h
 
 This is currently an edge case as we still have to see whether we want to support it and how we can support it. Indeed, the situation is the following:
 
-- Traditional is written `vertical-lr` so we can’t use `page-progression-direction` as an hint, and we must check if the language item (`mn`) is enough;
-- Modern is written `horizontal-tb`, in cyrillic;
+- Traditional is written `vertical-lr` so we can’t use `page-progression-direction` as an hint, and we must check if the language item (`mn`) is enough:
+    - if `mn-Mong` is set, then `vertical-lr` must be used;
+    - if `mn-Cyrl` is set, then the publication is in cyrillic and it is `horizontal-tb`.
 - We don’t currently support the `mn` language, and we can’t rely on system fonts to do so, we’ll have to embed one.
 

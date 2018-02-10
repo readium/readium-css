@@ -67,3 +67,9 @@ Luc Maumet (EDRLab) has conducted an analysis on the features available in dedic
 - Text to Speech
 - Highlight a specific sound in the text
 - Export contents with the customized layout
+
+## Internationalization
+
+Very little information on a11y is currently available in the [W3C Text Layout and Typography Requirements](https://w3c.github.io/typography/).
+
+All we know at the moment is that, in the Arabic and Farsi scripts, disabling ligatures might help for dyslexia.

@@ -434,3 +434,31 @@ OpenType Features: numeric figure values.
 Microsoft has been investing a lot of resources in designing fonts that render perfectly on this platform, especially with ClearType. Typefaces like Cambria, Constantia, Arial Nova, Georgia Pro, Sitka, Verdana Pro, and more, offer a large amount of styles, excellent language support, extensive support of Open Type features, and high quality rendering, even on mediocre screens.
 
 As a consequence, we strongly recommend prioritizing such system fonts for the core selection and using Open Source fonts as extras.
+
+## Recommended fonts for CJK
+
+In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can currently recommend:
+
+- [Adobe Source Han Sans](https://github.com/adobe-fonts/source-han-sans);
+- [Adobe Source Han Serif](https://source.typekit.com/source-han-serif/);
+- [KoPub fonts](http://www.kopus.org/biz/electronic/font.aspx) for Korean.
+
+## Recommended fonts for Hebrew
+
+In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can currently recommend:
+
+- [Alef](http://alef.hagilda.com);
+- [Heebo](https://github.com/OdedEzer/heebo);
+- [Rubik Hebrew](https://github.com/meirsadan/rubik-hebrew).
+
+## Recommended fonts for Arabic
+
+In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can currently recommend:
+
+- TBD
+
+## Recommended fonts for Indic
+
+In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can currently recommend:
+
+- TBD

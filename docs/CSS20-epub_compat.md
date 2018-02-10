@@ -273,6 +273,40 @@ This attribute is used to style images which class have been explicitly set in t
 
 Authors’ usage of this attribute is indirect since they set the class name for which this attribute must be added.
 
+## Webkit’s CSS multi-column extensions
+
+Apple extended the CSS multi-column specification with non-standard CSS properties to handle RTL scripts and vertical writing modes in iBooks. They were primarily designed for the `setPagination` API in the iOS UIWebView but works as expected in Safari/iOS webviews.
+
+### Column axis
+
+```
+-webkit-column-axis
+```
+
+Value can be `auto`, `horizontal` or `vertical`.
+
+This CSS property can be used on iOS/Safari to force the column axis whenever needed. It allows the Reading App to lay out columns on the `x-axis` (horizontal) when the document is in a `vertical-*` writing mode for instance, which permits a two-column spread view as expected in print – CSS multicol being automatically laid out on the `y-axis` in those writing modes. 
+
+This property was removed from Blink in 2014.
+
+It is noteworthy that `columns`, `column-width`, and `column-count` will be ignored when using this non-standard `-webkit-column-axis` property, and the `width` and `height` of the root (`html`) element will be used to lay out columns. Moreover, `box-sizing` may not work as expected, and impact `padding` and `column-gap`.
+
+You can check [this demo in Safari](https://codepen.io/JayPanoz/pen/bYjEOE) to see the effect this CSS Property has.
+
+### Column progression
+
+```
+-webkit-column-progression
+```
+
+Value can be `normal` or `reversed`.
+
+This CSS property can be used on iOS/Safari to force the column progression whenever needed. It allows the Reading App to reverse the column progression for LTR documents in a RTL publication, and vice versa. 
+
+This property was removed from Blink in 2014.
+
+You can check [this demo in Safari](https://codepen.io/JayPanoz/pen/bYjEOE) and uncomment the CSS property in `:root` to see the effect it has.
+
 ## Non-standard CSS properties
 
 EPUB authors may have used the following non-standard properties to achieve specific styling or get around Reading Systems’ overrides.

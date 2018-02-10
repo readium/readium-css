@@ -290,3 +290,63 @@ In other words, think of preset and custom themes as a set of variables, which m
 
 - appending/removing overrides as `<style>`, dynamically
 - using custom attributes (at least for themes + appending/removing styles dynamically)
+
+## User settings can be language-specific
+
+It is important to note that the list of user settings you may provide users with can change depending on the primary language of the publication.
+
+Indeed, it doesn’t make sense to have some user settings in some languages, and they would do more harm than good e.g. hyphens in CJK. Ideally, those settings should therefore be removed from the UI, or at least disabled, if needed.
+
+### All languages other than Latin
+
+Implementers will need to load different list of fonts based on the languages listed in [Default Fonts](../CSS09-default_fonts.md).
+
+The most complex issue is finding fonts for those languages, especially as mobile systems often ship with the minimum amount of fonts possible to support Indic, Arabic, Hebrew, CJK, etc. And when the platform provides an extended selection, users often have to download them beforehand.
+
+The following is provided as guidance only:
+
+1. the app should at least offer the publisher’s font and the default (`var(--RS__baseFontFamily)`) for the language – which should work automatically if the correct language is set for each document;
+2. if implementers want to extend the list:
+   1. use pre-installed fonts if the system offers some;
+   2. use downloadable fonts if the system offers some;
+   3. carefully pick fonts supporting the language and the idiosyncrasies of its typography;
+   4. fall back to [Google Noto Fonts](https://www.google.com/get/noto/).
+3. users probably have fonts already installed, re-use those fonts if possible (advanced setting in which they can access or declare those fonts).
+
+### Right to left scripts
+
+User settings to disable are:
+
+- `--USER__wordSpacing`;
+- `--USER__letterSpacing`.
+
+User settings to add are:
+
+- `--USER__ligatures`.
+
+### CJK
+
+For Chinese, Japanese, and Korean, implementers must manage both horizontal and vertical writing modes, since the pagination model differs.
+
+#### Horizontal writing mode
+
+User settings to disable are: 
+
+- `--USER__textAlign`;
+- `--USER__bodyHyphens`;
+- `--USER__paraIndent`;
+- `--USER__wordSpacing`;
+- `--USER__letterSpacing`.
+
+#### Vertical writing mode
+
+This also impacts the Mongolian script.
+
+User settings to disable are:
+
+- `--USER__colCount`;
+- `--USER__textAlign`;
+- `--USER__bodyHyphens`;
+- `--USER__paraIndent`;
+- `--USER__wordSpacing`;
+- `--USER__letterSpacing`.

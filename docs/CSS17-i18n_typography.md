@@ -54,7 +54,7 @@ Typographic conventions for full text justification depend on the writing system
 
 Kashida elongation is not supported for the Arabic script for instance (`text-justify`), but authors may be using the tatweel (see [i18n glossary doc](../docs/CSS26-i18n_glossary.md)) to elongate some words.
 
-CJK is usually using `inter-character` justification, while Latin uses `inter-word`. 
+Chinese and Japanese are using `inter-character` justification for instance, while Latin uses `inter-word`. 
 
 ## Indents
 
@@ -62,7 +62,7 @@ In some scripts like CJK, indents are really important. Implementers should not 
 
 ## Vertical text
 
-Implementers must not try to offer users with a setting allowing users to switch from the vertical to horizontal writing mode, and vice versa, unless they support alternate stylesheets and the publication provide one for each mode. Indeed, characters, punctuation, emphasis marks, quotes, and so on and so forth, depend on the writing mode used, an an automatic switch would provide users with a subpar experience. 
+Implementers must not try to offer users with a setting allowing users to switch from the vertical to horizontal writing mode, and vice versa, unless they support alternate stylesheets and the publication provides one for each mode. Indeed, characters, punctuation, emphasis marks, quotes, and so on and so forth, depend on the writing mode used, and an automatic switch would provide users with a subpar experience. 
 
 It's common for content authors to want to mix short horizontal runs of text, such as the tate-chu-yoko i.e. 2-digit numbers (`text-combine-upright`) or acronyms (`text-orientation`), in a vertical text.
 

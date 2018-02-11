@@ -247,4 +247,4 @@ If those issues arise, please report them to whom it may concern (e.g. Chromium,
 
 ## Glossary
 
-TBD
+Check the [i18n Glossary doc](../docs/CSS25-i18n_glossary.md) for a glossary of terms you may encounter during bug reports, issues, or feedbacks.

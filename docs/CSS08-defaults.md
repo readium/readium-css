@@ -162,7 +162,7 @@ The results we could get for the vast majority of fonts can be described as good
 
 This isn’t a perfect solution though, and this algorithm may be revisited in the future.
 
-See [Further Details](CSS16-further_details.md) for an extensive explanation.
+See [Further Details](../docs/CSS18-further_details.md) for an extensive explanation.
 
 ## Day Mode
 

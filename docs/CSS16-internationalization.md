@@ -228,7 +228,7 @@ Longer terms issues include:
 - mixed directions (LTR document in a RTL publication) and mixed writing modes (`horizontal-tb` document in a `vertical-rl` publication);
 - support for alternate stylesheets, which is critical if the implementer wants to offer a horizontal/vertical-writing user setting;
 - support for `rendition: align-x-center`;
-- support for `ibooks:respect-image-size-class` (gaiji) and `ibooks:scroll-axis` metadata items (see [EPUB Compat doc](../docs/CSS19-epub_compat.md#gaiji-and-image-sizing));
+- support for `ibooks:respect-image-size-class` (gaiji) and `ibooks:scroll-axis` metadata items (see [EPUB Compat doc](../docs/CSS21-epub_compat.md#gaiji-and-image-sizing));
 - `rendition: flow` of `scrolled-doc`.
 
 ## Out of scope
@@ -247,4 +247,4 @@ If those issues arise, please report them to whom it may concern (e.g. Chromium,
 
 ## Glossary
 
-Check the [i18n Glossary doc](../docs/CSS25-i18n_glossary.md) for a glossary of terms you may encounter during bug reports, issues, or feedbacks.
+Check the [i18n Glossary doc](../docs/CSS26-i18n_glossary.md) for a glossary of terms you may encounter during bug reports, issues, or feedbacks.

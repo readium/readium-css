@@ -25,7 +25,7 @@ This glossary has been created from the <a href="http://w3c.github.io/alreq/#glo
   <dd>See Tashkil.</dd>
 
   <dt>Ijam (<bdo dir="rtl">إِعْجَامْ</bdo>)</dt>
-  <dd>Diacritical marks applied to a basic letter shape (or skeleton) to derive a new letter. For example a dot under a "curve" to get the letter Beh. In Unicode each letter plus ijam combination is encoded as a separate, atomic character.</dd>
+  <dd>Diacritical marks applied to a basic letter shape (or skeleton) to derive a new letter. For example a dot under a “curve” to get the letter Beh. In Unicode each letter plus ijam combination is encoded as a separate, atomic character.</dd>
 
   <dt>Joining forms</dt>
   <dd>Arabic script is a cursive writing system; every Arabic letter has one, two, or four different joining forms (isolated, initial, medial, final), which allow the letter to join to its neighbors, if applicable. See the <a href="http://w3c.github.io/alreq/#h_joining">Joining section of the Arabic Script Requirements</a> for further details.</dd>
@@ -67,7 +67,7 @@ This glossary has been created from the <a href="http://w3c.github.io/clreq/#glo
   <dd>A character to be annotated by ruby, ornament characters, or emphasis dots.</dd>
 
   <dt>Big5 (大五码)</dt>
-  <dd>Big-5 or Big5 is a Chinese character encoding method used in Taiwan, Hong Kong, and Macau for Traditional Chinese characters. A total of 13060 Traditional Chinese characters are encoded with Big5.</dd>
+  <dd>Big-5 or Big5 is a Chinese character encoding method used in Taiwan, Hong Kong, and Macau for Traditional Chinese characters. A total of 13,060 Traditional Chinese characters are encoded with Big5.</dd>
 
   <dt>Bilingual annotations (中外文对照)</dt>
   <dd>To prompt a Chinese term with its original or translation in the form of annotation text or base text, an instance of interlinear annotation.</dd>
@@ -272,6 +272,9 @@ This glossary has been created from the <a href="https://www.w3.org/TR/jlreq/#te
 
   <dt>Furiwake (振分け)</dt>
   <dd>A method of placing multiple runs of text in a line. (JIS Z 8125)</dd>
+
+  <dt>Gaiji (外字)</dt>
+  <dd>Gaiji are small, inline images that represent characters that are not available in a character or font set. Gaiji are typically used for older symbols or characters in Japanese that have fallen out of use. It should be treated as text, especially in reading modes e.g. inverted in night mode.</dd>
 
   <dt>General-ruby / Sō rubi (総ルビ)</dt>
   <dd>A method of ruby annotation that attaches ruby text for all Kanji characters in the text. (JIS Z 8125)</dd>

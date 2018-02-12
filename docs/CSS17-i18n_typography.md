@@ -1,4 +1,4 @@
-# Internationalization Typography Primer
+# Internationalization – A Typography Primer
 
 [Implementers’ doc]
 
@@ -41,6 +41,8 @@ In Tibetan, marks and colors may be used to express emphasis.
 ## Line breaking
 
 In some scripts like Chinese and Japanese, text is set solid, which means there is no space between words. These scripts tend to break a line in the middle of a word (with no hyphenation) – even in Korean, which has spaces between words.
+
+It would be strange to offer a word-spacing setting to users in those languages, and letter-spacing may create extra justification issues you won’t be able to resolve, for lack of more precise controls.
 
 It is common for certain characters to be forbidden at the start or end of a line, but which characters these are, and what rules are applied when depends on the script or language. In some cases, such as Japanese, there may be different rules according to the type of content or the user's preference.
 

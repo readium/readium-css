@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="generator" content="pandoc"/>
+  <title>Readium CSS Implementers’ doc</title>
+  <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
+</head>
+
+<body xml:lang="en">
+  <section id="readium-css-variables-api" class="level1">
+    <h1>Readium CSS Variables API</h1>
+
+    <p>[Implementers’ doc] [WIP]</p>
+
+    <p>As a reminder, the priority is, in general:</p>
+
+    <pre><code>USER &gt; AUTHOR &gt; RS</code></pre>
+
+    <section id="reading-system-styles" class="level2">
+      <h2 id="sigil_toc_id_136">Reading System Styles</h2>
+
+      <p>Custom properties for the Reading System are prefixed with <code>--RS__</code>.</p>
+
+      <section id="pagination" class="level3">
+        <h3 class="sigil_not_in_toc">Pagination</h3>
+
+        <pre><code>--RS__colWidth</code></pre>
+
+        <p>The optimal column’s width. It serves as a floor in our design.</p>
+
+        <pre><code>--RS__colCount</code></pre>
+
+        <p>The optimal number of columns (depending on the columns’ width).</p>
+
+        <pre><code>--RS__colGap</code></pre>
+
+        <p>The gap between columns. It must be set in pixels so that it won’t resize with font size.</p>
+
+        <p>You must account for this gap when scrolling.</p>
+
+        <pre><code>--RS__pageGutter</code></pre>
+
+        <p>The horizontal page margins. It must be set in pixels so that it won’t resize with font size.</p>
+
+        <pre><code>--RS__maxLineLength</code></pre>
+
+        <p>The optimal line-length. It must be set in <code>rem</code> in order to take <code>:root</code>’s <code>font-size</code> as a reference, whichever the <code>body</code>’s <code>font-size</code> might be.</p>
+      </section>
+
+      <section id="safeguards" class="level3">
+        <h3 class="sigil_not_in_toc">Safeguards</h3>
+
+        <pre><code>--RS__maxMediaWidth</code></pre>
+
+        <p>The <code>max-width</code> for media elements i.e. <code>img</code>, <code>svg</code>, <code>audio</code> and <code>video</code>.</p>
+
+        <pre><code>--RS__maxMediaHeight</code></pre>
+
+        <p>The <code>max-height</code> for media elements i.e. <code>img</code>, <code>svg</code>, <code>audio</code> and <code>video</code>.</p>
+
+        <pre><code>--RS__boxSizingMedia</code></pre>
+
+        <p>The box model (<code>box-sizing</code>) you want to use for media elements.</p>
+
+        <pre><code>--RS__boxSizingTable</code></pre>
+
+        <p>The box model (<code>box-sizing</code>) you want to use for tables.</p>
+      </section>
+
+      <section id="default-font-stacks" class="level3">
+        <h3 class="sigil_not_in_toc">Default font-stacks</h3>
+
+        <pre><code>--RS__oldStyleTf</code></pre>
+
+        <p>An old style serif font-stack relying on pre-installed fonts.</p>
+
+        <p>Default is <code>"Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif</code>.</p>
+
+        <pre><code>--RS__modernTf</code></pre>
+
+        <p>A modern serif font-stack relying on pre-installed fonts.</p>
+
+        <p>Default is <code>Athelas, Constantia, Georgia, serif</code>.</p>
+
+        <pre><code>--RS__sansTf</code></pre>
+
+        <p>A neutral sans-serif font-stack relying on pre-installed fonts.</p>
+
+        <p>Default is <code>-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif</code>.</p>
+
+        <pre><code>--RS__humanistTf </code></pre>
+
+        <p>A humanist sans-serif font-stack relying on pre-installed fonts.</p>
+
+        <p>Default is <code>Seravek, Calibri, Roboto, Arial, sans-serif</code>.</p>
+
+        <pre><code>--RS__monospaceTf </code></pre>
+
+        <p>A monospace font-stack relying on pre-installed fonts.</p>
+
+        <p>Default is <code>"Andale Mono", Consolas, monospace</code>.</p>
+      </section>
+
+      <section id="base-styles-for-all-ebooks" class="level3">
+        <h3 class="sigil_not_in_toc">Base styles for all ebooks</h3>
+
+        <pre><code>--RS__baseFontFamily</code></pre>
+
+        <p>The default typeface for body copy in case the ebook doesn’t have one declared.</p>
+
+        <p>Please note some languages have a specific font-stack (japanese, chinese, hindi, etc.)</p>
+
+        <pre><code>--RS__baseLineHeight</code></pre>
+
+        <p>The default line-height for body copy in case the ebook doesn’t have one declared.</p>
+
+        <p>Please note CJK languages have a specific implementation.</p>
+      </section>
+
+      <section id="default-colors-for-all-ebooks" class="level3">
+        <h3 class="sigil_not_in_toc">Default colors for all ebooks</h3>
+
+        <pre><code>--RS__textColor</code></pre>
+
+        <p>The default <code>color</code> for body copy’s text.</p>
+
+        <pre><code>--RS__backgroundColor</code></pre>
+
+        <p>The default <code>background-color</code> for pages.</p>
+
+        <pre><code>--RS__selectionBackgroundColor</code></pre>
+
+        <p>The <code>background-color</code> for selected text.</p>
+
+        <p>It is worth noting it can be customized for each reading mode.</p>
+
+        <pre><code>--RS__selectionTextColor</code></pre>
+
+        <p>The <code>color</code> for selected text.</p>
+
+        <p>It is worth noting it can be customized for each reading mode.</p>
+      </section>
+
+      <section id="default-styles-for-unstyled-publications" class="level3">
+        <h3 class="sigil_not_in_toc">Default styles for unstyled publications</h3>
+
+        <section id="typefaces" class="level4">
+          <h4 class="sigil_not_in_toc">Typefaces</h4>
+
+          <pre><code>--RS__compFontFamily</code></pre>
+
+          <p>The typeface for headings. The value can be another variable e.g. <code>var(-RS__humanistTf)</code>.</p>
+
+          <pre><code>--RS__codeFontFamily</code></pre>
+
+          <p>The typeface for code snippets. The value can be another variable e.g. <code>var(-RS__monospaceTf)</code>.</p>
+        </section>
+
+        <section id="typography" class="level4">
+          <h4 class="sigil_not_in_toc">Typography</h4>
+
+          <pre><code>--RS__typeScale</code></pre>
+
+          <p>The scale to be used for computing all elements’ <code>font-size</code>. Since those font sizes are computed dynamically, you can set a smaller type scale when the user sets one of the largest font sizes.</p>
+
+          <p>Possible values: <code>1</code> | <code>1.067</code> | <code>1.125</code> | <code>1.2</code> (suggested default) | <code>1.25</code> | <code>1.333</code> | <code>1.414</code> | <code>1.5</code> | <code>1.618</code></p>
+
+          <pre><code>--RS__baseFontSize</code></pre>
+
+          <p>The default <code>font-size</code> for body copy. It will serve as a reference font all related computations.</p>
+
+          <pre><code>--RS__baseLineHeight</code></pre>
+
+          <p>The default <code>line-height</code> for all elements.</p>
+        </section>
+
+        <section id="vertical-rhythm" class="level4">
+          <h4 class="sigil_not_in_toc">Vertical rhythm</h4>
+
+          <pre><code>--RS__flowSpacing</code></pre>
+
+          <p>The default vertical margins for HTML5 flow content e.g. <code>pre</code>, <code>figure</code>, <code>blockquote</code>, etc.</p>
+
+          <pre><code>--RS__paraSpacing</code></pre>
+
+          <p>The default vertical margins for paragraphs.</p>
+
+          <pre><code>--RS__paraIndent</code></pre>
+
+          <p>The default <code>text-indent</code> for paragraphs.</p>
+        </section>
+
+        <section id="hyperlinks" class="level4">
+          <h4 class="sigil_not_in_toc">Hyperlinks</h4>
+
+          <pre><code>--RS__linkColor</code></pre>
+
+          <p>The default <code>color</code> for hyperlinks.</p>
+
+          <pre><code>--RS__visitedColor</code></pre>
+
+          <p>The default <code>color</code> for visited hyperlinks.</p>
+        </section>
+
+        <section id="accentuation-colors" class="level4">
+          <h4 class="sigil_not_in_toc">Accentuation colors</h4>
+
+          <pre><code>--RS__primaryColor</code></pre>
+
+          <p>An optional primary accentuation <code>color</code> you could use for headings or any other element of your choice.</p>
+
+          <pre><code>--RS__secondaryColor</code></pre>
+
+          <p>An optional secondary accentuation <code>color</code> you could use for any element of your choice.</p>
+        </section>
+      </section>
+    </section>
+
+    <section id="reading-modes" class="level2">
+      <h2 id="sigil_toc_id_137">Reading Modes</h2>
+
+      <p>Custom properties for reading modes are prefixed with <code>--RS__</code>.</p>
+
+      <pre><code>--RS__backgroundColor</code></pre>
+
+      <p>The <code>background-color</code> for the screen in the reading mode.</p>
+
+      <pre><code>--RS__textColor</code></pre>
+
+      <p>The <code>color</code> for text in the reading mode.</p>
+
+      <pre><code>--RS__linkColor</code></pre>
+
+      <p>The <code>color</code> for the links in the reading mode.</p>
+
+      <pre><code>--RS__visitedColor</code></pre>
+
+      <p>The <code>color</code> for visited links in the reading mode.</p>
+
+      <pre><code>--RS__selectionBackgroundColor</code></pre>
+
+      <p>The <code>background-color</code> for selected text.</p>
+
+      <pre><code>--RS__selectionTextColor</code></pre>
+
+      <p>The <code>color</code> for selected text.</p>
+    </section>
+
+    <section id="user-settings" class="level2">
+      <h2 id="sigil_toc_id_138">User Settings</h2>
+
+      <p>Custom properties for user settings are prefixed with <code>--USER__</code>.</p>
+
+      <pre><code>--USER__colCount</code></pre>
+
+      <p>The number of columns (<code>column-count</code>) the user wants displayed (one-page view or two-page spread)</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <pre><code>--USER__pageMargins</code></pre>
+
+      <p>A factor applied to horizontal margins (<code>padding-left</code> and <code>padding-right</code>) the user wants to set.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts <code>body</code>.</p>
+
+      <pre><code>--USER__view</code></pre>
+
+      <p>Enables scroll mode.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <pre><code>--USER__backgroundColor</code></pre>
+
+      <p>The <code>background-color</code> for the whole screen.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all elements in the DOM.</p>
+
+      <pre><code>--USER__textColor</code></pre>
+
+      <p>The <code>color</code> for textual contents.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all elements but headings and <code>pre</code> in the DOM.</p>
+
+      <pre><code>--USER__textAlign</code></pre>
+
+      <p>The alignment (<code>text-align</code>) the user prefers.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts <code>body</code>, <code>li</code>, and <code>p</code> which are not children of <code>blockquote</code> and <code>figcaption</code>.</p>
+
+      <pre><code>--USER__bodyHyphens</code></pre>
+
+      <p>Enabling and disabling hyphenation.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts <code>body</code>, <code>p</code>, <code>li</code>, <code>div</code> and <code>dd</code>.</p>
+
+      <pre><code>--USER__fontOverride</code></pre>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts the <code>--USER__fontFamily</code> variable.</p>
+
+      <pre><code>--USER__fontFamily</code></pre>
+
+      <p>The typeface (<code>font-family</code>) the user wants to read with.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts <code>body</code>, <code>p</code>, <code>li</code>, <code>div</code>, <code>dt</code>, <code>dd</code> and phrasing elements which don’t have a <code>lang</code> or <code>xml:lang</code> attribute.</p>
+
+      <pre><code>--USER__fontSize</code></pre>
+
+      <p>Increasing and decreasing the root <code>font-size</code>. It will serve as a reference for the cascade.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <pre><code>--USER__advancedSettings</code></pre>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts the <code>--USER__typescale</code> variable.</p>
+
+      <pre><code>--USER__typeScale</code></pre>
+
+      <p>The type scale the user wants to use for the publication.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It requires the <code>ReadiumCSS-fs_normalize.css</code> stylesheet.</p>
+
+      <p>It impacts headings, <code>p</code>, <code>li</code>, <code>div</code>, <code>pre</code>, <code>dd</code>, <code>small</code>, <code>sub</code>, and <code>sup</code>.</p>
+
+      <pre><code>--USER__lineHeight</code></pre>
+
+      <p>Increasing and decreasing leading (<code>line-height</code>).</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts <code>body</code>, <code>p</code>, <code>li</code> and <code>div</code></p>
+
+      <pre><code>--USER__paraSpacing</code></pre>
+
+      <p>The vertical margins (<code>margin-top</code> and <code>margin-bottom</code>) for paragraphs.</p>
+
+      <p>Scope: <code>p</code></p>
+
+      <pre><code>--USER__paraIndent</code></pre>
+
+      <p>The <code>text-indent</code> for paragraphs.</p>
+
+      <p>Scope: <code>p</code></p>
+
+      <pre><code>--USER__wordSpacing</code></pre>
+
+      <p>Increasing space between words (<code>word-spacing</code>, related to a11y).</p>
+
+      <p>Scope: <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>, <code>p</code>, <code>li</code>, <code>div</code></p>
+
+      <pre><code>--USER__letterSpacing</code></pre>
+
+      <p>Increasing space between letters (<code>letter-spacing</code>, related to a11y).</p>
+
+      <p>Scope: <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>, <code>p</code>, <code>li</code>, <code>div</code></p>
+
+      <pre><code>--USER__ligatures</code></pre>
+
+      <p>Enabling and disabling ligatures in Arabic (related to a11y).</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all text.</p>
+
+      <pre><code>--USER__appearance</code></pre>
+
+      <p>Manages reading modes</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <pre><code>--USER__darkenImages</code></pre>
+
+      <p>A filter to darken mages in night mode. It behaves as a switch i.e. if it is present, the filter is enabled.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all <code>img</code> elements in the DOM.</p>
+
+      <pre><code>--USER__invertImages</code></pre>
+
+      <p>A filter to invert images in night mode. It behaves as a switch i.e. if it is present, the filter is enabled.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all <code>img</code> elements in the DOM.</p>
+
+      <pre><code>--USER__a11yNormalize</code></pre>
+
+      <p>A flag to normalize text contents for dyslexia.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts font style, weight and variant, text decoration, super and subscripts.</p>
+    </section>
+
+    <section id="how-to-set-and-remove-user-preferences" class="level2">
+      <h2 id="sigil_toc_id_139">How to set and remove user preferences</h2>
+
+      <section id="setting-a-user-preference" class="level3">
+        <h3 class="sigil_not_in_toc">Setting a user preference</h3>
+
+        <pre><code>var root = document.documentElement; 
+root.style.setProperty("--USER__var", "value");</code></pre>
+
+        <p>You don’t need to remove the variable before setting another value, the new value will simply override the existing one.</p>
+      </section>
+
+      <section id="removing-a-user-preference" class="level3">
+        <h3 class="sigil_not_in_toc">Removing a user preference</h3>
+
+        <pre><code>var root = document.documentElement; 
+root.style.removeProperty("--USER__var");</code></pre>
+      </section>
+    </section>
+  </section>
+</body>
+</html>

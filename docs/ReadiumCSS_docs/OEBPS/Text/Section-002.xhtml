@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="generator" content="pandoc"/>
+  <title>Readium CSS Implementers’ doc</title>
+  <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
+</head>
+
+<body xml:lang="en">
+  <section id="quick-start" class="level1">
+    <h1>Quick start</h1>
+
+    <p>Readium CSS is a set of reference stylesheets for EPUB Reading Systems. It provides:</p>
+
+    <ul>
+      <li>a CSS normalize for EPUB contents;</li>
+
+      <li>paged and scrolled views;</li>
+
+      <li>default styles;</li>
+
+      <li>reading modes (night, sepia, etc.);</li>
+
+      <li>themes;</li>
+
+      <li>user settings;</li>
+
+      <li>media overlays and user highlights.</li>
+    </ul>
+
+    <section id="how-to" class="level2">
+      <h2 id="sigil_toc_id_5">How To</h2>
+
+      <p>Inject ReadiumCSS stylesheets into the <code>&lt;head&gt;</code> of (X)HTML documents.</p>
+
+      <ol>
+        <li><code>ReadiumCSS-base.css</code></li>
+
+        <li><code>ReadiumCSS-day_mode.css</code></li>
+
+        <li><code>ReadiumCSS-html5patch.css</code></li>
+
+        <li><code>ReadiumCSS-safeguards.css</code></li>
+
+        <li>Authors’ stylesheet(s)</li>
+
+        <li><code>ReadiumCSS-highlights.css</code></li>
+
+        <li><code>ReadiumCSS-pagination.css</code></li>
+
+        <li><code>ReadiumCSS-scroll.css</code>(if needed, must override pagination)</li>
+
+        <li><code>ReadiumCSS-night_mode.css</code> or <code>ReadiumCSS-sepia_mode.css</code> (if needed)</li>
+
+        <li><code>ReadiumCSS-os_a11y.css</code></li>
+
+        <li><code>ReadiumCSS-user_settings.css</code></li>
+
+        <li><code>ReadiumCSS-fs_normalize.css</code> (if needed)</li>
+      </ol>
+
+      <p>Check the <code>CSS-stylesheets_order.md</code> document for further details.</p>
+
+      <p>By default, we don’t use classes or attributes but you can modify stylesheets in order to do so if you wish (that way, you could inject all stylesheets on load).</p>
+    </section>
+
+    <section id="manage-user-settings" class="level2">
+      <h2 id="sigil_toc_id_6">Manage User Settings</h2>
+
+      <p>Currently, user settings are managed using two mechanisms:</p>
+
+      <ul>
+        <li>appending and removing stylesheets;</li>
+
+        <li>setting user variables at the <code>:root</code> level.</li>
+      </ul>
+
+      <section id="extra-stylesheets" class="level3">
+        <h3 class="sigil_not_in_toc">Extra Stylesheets</h3>
+
+        <p>Scroll, reading modes (sepia and night), and font-size normalize require specific stylesheets. You should consequently append and remove them.</p>
+      </section>
+
+      <section id="user-variables" class="level3">
+        <h3 class="sigil_not_in_toc">User variables</h3>
+
+        <p>All other settings can be set using <code>--USER__variables</code>. Set those properties to <code>html</code> and the cascade will automatically do its job.</p>
+
+        <p>To set a variable:</p>
+
+        <pre><code>var root = document.documentElement || document.getElementById("iframe-wrapper").contentWindow.document.documentElement; 
+root.style.setProperty("--USER__var", "value");</code></pre>
+
+        <p>To remove a variable:</p>
+
+        <pre><code>var root = document.documentElement || document.getElementById("iframe-wrapper").contentWindow.document.documentElement; 
+root.style.removeProperty("--USER__var");</code></pre>
+
+        <p>Please note you must implement a fallback strategy if you want to support Internet Explorer 11 and early versions of Microsoft Edge. User settings have been designed to work with inline styles (on <code>html</code>) whenever possible.</p>
+      </section>
+
+      <section id="examples" class="level3">
+        <h3 class="sigil_not_in_toc">Examples</h3>
+
+        <section id="changing-hyphenation-and-justification" class="level4">
+          <h4 class="sigil_not_in_toc">Changing hyphenation and justification</h4>
+
+          <pre><code>root.style.setProperty("--USER__textAlign", "justify"); 
+root.style.setProperty("--USER__bodyHyphens", "auto");</code></pre>
+
+          <p>Of course this example is simplistic. You could for instance create a helper to set multiple properties at once.</p>
+        </section>
+
+        <section id="changing-the-type-scale" class="level4">
+          <h4 class="sigil_not_in_toc">Changing the type scale</h4>
+
+          <p>First, append <code>ReadiumCSS-fs_normalize.css</code> at the end of <code>head</code>.</p>
+
+          <p>Then:</p>
+
+          <pre><code>root.style.setProperty("--USER__typeScale", "1.067");</code></pre>
+        </section>
+      </section>
+    </section>
+
+    <section id="create-themes" class="level2">
+      <h2 id="sigil_toc_id_7">Create Themes</h2>
+
+      <p>In this model, themes are a set of user settings you can store in a JSON object. Add the properties to <code>html</code> and you get a theme.</p>
+
+      <p>Check the <code>CSS-api.md</code> doc for the set of available user variables.</p>
+    </section>
+  </section>
+</body>
+</html>

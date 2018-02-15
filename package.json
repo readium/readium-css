@@ -28,7 +28,7 @@
       "url": "https://github.com/readium/readium-css/blob/master/LICENSE"
     }
   ],
-  "main": "src/ReadiumCSS-config.css",
+  "main": "prototype/ReadiumCSS-config.css",
   "devDependencies": {
     "stylelint": "latest",
     "postcss-cli": "latest",

@@ -38,7 +38,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--RS__compFontFamily);
   text-align: right;
-  text-align: initial;
 }
 
 /* Flow content */
@@ -72,6 +71,7 @@ code, kbd, samp, tt {
 
 sub, sup {
   position: relative;
+  font-size: 67.5%;
   line-height: 1;
 }
 
@@ -80,7 +80,7 @@ sub {
 }
 
 sup {
-  bottom: 0.5ex;
+  bottom: 0ex;
 }
 
 :link {
@@ -97,26 +97,26 @@ h1 {
   margin-top: calc(var(--RS__flowSpacing) * 2);
   margin-bottom: calc(var(--RS__flowSpacing) * 2);
   /* The following is base font size * typescale power of 3 */
-  font-size: calc(((var(--RS__baseFontSize) * var(--RS__typeScale)) * var(--RS__typeScale)) * var(--RS__typeScale));
+  font-size: calc(((1em * var(--RS__typeScale)) * var(--RS__typeScale)) * var(--RS__typeScale));
 }
 
 h2 {
   margin-top: calc(var(--RS__flowSpacing) * 2);
   margin-bottom: var(--RS__flowSpacing);
   /* The following is base font size * typescale power of 2 */
-  font-size: calc((var(--RS__baseFontSize) * var(--RS__typeScale)) * var(--RS__typeScale));
+  font-size: calc((1em * var(--RS__typeScale)) * var(--RS__typeScale));
 }
 
 h3 {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: var(--RS__flowSpacing);
-  font-size: calc(var(--RS__baseFontSize) * var(--RS__typeScale));
+  font-size: calc(1em * var(--RS__typeScale));
 }
 
 h4 {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: var(--RS__flowSpacing);
-  font-size: var(--RS__baseFontSize);
+  font-size: 1em;
 }
 
 h5 {

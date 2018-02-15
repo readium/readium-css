@@ -6,4 +6,47 @@
 
    Repo: https://github.com/readium/readium-css */
 
-/* Currently empty, it only exists as the main entry for the package at the moment but will be implemented ASAP */
+/* Currently unplugged, the config won’t currently be taken into account */
+
+/* Custom medias
+   Syntax: @custom-media --variable (prop: value) */
+
+/* Responsive columns
+   The minimum width for which responsive columns (2 -> 1 and vice versa,
+   depending on the current font-size) must be enabled */
+@custom-media --responsive-columns (max-width: 60em);
+
+/* Mobile columns
+   The orientation for which 2-columns is enabled on mobile devices */
+@custom-media --mobile-columns (orientation: landscape);
+
+/* Custom selectors
+   Syntax: @custom-selector :--variable selector
+   The selectors you will use for flags/switches
+   You can alternatively use classes or custom data-* attributes */
+
+/* User view = paged | scrolled */
+@custom-selector :--paged-view [style*="readium-paged-on"];
+@custom-selector :--scroll-view [style*="readium-scroll-on"];
+
+/* Font-family override */
+
+@custom-selector :--font-override [style*="readium-font-on"];
+
+/* Advanced settings */
+
+@custom-selector :--advanced-settings [style*="readium-advanced-on"];
+
+/* Reading Modes */
+
+@custom-selector :--sepia-mode [style*="readium-sepia-on"];
+@custom-selector :--night-mode [style*="readium-night-on"];
+
+/* Filters (images) */
+
+@custom-selector :--darken-filter [style*="readium-darken-on"];
+@custom-selector :--invert-filter [style*="readium-invert-on"];
+
+/* Accessibility normalization */
+
+@custom-selector :--a11y-normalize [style*="readium-a11y-on"];

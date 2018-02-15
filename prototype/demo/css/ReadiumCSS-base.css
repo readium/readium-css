@@ -31,10 +31,11 @@
   /* Config */
   --RS__baseFontFamily: var(--RS__oldStyleTf);
   
+  /* For square-ish fonts (CJK, Indic, etc.), we must apply some compensation in dynamic leading. Default is 1 i.e. no compensation */
+  --RS__lineHeightCompensation: 1;
+
   /* Dynamic leading based on typeface metrics + font-size setting */
-  --RS__baseLineHeight: calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667));
-  /* For CJK, the line-height is usually 15–20% more than for Latin */
-  --RS__cjkCompensation: 1.1667;
+  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__lineHeightCompensation));
 }
 
 /* Set default font for the html doc, so that it can be overridden by the authors’s stylesheet */
@@ -79,6 +80,8 @@ math {
 
 :lang(am) {
   --RS__baseFontFamily: Kefa, Nyala, Roboto, Noto, "Noto Sans Ethiopic", serif;
+
+  --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(ar) {
@@ -87,6 +90,8 @@ math {
 
 :lang(bn) {
   --RS__baseFontFamily: "Kohinoor Bangla", "Bangla Sangam MN", Vrinda, Roboto, Noto, "Noto Sans Bengali", sans-serif;
+
+  --RS__lineHeightCompensation: 1.067;
 }
 
 :lang(bo) {
@@ -95,6 +100,8 @@ math {
 
 :lang(chr) {
   --RS__baseFontFamily: "Plantagenet Cherokee", Roboto, Noto, "Noto Sans Cherokee";
+
+  --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(fa) {
@@ -103,14 +110,20 @@ math {
 
 :lang(gu) {
   --RS__baseFontFamily: "Gujarati Sangam MN", "Nirmala UI", Shruti, Roboto, Noto, "Noto Sans Gujarati", sans-serif;
+
+  --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(he) {
   --RS__baseFontFamily: "New Peninim MT", "Arial Hebrew", Gisha, "Times New Roman", Roboto, Noto, "Noto Sans Hebrew" sans-serif;
+
+  --RS__lineHeightCompensation: 1.1;
 }
 
 :lang(hi) {
   --RS__baseFontFamily: "Kohinoor Devanagari", "Devanagari Sangam MN", Kokila, "Nirmala UI", Roboto, Noto, "Noto Sans Devanagari", sans-serif;
+
+  --RS__lineHeightCompensation: 1.1;
 }
 
 :lang(hy) {
@@ -123,7 +136,9 @@ math {
 
 :lang(ja) {
   --RS__baseFontFamily: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
-  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+  
+  /* For CJK, the line-height is usually 15–20% more than for Latin */
+  --RS__lineHeightCompensation: 1.167;
 
   /* Extra variables for Japanese font-stacks as we may want to reuse them for user settings + default */
   --RS__serif-ja: "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif;
@@ -134,15 +149,21 @@ math {
 
 :lang(km) {
   --RS__baseFontFamily: "Khmer Sangam MN", "Leelawadee UI", "Khmer UI", Roboto, Noto, "Noto Sans Khmer", sans-serif;
+
+  --RS__lineHeightCompensation: 1.067;
 }
 
 :lang(kn) {
   --RS__baseFontFamily: "Kannada Sangam MN", "Nirmala UI", Tunga, Roboto, Noto, "Noto Sans Kannada", sans-serif;
+
+  --RS__lineHeightCompensation: 1.1;
 }
 
 :lang(ko) {
   --RS__baseFontFamily: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans CJK KR", sans-serif;
-  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+  
+  /* For CJK, the line-height is usually 15–20% more than for Latin */
+  --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(lo) {
@@ -151,22 +172,32 @@ math {
 
 :lang(ml) {
   --RS__baseFontFamily: "Malayalam Sangam MN", "Nirmala UI", Kartika, Roboto, Noto, "Noto Sans Malayalam", sans-serif;
+
+  --RS__lineHeightCompensation: 1.067;
 }
 
 :lang(or) {
   --RS__baseFontFamily: "Oriya Sangam MN", "Nirmala UI", Kalinga, Roboto, Noto, "Noto Sans Oriya", sans-serif;
+
+  --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(pa) {
   --RS__baseFontFamily: "Gurmukhi MN", "Nirmala UI", Kartika, Roboto, Noto, "Noto Sans Gurmukhi", sans-serif;
+
+  --RS__lineHeightCompensation: 1.1;
 }
 
 :lang(si) {
   --RS__baseFontFamily: "Sinhala Sangam MN", "Nirmala UI", "Iskoola Pota", Roboto, Noto, "Noto Sans Sinhala", sans-serif;
+
+  --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(ta) {
   --RS__baseFontFamily: "Tamil Sangam MN", "Nirmala UI", Latha, Roboto, Noto, "Noto Sans Tamil", sans-serif;
+
+  --RS__lineHeightCompensation: 1.067;
 }
 
 :lang(te) {
@@ -175,21 +206,29 @@ math {
 
 :lang(th) {
   --RS__baseFontFamily: "Thonburi", "Leelawadee UI", "Cordia New", Roboto, Noto, "Noto Sans Thai", sans-serif;
+
+  --RS__lineHeightCompensation: 1.067;
 }
 
 /* The following will also work for zh-Hans */
 :lang(zh) {
   --RS__baseFontFamily: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
-  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+
+  /* For CJK, the line-height is usually 15–20% more than for Latin */
+  --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(zh-Hant),
 :lang(zh-TW) {
   --RS__baseFontFamily: "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+  
+  /* For CJK, the line-height is usually 15–20% more than for Latin */
+  --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(zh-HK) {
   --RS__baseFontFamily: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-  --RS__baseLineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation));
+  
+  /* For CJK, the line-height is usually 15–20% more than for Latin */
+  --RS__lineHeightCompensation: 1.167;
 }

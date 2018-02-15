@@ -70,6 +70,7 @@ code, kbd, samp, tt {
 sub, sup {
   line-height: 1;
   position: relative;
+  font-size: 67.5%;
 }
 
 sub {

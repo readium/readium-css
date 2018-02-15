@@ -78,7 +78,7 @@ sub {
 }
 
 sup {
-  bottom: 0.5ex;
+  bottom: 0ex;
 }
 
 :link {

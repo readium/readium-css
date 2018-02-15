@@ -43,7 +43,7 @@ In theory, using `!important` is a clear intent the author is willing to enforce
 
 ### What do do
 
-In practice, `!important` may be abused, it may be a quick fix to solve a cascading issue—and the author didn’t bother taking user settings into account—, it may be used to enforce some styles in Reading Systems overridding a lot of styles by default, etc.
+In practice, `!important` may be abused, it may be a quick fix to solve a cascading issue – and the author didn’t bother taking user settings into account –, it may be used to enforce some styles in Reading Systems overridding a lot of styles by default, etc.
 
 This case is a complex one. We’re designing Readium CSS with the minimum amount of overrides possible but authors’ `!important`s may conflict with some user settings. Please refer to the following cases.
 

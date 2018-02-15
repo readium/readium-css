@@ -85,7 +85,7 @@
 
         <p>If we want to solve the user settings issue well, we’ll probably have to find clever and inventive ways, selectors specificity being a dead-end in practice.</p>
 
-        <p>There’s <a href="https://github.com/w3c/csswg-drafts/issues/1693">a proposal for user agent properties</a> and <a href="https://w3c.github.io/personalization-semantics/">a draft for customization</a>, they have some potential for upcoming files if EPUB gets a “do not touch my CSS” flag at some point — what’s already distributed is probably lost. With user agent properties, <a href="https://gist.github.com/JayPanoz/c5bbf0bd7e53997d3a91d9c1be44a82f">authors could design user-centric stylesheets</a> so, in theory, RS could not override styles at all and just set values for those properties.</p>
+        <p>There’s <a href="https://github.com/w3c/csswg-drafts/issues/1693">a proposal for user agent properties</a> and <a href="https://w3c.github.io/personalization-semantics/">a draft for customization</a>, they have some potential for upcoming files if EPUB gets a “do not touch my CSS” flag at some point – what’s already distributed is probably lost. With user agent properties, <a href="https://gist.github.com/JayPanoz/c5bbf0bd7e53997d3a91d9c1be44a82f">authors could design user-centric stylesheets</a> so, in theory, RS could not override styles at all and just set values for those properties.</p>
 
         <p>In the meantime, we have to “emulate” the cascade and resolve to <code>!important</code>. So that’s trying to make an unperfect mechanism into something more elegant, which requires a lot of fine-tuning.</p>
       </section>
@@ -107,7 +107,7 @@
           <li>user overrides which are all or nothing.</li>
         </ol>
 
-        <p>Interestingly, reading modes’ adjustments and user settings exposure are not priorities—which doesn’t mean they aren’t concerns. There are two assumptions we could make:</p>
+        <p>Interestingly, reading modes’ adjustments and user settings exposure are not priorities – which doesn’t mean they aren’t concerns. There are two assumptions we could make:</p>
 
         <ul>
           <li>providing readers with images filters in night mode is probably the best first step we can make since a significant part of authors might not use extra markup to deal with it on an image-per-image basis (especially if no other RS supports it);</li>

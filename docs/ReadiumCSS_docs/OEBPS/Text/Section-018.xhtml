@@ -146,7 +146,7 @@ body = base font-size</code></pre>
 
       <p>We’re using the current algorithm in the <code>calc()</code> function:</p>
 
-      <pre><code>1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)</code></pre>
+      <pre><code>(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__lineHeightCompensation))</code></pre>
 
       <p>Therefore, the <code>line-height</code> is:</p>
 
@@ -157,13 +157,15 @@ body = base font-size</code></pre>
 
         <li><code>1rem - 16px</code> = the current user’s <code>font-size</code> minus the one at <code>100%</code> (base <code>font-size</code>);</li>
 
-        <li><code>0.1667</code> = a scale which has been defined from an optimal range (<a href="https://css-tricks.com/magic-numbers-in-css/">it is a magic number</a> which has been retro-engineered from a set containing hundreds of samples).</li>
+        <li><code>0.1667</code> = a scale which has been defined from an optimal range (<a href="https://css-tricks.com/magic-numbers-in-css/">it is a magic number</a> which has been retro-engineered from a set containing hundreds of samples);</li>
+
+		<li><code>var(--RS__lineHeightCompensation)</code> is a factor (integer) to compensate a less than ideal <code>line-height</code>, especially in non-Latin scripts, where fonts tend to be square-ish.</li>
       </ol>
 
       <p>This isn’t a perfect solution though, and this algorithm may be revisited in the future. Indeed, caveats are:</p>
 
       <ul>
-        <li>leading also depends on line-length, which is not addressed in the algorithm itself, line-length must therefore be constrained by other means — we couldn’t rely on the viewport <code>width</code> anyway;</li>
+        <li>leading also depends on line-length, which is not addressed in the algorithm itself, line-length must therefore be constrained by other means – we couldn’t rely on the viewport <code>width</code> anyway;</li>
 
         <li>sometimes, the User Agent default <code>font-size</code> is not <code>16px</code> (e.g. Kindle experimental browser, user setting a larger <code>font-size</code>, etc.);</li>
 
@@ -171,7 +173,7 @@ body = base font-size</code></pre>
 
         <li>it’s clearly a natural logarithmic function i.e. it increases rapidly and then slows towards a zero rate of change, which will give mediocre results for very large font sizes (e.g. <code>400%</code>);</li>
 
-        <li>it doesn’t work ideally for slab serif fonts with a large x-height, thick stroke and medium character width i.e. square-ish metrics – we don’t have any in the default font-stacks but we might want to introduce a compensation factor to address this particular issue at some point.</li>
+        <li>it doesn’t work ideally for slab serif fonts with a large x-height, thick stroke and medium character width i.e. square-ish metrics – we don’t have any in the default font-stacks so we had to introduce a compensation factor to address this particular issue.</li>
       </ul>
     </section>
 

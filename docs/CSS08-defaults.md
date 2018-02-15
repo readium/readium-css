@@ -2,7 +2,7 @@
 
 [Implementers’ doc] [Authors’ info] [WIP]
 
-Defaults is currently made of 4 stylesheets:
+Defaults is currently made of 5 stylesheets:
 
 - 1 base stylesheet for all ebooks;
 - 1 default reading mode stylesheet for all ebooks (day mode);
@@ -131,7 +131,13 @@ The default line-height for body copy in case the ebook doesn’t have one decla
 
 We’re using an algorithm to find the ideal `line-height` for the current font based on its metrics (see details in the next subsection below).
 
-Please note CJK languages have a specific implementation, with a compensation factor (`--RS__cjkCompensation`).
+```
+--RS__lineHeightCompensation
+```
+
+The compensation factor (integer) the dynamic leading pseudo-algorithm must apply, if used. Default is `1` i.e. no compensation.
+
+This variable is redefined by default, in languages and scripts which need compensation due to the characteristics of their average fonts’ metrics.
 
 ### Dynamic leading (line-height)
 
@@ -145,16 +151,10 @@ This algorithm tries to:
 2. adjust this ideal `line-height` it has just computed to the current `font-size` the user has set.
 
 ```
-calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667))
+calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__lineHeightCompensation))
 ```
 
-Please note that for CJK, the algorithm has been modified:
-
-```
-calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__cjkCompensation))
-```
-
-In which, `--RS__cjkCompensation` is a factor whose default is `1.1667`. Indeed, the `line-height` is usually 15–20% larger in CJK than in other scripts/languages.
+In which, `--RS__lineHeightCompensation` is a factor whose default is `1`. Indeed, the `line-height` is usually 15–20% larger in CJK than in other scripts/languages (factor of `1.167`), but it can also used for square-ish fonts, especially in Indic.
 
 The results we could get for the vast majority of fonts can be described as good in terms of typographic color. Here is Iowan Old Style for instance.
 

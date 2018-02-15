@@ -49,7 +49,7 @@ Reasons include:
 
 If we want to solve the user settings issue well, we’ll probably have to find clever and inventive ways, selectors specificity being a dead-end in practice. 
 
-There’s [a proposal for user agent properties](https://github.com/w3c/csswg-drafts/issues/1693) and [a draft for customization](https://w3c.github.io/personalization-semantics/), they have some potential for upcoming files if EPUB gets a “do not touch my CSS” flag at some point — what’s already distributed is probably lost. With user agent properties, [authors could design user-centric stylesheets](https://gist.github.com/JayPanoz/c5bbf0bd7e53997d3a91d9c1be44a82f) so, in theory, RS could not override styles at all and just set values for those properties.
+There’s [a proposal for user agent properties](https://github.com/w3c/csswg-drafts/issues/1693) and [a draft for customization](https://w3c.github.io/personalization-semantics/), they have some potential for upcoming files if EPUB gets a “do not touch my CSS” flag at some point – what’s already distributed is probably lost. With user agent properties, [authors could design user-centric stylesheets](https://gist.github.com/JayPanoz/c5bbf0bd7e53997d3a91d9c1be44a82f) so, in theory, RS could not override styles at all and just set values for those properties.
 
 In the meantime, we have to “emulate” the cascade and resolve to `!important`. So that’s trying to make an unperfect mechanism into something more elegant, which requires a lot of fine-tuning.
 
@@ -63,7 +63,7 @@ What bothers authors the most:
 2. the complete lack of control over page layout (margins, background, etc.);
 3. user overrides which are all or nothing.
 
-Interestingly, reading modes’ adjustments and user settings exposure are not priorities—which doesn’t mean they aren’t concerns. There are two assumptions we could make: 
+Interestingly, reading modes’ adjustments and user settings exposure are not priorities – which doesn’t mean they aren’t concerns. There are two assumptions we could make: 
 
 - providing readers with images filters in night mode is probably the best first step we can make since a significant part of authors might not use extra markup to deal with it on an image-per-image basis (especially if no other RS supports it);
 - user settings exposure is probably one of the best practical ways to deal with non-binary user settings and overrides (cf. user agent properties proposal) so, once again, education/evangelization kicks in. 

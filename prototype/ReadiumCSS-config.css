@@ -30,23 +30,18 @@
 @custom-selector :--scroll-view [style*="readium-scroll-on"];
 
 /* Font-family override */
-
 @custom-selector :--font-override [style*="readium-font-on"];
 
 /* Advanced settings */
-
 @custom-selector :--advanced-settings [style*="readium-advanced-on"];
 
 /* Reading Modes */
-
 @custom-selector :--sepia-mode [style*="readium-sepia-on"];
 @custom-selector :--night-mode [style*="readium-night-on"];
 
 /* Filters (images) */
-
 @custom-selector :--darken-filter [style*="readium-darken-on"];
 @custom-selector :--invert-filter [style*="readium-invert-on"];
 
 /* Accessibility normalization */
-
 @custom-selector :--a11y-normalize [style*="readium-a11y-on"];

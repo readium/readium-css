@@ -95,39 +95,39 @@ h1 {
   margin-top: calc(var(--RS__flowSpacing) * 2);
   margin-bottom: calc(var(--RS__flowSpacing) * 2);
   /* The following is base font size * typescale power of 3 */
-  font-size: calc(((var(--RS__baseFontSize) * var(--RS__typeScale)) * var(--RS__typeScale)) * var(--RS__typeScale));
+  font-size: calc(((1em * var(--RS__typeScale)) * var(--RS__typeScale)) * var(--RS__typeScale));
 }
 
 h2 {
   margin-top: calc(var(--RS__flowSpacing) * 2);
   margin-bottom: var(--RS__flowSpacing);
   /* The following is base font size * typescale power of 2 */
-  font-size: calc((var(--RS__baseFontSize) * var(--RS__typeScale)) * var(--RS__typeScale));
+  font-size: calc((1em * var(--RS__typeScale)) * var(--RS__typeScale));
 }
 
 h3 {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: var(--RS__flowSpacing);
-  font-size: calc(var(--RS__baseFontSize) * var(--RS__typeScale));
+  font-size: calc(1em * var(--RS__typeScale));
 }
 
 h4 {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: var(--RS__flowSpacing);
-  font-size: var(--RS__baseFontSize);
+  font-size: 1em;
 }
 
 h5 {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: var(--RS__flowSpacing);
-  font-size: var(--RS__baseFontSize);
+  font-size: 1em;
   font-variant: small-caps;
 }
 
 h6 {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: 0;
-  font-size: var(--RS__baseFontSize);
+  font-size: 1em;
   text-transform: lowercase;
   font-variant: small-caps;
 }

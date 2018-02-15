@@ -75,6 +75,7 @@ code, kbd, samp, tt {
 sub, sup {
   line-height: 1;
   position: relative;
+  font-size: 67.5%;
 }
 
 sub {
@@ -105,7 +106,7 @@ h1 {
   margin-left: calc(var(--RS__flowSpacing) * 2);
   margin-right: calc(var(--RS__flowSpacing) * 2);
   /* The following is base font size * typescale power of 3 */
-  font-size: calc(((var(--RS__baseFontSize) * var(--RS__typeScale)) * var(--RS__typeScale)) * var(--RS__typeScale));
+  font-size: calc(((1em * var(--RS__typeScale)) * var(--RS__typeScale)) * var(--RS__typeScale));
   text-indent: 2rem;
 }
 
@@ -113,21 +114,21 @@ h2 {
   margin-left: calc(var(--RS__flowSpacing) * 2);
   margin-right: var(--RS__flowSpacing);
   /* The following is base font size * typescale power of 2 */
-  font-size: calc((var(--RS__baseFontSize) * var(--RS__typeScale)) * var(--RS__typeScale));
+  font-size: calc((1em * var(--RS__typeScale)) * var(--RS__typeScale));
   text-indent: 3rem;
 }
 
 h3 {
   margin-left: var(--RS__flowSpacing);
   margin-right: var(--RS__flowSpacing);
-  font-size: calc(var(--RS__baseFontSize) * var(--RS__typeScale));
+  font-size: calc(1em * var(--RS__typeScale));
   text-indent: 4rem;
 }
 
 h4 {
   margin-left: var(--RS__flowSpacing);
   margin-right: var(--RS__flowSpacing);
-  font-size: var(--RS__baseFontSize);
+  font-size: 1em;
   font-family: var(--RS__compFontFamily);
   text-indent: 4rem;
 }

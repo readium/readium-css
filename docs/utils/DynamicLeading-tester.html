@@ -3,6 +3,9 @@
 <head>
   <title>Test</title>
   <style type="text/css" id="styles">
+  :root {
+    --RS__lineHeightCompensation: 1;
+  }
   html, body {margin: 0; padding: 0;}
   
   .main {
@@ -22,11 +25,11 @@
 }
 p {
   font-size: 1em;
-  line-height: calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667));
+  line-height: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__lineHeightCompensation));
   /* 1 line + (2 x-height - 1 character width) - ((current font-size - base font-size) * scale)
      As a result, the line-height is based on the font proportions and the current font-size
      i.e. the larger the font-size, the smaller the line-height */
-  margin: calc(1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) 2%;
+  margin: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__lineHeightCompensation)) 2%;
 }
 #console {
   box-sizing: border-box;
@@ -66,6 +69,7 @@ input {
 <div id="settings">
 <input type="text" id="fontInput" placeholder="Font Family"></input>
 <input type="text" id="fontSizer" placeholder="Font Size e.g. 200%"></input>
+<input type="text" id="lhCompensator" placeholder="Compensation factor e.g. 1"></input>
 <button type="button">Write values</button>
 </div>
 <div class="main">
@@ -85,6 +89,7 @@ var button = document.getElementsByTagName("button")[0],
     textSample = document.getElementsByTagName("p")[0],
     fontInput = document.getElementById("fontInput"),
     fontSizer = document.getElementById("fontSizer"),
+    lhCompensator = document.getElementById("lhCompensator"),
     logger = document.getElementById("console"),
     style = document.getElementById("styles");
     button.addEventListener("click", function(e) {
@@ -107,6 +112,13 @@ var button = document.getElementsByTagName("button")[0],
 			  newSize = fontSizer.value;
 			  sizeToTest = document.createTextNode(":root { font-size: " + newSize + "; }");
 			  style.appendChild(sizeToTest);
+		  }
+	  }, false);
+    lhCompensator.addEventListener("keyup", function(e) {
+		  if (e.keyCode == 13) {				// Return key
+			  newFactor = lhCompensator.value;
+			  compensatorToTest = document.createTextNode(":root { --RS__lineHeightCompensation: " + newFactor + "; }");
+			  style.appendChild(compensatorToTest);
 		  }
 	  }, false);
 </script>

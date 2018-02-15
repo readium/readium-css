@@ -32,6 +32,10 @@
   --RS__secondaryColor: ;
 }
 
+:lang("mn") {
+  --RS__baseFontSize: 100%;
+}
+
 /* STYLES */
 
 /* Typo */

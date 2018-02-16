@@ -448,17 +448,23 @@ In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can cur
 In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can currently recommend:
 
 - [Alef](http://alef.hagilda.com);
+- [David Libre](https://github.com/meirsadan/david-libre);
 - [Heebo](https://github.com/OdedEzer/heebo);
 - [Rubik Hebrew](https://github.com/meirsadan/rubik-hebrew).
 
-## Recommended fonts for Arabic
+## Recommended fonts for Arabic and Persian
 
 In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can currently recommend:
 
-- TBD
+- [Amiri](https://github.com/alif-type/amiri);
+- [Mirza](https://github.com/Tarobish/Mirza);
+- [Scheherazade](https://software.sil.org/scheherazade/).
 
 ## Recommended fonts for Indic
 
 In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can currently recommend:
 
-- TBD
+- [Catamaran](https://github.com/VanillaandCream/Catamaran-Tamil) (Tamil script);
+- [Hind Family](https://github.com/itfoundry?utf8=✓&q=hind&type=&language=") (Bengali, Devanagari, Gujarati, Gurmukhi, Kannada, Malayalam, Sinhalese, Tamil, and Telugu scripts);
+- [Mukta Family](https://github.com/EkType/Mukta) (Devanagari, Gujarati, Gurumukhi and Tamil scripts);
+- [Vesper Libre](https://github.com/motaitalic/vesper-libre) (Devanagari script).

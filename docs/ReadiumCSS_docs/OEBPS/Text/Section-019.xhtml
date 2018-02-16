@@ -104,6 +104,34 @@
         <p>Default is <code>"Andale Mono", Consolas, monospace</code>.</p>
       </section>
 
+        <section id="default-font-stacks-for-japanese-publications" class="level3">
+          <h3 class="sigil_not_in_toc">Default font-stacks for Japanese publications</h3>
+
+          <pre><code>--RS__serif-ja</code></pre>
+
+          <p>A Mincho font-stack whose fonts with proportional latin characters are prioritized for horizontal writing.</p>
+
+          <p>Default is <code>"ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif</code>.</p>
+
+          <pre><code>--RS__sans-serif-ja</code></pre>
+
+          <p>A Gothic font-stack whose fonts with proportional latin characters are prioritized for horizontal writing.</p>
+
+          <p>Default is <code>"ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif</code>.</p>
+
+          <pre><code>--RS__serif-ja-v</code></pre>
+
+          <p>A Mincho font-stack whose fonts with fixed-width latin characters are prioritized for vertical writing.</p>
+
+          <p>Default is <code>"ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif</code>.</p>
+
+          <pre><code>--RS__sans-serif-ja-v</code></pre>
+
+          <p>A Gothic font-stack whose fonts with fixed-width latin characters are prioritized for vertical writing.</p>
+
+          <p>Default is <code>"ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif</code>.</p>
+        </section>
+
       <section id="base-styles-for-all-ebooks" class="level3">
         <h3 class="sigil_not_in_toc">Base styles for all ebooks</h3>
 
@@ -270,7 +298,7 @@
 
       <pre><code>--USER__view</code></pre>
 
-      <p>Enables scroll mode.</p>
+      <p>Switches from a paged view to a scroll view.</p>
 
       <p>Scope: <code>html</code></p>
 
@@ -390,7 +418,7 @@
 
       <pre><code>--USER__darkenImages</code></pre>
 
-      <p>A filter to darken mages in night mode. It behaves as a switch i.e. if it is present, the filter is enabled.</p>
+      <p>A filter to darken images in night mode.</p>
 
       <p>Scope: <code>html</code></p>
 
@@ -398,7 +426,7 @@
 
       <pre><code>--USER__invertImages</code></pre>
 
-      <p>A filter to invert images in night mode. It behaves as a switch i.e. if it is present, the filter is enabled.</p>
+      <p>A filter to invert images in night mode.</p>
 
       <p>Scope: <code>html</code></p>
 

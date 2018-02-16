@@ -27,7 +27,7 @@ Users’ styles > Authors’ styles > Implementers’ styles
 
 Which is why conceptualizing this issue as intents may help.
 
-Typography is not just a set of settings though, it’s a complex system in which some settings impact other settings. For instance, font-size impacts line-height and line-length, which impacts the number of columns.
+Typography is not just a set of settings though, it’s a complex system in which some settings impact others. For instance, font-size impacts line-height and line-length, which impacts the number of columns.
 
 It is up to implementers to pick their preferred approach (minimal set, presets, minimal set/presets with advanced settings, maximal set) since it is primarily an UX issue.
 
@@ -59,7 +59,7 @@ For a11y-related typefaces (Open Dyslexic, bold style of sans-serif family), the
 
 Declaring a `font-family` for `body`, `p` and `p.class` is so common that it should not be considered an intent per se. While `p.class` is debatable, it is so widespread in practice (some authoring tools output `font-family` for every paragraph style) that it can’t be considered an intent in pure CSS.
 
-A different `font-family` can be set for headings (`h1`, `h2`, `h3` etc.), `blockquote`, `i`, `span`, etc.
+A different `font-family` can be set for headings (`h1`, `h2`, `h3`, etc.), `blockquote`, `i`, `span`, etc.
 
 ### What to do
 

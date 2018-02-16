@@ -490,9 +490,9 @@ font-family: "Latin Modern Math", "STIX Two Math", "XITS Math", "STIX Math", "Li
 
 ## EBPAJ patch for Japanese
 
-The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What it does in this polyfill is keeping the default value used in EBPAJ templates and providing fallbacks for all platforms.
+The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What it does in this patch is keeping the default value used in EBPAJ templates and providing fallbacks for all platforms.
 
-Implementers might want to load this polyfill only if they find one of the following metadata items in the OPF package:
+Implementers might want to load this patch only if they find one of the following metadata items in the OPF package:
 
 - version 1: `<dc:description id="ebpaj-guide">ebpaj-guide-1.0</dc:description>`
 - version 1.1: `<meta property="ebpaj:guide-version">1.1</meta>`

@@ -12,6 +12,8 @@ This could well explain why the most popular Reading Apps tend to implement the 
 
 Occasionally, when an app does support a language, it can put some constraints on authors, as there is no other way to make sure the publication will be handled well otherwise e.g. specifying the `Hans` or `Hant` script for Chinese (`zh`).
 
+We can’t overemphasize the importance of the internationalization process though, as the 24 languages we added extend support to 3,049,150,507 speakers, from the 1,150 people speaking Western Canadian Inuktitut, to the 1,200,000,000 speaking Chinese. In total, we can cover the needs of 5,262,900,507 speakers. Credit where credit is due, this wouldn’t have been possible if Operating Systems and browsers didn’t tackle this process upstream, added fonts for those languages and improved support in rendering engines.
+
 ## Resources
 
 - [W3C Internationalization Working Group Home Page](https://www.w3.org/International/core/Overview)
@@ -208,7 +210,7 @@ The most information we have, the better the fix will be. Please feel free to go
 
 ### Sending feedback
 
-We’re not saying you should do the implementation if we don’t support it at all or very well, but it is noteworthy that we can’t necessarily get all the details right, especially when we don’t know how to speak and write a language or script.
+We’re not saying you should implement a support of script yourself if we don’t support it at all or very well, but it is noteworthy that we can’t necessarily get all the details right, especially when we don’t know how to speak and write the language you wish were supported or improved.
 
 If our font-stacks are not good enough, a solider one will help. If we don’t have any font-stack for a language, a basic one will do. Additionally, you can point us to libre/open-source fonts which you think should be recommended to implementers.
 

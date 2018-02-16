@@ -145,7 +145,7 @@ The `contain` property indicates that **the element and its contents are, as muc
 
 This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page. To put it simply, it lets developers limit the scope of the browser's styles, layout and paint work.
 
-It was primarily meants for webpages which contain a lot of widgets that are all independent as it can be used to prevent one widget's CSS rules from changing other things on the page.
+It was primarily meant for webpages which contain a lot of widgets that are all independent as it can be used to prevent one widget's CSS rules from changing other things on the page.
 
 ### Usage
 

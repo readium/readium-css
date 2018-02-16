@@ -12,7 +12,7 @@ This is really tricky as **there may be a cultural factor to take into account**
 
 When asked directly, the vast majority of users will say they prefer basic settings (reading modes, typeface, and font size) over other options (maximum amount of settings possible, themes, customizable themes). Customizable themes and advanced settings are equally popular, at a distant second place.
 
-Once again, this is a complex UX issue and your mileage may vary. On Android for instance, there is a lot of apps with advanced settings as the default, and millions of people use them. So it’s primarily about your UX proposal, people using it, etc.
+Once again, this is a complex UX issue and your mileage may vary. On Android for instance, there is a lot of apps with advanced settings as the default, and millions of people are using them daily. So it’s primarily about your UX proposal, people using it, etc.
 
 Hopefully, Readium CSS was designed to take all those options into account: modules are take or leave, which implies you can build any UX from them.
 
@@ -24,7 +24,7 @@ We’ve been running forms on this topic but answers can’t be taken at face va
 
 People keeping the publisher’s typeface are in the minority (< 15%). Most users at least change the typeface occasionally (see reasons below), although they don’t necessarily do it for each ebook – some ebooks simply use the default typeface so it’s quite complex to measure.
 
-What’s important is that **you’d better have some kind of bulletproof set of RS typefaces.** Bulletproof is the keyword here, since it is difficult to imagine a set that will satisfy everybody. There won’t be any silver bullet. 
+What’s important is that **you’d better have some kind of bulletproof selection of RS typefaces.** “Bulletproof” is the keyword here, since it is difficult to imagine a selection that will satisfy everybody. There won’t be any silver bullet. 
 
 Since more people systematically change the publisher’s typeface than those who never do it, **implementers might end up with a huge share of users systematically changing the typeface and could adjust the UX accordingly** (global setting applying the typeface in all books).
 

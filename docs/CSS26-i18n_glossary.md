@@ -300,6 +300,9 @@ This glossary has been created from the <a href="https://www.w3.org/TR/jlreq/#te
   <dt>Ideographic numerals / Kansūji (漢数字)</dt>
   <dd>Ideographic characters representing numbers.</dd>
 
+  <dt>Inline cutting note / Warichu (割注)</dt>
+  <dd>A note of two or more lines inserted in the text. It includes brackets which surround the note (JIS Z 8125)</dd>
+
   <dt>Inseparable characters rule / Bunri kinshi (分離禁止)</dt>
   <dd>A line adjustment rule that prohibits inserting any space between specific combinations of characters. (JIS Z 8125)</dd>
 
@@ -410,9 +413,6 @@ This glossary has been created from the <a href="https://www.w3.org/TR/jlreq/#te
 
   <dt>Vertical writing mode / Tate gumi (縦組)</dt>
   <dd>The process or the result of arranging characters on a line from top to bottom, of lines on a page from right to left, and/or of columns on a page from top to bottom. (JIS Z 8125)</dd>
-
-  <dt>Inline cutting note / Warichu (割注)</dt>
-  <dd>A note of two or more lines inserted in the text. It includes brackets which surround the note (JIS Z 8125)</dd>
 
   <dt>Widow Adjustment / Danraku matsubi shori (段落末尾処理)</dt>
   <dd>A method of line composition to adjust lines in a paragraph so that the last line consists of more than a given number of characters.</dd>

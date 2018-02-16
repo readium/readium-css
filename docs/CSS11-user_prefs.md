@@ -76,7 +76,7 @@ Possible values: `readium-font-on` | `readium-font-off`
 
 ### Advanced Settings
 
-Acts as an explicit switch to overrides publisher’s styles.
+Acts as an explicit switch to override the publisher’s styles.
 
 It must be set if the user changes `font-family` or `font-size`.
 

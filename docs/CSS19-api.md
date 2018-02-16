@@ -114,6 +114,40 @@ A monospace font-stack relying on pre-installed fonts.
 
 Default is `"Andale Mono", Consolas, monospace`.
 
+### Default font-stacks for Japanese publications
+
+```
+--RS__serif-ja
+```
+
+A Mincho font-stack whose fonts with proportional latin characters are prioritized for horizontal writing.
+
+Default is `"ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif`.
+
+```
+--RS__sans-serif-ja
+```
+
+A Gothic font-stack whose fonts with proportional latin characters are prioritized for horizontal writing.
+
+Default is `"ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif`.
+
+```
+--RS__serif-ja-v
+```
+
+A Mincho font-stack whose fonts with fixed-width latin characters are prioritized for vertical writing.
+
+Default is `"ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif`.
+
+```
+--RS__sans-serif-ja-v
+```
+
+A Gothic font-stack whose fonts with fixed-width latin characters are prioritized for vertical writing.
+
+Default is `"ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif`.
+
 ### Base styles for all ebooks
 
 ```
@@ -314,7 +348,7 @@ It impacts `body`.
 --USER__view
 ```
 
-Enables scroll mode.
+Switches from the paged to the scroll view.
 
 Scope: `html`
 
@@ -468,7 +502,7 @@ Scope: `html`
 --USER__darkenImages
 ```
 
-A filter to darken mages in night mode. It behaves as a switch i.e. if it is present, the filter is enabled.
+A filter to darken images in night mode.
 
 Scope: `html`
 
@@ -478,7 +512,7 @@ It impacts all `img` elements in the DOM.
 --USER__invertImages
 ```
 
-A filter to invert images in night mode. It behaves as a switch i.e. if it is present, the filter is enabled.
+A filter to invert images in night mode.
 
 Scope: `html`
 

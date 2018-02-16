@@ -945,9 +945,9 @@ unicode-range: U+0500-052F;</code></pre>
     <section id="ebpaj-patch-for-japanese" class="level2">
       <h2 id="sigil_toc_id_130">EBPAJ patch for Japanese</h2>
 
-      <p>The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What it does in this polyfill is keeping the default value used in EBPAJ templates and providing fallbacks for all platforms.</p>
+      <p>The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What it does in this patch is keeping the default value used in EBPAJ templates and providing fallbacks for all platforms.</p>
 
-      <p>Implementers might want to load this polyfill only if they find one of the following metadata items in the OPF package:</p>
+      <p>Implementers might want to load this patch only if they find one of the following metadata items in the OPF package:</p>
 
       <ul>
         <li>version 1: <code>&lt;dc:description id="ebpaj-guide"&gt;ebpaj-guide-1.0&lt;/dc:description&gt;</code></li>

@@ -148,7 +148,7 @@ This metadata has an `ibooks:` prefix.
 Authors must add the following prefix attribute in their `<package>` first:
 
 ```
-prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/
+prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/"
 ```
 
 Then, they can use the ibooks-specific metadata. 

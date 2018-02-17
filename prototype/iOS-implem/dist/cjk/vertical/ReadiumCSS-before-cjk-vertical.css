@@ -526,6 +526,10 @@ a, h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
+div {
+  max-width: var(--RS__maxMediaHeight);
+}
+
 /* Size medias */
 
 /* You can override CSS variables by re-defining it for all elements or a specific one */

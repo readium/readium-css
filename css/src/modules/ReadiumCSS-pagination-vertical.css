@@ -90,7 +90,7 @@
   hanging-punctuation: last allow-end;
 }
 
-:root:lang(mn) {
+:root:lang(mn-Mong) {
   /* Ensure the correct writing-mode is used for mongolian if vertical */
   -ms-writing-mode: tb;
   -webkit-writing-mode: vertical-lr;

@@ -36,7 +36,8 @@
     "postcss-sorting": "latest",
     "postcss-custom-media": "latest",
     "postcss-custom-selectors": "latest",
-    "postcss-css-variables": "latest"
+    "postcss-css-variables": "latest",
+    "postcss-discard-comments": "latest"
   },
   "scripts": {
     "build-ltr": "postcss src/ReadiumCSS-before.css -o dist/ReadiumCSS-before.css && postcss src/ReadiumCSS-default.css -o dist/ReadiumCSS-default.css && postcss src/ReadiumCSS-after.css -o dist/ReadiumCSS-after.css",

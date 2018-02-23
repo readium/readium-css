@@ -9,8 +9,12 @@
 /* [style*="--USER__view"] can be used to increase specificity but performance hit */
 :root:--scroll-view {
   /* Reset html size so that the user can scroll */
+  min-width: 0 !important;
   width: auto !important;
+  max-width: none !important;
+  min-height: 0 !important;
   height: auto !important;
+  max-height: none !important;
   
   /* Reset columns, auto + auto = columns can’t be created */
   -webkit-columns: auto auto !important;

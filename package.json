@@ -1,7 +1,7 @@
 {
   "name": "readium-css",
   "description": "A set of reference stylesheets for EPUB Reading Systems",
-  "version": "0.7.9",
+  "version": "0.8.0",
   "homepage": "https://github.com/readium/readium-css",
   "keywords": [
     "epub",
@@ -28,7 +28,7 @@
       "url": "https://github.com/readium/readium-css/blob/master/LICENSE"
     }
   ],
-  "main": "prototype/ReadiumCSS-config.css",
+  "main": "css/ReadiumCSS-config.css",
   "devDependencies": {
     "stylelint": "latest",
     "postcss-cli": "latest",

@@ -11,7 +11,7 @@
 
 /* apply col setting except for tablet portrait */
 @media screen and (--responsive-columns),
-screen (--mobile-columns) {
+screen and (--mobile-columns) {
   :root[style*="--USER__colCount: 1"],
   :root[style*="--USER__colCount:1"],
   :root[style*="--USER__colCount: 2"],

@@ -113,6 +113,16 @@ body {
   }
 }
   
+/* Desktop + tablet large */
+/* We get the previous settings, we just change the margins */
+@media screen and (min-width: 75em) {
+  :root {
+    --RS__pageGutter: 50px;
+  }
+}
+
+/* At this point (80em or so), constraining line length must be done at the web view/iframe level, or by limiting the size of :root itself */
+
 /* Desktop small + phablet + tablet landscape */
 @media screen and (--responsive-columns),
 screen and (--mobile-columns) {
@@ -124,13 +134,3 @@ screen and (--mobile-columns) {
     --RS__maxLineLength: 39.99rem; /* If we don’t use this, colNumber user setting won’t work in Safari… */
   }
 }
-  
-/* Desktop + tablet large */
-/* We get the previous settings, we just change the margins */
-@media screen and (min-width: 75em) {
-  :root {
-    --RS__pageGutter: 50px;
-  }
-}
-
-/* At this point (80em or so), constraining line length must be done at the web view/iframe level, or by limiting the size of :root itself */

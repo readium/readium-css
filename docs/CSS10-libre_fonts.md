@@ -433,7 +433,7 @@ OpenType Features: numeric figure values.
 
 Microsoft has been investing a lot of resources in designing fonts that render perfectly on this platform, especially with ClearType. Typefaces like Cambria, Constantia, Arial Nova, Georgia Pro, Sitka, Verdana Pro, and more, offer a large amount of styles, excellent language support, extensive support of Open Type features, and high quality rendering, even on mediocre screens.
 
-As a consequence, we strongly recommend prioritizing such system fonts for the core selection and using Open Source fonts as extras.
+As a consequence, we strongly recommend prioritizing such system fonts for the core selection and using Open Source fonts as extras. A list of system fonts available can be found in [Microsoft Typography docs](https://docs.microsoft.com/typography/).
 
 ## Recommended fonts for CJK
 

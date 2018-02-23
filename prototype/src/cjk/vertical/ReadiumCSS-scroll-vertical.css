@@ -7,7 +7,7 @@
    Repo: https://github.com/readium/readium-css */
 
 /* [style*="--USER__view"] can be used to increase specificity but performance hit */
-:root[style*="readium-scroll-on"] {
+:root:--scroll-view {
   /* Reset html size so that the user can scroll */
   min-width: 0 !important;
   width: auto !important;
@@ -22,7 +22,7 @@
 }
   
 /* Make sure line-length is limited in all configs */
-:root[style*="readium-scroll-on"] body {
+:root:--scroll-view body {
   --RS__maxLineLength: 40.01rem !important; /* Fixes fragmentation update issues in Webkit i.e. value must be slightly different than the one for pagination */
 }
   

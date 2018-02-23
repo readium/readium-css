@@ -9,7 +9,7 @@
 /* CONFIG */
 
 /* [style*="--USER__appearance"] can be used to increase specificity but performance hit */
-:root[style*="readium-sepia-on"] {
+:root:--sepia-mode {
   --RS__backgroundColor: #faf4e8;
   --RS__textColor: #121212;
 
@@ -25,25 +25,25 @@
 
 /* we don’t need to redeclare bg-color and color for :root since we will inherit and update from day/default mode */
 
-:root[style*="readium-sepia-on"] body {
+:root:--sepia-mode body {
   background-color: var(--RS__backgroundColor);
   /* Should be transparent but Chrome bug https://bugs.chromium.org/p/chromium/issues/detail?id=711955&q=mix-blend-mode&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified */
 
   color: inherit;
 }
 
-:root[style*="readium-sepia-on"] a:link,
-:root[style*="readium-sepia-on"] a:link * {
+:root:--sepia-mode a:link,
+:root:--sepia-mode a:link * {
   color: var(--RS__linkColor);
 }
 
-:root[style*="readium-sepia-on"] a:visited,
-:root[style*="readium-sepia-on"] a:visited * {
+:root:--sepia-mode a:visited,
+:root:--sepia-mode a:visited * {
   color: var(--RS__visitedColor);
 }
 
-:root[style*="readium-sepia-on"] svg,
-:root[style*="readium-sepia-on"] img {
+:root:--sepia-mode svg,
+:root:--sepia-mode img {
   /* Make sure the proper bg-color is used for the blend mode */
   background-color: var(--RS__backgroundColor) !important;
   mix-blend-mode: multiply;

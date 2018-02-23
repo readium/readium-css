@@ -6,10 +6,10 @@
 
    Repo: https://github.com/readium/readium-css */
 
-:root[style*="readium-advanced-on"][style*="--USER__arabicLigatures"] {
+:root:--advanced-settings[style*="--USER__arabicLigatures"] {
   font-variant-ligatures: var(--USER__ligatures) !important;
 }
 
-:root[style*="readium-advanced-on"][style*="--USER__arabicLigatures"] * {
+:root:--advanced-settings[style*="--USER__arabicLigatures"] * {
   font-variant-ligatures: inherit !important;
 }

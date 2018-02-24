@@ -59,14 +59,12 @@ We meet both requirements by default.
 
 As regards the cascade, the following list is the priority order we should emulate: 
 
-1. transition declarations;
-2. important user agent declarations;
-3. important user declarations;
-4. important author declarations;
-5. animation declarations;
-6. normal author declarations;
-7. normal user declarations;
-8. normal user agent declarations.
+1. important user agent declarations;
+2. important user declarations;
+3. important author declarations;
+4. normal author declarations;
+5. normal user declarations;
+6. normal user agent declarations.
 
 Most user declarations have to use `!important` to make sure they are applied, which is conformant. However, we try to manage “normal author declarations” by carefully targeting selectors for each user setting.
 

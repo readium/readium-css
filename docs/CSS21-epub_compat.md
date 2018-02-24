@@ -12,7 +12,7 @@ There exists an increasingly large corpus of ebook content that depends on non-s
 
 ## CSS At-rules
 
-### `@page`
+### @page
 
 ```
 @page
@@ -26,7 +26,7 @@ The `@page` at-rule can be accessed via the CSS object model interface `CSSPageR
 
 MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/@page 
 
-### `@supports`
+### @supports
 
 ```
 @supports

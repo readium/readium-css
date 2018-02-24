@@ -13,7 +13,7 @@
   <section id="readium-css-further-details" class="level1">
         <h1>Readium CSS Further Details: Explaining the CSS Voodoo</h1>
 
-        <p>[Implementers’ doc] [WIP]</p>
+        <p>[Implementers’ doc]</p>
 
         <p>Some parts of Readium CSS might feel like CSS voodoo at first sight. The goal of this document is to clarify how those parts actually work.</p>
 
@@ -38,9 +38,13 @@
         <section id="typefaces-1" class="level4">
           <h4 class="sigil_not_in_toc">Typefaces</h4>
 
+		  <hr/>
+
           <pre><code>--RS__compFontFamily</code></pre>
 
           <p>The typeface for headings. The value can be another variable e.g. <code>var(-RS__humanistTf)</code>.</p>
+
+		  <hr/>
 
           <pre><code>--RS__codeFontFamily</code></pre>
 
@@ -50,15 +54,23 @@
         <section id="typography-2" class="level4">
           <h4 class="sigil_not_in_toc">Typography</h4>
 
+		  <hr/>
+
           <pre><code>--RS__typeScale</code></pre>
 
           <p>The scale to be used for computing all elements’ <code>font-size</code>. Since those font sizes are computed dynamically, you can set a smaller type scale when the user sets one of the largest font sizes.</p>
 
-          <p>Possible values: <code>1</code> | <code>1.067</code> | <code>1.125</code> | <code>1.2</code> (suggested default) | <code>1.25</code> | <code>1.333</code> | <code>1.414</code> | <code>1.5</code> | <code>1.618</code></p>
+          <p>Possible values: <code>1</code> | <code>1.067</code> | <code>1.125</code> (suggested default) | <code>1.2</code> | <code>1.25</code> | <code>1.333</code> | <code>1.414</code> | <code>1.5</code> | <code>1.618</code></p>
+
+		  <p>The suggested default will accomodate most configurations, from small to large screens. Please note it is different from the <code>--USER__typeScale</code> suggested default, which was designed to accomodate the publisher’s styles.</p>
+
+		  <hr/>
 
           <pre><code>--RS__baseFontSize</code></pre>
 
-          <p>The default <code>font-size</code> for body copy. It will serve as a reference font all related computations.</p>
+          <p>The default <code>font-size</code> for body copy. It will serve as a reference for all related computations.</p>
+
+		  <hr/>
 
           <pre><code>--RS__baseLineHeight</code></pre>
 
@@ -68,13 +80,19 @@
         <section id="vertical-rhythm-1" class="level4">
           <h4 class="sigil_not_in_toc">Vertical rhythm</h4>
 
+		  <hr/>
+
           <pre><code>--RS__flowSpacing</code></pre>
 
           <p>The default vertical margins for HTML5 flow content e.g. <code>pre</code>, <code>figure</code>, <code>blockquote</code>, etc.</p>
 
+		  <hr/>
+
           <pre><code>--RS__paraSpacing</code></pre>
 
           <p>The default vertical margins for paragraphs.</p>
+
+		  <hr/>
 
           <pre><code>--RS__paraIndent</code></pre>
 
@@ -84,9 +102,13 @@
         <section id="hyperlinks-1" class="level4">
           <h4 class="sigil_not_in_toc">Hyperlinks</h4>
 
+		  <hr/>
+
           <pre><code>--RS__linkColor</code></pre>
 
           <p>The default <code>color</code> for hyperlinks.</p>
+
+		  <hr/>
 
           <pre><code>--RS__visitedColor</code></pre>
 
@@ -96,9 +118,13 @@
         <section id="accentuation-colors-1" class="level4">
           <h4 class="sigil_not_in_toc">Accentuation colors</h4>
 
+		  <hr/>
+
           <pre><code>--RS__primaryColor</code></pre>
 
           <p>An optional primary accentuation <code>color</code> you could use for headings or any other element of your choice.</p>
+
+		  <hr/>
 
           <pre><code>--RS__secondaryColor</code></pre>
 
@@ -180,7 +206,7 @@ body = base font-size</code></pre>
     <section id="conditional-selectors-for-user-settings" class="level2">
       <h2 id="sigil_toc_id_53">Conditional Selectors for user settings</h2>
 
-      <p>The <code>ReadiumCSS-user_settings.css</code> can be appended on load, it won’t have any effect until a user-setting variable (or inline style) is set.</p>
+      <p>Use settings are appended on load and won’t have any effect until a user-setting variable (or inline style) is set.</p>
 
       <p>In order to do that, we must use “conditional selectors.” Problem is there is no <code>if/else statements</code> in CSS so how do we achieve this?</p>
 
@@ -188,13 +214,13 @@ body = base font-size</code></pre>
 
       <p>Attribute selectors with pseudo-regex.</p>
 
-      <p>As soon as you set a property (or add an inline style) to the <code>html</code> (or root) element, the user setting applies.</p>
+      <p>As soon as you set a property (or add an inline style) and its required flag to the <code>html</code> (or root) element, the user setting applies.</p>
 
       <p>Whenever needed, we’re leveraging explicit inheritance (<code>inherit</code> value) so that the <code>:root</code> value can be passed throughout the DOM, which makes it compatible with inline styles, at least for some settings.</p>
 
       <p>We’re also relying on the <code>:not()</code> pseudo-class to exclude some elements. Think of it as the following command prompt: “make all elements in the DOM inherit the value, excepted this one and that one.”</p>
 
-      <p><a href="https://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/">Performance of those selectors</a> should not necessarily be a major concern. Indeed, authors’ stylesheets’ (weight, complexity, etc.) and expensive properties will have a much larger impact on performance.</p>
+      <p><a href="https://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/">Performance of those selectors</a> should not necessarily be a major concern. Indeed, authors’ stylesheets (weight, complexity, etc.) and expensive properties will have a much larger impact on performance.</p>
 
       <p>The biggest issue with this is that it requires some time to get accustomed to, as it objectively feels like some kind of CSS trick borderline to CSS voodoo. It has proved reliable during testing though, and already deals with user settings issues other Reading Systems might have had troubles addressing so far. In addition, it automagically forces the necessary recalc some user settings absolutely require.</p>
     </section>
@@ -202,9 +228,7 @@ body = base font-size</code></pre>
     <section id="themes-1" class="level2">
       <h2 id="sigil_toc_id_54">Themes</h2>
 
-      <p>In this design model, themes can be a simple set of user settings. They consequently can be treated as JSON objects you can parse to add properties to the <code>html</code> (root) element, and stringify to save/cache if the user creates a custom theme. No extra stylesheet needed.</p>
-
-      <p>Another option is creating a boilerplate from the default stylesheet, so that themes can be separated from user settings if some implementers prefer this alternate approach (this boilerplate will be provided as part of Readium CSS beta).</p>
+      <p>In this design model, themes can be a simple set of user settings. They consequently can be treated as objects you can parse to add properties to the <code>html</code> (root) element, and stringify to save/cache if the user creates a custom theme. No extra stylesheet needed.</p>
     </section>
   </section>
 </body>

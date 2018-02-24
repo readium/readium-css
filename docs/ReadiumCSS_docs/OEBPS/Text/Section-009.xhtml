@@ -13,7 +13,7 @@
   <section id="default-fonts" class="level1">
     <h1>Typefaces and font-stacks</h1>
 
-    <p>[Implementers’ doc] [Authors’ info] [WIP]</p>
+    <p>[Implementers’ doc] [Authors’ info]</p>
 
     <p>In order to get the best performance and language support possible, we tried to design off-the-rack font-stacks using pre-installed system fonts.</p>
 
@@ -875,7 +875,7 @@ unicode-range: U+0500-052F;</code></pre>
 
           <li>use generous letter spacing (<code>letter-spacing</code> setting);</li>
 
-          <li>avoid italics;</li>
+          <li>avoid italics (<code>--USER__a11yNormalize</code> flag);</li>
 
           <li>generally use sans serif faces (<code>font-family</code> setting);</li>
 
@@ -945,7 +945,7 @@ unicode-range: U+0500-052F;</code></pre>
     <section id="ebpaj-patch-for-japanese" class="level2">
       <h2 id="sigil_toc_id_130">EBPAJ patch for Japanese</h2>
 
-      <p>The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What it does in this patch is keeping the default value used in EBPAJ templates and providing fallbacks for all platforms.</p>
+      <p>The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What this patch does is to keep the default value used in EBPAJ templates and provide fallbacks for all platforms.</p>
 
       <p>Implementers might want to load this patch only if they find one of the following metadata items in the OPF package:</p>
 

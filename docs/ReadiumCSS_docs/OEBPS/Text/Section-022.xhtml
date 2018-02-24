@@ -13,7 +13,7 @@
   <section id="postcss" class="level1">
     <h1>PostCSS</h1>
 
-    <p>[Implementers’ doc] [WIP]</p>
+    <p>[Implementers’ doc]</p>
 
     <p>PostCSS is a tool for transforming CSS with JavaScript. It comes with a vast amount of task-oriented plugins and allows authors to use modern specs which are not implemented yet.</p>
 
@@ -25,23 +25,77 @@
       <li><a href="https://www.postcss.parts">PostCSS plugins list</a></li>
     </ul>
 
-    <section id="useful-plugins" class="level2">
-      <h2 id="sigil_toc_id_59">Useful plugins</h2>
+    <section id="dev-dependencies" class="level2">
+      <h2 id="sigil_toc_id_136">Dev Dependencies</h2>
 
-      <p>Here is a list of PostCSS plugins which might prove useful to implementers.</p>
+      <p>ReadiumCSS is relying on a PostCSS config to build <code>dist</code> stylesheets. If you <code>npm install</code> the repository, all those dependencies will be installed as well.</p>
+
+      <p>Here is the current list of dependencies:</p>
 
       <ul>
-        <li>Avoid errors: <a href="https://stylelint.io/user-guide/postcss-plugin/">Stylelint</a></li>
+        <li>stylelint (<a href="https://stylelint.io/user-guide/postcss-plugin/">link</a>);</li>
 
-        <li>Reordering rules and properties: <a href="https://github.com/hudochenkov/postcss-sorting">postcss-sorting</a></li>
+        <li>postcss-cli (<a href="https://github.com/postcss/postcss-cli">link</a>);</li>
 
-        <li>Adding vendor prefixes: <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>
+        <li>postcss-import (<a href="https://github.com/postcss/postcss-import">link</a>);</li>
 
+        <li>postcss-sorting (<a href="https://github.com/hudochenkov/postcss-sorting">link</a>);</li>
+
+        <li>postcss-custom-media (<a href="https://github.com/postcss/postcss-custom-media">link</a>);</li>
+
+        <li>postcss-custom-selectors (<a href="https://github.com/postcss/postcss-custom-selectors">link</a>);</li>
+
+        <li>postcss-css-variables (<a href="https://github.com/MadLittleMods/postcss-css-variables">link</a>) [disabled];</li>
+
+        <li>postcss-discard-comments (<a href="https://github.com/ben-eb/postcss-discard-comments">link</a>).</li>
+      </ul>
+    </section>
+
+    <section id="build-dist-stylesheets" class="level2">
+      <h2 id="sigil_toc_id_137">Build dist stylesheets</h2>
+
+      <p>If you customize <code>ReadiumCSS-config.css</code>, you will have to rebuild stylesheets.</p>
+
+      <p><strong>Note:</strong> the current build process is subpar – to say the least. Please feel free to improve it (gulp, grunt, etc.).</p>
+
+      <section id="available-scripts" class="level3">
+        <h3 class="sigil_not_in_toc">Available scripts</h3>
+
+        <p>By default, the following scripts are available:</p>
+
+        <ul>
+          <li><code>build</code>, will build all stylesheets;</li>
+
+          <li><code>build:ltr</code>, will build default stylesheets (Left to Right scripts);</li>
+
+          <li><code>build:rtl</code>, will build stylesheets for Right to Left scripts;</li>
+
+          <li><code>build:cjk</code>, will build stylesheets for Chinese, Japanese, and Korean in horizontal writing mode;</li>
+
+          <li><code>build:vertical</code>, will build stylesheets for Chinese, Japanese, Korean, and Mongolian in vertical writing mode.</li>
+        </ul>
+      </section>
+
+      <section id="usage" class="level3">
+        <h3 class="sigil_not_in_toc">Usage</h3>
+
+        <p>First navigate to the <code>readium-css</code> folder, then…</p>
+
+        <pre><code>npm run-script build</code></pre>
+      </section>
+    </section>
+
+    <section id="useful-plugins" class="level2">
+      <h2 id="sigil_toc_id_138">Useful plugins</h2>
+
+      <p>Here is a list of additionnal PostCSS plugins which might prove useful to implementers.</p>
+
+      <ul>
         <li>Use latest CSS syntax: <a href="https://github.com/MoOx/postcss-cssnext">CSS Next</a></li>
 
-        <li>Transform CSS variables into a static representation: <a href="https://www.npmjs.com/package/postcss-css-variables">postcss-css-variables</a></li>
+        <li>Unprefix EPUB properties: <a href="https://github.com/JayPanoz/postcss-epub-interceptor">EPUB interceptor</a></li>
 
-        <li>Concatenate stylesheets: <a href="https://github.com/postcss/postcss-import">postcss-import</a></li>
+        <li>Adding vendor prefixes: <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>
       </ul>
     </section>
   </section>

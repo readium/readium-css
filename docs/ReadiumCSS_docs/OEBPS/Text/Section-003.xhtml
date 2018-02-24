@@ -13,7 +13,7 @@
   <section id="inject-and-paginate-contents" class="level1">
       <h1>Inject and paginate EPUB contents</h1>
 
-      <p>[Implementers’ doc] [Authors’ info] [WIP]</p>
+      <p>[Implementers’ doc] [Authors’ info]</p>
 
     <section id="injection" class="level2">
       <h2 id="sigil_toc_id_8">Injection</h2>
@@ -117,7 +117,7 @@
         <p>By default, responsive columns are built into Readium CSS, which means the layout will automatically switch from a single page to a two-column spread depending on:</p>
 
         <ol>
-          <li>the size of the viewport (minumum <code>width</code> is <code>60em</code> or the smartphone is in landscape orientation);</li>
+          <li>the size of the viewport (by default, the minimum <code>width</code> is <code>60em</code> or the mobile device is in landscape orientation);</li>
 
           <li>the <code>font-size</code> currently set by the user.</li>
         </ol>
@@ -150,13 +150,21 @@
 
           <p>Please note those variables’ value can be redefined using media queries. You don’t need to redeclare entire declarations.</p>
 
+		  <hr/>
+
           <pre><code>--RS__colWidth</code></pre>
 
           <p>The optimal column’s width. It serves as a floor in our design.</p>
 
+		  <p>It must not be set in <code>rem</code> as there is currently a bug with this unit in some implementations (the <code>em</code> unit is fine).</p>
+
+		  <hr/>
+
           <pre><code>--RS__colCount</code></pre>
 
           <p>The optimal number of columns (depending on the columns’ width).</p>
+
+		  <hr/>
 
           <pre><code>--RS__colGap</code></pre>
 
@@ -164,9 +172,13 @@
 
           <p>You must account for this gap when scrolling.</p>
 
+		  <hr/>
+
           <pre><code>--RS__pageGutter</code></pre>
 
           <p>The horizontal page margins. It must be set in pixels so that it won’t resize with font size.</p>
+
+		  <hr/>
 
           <pre><code>--RS__maxLineLength</code></pre>
 
@@ -755,17 +767,25 @@ body {
           <section id="variables-you-can-set-1" class="level5">
             <h5 class="sigil_not_in_toc">Variables you can set</h5>
 
+			<hr/>
+
             <pre><code>--RS__maxMediaWidth</code></pre>
 
             <p>The <code>max-width</code> for media elements i.e. <code>img</code>, <code>svg</code>, <code>audio</code> and <code>video</code>.</p>
+
+			<hr/>
 
             <pre><code>--RS__maxMediaHeight</code></pre>
 
             <p>The <code>max-height</code> for media elements i.e. <code>img</code>, <code>svg</code>, <code>audio</code> and <code>video</code>.</p>
 
+			<hr/>
+
             <pre><code>--RS__boxSizingMedia</code></pre>
 
             <p>The box model (<code>box-sizing</code>) you want to use for media elements.</p>
+
+			<hr/>
 
             <pre><code>--RS__boxSizingTable</code></pre>
 

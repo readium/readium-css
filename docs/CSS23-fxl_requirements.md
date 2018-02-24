@@ -12,7 +12,7 @@ There’s a few criteria Reading Systems must meet in order to be conformant:
 
 ## Styling 
 
-You should not inject additional content such as border, margins, headers or footers into the viewport or the appplication area surrounding the viewport.
+You should not inject additional content such as borders, margins, headers or footers into the viewport or the appplication area surrounding the viewport.
 
 ## Scaling
 

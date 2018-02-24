@@ -11,36 +11,38 @@
 
 <body xml:lang="en">
   <section id="user-settings-modes-themes" class="level1">
-    <h1>User Settings, Reading modes and Themes</h1>
+    <h1>User Settings, Reading Modes and Themes</h1>
 
-    <p>[Implementers’ doc] [Authors’ info] [WIP]</p>
-
-    <p>Currently, user settings and reading modes are different stylesheets.</p>
+    <p>[Implementers’ doc] [Authors’ info]</p>
 
     <p>The idea is:</p>
 
     <ol>
-      <li>appending/removing reading modes’ stylesheet as they imply their own specific styles;</li>
+      <li>appending/removing flags and CSS variables for user settings (inline style on <code>html</code>);</li>
 
       <li>managing user settings entirely via CSS so that we don’t need to manipulate the DOM too much.</li>
     </ol>
 
-    <p>There are alternatives approaches we can adopt if this one doesn’t fit.</p>
+    <p>There are alternatives approaches you can adopt if this one doesn’t fit.</p>
+
+	<p><strong>Note:</strong> Possible values are strict i.e. implementers can’t use any other value; recommended values are loose i.e. they are left to implementers’ judgment.</p>
 
     <section id="mechanism-for-user-settings" class="level2">
       <h2 id="sigil_toc_id_36">Mechanism for user settings</h2>
 
-      <p>The <code>ReadiumCSS-user_settings.css</code> stylesheet can be appended before runtime, its declarations won’t be applied until user variables are set.</p>
+      <p>The <code>ReadiumCSS-after.css</code> stylesheet, which contains user settings, can be appended before runtime; its declarations won’t be applied until user variables are set.</p>
 
-      <p>This stylesheet is a one-two punch:</p>
+      <p>User settings require the following process:</p>
 
       <ol>
-        <li>add the variable and its value to <code>html</code>;</li>
+		<li>add the flag and its value to <code>html</code> when applicable (font override, font size, and/or advanced setting)</li>
+
+        <li>add the setting-specific variable and its value to <code>html</code>;</li>
 
         <li>styles are updated live.</li>
       </ol>
 
-      <p>The selectors used in this stylesheet are indeed “conditional”, styles are applied if the variable (or a specific value for reading modes) is set as an inline style in <code>html</code> (<code>:root</code>).</p>
+      <p>The selectors used in user settings are indeed “conditional”, styles are applied if the variable (or a specific value for reading modes) is set as an inline style in <code>html</code> (<code>:root</code>).</p>
 
       <p>In theory, we can make it work with inline styles too, when variables are not supported by the web browser.</p>
 
@@ -50,7 +52,8 @@
         <section id="setting" class="level4">
           <h4 class="sigil_not_in_toc">Setting</h4>
 
-          <pre><code>var root = document.documentElement; root.style.setProperty("name of var", "value");</code></pre>
+          <pre><code>var root = document.documentElement; 
+root.style.setProperty("name of var", "value");</code></pre>
 
           <p>You don’t need to remove the variable before setting another value, the new value will simply override the existing one.</p>
         </section>
@@ -58,21 +61,16 @@
         <section id="removing" class="level4">
           <h4 class="sigil_not_in_toc">Removing</h4>
 
-          <pre><code>var root = document.documentElement; root.style.removeProperty("name of var");</code></pre>
+          <pre><code>var root = document.documentElement; 
+root.style.removeProperty("name of var");</code></pre>
         </section>
-      </section>
-
-      <section id="caveat" class="level3">
-        <h3 class="sigil_not_in_toc">Caveat</h3>
-
-        <p>Attribute selectors don’t scale particularly well. We’ll have to pay attention to performance, especially on mobile.</p>
       </section>
     </section>
 
     <section id="flags" class="level2">
       <h2 id="sigil_toc_id_129">Flags</h2>
 
-      <p>Some variables behave like flags. You could also use custom <code>data-*</code> attributes to manage the following ones.</p>
+      <p>Some variables behave like flags. You could also use custom <code>data-*</code> attributes or CSS classes to manage the following ones. See the <a href="../Text/Section-002.xhtml">“Quickstart” doc</a> for customization.</p>
 
       <section id="user-view" class="level3">
         <h3 class="sigil_not_in_toc">User view</h3>
@@ -94,6 +92,8 @@
         <pre><code>--USER__fontOverride</code></pre>
 
         <p>Possible values: <code>readium-font-on</code> | <code>readium-font-off</code></p>
+
+		<p>To switch back to the publisher’s font, you can either change the value to `readium-font-off` or remove the flag.</p>
       </section>
 
       <section id="advanced-settings" class="level3">
@@ -101,11 +101,15 @@
 
         <p>Acts as an explicit switch to override the publisher’s styles.</p>
 
-        <p>It must be set if the user changes <code>font-family</code> or <code>font-size</code>.</p>
+        <p>It must be set if the user changes <code>font-family</code>, <code>font-size</code>, or any advanced setting.</p>
+
+		<p>If you provide users with a “Publisher’s styles” toggle, it must be enabled and disabled accordingly.</p>
 
         <pre><code>--USER__advancedSettings</code></pre>
 
         <p>Possible values: <code>readium-advanced-on</code> | <code>readium-advanced-off</code></p>
+
+		<p>To switch back to the publisher’s styles, you can either change the value to <code>readium-advanced-off</code> or remove it. This will disable all advanced settings requiring the flag.</p>
       </section>
 
       <section id="reading-modes" class="level3">
@@ -115,7 +119,7 @@
 
         <pre><code>--USER__appearance</code></pre>
 
-        <p>Possible values: <code>readium-default-on</code> | <code>readium-sepia-on</code> | <code>readium-night-on</code></p>
+        <p>Possible values: <code>readium-day-on</code> | <code>readium-sepia-on</code> | <code>readium-night-on</code></p>
       </section>
 
       <section id="filters" class="level3">
@@ -157,6 +161,10 @@
           <pre><code>--USER__colCount</code></pre>
 
           <p>Possible values: <code>1</code> | <code>2</code> | <code>auto</code> (default)</p>
+
+		  <p>Required flag: none</p>
+
+		  <p>To reset, change the value to <code>auto</code>.</p>
         </section>
 
         <section id="page-margins" class="level4">
@@ -164,7 +172,11 @@
 
           <pre><code>--USER__pageMargins</code></pre>
 
-          <p>Possible values: <code>0.5</code> | <code>0.75</code> | <code>1</code> (default) | <code>1.25</code> | <code>1.5</code> | <code>1.75</code> | <code>2</code></p>
+          <p>Recommended values: a range from <code>0.5</code> to <code>2</code>. Increments are left to implementers’ judgment.</p>
+
+		  <p>Required flag: none</p>
+
+		  <p>To reset, change the value to <code>1</code>.</p>
         </section>
       </section>
 
@@ -178,7 +190,11 @@
         <pre><code>--USER__backgroundColor 
 --USER__textColor</code></pre>
 
-        <p>Possible values: Color HEX (e.g. #FFFFFF)</p>
+        <p>Possible values: Color HEX (e.g. <code>#FFFFFF</code>), <code>rgb(a)</code>, <code>hsl</code></p>
+
+		<p>Required flag: none</p>
+
+		<p>To reset, remove both variables.</p>
       </section>
 
       <section id="hyphenation-and-justification" class="level3">
@@ -193,6 +209,8 @@
 
           <p>Possible values: <code>left</code> (LTR) or <code>right</code> (RTL) | <code>justify</code></p>
 
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
+
           <p>Note: The value <code>start</code> can be used to let all rendering engines, excepted Trident (IE11) and EdgeHTML (Edge), automatically deal with <code>left</code> and <code>right</code> based on the direction (<code>dir</code> attribute) set for the document and its nested elements.</p>
         </section>
 
@@ -202,6 +220,8 @@
           <pre><code>--USER__bodyHyphens</code></pre>
 
           <p>Possible Values: <code>auto</code> | <code>none</code></p>
+
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
         </section>
       </section>
 
@@ -215,36 +235,51 @@
 
           <pre><code>--USER__fontFamily</code></pre>
 
-          <p>Possible values: <code>var(--RS__oldStyleTf)</code> | <code>var(--RS__modernTf)</code> | <code>var(--RS__sansTf)</code> | <code>var(--RS__humanistTf)</code></p>
+          <p>Possible values: <code>var(--RS__oldStyleTf)</code> | <code>var(--RS__modernTf)</code> | <code>var(--RS__sansTf)</code> | <code>var(--RS__humanistTf)</code> | <code>&lt;string&gt;</code></p>
+
+		  <p>For Japanese, the possible values become: <code>var(--RS__serif-ja)</code> (horizontal writing) | <code>var(--RS__sans-serif-ja)</code> (horizontal writing) | <code>var(--RS__serif-ja-v)</code> (vertical writing) | <code>var(--RS__sans-serif-ja-v)</code>  (vertical writing) | <code>&lt;string&gt;</code></p>
+
+		  <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
+
+		  <p>To reset, remove the required flag.</p>
         </section>
 
         <section id="font-size-and-type-scale" class="level4">
-          <h4 class="sigil_not_in_toc">Font size and type scale</h4>
+          <h4 class="sigil_not_in_toc">Font size</h4>
 
-          <p>We have to normalize <code>font-size</code> for body copy elements so that it can work in pure CSS, which means the two following variables must be used together.</p>
-
-          <p>In order to do so, the <code>ReadiumCSS-fs_normalize.css</code> stylesheet must be appended to the document.</p>
+          <p>We have to normalize <code>font-size</code> for body copy elements so that it can work in pure CSS. In order to do so, we are using a normalize. The <code>--USER__advancedSettings: readium-advanced-on</code> style must be set for <code>html</code> in order for the font-size setting to work.</p>
 
           <p>Although it might be an issue to authors at first sight, this approach is backed by actual data.</p>
 
-          <pre><code>--USER__fontSize 
---USER__typeScale</code></pre>
+          <pre><code>--USER__fontSize</code></pre>
 
-          <p>Possible values for font-size: <code>75%</code> | <code>87.5%</code> | <code>100%</code> (default) | <code>112.5%</code> | <code>137.5%</code> | <code>150%</code> | <code>162.5%</code> | <code>175%</code> | <code>200%</code> | <code>225%</code> | <code>250%</code></p>
+          <p>Recommended values: a range from <code>75%</code> to <code>250%</code>. Increments are left to implementers’ judgment.</p>
 
-          <p>Possible values for type scale: <code>1</code> | <code>1.067</code> | <code>1.125</code> | <code>1.2</code> (suggested default) | <code>1.25</code> | <code>1.333</code> | <code>1.414</code> | <code>1.5</code> | <code>1.618</code></p>
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
+        </section>
+
+		<section id="type-scale" class="level4">
+		  <h4 class="sigil_not_in_toc">Type scale</h4>
+
+		  <p>If the <code>--USER__advancedSettings: readium-advanced-on</code> style is set for <code>html</code>, you can customize the <code>font-size</code> of all elements using a factor. This may come in handy on mobile devices, if the user sets a large font-size.</p>
+
+          <pre><code>--USER__typeScale</code></pre>
+
+          <p>Possible values: <code>1</code> | <code>1.067</code> | <code>1.125</code> | <code>1.2</code> (suggested default) | <code>1.25</code> | <code>1.333</code> | <code>1.414</code> | <code>1.5</code> | <code>1.618</code></p>
+
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
 
           <p>You can use different type scale values depending on the <code>font-size</code>. For instance, if the user sets a large one, you might want to decrease the type scale so that headings are not super large.</p>
-
-          <p>If you want to go back to the publisher’s default, the normalize stylesheet and <code>--USER__fontSize</code> property must be removed.</p>
-        </section>
+		</section>
 
         <section id="line-height" class="level4">
           <h4 class="sigil_not_in_toc">Line height</h4>
 
           <pre><code>--USER__lineHeight</code></pre>
 
-          <p>Possible values: <code>1</code> | <code>1.125</code> | <code>1.25</code> | <code>1.35</code> | <code>1.5</code> | <code>1.65</code> | <code>1.75</code> | <code>2</code></p>
+          <p>Recommended values: a range from <code>1</code> to <code>2</code>. Increments are left to implementers’ judgment.</p>
+
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
         </section>
       </section>
 
@@ -258,7 +293,9 @@
 
           <pre><code>--USER__paraSpacing</code></pre>
 
-          <p>Possible values: <code>0</code> | <code>0.375rem</code> | <code>0.75rem</code> | <code>1rem</code> | <code>1.125rem</code> | <code>1.25rem</code> | <code>1.35rem</code> | <code>1.5rem</code> | <code>1.65rem</code> | <code>1.75rem</code> | <code>2rem</code></p>
+          <p>Recommended values: a range from <code>0</code> to <code>2rem</code>. Increments are left to implementers’ judgment.</p>
+
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
         </section>
 
         <section id="paragraphs-indent" class="level4">
@@ -266,7 +303,9 @@
 
           <pre><code>--USER__paraIndent</code></pre>
 
-          <p>Possible values: <code>0</code> | <code>0.5rem</code> | <code>1rem</code> | <code>1.25rem</code> | <code>1.5rem</code> | <code>2rem</code> | <code>2.5rem</code> | <code>3rem</code></p>
+          <p>Recommended values: a range from <code>0</code> to <code>3rem</code>. Increments are left to implementers’ judgment.</p>
+
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
         </section>
       </section>
 
@@ -280,7 +319,9 @@
 
           <pre><code>--USER__wordSpacing</code></pre>
 
-          <p>Possible values: <code>0</code> | <code>0.125rem</code> | <code>0.25rem</code> | <code>0.375rem</code> | <code>0.5rem</code></p>
+          <p>Recommended values: a range from <code>0</code> to <code>1rem</code>. Increments are left to implementers’ judgment.</p>
+
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
         </section>
 
         <section id="letter-spacing" class="level4">
@@ -288,7 +329,9 @@
 
           <pre><code>--USER__letterSpacing</code></pre>
 
-          <p>Possible values: <code>0</code> | <code>0.0675rem</code> | <code>0.125rem</code> | <code>0.1875rem</code> | <code>0.25rem</code></p>
+          <p>Recommended values: a range from <code>0</code> to <code>0.5rem</code>. Increments are left to implementers’ judgment.</p>
+
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
         </section>
 
         <section id="arabic-ligatures" class="level4">
@@ -297,6 +340,8 @@
           <pre><code>--USER__ligatures</code></pre>
 
           <p>Possible values: <code>none</code> | <code>common-ligatures</code></p>
+
+		  <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
         </section>
       </section>
     </section>
@@ -314,11 +359,21 @@
     <section id="alternative-options" class="level2">
       <h2 id="sigil_toc_id_40">Alternative options</h2>
 
-      <ul>
-        <li>appending/removing overrides as <code>&lt;style&gt;</code>, dynamically</li>
+	  <p>There is not a lot of alternatives when it comes to managing user settings. Options include:</p>
 
-        <li>using custom attributes (at least for themes + appending/removing styles dynamically)</li>
+      <ul>
+        <li>appending/removing stylesheets (either <code>link</code> or <code>style</code> element) dynamically</li>
+
+        <li>traversing the DOM and appending inline styles using JavaScript</li>
+
+		<li>using classes or custom attributes for a limited subset of settings (e.g. reading modes);</li>
+
+		<li>leveraging native features web views have to offer.</li>
       </ul>
+
+	  <p>Please bear in mind Readium CSS provides a baseline, it resonably manages all those issues using CSS only. But if you want to offer users the most advanced experience there can be, you’ll end up with a mix of all those options.</p>
+
+	  <p>For instance, you can’t really manage <code>text-align</code> perfectly if you don’t traverse the DOM to find elements for which the user setting should not apply, CSS has no way to retrieve those elements.</p>
     </section>
 
     <section id="user-settings-can-be-language-specific" class="level2">

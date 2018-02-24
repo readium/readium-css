@@ -1,19 +1,19 @@
-# User Settings, Reading modes and Themes
+# User Settings, Reading Modes and Themes
 
-[Implementers’ doc] [Authors’ info] [WIP]
-
-Currently, user settings and reading modes are different stylesheets.
+[Implementers’ doc] [Authors’ info]
 
 The idea is:
 
-1. appending/removing reading modes’ stylesheet as they imply their own specific styles;
+1. appending/removing flags and CSS variables for user settings (inline style on `html`);
 2. managing user settings entirely via CSS so that we don’t need to manipulate the DOM too much.
 
-There are alternatives approaches we can adopt if this one doesn’t fit.
+There are alternatives approaches you can adopt if this one doesn’t fit.
+
+**Note:** Possible values are strict i.e. implementers can’t use any other value; recommended values are loose i.e. they are left to implementers’ judgment.
 
 ## Mechanism for user settings
 
-The `ReadiumCSS-user_settings.css` stylesheet can be appended before runtime, its declarations won’t be applied until user variables are set. 
+The `ReadiumCSS-after.css` stylesheet, which contains user settings, can be appended before runtime; its declarations won’t be applied until user variables are set. 
 
 This stylesheet is a one-two punch: 
 
@@ -44,13 +44,9 @@ var root = document.documentElement;
 root.style.removeProperty("name of var");
 ```
 
-### Caveat
-
-Attribute selectors don’t scale particularly well. We’ll have to pay attention to performance, especially on mobile.
-
 ## Flags
 
-Some variables behave like flags. You could also use custom `data-*` attributes to manage the following ones.
+Some variables behave like flags. You could also use custom `data-*` attributes or CSS classes to manage the following ones. See the [“Quickstart” doc](../docs/CSS02-quickstart.md) for customization.
 
 ### User view
 
@@ -80,6 +76,8 @@ Acts as an explicit switch to override the publisher’s styles.
 
 It must be set if the user changes `font-family` or `font-size`.
 
+If you provide users with a “Publisher’s styles” toggle, it must be appended and removed accordingly.
+
 ```
 --USER__advancedSettings
 ``` 
@@ -94,7 +92,7 @@ We currently have two reading modes for night and sepia.
 --USER__appearance
 ```
 
-Possible values: `readium-default-on` | `readium-sepia-on` | `readium-night-on`
+Possible values: `readium-day-on` | `readium-sepia-on` | `readium-night-on`
 
 ### Filters
 
@@ -148,7 +146,7 @@ It is up to implementers to decide whether they want this setting to be availabl
 --USER__pageMargins
 ```
 
-Possible values: `0.5` | `0.75` | `1` (default) | `1.25` | `1.5` | `1.75` | `2`
+Recommended values: a range from `0.5` to `2`.  Increments are left to implementers’ judgment.
 
 The user margins are a factor of the reference we set. 
 
@@ -165,7 +163,7 @@ The following two variables must be used together.
 --USER__textColor
 ```
 
-Possible values: Color HEX (e.g. #FFFFFF)
+Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
 
 ### Hyphenation and justification
 
@@ -199,28 +197,33 @@ The user can set `font-family`, `font-size` and `line-height` for body copy cont
 --USER__fontFamily
 ```
 
-Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)`
+Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)` | `<string>`
 
-#### Font size and type scale
+For Japanese, possible values become: `var(--RS__serif-ja)` (horizontal writing) | `var(--RS__sans-serif-ja)` (horizontal writing) | `var(--RS__serif-ja-v)` (vertical writing) | `var(--RS__sans-serif-ja-v)` (vertical writing) | `<string>`
 
-We have to normalize `font-size` for body copy elements so that it can work in pure CSS, which means the two following variables must be used together.
+#### Font size
 
-In order to do so, the `ReadiumCSS-fs_normalize.css` stylesheet must be appended to the document.
+We have to normalize `font-size` for body copy elements so that it can work in pure CSS. In order to do so, we are using a normalize. The `--USER__advancedSettings: readium-advanced-on` inline style must be set for `html` in order for the font-size setting to work.
 
 Although it might be an issue to authors at first sight, this approach is backed by actual data.
 
 ```
 --USER__fontSize
---USER__typeScale
 ```
 
-Possible values for font-size: `75%` | `87.5%` | `100%` (default) | `112.5%` | `137.5%` | `150%` | `162.5%` | `175%` | `200%` | `225%` | `250%`
+Recommended values for font-size: a range from `75%` to `250%`. Increments are left to implementers’ judgment.
+
+#### Type scale
+
+If the `--USER__advancedSettings: readium-advanced-on` style is set for `html`, you can customize the `font-size` of all elements using a factor. This may come in handy on mobile devices, if the user sets a large font-size.
+
+```
+--USER__typeScale
+```
 
 Possible values for type scale: `1` | `1.067` | `1.125` | `1.2` (suggested default) | `1.25` | `1.333` | `1.414` | `1.5` | `1.618`
 
 You can use different type scale values depending on the `font-size`. For instance, if the user sets a large one, you might want to decrease the type scale so that headings are not super large.
-
-If you want to go back to the publisher’s default, the normalize stylesheet and `--USER__fontSize` property must be removed.
 
 #### Line height
 
@@ -228,7 +231,7 @@ If you want to go back to the publisher’s default, the normalize stylesheet an
 --USER__lineHeight
 ```
 
-Possible values: `1` | `1.125` | `1.25` | `1.35` | `1.5` | `1.65` | `1.75` | `2`
+Recommended values: a range from `1` to `2`. Increments are left to implementers’ judgment.
 
 ### Paragraphs’ formatting
 
@@ -240,7 +243,7 @@ The user can set `margin-top`, `margin-bottom` and `text-indent` for paragraphs.
 --USER__paraSpacing
 ```
 
-Possible values: `0` | `0.375rem` | `0.75rem` | `1rem` | `1.125rem` | `1.25rem` | `1.35rem` | `1.5rem` | `1.65rem` | `1.75rem` | `2rem`
+Recommended values: a range from `0` to `2rem`. Increments are left to implementers’ judgment.
 
 #### Paragraphs’ indent
 
@@ -248,7 +251,7 @@ Possible values: `0` | `0.375rem` | `0.75rem` | `1rem` | `1.125rem` | `1.25rem` 
 --USER__paraIndent
 ```
 
-Possible values: `0` | `0.5rem` | `1rem` | `1.25rem` | `1.5rem` | `2rem` | `2.5rem` | `3rem`
+Recommended values: a range from `0` to `3rem`. Increments are left to implementers’ judgment.
 
 ### Characters’ spacing
 
@@ -260,7 +263,7 @@ The user can set `word-spacing` and `letter-spacing` for headings and body copy 
 --USER__wordSpacing
 ```
 
-Possible values: `0` | `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
+Recommended values: a range from `0.25rem` to `1rem`. Increments are left to implementers’ judgment.
 
 #### Letter spacing
 
@@ -268,7 +271,7 @@ Possible values: `0` | `0.125rem` | `0.25rem` | `0.375rem` | `0.5rem`
 --USER__letterSpacing
 ```
 
-Possible values: `0` | `0.0675rem` | `0.125rem` | `0.1875rem` | `0.25rem`
+Recommended values: a range from `0` to `0.5rem`. Increments are left to implementers’ judgment.
 
 #### Arabic Ligatures
 
@@ -288,8 +291,8 @@ In other words, think of preset and custom themes as a set of variables, which m
 
 ## Alternative options
 
-- appending/removing overrides as `<style>`, dynamically
-- using custom attributes (at least for themes + appending/removing styles dynamically)
+- Appending/removing overrides as `<style>`, dynamically
+- Using custom attributes (at least for themes + appending/removing styles dynamically)
 
 ## User settings can be language-specific
 

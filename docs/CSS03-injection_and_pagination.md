@@ -325,6 +325,8 @@ Once again, you can use it with or without pagination, it should not make any di
 
 ##### Variables you can set
 
+* * *
+
 ```
 --RS__maxMediaWidth
 ```

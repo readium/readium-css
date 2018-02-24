@@ -263,7 +263,7 @@ The user can set `word-spacing` and `letter-spacing` for headings and body copy 
 --USER__wordSpacing
 ```
 
-Recommended values: a range from `0.25rem` to `1rem`. Increments are left to implementers’ judgment.
+Recommended values: a range from `0` to `1rem`. Increments are left to implementers’ judgment.
 
 #### Letter spacing
 

@@ -235,11 +235,11 @@ When the spec was published, the *Financial Times* immediately switched to [its 
 - enforce a baseline grid;
 - better handling of `box-shadow` and `outline`.
 
-As far as I can tell, this implementation might create some issues, especially when it comes to a11y because it duplicates and hides part of elements to manage fragmentation.
+As far as we can tell, this implementation might create some issues, especially when it comes to a11y because it duplicates and hides part of elements to manage fragmentation.
 
 ## Notes
 
-It is my understanding the [Opera implementation of `overflow: -o-paged-x` in Presto](http://www.wiumlie.no/2011/reader/) solved most of the spec’s limitations, as listed by the *Financial Times*: 
+It is our understanding the [Opera implementation of `overflow: -o-paged-x` in Presto](http://www.wiumlie.no/2011/reader/) solved most of the spec’s limitations, as listed by the *Financial Times*: 
 
 - `position: fixed || absolute`;
 - fragmentation;
@@ -249,7 +249,7 @@ It is my understanding the [Opera implementation of `overflow: -o-paged-x` in Pr
 
 It is important to note the spec [has been republished as a Working Draft](https://www.w3.org/blog/CSS/2017/10/05/css-multi-column-layout-level-1-republished-as-a-working-draft/). It is very unlikely a level 2 spec will tackle those problems in the short term.
 
-From experience, I can also report there tends to be implementation-specific bugs with newer layout specs e.g. flexbox, grid, etc.
+From experience, we can also report there tends to be implementation-specific bugs with newer layout specs e.g. flexbox, grid, etc.
 
 ### Missing pieces
 

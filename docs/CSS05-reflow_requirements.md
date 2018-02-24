@@ -72,7 +72,7 @@ Most user declarations have to use `!important` to make sure they are applied, w
 
 Few user agent declarations have to use `!important` as well, in order to make sure the EPUB file displays as expected (pagination, page margins, etc.). In other words, those overrides are strictly necessary.
 
-Please make sure to check the “CSS User Setting Recommendations” and “Stylesheets Order” to manage overrides as best as possible. 
+Please make sure to check the [“CSS User Setting Recommendations”](../docs/CSS14-user_settings_recs.md) and [“Stylesheets Order”](../docs/CSS06-stylesheets_order.md) to manage overrides as best as possible. 
 
 ## Notes
 

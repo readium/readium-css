@@ -35,6 +35,8 @@ Inject ReadiumCSS stylesheets into the `<head>` of (X)HTML documents.
 
 Check the [Stylesheets order doc](../docs/CSS06-sylesheets_order.md) for further details.
 
+For RTL, you would then have to load the stylesheets in the `rtl` folder. Same for CJK. Check the [“Internationalization” doc](../docs/CSS16-internationalization.md) for guidance.
+
 By default, we inject all stylesheets on load and rely on custom properties (a.k.a. CSS variables) set on `html` to apply user settings.
 
 ## Customize

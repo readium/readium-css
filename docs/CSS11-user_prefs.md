@@ -15,12 +15,13 @@ There are alternatives approaches you can adopt if this one doesn’t fit.
 
 The `ReadiumCSS-after.css` stylesheet, which contains user settings, can be appended before runtime; its declarations won’t be applied until user variables are set. 
 
-This stylesheet is a one-two punch: 
+User settings require the following process: 
 
-1. add the variable and its value to `html`;
-2. styles are updated live.
+1. add the flag and its value to `html` when applicable (font override, font size and/or advanced setting);
+2. add the setting-specific variable and its value to `html`;
+3. styles are updated live.
 
-The selectors used in this stylesheet are indeed “conditional”, styles are applied if the variable (or a specific value for reading modes) is set as an inline style in `html` (`:root`).
+The selectors used in user settings are indeed “conditional”, styles are applied if the variable (or a specific value for reading modes) is set as an inline style in `html` (`:root`).
 
 In theory, we can make it work with inline styles too, when variables are not supported by the web browser.
 
@@ -70,19 +71,23 @@ It must be set if the user changes `font-family`.
 
 Possible values: `readium-font-on` | `readium-font-off`
 
+To switch back to the publisher’s font, you can either change the value to `readium-font-off` or remove the flag.
+
 ### Advanced Settings
 
 Acts as an explicit switch to override the publisher’s styles.
 
-It must be set if the user changes `font-family` or `font-size`.
+It must be set if the user changes `font-family`, `font-size`, or any advanced setting.
 
-If you provide users with a “Publisher’s styles” toggle, it must be appended and removed accordingly.
+If you provide users with a “Publisher’s styles” toggle, it must be enabled and disabled accordingly.
 
 ```
 --USER__advancedSettings
 ``` 
 
 Possible values: `readium-advanced-on` | `readium-advanced-off`
+
+To switch back to the publisher’s styles, you can either change the value to `readium-advanced-off` or remove it. This will disable all advanced settings requiring the flag.
 
 ### Reading Modes
 
@@ -134,11 +139,13 @@ The user can set the number of columns and page margins.
 
 Possible values: `1` | `2` | `auto` (default)
 
+Required flag: none
+
+To reset, change the value to `auto`.
+
 By default, this setting behaves as an `auto` value, it will switch to 1 or 2 columns depending on the minimum `width` available and `font-size`.
 
 It is up to implementers to decide whether they want this setting to be available and override any configuration or only some (e.g. setting only available in landscape and/or larger screens).
-
-**Warning:** it is currently disabled for tablet in portrait orientation.
 
 #### Page margins
 
@@ -148,7 +155,11 @@ It is up to implementers to decide whether they want this setting to be availabl
 
 Recommended values: a range from `0.5` to `2`.  Increments are left to implementers’ judgment.
 
-The user margins are a factor of the reference we set. 
+Required flag: none
+
+To reset, change the value to `1`.
+
+The user margins are a factor of the reference we set.
 
 This will probably be fine-tuned in the next version (beta).
 
@@ -165,6 +176,10 @@ The following two variables must be used together.
 
 Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
 
+Required flag: none
+
+To reset, remove both variables.
+
 ### Hyphenation and justification
 
 The user can set `text-align` and `hyphens` for body copy contents.
@@ -177,6 +192,8 @@ The user can set `text-align` and `hyphens` for body copy contents.
 
 Possible values: `left` (LTR) or `right` (RTL) | `justify`
 
+Required flag: `--USER__advancedSettings: readium-advanced-on`
+
 Note: the value `start` can be used to let all rendering engines, excepted Trident (IE11) and EdgeHTML (Edge), automatically deal with `left` and `right` based on the direction (`dir` attribute) set for the document and its nested elements.
 
 #### Hyphens
@@ -186,6 +203,8 @@ Note: the value `start` can be used to let all rendering engines, excepted Tride
 ```
 
 Possible Values: `auto` | `none`
+
+Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 ### Typography
 
@@ -201,6 +220,10 @@ Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sa
 
 For Japanese, possible values become: `var(--RS__serif-ja)` (horizontal writing) | `var(--RS__sans-serif-ja)` (horizontal writing) | `var(--RS__serif-ja-v)` (vertical writing) | `var(--RS__sans-serif-ja-v)` (vertical writing) | `<string>`
 
+Required flag: `--USER__fontOverride: readium-font-on`
+
+To reset, remove the required flag.
+
 #### Font size
 
 We have to normalize `font-size` for body copy elements so that it can work in pure CSS. In order to do so, we are using a normalize. The `--USER__advancedSettings: readium-advanced-on` inline style must be set for `html` in order for the font-size setting to work.
@@ -211,7 +234,9 @@ Although it might be an issue to authors at first sight, this approach is backed
 --USER__fontSize
 ```
 
-Recommended values for font-size: a range from `75%` to `250%`. Increments are left to implementers’ judgment.
+Recommended values: a range from `75%` to `250%`. Increments are left to implementers’ judgment.
+
+Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 #### Type scale
 
@@ -221,7 +246,9 @@ If the `--USER__advancedSettings: readium-advanced-on` style is set for `html`, 
 --USER__typeScale
 ```
 
-Possible values for type scale: `1` | `1.067` | `1.125` | `1.2` (suggested default) | `1.25` | `1.333` | `1.414` | `1.5` | `1.618`
+Possible values: `1` | `1.067` | `1.125` | `1.2` (suggested default) | `1.25` | `1.333` | `1.414` | `1.5` | `1.618`
+
+Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 You can use different type scale values depending on the `font-size`. For instance, if the user sets a large one, you might want to decrease the type scale so that headings are not super large.
 
@@ -232,6 +259,8 @@ You can use different type scale values depending on the `font-size`. For instan
 ```
 
 Recommended values: a range from `1` to `2`. Increments are left to implementers’ judgment.
+
+Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 ### Paragraphs’ formatting
 
@@ -245,6 +274,8 @@ The user can set `margin-top`, `margin-bottom` and `text-indent` for paragraphs.
 
 Recommended values: a range from `0` to `2rem`. Increments are left to implementers’ judgment.
 
+Required flag: `--USER__advancedSettings: readium-advanced-on`
+
 #### Paragraphs’ indent
 
 ```
@@ -252,6 +283,8 @@ Recommended values: a range from `0` to `2rem`. Increments are left to implement
 ```
 
 Recommended values: a range from `0` to `3rem`. Increments are left to implementers’ judgment.
+
+Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 ### Characters’ spacing
 
@@ -265,6 +298,8 @@ The user can set `word-spacing` and `letter-spacing` for headings and body copy 
 
 Recommended values: a range from `0` to `1rem`. Increments are left to implementers’ judgment.
 
+Required flag: `--USER__advancedSettings: readium-advanced-on`
+
 #### Letter spacing
 
 ```
@@ -273,6 +308,8 @@ Recommended values: a range from `0` to `1rem`. Increments are left to implement
 
 Recommended values: a range from `0` to `0.5rem`. Increments are left to implementers’ judgment.
 
+Required flag: `--USER__advancedSettings: readium-advanced-on`
+
 #### Arabic Ligatures
 
 ```
@@ -280,6 +317,8 @@ Recommended values: a range from `0` to `0.5rem`. Increments are left to impleme
 ```
 
 Possible values: `none` | `common-ligatures`
+
+Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 ## Themes
 

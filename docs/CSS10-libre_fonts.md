@@ -1,4 +1,4 @@
-# Open Source and Libre Fonts We Can recommend
+# Open Source and Libre Fonts We Can Recommend
 
 [Implementers’ doc] [WIP]
 
@@ -267,7 +267,7 @@ Technical details:
     - weight: 0.06
     - width: 0.45
 
-Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Cyrillic
+Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Cyrillic.
 
 OpenType Features: small caps, numeric figure values, numeric spacing values (and more).
 

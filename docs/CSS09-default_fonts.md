@@ -443,7 +443,7 @@ It is important to emphasize that the user settings (and their values) implement
 - avoid justified text (`text-align` setting);
 - use generous line spacing / leading (`line-height` setting);
 - use generous letter spacing (`letter-spacing` setting);
-- avoid italics;
+- avoid italics (`--USER__a11yNormalize` flag);
 - generally use sans serif faces (`font-family` setting);
 - use larger text (`font-size` setting);
 - use good contrast (`background-` and `color` settings, reading modes, themes);
@@ -490,7 +490,7 @@ font-family: "Latin Modern Math", "STIX Two Math", "XITS Math", "STIX Math", "Li
 
 ## EBPAJ patch for Japanese
 
-The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What it does in this patch is keeping the default value used in EBPAJ templates and providing fallbacks for all platforms.
+The EBPAJ template only references fonts from MS Windows so Readium CSS has to reference fonts from other platforms and override authors’ stylesheets. What this patch does is to keep the default value used in EBPAJ templates and provide fallbacks for all platforms.
 
 Implementers might want to load this patch only if they find one of the following metadata items in the OPF package:
 

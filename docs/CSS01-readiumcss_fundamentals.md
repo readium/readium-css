@@ -1,6 +1,6 @@
 # Readium CSS Fundamental Concepts
 
-[Implementers’ doc] [Authors’ info] [WIP]
+[Implementers’ doc] [Authors’ info]
 
 This document serves as an introduction, it explains the fundamental concepts used in designing Readium CSS.
 
@@ -31,7 +31,7 @@ We wanted to bring EPUB closer to the web though, and decided to leverage HTML5 
 
 ## 3. Leverage Modern CSS
 
-CSS has a lot to offer nowadays, and it can help solve complex issues in more simple ways.
+CSS has a lot to offer nowadays, and it can help solve complex issues in simpler ways.
 
 Readium CSS has been be designed following 4 core principles:
 

@@ -1,6 +1,6 @@
-# User Overrides’ classification
+# User Overrides’ Classification
 
-[Implementers’ doc] [Authors’ info] [WIP]
+[Implementers’ doc] [Authors’ info]
 
 In order to help you manage user settings, we defined 4 types of overrides: 
 
@@ -19,7 +19,7 @@ Those types can help you decide which settings should be applied to every book, 
 ## Chrome advanced
 
 - Number of columns
-- Margins of the view (+ column gap)
+- Page margins
 - Custom reading modes (background and text color)
 - Filters (darken and invert for night mode)
 
@@ -39,4 +39,4 @@ Those types can help you decide which settings should be applied to every book, 
 - Arabic ligatures
 - Type scale
 
-Please note this classification might change and items could be added in the near future.
+Please note this classification might change and items could be added in the future.

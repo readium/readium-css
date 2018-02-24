@@ -1,6 +1,6 @@
 # Recommendations for User Settings Management
 
-[Implementers’ doc] [Authors’ doc] [WIP]
+[Implementers’ doc] [Authors’ doc]
 
 User settings are a complex issue as CSS authoring is liberal by nature.
 

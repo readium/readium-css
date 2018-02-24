@@ -330,8 +330,16 @@ In other words, think of preset and custom themes as a set of variables, which m
 
 ## Alternative options
 
-- Appending/removing overrides as `<style>`, dynamically
-- Using custom attributes (at least for themes + appending/removing styles dynamically)
+There is not a lot of alternatives when it comes to managing user settings. Options include:
+
+- appending/removing stylesheets (either `link` or `style` element) dynamically;
+- traversing the DOM and appending inline styles using JavaScript;
+- using classes or custom attributes for a limited subset of settings (e.g. reading modes);
+- leveraging native features web views have to offer.
+
+Please bear in mind Readium CSS provides a baseline, it resonably manages all those issues using CSS only. But if you want to offer users the most advanced experience there can be, you’ll end up with a mix of all those options.
+
+For instance, you can’t really manage `text-align` perfectly if you don’t traverse the DOM to find elements for which the user setting should not apply, CSS has no way to retrieve those elements.
 
 ## User settings can be language-specific
 

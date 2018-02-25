@@ -5,6 +5,7 @@ module.exports = (ctx) => ({
     }),
     require('postcss-custom-media')({}),
     require('postcss-custom-selectors')({}),
+//    require('postcss-discard-comments')({}),
     require("stylelint")({ 
       "rules": {
           "color-no-invalid-hex": true

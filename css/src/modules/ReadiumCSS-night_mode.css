@@ -50,7 +50,7 @@
   filter: invert(100%);
 }
 
-/* Darken all images on user’s demand  */
+/* Darken all images on user’s demand */
 :root:--night-mode:--darken-filter img {
   -webkit-filter: brightness(80%);
   filter: brightness(80%);

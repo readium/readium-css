@@ -16,6 +16,9 @@
    depending on the current font-size) must be enabled */
 @custom-media --responsive-columns (min-width: 60em);
 
+/* For Gecko/Quantum (Firefox), we need to reverse the query as it doesn’t support pointer media */
+@custom-media --moz-responsive-columns (max-width: 60em);
+
 /* Mobile columns
    The orientation for which 2-columns is enabled on mobile devices */
 @custom-media --mobile-columns (orientation: landscape);

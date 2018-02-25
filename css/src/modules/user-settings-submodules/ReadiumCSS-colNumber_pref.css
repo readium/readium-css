@@ -11,6 +11,7 @@
 
 /* apply col setting except for mobile portrait */
 @media screen and (pointer: fine) and (--responsive-columns),
+not all and (-moz-touch-enabled) and (--moz-responsive-columns),
 screen and (pointer: coarse) and (--mobile-columns),
 screen and (-moz-touch-enabled) and (--mobile-columns) {
   :root[style*="--USER__colCount: 1"],

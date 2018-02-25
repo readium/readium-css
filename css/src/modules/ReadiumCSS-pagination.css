@@ -129,6 +129,7 @@ body {
 
 /* Responsive columns… the idea is using (primary) pointer media feature to isolate mobile from desktop… EXPERIMENTAL */
 @media screen and (pointer: fine) and (--responsive-columns),
+not all and (-moz-touch-enabled) and (--moz-responsive-columns),
 screen and (pointer: coarse) and (--mobile-columns),
 screen and (-moz-touch-enabled) and (--mobile-columns) {
   :root {

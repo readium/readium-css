@@ -30,14 +30,15 @@
   ],
   "main": "css/ReadiumCSS-config.css",
   "devDependencies": {
-    "stylelint": "latest",
-    "postcss-cli": "latest",
-    "postcss-import": "latest",
-    "postcss-sorting": "latest",
-    "postcss-custom-media": "latest",
-    "postcss-custom-selectors": "latest",
-    "postcss-css-variables": "latest",
-    "postcss-discard-comments": "latest"
+    "stylelint": "^9.1.1",
+    "postcss-cli": "^5.0.0",
+    "postcss-import": "^11.1.0",
+    "postcss-sorting": "^3.1.0",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-selectors": "^4.0.1",
+    "postcss-discard-comments": "^2.0.4",
+    "postcss-css-variables": "^0.8.0",
+    "postcss-alter-property-value": "^1.1.3"
   },
   "scripts": {
     "build:ltr": "postcss src/ReadiumCSS-before.css -o dist/ReadiumCSS-before.css && postcss src/ReadiumCSS-default.css -o dist/ReadiumCSS-default.css && postcss src/ReadiumCSS-after.css -o dist/ReadiumCSS-after.css",

@@ -83,6 +83,36 @@
 
         <pre><code>npm run-script build</code></pre>
       </section>
+
+      <section id="building-dist-stylesheets-for-browsers-which-dont-support-css-variables" class="level3">
+        <h3 class="sigil_not_in_toc">Building dist stylesheets for browsers which don’t support CSS variables</h3>
+
+        <p>If you need to build stylesheets for IE11 or an early version of Edge (e.g. 14), then you can use most of ReadiumCSS, excepted user settings. You’ll consequently have to customize the <code>src</code>’s <code>ReadiumCSS-before.css</code>, <code>ReadiumCSS-default.css</code> and <code>ReadiumCSS-after.css</code> and remove the user settings submodules.</p>
+
+        <p>Then you will have to enable the <code>postcss-css-variables</code> and <code>postcss-alter-property-value</code> in the <code>postcss.config.js</code> file to be found at the <code>src</code> folder’s root.</p>
+
+        <p>The following must be added to <code>plugins</code>:</p>
+
+        <pre><code>require("postcss-css-variables")({ 
+  "preserve": true 
+}), 
+require("postcss-alter-property-value")({ 
+  declarations: { 
+    "*": { 
+      task: "remove" 
+    , whenValueEquals: "undefined" 
+    } 
+  } 
+})</code></pre>
+
+        <p>This will:</p>
+
+        <ol>
+          <li>interpolate CSS variables into a static representation, while preserving variables for other browsers (<code>"preserve": true</code>);</li>
+
+          <li>remove static representations which can’t be interpolated and are <code>undefined</code> (<code>remove</code> task).</li>
+        </ol>
+      </section>
     </section>
 
     <section id="useful-plugins" class="level2">
@@ -91,8 +121,6 @@
       <p>Here is a list of additionnal PostCSS plugins which might prove useful to implementers.</p>
 
       <ul>
-        <li>Use latest CSS syntax: <a href="https://github.com/MoOx/postcss-cssnext">CSS Next</a></li>
-
         <li>Unprefix EPUB properties: <a href="https://github.com/JayPanoz/postcss-epub-interceptor">EPUB interceptor</a></li>
 
         <li>Adding vendor prefixes: <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>

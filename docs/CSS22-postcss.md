@@ -20,8 +20,9 @@ Here is the current list of dependencies:
 - postcss-sorting ([link](https://github.com/hudochenkov/postcss-sorting));
 - postcss-custom-media ([link](https://github.com/postcss/postcss-custom-media));
 - postcss-custom-selectors ([link](https://github.com/postcss/postcss-custom-selectors));
+- postcss-discard-comments ([link](https://github.com/ben-eb/postcss-discard-comments));
 - postcss-css-variables ([link](https://github.com/MadLittleMods/postcss-css-variables)) [disabled];
-- postcss-discard-comments ([link](https://github.com/ben-eb/postcss-discard-comments)).
+- postcss-alter-property-value ([link](https://github.com/kunukn/postcss-alter-property-value)) [disabled].
 
 ## Build dist stylesheets
 
@@ -47,10 +48,36 @@ First navigate to the `readium-css` folder, then…
 npm run-script build
 ```
 
+### Building dist stylesheets for browsers which don’t support CSS variables
+
+If you need to build stylesheets for IE11 or an early version of Edge (e.g. 14), then you can use most of ReadiumCSS, excepted user settings. You’ll consequently have to customize the `src`’s `ReadiumCSS-before.css`, `ReadiumCSS-default.css` and `ReadiumCSS-after.css` and remove the user settings submodules.
+
+Then you will have to enable the `postcss-css-variables` and `postcss-alter-property-value` in the `postcss.config.js` file to be found at the `src` folder’s root.
+
+The following must be added to `plugins`: 
+
+```
+require("postcss-css-variables")({
+  "preserve": true
+}),
+require("postcss-alter-property-value")({
+  declarations: {
+    "*": {
+      task: "remove"
+    , whenValueEquals: "undefined"
+    }
+  }
+})
+```
+
+This will:
+
+1. interpolate CSS variables into a static representation, while preserving variables for other browsers (`"preserve": true`);
+2. remove static representations which can’t be interpolated and are `undefined` (`remove` task).
+
 ## Useful plugins
 
 Here is a list of additionnal PostCSS plugins which might prove useful to implementers.
 
-- Use latest CSS syntax: [CSS Next](https://github.com/MoOx/postcss-cssnext)
 - Unprefix EPUB properties: [EPUB interceptor](https://github.com/JayPanoz/postcss-epub-interceptor)
 - Adding vendor prefixes: [Autoprefixer](https://github.com/postcss/autoprefixer)

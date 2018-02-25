@@ -9,9 +9,10 @@
 /* Number of columns = 1 | 2 */
 /* We still need to see if we allow users to force number of columns for all configs, currently it behaves as an "auto" setting */
 
-/* apply col setting except for tablet portrait */
-@media screen and (--responsive-columns),
-screen and (--mobile-columns) {
+/* apply col setting except for mobile portrait */
+@media screen and (pointer: fine) and (--responsive-columns),
+screen and (pointer: coarse) and (--mobile-columns),
+screen and (-moz-touch-enabled) and (--mobile-columns) {
   :root[style*="--USER__colCount: 1"],
   :root[style*="--USER__colCount:1"],
   :root[style*="--USER__colCount: 2"],

@@ -15,7 +15,6 @@
   --USER__typeScale: 1.2; /* This is the default type scale you’ll find in most publications */
 }
   
-/* [style*="--USER__advancedSettings"] can be used to increase specificity but performance hit */
 :root:--advanced-settings p,
 :root:--advanced-settings li,
 :root:--advanced-settings div,

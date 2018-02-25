@@ -40,8 +40,6 @@ Readium CSS has been be designed following 4 core principles:
 3. **Daisy-chainability:** those modules can be loaded and daisy-chained (cascade) depending on conditions;
 4. **Customization:** modules can be customized either before or during runtime (CSS variables), which implies themes can be generated within minutes.
 
-We’ve also made sure that, for most “hardcoded” styles you might add when CSS variables are not supported (internal stylesheet or inline styles), user settings can still be applied (leveraging inheritance).
-
 ## 4. Openness and Transparency
 
 This last principle is important since the relationship between authors and Reading Systems’ developers has not been really great so far.

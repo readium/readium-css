@@ -13,7 +13,7 @@
   font-family: "AccessibleDFA", Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
 }
 
-/* Maybe users want a setting to normalize any font offered so there is a "--USER__a11yNormalize: readium-a11y-on" flag for it */
+/* Maybe users want a setting to normalize any font offered so there is a “a11y Normalize” flag for it */
 
 :root:--font-override[style*="AccessibleDfa"],
 :root:--font-override:--a11y-normalize {

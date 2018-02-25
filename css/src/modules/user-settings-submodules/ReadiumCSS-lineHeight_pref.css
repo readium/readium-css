@@ -10,9 +10,9 @@
   line-height: var(--USER__lineHeight) !important;
 }
 
-:root:--advanced-settings[style*="--USER__lineHeight"] body, :root[style*="line-height"] body,
-:root:--advanced-settings[style*="--USER__lineHeight"] p, :root[style*="line-height"] p,
-:root:--advanced-settings[style*="--USER__lineHeight"] li, :root[style*="line-height"] li,
-:root:--advanced-settings[style*="--USER__lineHeight"] div, :root[style*="line-height"] div {
+:root:--advanced-settings[style*="--USER__lineHeight"] body,
+:root:--advanced-settings[style*="--USER__lineHeight"] p,
+:root:--advanced-settings[style*="--USER__lineHeight"] li,
+:root:--advanced-settings[style*="--USER__lineHeight"] div {
   line-height: inherit;
 }

@@ -50,15 +50,13 @@
   filter: invert(100%);
 }
 
-/* Darken all images on user’s demand 
-   [style*="--USER__darkenFilter"] can be used to increase specificity but performance hit */
+/* Darken all images on user’s demand  */
 :root:--night-mode:--darken-filter img {
   -webkit-filter: brightness(80%);
   filter: brightness(80%);
 }
 
-/* Invert all images on user’s demand
-   [style*="--USER__invertFilter"] can be used to increase specificity but performance hit */
+/* Invert all images on user’s demand */
 :root:--night-mode:--invert-filter img {
   -webkit-filter: invert(100%);
   filter: invert(100%);

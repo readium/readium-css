@@ -23,8 +23,6 @@ User settings require the following process:
 
 The selectors used in user settings are indeed “conditional”, styles are applied if the variable (or a specific value for reading modes) is set as an inline style in `html` (`:root`).
 
-In theory, we can make it work with inline styles too, when variables are not supported by the web browser.
-
 ### Setting and removing a variable
 
 #### Setting

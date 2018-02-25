@@ -187,7 +187,7 @@ This isn’t a perfect solution though, and this algorithm may be revisited in t
 
 ## Conditional Selectors for user settings
 
-User settings are appended on load and won’t have any effect until a user-setting variable (or inline style) is set.
+User settings are appended on load and won’t have any effect until a user-setting variable is set.
 
 In order to do that, we must use “conditional selectors.” Problem is there is no `if/else statements` in CSS so how do we achieve this?
 
@@ -197,9 +197,9 @@ In order to do that, we must use “conditional selectors.” Problem is there i
 
 Attribute selectors with pseudo-regex.
 
-As soon as you set a property (or add an inline style) and its required flag to the `html` (or root) element, the user setting applies.
+As soon as you set a property and its required flag to the `html` (or root) element, the user setting applies.
 
-Whenever needed, we’re leveraging explicit inheritance (`inherit` value) so that the `:root` value can be passed throughout the DOM, which makes it compatible with inline styles, at least for some settings.
+Whenever needed, we’re leveraging explicit inheritance (`inherit` value) so that the `:root` value can be passed throughout the DOM.
 
 We’re also relying on the `:not()` pseudo-class to exclude some elements. Think of it as the following command prompt: “make all elements in the DOM inherit the value, excepted this one and that one.”
 

@@ -143,7 +143,7 @@ var root = document.documentElement || document.getElementById("iframe-wrapper")
 root.style.removeProperty("--USER__var");
 ```
 
-Please note you must implement a fallback strategy if you want to support Internet Explorer 11 and early versions of Microsoft Edge. User settings have been designed to work with inline styles (on `html`) whenever possible but you’ll need to find ways to manage others.
+Please note you must implement a fallback strategy if you want to support Internet Explorer 11 and early versions of Microsoft Edge.
 
 ### Examples
 

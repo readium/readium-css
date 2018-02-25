@@ -66,12 +66,6 @@
   }
 }
 
-/* We probably don’t need this
-
-@media screen and (-ms-high-contrast: black-on-white) { }
-
-*/
-
 @media screen and (monochrome) {
   /* Grayscale (Implemented in Safari, what about eInk?) */
   /* Must deal with anything color (contrast) so must be managed at the night/sepia/theme level :( */

@@ -6,7 +6,6 @@
 
    Repo: https://github.com/readium/readium-css */
 
-/* [style*="--USER__view"] can be used to increase specificity but performance hit */
 :root:--scroll-view {
   /* Reset html size so that the user can scroll */
   min-width: 0 !important;

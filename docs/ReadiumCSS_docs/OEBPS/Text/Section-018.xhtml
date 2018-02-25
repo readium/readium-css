@@ -206,7 +206,7 @@ body = base font-size</code></pre>
     <section id="conditional-selectors-for-user-settings" class="level2">
       <h2 id="sigil_toc_id_53">Conditional Selectors for user settings</h2>
 
-      <p>Use settings are appended on load and won’t have any effect until a user-setting variable (or inline style) is set.</p>
+      <p>Use settings are appended on load and won’t have any effect until a user-setting variable is set.</p>
 
       <p>In order to do that, we must use “conditional selectors.” Problem is there is no <code>if/else statements</code> in CSS so how do we achieve this?</p>
 
@@ -214,9 +214,9 @@ body = base font-size</code></pre>
 
       <p>Attribute selectors with pseudo-regex.</p>
 
-      <p>As soon as you set a property (or add an inline style) and its required flag to the <code>html</code> (or root) element, the user setting applies.</p>
+      <p>As soon as you set a property and its required flag to the <code>html</code> (or root) element, the user setting applies.</p>
 
-      <p>Whenever needed, we’re leveraging explicit inheritance (<code>inherit</code> value) so that the <code>:root</code> value can be passed throughout the DOM, which makes it compatible with inline styles, at least for some settings.</p>
+      <p>Whenever needed, we’re leveraging explicit inheritance (<code>inherit</code> value) so that the <code>:root</code> value can be passed throughout the DOM.</p>
 
       <p>We’re also relying on the <code>:not()</code> pseudo-class to exclude some elements. Think of it as the following command prompt: “make all elements in the DOM inherit the value, excepted this one and that one.”</p>
 

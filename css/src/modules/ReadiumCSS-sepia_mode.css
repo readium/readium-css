@@ -8,7 +8,6 @@
 
 /* CONFIG */
 
-/* [style*="--USER__appearance"] can be used to increase specificity but performance hit */
 :root:--sepia-mode {
   --RS__backgroundColor: #faf4e8;
   --RS__textColor: #121212;

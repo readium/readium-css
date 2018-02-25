@@ -15,8 +15,6 @@
    The minimum width for which responsive columns (2 -> 1 and vice versa,
    depending on the current font-size) must be enabled */
 
-/* For Gecko/Quantum (Firefox), we need to reverse the query as it doesn’t support pointer media */
-
 /* Mobile columns
    The orientation for which 2-columns is enabled on mobile devices */
 

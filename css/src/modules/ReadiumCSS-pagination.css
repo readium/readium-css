@@ -21,7 +21,7 @@
   --RS__colCount: 1;
 
   /* Gap between columns (in pixels so that it won’t resize with font-size) */
-  --RS__colGap: 0px;
+  --RS__colGap: 0;
 
   /* Optimal line-length (rem will take :root font-size into account, whatever the body’s font-size) */
   --RS__maxLineLength: 40rem;

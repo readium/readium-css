@@ -341,6 +341,8 @@ Please bear in mind Readium CSS provides a baseline, it resonably manages all th
 
 For instance, you can’t really manage `text-align` perfectly if you don’t traverse the DOM to find elements for which the user setting should not apply, CSS has no way to retrieve those elements.
 
+It is worth mentioning that at least some rendering engines are optimized to manage **global** CSS variables (i.e. the ones declared in `:root`) and reserve a special cache for faster lookup and updates. Changes should consequently be handled as inline styles in the `html` element if you want the best performance possible.
+
 ## User settings can be language-specific
 
 It is important to note that the list of user settings you may provide users with can change depending on the primary language of the publication.

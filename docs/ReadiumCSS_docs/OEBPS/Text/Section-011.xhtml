@@ -374,6 +374,8 @@ root.style.removeProperty("name of var");</code></pre>
 	  <p>Please bear in mind Readium CSS provides a baseline, it resonably manages all those issues using CSS only. But if you want to offer users the most advanced experience there can be, you’ll end up with a mix of all those options.</p>
 
 	  <p>For instance, you can’t really manage <code>text-align</code> perfectly if you don’t traverse the DOM to find elements for which the user setting should not apply, CSS has no way to retrieve those elements.</p>
+
+	  <p>It is worth mentioning that at least some rendering engines are optimized to manage <strong>global</strong> CSS variables (i.e. the ones declared in <code>:root</code>) and reserve a special cache for faster lookup and updates. Changes should consequently be handled as inline styles in the <code>html</code> element if you want the best performance possible.</p>
     </section>
 
     <section id="user-settings-can-be-language-specific" class="level2">

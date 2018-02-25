@@ -113,6 +113,39 @@ If you want to change the name of `--RS__` prefixed variables, you will have to 
 
 If you want to change the name of `--USER__` prefixed variables, you will have to change it in every module.
 
+## Build dist stylesheets
+
+First, please make sure you have node.js installed. If you don’t, go [download it on the official page](https://nodejs.org/en/).
+
+Then navigate to the `readium-css` folder in your terminal and type:
+
+```
+npm install
+```
+
+This will install all dependencies needed to build `dist` stylesheets.
+
+Once you have customized `src` files, in the terminal type: 
+
+```
+npm run-script build
+```
+
+This will rebuild all `dist` stylesheets in their specific folder.
+
+### Options
+
+Other scripts are available: 
+
+- `build:ltr` for default stylesheets (Left to Right);
+- `build:rtl` for Right to Left stylesheets;
+- `build:cjk` for CJK scripts;
+- `build:vertical` for CJK and the Mongolian scripts in vertical writing.
+
+### Additional info
+
+Further details about the build process can be found in [the PostCSS doc](../docs/CSS22-postcss.md).
+
 ## Manage User Settings
 
 Currently, user settings are managed by setting CSS variables at the `:root` level (`html` element).

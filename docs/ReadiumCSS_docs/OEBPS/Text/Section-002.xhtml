@@ -159,6 +159,46 @@
         <p>If you want to change the name of <code>--RS__</code> prefixed variables, you will have to change it in every module.</p>
       </section>
 
+    <section id="build-dist-stylesheets" class="level2">
+      <h2 id="sigil_toc_id_59">Build dist stylesheets</h2>
+
+      <p>First, please make sure you have node.js installed. If you don’t, go <a href="https://nodejs.org/en/">download it on the official page</a>.</p>
+
+      <p>Then navigate to the <code>readium-css</code> folder in your terminal and type:</p>
+
+      <pre><code>npm install</code></pre>
+
+      <p>This will install all dependencies needed to build <code>dist</code> stylesheets.</p>
+
+      <p>Once you have customized <code>src</code> files, in the terminal type:</p>
+
+      <pre><code>npm run-script build</code></pre>
+
+      <p>This will rebuild all <code>dist</code> stylesheets in their specific folder.</p>
+
+      <section id="options" class="level3">
+        <h3 class="sigil_not_in_toc">Options</h3>
+
+        <p>Other scripts are available:</p>
+
+        <ul>
+          <li><code>build:ltr</code> for default stylesheets (Left to Right);</li>
+
+          <li><code>build:rtl</code> for Right to Left stylesheets;</li>
+
+          <li><code>build:cjk</code> for CJK scripts;</li>
+
+          <li><code>build:vertical</code> for CJK and the Mongolian scripts in vertical writing.</li>
+        </ul>
+      </section>
+
+      <section id="additional-info" class="level3">
+        <h3 class="sigil_not_in_toc">Additional info</h3>
+
+        <p>Further details about the build process can be found in <a href="../Text/Section-022.xhtml">the PostCSS doc</a>.</p>
+      </section>
+    </section>
+
       <section id="user-settings-variables" class="level3">
         <h3 class="sigil_not_in_toc">User settings variables</h3>
 

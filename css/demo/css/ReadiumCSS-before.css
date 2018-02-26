@@ -16,7 +16,9 @@
    depending on the current font-size) must be enabled */
 
 /* Mobile columns
-   The orientation for which 2-columns is enabled on mobile devices */
+   The minimum and maximum width for mobile devices.
+   We’re forcing the landscape orientation by default,
+   and must still investigate large tablets (iPad Pro, Surface Pro 3, etc.). */
 
 /* Custom selectors
    Syntax: @custom-selector :--variable selector
@@ -44,13 +46,13 @@
 
    Repo: https://github.com/readium/readium-css */
 
-@namespace url(http://www.w3.org/1999/xhtml);
+@namespace url("http://www.w3.org/1999/xhtml");
 
-@namespace epub url(http://www.idpf.org/2007/ops);
+@namespace epub url("http://www.idpf.org/2007/ops");
 
-@namespace m url(http://www.w3.org/1998/Math/MathML/);
+@namespace m url("http://www.w3.org/1998/Math/MathML/");
 
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url("http://www.w3.org/2000/svg");
 
 /* Define viewport, HTML5-style */
 
@@ -303,11 +305,11 @@ math {
 /* /!\ Mind the path (relative to the folders in which you have stylesheets and the fonts) */
 
 @font-face {
-  font-family: "AccessibleDfa";
+  font-family: AccessibleDfa;
   font-style: normal;
   font-weight: normal;
   src: local("AccessibleDfa"),
-       url("../fonts/AccessibleDfA.otf") format("opentype");
+    url("fonts/AccessibleDfA.otf") format("opentype");
 }
 
 /* If you have different weights/styles, 

@@ -66,7 +66,7 @@ Those custom medias may be extended at some point, depending on implementers’ 
 
 By default, we are using flags in the form of CSS variables to manage reading modes and user settings. But you might want to customize those flags in order to use custom attributes (`data-*`) or good old CSS classes.
 
-A complete list of flags can be found in the [User preferences doc](../docs/CSS11-user_prefs.md).
+A complete list of flags can be found in the [User preferences doc](../docs/CSS12-user_prefs.md).
 
 As an example, if you want to use a CSS class for night mode, it could look like: 
 
@@ -203,4 +203,4 @@ root.style.setProperty("--USER__typeScale", "1.067");
 
 In this model, themes are a set of user settings you can store and retrieve. Add the properties to `html` and you get a theme.
 
-Check the [User Preferences doc](../docs/CSS11-user_prefs.md) for a list of available user variables.
+Check the [User Preferences doc](../docs/CSS12-user_prefs.md) for a list of available user variables.

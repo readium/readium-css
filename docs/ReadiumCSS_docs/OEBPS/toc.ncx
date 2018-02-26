@@ -552,74 +552,74 @@
     </navPoint>
     <navPoint id="navPoint91">
       <navLabel>
-        <text>User Settings, Reading Modes and Themes</text>
+        <text>User Overrides’ Classification</text>
       </navLabel>
       <content src="Text/Section-011.xhtml"/>
       <navPoint id="navPoint92">
         <navLabel>
-          <text>Mechanism for user settings</text>
+          <text>Chrome</text>
         </navLabel>
-        <content src="Text/Section-011.xhtml#sigil_toc_id_36"/>
+        <content src="Text/Section-011.xhtml#sigil_toc_id_139"/>
       </navPoint>
       <navPoint id="navPoint93">
         <navLabel>
-          <text>Flags</text>
+          <text>Chrome advanced</text>
         </navLabel>
-        <content src="Text/Section-011.xhtml#sigil_toc_id_129"/>
+        <content src="Text/Section-011.xhtml#sigil_toc_id_173"/>
       </navPoint>
       <navPoint id="navPoint94">
         <navLabel>
-          <text>List of variables</text>
+          <text>User overrides</text>
         </navLabel>
-        <content src="Text/Section-011.xhtml#sigil_toc_id_37"/>
+        <content src="Text/Section-011.xhtml#sigil_toc_id_174"/>
       </navPoint>
       <navPoint id="navPoint95">
         <navLabel>
-          <text>Themes</text>
+          <text>User overrides advanced</text>
         </navLabel>
-        <content src="Text/Section-011.xhtml#sigil_toc_id_39"/>
-      </navPoint>
-      <navPoint id="navPoint96">
-        <navLabel>
-          <text>Alternative options</text>
-        </navLabel>
-        <content src="Text/Section-011.xhtml#sigil_toc_id_40"/>
-      </navPoint>
-      <navPoint id="navPoint97">
-        <navLabel>
-          <text>User settings can be language-specific</text>
-        </navLabel>
-        <content src="Text/Section-011.xhtml#sigil_toc_id_141"/>
+        <content src="Text/Section-011.xhtml#sigil_toc_id_175"/>
       </navPoint>
     </navPoint>
-    <navPoint id="navPoint98">
+    <navPoint id="navPoint96">
       <navLabel>
-        <text>User Overrides’ Classification</text>
+        <text>User Settings, Reading Modes and Themes</text>
       </navLabel>
       <content src="Text/Section-012.xhtml"/>
+      <navPoint id="navPoint97">
+        <navLabel>
+          <text>Mechanism for user settings</text>
+        </navLabel>
+        <content src="Text/Section-012.xhtml#sigil_toc_id_176"/>
+      </navPoint>
+      <navPoint id="navPoint98">
+        <navLabel>
+          <text>Flags</text>
+        </navLabel>
+        <content src="Text/Section-012.xhtml#sigil_toc_id_177"/>
+      </navPoint>
       <navPoint id="navPoint99">
         <navLabel>
-          <text>Chrome</text>
+          <text>List of variables</text>
         </navLabel>
-        <content src="Text/Section-012.xhtml#sigil_toc_id_95"/>
+        <content src="Text/Section-012.xhtml#sigil_toc_id_178"/>
       </navPoint>
       <navPoint id="navPoint100">
         <navLabel>
-          <text>Chrome advanced</text>
+          <text>Themes</text>
         </navLabel>
-        <content src="Text/Section-012.xhtml#sigil_toc_id_96"/>
+        <content src="Text/Section-012.xhtml#sigil_toc_id_179"/>
       </navPoint>
       <navPoint id="navPoint101">
         <navLabel>
-          <text>User overrides</text>
+          <text>Alternative options</text>
         </navLabel>
-        <content src="Text/Section-012.xhtml#sigil_toc_id_97"/>
+        <content src="Text/Section-012.xhtml#sigil_toc_id_180"/>
       </navPoint>
       <navPoint id="navPoint102">
         <navLabel>
-          <text>User overrides advanced</text>
+          <text>User settings can be language-specific</text>
         </navLabel>
-        <content src="Text/Section-012.xhtml#sigil_toc_id_98"/>
+        <content src="Text/Section-012.xhtml#sigil_toc_id_181"/>
       </navPoint>
     </navPoint>
     <navPoint id="navPoint103">
@@ -901,37 +901,37 @@
         <navLabel>
           <text>How to set and remove user preferences</text>
         </navLabel>
-        <content src="Text/Section-019.xhtml#sigil_toc_id_27"/>
+        <content src="Text/Section-019.xhtml#sigil_toc_id_182"/>
       </navPoint>
       <navPoint id="navPoint150">
         <navLabel>
           <text>Customizable medias</text>
         </navLabel>
-        <content src="Text/Section-019.xhtml#sigil_toc_id_168"/>
+        <content src="Text/Section-019.xhtml#sigil_toc_id_183"/>
       </navPoint>
       <navPoint id="navPoint151">
         <navLabel>
           <text>Customizable flags</text>
         </navLabel>
-        <content src="Text/Section-019.xhtml#sigil_toc_id_169"/>
+        <content src="Text/Section-019.xhtml#sigil_toc_id_184"/>
       </navPoint>
       <navPoint id="navPoint152">
         <navLabel>
           <text>Reading System Styles</text>
         </navLabel>
-        <content src="Text/Section-019.xhtml#sigil_toc_id_170"/>
+        <content src="Text/Section-019.xhtml#sigil_toc_id_185"/>
       </navPoint>
       <navPoint id="navPoint153">
         <navLabel>
           <text>Reading Modes</text>
         </navLabel>
-        <content src="Text/Section-019.xhtml#sigil_toc_id_171"/>
+        <content src="Text/Section-019.xhtml#sigil_toc_id_186"/>
       </navPoint>
       <navPoint id="navPoint154">
         <navLabel>
           <text>User Settings</text>
         </navLabel>
-        <content src="Text/Section-019.xhtml#sigil_toc_id_172"/>
+        <content src="Text/Section-019.xhtml#sigil_toc_id_187"/>
       </navPoint>
     </navPoint>
     <navPoint id="navPoint155">

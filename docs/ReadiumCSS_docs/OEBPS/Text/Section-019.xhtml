@@ -20,7 +20,7 @@
     <pre><code>USER &gt; AUTHOR &gt; RS</code></pre>
 
     <section id="how-to-set-and-remove-user-preferences" class="level2">
-      <h2 id="sigil_toc_id_27">How to set and remove user preferences</h2>
+      <h2 id="sigil_toc_id_182">How to set and remove user preferences</h2>
 
       <section id="setting-a-user-preference" class="level3">
         <h3 class="sigil_not_in_toc">Setting a user preference</h3>
@@ -38,7 +38,7 @@
     </section>
 
     <section id="customizable-medias" class="level2">
-      <h2 id="sigil_toc_id_168">Customizable medias</h2>
+      <h2 id="sigil_toc_id_183">Customizable medias</h2>
 
       <hr/>
 
@@ -70,9 +70,9 @@
     </section>
 
     <section id="customizable-flags" class="level2">
-      <h2 id="sigil_toc_id_169">Customizable flags</h2>
+      <h2 id="sigil_toc_id_184">Customizable flags</h2>
 
-      <p>Those custom selectors can be customized before runtime. Check the <a href="../docs/CSS02-quickstart.md">“Quickstart” doc</a> for further details.</p>
+      <p>Those custom selectors can be customized before runtime. Check the <a href="../Text/Section-002.xhtml">“Quickstart” doc</a> for further details.</p>
 
       <p>The “dummy CSS variable” is a recommended CSS custom property name you can use to set the default value if you don’t customize those selectors and just keep the default.</p>
 
@@ -86,6 +86,8 @@
 
       <p>Dummy CSS variable: <code>--USER__view</code></p>
 
+      <p>Override class: Chrome (should be applied by any means necessary)</p>
+
       <hr/>
 
       <pre><code>:--font-override</code></pre>
@@ -96,7 +98,7 @@
 
       <p>Dummy CSS variable: <code>--USER__fontOverride</code></p>
 
-      <p>This flag is required to change the <code>font-family</code> user setting.</p>
+      <p>Override class: None. This flag is required to change the <code>font-family</code> user setting.</p>
 
       <hr/>
 
@@ -108,7 +110,7 @@
 
       <p>Dummy CSS variable: <code>--USER__advancedSettings</code></p>
 
-      <p>This flag is required to apply advanced user settings.</p>
+      <p>Override class: None. This flag is required to apply the <code>font-family</code>, the <code>font-size</code> and/or advanced user settings.</p>
 
       <hr/>
 
@@ -119,6 +121,8 @@
       <p>Scope: <code>html</code></p>
 
       <p>Dummy CSS variable: <code>--USER__appearance</code></p>
+
+      <p>Override class: Chrome (should be applied by any means necessary)</p>
 
       <p>This flag applies the sepia reading mode.</p>
 
@@ -132,6 +136,8 @@
 
       <p>Dummy CSS variable: <code>--USER__appearance</code></p>
 
+      <p>Override class: Chrome (should be applied by any means necessary)</p>
+
       <p>This flag applies the night reading mode.</p>
 
       <hr/>
@@ -143,6 +149,8 @@
       <p>Scope: <code>html</code></p>
 
       <p>Dummy CSS variable: <code>--USER__darkenImages</code></p>
+
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
       <p>This will only apply in night mode to darken images and impact <code>img</code>.</p>
 
@@ -156,6 +164,8 @@
 
       <p>Dummy CSS variable: <code>--USER__invertImages</code></p>
 
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
+
       <p>This will only apply in night mode to invert images and impact <code>img</code>.</p>
 
       <hr/>
@@ -168,6 +178,8 @@
 
       <p>Dummy CSS variable: <code>--USER__a11yNormalize</code></p>
 
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
       <p>It impacts font style, weight and variant, text decoration, super and subscripts.</p>
 
       <hr/>
@@ -176,7 +188,7 @@
     </section>
 
     <section id="reading-system-styles" class="level2">
-      <h2 id="sigil_toc_id_170">Reading System Styles</h2>
+      <h2 id="sigil_toc_id_185">Reading System Styles</h2>
 
       <p>Custom properties for the Reading System are prefixed with <code>--RS__</code>.</p>
 
@@ -474,7 +486,7 @@
     </section>
 
     <section id="reading-modes" class="level2">
-      <h2 id="sigil_toc_id_171">Reading Modes</h2>
+      <h2 id="sigil_toc_id_186">Reading Modes</h2>
 
       <p>Custom properties for reading modes are prefixed with <code>--RS__</code>.</p>
 
@@ -516,7 +528,7 @@
     </section>
 
     <section id="user-settings" class="level2">
-      <h2 id="sigil_toc_id_172">User Settings</h2>
+      <h2 id="sigil_toc_id_187">User Settings</h2>
 
       <p>Custom properties for user settings are prefixed with <code>--USER__</code>.</p>
 
@@ -531,6 +543,8 @@
       <p>Possible values: <code>1</code> | <code>2</code> | <code>auto</code> (default)</p>
 
       <p>Required flag: none</p>
+
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
       <p>To reset, change the value to <code>auto</code>.</p>
 
@@ -548,6 +562,8 @@
 
       <p>Required flag: none</p>
 
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
+
       <p>To reset, change the value to <code>1</code>.</p>
 
       <hr/>
@@ -563,6 +579,8 @@
       <p>Possible values: Color HEX (e.g. <code>#FFFFFF</code>), <code>rgb(a)</code>, <code>hsl</code>.</p>
 
       <p>Required flag: none</p>
+
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
       <p>To reset, remove the CSS variable.</p>
 
@@ -580,6 +598,8 @@
 
       <p>Required flag: none</p>
 
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
+
       <p>To reset, remove the CSS variable.</p>
 
       <hr/>
@@ -595,6 +615,8 @@
       <p>Possible values: <code>left</code> (LTR) or <code>right</code> (RTL) | <code>justify</code></p>
 
       <p>Required flag: <code>:--advancedSettings</code></p>
+
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
 
       <p>Note: the value <code>start</code> can be used to let all rendering engines, excepted Trident (IE11) and EdgeHTML (Edge), automatically deal with <code>left</code> and <code>right</code> based on the direction (<code>dir</code> attribute) set for the document and its nested elements.</p>
 
@@ -612,6 +634,10 @@
 
       <p>Required flag: <code>:--advancedSettings</code></p>
 
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+      <p><strong>Warning:</strong> for the time being, automatic hyphenation won’t work if you are using the Blink rendering engine (either via Chrome or a Webview) on ChromeOS, Linux and Windows. It indeed is not implemented yet and we recommend not trying to polyfill it using JavaScript as it will create a11y issues, especially with screen readers.</p>
+
       <hr/>
 
       <pre><code>--USER__fontFamily</code></pre>
@@ -623,6 +649,8 @@
       <p>It impacts <code>body</code>, <code>p</code>, <code>li</code>, <code>div</code>, <code>dt</code>, <code>dd</code> and phrasing elements which don’t have a <code>lang</code> or <code>xml:lang</code> attribute.</p>
 
       <p>Required flag: <code>:--fontOverride</code></p>
+
+      <p>Override class: User settings (should be applied by any means necessary)</p>
 
       <p>To reset, remove the required flag.</p>
 
@@ -639,6 +667,8 @@
       <p>For Japanese, possible values become: <code>var(--RS__serif-ja)</code> (horizontal writing) | <code>var(--RS__sans-serif-ja)</code> (horizontal writing) | <code>var(--RS__serif-ja-v)</code> (vertical writing) | <code>var(--RS__sans-serif-ja-v)</code> (vertical writing) | <code>&lt;string&gt;</code></p>
 
       <p>Required flag: <code>:--fontOverride</code></p>
+
+      <p>Override class: User settings (should be applied by any means necessary)</p>
 
       <p>To reset, remove the required flag.</p>
 
@@ -658,6 +688,8 @@
 
       <p>Required flag: <code>:--advancedSettings</code></p>
 
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
       <hr/>
 
       <pre><code>--USER__lineHeight</code></pre>
@@ -672,6 +704,8 @@
 
       <p>Required flag: <code>:--advancedSettings</code></p>
 
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
       <hr/>
 
       <pre><code>--USER__paraSpacing</code></pre>
@@ -683,6 +717,8 @@
       <p>Recommended values: a range from <code>0</code> to <code>2rem</code>. Increments are left to implementers’ judgment.</p>
 
       <p>Required flag: <code>:--advancedSettings</code></p>
+
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
 
       <hr/>
 
@@ -696,6 +732,8 @@
 
       <p>Required flag: <code>:--advancedSettings</code></p>
 
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
       <hr/>
 
       <pre><code>--USER__wordSpacing</code></pre>
@@ -708,6 +746,8 @@
 
       <p>Required flag: <code>:--advancedSettings</code></p>
 
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
       <hr/>
 
       <pre><code>--USER__letterSpacing</code></pre>
@@ -719,6 +759,8 @@
       <p>Recommended values: a range from <code>0</code> to <code>0.5rem</code>. Increments are left to implementers’ judgment.</p>
 
       <p>Required flag: <code>:--advancedSettings</code></p>
+
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
 
       <hr/>
 
@@ -733,6 +775,8 @@
       <p>Possible values: <code>none</code> | <code>common-ligatures</code></p>
 
       <p>Required flag: <code>:--advancedSettings</code></p>
+
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
     </section>
   </section>
 </body>

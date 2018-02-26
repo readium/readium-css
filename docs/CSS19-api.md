@@ -82,6 +82,8 @@ Scope: `html`
 
 Dummy CSS variable: `--USER__view`
 
+Override class: Chrome (should be applied by any means necessary)
+
 * * * 
 
 ```
@@ -94,7 +96,7 @@ Scope: `html`
 
 Dummy CSS variable: `--USER__fontOverride`
 
-This flag is required to change the `font-family` user setting.
+Override class: None. This flag is required to change the `font-family` user setting.
 
 * * * 
 
@@ -108,8 +110,7 @@ Scope: `html`
 
 Dummy CSS variable: `--USER__advancedSettings`
 
-This flag is required to apply advanced user settings.
-
+Override class: None. This flag is required to apply the `font-family`, the `font-size` and/or advanced user settings.
 
 * * * 
 
@@ -122,6 +123,8 @@ Default is `readium-sepia-on`
 Scope: `html`
 
 Dummy CSS variable: `--USER__appearance`
+
+Override class: Chrome (should be applied by any means necessary)
 
 This flag applies the sepia reading mode.
 
@@ -137,6 +140,8 @@ Scope: `html`
 
 Dummy CSS variable: `--USER__appearance`
 
+Override class: Chrome (should be applied by any means necessary)
+
 This flag applies the night reading mode.
 
 * * * 
@@ -150,6 +155,8 @@ Default is `readium-darken-on`
 Scope: `html`
 
 Dummy CSS variable: `--USER__darkenImages`
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
 This will only apply in night mode to darken images and impact `img`.
 
@@ -165,6 +172,8 @@ Scope: `html`
 
 Dummy CSS variable: `--USER__invertImages`
 
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
 This will only apply in night mode to invert images and impact `img`.
 
 * * * 
@@ -178,6 +187,8 @@ Default is `readium-a11y-on`
 Scope: `html`
 
 Dummy CSS variable: `--USER__a11yNormalize`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 It impacts font style, weight and variant, text decoration, super and subscripts.
 
@@ -599,6 +610,8 @@ Possible values: `1` | `2` | `auto` (default)
 
 Required flag: none
 
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
 To reset, change the value to `auto`.
 
 * * *
@@ -616,6 +629,8 @@ It impacts `body`.
 Recommended values: a range from `0.5` to `2`.  Increments are left to implementers’ judgment.
 
 Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
 To reset, change the value to `1`.
 
@@ -635,6 +650,8 @@ Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
 
 Required flag: none
 
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
 To reset, remove the CSS variable.
 
 * * *
@@ -652,6 +669,8 @@ It impacts all elements but headings and `pre` in the DOM.
 Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
 
 Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
 To reset, remove the CSS variable.
 
@@ -671,6 +690,8 @@ Possible values: `left` (LTR) or `right` (RTL) | `justify`
 
 Required flag: `:--advancedSettings`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 Note: the value `start` can be used to let all rendering engines, excepted Trident (IE11) and EdgeHTML (Edge), automatically deal with `left` and `right` based on the direction (`dir` attribute) set for the document and its nested elements.
 
 * * *
@@ -689,6 +710,10 @@ Possible Values: `auto` | `none`
 
 Required flag: `:--advancedSettings`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+**Warning:** for the time being, automatic hyphenation won’t work if you are using the Blink rendering engine (either via Chrome or a Webview) on ChromeOS, Linux and Windows. It indeed is not implemented yet and we recommend not trying to polyfill it using JavaScript as it will create a11y issues, especially with screen readers.
+
 * * *
 
 ```
@@ -702,6 +727,8 @@ Scope: `html`
 It impacts `body`, `p`, `li`, `div`, `dt`, `dd` and phrasing elements which don’t have a `lang` or `xml:lang` attribute.
 
 Required flag: `:--fontOverride`
+
+Override class: User settings (should be applied by any means necessary)
 
 To reset, remove the required flag.
 
@@ -720,6 +747,8 @@ Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sa
 For Japanese, possible values become: `var(--RS__serif-ja)` (horizontal writing) | `var(--RS__sans-serif-ja)` (horizontal writing) | `var(--RS__serif-ja-v)` (vertical writing) | `var(--RS__sans-serif-ja-v)` (vertical writing) | `<string>`
 
 Required flag: `:--fontOverride`
+
+Override class: User settings (should be applied by any means necessary)
 
 To reset, remove the required flag.
 
@@ -741,6 +770,8 @@ Recommended values: a range from `75%` to `250%`. Increments are left to impleme
 
 Required flag: `:--advancedSettings`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 * * *
 
 ```
@@ -757,6 +788,8 @@ Recommended values: a range from `1` to `2`. Increments are left to implementers
 
 Required flag: `:--advancedSettings`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 * * *
 
 ```
@@ -770,6 +803,8 @@ Scope: `p`
 Recommended values: a range from `0` to `2rem`. Increments are left to implementers’ judgment.
 
 Required flag: `:--advancedSettings`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 * * *
 
@@ -785,6 +820,8 @@ Recommended values: a range from `0` to `3rem`. Increments are left to implement
 
 Required flag: `:--advancedSettings`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 * * *
 
 ```
@@ -799,6 +836,8 @@ Recommended values: a range from `0` to `1rem`. Increments are left to implement
 
 Required flag: `:--advancedSettings`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 * * *
 
 ```
@@ -812,6 +851,8 @@ Scope: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `li`, `div`
 Recommended values: a range from `0` to `0.5rem`. Increments are left to implementers’ judgment.
 
 Required flag: `:--advancedSettings`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 * * *
 
@@ -828,3 +869,5 @@ It impacts all text.
 Possible values: `none` | `common-ligatures`
 
 Required flag: `:--advancedSettings`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)

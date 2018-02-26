@@ -57,11 +57,11 @@ Allows to switch between paged and scroll view.
 
 Possible values: `readium-paged-on` | `readium-scroll-on`
 
+Override class: Chrome (should be applied by any means necessary)
+
 ### Font Family override
 
 Acts as an explicit switch to override the publisher’s `font-family`.
-
-It must be set if the user changes `font-family`.
 
 ```
 --USER__fontOverride
@@ -69,13 +69,13 @@ It must be set if the user changes `font-family`.
 
 Possible values: `readium-font-on` | `readium-font-off`
 
+Override class: None. This flag is required to change the `font-family` user setting.
+
 To switch back to the publisher’s font, you can either change the value to `readium-font-off` or remove the flag.
 
 ### Advanced Settings
 
 Acts as an explicit switch to override the publisher’s styles.
-
-It must be set if the user changes `font-family`, `font-size`, or any advanced setting.
 
 If you provide users with a “Publisher’s styles” toggle, it must be enabled and disabled accordingly.
 
@@ -84,6 +84,8 @@ If you provide users with a “Publisher’s styles” toggle, it must be enable
 ``` 
 
 Possible values: `readium-advanced-on` | `readium-advanced-off`
+
+Override class: None. This flag is required to apply the `font-family`, the `font-size` and/or advanced user settings.
 
 To switch back to the publisher’s styles, you can either change the value to `readium-advanced-off` or remove it. This will disable all advanced settings requiring the flag.
 
@@ -97,6 +99,8 @@ We currently have two reading modes for night and sepia.
 
 Possible values: `readium-day-on` | `readium-sepia-on` | `readium-night-on`
 
+Override class: Chrome (should be applied by any means necessary)
+
 ### Filters
 
 Please note night mode provides two extra specific variables: 
@@ -107,11 +111,15 @@ Please note night mode provides two extra specific variables:
 
 Possible values: `readium-darken-on` | `readium-darken-off`
 
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
 ```
 --USER__invertFilter
 ```
 
 Possible values: `readium-invert-on` | `readium-invert-off`
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
 ### Accessibility Normalization
 
@@ -122,6 +130,10 @@ Users may want to normalize text (no bold, no italics, etc.) for accessibility r
 ```
 
 Possible values: `readium-a11y-on` | `readium-a11y-off`
+
+Required flag: `--USER__advancedSettings: readium-advanced-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 ## List of variables 
 
@@ -139,6 +151,8 @@ Possible values: `1` | `2` | `auto` (default)
 
 Required flag: none
 
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
 To reset, change the value to `auto`.
 
 By default, this setting behaves as an `auto` value, it will switch to 1 or 2 columns depending on the minimum `width` available and `font-size`.
@@ -154,6 +168,8 @@ It is up to implementers to decide whether they want this setting to be availabl
 Recommended values: a range from `0.5` to `2`.  Increments are left to implementers’ judgment.
 
 Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
 To reset, change the value to `1`.
 
@@ -176,6 +192,8 @@ Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
 
 Required flag: none
 
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
 To reset, remove both variables.
 
 ### Hyphenation and justification
@@ -192,6 +210,8 @@ Possible values: `left` (LTR) or `right` (RTL) | `justify`
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 Note: the value `start` can be used to let all rendering engines, excepted Trident (IE11) and EdgeHTML (Edge), automatically deal with `left` and `right` based on the direction (`dir` attribute) set for the document and its nested elements.
 
 #### Hyphens
@@ -203,6 +223,10 @@ Note: the value `start` can be used to let all rendering engines, excepted Tride
 Possible Values: `auto` | `none`
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+**Warning:** for the time being, automatic hyphenation won’t work if you are using the Blink rendering engine (either via Chrome or a Webview) on ChromeOS, Linux and Windows. It indeed is not implemented yet and we recommend not trying to polyfill it using JavaScript as it will create a11y issues, especially with screen readers.
 
 ### Typography
 
@@ -220,6 +244,8 @@ For Japanese, possible values become: `var(--RS__serif-ja)` (horizontal writing)
 
 Required flag: `--USER__fontOverride: readium-font-on`
 
+Override class: User settings (should be applied by any means necessary)
+
 To reset, remove the required flag.
 
 #### Font size
@@ -236,6 +262,8 @@ Recommended values: a range from `75%` to `250%`. Increments are left to impleme
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
 
+Override class: User settings (should be applied by any means necessary)
+
 #### Type scale
 
 If the `--USER__advancedSettings: readium-advanced-on` style is set for `html`, you can customize the `font-size` of all elements using a factor. This may come in handy on mobile devices, if the user sets a large font-size.
@@ -248,6 +276,8 @@ Possible values: `1` | `1.067` | `1.125` | `1.2` (suggested default) | `1.25` | 
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 You can use different type scale values depending on the `font-size`. For instance, if the user sets a large one, you might want to decrease the type scale so that headings are not super large.
 
 #### Line height
@@ -259,6 +289,8 @@ You can use different type scale values depending on the `font-size`. For instan
 Recommended values: a range from `1` to `2`. Increments are left to implementers’ judgment.
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 ### Paragraphs’ formatting
 
@@ -274,6 +306,8 @@ Recommended values: a range from `0` to `2rem`. Increments are left to implement
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 #### Paragraphs’ indent
 
 ```
@@ -283,6 +317,8 @@ Required flag: `--USER__advancedSettings: readium-advanced-on`
 Recommended values: a range from `0` to `3rem`. Increments are left to implementers’ judgment.
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 ### Characters’ spacing
 
@@ -298,6 +334,8 @@ Recommended values: a range from `0` to `1rem`. Increments are left to implement
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 #### Letter spacing
 
 ```
@@ -308,6 +346,8 @@ Recommended values: a range from `0` to `0.5rem`. Increments are left to impleme
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
 
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 #### Arabic Ligatures
 
 ```
@@ -317,6 +357,8 @@ Required flag: `--USER__advancedSettings: readium-advanced-on`
 Possible values: `none` | `common-ligatures`
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 ## Themes
 

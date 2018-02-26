@@ -144,33 +144,38 @@ Explain the problem and include additional details to help maintainers reproduce
 #### Template for Submitting Bug Reports
 
 ```
-[Short description of problem here]
+I'm submitting a…
 
-**Reproduction Steps:**
+- [x] bug report
+- [ ] feature request
+- [ ] other
+
+**Short description of the issue/suggestion:**
+
+**Steps to reproduce the issue/enhancement:**
 
 1. [First Step]
 2. [Second Step]
 3. [Other Steps...]
 
-**Expected behavior:**
+**What is the expected behavior?**
 
-[Describe expected behavior here]
+**What is the current behavior?**
 
-**Observed behavior:**
+**Do you have screenshots, GIFs, demos or samples which demonstrate the problem or enhancement?** 
 
-[Describe observed behavior here]
+![image description](url)
 
-**Screenshots and GIFs**
+**What is the motivation / use case for changing the behavior?**
 
-![Screenshots and GIFs which follow reproduction steps to demonstrate the problem](url)
+**Do you know which CSS modules (stylesheets) are impacted?**
 
-**Stylesheets impacted:** [namelist]
+**Please tell us about your environment:**
 
-**Platform or browser:** [platform and/or browser, and version]
+- Platform: [Android | iOS | Linux | MacOS | Windows | other]
+- Browser: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
 
-**Fix**
-
-[Explain how you fixed it]
+**Other information** (e.g. related issues, suggestions how to fix, links for us to have context)
 ```
 
 ### Suggesting Enhancements
@@ -188,30 +193,43 @@ First and foremost, check if those enhancements have already been suggested (che
 #### Template for Suggesting an Enhancement
 
 ```
-[Short description of suggestion]
+I'm submitting a…
 
-**Steps which explain the enhancement**
+- [ ] bug report
+- [x] feature request
+- [ ] other
+
+**Short description of the issue/suggestion:**
+
+**Steps to reproduce the issue/enhancement:**
 
 1. [First Step]
 2. [Second Step]
 3. [Other Steps...]
 
-**Current and suggested behavior**
+**What is the expected behavior?**
 
-[Describe current and suggested behavior here]
+**What is the current behavior?**
 
-**Why would the enhancement be useful to most users**
+**Do you have screenshots, GIFs, demos or samples which demonstrate the problem or enhancement?** 
 
-[Explain why the enhancement would be useful to most users, the problem it solves, etc.]
+![image description](url)
 
-**Screenshots and GIFs**
+**What is the motivation / use case for changing the behavior?**
 
-![Screenshots and GIFs which demonstrate the steps or part the enhancement suggestion is related to](url)
+**Do you know which CSS modules (stylesheets) are impacted?**
+
+**Please tell us about your environment:**
+
+- Platform: [Android | iOS | Linux | MacOS | Windows | other]
+- Browser: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
+
+**Other information** (e.g. related issues, suggestions how to fix, links for us to have context)
 ```
 
 ### Your First Code Contribution
 
-Unsure where to begin contributing to the Readium CSS Project? You can start by looking through the `feedback-required` issues or the [Roadmap section](#roadmap).
+Unsure where to begin contributing to the Readium CSS Project? You can start by looking through the `feedback-required` and/or `low-hanging fruit` issues, or the [Roadmap section](#roadmap).
 
 Then fork the repo, create a branch named after the issue you’re trying to solve, and implement your modifications.
 

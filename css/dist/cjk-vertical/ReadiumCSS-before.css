@@ -293,27 +293,7 @@ math {
   background-color: var(--RS__selectionBackgroundColor);
 }
 
-/* Readium CSS 
-   Fonts module
-
-   A stylesheet for embedded fonts
-
-   Repo: https://github.com/readium/readium-css */
-
-/* /!\ Mind the path (relative to the folders in which you have stylesheets and the fonts) */
-
-@font-face {
-  font-family: "AccessibleDfa";
-  font-style: normal;
-  font-weight: normal;
-  src: local("AccessibleDfa"),
-       url("../fonts/AccessibleDfA.otf") format("opentype");
-}
-
-/* If you have different weights/styles, 
-   use `font-weight` and `font-style`, 
-   not prefixes in the font-family name, 
-   or else it will be a nightmare to manage in user settings. */
+/* @import "modules/ReadiumCSS-fonts.css"; */
 
 /* Readium CSS 
    HTML5 SR Patch stylesheet

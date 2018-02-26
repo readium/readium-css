@@ -307,7 +307,7 @@ math {
   font-style: normal;
   font-weight: normal;
   src: local("AccessibleDfa"),
-       url("../fonts/AccessibleDfA.otf") format("opentype");
+       url("fonts/AccessibleDfA.otf") format("opentype");
 }
 
 /* If you have different weights/styles, 

@@ -52,11 +52,11 @@ The auto pagination model switches from 1 to 2 columns, and vice versa, when the
 
 On desktop, `--responsive-columns` is the `min-width` at which the model must be used. Default is `60em`, a relative unit since it is responsive by default and will switch depending on the window’s dimensions and the font size.
 
-Should you want it never or always applied, you can either define a `min-width` small or large enough, or remove the media queries entirely in `ReadiumCSS-pagination.css` and `ReadiumCSS-colNumber_pref.css`.
+Should you want it never or always applied, you can either define a `min-width` large or small enough, or remove the media queries entirely in `ReadiumCSS-pagination.css` and `ReadiumCSS-colNumber_pref.css`.
 
-On mobile, `--mobile-columns` is the orientation in which the model must be used. Default is `landscape`.
+On mobile, `--min-device-columns` and `--max-device-columns` is the range of (minimum and maximum) device widths in which the model must be used. We are forcing the orientation in `landscape`.
 
-We recommend not trying to always apply it because 2 columns in portrait orientation will provide users with quite a terrible reading experience.
+We recommend not trying to apply it in portrait orientation because 2 columns will provide users with quite a terrible reading experience in this configuration.
 
 Those custom medias may be extended at some point, depending on implementers’ feedbacks and issues.
 

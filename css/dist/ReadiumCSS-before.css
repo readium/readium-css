@@ -16,7 +16,9 @@
    depending on the current font-size) must be enabled */
 
 /* Mobile columns
-   The orientation for which 2-columns is enabled on mobile devices */
+   The minimum and maximum width for mobile devices.
+   We’re forcing the landscape orientation by default,
+   and must still investigate large tablets (iPad Pro, Surface Pro 3, etc.). */
 
 /* Custom selectors
    Syntax: @custom-selector :--variable selector

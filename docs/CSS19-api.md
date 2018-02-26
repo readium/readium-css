@@ -43,12 +43,22 @@ The `min-width` at which the auto pagination model must be used – will switch 
 * * *
 
 ```
---mobile-columns
+--min-device-columns
 ```
 
-Default is `landscape`
+Default is `36em`
 
-The orientation in which the model must be used.
+The minimum device width of the mobile device for which the auto pagination model must be used.
+
+* * *
+
+```
+--max-device-columns
+```
+
+Default is `47em`
+
+The maximum device width of the mobile device for which the auto pagination model must be used.
 
 * * *
 

@@ -17,8 +17,11 @@
 @custom-media --responsive-columns (min-width: 60em);
 
 /* Mobile columns
-   The orientation for which 2-columns is enabled on mobile devices */
-@custom-media --mobile-columns (orientation: landscape);
+   The minimum and maximum width for mobile devices.
+   We’re forcing the landscape orientation by default,
+   and must still investigate large tablets (iPad Pro, Surface Pro 3, etc.). */
+@custom-media --min-device-columns (min-device-width: 36em);
+@custom-media --max-device-columns (max-device-width: 47em);
 
 /* Custom selectors
    Syntax: @custom-selector :--variable selector

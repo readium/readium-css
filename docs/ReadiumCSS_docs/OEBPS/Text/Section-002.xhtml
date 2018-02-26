@@ -103,11 +103,11 @@
 
         <p>On desktop, <code>--responsive-columns</code> is the <code>min-width</code> at which the model must be used. Default is <code>60em</code>, a relative unit since it is responsive by default and will switch depending on the window’s dimensions and the font size.</p>
 
-        <p>Should you want it never or always applied, you can either define a <code>min-width</code> small or large enough, or remove the media queries entirely in <code>ReadiumCSS-pagination.css</code> and <code>ReadiumCSS-colNumber_pref.css</code>.</p>
+        <p>Should you want it never or always applied, you can either define a <code>min-width</code> large or small enough, or remove the media queries entirely in <code>ReadiumCSS-pagination.css</code> and <code>ReadiumCSS-colNumber_pref.css</code>.</p>
 
-        <p>On mobile, <code>--mobile-columns</code> is the orientation in which the model must be used. Default is <code>landscape</code>.</p>
+        <p>On mobile, <code>--min-device-columns</code> and <code>--max-device-columns</code> is the range of (minimum and maximum) device widths in which the model must be used. We are forcing the orientation in <code>landscape</code>.</p>
 
-        <p>We recommend not trying to always apply it because 2 columns in portrait orientation will provide users with quite a terrible reading experience.</p>
+        <p>We recommend not trying to apply it in portrait orientation because 2 columns will provide users with quite a terrible reading experience in this configuration.</p>
 
         <p>Those custom medias may be extended at some point, depending on implementers’ feedbacks and issues.</p>
       </section>

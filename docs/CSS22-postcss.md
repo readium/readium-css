@@ -52,7 +52,9 @@ npm run-script build
 
 If you need to build stylesheets for IE11 or an early version of Edge (e.g. 14), then you can use most of ReadiumCSS, excepted user settings. You’ll consequently have to customize the `src`’s `ReadiumCSS-before.css`, `ReadiumCSS-default.css` and `ReadiumCSS-after.css` and remove the user settings submodules.
 
-Then you will have to enable the `postcss-css-variables` and `postcss-alter-property-value` in the `postcss.config.js` file to be found at the `src` folder’s root.
+Then you must customize the selectors in `ReadiumCSS-config.js` and replace them with either CSS classes or custom attributes so that reading modes and flags can work as expected.
+
+Finally you will have to enable the `postcss-css-variables` and `postcss-alter-property-value` in the `postcss.config.js` file to be found at the `src` folder’s root.
 
 The following must be added to `plugins`: 
 
@@ -74,6 +76,8 @@ This will:
 
 1. interpolate CSS variables into a static representation, while preserving variables for other browsers (`"preserve": true`);
 2. remove static representations which can’t be interpolated and are `undefined` (`remove` task).
+
+We recommend managing user settings via JavaScript in this case, especially as you can test support for CSS variables, as described in the [CSS Variables primer](../docs/CSS07-variables.md).
 
 ## Useful plugins
 

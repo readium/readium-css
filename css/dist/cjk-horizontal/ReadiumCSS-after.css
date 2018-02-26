@@ -128,7 +128,7 @@
 }
 
 body {
-/*  overflow: hidden; bugfix: contents won’t paginate in Firefox and one sample in Safari */
+  /*  overflow: hidden; bugfix: contents won’t paginate in Firefox and one sample in Safari */
   width: 100%;
 
   /* Limit line-length but we have to reset when 2 columns and control the viewport.
@@ -181,7 +181,7 @@ body {
   :root {
     /* The size at which we want 2 columns to switch to 1 (depending on font-size) */
     --RS__colWidth: 20em; /* 20 * 16 = 320px but 20 * 28 = 560px so it will switch to 1 col @ 175% font-size (user-setting) on an iPad */
-    /* We constrain to 2 columns so that we can never get 3 or 4, etc.*/
+    /* We constrain to 2 columns so that we can never get 3 or 4, etc. */
     --RS__colCount: 2;
     --RS__maxLineLength: 39.99rem; /* If we don’t use this, colNumber user setting won’t work in Safari… */
   }
@@ -413,7 +413,7 @@ body {
   /* Should we also set user highlights? */
 }
 
-@media screen and (-ms-high-contrast: white-on-black) { 
+@media screen and (-ms-high-contrast: white-on-black) {
   :root[style*="readium-night-on"] img[class*="gaiji"],
   :root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child {
     -webkit-filter: none !important;

@@ -8,9 +8,9 @@
 /* /!\ Mind the path (relative to the folders in which you have stylesheets and the fonts) */
 
 @font-face {
-  font-family: "AccessibleDfa";
+  font-family: AccessibleDfa;
   src: local("AccessibleDfa"),
-       url("fonts/AccessibleDfA.otf") format("opentype");
+    url("fonts/AccessibleDfA.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }

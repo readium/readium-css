@@ -142,7 +142,7 @@
 }
 
 body {
-/*  overflow: hidden; bugfix: contents won’t paginate in Firefox and one sample in Safari */
+  /*  overflow: hidden; bugfix: contents won’t paginate in Firefox and one sample in Safari */
   width: 100%;
 
   /* Limit line-length but we have to reset when 2 columns and control the viewport.
@@ -417,7 +417,7 @@ body {
   /* Should we also set user highlights? */
 }
 
-@media screen and (-ms-high-contrast: white-on-black) { 
+@media screen and (-ms-high-contrast: white-on-black) {
   :root[style*="readium-night-on"] img[class*="gaiji"],
   :root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child {
     -webkit-filter: none !important;

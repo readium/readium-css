@@ -33,7 +33,7 @@
   /* Should we also set user highlights? */
 }
 
-@media screen and (-ms-high-contrast: white-on-black) { 
+@media screen and (-ms-high-contrast: white-on-black) {
   :root:--night-mode img[class*="gaiji"],
   :root:--night-mode *[epub\:type~="titlepage"] img:only-child {
     -webkit-filter: none !important;

@@ -10,7 +10,7 @@
 
 :root:--font-override[style*="AccessibleDfa"] {
   /* We won’t use the variable there since we need fallbacks for missing characters */
-  font-family: "AccessibleDFA", Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
+  font-family: AccessibleDFA, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
 }
 
 /* Maybe users want a setting to normalize any font offered so there is a “a11y Normalize” flag for it */

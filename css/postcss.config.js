@@ -25,6 +25,14 @@ module.exports = (ctx) => ({
         , "comment-whitespace-inside": "always"
         , "max-empty-lines": 1
         , "indentation": 2
+        , "no-duplicate-at-import-rules": true
+        , "no-extra-semicolons": true
+        , "no-invalid-double-slash-comments": true
+        , "max-nesting-depth": 0
+        , "string-quotes": "double"
+        , "declaration-bang-space-before": "always"
+        , "block-closing-brace-newline-after": "always"
+        , "block-opening-brace-newline-after": "always"
       }
     }),
     require('postcss-sorting')({

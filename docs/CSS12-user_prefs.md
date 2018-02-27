@@ -409,6 +409,7 @@ The following is provided as guidance only:
 
 User settings to disable are:
 
+- `--USER__bodyHyphens`;
 - `--USER__wordSpacing`;
 - `--USER__letterSpacing`.
 

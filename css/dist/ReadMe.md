@@ -24,6 +24,7 @@ Finally, page progression is impacted:
 
 Disabled user settings: 
 
+- `hyphens`;
 - `word-spacing`;
 - `letter-spacing`.
 

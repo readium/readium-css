@@ -144,7 +144,7 @@ Other scripts are available:
 
 ### Additional info
 
-Further details about the build process can be found in [the PostCSS doc](../docs/CSS22-postcss.md).
+Further details about the build and test processes can be found in [the npm doc](../docs/CSS22-npm.md).
 
 ## Manage User Settings
 

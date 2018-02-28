@@ -1,14 +1,34 @@
-# PostCSS
+# Install, test and build Readium CSS
 
 [Implementers’ doc]
 
-PostCSS is a tool for transforming CSS with JavaScript. It comes with a vast amount of task-oriented plugins and allows authors to use modern specs which are not implemented yet.
+## Install and init references for regression tests
+
+First, navigatate to the project’s folder in your terminal, then type: 
+
+```
+npm install
+```
+
+This will install all dev dependencies needed and make npm scripts available to ease those processes.
+
+Then, once the process if finished, type:
+
+```
+npm run test:ref
+```
+
+This will create reference screenshots for the CSS regression tests.
+
+## Build
+
+We are using PostCSS, a tool for transforming CSS with JavaScript. It comes with a vast amount of task-oriented plugins and allows authors to use modern specs which are not implemented yet.
 
 - [PostCSS official website](http://postcss.org)
 - [PostCSS tutorial](https://webdesign.tutsplus.com/tutorials/using-postcss-for-cross-browser-compatibility--cms-24567)
 - [PostCSS plugins list](https://www.postcss.parts)
 
-## Dev Dependencies
+### PostCSS Dependencies
 
 ReadiumCSS is relying on a PostCSS config to build `dist` stylesheets. If you `npm install` the repository, all those dependencies will be installed as well.
 
@@ -24,13 +44,13 @@ Here is the current list of dependencies:
 - postcss-css-variables ([link](https://github.com/MadLittleMods/postcss-css-variables)) [disabled];
 - postcss-alter-property-value ([link](https://github.com/kunukn/postcss-alter-property-value)) [disabled].
 
-## Build dist stylesheets
+### Build dist stylesheets
 
 If you customize `ReadiumCSS-config.css`, you will have to rebuild stylesheets.
 
 **Note:** the current build process is subpar – to say the least. Please feel free to improve it (gulp, grunt, etc.).
 
-### Available scripts
+#### Available scripts
 
 By default, the following scripts are available: 
 
@@ -40,15 +60,15 @@ By default, the following scripts are available:
 - `build:cjk`, will build stylesheets for Chinese, Japanese, and Korean in horizontal writing mode; 
 - `build:vertical`, will build stylesheets for Chinese, Japanese, Korean, and Mongolian in vertical writing mode.
 
-### Usage
+#### Usage
 
 First navigate to the `readium-css` folder, then…
 
 ```
-npm run-script build
+npm run build
 ```
 
-### Building dist stylesheets for browsers which don’t support CSS variables
+#### Building dist stylesheets for browsers which don’t support CSS variables
 
 If you need to build stylesheets for IE11 or an early version of Edge (e.g. 14), then you can use most of ReadiumCSS, excepted user settings. You’ll consequently have to customize the `src`’s `ReadiumCSS-before.css`, `ReadiumCSS-default.css` and `ReadiumCSS-after.css` and remove the user settings submodules.
 
@@ -79,9 +99,76 @@ This will:
 
 We recommend managing user settings via JavaScript in this case, especially as you can test support for CSS variables, as described in the [CSS Variables primer](../docs/CSS07-variables.md).
 
-## Useful plugins
+### Useful PostCSS plugins
 
 Here is a list of additionnal PostCSS plugins which might prove useful to implementers.
 
 - Unprefix EPUB properties: [EPUB interceptor](https://github.com/JayPanoz/postcss-epub-interceptor)
 - Adding vendor prefixes: [Autoprefixer](https://github.com/postcss/autoprefixer)
+
+## Test
+
+Once you have build `dist` stylesheets, you can run regression tests using [Backstop.js](https://github.com/garris/BackstopJS).
+
+It helps you check if you didn’t accidentally create a breaking change when customizing stylesheets, and make sure pagination, reading modes, and user settings work as expected.
+
+### Config
+
+You will find the configuration file, `backstop.json` at the root of the project. By default, it runs those test for a smartphone (portrait) and a tablet (landscape) viewports using Chrome, but you can customize it to fit your needs.
+
+For instance, if you don’t need to support mobile, you could modify `viewports`: 
+
+```
+"viewports": [
+  {
+    "label": "desktop small",
+    "width": 800,
+    "height": 600
+  },
+  {
+    "label": "desktop larger",
+    "width": 1600,
+    "height": 900
+  }
+]
+```
+
+And if you want to run tests using Webkit instead of Blink because you’re developing iOS apps:
+
+```
+"engine": "phantomjs"
+```
+
+### Test files
+
+If you customize flags in `ReadiumCSS-config.css`, you must modify `html` files in the test folder, user settings are indeed set on `html` and are using the default flags.
+
+### Available scripts
+
+By default, the following scripts are available: 
+
+- `test`, will run tests;
+- `test:ref`, will create reference screenshots;
+- `test:approve`, will update reference screenshots from the current test.
+
+### Usage
+
+First navigate to the `readium-css` folder, then…
+
+```
+npm run test
+```
+
+The regression tests will run against the newly-created `dist` stylesheets, which is why you must build them before running those tests.
+
+Once all scenarios are tested for the viewports you created, a result page will open in your browser.
+
+If a unit test is marked as “failed”, it doesn’t necessarily mean the user setting failed, it just means you made a significant change which impacts rendering. Take a closer look at the diff, and if you’re happy with the result, head to the terminal and type:
+
+```
+npm run test:approve
+```
+
+This will make the current test screenshots the new reference for the next test.
+
+**Note:** on some occasions, an error might happen during tests and the process won’t stop. Try `ctrl + c` to stop the current process and run the test again.

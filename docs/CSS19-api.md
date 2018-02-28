@@ -188,6 +188,8 @@ Scope: `html`
 
 Dummy CSS variable: `--USER__a11yNormalize`
 
+Required flag: `:--fontOverride`
+
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 It impacts font style, weight and variant, text decoration, super and subscripts.

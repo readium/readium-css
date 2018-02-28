@@ -131,7 +131,7 @@ Users may want to normalize text (no bold, no italics, etc.) for accessibility r
 
 Possible values: `readium-a11y-on` | `readium-a11y-off`
 
-Required flag: `--USER__advancedSettings: readium-advanced-on`
+Required flag: `--USER__fontOverride: readium-font-on`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 

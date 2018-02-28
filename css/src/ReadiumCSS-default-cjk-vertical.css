@@ -32,7 +32,7 @@
   --RS__secondaryColor: ;
 }
 
-:lang("mn") {
+:lang("mn-Mong") {
   --RS__baseFontSize: 100%;
 }
 
@@ -56,13 +56,13 @@ h1, h2, h3, h4, h5, h6 {
 
 blockquote, figure, p, pre,
 aside, footer, form, hr {
-  margin-left: var(--RS__flowSpacing);
   margin-right: var(--RS__flowSpacing);
+  margin-left: var(--RS__flowSpacing);
 }
 
 p {
+  margin-right: var(--RS__paraSpacing);
   margin-left: var(--RS__paraSpacing);
-  margin-right: var(--RS__paraSpacing); 
   text-indent: var(--RS__paraIndent);
 }
 
@@ -83,11 +83,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -0.2ex;
+  left: -0.2ex;
 }
 
 sup {
-  bottom: 0;
+  right: 0;
 }
 
 em {
@@ -107,47 +107,47 @@ em {
 /* Headings */
 
 h1 {
-  margin-left: calc(var(--RS__flowSpacing) * 2);
   margin-right: calc(var(--RS__flowSpacing) * 2);
+  margin-left: calc(var(--RS__flowSpacing) * 2);
   /* The following is base font size * typescale power of 3 */
   font-size: calc(((1em * var(--RS__typeScale)) * var(--RS__typeScale)) * var(--RS__typeScale));
   text-indent: 2rem;
 }
 
 h2 {
-  margin-left: calc(var(--RS__flowSpacing) * 2);
-  margin-right: var(--RS__flowSpacing);
+  margin-right: calc(var(--RS__flowSpacing) * 2);
+  margin-left: var(--RS__flowSpacing);
   /* The following is base font size * typescale power of 2 */
   font-size: calc((1em * var(--RS__typeScale)) * var(--RS__typeScale));
   text-indent: 3rem;
 }
 
 h3 {
-  margin-left: var(--RS__flowSpacing);
   margin-right: var(--RS__flowSpacing);
+  margin-left: var(--RS__flowSpacing);
   font-size: calc(1em * var(--RS__typeScale));
   text-indent: 4rem;
 }
 
 h4 {
-  margin-left: var(--RS__flowSpacing);
   margin-right: var(--RS__flowSpacing);
+  margin-left: var(--RS__flowSpacing);
   font-size: 1em;
   font-family: var(--RS__compFontFamily);
   text-indent: 4rem;
 }
 
 h5 {
-  margin-left: var(--RS__flowSpacing);
   margin-right: var(--RS__flowSpacing);
+  margin-left: var(--RS__flowSpacing);
   font-size: smaller;
   font-family: var(--RS__compFontFamily);
   text-indent: 4rem;
 }
 
 h6 {
-  margin-left: var(--RS__flowSpacing);
-  margin-right: 0;
+  margin-right: var(--RS__flowSpacing);
+  margin-left: 0;
   font-size: smaller;
   font-family: var(--RS__compFontFamily);
   font-weight: normal;
@@ -157,8 +157,8 @@ h6 {
 /* Lists */
 
 dl, ol, ul {
-  margin-left: var(--RS__flowSpacing);
   margin-right: var(--RS__flowSpacing);
+  margin-left: var(--RS__flowSpacing);
 }
 
 /* Table */

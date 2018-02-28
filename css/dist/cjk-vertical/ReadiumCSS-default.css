@@ -32,7 +32,7 @@
   --RS__secondaryColor: ;
 }
 
-:lang("mn") {
+:lang("mn-Mong") {
   --RS__baseFontSize: 100%;
 }
 
@@ -62,7 +62,7 @@ aside, footer, form, hr {
 
 p {
   margin-right: var(--RS__paraSpacing);
-  margin-left: var(--RS__paraSpacing); 
+  margin-left: var(--RS__paraSpacing);
   text-indent: var(--RS__paraIndent);
 }
 
@@ -83,11 +83,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -0.2ex;
+  left: -0.2ex;
 }
 
 sup {
-  bottom: 0;
+  right: 0;
 }
 
 em {
@@ -115,8 +115,8 @@ h1 {
 }
 
 h2 {
-  margin-right: var(--RS__flowSpacing);
-  margin-left: calc(var(--RS__flowSpacing) * 2);
+  margin-right: calc(var(--RS__flowSpacing) * 2);
+  margin-left: var(--RS__flowSpacing);
   /* The following is base font size * typescale power of 2 */
   font-size: calc((1em * var(--RS__typeScale)) * var(--RS__typeScale));
   text-indent: 3rem;
@@ -146,8 +146,8 @@ h5 {
 }
 
 h6 {
-  margin-right: 0;
-  margin-left: var(--RS__flowSpacing);
+  margin-right: var(--RS__flowSpacing);
+  margin-left: 0;
   font-family: var(--RS__compFontFamily);
   font-size: smaller;
   font-weight: normal;

@@ -114,7 +114,7 @@ It helps you check if you didn’t accidentally create a breaking change when cu
 
 ### Config
 
-You will find the configuration file, `backstop.json` at the root of the project. By default, it runs those test for a smartphone (portrait) and a tablet (landscape) viewports using Chrome, but you can customize it to fit your needs.
+You will find the configuration file, `backstop.json` at the root of the project. By default, it runs those tests for a smartphone (portrait) and a tablet (landscape) viewports using Chrome, but you can customize it to fit your needs.
 
 For instance, if you don’t need to support mobile, you could modify `viewports`: 
 
@@ -126,7 +126,7 @@ For instance, if you don’t need to support mobile, you could modify `viewports
     "height": 600
   },
   {
-    "label": "desktop larger",
+    "label": "desktop large",
     "width": 1600,
     "height": 900
   }
@@ -141,7 +141,7 @@ And if you want to run tests using Webkit instead of Blink because you’re deve
 
 ### Test files
 
-If you customize flags in `ReadiumCSS-config.css`, you must modify `html` files in the test folder, user settings are indeed set on `html` and are using the default flags.
+If you customize flags in `ReadiumCSS-config.css`, you must modify HTML files in the `tests` folder; user settings are indeed set as inline styles on the `html` element and are using the default flags.
 
 ### Available scripts
 
@@ -159,9 +159,9 @@ First navigate to the `readium-css` folder, then…
 npm run test
 ```
 
-The regression tests will run against the newly-created `dist` stylesheets, which is why you must build them before running those tests.
+The regression tests will run against the newly-created `dist` stylesheets, which is why you must build them beforehand.
 
-Once all scenarios are tested for the viewports you created, a result page will open in your browser.
+Once all scenarios are tested for the viewports you created, a report will automatically open in your browser.
 
 If a unit test is marked as “failed”, it doesn’t necessarily mean the user setting failed, it just means you made a significant change which impacts rendering. Take a closer look at the diff, and if you’re happy with the result, head to the terminal and type:
 

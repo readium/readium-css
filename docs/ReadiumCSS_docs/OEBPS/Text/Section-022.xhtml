@@ -163,7 +163,7 @@ require("postcss-alter-property-value")({
       <section id="config" class="level3">
         <h3 class="sigil_not_in_toc">Config</h3>
 
-        <p>You will find the configuration file, <code>backstop.json</code> at the root of the project. By default, it runs those test for a smartphone (portrait) and a tablet (landscape) viewports using Chrome, but you can customize it to fit your needs.</p>
+        <p>You will find the configuration file, <code>backstop.json</code> at the root of the project. By default, it runs those tests for a smartphone (portrait) and a tablet (landscape) viewports using Chrome, but you can customize it to fit your needs.</p>
 
         <p>For instance, if you don’t need to support mobile, you could modify <code>viewports</code>:</p>
 
@@ -174,7 +174,7 @@ require("postcss-alter-property-value")({
     "height": 600 
   }, 
   { 
-    "label": "desktop larger", 
+    "label": "desktop large", 
     "width": 1600, 
     "height": 900 
   } 
@@ -188,7 +188,7 @@ require("postcss-alter-property-value")({
       <section id="test-files" class="level3">
         <h3 class="sigil_not_in_toc">Test files</h3>
 
-        <p>If you customize flags in <code>ReadiumCSS-config.css</code>, you must modify <code>html</code> files in the test folder, user settings are indeed set on <code>html</code> and are using the default flags.</p>
+        <p>If you customize flags in <code>ReadiumCSS-config.css</code>, you must modify HTML files in the <code>tests</code> folder; user settings are indeed set as inline styles on the <code>html</code> element and are using the default flags.</p>
       </section>
 
       <section id="available-scripts-1" class="level3">
@@ -212,9 +212,9 @@ require("postcss-alter-property-value")({
 
         <pre><code>npm run test</code></pre>
 
-        <p>The regression tests will run against the newly-created <code>dist</code> stylesheets, which is why you must build them before running those tests.</p>
+        <p>The regression tests will run against the newly-created <code>dist</code> stylesheets, which is why you must build them beforehand.</p>
 
-        <p>Once all scenarios are tested for the viewports you created, a result page will open in your browser.</p>
+        <p>Once all scenarios are tested for the viewports you created, a report will automatically open in your browser.</p>
 
         <p>If a unit test is marked as “failed”, it doesn’t necessarily mean the user setting failed, it just means you made a significant change which impacts rendering. Take a closer look at the diff, and if you’re happy with the result, head to the terminal and type:</p>
 

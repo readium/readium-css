@@ -8,21 +8,21 @@
 
 /* For AccessibleDfa, we need to normalize font-weight and font-style since only the normal style is available */
 
-:root:--font-override[style*="AccessibleDfa"] {
+:root:--font-override:--a11y-font {
   /* We won’t use the variable there since we need fallbacks for missing characters */
   font-family: AccessibleDFA, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
 }
 
 /* Maybe users want a setting to normalize any font offered so there is a “a11y Normalize” flag for it */
 
-:root:--font-override[style*="AccessibleDfa"],
+:root:--font-override:--a11y-font,
 :root:--font-override:--a11y-normalize {
   font-weight: normal !important;
   font-style: normal !important;
 }
 
 /* Targeting everything except code. Note that Open Dyslexic has a monospaced font for code */
-:root:--font-override[style*="AccessibleDfa"] *:not(code):not(var):not(kbd):not(samp),
+:root:--font-override:--a11y-font *:not(code):not(var):not(kbd):not(samp),
 :root:--font-override:--a11y-normalize *:not(code):not(var):not(kbd):not(samp) {
   font-family: inherit !important;
   font-weight: inherit !important;
@@ -30,16 +30,16 @@
 }
 
 /* Normalizing text-decoration, subs and sups */
-:root:--font-override[style*="AccessibleDfa"] *,
+:root:--font-override:--a11y-font *,
 :root:--font-override:--a11y-normalize * {
   text-decoration: none !important;  
   font-variant-position: normal !important;
   font-variant-numeric: normal !important;
 }
 
-:root:--font-override[style*="AccessibleDfa"] sup,
+:root:--font-override:--a11y-font sup,
 :root:--font-override:--a11y-normalize sup,
-:root:--font-override[style*="AccessibleDfa"] sub,
+:root:--font-override:--a11y-font sub,
 :root:--font-override:--a11y-normalize sub {
   font-size: 1rem !important;
   vertical-align: baseline !important;

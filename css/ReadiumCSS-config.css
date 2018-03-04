@@ -50,7 +50,7 @@
 @custom-selector :--a11y-normalize [style*="readium-a11y-on"];
 
 /* Accessibility font. You can add selectors, using “, ” as a separator, if you have multiple fonts */
-@custom-selector :--a11y-font [style*="AccessibleDfa"];
+@custom-selector :--a11y-font [style*="AccessibleDfa"], [style*="IA Writer Duospace"];
 
 /* Direction i.e. ltr and rtl */
 @custom-selector :--ltr [dir="ltr"];

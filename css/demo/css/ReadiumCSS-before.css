@@ -37,6 +37,8 @@
 
 /* Accessibility normalization */
 
+/* Accessibility font. You can add selectors, using “, ” as a separator, if you have multiple fonts */
+
 /* Direction i.e. ltr and rtl */
 
 /* Readium CSS 
@@ -310,6 +312,14 @@ math {
   font-weight: normal;
   src: local("AccessibleDfa"),
     url("fonts/AccessibleDfA.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "IA Writer Duospace";
+  font-style: normal;
+  font-weight: normal;
+  src: local("iAWriterDuospace-Regular"),
+    url("fonts/iAWriterDuospace-Regular.ttf") format("truetype");
 }
 
 /* If you have different weights/styles, 
@@ -595,3 +605,4 @@ table {
   overflow-x: auto;
   box-sizing: var(--RS__boxSizingTable);
 }
+/*# sourceMappingURL=ReadiumCSS-before.css.map */

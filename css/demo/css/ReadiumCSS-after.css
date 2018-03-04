@@ -37,6 +37,8 @@
 
 /* Accessibility normalization */
 
+/* Accessibility font. You can add selectors, using “, ” as a separator, if you have multiple fonts */
+
 /* Direction i.e. ltr and rtl */
 
 /* Readium CSS 
@@ -672,11 +674,24 @@ body {
 :root[style*="readium-font-on"][style*="AccessibleDfa"] {
   /* We won’t use the variable there since we need fallbacks for missing characters */
   font-family: AccessibleDFA, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
+  --RS__lineHeightCompensation: 1.167;
+}
+
+:root[style*="readium-font-on"][style*="IA Writer Duospace"] {
+  /* We won’t use the variable there since we need fallbacks for missing characters */
+  font-family: "IA Writer Duospace", Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace !important;
+  --RS__lineHeightCompensation: 1.167;
+}
+
+:root[style*="readium-font-on"][style*="readium-a11y-on"] {
+  font-family: var(--USER__fontFamily) !important;
+  --RS__lineHeightCompensation: 1.167;
 }
 
 /* Maybe users want a setting to normalize any font offered so there is a “a11y Normalize” flag for it */
 
 :root[style*="readium-font-on"][style*="AccessibleDfa"],
+:root[style*="readium-font-on"][style*="IA Writer Duospace"],
 :root[style*="readium-font-on"][style*="readium-a11y-on"] {
   font-style: normal !important;
   font-weight: normal !important;
@@ -685,6 +700,7 @@ body {
 /* Targeting everything except code. Note that Open Dyslexic has a monospaced font for code */
 
 :root[style*="readium-font-on"][style*="AccessibleDfa"] *:not(code):not(var):not(kbd):not(samp),
+:root[style*="readium-font-on"][style*="IA Writer Duospace"] *:not(code):not(var):not(kbd):not(samp),
 :root[style*="readium-font-on"][style*="readium-a11y-on"] *:not(code):not(var):not(kbd):not(samp) {
   font-family: inherit !important;
   font-style: inherit !important;
@@ -694,15 +710,19 @@ body {
 /* Normalizing text-decoration, subs and sups */
 
 :root[style*="readium-font-on"][style*="AccessibleDfa"] *,
+:root[style*="readium-font-on"][style*="IA Writer Duospace"] *,
 :root[style*="readium-font-on"][style*="readium-a11y-on"] * {
   text-decoration: none !important;
-  font-variant-numeric: normal !important;  
+  font-variant-caps: normal !important;
+  font-variant-numeric: normal !important;
   font-variant-position: normal !important;
 }
 
 :root[style*="readium-font-on"][style*="AccessibleDfa"] sup,
+:root[style*="readium-font-on"][style*="IA Writer Duospace"] sup,
 :root[style*="readium-font-on"][style*="readium-a11y-on"] sup,
 :root[style*="readium-font-on"][style*="AccessibleDfa"] sub,
+:root[style*="readium-font-on"][style*="IA Writer Duospace"] sub,
 :root[style*="readium-font-on"][style*="readium-a11y-on"] sub {
   font-size: 1rem !important;
   vertical-align: baseline !important;
@@ -885,3 +905,4 @@ body {
 :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3 {
   font-size: calc(1rem * var(--USER__typeScale)) !important;
 }
+/*# sourceMappingURL=ReadiumCSS-after.css.map */

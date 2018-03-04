@@ -15,6 +15,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "IA Writer Duospace";
+  src: local("iAWriterDuospace-Regular"),
+    url("fonts/iAWriterDuospace-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* If you have different weights/styles, 
    use `font-weight` and `font-style`, 
    not prefixes in the font-family name, 

@@ -461,7 +461,7 @@ Although typefaces specifically designed for dyslexia exist, users might prefer 
 - Trebuchet MS
 - Verdana
 
-Those fonts are available on both Windows and MacOS/iOS so it would be a good idea to have at least 2 of them available in the typeface user setting. 
+Those fonts are available on both Windows and MacOS/iOS so it would be a good idea to have at least 2 of them available in the typeface user setting. We are recommending extra options in the [Open Source and Libre Fonts](../docs/CSS10-libre_fonts.md#recommended-fonts-for-accessibility) though, in case you want to provide users with more specific fonts.
 
 More importantly, preference is a key factor, and implementers might want to give access to user-installed fonts if the platform allows. When doing research, some participants indeed emphasized they installed a specific font for dyslexia, and they want to be able to use it in the reading app as well.
 

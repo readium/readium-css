@@ -435,6 +435,17 @@ Microsoft has been investing a lot of resources in designing fonts that render p
 
 As a consequence, we strongly recommend prioritizing such system fonts for the core selection and using Open Source fonts as extras. A list of system fonts available can be found in [Microsoft Typography docs](https://docs.microsoft.com/typography/).
 
+## Recommended fonts for Accessibility
+
+ReadiumCSS is shipping with 2 a11y-related fonts to be found in the `dist/fonts` folder:
+
+- [AccessibleDfa](https://github.com/Orange-OpenSource/font-accessible-dfa), by Orange;
+- [IA Writer Duospace](https://github.com/iaolo/iA-Fonts/tree/master/iA%20Writer%20Duospace), by iA.
+
+Those fonts should be applied by those exact names as we need very precise fallbacks for missing characters. We may create variables in the future, once those fonts have been properly reviewed and validated.
+
+We can also recommend [Open Dyslexic](https://github.com/antijingoist/open-dyslexic), either in addition to or replacement of AccessibleDfa.
+
 ## Recommended fonts for CJK
 
 In addition to [Google Noto Fonts](https://www.google.com/get/noto/), we can currently recommend:

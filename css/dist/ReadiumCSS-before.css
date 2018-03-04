@@ -314,6 +314,14 @@ math {
     url("fonts/AccessibleDfA.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "IA Writer Duospace";
+  font-style: normal;
+  font-weight: normal;
+  src: local("iAWriterDuospace-Regular"),
+    url("fonts/iAWriterDuospace-Regular.ttf") format("truetype");
+}
+
 /* If you have different weights/styles, 
    use `font-weight` and `font-style`, 
    not prefixes in the font-family name, 

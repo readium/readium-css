@@ -10,7 +10,7 @@
 
 :root:--font-override[style*="AccessibleDfa"] {
   /* We won’t use the variable there since we need fallbacks for missing characters */
-  font-family: AccessibleDFA, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
+  font-family: AccessibleDfa, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
   --RS__lineHeightCompensation: 1.167;
 }
 

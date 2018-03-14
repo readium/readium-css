@@ -1,6 +1,6 @@
 # Defaults
 
-[Implementers’ doc] [Authors’ info] [WIP]
+[Implementers’ doc] [Authors’ info]
 
 Defaults is currently made of 5 stylesheets:
 
@@ -27,6 +27,8 @@ It should be appended before any author’s stylesheet.
 
 #### Default font-stacks
 
+* * *
+
 ```
 --RS__oldStyleTf
 ```
@@ -34,6 +36,8 @@ It should be appended before any author’s stylesheet.
 An old style serif font-stack relying on pre-installed fonts.
 
 Default is `"Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif`.
+
+* * *
 
 ```
 --RS__modernTf
@@ -43,6 +47,8 @@ A modern serif font-stack relying on pre-installed fonts.
 
 Default is `Athelas, Constantia, Georgia, serif`.
 
+* * *
+
 ```
 --RS__sansTf
 ```
@@ -51,6 +57,8 @@ A neutral sans-serif font-stack relying on pre-installed fonts.
 
 Default is `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`.
 
+* * *
+
 ```
 --RS__humanistTf 
 ```
@@ -58,6 +66,8 @@ Default is `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "H
 A humanist sans-serif font-stack relying on pre-installed fonts.
 
 Default is `Seravek, Calibri, Roboto, Arial, sans-serif`.
+
+* * *
 
 ```
 --RS__monospaceTf 
@@ -73,6 +83,8 @@ We’ve been trying to follow the recommendations of the [EBPAJ File Creation Gu
 
 Those font-stacks have been modeled after fonts the templates of this guide use as defaults, and extend support to the largest amount of platforms possible. 
 
+* * *
+
 ```
 --RS__serif-ja
 ```
@@ -82,6 +94,8 @@ A Mincho font-stack whose fonts with proportional latin characters are prioritiz
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
 Default is `"ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif`.
+
+* * *
 
 ```
 --RS__sans-serif-ja
@@ -93,6 +107,8 @@ Fonts are not necessarily pre-installed, which is the reason why this font-stack
 
 Default is `"ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif`.
 
+* * *
+
 ```
 --RS__serif-ja-v
 ```
@@ -102,6 +118,8 @@ A Mincho font-stack whose fonts with fixed-width latin characters are prioritize
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
 Default is `"ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif`.
+
+* * *
 
 ```
 --RS__sans-serif-ja-v
@@ -115,6 +133,8 @@ Default is `"ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "
 
 #### Absolute defaults for all ebooks
 
+* * *
+
 ```
 --RS__baseFontFamily
 ```
@@ -123,6 +143,8 @@ The default typeface for body copy in case the ebook doesn’t have one declared
 
 Please note some languages have a specific font-stack (japanese, chinese, hindi, etc.)
 
+* * *
+
 ```
 --RS__baseLineHeight
 ```
@@ -130,6 +152,8 @@ Please note some languages have a specific font-stack (japanese, chinese, hindi,
 The default line-height for body copy in case the ebook doesn’t have one declared.
 
 We’re using an algorithm to find the ideal `line-height` for the current font based on its metrics (see details in the next subsection below).
+
+* * *
 
 ```
 --RS__lineHeightCompensation
@@ -170,17 +194,23 @@ The `ReadiumCSS-day_mode.css` stylesheet serves as a default and handles `backgr
 
 ### Variables you can set
 
+* * *
+
 ```
 --RS__backgroundColor
 ```
 
 The `background-color` for the entire viewport.
 
+* * *
+
 ```
 --RS__textColor
 ```
 
 The `color` for body copy.
+
+* * *
 
 ```
 --RS__selectionBackgroundColor
@@ -189,6 +219,8 @@ The `color` for body copy.
 The `background-color` for selected text.
 
 It is worth noting it can be customized for each reading mode.
+
+* * *
 
 ```
 --RS__selectionTextColor
@@ -224,11 +256,15 @@ It makes use of a typescale so that you can change it dynamically (depending on 
 
 #### Typefaces 
 
+* * *
+
 ```
 --RS__compFontFamily
 ```
 
 The typeface for headings. The value can be another variable e.g. `var(-RS__humanistTf)`.
+
+* * *
 
 ```
 --RS__codeFontFamily
@@ -238,6 +274,8 @@ The typeface for code snippets. The value can be another variable e.g. `var(-RS_
 
 #### Typography
 
+* * *
+
 ```
 --RS__typeScale
 ```
@@ -246,11 +284,15 @@ The scale to be used for computing all elements’ `font-size`. Since those font
 
 Possible values: `1` | `1.067` | `1.125` | `1.2` (suggested default) | `1.25` | `1.333` | `1.414` | `1.5` | `1.618`
 
+* * *
+
 ```
 --RS__baseFontSize
 ```
 
 The default `font-size` for body copy. It will serve as a reference font all related computations.
+
+* * *
 
 ```
 --RS__baseLineHeight
@@ -260,17 +302,23 @@ The default `line-height` for all elements.
 
 #### Vertical rhythm
 
+* * *
+
 ```
 --RS__flowSpacing
 ```
 
 The default vertical margins for HTML5 flow content e.g. `pre`, `figure`, `blockquote`, etc.
 
+* * *
+
 ```
 --RS__paraSpacing
 ```
 
 The default vertical margins for paragraphs.
+
+* * *
 
 ```
 --RS__paraIndent
@@ -280,11 +328,15 @@ The default `text-indent` for paragraphs.
 
 #### Hyperlinks
 
+* * *
+
 ``` 
 --RS__linkColor
 ```
 
 The default `color` for hyperlinks.
+
+* * *
 
 ```
 --RS__visitedColor
@@ -294,11 +346,15 @@ The default `color` for visited hyperlinks.
 
 #### Accentuation colors
 
+* * *
+
 ```
 --RS__primaryColor
 ```
 
 An optional primary accentuation `color` you could use for headings or any other element of your choice.
+
+* * *
 
 ```
 --RS__secondaryColor

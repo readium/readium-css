@@ -1,6 +1,6 @@
 # Inject and paginate EPUB contents
 
-[Implementers’ doc] [Authors’ info] [WIP]
+[Implementers’ doc] [Authors’ info]
 
 ## Injection
 
@@ -77,7 +77,7 @@ Please note that when using `padding`, you must take it into account when sizing
 
 By default, responsive columns are built into Readium CSS, which means the layout will automatically switch from a single page to a two-column spread depending on: 
 
-1. the size of the viewport (minumum `width` is `60em` or the smartphone is in landscape orientation);
+1. the size of the viewport (by default, the minimum `width` is `60em` or the mobile device is in landscape orientation);
 2. the `font-size` currently set by the user.
 
 The spread will consequently switch to a single page once the user sets a `font-size` which is too large for two columns.
@@ -102,17 +102,25 @@ Since we still limit line-length in the spread model, you might want to limit th
 
 Please note those variables’ value can be redefined using media queries. You don’t need to redeclare entire declarations.
 
+* * *
+
 ```
 --RS__colWidth
 ```
 
 The optimal column’s width. It serves as a floor in our design.
 
+It must not be set in `rem` as there is currently a bug with this unit in some implementations (the `em` unit is fine).
+
+* * *
+
 ```
 --RS__colCount
 ```
 
 The optimal number of columns (depending on the columns’ width).
+
+* * *
 
 ```
 --RS__colGap
@@ -122,11 +130,15 @@ The gap between columns. It must be set in pixels so that it won’t resize with
 
 You must account for this gap when scrolling.
 
+* * *
+
 ```    
 --RS__pageGutter
 ```
 
 The horizontal page margins. It must be set in pixels so that it won’t resize with font size.
+
+* * *
 
 ```
 --RS__maxLineLength
@@ -313,11 +325,15 @@ Once again, you can use it with or without pagination, it should not make any di
 
 ##### Variables you can set
 
+* * *
+
 ```
 --RS__maxMediaWidth
 ```
 
 The `max-width` for media elements i.e. `img`, `svg`, `audio` and `video`.
+
+* * *
 
 ```
 --RS__maxMediaHeight
@@ -325,11 +341,15 @@ The `max-width` for media elements i.e. `img`, `svg`, `audio` and `video`.
 
 The `max-height` for media elements i.e. `img`, `svg`, `audio` and `video`.
 
+* * *
+
 ```
 --RS__boxSizingMedia
 ```
 
 The box model (`box-sizing`) you want to use for media elements.
+
+* * *
 
 ```
 --RS__boxSizingTable

@@ -166,7 +166,7 @@ Although the UI can keep an `ltr` direction with a `horizontal-tb` writing mode,
 - implementers might want to allow authors to set a `vertical-*` writing mode for the navigation document (`nav.xhtml`); 
 - implementers might want to localize the interface based on the language set at the system level, or at least fall back to English.
 
-Moreover, some user settings should be removed if used (`text-align`, `hyphens`, `letter-` and `word-spacing`, number of columns in vertical writing, etc.). See [User Prefs for further details](../docs/CSS11-user_prefs.md#user-settings-can-be-language-specific).
+Moreover, some user settings should be removed if used (`text-align`, `hyphens`, `letter-` and `word-spacing`, number of columns in vertical writing, etc.). See [User Prefs for further details](../docs/CSS12-user_prefs.md#user-settings-can-be-language-specific).
 
 ### Internationalize features
 
@@ -176,7 +176,7 @@ Another issue to take into account is that input methods might not allow users t
 
 ### Fonts
 
-Implementers should make sure they offer at least two options: the publisher’s font and the default. If they want to extend the list of fonts they provide for some languages, they should follow guidance in the [User Preferences doc](../docs/CSS11-user_prefs.md#user-settings-can-be-language-specific).
+Implementers should make sure they offer at least two options: the publisher’s font and the default. If they want to extend the list of fonts they provide for some languages, they should follow guidance in the [User Preferences doc](../docs/CSS12-user_prefs.md#user-settings-can-be-language-specific).
 
 ## How authors can help
 

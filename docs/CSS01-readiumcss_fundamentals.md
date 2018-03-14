@@ -1,6 +1,6 @@
 # Readium CSS Fundamental Concepts
 
-[Implementers’ doc] [Authors’ info] [WIP]
+[Implementers’ doc] [Authors’ info]
 
 This document serves as an introduction, it explains the fundamental concepts used in designing Readium CSS.
 
@@ -31,7 +31,7 @@ We wanted to bring EPUB closer to the web though, and decided to leverage HTML5 
 
 ## 3. Leverage Modern CSS
 
-CSS has a lot to offer nowadays, and it can help solve complex issues in more simple ways.
+CSS has a lot to offer nowadays, and it can help solve complex issues in simpler ways.
 
 Readium CSS has been be designed following 4 core principles:
 
@@ -39,8 +39,6 @@ Readium CSS has been be designed following 4 core principles:
 2. **Separation of Reading System’s Concerns:** those modules are task-oriented e.g. paginate, apply default styles, intercept styles for reading modes or user settings, apply a reading mode or user setting, apply a theme, etc.;
 3. **Daisy-chainability:** those modules can be loaded and daisy-chained (cascade) depending on conditions;
 4. **Customization:** modules can be customized either before or during runtime (CSS variables), which implies themes can be generated within minutes.
-
-We’ve also made sure that, for most “hardcoded” styles you might add when CSS variables are not supported (internal stylesheet or inline styles), user settings can still be applied (leveraging inheritance).
 
 ## 4. Openness and Transparency
 

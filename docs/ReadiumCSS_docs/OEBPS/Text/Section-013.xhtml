@@ -13,7 +13,7 @@
   <section id="baseline-for-a11y-related-user-settings" class="level1">
     <h1>Baseline for a11y-related user settings</h1>
 
-    <p>[Implementers’ doc] [Authors’ info] [WIP]</p>
+    <p>[Implementers’ doc] [Authors’ info]</p>
 
     <p>Our current baseline for user settings includes:</p>
 
@@ -26,7 +26,9 @@
 
       <li>a11y-related typefaces;</li>
 
-      <li><code>letter-</code> and <code>word-spacing</code>.</li>
+      <li><code>letter-</code> and <code>word-spacing</code>;</li>
+
+      <li>removing italics, subscrips and superscripts, and drop caps.</li>
     </ul>
 
     <p>We should probably consider additional options:</p>
@@ -35,12 +37,6 @@
       <li>forcing an outline for focused elements;</li>
 
       <li>unfloating elements;</li>
-
-      <li>removing italics;</li>
-
-      <li>removing subscrips and superscripts;</li>
-
-      <li>removing drop caps;</li>
 
       <li>removing images.</li>
     </ul>
@@ -51,12 +47,12 @@
 
     <p>The a11y-related typefaces are not necessarily typefaces which were specifically designed for a11y. A typeface a reader is used to, like Verdana, Trebuchet, etc., can be a11y-related as well. From research, the more varied typefaces available, the better. There is no silver bullet there, some people don’t like Open Dyslexic for instance, and prefer sans-serif typefaces they are used to.</p>
 
-    <p>Removing italics, subs and sups, drop caps and floated elements should probably be automatic if the typeface or theme selected was explicitly designed for dyslexia. What is more complex though, is providing the user with those advanced settings if needed i.e. when the typeface or theme selected are not a clear a11y intent but could be an ambiguous one.</p>
+    <p>Removing italics, subs and sups, drop caps and floated elements should probably be automatic if the typeface or theme selected was explicitly designed for dyslexia. Additionnaly, the <code>--USER__a11yNormalize: readium-a11y-on</code> flag is available and bring this feature to other typefaces.</p>
 
     <section id="os-settings" class="level2">
       <h2 id="sigil_toc_id_99">OS settings</h2>
 
-      <p>Some Operating Systems provide users with global settings. We must take those settings into account, which is the purpose of the <a href="https://github.com/readium/readium-css/blob/master/prototype/src/ReadiumCSS-os_a11y.css">OS a11y module</a>. Only Microsoft high-contrast-mode is currently addressed.</p>
+      <p>Some Operating Systems provide users with global settings. We must take those settings into account, which is the purpose of the “OS a11y” module. This module still needs some improvements.</p>
 
       <p>We’ll have to make decisions about reading modes there: if the user sets the monochrome option, how are we supposed to deal with sepia and colors? If the user sets an inverted high-contrast mode, what happens in night mode? There can indeed be multiple users for the same computer, using the same account, and we should cover this case out of the box.</p>
     </section>

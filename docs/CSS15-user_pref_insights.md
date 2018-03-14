@@ -18,7 +18,7 @@ Hopefully, Readium CSS was designed to take all those options into account: modu
 
 ## Typography
 
-We’ve been running forms on this topic but answers can’t be taken at face value since they can be biased – given the eprdctn and a11y communities on social networks, and the probable tech-savyness of people who came across those forms in the first place; what is the most interesting is the open-ended questions and how **you can interpret them**.
+We’ve been running forms on this topic but answers can’t be taken at face value since they might well be biased – given the eprdctn and a11y communities on social networks, and the probable tech-savyness of people who came across those forms in the first place; what is the most interesting is the open-ended questions and how **you can interpret them**.
 
 ### People change the publisher’s typeface
 

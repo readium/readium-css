@@ -10,413 +10,91 @@
 </head>
 
 <body xml:lang="en">
-  <section id="user-settings-modes-themes" class="level1">
-    <h1>User Settings, Reading modes and Themes</h1>
+  <section id="user-overrides-classification" class="level1">
+    <h1>User Overrides’ Classification</h1>
 
-    <p>[Implementers’ doc] [Authors’ info] [WIP]</p>
+    <p>[Implementers’ doc] [Authors’ info]</p>
 
-    <p>Currently, user settings and reading modes are different stylesheets.</p>
-
-    <p>The idea is:</p>
+    <p>In order to help you manage user settings, we defined 4 types of overrides:</p>
 
     <ol>
-      <li>appending/removing reading modes’ stylesheet as they imply their own specific styles;</li>
+      <li>chrome (UI);</li>
 
-      <li>managing user settings entirely via CSS so that we don’t need to manipulate the DOM too much.</li>
+      <li>chrome advanced;</li>
+
+      <li>user overrides;</li>
+
+      <li>user overrides advanced.</li>
     </ol>
 
-    <p>There are alternatives approaches we can adopt if this one doesn’t fit.</p>
+    <p>Those types can help you decide which settings should be applied to every book, which should be implemented based on your UX approach or the first to be displayed in the customization panel, etc.</p>
 
-    <section id="mechanism-for-user-settings" class="level2">
-      <h2 id="sigil_toc_id_36">Mechanism for user settings</h2>
+    <section id="chrome" class="level2">
+      <h2 id="sigil_toc_id_139">Chrome</h2>
 
-      <p>The <code>ReadiumCSS-user_settings.css</code> stylesheet can be appended before runtime, its declarations won’t be applied until user variables are set.</p>
-
-      <p>This stylesheet is a one-two punch:</p>
-
-      <ol>
-        <li>add the variable and its value to <code>html</code>;</li>
-
-        <li>styles are updated live.</li>
-      </ol>
-
-      <p>The selectors used in this stylesheet are indeed “conditional”, styles are applied if the variable (or a specific value for reading modes) is set as an inline style in <code>html</code> (<code>:root</code>).</p>
-
-      <p>In theory, we can make it work with inline styles too, when variables are not supported by the web browser.</p>
-
-      <section id="setting-and-removing-a-variable" class="level3">
-        <h3 class="sigil_not_in_toc">Setting and removing a variable</h3>
-
-        <section id="setting" class="level4">
-          <h4 class="sigil_not_in_toc">Setting</h4>
-
-          <pre><code>var root = document.documentElement; root.style.setProperty("name of var", "value");</code></pre>
-
-          <p>You don’t need to remove the variable before setting another value, the new value will simply override the existing one.</p>
-        </section>
-
-        <section id="removing" class="level4">
-          <h4 class="sigil_not_in_toc">Removing</h4>
-
-          <pre><code>var root = document.documentElement; root.style.removeProperty("name of var");</code></pre>
-        </section>
-      </section>
-
-      <section id="caveat" class="level3">
-        <h3 class="sigil_not_in_toc">Caveat</h3>
-
-        <p>Attribute selectors don’t scale particularly well. We’ll have to pay attention to performance, especially on mobile.</p>
-      </section>
-    </section>
-
-    <section id="flags" class="level2">
-      <h2 id="sigil_toc_id_129">Flags</h2>
-
-      <p>Some variables behave like flags. You could also use custom <code>data-*</code> attributes to manage the following ones.</p>
-
-      <section id="user-view" class="level3">
-        <h3 class="sigil_not_in_toc">User view</h3>
-
-        <p>Allows to switch between paged and scroll view.</p>
-
-        <pre><code>--USER__view</code></pre>
-
-        <p>Possible values: <code>readium-paged-on</code> | <code>readium-scroll-on</code></p>
-      </section>
-
-      <section id="font-family-override" class="level3">
-        <h3 class="sigil_not_in_toc">Font Family override</h3>
-
-        <p>Acts as an explicit switch to override the publisher’s <code>font-family</code>.</p>
-
-        <p>It must be set if the user changes <code>font-family</code>.</p>
-
-        <pre><code>--USER__fontOverride</code></pre>
-
-        <p>Possible values: <code>readium-font-on</code> | <code>readium-font-off</code></p>
-      </section>
-
-      <section id="advanced-settings" class="level3">
-        <h3 class="sigil_not_in_toc">Advanced Settings</h3>
-
-        <p>Acts as an explicit switch to override the publisher’s styles.</p>
-
-        <p>It must be set if the user changes <code>font-family</code> or <code>font-size</code>.</p>
-
-        <pre><code>--USER__advancedSettings</code></pre>
-
-        <p>Possible values: <code>readium-advanced-on</code> | <code>readium-advanced-off</code></p>
-      </section>
-
-      <section id="reading-modes" class="level3">
-        <h3 class="sigil_not_in_toc">Reading Modes</h3>
-
-        <p>We currently have two reading modes for night and sepia.</p>
-
-        <pre><code>--USER__appearance</code></pre>
-
-        <p>Possible values: <code>readium-default-on</code> | <code>readium-sepia-on</code> | <code>readium-night-on</code></p>
-      </section>
-
-      <section id="filters" class="level3">
-        <h3 class="sigil_not_in_toc">Filters</h3>
-
-        <p>Please note night mode provides two extra specific variables:</p>
-
-        <pre><code>--USER__darkenFilter</code></pre>
-
-        <p>Possible values: <code>readium-darken-on</code> | <code>readium-darken-off</code></p>
-
-        <pre><code>--USER__invertFilter</code></pre>
-
-        <p>Possible values: <code>readium-invert-on</code> | <code>readium-invert-off</code></p>
-      </section>
-
-      <section id="accessibility-normalization" class="level3">
-        <h3 class="sigil_not_in_toc">Accessibility Normalization</h3>
-
-        <p>Users may want to normalize text (no bold, no italics, etc.) for accessibility reasons, using a non a11y-specific typeface.</p>
-
-        <pre><code>--USER__a11yNormalize</code></pre>
-
-        <p>Possible values: <code>readium-a11y-on</code> | <code>readium-a11y-off</code></p>
-      </section>
-    </section>
-
-    <section id="list-of-variables" class="level2">
-      <h2 id="sigil_toc_id_37">List of variables</h2>
-
-      <section id="layout" class="level3">
-        <h3 class="sigil_not_in_toc">Layout</h3>
-
-        <p>The user can set the number of columns and page margins.</p>
-
-        <section id="number-of-columns" class="level4">
-          <h4 class="sigil_not_in_toc">Number of columns</h4>
-
-          <pre><code>--USER__colCount</code></pre>
-
-          <p>Possible values: <code>1</code> | <code>2</code> | <code>auto</code> (default)</p>
-        </section>
-
-        <section id="page-margins" class="level4">
-          <h4 class="sigil_not_in_toc">Page margins</h4>
-
-          <pre><code>--USER__pageMargins</code></pre>
-
-          <p>Possible values: <code>0.5</code> | <code>0.75</code> | <code>1</code> (default) | <code>1.25</code> | <code>1.5</code> | <code>1.75</code> | <code>2</code></p>
-        </section>
-      </section>
-
-      <section id="themes-background-and-text-colors" class="level3">
-        <h3 class="sigil_not_in_toc">Themes (background and text colors)</h3>
-
-        <p>The user can set a <code>background-color</code> and <code>color</code>.</p>
-
-        <p>The following two variables must be used together.</p>
-
-        <pre><code>--USER__backgroundColor 
---USER__textColor</code></pre>
-
-        <p>Possible values: Color HEX (e.g. #FFFFFF)</p>
-      </section>
-
-      <section id="hyphenation-and-justification" class="level3">
-        <h3 class="sigil_not_in_toc">Hyphenation and justification</h3>
-
-        <p>The user can set <code>text-align</code> and <code>hyphens</code> for body copy contents.</p>
-
-        <section id="text-align" class="level4">
-          <h4 class="sigil_not_in_toc">Text align</h4>
-
-          <pre><code>--USER__textAlign</code></pre>
-
-          <p>Possible values: <code>left</code> (LTR) or <code>right</code> (RTL) | <code>justify</code></p>
-
-          <p>Note: The value <code>start</code> can be used to let all rendering engines, excepted Trident (IE11) and EdgeHTML (Edge), automatically deal with <code>left</code> and <code>right</code> based on the direction (<code>dir</code> attribute) set for the document and its nested elements.</p>
-        </section>
-
-        <section id="hyphens" class="level4">
-          <h4 class="sigil_not_in_toc">Hyphens</h4>
-
-          <pre><code>--USER__bodyHyphens</code></pre>
-
-          <p>Possible Values: <code>auto</code> | <code>none</code></p>
-        </section>
-      </section>
-
-      <section id="typography-1" class="level3">
-        <h3 class="sigil_not_in_toc">Typography</h3>
-
-        <p>The user can set <code>font-family</code>, <code>font-size</code> and <code>line-height</code> for body copy contents.</p>
-
-        <section id="font-family" class="level4">
-          <h4 class="sigil_not_in_toc">Font family</h4>
-
-          <pre><code>--USER__fontFamily</code></pre>
-
-          <p>Possible values: <code>var(--RS__oldStyleTf)</code> | <code>var(--RS__modernTf)</code> | <code>var(--RS__sansTf)</code> | <code>var(--RS__humanistTf)</code></p>
-        </section>
-
-        <section id="font-size-and-type-scale" class="level4">
-          <h4 class="sigil_not_in_toc">Font size and type scale</h4>
-
-          <p>We have to normalize <code>font-size</code> for body copy elements so that it can work in pure CSS, which means the two following variables must be used together.</p>
-
-          <p>In order to do so, the <code>ReadiumCSS-fs_normalize.css</code> stylesheet must be appended to the document.</p>
-
-          <p>Although it might be an issue to authors at first sight, this approach is backed by actual data.</p>
-
-          <pre><code>--USER__fontSize 
---USER__typeScale</code></pre>
-
-          <p>Possible values for font-size: <code>75%</code> | <code>87.5%</code> | <code>100%</code> (default) | <code>112.5%</code> | <code>137.5%</code> | <code>150%</code> | <code>162.5%</code> | <code>175%</code> | <code>200%</code> | <code>225%</code> | <code>250%</code></p>
-
-          <p>Possible values for type scale: <code>1</code> | <code>1.067</code> | <code>1.125</code> | <code>1.2</code> (suggested default) | <code>1.25</code> | <code>1.333</code> | <code>1.414</code> | <code>1.5</code> | <code>1.618</code></p>
-
-          <p>You can use different type scale values depending on the <code>font-size</code>. For instance, if the user sets a large one, you might want to decrease the type scale so that headings are not super large.</p>
-
-          <p>If you want to go back to the publisher’s default, the normalize stylesheet and <code>--USER__fontSize</code> property must be removed.</p>
-        </section>
-
-        <section id="line-height" class="level4">
-          <h4 class="sigil_not_in_toc">Line height</h4>
-
-          <pre><code>--USER__lineHeight</code></pre>
-
-          <p>Possible values: <code>1</code> | <code>1.125</code> | <code>1.25</code> | <code>1.35</code> | <code>1.5</code> | <code>1.65</code> | <code>1.75</code> | <code>2</code></p>
-        </section>
-      </section>
-
-      <section id="paragraphs-formatting" class="level3">
-        <h3 class="sigil_not_in_toc">Paragraphs’ formatting</h3>
-
-        <p>The user can set <code>margin-top</code>, <code>margin-bottom</code> and <code>text-indent</code> for paragraphs.</p>
-
-        <section id="paragraphs-spacing" class="level4">
-          <h4 class="sigil_not_in_toc">Paragraphs’ spacing</h4>
-
-          <pre><code>--USER__paraSpacing</code></pre>
-
-          <p>Possible values: <code>0</code> | <code>0.375rem</code> | <code>0.75rem</code> | <code>1rem</code> | <code>1.125rem</code> | <code>1.25rem</code> | <code>1.35rem</code> | <code>1.5rem</code> | <code>1.65rem</code> | <code>1.75rem</code> | <code>2rem</code></p>
-        </section>
-
-        <section id="paragraphs-indent" class="level4">
-          <h4 class="sigil_not_in_toc">Paragraphs’ indent</h4>
-
-          <pre><code>--USER__paraIndent</code></pre>
-
-          <p>Possible values: <code>0</code> | <code>0.5rem</code> | <code>1rem</code> | <code>1.25rem</code> | <code>1.5rem</code> | <code>2rem</code> | <code>2.5rem</code> | <code>3rem</code></p>
-        </section>
-      </section>
-
-      <section id="characters-spacing" class="level3">
-        <h3 class="sigil_not_in_toc">Characters’ spacing</h3>
-
-        <p>The user can set <code>word-spacing</code> and <code>letter-spacing</code> for headings and body copy contents.</p>
-
-        <section id="word-spacing" class="level4">
-          <h4 class="sigil_not_in_toc">Word spacing</h4>
-
-          <pre><code>--USER__wordSpacing</code></pre>
-
-          <p>Possible values: <code>0</code> | <code>0.125rem</code> | <code>0.25rem</code> | <code>0.375rem</code> | <code>0.5rem</code></p>
-        </section>
-
-        <section id="letter-spacing" class="level4">
-          <h4 class="sigil_not_in_toc">Letter spacing</h4>
-
-          <pre><code>--USER__letterSpacing</code></pre>
-
-          <p>Possible values: <code>0</code> | <code>0.0675rem</code> | <code>0.125rem</code> | <code>0.1875rem</code> | <code>0.25rem</code></p>
-        </section>
-
-        <section id="arabic-ligatures" class="level4">
-          <h4 class="sigil_not_in_toc">Arabic Ligatures</h4>
-
-          <pre><code>--USER__ligatures</code></pre>
-
-          <p>Possible values: <code>none</code> | <code>common-ligatures</code></p>
-        </section>
-      </section>
-    </section>
-
-    <section id="themes" class="level2">
-      <h2 id="sigil_toc_id_39">Themes</h2>
-
-      <p>In this model, themes are just a set of user variables with specific values.</p>
-
-      <p>It becomes even easier to override them for the user as the values are already user settings.</p>
-
-      <p>In other words, think of preset and custom themes as a set of variables, which makes it easier to create, manipulate and cache them.</p>
-    </section>
-
-    <section id="alternative-options" class="level2">
-      <h2 id="sigil_toc_id_40">Alternative options</h2>
+      <p>The following settings are required and should be applied by any means necessary:</p>
 
       <ul>
-        <li>appending/removing overrides as <code>&lt;style&gt;</code>, dynamically</li>
+        <li>reading modes;</li>
 
-        <li>using custom attributes (at least for themes + appending/removing styles dynamically)</li>
+        <li>paged/scrolled view.</li>
       </ul>
     </section>
 
-    <section id="user-settings-can-be-language-specific" class="level2">
-      <h2 id="sigil_toc_id_141">User settings can be language-specific</h2>
+    <section id="chrome-advanced" class="level2">
+      <h2 id="sigil_toc_id_173">Chrome advanced</h2>
 
-      <p>It is important to note that the list of user settings you may provide users with can change depending on the primary language of the publication.</p>
+      <p>The following settings are optional but should be applied by any means necessary, without any flag, if they are provided to users:</p>
 
-      <p>Indeed, it doesn’t make sense to have some user settings in some languages, and they would do more harm than good e.g. hyphens in CJK. Ideally, those settings should therefore be removed from the UI, or at least disabled, if needed.</p>
+      <ul>
+        <li>number of columns;</li>
 
-      <section id="all-languages-other-than-latin" class="level3">
-        <h3 class="sigil_not_in_toc">All languages other than Latin</h3>
+        <li>page margins;</li>
 
-        <p>Implementers will need to load different list of fonts based on the languages listed in <a href="../Text/Section-009.xhtml">Default Fonts</a>.</p>
+        <li>custom reading modes (background and text color);</li>
 
-        <p>The most complex issue is finding fonts for those languages, especially as mobile systems often ship with the minimum amount of fonts possible to support Indic, Arabic, Hebrew, CJK, etc. And when the platform provides an extended selection, users often have to download them beforehand.</p>
+        <li>filters (darken and invert for night mode).</li>
+      </ul>
+    </section>
 
-        <p>The following is provided as guidance only:</p>
+    <section id="user-overrides" class="level2">
+      <h2 id="sigil_toc_id_174">User overrides</h2>
 
-        <ol>
-          <li>the app should at least offer the publisher’s font and the default (<code>var(--RS__baseFontFamily)</code>) for the language – which should work automatically if the correct language is set for each document;</li>
+      <p>The following settings are required and should be applied with their required flag by any means necessary:</p>
 
-          <li>if implementers want to extend the list:</li>
+      <ul>
+        <li>font-family (requires <code>:--font-overide</code> flag);</li>
 
-          <li>use pre-installed fonts if the system offers some;</li>
+        <li>font-size (requires <code>:--advanced-settings</code> flag).</li>
+      </ul>
+    </section>
 
-          <li>use downloadable fonts if the system offers some;</li>
+    <section id="user-overrides-advanced" class="level2">
+      <h2 id="sigil_toc_id_175">User overrides advanced</h2>
 
-          <li>carefully pick fonts supporting the language and the idiosyncrasies of its typography;</li>
+      <p>The following settings are optional but should be applied by any means necessary, with the <code>:--advanced-setting</code> flag, if they are provided to users:</p>
 
-          <li>fall back to <a href="https://www.google.com/get/noto/">Google Noto Fonts</a>.</li>
+      <ul>
+        <li>line-height;</li>
 
-          <li>users probably have fonts already installed, re-use those fonts if possible (advanced setting in which they can access or declare those fonts).</li>
-        </ol>
-      </section>
+        <li>text-align and hyphens (those two should probably work together);</li>
 
-      <section id="right-to-left-scripts" class="level3">
-        <h3 class="sigil_not_in_toc">Right to left scripts</h3>
+        <li>paragraph spacing;</li>
 
-        <p>User settings to disable are:</p>
+        <li>paragraph indent;</li>
 
-        <ul>
-          <li><code>--USER__wordSpacing</code>;</li>
+        <li>letter-spacing;</li>
 
-          <li><code>--USER__letterSpacing</code>.</li>
-        </ul>
+        <li>word-spacing;</li>
 
-        <p>User settings to add are:</p>
+        <li>arabic ligatures;</li>
 
-        <ul>
-          <li><code>--USER__ligatures</code>.</li>
-        </ul>
-      </section>
+        <li>accessibility normalization;</li>
 
-      <section id="cjk" class="level3">
-        <h3 class="sigil_not_in_toc">CJK</h3>
+        <li>type scale.</li>
+      </ul>
 
-        <p>For Chinese, Japanese, and Korean, implementers must manage both horizontal and vertical writing modes, since the pagination model differs.</p>
-
-        <section id="horizontal-writing-mode" class="level4">
-          <h4 class="sigil_not_in_toc">Horizontal writing mode</h4>
-
-          <p>User settings to disable are:</p>
-
-          <ul>
-            <li><code>--USER__textAlign</code>;</li>
-
-            <li><code>--USER__bodyHyphens</code>;</li>
-
-            <li><code>--USER__paraIndent</code>;</li>
-
-            <li><code>--USER__wordSpacing</code>;</li>
-
-            <li><code>--USER__letterSpacing</code>.</li>
-          </ul>
-        </section>
-
-        <section id="vertical-writing-mode" class="level4">
-          <h4 class="sigil_not_in_toc">Vertical writing mode</h4>
-
-          <p>This also impacts the Mongolian script.</p>
-
-          <p>User settings to disable are:</p>
-
-          <ul>
-            <li><code>--USER__colCount</code>;</li>
-
-            <li><code>--USER__textAlign</code>;</li>
-
-            <li><code>--USER__bodyHyphens</code>;</li>
-
-            <li><code>--USER__paraIndent</code>;</li>
-
-            <li><code>--USER__wordSpacing</code>;</li>
-
-            <li><code>--USER__letterSpacing</code>.</li>
-          </ul>
-        </section>
-      </section>
+      <p>Please note this classification might change and additional items be added in the future.</p>
     </section>
   </section>
 </body>

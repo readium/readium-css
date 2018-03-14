@@ -1,4 +1,4 @@
-# Open Source and Libre Fonts We Can recommend
+# Open Source and Libre Fonts We Can Recommend
 
 [Implementers’ doc] [WIP]
 
@@ -267,7 +267,7 @@ Technical details:
     - weight: 0.06
     - width: 0.45
 
-Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Cyrillic
+Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Cyrillic.
 
 OpenType Features: small caps, numeric figure values, numeric spacing values (and more).
 
@@ -434,6 +434,17 @@ OpenType Features: numeric figure values.
 Microsoft has been investing a lot of resources in designing fonts that render perfectly on this platform, especially with ClearType. Typefaces like Cambria, Constantia, Arial Nova, Georgia Pro, Sitka, Verdana Pro, and more, offer a large amount of styles, excellent language support, extensive support of Open Type features, and high quality rendering, even on mediocre screens.
 
 As a consequence, we strongly recommend prioritizing such system fonts for the core selection and using Open Source fonts as extras. A list of system fonts available can be found in [Microsoft Typography docs](https://docs.microsoft.com/typography/).
+
+## Recommended fonts for Accessibility
+
+ReadiumCSS is shipping with 2 a11y-related fonts to be found in the `dist/fonts` folder:
+
+- [AccessibleDfa](https://github.com/Orange-OpenSource/font-accessible-dfa), by Orange;
+- [IA Writer Duospace](https://github.com/iaolo/iA-Fonts/tree/master/iA%20Writer%20Duospace), by iA.
+
+Those fonts should be applied by those exact names as we need very precise fallbacks for missing characters. We may create variables in the future, once those fonts have been properly reviewed and validated.
+
+We can also recommend [Open Dyslexic](https://github.com/antijingoist/open-dyslexic), either in addition to or replacement of AccessibleDfa.
 
 ## Recommended fonts for CJK
 

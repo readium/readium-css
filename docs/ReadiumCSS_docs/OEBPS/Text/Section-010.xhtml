@@ -11,7 +11,7 @@
 
 <body xml:lang="en">
   <section id="open-source-and-libre-fonts-we-can-recommend" class="level1">
-    <h1>Open Source and Libre Fonts We Can recommend</h1>
+    <h1>Open Source and Libre Fonts We Can Recommend</h1>
 
     <p>[Implementers’ doc] [WIP]</p>
 
@@ -484,7 +484,7 @@
             </ul></li>
           </ul>
 
-          <p>Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Cyrillic</p>
+          <p>Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Cyrillic.</p>
 
           <p>OpenType Features: small caps, numeric figure values, numeric spacing values (and more).</p>
         </section>
@@ -777,6 +777,23 @@
 
         <p>As a consequence, we strongly recommend prioritizing such system fonts for the core selection and using Open Source fonts as extras. A list of system fonts available can be found in <a href="https://docs.microsoft.com/typography/">Microsoft Typography docs</a>.</p>
       </section>
+    </section>
+
+    <section id="recommended-fonts-for-accessibility" class="level2">
+      <h2 id="sigil_toc_id_131">Recommended fonts for Accessibility</h2>
+
+      <p>ReadiumCSS is shipping with 2 a11y-related fonts to be found in the <code>dist/fonts</code> folder:</p>
+
+      <ul>
+        <li><a href="https://github.com/Orange-OpenSource/font-accessible-dfa">AccessibleDfa</a>, by Orange;</li>
+
+        <li><a href="https://github.com/iaolo/iA-Fonts/tree/master/iA%20Writer%20Duospace">IA Writer Duospace</a>, by iA;</li>
+      </ul>
+
+      <p>Those fonts should be applied by those exact names as we need very precise fallbacks for missing characters. We may create variables in the future, once those fonts have been properly reviewed and validated.</p>
+
+      <p>We can also recommend <a href="https://github.com/antijingoist/open-dyslexic">Open Dyslexic</a>, either in addition to or replacement of AccessibleDfa.</p>
+
     </section>
 
     <section id="recommended-fonts-for-cjk" class="level2">

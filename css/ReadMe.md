@@ -101,7 +101,7 @@ As a consequence, modules you want to use have to be listed in those `-before` a
 
 Additional user settings MUST be added to the `user-settings-submodules` folder, and make the required flag clear, if applicable.
 
-Please remember to take the cascade into account, as issues might arise just because the order has been changed or modules moved from `-before` to `-after` – in which case we won’t be available to debug an issue if we don’t know this important detail. See [Stylesheets order doc](../docs/CSS06-stylesheets_order.md) for further details.
+Please remember to take the cascade into account, as issues might arise just because the order has been changed or modules moved from `-before` to `-after` – in which case we won’t be able to reproduce and debug an issue if we don’t know this important detail. See [Stylesheets order doc](../docs/CSS06-stylesheets_order.md) for further details.
 
 ### Reading System variables
 

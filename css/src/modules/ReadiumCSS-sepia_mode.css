@@ -44,6 +44,6 @@
 :root:--sepia-mode svg,
 :root:--sepia-mode img {
   /* Make sure the proper bg-color is used for the blend mode */
-  background-color: var(--RS__backgroundColor) !important;
+  background-color: transparent !important;
   mix-blend-mode: multiply;
 }

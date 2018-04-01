@@ -12,6 +12,8 @@ Readium CSS is a set of reference stylesheets for EPUB Reading Systems. It provi
 
 ## Important info
 
+**TL;DR: use the stylesheets in the `css/dist` folder if you don’t need to customize Readium CSS.** All the flags and variables can then be taken at face value in the docs.
+
 - The `src` files, which are modules, can’t be used AS-IS. They indeed have to be processed by PostCSS to create `dist` stylesheets.
 - By default, those modules are daisy-chained and compiled into 3 `dist` stylesheets: 
     1. `ReadiumCSS-before.css`;

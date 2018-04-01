@@ -18,13 +18,17 @@
     <section id="install-and-init-references-for-regression-tests" class="level2">
       <h2 id="sigil_toc_id_27">Install and init references for regression tests</h2>
 
-      <p>First, navigatate to the project’s folder in your terminal, then type:</p>
+      <p>First, navigatate to the project’s folder in your terminal,</p>
+
+	  <pre><code>cd path/to/readium-css</code></pre>
+
+	  <p>then type:</p>
 
       <pre><code>npm install</code></pre>
 
-      <p>This will install all dev dependencies needed and make npm scripts available to ease those processes.</p>
+      <p>This will install all dev dependencies needed and make npm scripts available to ease all processes you’ll need to run later.</p>
 
-      <p>Then, once the process if finished, type:</p>
+      <p>Then, once the install is finished, type:</p>
 
       <pre><code>npm run test:ref</code></pre>
 
@@ -95,12 +99,14 @@
 
             <li><code>build:vertical</code>, will build stylesheets for Chinese, Japanese, Korean, and Mongolian in vertical writing mode.</li>
           </ul>
+
+		  <p>Those scripts will overwrite the files in the <code>css/dist</code> folder, the stylesheets you’ll use in your app.</p>
         </section>
 
         <section id="usage" class="level4">
           <h4 class="sigil_not_in_toc">Usage</h4>
 
-          <p>First navigate to the <code>readium-css</code> folder, then…</p>
+          <p>First navigate to the <code>readium-css</code> folder if you didn’t already, then…</p>
 
           <pre><code>npm run build</code></pre>
         </section>
@@ -208,13 +214,13 @@ require("postcss-alter-property-value")({
       <section id="usage-1" class="level3">
         <h3 class="sigil_not_in_toc">Usage</h3>
 
-        <p>First navigate to the <code>readium-css</code> folder, then…</p>
+        <p>First navigate to the <code>readium-css</code> folder if you didn’t already, then…</p>
 
         <pre><code>npm run test</code></pre>
 
         <p>The regression tests will run against the newly-created <code>dist</code> stylesheets, which is why you must build them beforehand.</p>
 
-        <p>Once all scenarios are tested for the viewports you created, a report will automatically open in your browser.</p>
+        <p>Once all scenarios are tested for the viewports you created, which can take up to a minute, a report will automatically open in your browser.</p>
 
         <p>If a unit test is marked as “failed”, it doesn’t necessarily mean the user setting failed, it just means you made a significant change which impacts rendering. Take a closer look at the diff, and if you’re happy with the result, head to the terminal and type:</p>
 

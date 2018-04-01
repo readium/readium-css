@@ -4,15 +4,21 @@
 
 ## Install and init references for regression tests
 
-First, navigatate to the project’s folder in your terminal, then type: 
+First, navigatate to the project’s folder in your terminal, 
+
+```
+cd path/to/readium-css
+```
+
+then type: 
 
 ```
 npm install
 ```
 
-This will install all dev dependencies needed and make npm scripts available to ease those processes.
+This will install all dev dependencies needed and make npm scripts available to ease all processes you’ll need to run later.
 
-Then, once the process if finished, type:
+Then, once the install is finished, type:
 
 ```
 npm run test:ref
@@ -60,9 +66,11 @@ By default, the following scripts are available:
 - `build:cjk`, will build stylesheets for Chinese, Japanese, and Korean in horizontal writing mode; 
 - `build:vertical`, will build stylesheets for Chinese, Japanese, Korean, and Mongolian in vertical writing mode.
 
+Those scripts will overwrite the files in the `css/dist` folder, the stylesheets you’ll use in your app.
+
 #### Usage
 
-First navigate to the `readium-css` folder, then…
+First navigate to the `readium-css` folder if you didn’t already, then…
 
 ```
 npm run build
@@ -153,7 +161,7 @@ By default, the following scripts are available:
 
 ### Usage
 
-First navigate to the `readium-css` folder, then…
+First navigate to the `readium-css` folder if you didn’t already, then…
 
 ```
 npm run test
@@ -161,7 +169,7 @@ npm run test
 
 The regression tests will run against the newly-created `dist` stylesheets, which is why you must build them beforehand.
 
-Once all scenarios are tested for the viewports you created, a report will automatically open in your browser.
+Once all scenarios are tested for the viewports you created, which can take up to a minute, a report will automatically open in your browser.
 
 If a unit test is marked as “failed”, it doesn’t necessarily mean the user setting failed, it just means you made a significant change which impacts rendering. Take a closer look at the diff, and if you’re happy with the result, head to the terminal and type:
 

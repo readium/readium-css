@@ -30,13 +30,13 @@ Some issues, which may be raised during development, will be documented so that 
 
 ## Testing
 
-An [iOS test app](https://github.com/readium/r2-testapp-swift) for the Swift implementation of Readium 2 is using Readium CSS and can be tested through TestFlight. Please contact us if you want to be part of the test program.
+An iOS test app for the Swift implementation of Readium 2 is using Readium CSS and can be [downloaded on the App Store](https://itunes.apple.com/us/app/r2-reader/id1363963230?mt=8).
 
 An [Android test app](https://github.com/readium/r2-testapp-kotlin) for the Kotlin implementation of Readium 2 is using Readium CSS and can be tested through HockeyApp. Please contact us if you want to be part of the test program.
 
-You can also use the [webpub manifest prototype](https://github.com/HadrienGardeur/webpub-manifest/tree/gh-pages/examples/paged-viewer) with the [RS-streamer-js](https://github.com/edrlab/r2-streamer-js) in a local development environment.
+The Readium Desktop app is using Readium CSS and [is available for Linux, MacOS and Windows](https://github.com/edrlab/readium-desktop/releases).
 
-Please note you’ll have to manually inject stylesheets and apply settings via the console, or design and code scripts if you want a GUI (user settings menu).
+You can also use the [webpub manifest prototype](https://github.com/HadrienGardeur/webpub-manifest/tree/gh-pages/examples/paged-viewer) with the [RS-streamer-js](https://github.com/edrlab/r2-streamer-js) in a local development environment. Please note you’ll have to manually inject stylesheets and apply settings via the console, or design and code scripts if you want a GUI (user settings menu).
 
 ## Known implementations
 

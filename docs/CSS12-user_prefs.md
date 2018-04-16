@@ -226,7 +226,9 @@ Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
-**Warning:** for the time being, automatic hyphenation won’t work if you are using the Blink rendering engine (either via Chrome or a Webview) on ChromeOS, Linux and Windows. It indeed is not implemented yet and we recommend not trying to polyfill it using JavaScript as it will create a11y issues, especially with screen readers.
+**Warning:** for the time being, automatic hyphenation won’t work if you are using the Blink rendering engine (either via Chrome or a Webview, including Electron’s) on ChromeOS, Linux and Windows. It indeed is not implemented yet and we recommend not trying to polyfill it using JavaScript as it will create a11y issues, especially with screen readers. 
+
+**As a consequence, we strongly advise implementers against providing users with an hyphenation-specific setting if targeting this rendering engine.**
 
 ### Typography
 

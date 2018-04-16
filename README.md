@@ -12,7 +12,7 @@ Readium CSS provides:
 - user settings;
 - media overlays and user highlights.
 
-**Readium CSS is currently in alpha.**
+**Readium CSS is currently in alpha** (version `1.0.0-alpha.1`).
 
 ## License
 

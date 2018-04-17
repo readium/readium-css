@@ -2,7 +2,7 @@
 
 (Add x between brackets to check.)
 
-- [ ] I’ve read contributing guidelines
+- [ ] I’ve read [contributing guidelines](../contributing.md)
 - [ ] I’ve signed and sent the [Readium ICLA](http://readium.github.io/documents/Individual%20Contributor%20License%20Agreement.pdf)
 - [ ] I’m making this pull request against the develop branch
 - [ ] I’ve updated from the develop branch before proposing this pull request

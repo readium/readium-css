@@ -38,11 +38,11 @@ The Readium Desktop app is using Readium CSS and [is available for Linux, MacOS 
 
 You can also use the [webpub manifest prototype](https://github.com/HadrienGardeur/webpub-manifest/tree/gh-pages/examples/paged-viewer) with the [RS-streamer-js](https://github.com/edrlab/r2-streamer-js) in a local development environment. Please note you’ll have to manually inject stylesheets and apply settings via the console, or design and code scripts if you want a GUI (user settings menu).
 
-## Known implementations
+## Other known implementations
 
-There is no public implementation of Readium CSS so far.
+There is no external implementation of Readium CSS so far.
 
-Consequently, if you are encountering rendering issues with Readium, please report them on the [github section dedicated to the proper Readium project](https://github.com/readium) (readium-js, readium-shared-js, readium-sdk, etc.).
+Consequently, if you are encountering rendering issues with Readium (iOS apps, Android apps, or the Readium Chrome App), please report them on the [github section dedicated to the proper Readium project](https://github.com/readium) (readium-js, readium-shared-js, readium-sdk, etc.).
 
 ## Docs
 

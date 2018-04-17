@@ -569,10 +569,7 @@ img, svg, audio, video {
 /* Try preventing border being cut-off, webkit + blink have content-box by default */
 
 table {
-
-  /* We might want to set at least overflow-x to auto in case the table doesn't fit,
-     max-width is not necessarily the best solution there, but maybe we could investigate transform scale */
-  overflow-x: auto;
+  max-width: var(--RS__maxMediaWidth);
   box-sizing: var(--RS__boxSizingTable);
 }
 /*# sourceMappingURL=ReadiumCSS-before.css.map */

@@ -70,8 +70,5 @@ img, svg, audio, video {
 /* Try preventing border being cut-off, webkit + blink have content-box by default */
 table {
   box-sizing: var(--RS__boxSizingTable);
-
-  /* We might want to set at least overflow-y to auto in case the table doesn't fit,
-     max-height is not necessarily the best solution there, but maybe we could investigate transform scale */
-  overflow-y: auto;
+  max-height: var(--RS__maxMediaWidth)
 }

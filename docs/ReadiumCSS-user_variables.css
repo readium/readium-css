@@ -7,8 +7,8 @@
    Repo: https://github.com/readium/readium-css */
 
 :root {
-  --USER__colNumber: ;        /* 1, 2 */
-  --USER__pageMargins: ;      /* Depends on pagination + 1/2 cols */
+  --USER__colCount: ;         /* 1, 2, auto */
+  --USER__pageMargins: ;      /* 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2 */
 
   --USER__backgroundColor: ;  /* Custom color (not preset mode) */
   --USER__textColor: ;        /* Custom color (not preset mode) */
@@ -30,4 +30,6 @@
   /* Night mode specific */
   --USER__darkenImages: ;     /* any value */
   --USER__invertImages: ;     /* any value */
+
+  --USER__ligatures: ;        /* none | common-ligatures */
 }

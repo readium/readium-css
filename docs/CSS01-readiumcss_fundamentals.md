@@ -1,6 +1,6 @@
 # Readium CSS Fundamental Concepts
 
-[Implementers’ doc] [Authors’ info] [WIP]
+[Implementers’ doc] [Authors’ info]
 
 This document serves as an introduction, it explains the fundamental concepts used in designing Readium CSS.
 
@@ -10,7 +10,7 @@ This document serves as an introduction, it explains the fundamental concepts us
 
 Indeed, EPUB is not supported natively so we must build on top of web browsers’ rendering engine.
 
-With such a role comes great responsibility: we must try to behave like browsers are behaving—i.e. be liberal in what we accept from authors—, and find a sensible balance between authors’ stylesheets and users’ overrides.
+With such a role comes great responsibility: we must try to behave like browsers are behaving – i.e. be liberal in what we accept from authors –, and find a sensible balance between authors’ stylesheets and users’ overrides.
 
 Authors and users have expectations though, and we had to take those into account. For instance, they are used to having EPUB contents laid out in a paged view, with reading modes (paper, sepia, night) and a minimal set of common settings.
 
@@ -31,7 +31,7 @@ We wanted to bring EPUB closer to the web though, and decided to leverage HTML5 
 
 ## 3. Leverage Modern CSS
 
-CSS has a lot to offer nowadays, and it can help solve complex issues in more simple ways.
+CSS has a lot to offer nowadays, and it can help solve complex issues in simpler ways.
 
 Readium CSS has been be designed following 4 core principles:
 
@@ -40,12 +40,10 @@ Readium CSS has been be designed following 4 core principles:
 3. **Daisy-chainability:** those modules can be loaded and daisy-chained (cascade) depending on conditions;
 4. **Customization:** modules can be customized either before or during runtime (CSS variables), which implies themes can be generated within minutes.
 
-We’ve also made sure that, for most “hardcoded” styles you might add when CSS variables are not supported (internal stylesheet or inline styles), user settings can still be applied (leveraging inheritance).
-
 ## 4. Openness and Transparency
 
 This last principle is important since the relationship between authors and Reading Systems’ developers has not been really great so far.
 
-Therefore, feedback has been collected, samples have been used all along development, and decisions impacting authors have been openly discussed. A public documentation is also available. 
+Therefore, feedback has been collected, samples have been used all along development, and decisions impacting authors have been openly discussed. All of this has been publicly documented during research and development. 
 
 More importantly, we must clearly state what is UA styles and user styles, and why `!important` is used. This process has a significant impact when it comes to transparency since it affects the cascade itself (see user settings recommendations). Should an author file an issue scoped to your implementation, please take the time to explain why you decided to differ and use `!important`, especially as such a decision can likely be backed by users’ feedback in many cases.

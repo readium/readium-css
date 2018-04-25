@@ -2,7 +2,7 @@
 
 [Implementers’ doc]
 
-Note: CSS variables **are not and won’t be supported in IE11.** You can either create a static stylesheet for all UA browsers or decide to leverage them in most UA browsers + use a JS fallback for IE11—you can test for CSS variables support in JS and set inline styles if they’re not.
+Note: CSS variables **are not and won’t be supported in IE11.** You can either create a static stylesheet for all UA browsers or decide to leverage them in most UA browsers + use a JS fallback for IE11 if you want to support this browser – you can test for CSS variables support in JS.
 
 ## What are CSS variables?
 
@@ -216,7 +216,7 @@ body {
 
 Then create a function to return the breakpoint and append styles accordingly.
 
-You could probably leverage such a hack to implement some kind of `column-width` media query in paged view, but it would require CSS authors to provide specific stylesheets with this non-standard media as a `link` attribute—otherwise, performance will be really really bad as you would have to hijack the entire stylesheet to retrieve media queries first.
+You could probably leverage such a hack to implement some kind of `column-width` media query in paged view, but it would require CSS authors to provide specific stylesheets with this non-standard media as a `link` attribute – otherwise, performance will be really really bad as you would have to hijack the entire stylesheet to retrieve media queries first.
 
 ### Setting another variable as a value
 

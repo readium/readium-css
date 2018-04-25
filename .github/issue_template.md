@@ -37,6 +37,6 @@ I'm submitting a…
 **Please tell us about your environment:**
 
 - Platform: [Android | iOS | Linux | MacOS | Windows | other]
-- Browser: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
+- Brower / Rendering Engine: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Chromium on Electron XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
 
 **Other information** (e.g. related issues, suggestions how to fix, links for us to have context)

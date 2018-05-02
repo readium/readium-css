@@ -158,22 +158,22 @@ I'm submitting a…
 2. [Second Step]
 3. [Other Steps...]
 
-**What is the expected behavior?**
+**What is the expected behaviour?**
 
-**What is the current behavior?**
+**What is the current behaviour?**
 
 **Do you have screenshots, GIFs, demos or samples which demonstrate the problem or enhancement?** 
 
 ![image description](url)
 
-**What is the motivation / use case for changing the behavior?**
+**What is the motivation / use case for changing the behaviour?**
 
 **Do you know which CSS modules (stylesheets) are impacted?**
 
 **Please tell us about your environment:**
 
 - Platform: [Android | iOS | Linux | MacOS | Windows | other]
-- Browser: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
+- Browser / Rendering Engine: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Chromium on Electron XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
 
 **Other information** (e.g. related issues, suggestions how to fix, links for us to have context)
 ```
@@ -207,22 +207,22 @@ I'm submitting a…
 2. [Second Step]
 3. [Other Steps...]
 
-**What is the expected behavior?**
+**What is the expected behaviour?**
 
-**What is the current behavior?**
+**What is the current behaviour?**
 
 **Do you have screenshots, GIFs, demos or samples which demonstrate the problem or enhancement?** 
 
 ![image description](url)
 
-**What is the motivation / use case for changing the behavior?**
+**What is the motivation / use case for changing the behaviour?**
 
 **Do you know which CSS modules (stylesheets) are impacted?**
 
 **Please tell us about your environment:**
 
 - Platform: [Android | iOS | Linux | MacOS | Windows | other]
-- Browser: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
+- Browser / Rendering Engine: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Chromium on Electron XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
 
 **Other information** (e.g. related issues, suggestions how to fix, links for us to have context)
 ```
@@ -239,7 +239,7 @@ We’ll finally review your pull request to check if everything is OK.
 
 ### Pull Requests
 
-First, make sure you have signed and sent the [Readium ICLA](http://readium.github.io/documents/Individual%20Contributor%20License%20Agreement.pdf) (for Individual Contributor License Agreement).
+First, make sure you have signed and sent the [Readium ICLA](http://readium.github.io/documents/Individual%20Contributor%20License%20Agreement.pdf) (for Individual Contributor License Agreement) – no need if your PR is about fixing typos.
 
 - Test your code (see [platform support](https://github.com/readium/readium-css/wiki/Platform-Support) in the Wiki).
 - Pull requests should **always** be created against the develop branch – never the master.

@@ -667,11 +667,11 @@ body {
 
    Repo: https://github.com/readium/readium-css */
 
-/* For AccessibleDfa, we need to normalize font-weight and font-style since only the normal style is available */
+/* For AccessibleDfA, we need to normalize font-weight and font-style since only the normal style is available */
 
-:root[style*="readium-font-on"][style*="AccessibleDfa"] {
+:root[style*="readium-font-on"][style*="AccessibleDfA"] {
   /* We won’t use the variable there since we need fallbacks for missing characters */
-  font-family: AccessibleDfa, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
+  font-family: AccessibleDfA, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
   --RS__lineHeightCompensation: 1.167;
 }
 
@@ -688,7 +688,7 @@ body {
 
 /* Maybe users want a setting to normalize any font offered so there is a “a11y Normalize” flag for it */
 
-:root[style*="readium-font-on"][style*="AccessibleDfa"],
+:root[style*="readium-font-on"][style*="AccessibleDfA"],
 :root[style*="readium-font-on"][style*="IA Writer Duospace"],
 :root[style*="readium-font-on"][style*="readium-a11y-on"] {
   font-style: normal !important;
@@ -697,7 +697,7 @@ body {
 
 /* Targeting everything except code. Note that Open Dyslexic has a monospaced font for code */
 
-:root[style*="readium-font-on"][style*="AccessibleDfa"] *:not(code):not(var):not(kbd):not(samp),
+:root[style*="readium-font-on"][style*="AccessibleDfA"] *:not(code):not(var):not(kbd):not(samp),
 :root[style*="readium-font-on"][style*="IA Writer Duospace"] *:not(code):not(var):not(kbd):not(samp),
 :root[style*="readium-font-on"][style*="readium-a11y-on"] *:not(code):not(var):not(kbd):not(samp) {
   font-family: inherit !important;
@@ -707,7 +707,7 @@ body {
 
 /* Normalizing text-decoration, subs and sups */
 
-:root[style*="readium-font-on"][style*="AccessibleDfa"] *,
+:root[style*="readium-font-on"][style*="AccessibleDfA"] *,
 :root[style*="readium-font-on"][style*="IA Writer Duospace"] *,
 :root[style*="readium-font-on"][style*="readium-a11y-on"] * {
   text-decoration: none !important;
@@ -716,10 +716,10 @@ body {
   font-variant-position: normal !important;
 }
 
-:root[style*="readium-font-on"][style*="AccessibleDfa"] sup,
+:root[style*="readium-font-on"][style*="AccessibleDfA"] sup,
 :root[style*="readium-font-on"][style*="IA Writer Duospace"] sup,
 :root[style*="readium-font-on"][style*="readium-a11y-on"] sup,
-:root[style*="readium-font-on"][style*="AccessibleDfa"] sub,
+:root[style*="readium-font-on"][style*="AccessibleDfA"] sub,
 :root[style*="readium-font-on"][style*="IA Writer Duospace"] sub,
 :root[style*="readium-font-on"][style*="readium-a11y-on"] sub {
   font-size: 1rem !important;

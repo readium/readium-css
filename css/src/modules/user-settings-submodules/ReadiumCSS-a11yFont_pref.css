@@ -6,11 +6,11 @@
 
    Repo: https://github.com/readium/readium-css */
 
-/* For AccessibleDfa, we need to normalize font-weight and font-style since only the normal style is available */
+/* For AccessibleDfA, we need to normalize font-weight and font-style since only the normal style is available */
 
-:root:--font-override[style*="AccessibleDfa"] {
+:root:--font-override[style*="AccessibleDfA"] {
   /* We won’t use the variable there since we need fallbacks for missing characters */
-  font-family: AccessibleDfa, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
+  font-family: AccessibleDfA, Verdana, Tahoma, "Trebuchet MS", sans-serif !important;
   --RS__lineHeightCompensation: 1.167;
 }
 

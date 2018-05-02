@@ -305,10 +305,10 @@ math {
 /* /!\ Mind the path (relative to the folders in which you have stylesheets and the fonts) */
 
 @font-face {
-  font-family: AccessibleDfa;
+  font-family: AccessibleDfA;
   font-style: normal;
   font-weight: normal;
-  src: local("AccessibleDfa"),
+  src: local("AccessibleDfA"),
     url("fonts/AccessibleDfA.otf") format("opentype");
 }
 

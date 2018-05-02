@@ -14,11 +14,11 @@ I'm submitting a…
 2. [Second Step]
 3. [Other Steps...]
 
-**What is the expected behavior?**
+**What is the expected behaviour?**
 
 
 
-**What is the current behavior?**
+**What is the current behaviour?**
 
 
 
@@ -26,7 +26,7 @@ I'm submitting a…
 
 ![image description](url)
 
-**What is the motivation / use case for changing the behavior?**
+**What is the motivation / use case for changing the behaviour?**
 
 
 
@@ -37,6 +37,6 @@ I'm submitting a…
 **Please tell us about your environment:**
 
 - Platform: [Android | iOS | Linux | MacOS | Windows | other]
-- Brower / Rendering Engine: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Chromium on Electron XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
+- Browser / Rendering Engine: [all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Chromium on Electron XX | Android Web View | iOS XX Safari | iOS XX UIWebView | iOS XX WKWebView | other]
 
 **Other information** (e.g. related issues, suggestions how to fix, links for us to have context)

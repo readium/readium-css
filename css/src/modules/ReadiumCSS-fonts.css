@@ -8,8 +8,8 @@
 /* /!\ Mind the path (relative to the folders in which you have stylesheets and the fonts) */
 
 @font-face {
-  font-family: AccessibleDfa;
-  src: local("AccessibleDfa"),
+  font-family: AccessibleDfA;
+  src: local("AccessibleDfA"),
     url("fonts/AccessibleDfA.otf") format("opentype");
   font-weight: normal;
   font-style: normal;

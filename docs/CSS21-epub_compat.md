@@ -32,7 +32,7 @@ MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/@page
 @supports
 ```
 
-The `@supports` CSS at-rule lets authors specify declarations that depend on a browser's support for one or more specific CSS features. This is called a *feature query.*
+The `@supports` CSS at-rule lets authors specify declarations that depend on a browser’s support for one or more specific CSS features. This is called a *feature query.*
 
 **It is critical for the advancement of modern CSS that implementers try their best at supporting this rule,** especially when pre-processing EPUB files before distribution. It indeed is one of the very few mechanisms allowing authors to do progressive enhancement (layout, typography, etc.), especially as it helps get around older Reading Systems which have no concept of fault tolerance, and will consequently ignore the entire stylesheet if they encounter some of those more modern properties.
 
@@ -73,7 +73,7 @@ The contents of this display options file seem to always be:
 </display_options>
 ```
 
-As of November 2011, FLEPUB supports embedded fonts, audio, JavaScript (partially), media overlays (smil). It doesn't support video and SVG.
+As of November 2011, FLEPUB supports embedded fonts, audio, JavaScript (partially), media overlays (smil). It doesn’t support video and SVG.
 
 ### Apple
 
@@ -111,9 +111,17 @@ Supported display options are:
 
 ### Calibre
 
-Calibre is using specific metadata for series and rating.
+Calibre is using specific metadata for sorting, series and rating.
 
 This metadata has a `calibre:` prefix.
+
+#### Title sort
+
+```
+<meta content="Title of the Book, The" name="calibre:title_sort" />
+```
+
+This item allows Reading Systems to sort books in a non-stricly alphabetical way, by moving articles such as “The” and “An” to the end of the string.
 
 #### Series
 
@@ -131,13 +139,15 @@ This item indicates the series the publication is part of.
 
 This item designates the position (index) of the publication in this series.
 
+It can be a floating point number with up to two digits of precision e.g. `1.01`, and zero and negative numbers are allowed.
+
 #### Rating
 
 ```
 <meta content="10.0" name="calibre:rating" />
 ```
 
-This item stores the rating the user has explicitely set for the publication. `2.0` is one star, `10.0` is five.
+This item stores the rating (integer) the user has explicitely set for the publication. In Calibre, `0.0` is unrated, `2.0` is one star, and `10.0` is five stars.
 
 ### iBooks
 
@@ -181,7 +191,7 @@ Docs: [iBooks Asset Guide](https://help.apple.com/itc/booksassetguide/?lang=en#/
 <meta property="ibooks:respect-image-size-class">className</meta>
 ```
 
-Gaiji are small, inline images that represent characters that are not available in a character or font set. Gaiji are typically used for older symbols or characters in Japanese that have fallen out of use. Authors can define a custom class name for which iBooks will respect an image's dimensions. Those inline images will then not be altered like other images, for which iBooks may force sizing.
+Gaiji are small, inline images that represent characters that are not available in a character or font set. Gaiji are typically used for older symbols or characters in Japanese that have fallen out of use. Authors can define a custom class name for which iBooks will respect an image’s dimensions. Those inline images will then not be altered like other images, for which iBooks may force sizing.
 
 Some authors may have used this metadata to force sizing for specific images, and not only gaiji. Moreover, some might use it to invert specific images like illustrations in night mode, since iBooks does it automatically in order for gaiji to be the same color as text’s.
 
@@ -208,6 +218,94 @@ This meta is automatically added to EPUB3 files generated with iBooks Author. It
 Moreover, this format is using interactive widgets which are managed at the Reading System level (the EPUB file contains `<object>` with a type of `application/x-ibooks+widget` and custom data-attributes for styling).
 
 It could be used as a flag to indicate that the EPUB file was meant for iBooks and there will be rendering issues, especially interactive widgets since they won’t work as intended by the author.
+
+### Kindle
+
+Kindle is using specific metadata for the primary writing mode and Fixed Layout – for both rendition and enabling FXL-specific features.
+
+This metadata has no prefix.
+
+Docs: [Kindle Publishing Guidelines](https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf)
+
+[Further details and undocumented metadata](http://www.fantasycastlebooks.com/Tutorials/kindle-tutorial-part6.html).
+
+#### Primary writing mode
+
+```
+<meta name="primary-writing-mode" content="horizontal-rl"/>
+```
+
+Values can be `horizontal-lr`, `horizontal-rl`, `vertical-lr`, or `vertical-rl`.
+
+This is a recent addition to the set of Kindle-specific metadata, probably as part of an internationalization effort.
+
+It indicates the writing mode that should be used for the entire publication, including the flow in which virtual panels and magnification regions must progress when swiped in Fixed Layout (manga/comics and children books).
+
+#### Fixed layout
+
+```
+<meta name="fixed-layout" content="true"/>
+```
+
+This is an older version of
+
+```
+<meta property="rendition:layout">pre-paginated</meta>
+```
+
+It should therefore be considered an alias.
+
+#### Original resolution
+
+```
+<meta name="original-resolution" content="1024x600"/>
+```
+
+This indicates the original design resolution of the content.
+
+#### Orientation lock
+
+```
+<meta name="orientation-lock" content="landscape"/>
+```
+
+This is an older version of 
+
+```
+<meta property="rendition:orientation">landscape</meta>
+```
+
+It should therefore be considered an alias.
+
+#### Book type
+
+```
+<meta name="book-type" content="children"/>
+```
+
+Values can be `children` or `comic`.
+
+This removes reader functionality which may not be relevant for those genres (e.g. search, share, etc.). For more details, [see this chart](http://www.fantasycastlebooks.com/Tutorials/kindle-fixed-layout-functionality.html).
+
+#### Blank pages
+
+```
+<itemref idref="blank-page" properties="layout-blank"/>
+```
+
+This property can be used to indicated a page is blank. If set, the page will be rendered in landscape mode (spread) but not in portrait mode (single page).
+
+#### Region magnification (deprecated)
+
+```
+<meta name="regionMagnification" content="true"/>
+```
+
+This property was used to indicate the Region Magnification feature should be used for the Fixed-Layout book. It is now set automatically if the required markup is found in XHTML documents.
+
+The Region Magnification feature allows users to zoom text (pop-up view) and comics’ panels, as well as navigating panel by panel. Authors must however provide specific markup (i.e. using a `app-amzn-magnify` class and storing `targetId`, `sourceId` and `ordinal` attributes in a JSON object as part of a `data-app-amzn-magnify` value).
+
+**Note:** authors may be using a JavaScript polyfill to re-use this markup in EPUB apps that support scripting. We recommend not trying to implement those features in your app unless JavaScript is strictly disabled for authoring purposes.
 
 ## Attributes
 

@@ -1021,55 +1021,55 @@
         <navLabel>
           <text>Introduction</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_120"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_39"/>
       </navPoint>
       <navPoint id="navPoint170">
         <navLabel>
           <text>CSS At-rules</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_121"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_40"/>
       </navPoint>
       <navPoint id="navPoint171">
         <navLabel>
           <text>Non-standard Kindle Media queries</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_122"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_95"/>
       </navPoint>
       <navPoint id="navPoint172">
         <navLabel>
           <text>Interactive and Fixed-layout EPUB 2</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_123"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_96"/>
       </navPoint>
       <navPoint id="navPoint173">
         <navLabel>
           <text>Metadata</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_34"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_97"/>
       </navPoint>
       <navPoint id="navPoint174">
         <navLabel>
           <text>Attributes</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_125"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_98"/>
       </navPoint>
       <navPoint id="navPoint175">
         <navLabel>
           <text>Webkit’s CSS multi-column extensions</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_150"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_129"/>
       </navPoint>
       <navPoint id="navPoint176">
         <navLabel>
           <text>Non-standard CSS properties</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_126"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_136"/>
       </navPoint>
       <navPoint id="navPoint177">
         <navLabel>
           <text>EPUB properties</text>
         </navLabel>
-        <content src="Text/Section-021.xhtml#sigil_toc_id_127"/>
+        <content src="Text/Section-021.xhtml#sigil_toc_id_137"/>
       </navPoint>
     </navPoint>
     <navPoint id="navPoint178">

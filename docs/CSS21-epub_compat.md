@@ -139,13 +139,15 @@ This item indicates the series the publication is part of.
 
 This item designates the position (index) of the publication in this series.
 
+It can be a floating point number with up to two digits of precision e.g. `1.01`, and zero and negative numbers are allowed.
+
 #### Rating
 
 ```
 <meta content="10.0" name="calibre:rating" />
 ```
 
-This item stores the rating the user has explicitely set for the publication. `2.0` is one star, `10.0` is five.
+This item stores the rating (integer) the user has explicitely set for the publication. In Calibre, `0.0` is unrated, `2.0` is one star, and `10.0` is five stars.
 
 ### iBooks
 

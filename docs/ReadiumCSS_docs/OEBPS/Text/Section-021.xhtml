@@ -168,6 +168,8 @@
           <pre><code>&lt;meta content="1.0" name="calibre:series_index" /&gt;</code></pre>
 
           <p>This item designates the position (index) of the publication in this series.</p>
+
+          <p>It can be a floating point number with up to two digits of precision e.g. <code>1.01</code>, and zero and negative numbers are allowed.</p>
         </section>
 
         <section id="rating" class="level4">
@@ -175,7 +177,7 @@
 
           <pre><code>&lt;meta content="10.0" name="calibre:rating" /&gt;</code></pre>
 
-          <p>This item stores the rating the user has explicitely set for the publication. <code>2.0</code> is one star, <code>10.0</code> is five.</p>
+          <p>This item stores the rating (integer) the user has explicitely set for the publication. In Calibre, <code>0.0</code> is unrated, <code>2.0</code> is one star, and <code>10.0</code> is five stars.</p>
         </section>
       </section>
 

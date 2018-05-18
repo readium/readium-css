@@ -13,7 +13,7 @@
   --RS__maxMediaWidth: 100%;
 
   /* max-height for media, you can override that via JS if not compiled to static  */
-  --RS__maxMediaHeight: 100%;
+  --RS__maxMediaHeight: 100vw;
 
   /* value for medias’ box-sizing */
   --RS__boxSizingMedia: border-box;

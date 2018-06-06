@@ -25,12 +25,18 @@
   --RS__lineHeightCompensation: 1.167;
 }
 
-/* Maybe users want a setting to normalize any font offered so there is a “a11y Normalize” flag for it */
-
 :root:--font-override:--a11y-font,
 :root:--font-override:--a11y-normalize {
+  --USER__lineHeight: calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__lineHeightCompensation));
+
+  line-height: var(--USER__lineHeight) !important;
   font-weight: normal !important;
   font-style: normal !important;
+}
+
+:root:--font-override:--a11y-font *,
+:root:--font-override:--a11y-normalize * {
+  line-height: inherit !important;
 }
 
 /* Targeting everything except code. Note that Open Dyslexic has a monospaced font for code */

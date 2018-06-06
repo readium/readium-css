@@ -53,3 +53,7 @@
 /* Direction i.e. ltr and rtl */
 @custom-selector :--ltr [dir="ltr"];
 @custom-selector :--rtl [dir="rtl"];
+
+/* A11y and experimental features */
+
+@custom-selector :--a11y-lines [style*="readium-lines-on"];

@@ -1,0 +1,35 @@
+/* Readium CSS 
+   A11y Alternated lines (background-color)
+
+   A plugin managing alternated lines for dys settings
+
+   Repo: https://github.com/readium/readium-css */
+
+/* This is quite frankly a very simplistic implementation. Handling correct alternation of background colors, etc. can not be done very well using CSS… And it works only in the scrolled view. */
+
+:root:--a11y-lines {
+  --a11y__oddBackgroundColor: #ccffef;
+  --a11y__evenBackgroundColor: #e6f2ff;
+
+  --a11y__backgroundHeight: calc(var(--USER__lineHeight) * 2);
+}
+
+:root:--a11y-lines h1,
+:root:--a11y-lines h2,
+:root:--a11y-lines h3,
+:root:--a11y-lines h4,
+:root:--a11y-lines h5,
+:root:--a11y-lines h6,
+:root:--a11y-lines p,
+:root:--a11y-lines ul,
+:root:--a11y-lines ol,
+:root:--a11y-lines dt,
+:root:--a11y-lines dd,
+:root:--a11y-lines figcaption,
+:root:--a11y-lines summary {
+  background: linear-gradient(to bottom, var(--a11y__oddBackgroundColor), var(--a11y__oddBackgroundColor) var(--USER__lineHeight), var(--a11y__evenBackgroundColor) var(--USER__lineHeight), var(--a11y__evenBackgroundColor) var(--a11y__backgroundHeight)) !important;
+  background-size: 100% var(--a11y__backgroundHeight) !important;
+  background-repeat: repeat !important;
+  padding: 0 10px !important;
+  margin: 0 var(--USER__lineHeight) !important;
+}

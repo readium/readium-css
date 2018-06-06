@@ -57,3 +57,4 @@
 /* A11y and experimental features */
 
 @custom-selector :--a11y-lines [style*="readium-lines-on"];
+@custom-selector :--a11y-unfloat [style*="readium-unfloat-on"];

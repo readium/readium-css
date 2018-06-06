@@ -1,0 +1,14 @@
+/* Readium CSS 
+   A11y Unfloater
+
+   A plugin managing a11y float reset for dys settings
+
+   Repo: https://github.com/readium/readium-css */
+
+:root:--a11y-unfloat div,
+:root:--a11y-unfloat figure,
+:root:--a11y-unfloat aside,
+:root:--a11y-unfloat span {
+  float: none !important;
+  width: 100% !important;
+}

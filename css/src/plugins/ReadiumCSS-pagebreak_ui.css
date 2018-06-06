@@ -1,0 +1,50 @@
+/* Readium CSS 
+   UI pagebreak
+
+   A plugin managing page numbers in the margin
+
+   Repo: https://github.com/readium/readium-css */
+
+
+/* For the time being, let’s reset the user’s pref */
+:root:--pagebreak body,
+:root:--pagebreak[style*="--USER__pageMargins"] body {
+  padding: 0 var(--RS__pageGutter) !important;
+}
+
+:root:--pagebreak *[epub\:type="pagebreak"]:not(:empty) {
+  font-size: 0.75rem;
+  line-height: 1;
+  font-family: var(--RS__sansTf);
+  color: #666666;
+  font-weight: bold;
+  float: right;
+  margin-right: calc((var(--RS__pageGutter) * -1) + 5px);
+  -ms-writing-mode: lr-tb;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  vertical-align: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+:root:--pagebreak *[epub\:type="pagebreak"][title]:empty::after {
+  font-size: 0.75rem;
+  line-height: 1;
+  content: attr(title);
+  font-family: var(--RS__sansTf);
+  color: #666666;
+  font-weight: bold;
+  float: right;
+  margin-right: calc((var(--RS__pageGutter) * -1) + 5px);
+  -ms-writing-mode: lr-tb;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  vertical-align: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

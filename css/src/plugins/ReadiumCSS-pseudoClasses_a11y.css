@@ -1,0 +1,54 @@
+/* Readium CSS 
+   A11y Pseudo Classes
+
+   A plugin managing focus, target and active for a11y settings
+
+   Repo: https://github.com/readium/readium-css */
+
+:root:--a11y-pseudo {
+  --a11y__outlineWidth: 2px;
+  --a11y__outlineStyle: solid;
+  --a11y__outlineColor: #4d90fe;
+  --a11y__outlineOffset: 0;
+
+  --a11y__targetBackground: #ffff00;
+  --a11y__targetColor: #121212;
+
+  --a11y__activeBackground: #ffff00;
+  --a11y__activeColor: #121212;
+}
+
+:root:--a11y-pseudo:--sepia-mode {
+  --a11y__outlineColor: #4d90fe;
+
+  --a11y__targetBackground: #ffb4be;
+  --a11y__targetColor: #121212;
+
+  --a11y__activeBackground: #ffb4be;
+  --a11y__activeColor: #121212;
+}
+
+:root:--a11y-pseudo:--night-mode {
+  --a11y__outlineColor: #4d90fe;
+
+  --a11y__targetBackground: #ffffa6;
+  --a11y__targetColor: #000000;
+
+  --a11y__activeBackground: #ffffa6;
+  --a11y__activeColor: #000000;
+}
+
+:root:--a11y-pseudo :focus {
+  outline-width: var(--a11y__outlineWidth) !important; 
+  outline-style: var(--a11y__outlineStyle) !important;
+  outline-color: var(--a11y__outlineColor) !important;
+  outline-offset: var(--a11y__outlineOffset) !important;
+}
+
+:root:--a11y-pseudo :target {
+  background-color: var(--a11y__targetBackground) !important;
+}
+
+:root:--a11y-pseudo :active {
+  background-color: var(--a11y__activeBackground) !important;
+}

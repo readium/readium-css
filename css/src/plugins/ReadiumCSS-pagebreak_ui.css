@@ -12,7 +12,8 @@
   padding: 0 var(--RS__pageGutter) !important;
 }
 
-:root:--pagebreak *[epub\:type="pagebreak"]:not(:empty) {
+:root:--pagebreak *[epub\:type="pagebreak"]:not(:empty),
+:root:--pagebreak *[epub\:type="pagebreak"][title]:empty::after {
   font-size: 0.75rem;
   line-height: 1;
   font-family: var(--RS__sansTf);
@@ -31,20 +32,5 @@
 }
 
 :root:--pagebreak *[epub\:type="pagebreak"][title]:empty::after {
-  font-size: 0.75rem;
-  line-height: 1;
   content: attr(title);
-  font-family: var(--RS__sansTf);
-  color: #666666;
-  font-weight: bold;
-  float: right;
-  margin-right: calc((var(--RS__pageGutter) * -1) + 5px);
-  -ms-writing-mode: lr-tb;
-  -webkit-writing-mode: vertical-lr;
-  writing-mode: vertical-lr;
-  vertical-align: 100%;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }

@@ -57,3 +57,21 @@
   font-size: 1rem !important;
   vertical-align: baseline !important;
 }
+
+/* Normalizing drop caps */
+:root:--font-override:--a11y-font p::first-letter,
+:root:--font-override:--a11y-normalize p::first-letter,
+:root:--font-override:--a11y-font p span,
+:root:--font-override:--a11y-normalize p span {
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+  background-color: inherit !important;
+  -webkit-initial-letter: normal !important;
+  initial-letter: normal !important;
+}
+
+/* if img/svg? width + height? markup? */

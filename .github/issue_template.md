@@ -1,8 +1,4 @@
-I'm submitting a…
-
-- [x] bug report
-- [ ] feature request
-- [ ] other
+I'm submitting a [bug report | feature request | other]
 
 **Short description of the issue/suggestion:**
 

@@ -48,6 +48,6 @@ Consequently, if you are encountering rendering issues with Readium (iOS apps, A
 
 ## Docs
 
-Documentation [can be accessed in docs](/docs).
+Documentation [can be accessed in docs](docs).
 
 [You can alternatively download it as en EPUB file](https://github.com/readium/readium-css/raw/master/docs/ReadiumCSS_docs.epub).

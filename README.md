@@ -1,5 +1,7 @@
 # readium-css
 
+[![Readium Logo](https://readium.org/assets/logos/readium-logo.png)](https://readium.org)
+
 A set of reference stylesheets for EPUB Reading Systems, starting with Readium 2.
 
 Readium CSS provides: 
@@ -46,4 +48,6 @@ Consequently, if you are encountering rendering issues with Readium (iOS apps, A
 
 ## Docs
 
-See Wiki for overarching concepts and the docs folder for technical details (markdown files).
+Documentation [can be accessed in docs](docs).
+
+[You can alternatively download it as en EPUB file](https://github.com/readium/readium-css/raw/master/docs/ReadiumCSS_docs.epub).

@@ -1,7 +1,3 @@
-# Readium CSS Documentation
-
-[![Readium Logo](https://readium.org/assets/logos/readium-logo.png)](https://readium.org)
-
 ## Introduction
 
 Readium CSS is a set of reference stylesheets for EPUB Reading Systems, starting with Readium 2.
@@ -20,6 +16,8 @@ Readium CSS provides:
 
 ## Contents
 
+{% include toc.html %}
+
 ## Download
 
-[You can alternatively download this documentation as en EPUB File](https://github.com/readium/readium-css/raw/master/docs/ReadiumCSS_docs.epub).
+[You can alternatively download this documentation as en EPUB file](https://github.com/readium/readium-css/raw/master/docs/ReadiumCSS_docs.epub).

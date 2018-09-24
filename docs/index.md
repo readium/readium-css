@@ -20,4 +20,4 @@ Readium CSS provides:
 
 ## Download
 
-[You can alternatively download this documentation as en EPUB file](https://github.com/readium/readium-css/raw/master/docs/ReadiumCSS_docs.epub).
+[You can alternatively download this documentation as an EPUB file](https://github.com/readium/readium-css/raw/master/docs/ReadiumCSS_docs.epub).

@@ -6,13 +6,14 @@ A set of reference stylesheets for EPUB Reading Systems, starting with Readium 2
 
 Readium CSS provides: 
 
-- a CSS normalize for EPUB contents;
 - paged and scrolled views;
-- default styles;
-- reading modes (night, sepia, etc.);
+- a “patch” for HTML5 Suggested Rendering specific to publications (e.g. extra styles for hyphenation, breaks, etc.);
+- default styles for unstyled ebooks;
+- reading modes (day, night, and sepia);
 - themes;
 - user settings;
-- media overlays and user highlights.
+- media overlays and user highlights;
+- a set of baselines and recommendations for accessibility, overrides, and internationalization.
 
 **Readium CSS is currently in alpha** (version `1.0.0-alpha.1`).
 
@@ -24,11 +25,11 @@ See [license.txt](https://github.com/readium/readium-css/blob/master/LICENSE).
 
 ## Scope of this project
 
-The major goal of Readium CSS is to provide implementers and authors with reliable and modern styles for EPUB 2 and EPUB 3 publications, with good interoperability. 
+The primary goal of Readium CSS is to provide Reading System implementers with reliable and modern styles for EPUB 2 and EPUB 3 files. In addition, it should provide good interoperability in the existing ecosystem, while not overriding authors’ styles unless strictly necessary.
 
-Those stylesheets were not designed and should not be used for other existing formats like FB2, PRC, Mobi, TEI, etc., and works in progress like Web Publications or Portable Web Publications.
+Readium CSS stylesheets were not designed and should not be used for other file formats e.g. FB2, PRC, Mobi, TEI, etc. Works in progress like Web Publications or Portable Web Publications are also out of scope.
 
-Some issues, which may be raised during development, will be documented so that they can serve as a reference for future specifications.
+Some issues, which may be raised during development, will be documented so that they can serve as a reference for revisions of the EPUB specification, and even future specifications.
 
 ## Testing
 

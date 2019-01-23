@@ -9,6 +9,15 @@
       --default-font: serif;
       --custom-font: ;
       --comparator-position: ;
+
+      --background-color: ;
+      --text-color: ;
+    }
+
+    html {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: 750ms all ease-in-out;
     }
 
     body {
@@ -131,6 +140,10 @@
       background-color: #EAEAEA;
     }
 
+    html[style*="--background-color"] .char-grid>span {
+      background-color: #222222;
+    }
+
     .smcp,
     .lining-nums,
     .oldstyle-nums,
@@ -228,6 +241,9 @@
       spellcheck="false" />
     <input id="custom-font" type="text" placeholder="Custom Font" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
     />
+    <label>
+      <input id="custom-mode" name="custom-mode" type="checkbox"/> Night Mode
+    </label>
   </div>
 
   <section id="comparison">
@@ -1078,6 +1094,7 @@
         baselineAdjust = document.getElementById("baseline"),
         defaultFont = document.getElementById("default-font"),
         customFont = document.getElementById("custom-font"),
+        customMode = document.getElementById("custom-mode"),
         checkers = document.querySelectorAll("[data-checker]"),
         downloadLink = document.createElement("a");
         
@@ -1156,6 +1173,16 @@
       for (var i = 0; i < checkers.length; i++) {
         let checkbox = checkers[i].getElementsByTagName("input")[0];
         checkbox.checked = false;
+      }
+    }, false);
+
+    customMode.addEventListener("change", function (e) {
+      if (this.checked) {
+        document.documentElement.style.setProperty("--background-color", "#000000");
+        document.documentElement.style.setProperty("--text-color", "#FEFEFE");
+      } else {
+        document.documentElement.style.removeProperty("--background-color");
+        document.documentElement.style.removeProperty("--text-color");
       }
     }, false);
 

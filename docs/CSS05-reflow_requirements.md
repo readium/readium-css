@@ -2,12 +2,12 @@
 
 [Implementers’ doc] [Authors’ doc]
 
-Source: [EPUB Content Documents 3.1](http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-css)
+Source: [EPUB Content Documents 3.2](https://w3c.github.io/publ-epub-revision/epub32/spec/epub-contentdocs.html#sec-css)
 
 There’s a few criteria Reading Systems must meet in order to be conformant: 
 
 - it must support the official definition of CSS as described in the [W3C CSS Snapshot](https://www.w3.org/TR/CSS/);
-- it must support all `-epub-` prefixed properties ([list](http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-css-prefixed)).
+- it must support all `-epub-` prefixed properties ([list](https://w3c.github.io/publ-epub-revision/epub32/spec/epub-contentdocs.html#sec-css-prefixed)).
 
 In addition:
 

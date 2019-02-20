@@ -1,6 +1,6 @@
 # Quickstart
 
-Readium CSS is a set of reference stylesheets for EPUB Reading Systems. It provides: 
+Readium CSS is a set of reference stylesheets for EPUB Reading Systems. It provides styles for reflowable text: 
 
 - a CSS normalize for EPUB contents;
 - paged and scrolled views;
@@ -9,6 +9,8 @@ Readium CSS is a set of reference stylesheets for EPUB Reading Systems. It provi
 - themes;
 - user settings;
 - media overlays and user highlights.
+
+**Note:** Readium CSS stylesheets were not designed and should not be used for fixed-layout EPUB, nor other file formats like FB2, PRC, Mobi, TEI, etc.
 
 ## Important info
 

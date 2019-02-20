@@ -54,7 +54,7 @@ The following guidelines are aimed at existing or newly-created stylesheets for 
 - Attribute selectors, like `input[type="text"]` should always wrap the attribute's value in double quotes.
 - Don’t use classes, style elements.
 - Only use `!important` when a style must be applied at any cost necessary.
-- Try using prefixed-properties which are necessary, including `-epub-properties` (check the [EPUB 3.1 spec](http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-css-prefixed) for a complete list).
+- Try using prefixed-properties which are necessary, including `-epub-properties` (check the [EPUB 3.2 spec](https://w3c.github.io/publ-epub-revision/epub32/spec/epub-contentdocs.html#sec-css-prefixed) for a complete list).
 
 ### Stylesheet Header
 

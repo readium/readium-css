@@ -541,8 +541,8 @@ Docs: [CSS Text Module Level 4](https://www.w3.org/TR/css-text-4/#hyphenation)
 
 ## EPUB properties
 
-Some authors might have used `-epub-` prefixed properties only, thinking they were enough since those CSS properties were standardized. Authors are now strongly encouraged to use unprefixed properties in EPUB 3.1. 
+Some authors might have used `-epub-` prefixed properties only, thinking they were enough since those CSS properties were standardized. Authors are now strongly encouraged to use unprefixed properties in EPUB 3.2. 
 
-In the meantime, implementers may want to polyfill at least some of those properties, especially those related to vertical writing, as practical issues may arise due to the lack of file updates on the authoring side. [A mapping is available](http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-css-prefixed) in the EPUB 3.1 spec if needed. 
+In the meantime, implementers may want to polyfill at least some of those properties, especially those related to vertical writing, as practical issues may arise due to the lack of file updates on the authoring side. [A mapping is available](https://w3c.github.io/publ-epub-revision/epub32/spec/epub-contentdocs.html#sec-css-prefixed) in the EPUB 3.2 spec if needed. 
 
 A [PostCSS Plugin](https://github.com/JayPanoz/postcss-epub-interceptor) has been specifically created to unprefix those properties and change their value whenever needed – PostCSS can indeed be browerified. Implementers’ best option is running this process once and for all before distribution or file opening.

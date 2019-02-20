@@ -6,7 +6,7 @@ Here is a list of all the specs and proposals which are likely to impact Readium
 
 The [W3C CSSWG-Drafts repo](https://github.com/w3c/csswg-drafts/issues) is a good way to keep up. 
 
-Readium CSS’ fundamental approach has been reviewed and should be future proof, but you’ll have to keep the following in mind since EPUB 3.1 is now using CSS snapshots – those specs and proposals are very likely to be listed in future snapshots. 
+Readium CSS’ fundamental approach has been reviewed and should be future proof, but you’ll have to keep the following in mind since EPUB 3.2 is now using CSS snapshots – those specs and proposals are very likely to be listed in future snapshots. 
 
 ## Media Queries Level 5
 

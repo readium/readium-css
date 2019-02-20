@@ -579,9 +579,9 @@
     <section id="epub-properties" class="level2">
       <h2 id="sigil_toc_id_137">EPUB properties</h2>
 
-      <p>Some authors might have used <code>-epub-</code> prefixed properties only, thinking they were enough since those CSS properties were standardized. Authors are now strongly encouraged to use unprefixed properties in EPUB 3.1.</p>
+      <p>Some authors might have used <code>-epub-</code> prefixed properties only, thinking they were enough since those CSS properties were standardized. Authors are now strongly encouraged to use unprefixed properties in EPUB 3.2.</p>
 
-      <p>In the meantime, implementers may want to polyfill at least some of those properties, especially those related to vertical writing, as practical issues may arise due to the lack of file updates on the authoring side. <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-css-prefixed">A mapping is available</a> in the EPUB 3.1 spec if needed.</p>
+      <p>In the meantime, implementers may want to polyfill at least some of those properties, especially those related to vertical writing, as practical issues may arise due to the lack of file updates on the authoring side. <a href="https://w3c.github.io/publ-epub-revision/epub32/spec/epub-contentdocs.html#sec-css-prefixed">A mapping is available</a> in the EPUB 3.2 spec if needed.</p>
 
       <p>A <a href="https://github.com/JayPanoz/postcss-epub-interceptor">PostCSS Plugin</a> has been specifically created to unprefix those properties and change their value whenever needed – PostCSS can indeed be browerified. Implementers’ best option is running this process once and for all before distribution or file opening.</p>
     </section>

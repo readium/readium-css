@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
   <head>
-    <meta content="91cab77e-946f-4814-9e61-8494a5d5cb0f" name="dtb:uid"/>
+    <meta content="urn:uuid:91cab77e-946f-4814-9e61-8494a5d5cb0f" name="dtb:uid"/>
     <meta content="2" name="dtb:depth"/>
     <meta content="0" name="dtb:totalPageCount"/>
     <meta content="0" name="dtb:maxPageNumber"/>
@@ -529,7 +529,7 @@
         <navLabel>
           <text>Recommended fonts for Accessibility</text>
         </navLabel>
-        <content src="Text/Section-010.xhtml#sigil_toc_id_131"/>
+        <content src="Text/Section-010.xhtml#sigil_toc_id_168"/>
       </navPoint>
       <navPoint id="navPoint88">
         <navLabel>

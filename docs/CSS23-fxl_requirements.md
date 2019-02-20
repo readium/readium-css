@@ -2,7 +2,7 @@
 
 [Implementers’ doc] [Authors’ doc]
 
-Source: [EPUB Content Documents 3.1](http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-fixed-layouts)
+Source: [EPUB Content Documents 3.2](https://w3c.github.io/publ-epub-revision/epub32/spec/epub-contentdocs.html#sec-fixed-layouts)
 
 There’s a few criteria Reading Systems must meet in order to be conformant: 
 
@@ -40,6 +40,6 @@ The coordinate system defined by the `viewbox` is mapped to the viewport, keepin
 
 ## Notes
 
-The `rendition:spread portrait` and `rendition:viewport` [are deprecated in EPUB 3.1](http://www.idpf.org/epub/31/spec/epub-packages.html#app-obs-deprecated).
+The `rendition:spread portrait` and `rendition:viewport` [are deprecated in EPUB 3.2](https://w3c.github.io/publ-epub-revision/epub32/spec/epub-packages.html#sec-package-metadata-fxl).
 
 Consequently, the `rendition:spread-portrait` spine override is deprecated as well.

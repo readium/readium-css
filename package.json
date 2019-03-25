@@ -27,14 +27,14 @@
   "devDependencies": {
     "backstopjs": "^3.8.5",
     "postcss-alter-property-value": "^1.1.3",
-    "postcss-cli": "^5.0.0",
+    "postcss-cli": "^6.1.2",
     "postcss-css-variables": "^0.8.0",
     "postcss-custom-media": "^6.0.0",
     "postcss-custom-selectors": "^4.0.1",
     "postcss-discard-comments": "^2.0.4",
     "postcss-import": "^11.1.0",
     "postcss-sorting": "^3.1.0",
-    "stylelint": "^9.1.1"
+    "stylelint": "^9.10.1"
   },
   "scripts": {
     "build": "postcss css/src/ReadiumCSS-before.css -o css/dist/ReadiumCSS-before.css && postcss css/src/ReadiumCSS-default.css -o css/dist/ReadiumCSS-default.css && postcss css/src/ReadiumCSS-after.css -o css/dist/ReadiumCSS-after.css && postcss css/src/ReadiumCSS-before-rtl.css -o css/dist/rtl/ReadiumCSS-before.css && postcss css/src/ReadiumCSS-default-rtl.css -o css/dist/rtl/ReadiumCSS-default.css && postcss css/src/ReadiumCSS-after-rtl.css -o css/dist/rtl/ReadiumCSS-after.css && postcss css/src/ReadiumCSS-before-cjk-horizontal.css -o css/dist/cjk-horizontal/ReadiumCSS-before.css && postcss css/src/ReadiumCSS-default-cjk-horizontal.css -o css/dist/cjk-horizontal/ReadiumCSS-default.css && postcss css/src/ReadiumCSS-after-cjk-horizontal.css -o css/dist/cjk-horizontal/ReadiumCSS-after.css && postcss css/src/ReadiumCSS-before-cjk-vertical.css -o css/dist/cjk-vertical/ReadiumCSS-before.css && postcss css/src/ReadiumCSS-default-cjk-vertical.css -o css/dist/cjk-vertical/ReadiumCSS-default.css && postcss css/src/ReadiumCSS-after-cjk-vertical.css -o css/dist/cjk-vertical/ReadiumCSS-after.css",

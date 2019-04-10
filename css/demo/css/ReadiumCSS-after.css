@@ -214,9 +214,6 @@ body {
 
 :root[style*="readium-scroll-on"] body {
   --RS__maxLineLength: 40rem !important; 
-
-  margin-top: var(--RS__pageGutter) !important;
-  margin-bottom: var(--RS__pageGutter) !important;
 }
 
 /* Scroll mode horizontal */

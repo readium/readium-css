@@ -24,13 +24,4 @@
 /* Make sure line-length is limited in all configs */
 :root:--scroll-view body {
   --RS__maxLineLength: 40rem !important; 
-
-  margin-top: var(--RS__pageGutter) !important;
-  margin-bottom: var(--RS__pageGutter) !important;
 }
-  
-/* Scroll mode horizontal */
-  
-/* Vertical writing needs body height set */
-  
-/* Do we add a top/bottom margin for body in vertical scroll or not? */

@@ -66,6 +66,18 @@ Luc Maumet (EDRLab) has conducted an analysis on the features available in dedic
 - Highlight a specific sound in the text
 - Export contents with the customized layout
 
+## Vestibular disorders
+
+There’s an a11y “issue” which is quite unknown, but may impact a lot of people, either temporarily or permanently: vestibular disorders.
+
+To put it simply, some interactions can make the user dizzy, uneasy, and in some cases ruin her/his entire day, because the user feels like they can’t keep balance when walking or even staying up, or feel vertigo. [See this article](https://source.opennews.org/articles/motion-sick/) for further details and illustrations.
+
+**At the very minimum, allow the user to disable animations which may create effects (e.g. page-transition animation).** But everything else will vary from implementation to implementation.
+
+On iOS/Mac, there’s a system setting which has been implemented and [browsers increasingly support the prefers-reduced-motion media query](https://webkit.org/blog/7551/responsive-design-for-motion/) to design accordingly.
+
+There’s little we can do about interactive EPUB contents themselves, but we can at least promote what Mozilla got wonderfully right from the start to authors, i.e. [an overlay asking users to set their preference](http://devtoolschallenger.com).
+
 ## Internationalization
 
 Very little information on a11y is currently available in the [W3C Text Layout and Typography Requirements](https://w3c.github.io/typography/).

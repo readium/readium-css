@@ -84,13 +84,13 @@ The spread will consequently switch to a single page once the user sets a `font-
 
 The following illustrations are the two models you’ll have to deal with.
 
-![Single Page Model](assets/Page-Model.jpg)
+![The single page model relies on the column width of the :root element. Line-length is constrained by the max-width of the body element, including its padding. Finally an auto margin centers the content.](assets/Page-Model.jpg)
 
 A single page is just a column which can grow to the entire width of the web view/iframe since it is declared for `html`.
 
 Page margins are part of `body`, hence `--RS__maxLineLength`. Contents are centered using the `auto` value for `body` margins.
 
-![Two-Column Spread Model](assets/spread-model.jpg)
+![The two-column spread model is somehow simpler in the sense the column width is the minimum value that must be reached for this model to be applied. We are relying on left and right padding instead of column-gap for gutters.](assets/spread-model.jpg)
 
 In the spread model, i.e. two columns, the `--RS__colWidth` is a floor: once the minimum width available (viewport) can’t contain 2 columns (the value is computed from the `font-size` user setting), we switch to the single page model.
 
@@ -218,7 +218,7 @@ Indeed, columns are automatically laid out on the `y-axis` (vertical) with such 
 
 We consequently use a “Fragmented Model”, as it differs significantly from the “Pagination Model”, especially the column-axis.
 
-![Fragmented Model](assets/Fragmented-Model.jpg)
+![The fragmented Model is kind of a superset of the single page model in the vertical direction, with extra padding added to the root element for extra horizontal gutters.](assets/Fragmented-Model.jpg)
 
 One can think of the fragmented model as the single page model rotated 90% clockwise. The only difference is that `padding` is added to the `:root` (`html`) element so that text doesn’t run from edge to edge.
 

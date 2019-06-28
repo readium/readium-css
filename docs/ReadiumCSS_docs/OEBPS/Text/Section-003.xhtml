@@ -127,7 +127,7 @@
         <p>The following illustrations are the two models you’ll have to deal with.</p>
 
         <figure class="fullbleed">
-          <img src="../Images/Page-Model.jpg" alt="Single Page Model"/>
+          <img src="../Images/Page-Model.jpg" alt="The single page model relies on the column width of the :root element. Line-length is constrained by the max-width of the body element, including its padding. Finally an auto margin centers the content."/>
         </figure>
 
         <p>A single page is just a column which can grow to the entire width of the web view/iframe since it is declared for <code>html</code>.</p>
@@ -135,7 +135,7 @@
         <p>Page margins are part of <code>body</code>, hence <code>--RS__maxLineLength</code>. Contents are centered using the <code>auto</code> value for <code>body</code> margins.</p>
 
         <figure class="fullbleed">
-          <img src="../Images/spread-model.jpg" alt="Two-Column Spread Model"/>
+          <img src="../Images/spread-model.jpg" alt="The two-column spread model is somehow simpler in the sense the column width is the minimum value that must be reached for this model to be applied. We are relying on left and right padding instead of column-gap for gutters."/>
         </figure>
 
         <p>In the spread model, i.e. two columns, the <code>--RS__colWidth</code> is a floor: once the minimum width available (viewport) can’t contain 2 columns (the value is computed from the <code>font-size</code> user setting), we switch to the single page model.</p>
@@ -346,7 +346,7 @@ body {
         <p>We consequently use a “Fragmented Model”, as it differs significantly from the “Pagination Model”, especially the column-axis.</p>
 
         <figure class="fullbleed">
-          <img src="../Images/Fragmented-Model.jpg" alt="Fragmented Model"/>
+          <img src="../Images/Fragmented-Model.jpg" alt="The fragmented Model is kind of a superset of the single page model in the vertical direction, with extra padding added to the root element for extra horizontal gutters."/>
         </figure>
 
         <p>One can think of the fragmented model as the single page model rotated 90% clockwise. The only difference is that <code>padding</code> is added to the <code>:root</code> (<code>html</code>) element so that text doesn’t run from edge to edge.</p>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<package unique-identifier="epub-id-1" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+<package prefix="schema: http://schema.org/" unique-identifier="epub-id-1" version="3.0" xmlns="http://www.idpf.org/2007/opf">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
     <dc:title>Readium CSS Implementers’ doc</dc:title>
     <dc:creator id="cre">Readium</dc:creator>
@@ -8,8 +8,21 @@
     <dc:language>en</dc:language>
     <dc:identifier id="epub-id-1">urn:uuid:91cab77e-946f-4814-9e61-8494a5d5cb0f</dc:identifier>
     <meta name="cover" content="cover_jpg"/>
-    <meta property="dcterms:modified">2019-06-13T18:30:22Z</meta>
+    <meta property="dcterms:modified">2019-06-28T16:43:31Z</meta>
     <meta content="0.9.5" name="Sigil version"/>
+    <meta property="schema:accessibilityFeature">displayTransformability</meta>
+    <meta property="schema:accessibilityFeature">readingOrder</meta>
+    <meta property="schema:accessibilityFeature">structuralNavigation</meta>
+    <meta property="schema:accessibilityFeature">unlocked</meta>
+    <meta property="schema:accessibilityFeature">alternativeText</meta>
+    <meta property="schema:accessibilityHazard">noFlashing</meta>
+    <meta property="schema:accessibilityHazard">noSound</meta>
+    <meta property="schema:accessibilityHazard">noMotionSimulation</meta>
+    <meta property="schema:accessMode">textual</meta>
+    <meta property="schema:accessMode">visual</meta>
+    <meta property="schema:accessModeSufficient">textual,visual</meta>
+    <meta property="schema:accessModeSufficient">textual</meta>
+    <meta property="schema:accessibilitySummary">The publication should meet EPUB Accessibility 1.0 requirements and WCAG 2.0 Level AA.</meta>
   </metadata>
   <manifest>
     <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>

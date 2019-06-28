@@ -117,7 +117,7 @@ An extended selection of 12 typefaces are recommended to offer implementers some
 
 #### Charis SIL
 
-![Charis SIL](assets/charis-sil.png)
+![Charis SIL compared to Charter. The typeface appears a little bit bolder but shares Charter’s metrics. When comparing an entire paragraph, it is really hard to tell which is which as they originate from the same “master.”](assets/charis-sil.png)
 
 Global info:
 
@@ -143,7 +143,7 @@ OpenType Features: none.
 
 #### Faustina
 
-![Faustina](assets/faustina.png)
+![Faustina compared to Charter. The typeface looks smaller and feels definitely condensed. When comparing an entire paragraph, the fact its x-height is larger becomes really visible as it allows for a shorter line-length while appearing larger in weight. Those specificities may help on narrow screens.](assets/faustina.png)
 
 Global info:
 
@@ -169,7 +169,7 @@ OpenType Features: none.
 
 #### IBM Plex Serif
 
-![IBM Plex Serif](assets/plex-serif.png)
+![IBM Plex Serif compared to Charter. The typeface is definitely wider, larger and bolder. When comparing an entire paragraph, this become obvious in the sense fewer words fit on a line. This could become an advantage on larger screens, as the user won’t have to increase font-size.](assets/plex-serif.png)
 
 Global info:
 
@@ -195,7 +195,7 @@ OpenType Features: none.
 
 #### Merriweather
 
-![Merriweather](assets/merriweather.png)
+![Merriweather compared to Iowan Old Style. Although more condensed, the typeface has been designed for screens and offers a larger x-height and bolder strokes. This shows when comparing an entire paragraph, as fewer words fit on a line and an extra line is even created.](assets/merriweather.png)
 
 Global info:
 
@@ -221,7 +221,7 @@ OpenType Features: none.
 
 #### PT Serif
 
-![PT Serif](assets/pt-serif.png)
+![PT Serif compared to Charter. The typeface looks slightly larger and makes for a sharper substitute. When comparing an entire paragraph, it is visibly larger but fits the same amount of words on each line.](assets/pt-serif.png)
 
 Global info:
 
@@ -247,7 +247,7 @@ OpenType Features: none.
 
 #### Vollkorn
 
-![Vollkorn](assets/vollkorn.png)
+![Vollkorn compared to Bembo (ET variant). The typeface is significantly larger and bolder; its vertical alignement is also a lot lower. When comparing an entire paragraph, those traits become obvious and offer a better design for reading on screens.](assets/vollkorn.png)
 
 Global info:
 
@@ -275,7 +275,7 @@ OpenType Features: small caps, numeric figure values, numeric spacing values (an
 
 #### Clear Sans
 
-![Clear Sans](assets/clear-sans.png)
+![Clear Sans compared to Trebuchet MS. The typeface appears a little bit smaller and the aperture of some glyphs like lowercase D appear more enclosed. When comparing an entire paragraph, it feels a little bit smaller but some letters like capital I are easier to differentiate, which is a plus for accessibility.](assets/clear-sans.png)
 
 Global info:
 
@@ -301,7 +301,7 @@ OpenType Features: none.
 
 #### Fira Sans
 
-![Fira Sans](assets/fira-sans.png)
+![Fira Sans compared to Arial. The typeface is decidedly more condensed, and its letter-spacing larger. When comparing an entire paragraph, the metrics of both fonts don’t look that much different, but Fira Sans brings the extra personality some users require in a bookish context.](assets/fira-sans.png)
 
 Global info:
 
@@ -327,7 +327,7 @@ OpenType Features: none.
 
 #### Libre Franklin
 
-![Libre Franklin](assets/libre-franklin.png)
+![Libre Franklin compared to San Fransisco, the Apple’s system typeface. Libre Franklin appears a little bit thinner and feels definitely larger. When comparing an entire paragraph, it shows, although it is capable of keeping the same amount of words on each line.](assets/libre-franklin.png)
 
 Global info:
 
@@ -353,7 +353,7 @@ OpenType Features: none.
 
 #### Merriweather Sans
 
-![Merriweather Sans](assets/merriweather-sans.png)
+![Merriweather Sans compared to San Fransisco, the Apple’s system typeface. It appears bolder and feels decidedly larger. This is remarkable when comparing an entire paragraph, especially as its design is less neutral.](assets/merriweather-sans.png)
 
 Global info:
 
@@ -379,7 +379,7 @@ OpenType Features: none.
 
 #### PT Sans
 
-![PT Sans](assets/pt-sans.png)
+![PT Sans compared to Seravek. The typeface appears more condensed. When comparing an entire paragraph, it also feels a little bit thinner but fits the same amount of words on each line and share some of Seravek’s traits.](assets/pt-sans.png)
 
 Global info:
 
@@ -405,7 +405,7 @@ OpenType Features: none.
 
 #### Source Sans Pro
 
-![Source Sans Pro](assets/source-sans-pro.png)
+![Source Sans Pro compared to Seravek. Its x-height is noticeably – but not remarkably – larger. When comparing an entire paragraph, both feel like they share some common traits, despite very visible differences in the drawing of their glyphs.](assets/source-sans-pro.png)
 
 Global info:
 

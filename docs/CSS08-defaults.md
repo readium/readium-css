@@ -182,7 +182,7 @@ In which, `--RS__lineHeightCompensation` is a factor whose default is `1`. Indee
 
 The results we could get for the vast majority of fonts can be described as good in terms of typographic color. Here is Iowan Old Style for instance.
 
-![Iowan Old Style dynamic leading](assets/dynamic-leading.jpg)
+![Comparison of the algorithm using four different font-sizes with the Iowan Old Style typeface. We can notice that the leading applied is solider as font-size increases, which results in a relatively even distribution of typographic color. This is confirmed by the computed values retrieved in the tool ReadiumCSS provides for testing.](assets/dynamic-leading.jpg)
 
 This isn’t a perfect solution though, and this algorithm may be revisited in the future.
 

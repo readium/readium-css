@@ -2,7 +2,7 @@
 
 [Implementers’ doc]
 
-Note: CSS variables **are not and won’t be supported in IE11.** You can either create a static stylesheet for all UA browsers or decide to leverage them in most UA browsers + use a JS fallback for IE11 if you want to support this browser – you can test for CSS variables support in JS.
+Note: CSS variables **are not and won’t be supported in IE11.** But this polyfill https://github.com/nuxodin/ie11CustomProperties retrofits CSS variables almost completely in IE11. If it does not work for you, you can either create a static stylesheet for all UA browsers or decide to leverage them in most UA browsers + use a JS fallback for IE11 if you want to support this browser – you can test for CSS variables support in JS.
 
 ## What are CSS variables?
 

@@ -1,7 +1,6 @@
 @import "../ReadiumCSS-config.css";
 @import "modules/ReadiumCSS-pagination-vertical.css";
 @import "modules/ReadiumCSS-scroll-vertical.css";
-@import "modules/ReadiumCSS-highlights.css";
 @import "modules/ReadiumCSS-night_mode.css";
 @import "modules/ReadiumCSS-sepia_mode.css";
 @import "modules/ReadiumCSS-os_a11y.css";
@@ -12,3 +11,4 @@
 @import "modules/user-settings-submodules/ReadiumCSS-lineHeight_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-paraSpacing-vertical_pref.css";
 @import "modules/ReadiumCSS-fs_normalize.css";
+@import "modules/ReadiumCSS-highlights.css";

@@ -24,11 +24,9 @@
 
 /* we don’t need to redeclare bg-color and color for :root since we will inherit and update from day/default mode */
 
-:root:--sepia-mode body {
-  background-color: var(--RS__backgroundColor);
-  /* Should be transparent but Chrome bug https://bugs.chromium.org/p/chromium/issues/detail?id=711955&q=mix-blend-mode&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified */
-
-  color: inherit;
+:root:--sepia-mode *:not(a) {
+  background-color: var(--RS__backgroundColor) !important;
+  color: inherit !important;
 }
 
 :root:--sepia-mode a:link,

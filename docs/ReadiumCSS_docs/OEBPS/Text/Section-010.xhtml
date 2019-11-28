@@ -17,7 +17,7 @@
 
     <p>While we recommend using system fonts to get the best performance whenever possible, implementers might want to use Open Source Fonts to offer more choice to users. On the Android platform, for instance, system fonts are limited to one typeface per generic family (<code>serif</code>, <code>sans-serif</code>, <code>fantasy</code>, <code>monospace</code>, and <code>cursive</code>), which means implementers don’t get a lot of options out of the box.</p>
 
-    <p>Consequently, amongst the thousands of fonts available online, a pre-selection of 27 typefaces have been reviewed extensively. Those typefaces were selected based on multiple factors:</p>
+    <p>Consequently, amongst the thousands of fonts available online, a pre-selection of 28 typefaces have been reviewed extensively. Those typefaces were selected based on multiple factors:</p>
 
     <ol>
       <li>they have enough styles (at least the 4 “core styles” i.e. <code>regular</code>, <code>italic</code>, <code>bold</code>, <code>bold italic</code>) so that implementers don’t break authors’ expectations;</li>
@@ -31,7 +31,7 @@
       <li>they offer good-enough support for at least latin-based languages.</li>
     </ol>
 
-    <p>Here’s the complete list of those 27 fonts:</p>
+    <p>Here’s the complete list of those 28 fonts:</p>
 
     <ul>
       <li>Alegreya</li>
@@ -66,6 +66,8 @@
 
       <li>Lora</li>
 
+      <li>Literata</li>
+
       <li>Merriweather Sans</li>
 
       <li>Merriweather Serif</li>
@@ -92,7 +94,7 @@
     <section id="how-were-those-fonts-reviewed" class="level2">
       <h2 id="sigil_toc_id_117">How were those fonts reviewed</h2>
 
-      <p>Each of the 27 fonts has been undergoing tests in real rendering situations.</p>
+      <p>Each of the 28 fonts has been undergoing tests in real rendering situations.</p>
 
       <p>They were rendered on the Android, iOS, MacOS, and Windows platforms, using SD and HD displays when possible, in multiple browsers (IE11, Edge, Safari, Chrome, Firefox), and in different reading modes (day, sepia, night).</p>
 
@@ -168,6 +170,8 @@
 
           <li>Gandhi Serif</li>
 
+          <li>Literata</li>
+
           <li>PT Sans</li>
 
           <li>PT Serif</li>
@@ -206,7 +210,7 @@
     <section id="recommended-typefaces" class="level2">
       <h2 id="sigil_toc_id_119">Recommended Typefaces</h2>
 
-      <p>An extended selection of 12 typefaces are recommended to offer implementers some flexibility. With an extended solution, it is likely that all apps leveraging Readium CSS won’t end up using the same exact selection.</p>
+      <p>An extended selection of 13 typefaces are recommended to offer implementers some flexibility. With an extended solution, it is likely that all apps leveraging Readium CSS won’t end up using the same exact selection.</p>
 
       <p><strong>Note: Supported Languages focus on diacritics. Support for languages using the latin alphabet, like English, is implied.</strong></p>
 
@@ -349,6 +353,52 @@
           <p>Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish.</p>
 
           <p>OpenType Features: none.</p>
+        </section>
+
+        <section id="literata" class="level4">
+          <h4 class="sigil_not_in_toc">Literata</h4>
+
+          <figure class="fullbleed">
+            <img src="../Images/literata.png" alt="Literata compared to Georgia. The typeface is noticeably larger and bolder. When comparing an entire paragraph, this become obvious in the sense fewer words fit on a line. This could become an advantage on larger screens, as the user won’t have to increase font-size."/>
+          </figure>
+
+          <p>Global info:</p>
+
+          <ul>
+            <li>Source: <a href="https://github.com/googlefonts/literata">https://github.com/googlefonts/literata</a></li>
+
+            <li>Google Fonts: YES</li>
+
+            <li>Design: TypeTogether</li>
+
+            <li>License: SIL-OFL</li>
+          </ul>
+
+          <p>Technical details:</p>
+
+          <ul>
+            <li>Reference: Georgia, Droid Serif</li>
+
+            <li>Classification: Modern, Slab</li>
+
+            <li>Styles: 8</li>
+
+            <li>Metrics: 
+
+            <ul>
+              <li>Contrast: TBD</li>
+
+              <li>x-height: TBD</li>
+
+              <li>weight: TBD</li>
+
+              <li>width: TBD</li>
+            </ul></li>
+          </ul>
+
+          <p>Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Cyrillic, Greek.</p>
+
+          <p>OpenType Features: small caps, numeric figure values, numeric spacing values.</p>
         </section>
 
         <section id="merriweather" class="level4">

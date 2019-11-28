@@ -8,7 +8,7 @@
     <dc:language>en</dc:language>
     <dc:identifier id="epub-id-1">urn:uuid:91cab77e-946f-4814-9e61-8494a5d5cb0f</dc:identifier>
     <meta name="cover" content="cover_jpg"/>
-    <meta property="dcterms:modified">2019-06-28T16:43:31Z</meta>
+    <meta property="dcterms:modified">2019-11-28T14:00:00Z</meta>
     <meta content="0.9.5" name="Sigil version"/>
     <meta property="schema:accessibilityFeature">displayTransformability</meta>
     <meta property="schema:accessibilityFeature">readingOrder</meta>
@@ -61,6 +61,7 @@
     <item href="Images/faustina.png" id="faustina.png" media-type="image/png"/>
     <item href="Images/fira-sans.png" id="fira-sans.png" media-type="image/png"/>
     <item href="Images/libre-franklin.png" id="libre-franklin.png" media-type="image/png"/>
+    <item href="Images/literata.png" id="literata.png" media-type="image/png"/>
     <item href="Images/merriweather-sans.png" id="merriweather-sans.png" media-type="image/png"/>
     <item href="Images/merriweather.png" id="merriweather.png" media-type="image/png"/>
     <item href="Images/plex-serif.png" id="plex-serif.png" media-type="image/png"/>

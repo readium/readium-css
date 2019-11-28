@@ -4,7 +4,7 @@
 
 While we recommend using system fonts to get the best performance whenever possible, implementers might want to use Open Source Fonts to offer more choice to users. On the Android platform, for instance, system fonts are limited to one typeface per generic family (`serif`, `sans-serif`, `fantasy`, `monospace`, and `cursive`), which means implementers don’t get a lot of options out of the box.
 
-Consequently, amongst the thousands of fonts available online, a pre-selection of 27 typefaces have been reviewed extensively. Those typefaces were selected based on multiple factors: 
+Consequently, amongst the thousands of fonts available online, a pre-selection of 28 typefaces have been reviewed extensively. Those typefaces were selected based on multiple factors: 
 
 1. they have enough styles (at least the 4 “core styles” i.e. `regular`, `italic`, `bold`, `bold italic`) so that implementers don’t break authors’ expectations;
 2. they can be used in body copy;
@@ -12,7 +12,7 @@ Consequently, amongst the thousands of fonts available online, a pre-selection o
 4. they can be free alternatives to system fonts available on other platforms;
 5. they offer good-enough support for at least latin-based languages.
 
-Here’s the complete list of those 27 fonts:
+Here’s the complete list of those 28 fonts:
 
 - Alegreya
 - Bitter
@@ -29,6 +29,7 @@ Here’s the complete list of those 27 fonts:
 - IBM Plex Sans
 - IBM Plex Serif
 - Libre Franklin
+- Literata
 - Lora
 - Merriweather Sans
 - Merriweather Serif
@@ -44,7 +45,7 @@ Here’s the complete list of those 27 fonts:
 
 ## How were those fonts reviewed
 
-Each of the 27 fonts has been undergoing tests in real rendering situations. 
+Each of the 28 fonts has been undergoing tests in real rendering situations. 
 
 They were rendered on the Android, iOS, MacOS, and Windows platforms, using SD and HD displays when possible, in multiple browsers (IE11, Edge, Safari, Chrome, Firefox), and in different reading modes (day, sepia, night).
 
@@ -90,6 +91,7 @@ For your information, here are the results for Windows ClearType rendering at `1
 - Bitter (the Google Fonts version was reviewed but the [FontSquirrel version is more complete](https://www.fontsquirrel.com/fonts/bitter))
 - Charis SIL
 - Gandhi Serif
+- Literata
 - PT Sans
 - PT Serif
 - Rubik
@@ -109,7 +111,7 @@ For your information, here are the results for Windows ClearType rendering at `1
 
 ## Recommended Typefaces
 
-An extended selection of 12 typefaces are recommended to offer implementers some flexibility. With an extended solution, it is likely that all apps leveraging Readium CSS won’t end up using the same exact selection.
+An extended selection of 13 typefaces are recommended to offer implementers some flexibility. With an extended solution, it is likely that all apps leveraging Readium CSS won’t end up using the same exact selection.
 
 **Note: Supported Languages focus on diacritics. Support for languages using the latin alphabet, like English, is implied.**
 
@@ -192,6 +194,32 @@ Technical details:
 Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish.
 
 OpenType Features: none.
+
+#### Literata
+
+![Literata compared to Georgia. The typeface is noticeably larger and bolder. When comparing an entire paragraph, this become obvious in the sense fewer words fit on a line. This could become an advantage on larger screens, as the user won’t have to increase font-size.](assets/literata.png)
+
+Global info:
+
+- Source: https://github.com/googlefonts/literata
+- Google Fonts: YES
+- Design: TypeTogether
+- License: SIL-OFL
+
+Technical details:
+
+- Reference: Georgia, Droid Serif
+- Classification: Modern, Slab
+- Styles: 8
+- Metrics: 
+    - Contrast: TBD
+    - x-height: TBD
+    - weight: TBD
+    - width: TBD
+
+Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Cyrillic, Greek.
+
+OpenType Features: small caps, numeric figure values, numeric spacing values.
 
 #### Merriweather
 

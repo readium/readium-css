@@ -217,38 +217,6 @@ body {
 }
 
 /* Readium CSS 
-   Default highlights
-
-   A stylesheet for user highlights
-
-   Repo: https://github.com/readium/readium-css */
-
-/* User Highlights */
-
-.readiumCSS-yellow-highlight {
-  background-color: rgba(255, 255, 0, 0.5);
-}
-
-.readiumCSS-green-highlight {
-  background-color: rgba(0, 255, 0, 0.5);
-}
-
-.readiumCSS-orange-highlight {
-  background-color: rgba(255, 165, 0, 0.5);
-}
-
-.readiumCSS-pink-highlight {
-  background-color: rgba(255, 105, 180, 0.5);
-}
-
-/* Media overlays */
-
-.readiumCSS-mo-active-default {
-  color: black !important;
-  background-color: yellow !important;
-}
-
-/* Readium CSS 
    Night mode
 
    A preset theme for night mode
@@ -275,7 +243,7 @@ body {
 
 :root[style*="readium-night-on"] *:not(a) {
   color: inherit !important;
-  background-color: transparent !important;
+  background-color: var(--RS__backgroundColor) !important;
   border-color: currentColor !important;
 }
 
@@ -346,11 +314,9 @@ body {
 
 /* we don’t need to redeclare bg-color and color for :root since we will inherit and update from day/default mode */
 
-:root[style*="readium-sepia-on"] body {
-  /* Should be transparent but Chrome bug https://bugs.chromium.org/p/chromium/issues/detail?id=711955&q=mix-blend-mode&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified */
-
-  color: inherit;
-  background-color: var(--RS__backgroundColor);
+:root[style*="readium-sepia-on"] *:not(a) {
+  color: inherit !important;
+  background-color: var(--RS__backgroundColor) !important;
 }
 
 :root[style*="readium-sepia-on"] a:link,
@@ -893,5 +859,45 @@ body {
 
 :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3 {
   font-size: calc(1rem * var(--USER__typeScale)) !important;
+}
+
+/* Readium CSS 
+   Default highlights
+
+   A stylesheet for user highlights
+
+   Repo: https://github.com/readium/readium-css */
+
+/* User Highlights */
+
+.readiumCSS-yellow-highlight,
+:root[style*="readium-sepia-on"] .readiumCSS-yellow-highlight,
+:root[style*="readium-night-on"] .readiumCSS-yellow-highlight {
+  background-color: rgba(255, 255, 0, 0.5) !important;
+}
+
+.readiumCSS-green-highlight,
+:root[style*="readium-sepia-on"] .readiumCSS-green-highlight,
+:root[style*="readium-night-on"] .readiumCSS-green-highlight {
+  background-color: rgba(0, 255, 0, 0.5) !important;
+}
+
+.readiumCSS-orange-highlight,
+:root[style*="readium-sepia-on"] .readiumCSS-orange-highlight,
+:root[style*="readium-night-on"] .readiumCSS-orange-highlight {
+  background-color: rgba(255, 165, 0, 0.5) !important;
+}
+
+.readiumCSS-pink-highlight,
+:root[style*="readium-sepia-on"] .readiumCSS-pink-highlight,
+:root[style*="readium-night-on"] .readiumCSS-pink-highlight {
+  background-color: rgba(255, 105, 180, 0.5) !important;
+}
+
+/* Media overlays */
+
+.readiumCSS-mo-active-default {
+  color: black !important;
+  background-color: yellow !important;
 }
 /*# sourceMappingURL=ReadiumCSS-after.css.map */

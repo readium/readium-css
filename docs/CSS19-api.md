@@ -2,6 +2,8 @@
 
 [Implementers’ doc]
 
+This document is meant to list all the customizable medias and flags (to be found in `ReadiumCSS-config.css`), as well as all the CSS variables for Reading System and User styles available in the `dist` stylesheets.
+
 As a reminder, the priority is, in general: 
 
 ```
@@ -29,6 +31,8 @@ root.style.removeProperty("--USER__var");
 ```
 
 ## Customizable medias
+
+You will find those customizable medias in `ReadiumCSS-config.css`. The values defined are used in media queries to control use of the auto pagination model.
 
 * * *
 
@@ -66,9 +70,23 @@ The maximum device width of the mobile device for which the auto pagination mode
 
 ## Customizable flags
 
-Those custom selectors can be customized before runtime. Check the [“Quickstart” doc](../docs/CSS02-quickstart.md) for further details.
+You will find those customizable flags in `ReadiumCSS-config.css`, and can think of the preset values as boolean inline styles: if they are set on the `:root` element (i.e. `html`) then the flag is enabled. If another value is, or they are removed, then the flag is disabled.
 
-The “dummy CSS variable” is a recommended CSS custom property name you can use to set the default value if you don’t customize those selectors and just keep the default.
+Those custom selectors can only be customized before runtime. You could for example use a class or a custom attribute instead of an inline style. Check the [“User Preferences”](../docs/CSS12-user_prefs.md#flags) and [“Quickstart”](../docs/CSS02-quickstart.md) docs for further details.
+
+**Note:** The preset is not a default implementers should use. Indeed, the initialization of those flags depends on your user settings’ management e.g. apply user settings to all EPUBs, only the ones that have already been customized, etc.
+
+* * * 
+
+```
+:--paged-view
+```
+
+Preset: `--USER__view: readium-paged-on`
+
+Scope: `html`
+
+Override class: Chrome (should be applied by any means necessary)
 
 * * * 
 
@@ -76,11 +94,9 @@ The “dummy CSS variable” is a recommended CSS custom property name you can u
 :--scroll-view
 ```
 
-Default is `readium-scroll-on`
+Preset: `--USER__view: readium-scroll-on`
 
 Scope: `html`
-
-Dummy CSS variable: `--USER__view`
 
 Override class: Chrome (should be applied by any means necessary)
 
@@ -90,11 +106,9 @@ Override class: Chrome (should be applied by any means necessary)
 :--font-override
 ```
 
-Default is `readium-font-on`
+Preset: `--USER__fontOverride: readium-font-on`
 
 Scope: `html`
-
-Dummy CSS variable: `--USER__fontOverride`
 
 Override class: None. This flag is required to change the `font-family` user setting.
 
@@ -104,11 +118,9 @@ Override class: None. This flag is required to change the `font-family` user set
 :--advanced-settings
 ```
 
-Default is `readium-advanced-on`
+Preset: `--USER__advancedSettings: readium-advanced-on`
 
 Scope: `html`
-
-Dummy CSS variable: `--USER__advancedSettings`
 
 Override class: None. This flag is required to apply the `font-family`, the `font-size` and/or advanced user settings.
 
@@ -118,11 +130,9 @@ Override class: None. This flag is required to apply the `font-family`, the `fon
 :--sepia-mode
 ```
 
-Default is `readium-sepia-on`
+Preset: `--USER__appearance: readium-sepia-on`
 
 Scope: `html`
-
-Dummy CSS variable: `--USER__appearance`
 
 Override class: Chrome (should be applied by any means necessary)
 
@@ -134,11 +144,9 @@ This flag applies the sepia reading mode.
 :--night-mode
 ```
 
-Default is `readium-night-on`
+Preset: `--USER__appearance: readium-night-on`
 
 Scope: `html`
-
-Dummy CSS variable: `--USER__appearance`
 
 Override class: Chrome (should be applied by any means necessary)
 
@@ -150,11 +158,9 @@ This flag applies the night reading mode.
 :--darken-filter
 ```
 
-Default is `readium-darken-on`
+Preset: `--USER__darkenImages: readium-darken-on`
 
 Scope: `html`
-
-Dummy CSS variable: `--USER__darkenImages`
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
@@ -166,11 +172,9 @@ This will only apply in night mode to darken images and impact `img`.
 :--invert-filter
 ```
 
-Default is `readium-invert-on`
+Preset: `--USER__invertImages: readium-invert-on`
 
 Scope: `html`
-
-Dummy CSS variable: `--USER__invertImages`
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
@@ -182,11 +186,9 @@ This will only apply in night mode to invert images and impact `img`.
 :--a11y-normalize
 ```
 
-Default is `readium-a11y-on`
+Preset: `--USER__a11yNormalize: readium-a11y-on`
 
 Scope: `html`
-
-Dummy CSS variable: `--USER__a11yNormalize`
 
 Required flag: `:--fontOverride`
 

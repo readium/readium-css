@@ -50,7 +50,8 @@
         <section id="setting" class="level4">
           <h4 class="sigil_not_in_toc">Setting</h4>
 
-          <pre><code>var root = document.documentElement; root.style.setProperty("name of var", "value");</code></pre>
+          <pre><code>var root = document.documentElement; 
+root.style.setProperty("name of var", "value");</code></pre>
 
           <p>You don’t need to remove the variable before setting another value, the new value will simply override the existing one.</p>
         </section>
@@ -58,7 +59,17 @@
         <section id="removing" class="level4">
           <h4 class="sigil_not_in_toc">Removing</h4>
 
-          <pre><code>var root = document.documentElement; root.style.removeProperty("name of var");</code></pre>
+		  <p>You can either remove the style explicitly with <code>removeProperty()</code>:</p>
+
+          <pre><code>var root = document.documentElement; 
+root.style.removeProperty("name of var");</code></pre>
+
+		  <p>Or implicitly by using an empty string as a value with <code>setProperty()</code>:</p>
+
+          <pre><code>var root = document.documentElement; 
+root.style.setProperty("name of var", "");</code></pre>
+
+		  <p>Setting a property with an empty string as the value will indeed invoke <code>removeProperty()</code>, as defined in the <a href="https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-setproperty">CSS Object Model Spec</a>.</p>
         </section>
       </section>
     </section>
@@ -68,6 +79,8 @@
 
       <p>Some variables behave like flags. You could also use custom <code>data-*</code> attributes or CSS classes to manage the following ones. See the <a href="../Text/Section-002.xhtml">“Quickstart” doc</a> for customization.</p>
 
+	  <p>By default, those flags are not set. Then their initialization depends on your user settings’ management e.g. apply user settings to all EPUBs, only the ones that have already been customized, etc.</p>
+
       <section id="user-view" class="level3">
         <h3 class="sigil_not_in_toc">User view</h3>
 
@@ -75,9 +88,11 @@
 
         <pre><code>--USER__view</code></pre>
 
-        <p>Possible values: <code>readium-paged-on</code> | <code>readium-scroll-on</code></p>
+        <p>Supported values: <code>readium-paged-on</code> | <code>readium-scroll-on</code></p>
 
         <p>Override class: Chrome (should be applied by any means necessary)</p>
+
+		<p>If the flag is not set, ReadiumCSS will fall back to the paged view.</p>
       </section>
 
       <section id="font-family-override" class="level3">
@@ -87,11 +102,11 @@
 
         <pre><code>--USER__fontOverride</code></pre>
 
-        <p>Possible values: <code>readium-font-on</code> | <code>readium-font-off</code></p>
+        <p>Supported value: <code>readium-font-on</code></p>
 
         <p>Override class: None. This flag is required to change the <code>font-family</code> user setting.</p>
 
-        <p>To switch back to the publisher’s font, you can either change the value to <code>readium-font-off</code> or remove the flag.</p>
+        <p>To switch back to the publisher’s font, you can either set an empty string as a value or remove the property.</p>
       </section>
 
       <section id="advanced-settings" class="level3">
@@ -103,11 +118,11 @@
 
         <pre><code>--USER__advancedSettings</code></pre>
 
-        <p>Possible values: <code>readium-advanced-on</code> | <code>readium-advanced-off</code></p>
+        <p>Supported value: <code>readium-advanced-on</code></p>
 
         <p>Override class: None. This flag is required to apply the <code>font-family</code>, the <code>font-size</code> and/or advanced user settings.</p>
 
-        <p>To switch back to the publisher’s styles, you can either change the value to <code>readium-advanced-off</code> or remove it. This will disable all advanced settings requiring the flag.</p>
+        <p>To switch back to the publisher’s styles, you can either set an empty string as a value or remove the property. This will disable all advanced settings requiring the flag.</p>
       </section>
 
       <section id="reading-modes" class="level3">
@@ -117,9 +132,11 @@
 
         <pre><code>--USER__appearance</code></pre>
 
-        <p>Possible values: <code>readium-day-on</code> | <code>readium-sepia-on</code> | <code>readium-night-on</code></p>
+        <p>Supported values: <code>readium-day-on</code> | <code>readium-sepia-on</code> | <code>readium-night-on</code></p>
 
         <p>Override class: Chrome (should be applied by any means necessary)</p>
+
+		<p>If the flag is not set, ReadiumCSS will fall back to the day mode.</p>
       </section>
 
       <section id="filters" class="level3">
@@ -129,15 +146,19 @@
 
         <pre><code>--USER__darkenFilter</code></pre>
 
-        <p>Possible values: <code>readium-darken-on</code> | <code>readium-darken-off</code></p>
+        <p>Supported value: <code>readium-darken-on</code></p>
 
         <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+		<p>To disable the filter, you can either set an empty string as a value or remove the property.</p>
 
         <pre><code>--USER__invertFilter</code></pre>
 
-        <p>Possible values: <code>readium-invert-on</code> | <code>readium-invert-off</code></p>
+        <p>Supported value: <code>readium-invert-on</code></p>
 
         <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+		<p>To disable the filter, you can either set an empty string as a value or remove the property.</p>
       </section>
 
       <section id="accessibility-normalization" class="level3">
@@ -147,11 +168,13 @@
 
         <pre><code>--USER__a11yNormalize</code></pre>
 
-        <p>Possible values: <code>readium-a11y-on</code> | <code>readium-a11y-off</code></p>
+        <p>Supported value: <code>readium-a11y-on</code></p>
 
         <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
 
         <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+		<p>To disable the normalization, you can either set an empty string as a value or remove the property.</p>
       </section>
     </section>
 

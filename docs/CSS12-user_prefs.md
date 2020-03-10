@@ -37,15 +37,29 @@ You don’t need to remove the variable before setting another value, the new va
 
 #### Removing
 
+You can either remove the style explicitly with `removeProperty()`:
+
 ```
 var root = document.documentElement; 
 
 root.style.removeProperty("name of var");
 ```
 
+Or implicitly by using an empty string as a value with `setProperty()`:
+
+```
+var root = document.documentElement; 
+
+root.style.setProperty("name of var", "");
+```
+
+Setting a property with an empty string as the value will indeed invoke `removeProperty()`, as defined in the [CSS Object Model Spec](https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-setproperty).
+
 ## Flags
 
 Some variables behave like flags. You could also use custom `data-*` attributes or CSS classes to manage the following ones. See the [“Quickstart” doc](../docs/CSS02-quickstart.md) for customization.
+
+By default, those flags are not set. Then their initialization depends on your user settings’ management e.g. apply user settings to all EPUBs, only the ones that have already been customized, etc.
 
 ### User view
 
@@ -55,9 +69,11 @@ Allows to switch between paged and scroll view.
 --USER__view
 ```
 
-Possible values: `readium-paged-on` | `readium-scroll-on`
+Supported values: `readium-paged-on` | `readium-scroll-on`
 
 Override class: Chrome (should be applied by any means necessary)
+
+If the flag is not set, ReadiumCSS will fall back to the paged view.
 
 ### Font Family override
 
@@ -67,11 +83,11 @@ Acts as an explicit switch to override the publisher’s `font-family`.
 --USER__fontOverride
 ```
 
-Possible values: `readium-font-on` | `readium-font-off`
+Supported value: `readium-font-on`
 
 Override class: None. This flag is required to change the `font-family` user setting.
 
-To switch back to the publisher’s font, you can either change the value to `readium-font-off` or remove the flag.
+To switch back to the publisher’s font, you can either set an empty string as a value or remove the property.
 
 ### Advanced Settings
 
@@ -83,11 +99,11 @@ If you provide users with a “Publisher’s styles” toggle, it must be enable
 --USER__advancedSettings
 ``` 
 
-Possible values: `readium-advanced-on` | `readium-advanced-off`
+Supported value: `readium-advanced-on`
 
 Override class: None. This flag is required to apply the `font-family`, the `font-size` and/or advanced user settings.
 
-To switch back to the publisher’s styles, you can either change the value to `readium-advanced-off` or remove it. This will disable all advanced settings requiring the flag.
+To switch back to the publisher’s styles, you can either set an empty string as a value or remove the property. This will disable all advanced settings requiring the flag.
 
 ### Reading Modes
 
@@ -97,9 +113,11 @@ We currently have two reading modes for night and sepia.
 --USER__appearance
 ```
 
-Possible values: `readium-day-on` | `readium-sepia-on` | `readium-night-on`
+Supported values: `readium-day-on` | `readium-sepia-on` | `readium-night-on`
 
 Override class: Chrome (should be applied by any means necessary)
+
+If the flag is not set, ReadiumCSS will fall back to the day mode.
 
 ### Filters
 
@@ -109,17 +127,21 @@ Please note night mode provides two extra specific variables:
 --USER__darkenFilter
 ```
 
-Possible values: `readium-darken-on` | `readium-darken-off`
+Supported value: `readium-darken-on`
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+To disable the filter, you can either set an empty string as a value or remove the property.
 
 ```
 --USER__invertFilter
 ```
 
-Possible values: `readium-invert-on` | `readium-invert-off`
+Supported value: `readium-invert-on`
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+To disable the filter, you can either set an empty string as a value or remove the property.
 
 ### Accessibility Normalization
 
@@ -129,11 +151,13 @@ Users may want to normalize text (no bold, no italics, etc.) for accessibility r
 --USER__a11yNormalize
 ```
 
-Possible values: `readium-a11y-on` | `readium-a11y-off`
+Supported value: `readium-a11y-on`
 
 Required flag: `--USER__fontOverride: readium-font-on`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+To disable the normalization, you can either set an empty string as a value or remove the property.
 
 ## List of variables 
 

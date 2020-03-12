@@ -1,4 +1,4 @@
-/* Readium CSS 
+/* Readium CSS
    Scroll module
 
    A set of styles to scroll ePublications
@@ -14,13 +14,13 @@
   min-height: 0 !important;
   height: auto !important;
   max-height: none !important;
-  
+
   /* Reset columns, auto + auto = columns can’t be created */
   -webkit-columns: auto auto !important;
   -moz-columns: auto auto !important;
-  columns: auto auto !important;  
+  columns: auto auto !important;
 }
-  
+
 /* Make sure line-length is limited in all configs */
 :root:--scroll-view body {
   --RS__maxLineLength: 40rem !important;

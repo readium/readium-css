@@ -39,7 +39,7 @@
 
 /* Direction i.e. ltr and rtl */
 
-/* Readium CSS 
+/* Readium CSS
    Pagination module
 
    A set of styles to paginate ePublications
@@ -79,7 +79,7 @@
 }
 
 /* :root selector has same specificity as a class i.e. 0010
-   We might have to change that to html / context 
+   We might have to change that to html / context
    -> https://css-tricks.com/almanac/selectors/r/root/ */
 
 :root {
@@ -187,7 +187,7 @@ body {
   }
 }
 
-/* Readium CSS 
+/* Readium CSS
    Scroll module
 
    A set of styles to scroll ePublications
@@ -196,7 +196,7 @@ body {
    Repo: https://github.com/readium/readium-css */
 
 :root[style*="readium-scroll-on"] {
-  
+
   /* Reset columns, auto + auto = columns can’t be created */
   -webkit-columns: auto auto !important;
   -moz-columns: auto auto !important;
@@ -207,7 +207,7 @@ body {
   max-height: none !important;
   /* Reset html size so that the user can scroll */
   min-width: 0 !important;
-  min-height: 0 !important;  
+  min-height: 0 !important;
 }
 
 /* Make sure line-length is limited in all configs */
@@ -216,7 +216,7 @@ body {
   --RS__maxLineLength: 40rem !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Night mode
 
    A preset theme for night mode
@@ -289,7 +289,7 @@ body {
   filter: brightness(80%) invert(100%);
 }
 
-/* Readium CSS 
+/* Readium CSS
    Sepia mode
 
    A preset theme for sepia mode
@@ -336,7 +336,7 @@ body {
   mix-blend-mode: multiply;
 }
 
-/* Readium CSS 
+/* Readium CSS
    OS Accessibility Modes
 
    A stylesheet to deal with OS accessibility settings
@@ -413,7 +413,7 @@ body {
   /* If reduced motion is set on MacOS, in case we have animation/transition */
 }
 
-/* Readium CSS 
+/* Readium CSS
    Columns number pref
 
    A submodule managing columns number for user settings
@@ -451,7 +451,7 @@ body {
   }
 }
 
-/* Readium CSS 
+/* Readium CSS
    Page margins pref
 
    A submodule managing page margins for user settings
@@ -465,7 +465,7 @@ body {
   padding: 0 calc(var(--RS__pageGutter) * var(--USER__pageMargins)) !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Custom colors pref
 
    A submodule managing custom colors for user settings
@@ -489,7 +489,7 @@ body {
   color: inherit !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Text align pref
 
    A submodule managing text-align for user settings
@@ -526,7 +526,7 @@ body {
   text-align: right;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Hyphenation pref
 
    A submodule managing hyphens for user settings
@@ -580,7 +580,7 @@ body {
   hyphens: inherit;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Font Family pref
 
    A submodule managing font-family for user settings
@@ -616,7 +616,7 @@ body {
   font-family: inherit !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    A11y font pref
 
    A submodule managing a11y text normalization for user settings
@@ -683,7 +683,7 @@ body {
   vertical-align: baseline !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Font size pref
 
    A submodule managing font-size for user settings
@@ -695,7 +695,7 @@ body {
   font-size: var(--USER__fontSize) !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Line height pref
 
    A submodule managing line-height for user settings
@@ -714,7 +714,7 @@ body {
   line-height: inherit;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Para spacing pref
 
    A submodule managing paragraphs’ top and bottom margins for user settings
@@ -727,7 +727,7 @@ body {
   margin-bottom: var(--USER__paraSpacing) !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Para indent pref
 
    A submodule managing paragraphs’ text-indent for user settings
@@ -746,7 +746,7 @@ body {
   text-indent: 0 !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Word spacing pref
 
    A submodule managing word-spacing for user settings
@@ -766,7 +766,7 @@ body {
   word-spacing: var(--USER__wordSpacing);
 }
 
-/* Readium CSS 
+/* Readium CSS
    Letter spacing pref
 
    A submodule managing letter-spacing for user settings
@@ -787,7 +787,7 @@ body {
   font-variant: none;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Font size normalize
 
    A stylesheet to normalize font-size
@@ -846,7 +846,7 @@ body {
   font-size: 67.5% !important;
 }
 
-/* The following styles kick in if you define the typeScale variable in the DOM. 
+/* The following styles kick in if you define the typeScale variable in the DOM.
    No need to repeat declarations which don’t make use of the variable */
 
 :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h1 {
@@ -861,7 +861,7 @@ body {
   font-size: calc(1rem * var(--USER__typeScale)) !important;
 }
 
-/* Readium CSS 
+/* Readium CSS
    Default highlights
 
    A stylesheet for user highlights

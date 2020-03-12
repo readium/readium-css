@@ -1,4 +1,4 @@
-/* Readium CSS 
+/* Readium CSS
    EBPAJ Fonts Patch module
 
    A stylesheet improving EBPAJ @font-face declarations to cover all platforms
@@ -6,17 +6,17 @@
    Repo: https://github.com/readium/readium-css */
 
 /* EBPAJ template only references fonts from MS Windows…
-   so we must reference fonts from other platforms 
+   so we must reference fonts from other platforms
    and override authors’ stylesheets.
    What we do there is keeping their default value and providing fallbacks.
-   
+
    /!\ /!\ /!\ /!\ /!\
    FYI, you might want to load this polyfill only if you find
    one of the following metadata items in the OPF package:
-   - version 1: 
+   - version 1:
      <dc:description id="ebpaj-guide">ebpaj-guide-1.0</dc:description>
-   - version 1.1: 
-     <meta property="ebpaj:guide-version">1.1</meta> 
+   - version 1.1:
+     <meta property="ebpaj:guide-version">1.1</meta>
 */
 
 /* 横組み用 (horizontal writing) */

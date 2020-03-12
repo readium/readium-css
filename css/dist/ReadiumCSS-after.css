@@ -503,6 +503,7 @@ body {
 
 :root[style*="readium-advanced-on"][style*="--USER__textAlign"] body,
 :root[style*="readium-advanced-on"][style*="--USER__textAlign"] *:not(blockquote):not(figcaption) p,
+ 
 :root[style*="readium-advanced-on"][style*="--USER__textAlign"] li {
   text-align: inherit !important;
   -moz-text-align-last: auto !important;
@@ -513,8 +514,10 @@ body {
 /* In case something goes wrong at the programmatic level + rtl for body + rtl in ltr */
 
 :root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign: left"],
+ 
 :root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign:left"],
 :root[style*="readium-advanced-on"][style*="--USER__textAlign: left"] *[dir="rtl"],
+ 
 :root[style*="readium-advanced-on"][style*="--USER__textAlign:left"] *[dir="rtl"] {
   text-align: right;
 }
@@ -522,6 +525,7 @@ body {
 /* Edge, if logical value is used, think of it as a polyfill. For LTR, it will fall back to the default, which is left */
 
 :root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign: start"],
+ 
 :root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign:start"] {
   text-align: right;
 }

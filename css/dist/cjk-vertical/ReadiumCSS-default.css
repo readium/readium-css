@@ -54,8 +54,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Flow content */
 
-blockquote, figure, p, pre,
-aside, footer, form, hr {
+blockquote,
+figure,
+p,
+pre,
+aside,
+footer,
+form,
+hr {
   margin-right: var(--RS__flowSpacing);
   margin-left: var(--RS__flowSpacing);
 }

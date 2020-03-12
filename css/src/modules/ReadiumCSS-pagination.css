@@ -7,9 +7,9 @@
 
 /* Config */
 
-/* Columns are responsive by default, even if column-width is set in pixels, 
+/* Columns are responsive by default, even if column-width is set in pixels,
    which means two-page spread will switch to single page depending on current font-size.
-   If you want more control, I’m afraid you’ll have to update colWidth/colGap dynamically, 
+   If you want more control, I’m afraid you’ll have to update colWidth/colGap dynamically,
    which is how a significant amount of RS do at the moment. */
 
 /* Default for smartphone portrait (small screens) */

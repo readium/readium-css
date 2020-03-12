@@ -68,7 +68,7 @@ hr {
 
 p {
   margin-top: var(--RS__paraSpacing);
-  margin-bottom: var(--RS__paraSpacing); 
+  margin-bottom: var(--RS__paraSpacing);
   text-indent: var(--RS__paraIndent);
 }
 

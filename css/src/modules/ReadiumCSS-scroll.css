@@ -23,5 +23,5 @@
   
 /* Make sure line-length is limited in all configs */
 :root:--scroll-view body {
-  --RS__maxLineLength: 40rem !important; 
+  --RS__maxLineLength: 40rem !important;
 }

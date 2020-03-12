@@ -320,9 +320,9 @@ math {
     url("fonts/iAWriterDuospace-Regular.ttf") format("truetype");
 }
 
-/* If you have different weights/styles, 
-   use `font-weight` and `font-style`, 
-   not prefixes in the font-family name, 
+/* If you have different weights/styles,
+   use `font-weight` and `font-style`,
+   not prefixes in the font-family name,
    or else it will be a nightmare to manage in user settings. */
 
 /* Readium CSS 
@@ -492,7 +492,7 @@ dd {
 
 :lang(ja) dd,
 :lang(zh-Hant) dd,
-:lang(zh-TW) dd, 
+:lang(zh-TW) dd,
 :lang(mn) dd {
   margin-top: 5%;  
 }

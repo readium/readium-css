@@ -24,7 +24,7 @@ hr, caption {
   break-after: avoid;
 }
 
-h1, h2, h3, h4, h5, h6, dt, 
+h1, h2, h3, h4, h5, h6, dt,
 figure, tr {
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
@@ -179,7 +179,7 @@ ruby > rt, ruby > rp {
 *:lang(ja),
 *:lang(zh),
 *:lang(ko),
-:lang(ja) cite, :lang(ja) dfn, :lang(ja) em, :lang(ja) i,  
+:lang(ja) cite, :lang(ja) dfn, :lang(ja) em, :lang(ja) i,
 :lang(zh) cite, :lang(zh) dfn, :lang(zh) em, :lang(zh) i,
 :lang(ko) cite, :lang(ko) dfn, :lang(ko) em, :lang(ko) i {
   font-style: normal;

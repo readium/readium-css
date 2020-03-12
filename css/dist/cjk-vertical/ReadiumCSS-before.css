@@ -336,7 +336,6 @@ h4,
 h5,
 h6,
 dt,
- 
 figure,
 tr {
   -webkit-column-break-inside: avoid;
@@ -508,7 +507,6 @@ ruby > rt, ruby > rp {
 :lang(ja) dfn,
 :lang(ja) em,
 :lang(ja) i,
-  
 :lang(zh) cite,
 :lang(zh) dfn,
 :lang(zh) em,

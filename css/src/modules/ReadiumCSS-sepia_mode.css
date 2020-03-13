@@ -25,7 +25,7 @@
 /* we don’t need to redeclare bg-color and color for :root since we will inherit and update from day/default mode */
 
 :root:--sepia-mode *:not(a) {
-  background-color: var(--RS__backgroundColor) !important;
+  background-color: transparent !important;
   color: inherit !important;
 }
 

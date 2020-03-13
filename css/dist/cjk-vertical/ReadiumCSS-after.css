@@ -256,7 +256,7 @@ body {
 
 :root[style*="readium-night-on"] *:not(a) {
   color: inherit !important;
-  background-color: var(--RS__backgroundColor) !important;
+  background-color: transparent !important;
   border-color: currentColor !important;
 }
 
@@ -329,7 +329,7 @@ body {
 
 :root[style*="readium-sepia-on"] *:not(a) {
   color: inherit !important;
-  background-color: var(--RS__backgroundColor) !important;
+  background-color: transparent !important;
 }
 
 :root[style*="readium-sepia-on"] a:link,

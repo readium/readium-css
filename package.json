@@ -26,6 +26,7 @@
   "main": "css/ReadiumCSS-config.css",
   "devDependencies": {
     "backstopjs": "^4.5.0",
+    "express": "^4.17.1",
     "postcss-alter-property-value": "^1.1.3",
     "postcss-cli": "^7.1.0",
     "postcss-css-variables": "^0.14.0",
@@ -42,8 +43,9 @@
     "build:rtl": "postcss css/src/ReadiumCSS-before-rtl.css -o css/dist/rtl/ReadiumCSS-before.css && postcss css/src/ReadiumCSS-default-rtl.css -o css/dist/rtl/ReadiumCSS-default.css && postcss css/src/ReadiumCSS-after-rtl.css -o css/dist/rtl/ReadiumCSS-after.css",
     "build:cjk": "postcss css/src/ReadiumCSS-before-cjk-horizontal.css -o css/dist/cjk-horizontal/ReadiumCSS-before.css && postcss css/src/ReadiumCSS-default-cjk-horizontal.css -o css/dist/cjk-horizontal/ReadiumCSS-default.css && postcss css/src/ReadiumCSS-after-cjk-horizontal.css -o css/dist/cjk-horizontal/ReadiumCSS-after.css",
     "build:vertical": "postcss css/src/ReadiumCSS-before-cjk-vertical.css -o css/dist/cjk-vertical/ReadiumCSS-before.css && postcss css/src/ReadiumCSS-default-cjk-vertical.css -o css/dist/cjk-vertical/ReadiumCSS-default.css && postcss css/src/ReadiumCSS-after-cjk-vertical.css -o css/dist/cjk-vertical/ReadiumCSS-after.css",
-    "test": "backstop test",
-    "test:ref": "backstop reference",
+    "start": "node \"./server.js\"",
+    "test": "npm start & backstop test && pkill -9 -f \"node ./server.js\" && echo '\nVisual Regression testing has been completed.\n'",
+    "test:ref": "npm start & backstop reference && pkill -9 -f \"node ./server.js\" && echo '\nVisual Regression references have been generated.\n'",
     "test:approve": "backstop approve"
   }
 }

@@ -1,4 +1,4 @@
-/* Readium CSS 
+/* Readium CSS
    HTML5 SR Patch stylesheet
 
    A set of style to adjust HTML5 Suggested Rendering to paginated content
@@ -24,7 +24,7 @@ hr, caption {
   break-after: avoid;
 }
 
-h1, h2, h3, h4, h5, h6, dt, 
+h1, h2, h3, h4, h5, h6, dt,
 figure, tr {
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
@@ -107,13 +107,13 @@ figure, blockquote {
   margin: 1em 5%;
 }
 
-/* 
+/*
 
 :lang(ja) figure, :lang(ja) blockquote,
 :lang(zh-Hant) figure, :lang(zh-Hant) blockquote,
 :lang(zh-TW) figure, :lang(zh-TW) blockquote,
 :lang(mn) figure, :lang(mn) blockquote {
-  margin: 5% 1em;  
+  margin: 5% 1em;
 }
 
 */
@@ -122,13 +122,13 @@ ul, ol {
   padding-left: 5%;
 }
 
-/* 
+/*
 
 :lang(ja) ul, :lang(ja) ol,
 :lang(zh-Hant) ul, :lang(zh-Hant) ol,
 :lang(zh-TW) ul, :lang(zh-TW) ol,
 :lang(mn) ul, :lang(mn) ol   {
-  padding-top: 5%;  
+  padding-top: 5%;
 }
 
 */
@@ -137,13 +137,13 @@ dd {
   margin-left: 5%;
 }
 
-/* 
+/*
 
 :lang(ja) dd,
 :lang(zh-Hant) dd,
-:lang(zh-TW) dd, 
+:lang(zh-TW) dd,
 :lang(mn) dd {
-  margin-top: 5%;  
+  margin-top: 5%;
 }
 
 */
@@ -179,13 +179,13 @@ ruby > rt, ruby > rp {
 *:lang(ja),
 *:lang(zh),
 *:lang(ko),
-:lang(ja) cite, :lang(ja) dfn, :lang(ja) em, :lang(ja) i,  
+:lang(ja) cite, :lang(ja) dfn, :lang(ja) em, :lang(ja) i,
 :lang(zh) cite, :lang(zh) dfn, :lang(zh) em, :lang(zh) i,
 :lang(ko) cite, :lang(ko) dfn, :lang(ko) em, :lang(ko) i {
   font-style: normal;
 }
 
-:lang(ja) a,  
+:lang(ja) a,
 :lang(zh) a,
 :lang(ko) a {
   text-decoration: none;

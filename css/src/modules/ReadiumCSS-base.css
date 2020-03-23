@@ -1,4 +1,4 @@
-/* Readium CSS 
+/* Readium CSS
    Base module
 
    A minimal stylesheet for all ebooks
@@ -30,7 +30,7 @@
 
   /* Config */
   --RS__baseFontFamily: var(--RS__oldStyleTf);
-  
+
   /* For square-ish fonts (CJK, Indic, etc.), we must apply some compensation in dynamic leading. Default is 1 i.e. no compensation */
   --RS__lineHeightCompensation: 1;
 
@@ -123,7 +123,7 @@ math {
 
 :lang(ja) {
   --RS__baseFontFamily: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
-  
+
   /* For CJK, the line-height is usually 15–20% more than for Latin */
   --RS__lineHeightCompensation: 1.167;
 
@@ -146,7 +146,7 @@ math {
 
 :lang(ko) {
   --RS__baseFontFamily: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans CJK KR", sans-serif;
-  
+
   /* For CJK, the line-height is usually 15–20% more than for Latin */
   --RS__lineHeightCompensation: 1.167;
 }
@@ -200,14 +200,14 @@ math {
 :lang(zh-Hant),
 :lang(zh-TW) {
   --RS__baseFontFamily: "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-  
+
   /* For CJK, the line-height is usually 15–20% more than for Latin */
   --RS__lineHeightCompensation: 1.167;
 }
 
 :lang(zh-HK) {
   --RS__baseFontFamily: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-  
+
   /* For CJK, the line-height is usually 15–20% more than for Latin */
   --RS__lineHeightCompensation: 1.167;
 }

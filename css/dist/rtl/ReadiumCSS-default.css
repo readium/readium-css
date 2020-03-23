@@ -1,4 +1,4 @@
-/* Readium CSS 
+/* Readium CSS
    Default module for RTL scripts
 
    A stylesheet for unstyled ebooks based on HTML5 Suggested Rendering
@@ -42,19 +42,30 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Flow content */
 
-blockquote, figure, p, pre,
-aside, footer, form, hr {
+blockquote,
+figure,
+p,
+pre,
+aside,
+footer,
+form,
+hr {
   margin-top: var(--RS__flowSpacing);
   margin-bottom: var(--RS__flowSpacing);
 }
 
 p {
   margin-top: var(--RS__paraSpacing);
-  margin-bottom: var(--RS__paraSpacing); 
+  margin-bottom: var(--RS__paraSpacing);
   text-indent: var(--RS__paraIndent);
 }
 
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p,
 hr + p {
   text-indent: 0;
 }

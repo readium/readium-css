@@ -1,4 +1,4 @@
-/* Readium CSS 
+/* Readium CSS
    Text align pref
 
    A submodule managing text-align for user settings
@@ -11,7 +11,7 @@
 }
 
 :root:--advanced-settings[style*="--USER__textAlign"] body,
-:root:--advanced-settings[style*="--USER__textAlign"] *:not(blockquote):not(figcaption) p, 
+:root:--advanced-settings[style*="--USER__textAlign"] *:not(blockquote):not(figcaption) p,
 :root:--advanced-settings[style*="--USER__textAlign"] li {
   text-align: inherit !important;
   -moz-text-align-last: auto !important;
@@ -21,16 +21,16 @@
 
 /* In case something goes wrong at the programmatic level + rtl for body + rtl in ltr */
 
-:root:--advanced-settings:--rtl[style*="--USER__textAlign: left"], 
+:root:--advanced-settings:--rtl[style*="--USER__textAlign: left"],
 :root:--advanced-settings:--rtl[style*="--USER__textAlign:left"],
-:root:--advanced-settings[style*="--USER__textAlign: left"] *:--rtl, 
+:root:--advanced-settings[style*="--USER__textAlign: left"] *:--rtl,
 :root:--advanced-settings[style*="--USER__textAlign:left"] *:--rtl {
   text-align: right;
 }
 
 /* Edge, if logical value is used, think of it as a polyfill. For LTR, it will fall back to the default, which is left */
 
-:root:--advanced-settings:--rtl[style*="--USER__textAlign: start"], 
+:root:--advanced-settings:--rtl[style*="--USER__textAlign: start"],
 :root:--advanced-settings:--rtl[style*="--USER__textAlign:start"] {
   text-align: right;
 }

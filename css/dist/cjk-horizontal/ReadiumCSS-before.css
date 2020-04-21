@@ -40,9 +40,9 @@
 /* Direction i.e. ltr and rtl */
 
 /* Readium CSS
-   Base module
+   Namespaces module
 
-   A minimal stylesheet for all ebooks
+   Namespaces to import in all 3 dist stylesheets
 
    Repo: https://github.com/readium/readium-css */
 
@@ -53,6 +53,13 @@
 @namespace m url("http://www.w3.org/1998/Math/MathML/");
 
 @namespace svg url("http://www.w3.org/2000/svg");
+
+/* Readium CSS
+   Base module
+
+   A minimal stylesheet for all ebooks
+
+   Repo: https://github.com/readium/readium-css */
 
 /* Define viewport, HTML5-style */
 

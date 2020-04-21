@@ -40,6 +40,21 @@
 /* Direction i.e. ltr and rtl */
 
 /* Readium CSS
+   Namespaces module
+
+   Namespaces to import in all 3 dist stylesheets
+
+   Repo: https://github.com/readium/readium-css */
+
+@namespace url("http://www.w3.org/1999/xhtml");
+
+@namespace epub url("http://www.idpf.org/2007/ops");
+
+@namespace m url("http://www.w3.org/1998/Math/MathML/");
+
+@namespace svg url("http://www.w3.org/2000/svg");
+
+/* Readium CSS
    Pagination module
 
    A set of styles to paginate ePublications
@@ -262,8 +277,11 @@ body {
   color: var(--RS__visitedColor) !important;
 }
 
+/* For epub:type, in case the contents are served as text/html, namespaces won’t work hence why we’re using both syntax */
+
 :root[style*="readium-night-on"] img[class*="gaiji"],
-:root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child {
+:root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child,
+:root[style*="readium-night-on"] *[epub|type~="titlepage"] img:only-child {
   -webkit-filter: invert(100%);
   filter: invert(100%);
 }
@@ -372,7 +390,8 @@ body {
 
 @media screen and (-ms-high-contrast: white-on-black) {
   :root[style*="readium-night-on"] img[class*="gaiji"],
-  :root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child {
+  :root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child,
+  :root[style*="readium-night-on"] *[epub|type~="titlepage"] img:only-child {
     -webkit-filter: none !important;
     filter: none !important;
   }
@@ -390,7 +409,8 @@ body {
 
 @media screen and (inverted-colors) {
   :root[style*="readium-night-on"] img[class*="gaiji"],
-  :root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child {
+  :root[style*="readium-night-on"] *[epub\:type~="titlepage"] img:only-child,
+  :root[style*="readium-night-on"] *[epub|type~="titlepage"] img:only-child {
     -webkit-filter: none !important;
     filter: none !important;
   }

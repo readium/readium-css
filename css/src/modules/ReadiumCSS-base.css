@@ -61,6 +61,13 @@ h1, h2, h3 {
   line-break: strict;
 }
 
+/* Hide footnotes by default */
+
+aside[epub|type^="footnote"],
+aside[epub\:type^="footnote"] {
+  display: none;
+}
+
 /* Set default font for Math */
 
 math {

@@ -1,4 +1,5 @@
 @import "../ReadiumCSS-config.css";
+@import "modules/ReadiumCSS-namespaces.css";
 @import "modules/ReadiumCSS-pagination.css";
 @import "modules/ReadiumCSS-scroll.css";
 @import "modules/ReadiumCSS-night_mode.css";

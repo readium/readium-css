@@ -1,4 +1,5 @@
 @import "../ReadiumCSS-config.css";
+@import "modules/ReadiumCSS-namespaces.css";
 @import "modules/ReadiumCSS-base.css";
 @import "modules/ReadiumCSS-day_mode.css";
 /* @import "modules/ReadiumCSS-fonts.css"; */

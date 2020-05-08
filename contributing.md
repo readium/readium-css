@@ -25,7 +25,7 @@ Readium CSS has been design following 4 principles:
 3. **Daisy-chainability:** those modules can be loaded and daisy-chained (cascade), depending on conditions;
 4. **Customization:** modules can be customized either before or during runtime (CSS variables).
 
-Please keep those principles in mind before making a pull request. If you have any doubt, please feel free to contact [Jiminy Panoz](mailto:readium-css@edrlab.org).
+Please keep those principles in mind before making a pull request. If you have any doubt, please feel free to contact [maintainers](mailto:readium-css@edrlab.org).
 
 ## Testing
 
@@ -38,7 +38,7 @@ You can either:
 
 In any case, you have to manually inject stylesheets and apply settings via the console, or design and code scripts if you want a GUI (user settings menu).
 
-You can use the [RS-streamer-js](https://github.com/edrlab/r2-streamer-js) to manage EPUB files if needed.
+You can use the [R2-streamer-js](https://github.com/edrlab/r2-streamer-js) to manage EPUB files if needed.
 
 ## Coding Standards
 
@@ -114,7 +114,7 @@ This applies to the custom properties as well:
 
 If possible, user settings must be inherited from the `--USER__variable` set on `:root`. This obviously can’t be done for all user settings as it depends on the scope (the elements targeted).
 
-User settings must also abide by [those recommendations](https://github.com/readium/readium-css/issues/5).
+User settings must also abide by [these recommendations](https://readium.org/readium-css/docs/CSS14-user_settings_recs.html).
 
 ## How Can I Contribute?
 
@@ -124,7 +124,7 @@ First and foremost, check if your issue has already been reported (don’t forge
 
 Before opening any issue… 
 
-- **Ensure your EPUB is valid.** Always validate your EPUB against [EPUBCheck](http://validator.idpf.org). If there are errors or warnings, please fix those before submitting an issue.
+- **Ensure your EPUB is valid.** Always validate your EPUB against [EPUBCheck](https://github.com/w3c/epubcheck). If there are errors or warnings, please fix those before submitting an issue.
 - **Create an isolated and reproducible test case.** Be sure the problem exists in Readium CSS (try your HTML in the browser). Try providing a [reduced test case](https://css-tricks.com/reduced-test-cases/).
 - **Share as much information as possible.** See below.
 
@@ -229,7 +229,7 @@ I'm submitting a…
 
 ### Your First Code Contribution
 
-Unsure where to begin contributing to the Readium CSS Project? You can start by looking through the `feedback-required` and/or `low-hanging fruit` issues, or the [Roadmap section](#roadmap).
+Unsure where to begin contributing to the Readium CSS Project? You can start by looking through the `feedback-required` and/or `low-hanging fruit` issues.
 
 Then fork the repo, create a branch named after the issue you’re trying to solve, and implement your modifications.
 
@@ -239,8 +239,6 @@ We’ll finally review your pull request to check if everything is OK.
 
 ### Pull Requests
 
-First, make sure you have signed and sent the [Readium ICLA](http://readium.github.io/documents/Individual%20Contributor%20License%20Agreement.pdf) (for Individual Contributor License Agreement) – no need if your PR is about fixing typos.
-
 - Test your code (see [platform support](https://github.com/readium/readium-css/wiki/Platform-Support) in the Wiki).
 - Pull requests should **always** be created against the develop branch – never the master.
 - Please update from the develop branch before proposing a pull request so that we don’t have to deal with conflicts.
@@ -248,9 +246,3 @@ First, make sure you have signed and sent the [Readium ICLA](http://readium.gith
 - List all fixes and enhancements the pull request provides.
 - Include screenshots and/or animated GIF whenever possible – no need to do that for correcting typos in docs for instance.
 - Document new code.
-
-## Roadmap
-
-The [up-to-date roadmap can be found in the Wiki](https://github.com/readium/readium-css/wiki/Roadmap). 
-
-Progress is publicly tracked in [issue #11](https://github.com/readium/readium-css/issues/11).

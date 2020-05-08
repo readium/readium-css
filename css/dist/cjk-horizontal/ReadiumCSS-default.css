@@ -47,6 +47,10 @@
   --RS__secondaryColor: ;
 }
 
+:root:lang(zh) {
+  --RS__paraIndent: 2em;
+}
+
 /* STYLES */
 
 /* Typo */
@@ -85,16 +89,6 @@ p {
   margin-top: var(--RS__paraSpacing);
   margin-bottom: var(--RS__paraSpacing);
   text-indent: var(--RS__paraIndent);
-}
-
-h1 + p,
-h2 + p,
-h3 + p,
-h4 + p,
-h5 + p,
-h6 + p,
-hr + p {
-  text-indent: 0;
 }
 
 pre {

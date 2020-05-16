@@ -47,6 +47,10 @@
   --RS__secondaryColor: ;
 }
 
+:root:lang(zh) {
+  --RS__paraIndent: 2em;
+}
+
 :lang("mn-Mong") {
   --RS__baseFontSize: 100%;
 }

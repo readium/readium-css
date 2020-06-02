@@ -33,6 +33,7 @@
     "postcss-custom-media": "^7.0.8",
     "postcss-custom-selectors": "^5.1.2",
     "postcss-discard-comments": "^4.0.2",
+    "postcss-header": "^2.0.0",
     "postcss-import": "^12.0.1",
     "postcss-sorting": "^5.0.1",
     "stylelint": "^13.2.1"

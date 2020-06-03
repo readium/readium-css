@@ -46,11 +46,10 @@ The following modules must be appended after the author’s stylesheets (`Readiu
 1. `ReadiumCSS-config.css`
 2. `ReadiumCSS-pagination.css` (or `ReadiumCSS-pagination-vertical.css` for CJK – vertical writing mode)
 3. `ReadiumCSS-scroll.css` (or `ReadiumCSS-scroll-vertical.css` for CJK – vertical writing mode)
-4. `ReadiumCSS-highlights.css`
-5. `ReadiumCSS-night_mode.css`
-6. `ReadiumCSS-sepia_mode.css`
-7. `ReadiumCSS-os_a11y.css`
-8. User settings:
+4. `ReadiumCSS-night_mode.css`
+5. `ReadiumCSS-sepia_mode.css`
+6. `ReadiumCSS-os_a11y.css`
+7. User settings:
     1. `ReadiumCSS-colNumber_pref.css` (does not apply to CJK – vertical writing mode)
     2. `ReadiumCSS-pageMargins_pref.css` (or `ReadiumCSS-pageMargins-vertical_pref.css` for CJK – vertical writing mode)
     3. `ReadiumCSS-customColors_pref.css`
@@ -65,4 +64,4 @@ The following modules must be appended after the author’s stylesheets (`Readiu
     12. `ReadiumCSS-wordSpacing_pref.css` (does not apply to RTL and CJK scripts)
     13. `ReadiumCSS-letterSpacing_pref.css` (does not apply to RTL and CJK scripts)
     14. `ReadiumCSS-arabicLigatures_pref.css` (RTL only)
-9. `ReadiumCSS-fs_normalize.css`
+8. `ReadiumCSS-fs_normalize.css`

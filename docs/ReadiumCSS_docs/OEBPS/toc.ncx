@@ -293,7 +293,7 @@
     </navPoint>
     <navPoint id="navPoint48">
       <navLabel>
-        <text>User highlights and media overlays</text>
+        <text>OS’ a11y modes</text>
       </navLabel>
       <content src="Text/Section-008.xhtml#sigil_toc_id_134" />
     </navPoint>

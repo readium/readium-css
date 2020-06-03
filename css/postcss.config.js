@@ -1,9 +1,7 @@
 const version = require("../package.json").version;
 
 module.exports = (ctx) => ({
-  map: {
-    inline: false
-  },
+  map: false,
   plugins: [
     require("postcss-import")({
       root: ctx.file.dirname

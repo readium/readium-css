@@ -7,7 +7,6 @@ Defaults is currently made of 5 stylesheets:
 - 1 base stylesheet for all ebooks;
 - 1 default reading mode stylesheet for all ebooks (day mode);
 - 1 default stylesheet for unstyled ebooks;
-- 1 stylesheet for user highlights and media overlays;
 - 1 stylesheet to deal with the OS’ a11y modes.
 
 **Note:** The default stylesheet should not be appended if there are author styles in the EPUB file.
@@ -362,41 +361,7 @@ An optional primary accentuation `color` you could use for headings or any other
 
 An optional secondary accentuation `color` you could use for any element of your choice.
 
-## User highlights and media overlays
-
-### Highlights
-
-You can use classic [insert famous highlighters’ brand] colors in all their neon glory:
-
-- yellow;
-- green;
-- orange;
-- pink.
-
-There’s no blue since it is too close to the default `::selection`.
-
-Ideally, you should offer users the possibility to switch colors when highlighting as they might use a color pattern to manage different types of highlights/notes.
-
-There’s a class syntax you can use to differentiate highlights: `.readiumCSS-{color}-highlight` e.g. `.readiumCSS-yellow-highlight` or `.readiumCSS-pink-highlight`.
-
-Values are declared in `rgba` so that those colors don’t have to be redefined in night modes.
-
-At first sight, contrast is OK for those colors in default and night mode, but it will obviously depend on the `background-color` and `color` values you’re using for themes.
-
-### Media Overlays
-
-We’re using the same one as Readium 1 for interop reasons.
-
-```
-.readiumCSS-mo-active-default {
-  background-color: yellow !important;
-  color: black !important;
-}
-```
-
-It has been prefixed with `readiumCSS-` but you can get rid of it if needed.
-
-### OS’ a11y modes
+## OS’ a11y modes
 
 This stylesheet is intended to deal with a11y settings users can set at the OS level, whenever possible: 
 

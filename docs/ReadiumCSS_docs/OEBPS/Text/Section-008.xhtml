@@ -24,8 +24,6 @@
 
       <li>1 default stylesheet for unstyled ebooks;</li>
 
-      <li>1 stylesheet for user highlights and media overlays;</li>
-
       <li>1 stylesheet to deal with the OS’ a11y modes.</li>
     </ul>
 
@@ -374,65 +372,22 @@
       </section>
     </section>
 
-    <section id="user-highlights-and-media-overlays" class="level2">
-      <h2 id="sigil_toc_id_134">User highlights and media overlays</h2>
+    <section id="os-a11y-modes" class="level2">
+      <h2 id="sigil_toc_id_134">OS’ a11y modes</h2>
+        
+      <p>This stylesheet is intended to deal with a11y settings users can set at the OS level, whenever possible:</p>
 
-      <section id="highlights" class="level3">
-        <h3 class="sigil_not_in_toc">Highlights</h3>
+      <ul>
+        <li>high-contrast mode;</li>
 
-        <p>You can use classic [insert famous highlighters’ brand] colors in all their neon glory:</p>
+        <li>inverted colors;</li>
 
-        <ul>
-          <li>yellow;</li>
+        <li>monochrome;</li>
 
-          <li>green;</li>
+        <li>reduced motion.</li>
+      </ul>
 
-          <li>orange;</li>
-
-          <li>pink.</li>
-        </ul>
-
-        <p>There’s no blue since it is too close to the default <code>::selection</code>.</p>
-
-        <p>Ideally, you should offer users the possibility to switch colors when highlighting as they might use a color pattern to manage different types of highlights/notes.</p>
-
-        <p>There’s a class syntax you can use to differentiate highlights: <code>.readiumCSS-{color}-highlight</code> e.g. <code>.readiumCSS-yellow-highlight</code> or <code>.readiumCSS-pink-highlight</code>.</p>
-
-        <p>Values are declared in <code>rgba</code> so that those colors don’t have to be redefined in night modes.</p>
-
-        <p>At first sight, contrast is OK for those colors in default and night mode, but it will obviously depend on the <code>background-color</code> and <code>color</code> values you’re using for themes.</p>
-      </section>
-
-      <section id="media-overlays" class="level3">
-        <h3 class="sigil_not_in_toc">Media Overlays</h3>
-
-        <p>We’re using the same one as Readium 1 for interop reasons.</p>
-
-        <pre><code>.readiumCSS-mo-active-default { 
-  background-color: yellow !important; 
-  color: black !important; 
-}</code></pre>
-
-        <p>It has been prefixed with <code>readiumCSS-</code> but you can get rid of it if needed.</p>
-      </section>
-
-      <section id="os-a11y-modes" class="level3">
-        <h3 class="sigil_not_in_toc">OS’ a11y modes</h3>
-
-        <p>This stylesheet is intended to deal with a11y settings users can set at the OS level, whenever possible:</p>
-
-        <ul>
-          <li>high-contrast mode;</li>
-
-          <li>inverted colors;</li>
-
-          <li>monochrome;</li>
-
-          <li>reduced motion.</li>
-        </ul>
-
-        <p>For <code>monochrome</code>, we’ll have to adjust reading modes (night, sepia, etc.) in their specific stylesheet; we’ll see if we can at least manage some more global settings in there.</p>
-      </section>
+      <p>For <code>monochrome</code>, we’ll have to adjust reading modes (night, sepia, etc.) in their specific stylesheet; we’ll see if we can at least manage some more global settings in there.</p>
     </section>
   </section>
 </body>

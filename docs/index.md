@@ -10,7 +10,6 @@ Readium CSS provides styles for reflowable text:
 - reading modes (day, night, and sepia);
 - themes;
 - user settings;
-- media overlays and user highlights;
 - a set of baselines and recommendations for accessibility, overrides, and internationalization.
 
 **Readium CSS is currently in alpha** (version `1.0.0-beta.1`).

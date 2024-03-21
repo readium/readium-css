@@ -234,10 +234,6 @@ module.exports = (ctx) => ({
       ],
       "unspecified-properties-position": "bottomAlphabetical"
     }),
-    require("postcss-clean")({
-      advanced: false,
-      roundingPrecision: 3
-    }),
     require("postcss-header")({
       header: `/*\n * Readium CSS (v. ${version})\n * Developers: Jiminy Panoz \n * Copyright (c) 2017. Readium Foundation. All rights reserved.\n * Use of this source code is governed by a BSD-style license which is detailed in the\n * LICENSE file present in the project repository where this source code is maintained.\n*/`
     })

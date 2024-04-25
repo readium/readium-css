@@ -19,7 +19,7 @@ module.exports = (ctx) => ({
               "message": "Please remove empty comments."
           }]
           , "number-max-precision": 4
-          , "unit-blacklist": [ ["pt"], {
+          , "unit-disallowed-list": [ ["pt"], {
               "message": "Sorry, this unit is not allowed. Please use another one."
             , "severity": "error"
           }]
@@ -27,7 +27,6 @@ module.exports = (ctx) => ({
               "message": "It looks like you’re using a CSS variable prefix which is not supported. It should either start with “--RS__” or “--USER__”."
             , "severity": "error"
           }]
-          , "selector-max-empty-lines": 0
           , "color-hex-length": [ "long", {
               "message": "We recommend using long color HEX to prevent unexpected issues."
           }]
@@ -35,20 +34,18 @@ module.exports = (ctx) => ({
               "message": "If looks like there are spaces or digits in your “font-family”, please use quotes."
           }]
           , "function-url-quotes": "always"
-          , "number-leading-zero": "always"
-          , "number-no-trailing-zeros": true
           , "length-zero-no-unit": [ true, {
               "message": "The value of this property being 0, you don’t need an unit. Please remove it."
           }]
-          , "unit-case": "lower"
+          , "selector-type-case": "lower"
+          , "function-name-case": "lower"
+          , "value-keyword-case": "lower"
           , "selector-attribute-quotes": "always"
           , "comment-whitespace-inside": "always"
-          , "max-empty-lines": 1
-          , "indentation": [ 2, {
-              "message": "You should use 2 spaces to indent."
-          }]
+          , "at-rule-empty-line-before": "always"
+          , "comment-empty-line-before": "always"
+          , "rule-empty-line-before": "always"
           , "no-duplicate-at-import-rules": true
-          , "no-extra-semicolons": true
           , "no-invalid-double-slash-comments": [ true, {
               "message": "It looks like you’re using single-line JS comments. This is CSS, you can’t use that."
             , "severity": "error"
@@ -57,13 +54,6 @@ module.exports = (ctx) => ({
               "message": "We’re using Vanilla CSS with PostCSS and our current configuration doesn’t allow nesting selectors as in LESS or SASS."
             , "severity": "error"
           }]
-          , "string-quotes": "double"
-          , "declaration-bang-space-before": [ "always", {
-              "message": "Please put a space before !important as it will improve readability."
-          }]
-          , "block-closing-brace-newline-after": "always"
-          , "block-opening-brace-newline-after": "always"
-          , "selector-list-comma-newline-after": "always-multi-line"
         }
       }
     }),
@@ -233,10 +223,6 @@ module.exports = (ctx) => ({
         , "speak"
       ],
       "unspecified-properties-position": "bottomAlphabetical"
-    }),
-    require("postcss-clean")({
-      advanced: false,
-      roundingPrecision: 3
     }),
     require("postcss-header")({
       header: `/*\n * Readium CSS (v. ${version})\n * Developers: Jiminy Panoz \n * Copyright (c) 2017. Readium Foundation. All rights reserved.\n * Use of this source code is governed by a BSD-style license which is detailed in the\n * LICENSE file present in the project repository where this source code is maintained.\n*/`

@@ -31,12 +31,12 @@
     "postcss-cli": "^11.0.0",
     "postcss-css-variables": "^0.19.0",
     "postcss-custom-media": "^10.0.4",
-    "postcss-custom-selectors": "^6.0.0",
+    "postcss-custom-selectors": "^6.0.3",
     "postcss-discard-comments": "^6.0.2",
     "postcss-header": "^3.0.3",
     "postcss-import": "^16.1.0",
     "postcss-sorting": "^8.0.2",
-    "stylelint": "^16.2.1"
+    "stylelint": "^16.4.0"
   },
   "scripts": {
     "build": "npm run build:ltr && npm run build:rtl && npm run build:cjk && npm run build:vertical",

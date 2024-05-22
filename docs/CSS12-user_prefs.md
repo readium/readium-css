@@ -454,8 +454,9 @@ User settings to disable are:
 - `--USER__textAlign`;
 - `--USER__bodyHyphens`;
 - `--USER__paraIndent`;
-- `--USER__wordSpacing`;
-- `--USER__letterSpacing`.
+- `--USER__wordSpacing`.
+
+Finally, `--USER__letterSpacing` should be treated as an exception. We are aware it can be useful in Japanese, but don’t know what the situation is as regards Chinese and Korean. **It’s up to implementers to decide whether it should be enabled or disabled for each of these languages.**
 
 #### Vertical writing mode
 
@@ -467,5 +468,6 @@ User settings to disable are:
 - `--USER__textAlign`;
 - `--USER__bodyHyphens`;
 - `--USER__paraIndent`;
-- `--USER__wordSpacing`;
-- `--USER__letterSpacing`.
+- `--USER__wordSpacing`.
+
+Finally, `--USER__letterSpacing` should be treated as an exception. We are aware it can be useful in Japanese, but don’t know what the situation is as regards Chinese and Korean. **It’s up to implementers to decide whether it should be enabled or disabled for each of these languages.**

@@ -174,8 +174,24 @@ root.style.setProperty("name of var", "");</code></pre>
 
         <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
 
-		<p>To disable the normalization, you can either set an empty string as a value or remove the property.</p>
+		    <p>To disable the normalization, you can either set an empty string as a value or remove the property.</p>
       </section>
+
+      <section id="no-ruby" class="level3">
+        <h3 class="sigil_not_in_toc">Hiding Ruby Text</h3>
+    
+        <p>Users may want to hide ruby annotations for accessibility reasons.</p>
+    
+        <pre><code>--USER__no-ruby</code></pre>
+    
+        <p>Supported value: <code>readium-noRuby-on</code></p>
+    
+        <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
+    
+        <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+    
+        <p>To disable the hiding and show ruby annotations, you can either set an empty string as a value of remove the property.</p>
+        </section>
     </section>
 
     <section id="list-of-variables" class="level2">
@@ -521,6 +537,12 @@ root.style.setProperty("name of var", "");</code></pre>
             <li><code>--USER__wordSpacing</code>.</li>
 		      </ul>
 
+          <p>User settings to add are:</p>
+
+          <ul>
+            <li><code>--USER__noRuby</code>.</li>
+          </ul>
+
 		      <p>Finally, <code>--USER__letterSpacing</code> should be treated as an exception. We are aware it can be useful in Japanese, but don’t know what the situation is as regards Chinese and Korean. <strong>It’s up to implementers to decide whether it should be enabled or disabled for each of these languages.</strong></p>
         </section>
 
@@ -542,6 +564,12 @@ root.style.setProperty("name of var", "");</code></pre>
 
             <li><code>--USER__wordSpacing</code>.</li>
 		      </ul>
+
+          <p>User settings to add are:</p>
+
+          <ul>
+            <li><code>--USER__noRuby</code>.</li>
+          </ul>
 
 		      <p>Finally, <code>--USER__letterSpacing</code> should be treated as an exception. We are aware it can be useful in Japanese, but don’t know what the situation is as regards Chinese and Korean. <strong>It’s up to implementers to decide whether it should be enabled or disabled for each of these languages.</strong></p>
         </section>

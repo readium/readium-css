@@ -159,6 +159,22 @@ Override class: User settings advanced (optional but should be applied by any me
 
 To disable the normalization, you can either set an empty string as a value or remove the property.
 
+### Hiding Ruby Text
+
+Users may want to hide ruby annotations for accessibility reasons.
+
+```
+--USER__no-ruby
+```
+
+Supported value: `readium-noRuby-on`
+
+Required flag: `--USER__advancedSettings: readium-advanced-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+To disable the hiding and show ruby annotations, you can either set an empty string as a value of remove the property.
+
 ## List of variables 
 
 ### Layout 
@@ -456,6 +472,10 @@ User settings to disable are:
 - `--USER__paraIndent`;
 - `--USER__wordSpacing`.
 
+User settings to add are:
+
+- `--USER__noRuby`.
+
 Finally, `--USER__letterSpacing` should be treated as an exception. We are aware it can be useful in Japanese, but don’t know what the situation is as regards Chinese and Korean. **It’s up to implementers to decide whether it should be enabled or disabled for each of these languages.**
 
 #### Vertical writing mode
@@ -469,5 +489,9 @@ User settings to disable are:
 - `--USER__bodyHyphens`;
 - `--USER__paraIndent`;
 - `--USER__wordSpacing`.
+
+User settings to add are:
+
+- `--USER__noRuby`.
 
 Finally, `--USER__letterSpacing` should be treated as an exception. We are aware it can be useful in Japanese, but don’t know what the situation is as regards Chinese and Korean. **It’s up to implementers to decide whether it should be enabled or disabled for each of these languages.**

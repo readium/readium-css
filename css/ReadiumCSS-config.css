@@ -44,6 +44,9 @@
 @custom-selector :--darken-filter [style*="readium-darken-on"];
 @custom-selector :--invert-filter [style*="readium-invert-on"];
 
+/* Hiding ruby */
+@custom-selector :--no-ruby [style*="readium-noRuby-on"];
+
 /* Accessibility normalization */
 @custom-selector :--a11y-normalize [style*="readium-a11y-on"];
 

@@ -198,6 +198,22 @@ It impacts font style, weight and variant, text decoration, super and subscripts
 
 * * *
 
+```
+:--no-ruby
+```
+
+Preset: `--USER__noRuby: readium-noRuby-on`
+
+Scope: `html`
+
+Required flag: `:--advancedSettings`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+This will hide ruby annotations i.e. `rt` and `rb`.
+
+* * *
+
 **Warning:** if you customize those flags, all ReadiumCSS `dist` stylesheets must be rebuilt.
 
 ## Reading System Styles

@@ -351,6 +351,11 @@ body{
   font-variant:none;
 }
 
+:root[style*="readium-advanced-on"][style*="readium-noRuby-on"] body rt,
+:root[style*="readium-advanced-on"][style*="readium-noRuby-on"] body rp{
+  display:none;
+}
+
 :root[style*="readium-advanced-on"]{
   --USER__typeScale:1.2;
 }

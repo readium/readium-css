@@ -370,6 +370,11 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
   font-variant:none;
 }
 
+:root[style*="readium-advanced-on"][style*="readium-noRuby-on"] body rt,
+:root[style*="readium-advanced-on"][style*="readium-noRuby-on"] body rp{
+  display:none;
+}
+
 :root[style*="readium-advanced-on"]{
   --USER__typeScale:1.2;
 }

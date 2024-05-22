@@ -230,7 +230,7 @@ The user can set `text-align` and `hyphens` for body copy contents.
 --USER__textAlign
 ```
 
-Possible values: `left` (LTR) or `right` (RTL) | `justify`
+Possible values: `left` (LTR) or `right` (RTL) | `start` (logical property resolving to `left` in LTR, `right` in RTL) | `justify`
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
 

@@ -690,7 +690,7 @@ Scope: `html`
 
 It impacts `body`, `li`, and `p` which are not children of `blockquote` and `figcaption`.
 
-Possible values: `left` (LTR) or `right` (RTL) | `justify`
+Possible values: `left` (LTR) or `right` (RTL) | `start` (logical property resolving to `left` in LTR, `right` in RTL) | `justify`
 
 Required flag: `:--advancedSettings`
 

@@ -29,12 +29,12 @@
 @font-face {
   font-family: "serif-ja";
   src: local("ＭＳ Ｐ明朝"), /* for IE */
-  local("MS PMincho"), /* ＭＳ Ｐ明朝 */
-  local("HiraMinProN-W3"), local("Hiragino Mincho ProN"), /* ヒラギノ明朝 ProN W3 */
-  local("HiraMinPro-W3"), local("Hiragino Mincho Pro"), /* ヒラギノ明朝 Pro W3 */
-  local("YuMin-Medium"), local("YuMincho"), /* 游明朝体(macOS) */
-  local("Yu Mincho"), /* 游明朝(Windows) */
-  local("BIZ UDPMincho"); /* BIZ UDP明朝 */
+      local("MS PMincho"), /* ＭＳ Ｐ明朝 */
+      local("HiraMinProN-W3"), local("Hiragino Mincho ProN"), /* ヒラギノ明朝 ProN W3 */
+      local("HiraMinPro-W3"), local("Hiragino Mincho Pro"), /* ヒラギノ明朝 Pro W3 */
+      local("YuMin-Medium"), local("YuMincho"), /* 游明朝体(macOS) */
+      local("Yu Mincho"), /* 游明朝(Windows) */
+      local("BIZ UDPMincho"); /* BIZ UDP明朝 */
 }
 
 @font-face {
@@ -60,7 +60,6 @@
        local("HiraMinProN-W3"), local("Hiragino Mincho ProN"), /* ヒラギノ明朝 ProN W3 */
        local("HiraMinPro-W3"), local("Hiragino Mincho Pro"), /* ヒラギノ明朝 Pro W3 */
        local("YuMin-Medium"), local("YuMincho"), /* 游明朝体(macOS) */
-       local("Yu Mincho"), /* 游明朝(Windows) */
        local("Yu Mincho"), /* 游明朝(Windows) */
        local("BIZ UDMincho"); /*  BIZ UD明朝 */
 }

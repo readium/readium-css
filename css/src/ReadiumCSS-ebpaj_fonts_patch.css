@@ -47,7 +47,7 @@
        local("ヒラギノ角ゴ W3"), /* for old  Safari */
        local("HiraginoKaku-W3-90msp-RKSJ-H"), /* ヒラギノ角ゴ W3(TrueType) */
        local("YuGothic-Medium"), local("YuGothic"), /* 游ゴシック体(macOS) */
-       local("Yu Gothic"), /* 游ゴシック(Windows) */
+       local("Yu Gothic Medium"), local("Yu Gothic"), /* 游ゴシック(Windows) "Yu Gothic" is a fallback. */
        local("BIZ UDPGothic"); /* BIZ UDPゴシック */
 }
 
@@ -74,6 +74,6 @@
        local("ヒラギノ角ゴ W3"), /* for old Safari */
        local("HiraKakuDS-W3-83pv-RKSJ-H"), /* ヒラギノ角ゴ W3(TrueType) */
        local("YuGothic-Medium"), local("YuGothic"), /* 游ゴシック体(macOS) */
-       local("Yu Gothic"), /* 游ゴシック(Windows) */
+       local("Yu Gothic Medium"), local("Yu Gothic"), /* 游ゴシック(Windows)  "Yu Gothic" is a fallback. */
        local("BIZ UDGothic"); /* BIZ UDゴシック */
 }

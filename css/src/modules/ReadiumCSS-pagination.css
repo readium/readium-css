@@ -46,9 +46,6 @@
   /* Prevents options pop-up when long tap in webkit */
   -webkit-touch-callout: none;
 
-  /* Fix bug for older Chrome */
-  -webkit-perspective: 1;
-
   /* Column size will depend on this if we want to make it responsive */
   font-size: 100% !important;
 

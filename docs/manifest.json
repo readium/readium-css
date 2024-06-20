@@ -40,6 +40,8 @@
     {"href": "https://readium.org/readium-css/docs/CSS23-fxl_requirements.html", "type": "text/html", "title": "Fixed-layouts’ Reading Systems Requirements"}, 
     {"href": "https://readium.org/readium-css/docs/CSS24-eprdctn_requests.html", "type": "text/html", "title": "E-production feedback and requests"}, 
     {"href": "https://readium.org/readium-css/docs/CSS25-performance_hacks.html", "type": "text/html", "title": "CSS Performance Hacks"}, 
-    {"href": "https://readium.org/readium-css/docs/CSS26-i18n_glossary.html", "type": "text/html", "title": "i18n glossary"}
+    {"href": "https://readium.org/readium-css/docs/CSS26-i18n_glossary.html", "type": "text/html", "title": "i18n glossary"},
+    {"href": "https://readium.org/readium-css/docs/CSS27-considered_features.html", "type": "text/html", "title": "Features that were considered but not implemented"},
+    {"href": "https://readium.org/readium-css/docs/CSS28-migration_guide.html", "type": "text/html", "title": "Migration Guide"}
   ]
 }

@@ -30,44 +30,6 @@ var root = document.documentElement;
 root.style.removeProperty("--USER__var");
 ```
 
-## Customizable medias
-
-You will find those customizable medias in `ReadiumCSS-config.css`. The values defined are used in media queries to control use of the auto pagination model.
-
-* * *
-
-```
---responsive-columns
-```
-
-Default is `60em`
-
-The `min-width` at which the auto pagination model must be used – will switch from 1 to 2 columns and vice versa.
-
-* * *
-
-```
---min-device-columns
-```
-
-Default is `36em`
-
-The minimum device width of the mobile device for which the auto pagination model must be used.
-
-* * *
-
-```
---max-device-columns
-```
-
-Default is `47em`
-
-The maximum device width of the mobile device for which the auto pagination model must be used.
-
-* * *
-
-**Warning:** if you customize those medias, all ReadiumCSS `dist` stylesheets must be rebuilt.
-
 ## Customizable flags
 
 You will find those customizable flags in `ReadiumCSS-config.css`, and can think of the preset values as boolean inline styles: if they are set on the `:root` element (i.e. `html`) then the flag is enabled. If another value is, or they are removed, then the flag is disabled.

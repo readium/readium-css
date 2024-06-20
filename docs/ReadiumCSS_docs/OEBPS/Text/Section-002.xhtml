@@ -88,31 +88,9 @@
     <section id="customize" class="level2">
       <h2 id="sigil_toc_id_165">Customize</h2>
 
-      <p>ReadiumCSS ships with a <code>ReadiumCSS-config.css</code> file you can use to customize it a little bit. It allows implementers to:</p>
+      <p>ReadiumCSS ships with a <code>ReadiumCSS-config.css</code> file you can use to customize it a little bit. It allows implementers to choose selectors for the user settings’ flags.</p>
 
-      <ol>
-        <li>define in which conditions the auto pagination model is used;</li>
-
-        <li>choose selectors for the user settings’ flags.</li>
-      </ol>
-
-      <p>In order to provide this customization, we use custom media and custom selectors, which will hopefully become <a href="https://drafts.csswg.org/css-extensions/">standards implemented at some point</a>, but require PostCSS at the moment. Consequently, you’ll have to rebuild all <code>dist</code> stylesheets if you’re changing this file.</p>
-
-      <section id="auto-pagination-model" class="level3">
-        <h3 class="sigil_not_in_toc">Auto pagination model</h3>
-
-        <p>The auto pagination model switches from 1 to 2 columns, and vice versa, when the conditions defined in <code>ReadiumCSS-config.css</code> are met. Further details about this model can be found in <a href="../Text/Section-003.xhtml">“Injection and pagination” doc</a>.</p>
-
-        <p>On desktop, <code>--responsive-columns</code> is the <code>min-width</code> at which the model must be used. Default is <code>60em</code>, a relative unit since it is responsive by default and will switch depending on the window’s dimensions and the font size.</p>
-
-        <p>Should you want it never or always applied, you can either define a <code>min-width</code> large or small enough, or remove the media queries entirely in <code>ReadiumCSS-pagination.css</code> and <code>ReadiumCSS-colNumber_pref.css</code>.</p>
-
-        <p>On mobile, <code>--min-device-columns</code> and <code>--max-device-columns</code> is the range of (minimum and maximum) device widths in which the model must be used. We are forcing the orientation in <code>landscape</code>.</p>
-
-        <p>We recommend not trying to apply it in portrait orientation because 2 columns will provide users with quite a terrible reading experience in this configuration.</p>
-
-        <p>Those custom medias may be extended at some point, depending on implementers’ feedbacks and issues.</p>
-      </section>
+      <p>In order to provide this customization, we use custom selectors, which will hopefully become <a href="https://drafts.csswg.org/css-extensions/">standards implemented at some point</a>, but require PostCSS at the moment. Consequently, you’ll have to rebuild all <code>dist</code> stylesheets if you’re changing this file.</p>
 
       <section id="flags-for-user-settings" class="level3">
         <h3 class="sigil_not_in_toc">Flags for user settings</h3>

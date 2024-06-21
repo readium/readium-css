@@ -6,16 +6,16 @@ This document aims to list changes that were made in `v.2` and how to handle the
 
 ## Removal of responsive columns
 
-In version 1, ReadiumCSS used media queries to handle the number of columns/pages to display based on certains conditions. To sum things up it switched to 2 columns when:
+In version 1, ReadiumCSS used media queries to automatically handle the number of columns/pages to display based on certains conditions. To sum things up it switched from 1 to 2 columns when:
 
-- the `width` of the webpage was large enough
-- the device’s width (`device-width`) was within an arbitrary range, and in landscape orientation.
+- the `width` of the window was large enough, based on the font-size;
+- the device’s width (`device-width`) was within an arbitrary range based on the font-size, and in landscape orientation.
 
-As a side-effect, that “auto-pagination model” (think of it as an “auto” setting for the number of columns/pages in user settings) was [not reliable enough for implementers](https://github.com/readium/readium-css/issues/143), and created issues with newer devices and form-factors. Sometimes it wouldn’t swith to 2 columns when applying the setting because of the conditions above.
+As a side-effect, this “auto-pagination model” (think of it as an “auto” setting for the number of columns/pages in user settings) was [not reliable enough for implementers](https://github.com/readium/readium-css/issues/143), and created issues with newer devices and form-factors (e.g. foldables). Sometimes it wouldn’t even swith to 2 columns when applying the setting because of the conditions above.
 
-In version 2, ReadiumCSS removed these media queries and the “auto-pagination model”. It applies styles the Reading System/app provides to it. Consequently, control over breakpoints is now the responsibility of the app. 
+In version 2, ReadiumCSS removed these media queries and the “auto-pagination model” entirely. It applies styles the Reading System/app provides to it. Consequently, control over breakpoints is now the responsibility of the app. 
 
-If you want to switch to 1 or 2 columns depending on the orientation of the device or the width of the webpage, you now have to handle it programmatically. 
+If you want to reimplement an “auto” user setting, and switch to 1 or 2 columns depending on the orientation of the device or the width of the window, you now have to handle it programmatically. 
 
 ## Removal of -webkit-perspective hack for older versions of Chromium
 
@@ -33,4 +33,24 @@ The issues it resolves are described in [CanIUse’s “known issues” for CSS 
 
 That hack created a [performance issue for large HTML documents](https://github.com/readium/readium-css/issues/117) as a side-effect though, and it was consequently removed in version 2, especially as it was no longer needed.
 
-Blink/Chromium switched to their new LayoutNG implementations for columns in version `v.106.0.5245.0`. This means that if you have to deal with versions below, you have to re-implement this hack specifically for these – and their older layout engine.
+Blink/Chromium switched to their new LayoutNG for columns in version `v.106.0.5245.0`. This means that if you have to deal with versions below, you have to re-implement this CSS hack specifically for these – and their older layout engine.
+
+It could be something as simple as appending the style to the `html` element:
+
+```
+<html style="-webkit-perspective: 1">
+```
+
+or adding it in `head`:
+
+```
+<head>
+  ...
+  <style type="text/css">
+    :root {
+      -webkit-perspective: 1;
+    }
+  </style>
+  ...
+</head>
+```

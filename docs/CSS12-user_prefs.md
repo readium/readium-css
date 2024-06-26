@@ -201,6 +201,20 @@ The user margins are a factor of the reference we set.
 
 This will probably be fine-tuned in the next version (beta).
 
+#### Line length
+
+```
+--USER__lineLength
+```
+
+Possible values: any value CSS property `max-width|height` accepts.
+
+Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+To reset, remove the variable.
+
 ### Themes (background and text colors)
 
 The user can set a `background-color` and `color`. 

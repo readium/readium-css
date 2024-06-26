@@ -205,10 +205,10 @@ The horizontal page margins. It must be set in pixels so that it won’t resize 
 * * *
 
 ```
---RS__maxLineLength
+--RS__defaultLineLength
 ```
 
-The optimal line-length. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
+The default line-length when none is set by the user. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
 
 ### Safeguards
 
@@ -599,6 +599,26 @@ Required flag: none
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
 To reset, change the value to `1`.
+
+* * *
+
+```
+--USER__lineLength
+```
+
+The `max-width` of `body` (to shrink or grow the line-length of body copy).
+
+Scope: `html`
+
+It impacts `body`.
+
+Possible values: any value CSS property `max-width|height` accepts.
+
+Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+To reset, remove the variable.
 
 * * *
 

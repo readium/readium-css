@@ -43,15 +43,11 @@ Contents are paginated using [CSS multicolumns](https://www.w3.org/TR/css3-multi
 
 ### Default
 
-Pagination is responsive by default, which means it is using relative values in order to adapt layout to the viewport and the current font size.
+Pagination is a single column by default, which means the Reading System/app is responsible for its responsiveness.
 
-We’ve chosen this approach since it appears setting everything in pixels is more likely to create rounding errors and rendering issues (e.g. cut-off text) than letting the rendering engine deal with relative units on its own.
+For instance, if the reader is using a tablet in landscape mode and you want to display two “pages”/columns automatically, you have to tell ReadiumCSS by applying `--USER__colCount: 2;` to the `:root` element – if it’s not already set by this user of course.
 
-The responsive design provides other benefits. For instance, if the reader is using an iPad in landscape mode and sets a bigger font size, the two-column view will automatically switch to a single-page view if needed.
-
-You can also limit line-length by setting a `max-width` for `body`.
-
-Please note a user setting for the number of columns has been designed so that users can set the layout as they wish.
+This is a major change from version 1, as the responsive aspect of pagination was built-in.
 
 ### The RS owns :root and part of body
 
@@ -75,12 +71,7 @@ Please note that when using `padding`, you must take it into account when sizing
 
 ### The auto pagination model
 
-By default, responsive columns are built into Readium CSS, which means the layout will automatically switch from a single page to a two-column spread depending on: 
-
-1. the size of the viewport (by default, the minimum `width` is `60em` or the mobile device is in landscape orientation);
-2. the `font-size` currently set by the user.
-
-The spread will consequently switch to a single page once the user sets a `font-size` which is too large for two columns.
+TODO: update section once tested and validated.
 
 The following illustrations are the two models you’ll have to deal with.
 
@@ -141,10 +132,10 @@ The horizontal page margins. It must be set in pixels so that it won’t resize 
 * * *
 
 ```
---RS__maxLineLength
+--RS__defaultLineLength
 ```
 
-The optimal line-length. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
+The default line-length when none is set by the user. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
 
 ### Right-to-left progression
 

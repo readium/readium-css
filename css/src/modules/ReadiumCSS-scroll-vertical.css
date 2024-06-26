@@ -22,9 +22,5 @@
 
 /* Make sure line-length is limited in all configs */
 :root:--scroll-view body {
-  --RS__maxLineLength: 40.01rem !important; /* Fixes fragmentation update issues in Webkit i.e. value must be slightly different than the one for pagination */
+  --RS__defaultLineLength: 40.01rem !important; /* Fixes fragmentation update issues in Webkit i.e. value must be slightly different than the one for pagination */
 }
-
-/* Scroll mode horizontal */
-
-/* Do we add a top/bottom margin for body in vertical scroll or not? */

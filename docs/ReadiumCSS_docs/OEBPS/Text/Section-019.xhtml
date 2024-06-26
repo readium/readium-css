@@ -191,9 +191,9 @@
 
         <hr/>
 
-        <pre><code>--RS__maxLineLength</code></pre>
+        <pre><code>--RS__defaultLineLength</code></pre>
 
-        <p>The optimal line-length. It must be set in <code>rem</code> in order to take <code>:root</code>’s <code>font-size</code> as a reference, whichever the <code>body</code>’s <code>font-size</code> might be.</p>
+        <p>The default line-length when none is set by the user. It must be set in <code>rem</code> in order to take <code>:root</code>’s <code>font-size</code> as a reference, whichever the <code>body</code>’s <code>font-size</code> might be.</p>
       </section>
 
       <section id="safeguards" class="level3">
@@ -533,6 +533,24 @@
       <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
       <p>To reset, change the value to <code>1</code>.</p>
+
+      <hr/>
+
+      <pre><code>--USER__lineLength</code></pre>
+
+      <p>The <code>max-width</code> of <code>body</code> (to shrink or grow the line-length of body copy).</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts <code>body</code>.</p>
+
+      <p>Possible values: any value CSS property <code>max-width|height</code> accepts.</p>
+
+      <p>Required flag: none</p>
+
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+      <p>To reset, remove the variable.</p>
 
       <hr/>
 

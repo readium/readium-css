@@ -54,3 +54,17 @@ or adding it in `head`:
   ...
 </head>
 ```
+
+## Replacement of page margins user setting with line length user setting
+
+In version 1 ReadiumCSS implemented a page margins user setting: `--USER__pageMargins`. 
+
+This is no longer supported in version 2, as it has been replaced with a user setting for the line length of body copy (i.e. the `max-width` of the `body` element). `--USER__lineLength` should now be used.
+
+The user setting should consequently be updated, either in the form of replacement or mimicking of the old one.
+
+It is indeed possible to re-implement the page margins user setting by using the new variable, given margin will adjust automatically to the line length, but this also means that your updated logic will have to work backwards.
+
+Otherwise, the line-length user setting can be a set of predefined values, a range, etc. It accepts the values that the CSS properties `max-width|height` do.
+
+As a side effect, `--RS__pageGutter` is now set to `0` as default. This means no `padding` is applied to neither the `:root` nor `body` elements.

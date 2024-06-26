@@ -23,7 +23,6 @@ The following settings are required and should be applied by any means necessary
 The following settings are optional but should be applied by any means necessary, without any flag, if they are provided to users:
 
 - number of columns;
-- page margins;
 - line length;
 - custom reading modes (background and text color);
 - filters (darken and invert for night mode).

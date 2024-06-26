@@ -184,7 +184,7 @@ root.style.setProperty("name of var", "");</code></pre>
       <section id="layout" class="level3">
         <h3 class="sigil_not_in_toc">Layout</h3>
 
-        <p>The user can set the number of columns and page margins.</p>
+        <p>The user can set the number of columns and line length.</p>
 
         <section id="number-of-columns" class="level4">
           <h4 class="sigil_not_in_toc">Number of columns</h4>
@@ -204,39 +204,20 @@ root.style.setProperty("name of var", "");</code></pre>
           <p>It is up to implementers to decide whether they want this setting to be available and override any configuration or only some (e.g. setting only available in landscape and/or larger screens).</p>
         </section>
 
-        <section id="page-margins" class="level4">
-          <h4 class="sigil_not_in_toc">Page margins</h4>
+        <section id="line-length" class="level4">
+          <h4 class="sigil_not_in_toc">Line length</h4>
 
-          <pre><code>--USER__pageMargins</code></pre>
+          <pre><code>--USER__lineLength</code></pre>
 
-          <p>Recommended values: a range from <code>0.5</code> to <code>2</code>. Increments are left to implementers’ judgment.</p>
+          <p>Possible values: any value CSS property `max-width|height` accepts.</p>
 
           <p>Required flag: none</p>
 
           <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
-          <p>To reset, change the value to <code>1</code>.</p>
-
-          <p>The user margins are a factor of the reference we set.</p>
-
-          <p>This will probably be fine-tuned in the next version (beta).</p>
+          <p>To reset, remove the variable.</p>
         </section>
       </section>
-
-      <section id="line-length" class="level4">
-        <h4 class="sigil_not_in_toc">Line length</h4>
-
-        <pre><code>--USER__lineLength</code></pre>
-
-        <p>Possible values: any value CSS property `max-width|height` accepts.</p>
-
-        <p>Required flag: none</p>
-
-        <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
-
-        <p>To reset, remove the variable.</p>
-      </section>
-    </section>
 
       <section id="themes-background-and-text-colors" class="level3">
         <h3 class="sigil_not_in_toc">Themes (background and text colors)</h3>

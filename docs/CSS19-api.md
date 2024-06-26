@@ -583,26 +583,6 @@ To reset, change the value to `auto`.
 * * *
 
 ```
---USER__pageMargins
-```
-
-A factor applied to horizontal margins (`padding-left` and `padding-right`) the user wants to set.
-
-Scope: `html`
-
-It impacts `body`.
-
-Recommended values: a range from `0.5` to `2`.  Increments are left to implementers’ judgment.
-
-Required flag: none
-
-Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
-
-To reset, change the value to `1`.
-
-* * *
-
-```
 --USER__lineLength
 ```
 

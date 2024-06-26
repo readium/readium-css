@@ -683,7 +683,7 @@
     </navPoint>
     <navPoint id="navPoint113">
       <navLabel>
-        <text>Page margins</text>
+        <text>Line length</text>
       </navLabel>
       <content src="Text/Section-014.xhtml#sigil_toc_id_49" />
     </navPoint>

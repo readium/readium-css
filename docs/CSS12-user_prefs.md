@@ -163,7 +163,7 @@ To disable the normalization, you can either set an empty string as a value or r
 
 ### Layout 
 
-The user can set the number of columns and page margins.
+The user can set the number of columns and line length.
 
 #### Number of columns
 
@@ -182,24 +182,6 @@ To reset, change the value to `auto`.
 By default, this setting behaves as an `auto` value, it will switch to 1 or 2 columns depending on the minimum `width` available and `font-size`.
 
 It is up to implementers to decide whether they want this setting to be available and override any configuration or only some (e.g. setting only available in landscape and/or larger screens).
-
-#### Page margins
-
-```
---USER__pageMargins
-```
-
-Recommended values: a range from `0.5` to `2`.  Increments are left to implementers’ judgment.
-
-Required flag: none
-
-Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
-
-To reset, change the value to `1`.
-
-The user margins are a factor of the reference we set.
-
-This will probably be fine-tuned in the next version (beta).
 
 #### Line length
 

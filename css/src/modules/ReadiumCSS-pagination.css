@@ -15,7 +15,7 @@
 /* Default for smartphone portrait (small screens) */
 :root {
   /* Your columns’ width floor */
-  --RS__colWidth: 45em; /* The width at which we’ll switch to 2 columns by default. PS: you can’t set it in rem */
+  --RS__colWidth: 100vw; /* The width at which we’ll switch to 2 columns by default. PS: you can’t set it in rem */
 
   /* Ideal number of columns (depending on columns’ width floor) */
   --RS__colCount: 1;

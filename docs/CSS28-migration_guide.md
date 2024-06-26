@@ -67,4 +67,8 @@ It is indeed possible to re-implement the page margins user setting by using the
 
 Otherwise, the line-length user setting can be a set of predefined values, a range, etc. It accepts the values that the CSS properties `max-width|height` do.
 
-As a side effect, `--RS__pageGutter` is now set to `0` as default. This means no `padding` is applied to neither the `:root` nor `body` elements.
+As a side effect, `--RS__pageGutter` is now set to `0` as default. This means no `padding` is applied to neither the `:root` nor `body` elements. This is to make sure ReadiumCSS gives you what you expect when applying the setting, w/o anything creating inconsistencies and unreliabilities.
+
+You can set the value yourself so that you are aware of it, or design the setting logic around it. 
+
+This setting will be applied in all conditions (1 or 2-col pagination, scroll) so you might want to make sure it can work for all three, and maybe adjust the values accordingly.

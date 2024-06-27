@@ -14,4 +14,5 @@ httpServer.listen(httpPort, (err) => {
 });
 
 app.use("/tests", express.static(__dirname + "/tests"));
+app.use("/css/demo", express.static(__dirname + "/css/demo"));
 app.use("/css/dist", express.static(__dirname + "/css/dist"));

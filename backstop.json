@@ -56,6 +56,13 @@
       "misMatchThreshold" : 0.1
     },
     {
+      "label": "Line length pref",
+      "url": "http://localhost:8000/tests/line-length.html",
+      "delay": 0,
+      "selectors": ["viewport"],
+      "misMatchThreshold" : 0.1
+    },
+    {
       "label": "Scroll pref",
       "url": "http://localhost:8000/tests/scroll.html",
       "delay": 0,

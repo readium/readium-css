@@ -572,13 +572,13 @@ The number of columns (`column-count`) the user wants displayed (one-page view o
 
 Scope: `html`
 
-Possible values: `1` | `2` | `auto` (default)
+Possible values: `1` | `2`
 
 Required flag: none
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
-To reset, change the value to `auto`.
+To reset, remove the variable.
 
 * * *
 

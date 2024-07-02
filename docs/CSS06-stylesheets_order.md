@@ -62,6 +62,7 @@ The following modules must be appended after the author’s stylesheets (`Readiu
     10. `ReadiumCSS-paraSpacing_pref.css` (or `ReadiumCSS-paraSpacing-vertical_pref.css` for CJK – vertical writing mode)
     11. `ReadiumCSS-paraIndent_pref.css` (does not apply to CJK scripts)
     12. `ReadiumCSS-wordSpacing_pref.css` (does not apply to RTL and CJK scripts)
-    13. `ReadiumCSS-letterSpacing_pref.css` (does not apply to RTL and CJK scripts)
+    13. `ReadiumCSS-letterSpacing_pref.css` (does not apply to RTL scripts, except in vertical writing mode)
     14. `ReadiumCSS-arabicLigatures_pref.css` (RTL only)
+    15. `ReadiumCSS-ruby_pref.css` (CJK only)
 8. `ReadiumCSS-fs_normalize.css`

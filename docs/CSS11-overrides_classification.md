@@ -32,7 +32,7 @@ The following settings are optional but should be applied by any means necessary
 The following settings are required and should be applied with their required flag by any means necessary:
 
 - font-family (requires `:--font-overide` flag);
-- font-size (requires `:--advanced-settings` flag).
+- font-size.
 
 ## User overrides advanced
 

@@ -86,7 +86,7 @@
 
       <p>Scope: <code>html</code></p>
 
-      <p>Override class: None. This flag is required to apply the <code>font-family</code>, the <code>font-size</code> and/or advanced user settings.</p>
+      <p>Override class: None. This flag is required to apply the <code>font-family</code> and advanced user settings.</p>
 
       <hr/>
 
@@ -616,6 +616,10 @@
 
       <p>It impacts <code>body</code>, <code>p</code>, <code>li</code>, <code>div</code>, <code>dt</code>, <code>dd</code> and phrasing elements which don’t have a <code>lang</code> or <code>xml:lang</code> attribute.</p>
 
+      <p>Possible values: <code>var(--RS__oldStyleTf)</code> | <code>var(--RS__modernTf)</code> | <code>var(--RS__sansTf)</code> | <code>var(--RS__humanistTf)</code> | <code>&lt;string&gt;</code></p>
+
+      <p>For Japanese, possible values become: <code>var(--RS__serif-ja)</code> (horizontal writing) | <code>var(--RS__sans-serif-ja)</code> (horizontal writing) | <code>var(--RS__serif-ja-v)</code> (vertical writing) | <code>var(--RS__sans-serif-ja-v)</code> (vertical writing) | <code>&lt;string&gt;</code></p>
+
       <p>Required flag: <code>:--fontOverride</code></p>
 
       <p>Override class: User settings (should be applied by any means necessary)</p>
@@ -630,11 +634,7 @@
 
       <p>Scope: <code>html</code></p>
 
-      <p>Possible values: <code>var(--RS__oldStyleTf)</code> | <code>var(--RS__modernTf)</code> | <code>var(--RS__sansTf)</code> | <code>var(--RS__humanistTf)</code> | <code>&lt;string&gt;</code></p>
-
-      <p>For Japanese, possible values become: <code>var(--RS__serif-ja)</code> (horizontal writing) | <code>var(--RS__sans-serif-ja)</code> (horizontal writing) | <code>var(--RS__serif-ja-v)</code> (vertical writing) | <code>var(--RS__sans-serif-ja-v)</code> (vertical writing) | <code>&lt;string&gt;</code></p>
-
-      <p>Required flag: <code>:--fontOverride</code></p>
+      <p>Possible values: unitless <code>number</code> or percentage</p>
 
       <p>Override class: User settings (should be applied by any means necessary)</p>
 

@@ -84,7 +84,7 @@ Preset: `--USER__advancedSettings: readium-advanced-on`
 
 Scope: `html`
 
-Override class: None. This flag is required to apply the `font-family`, the `font-size` and/or advanced user settings.
+Override class: None. This flag is required to apply the `font-family` and advanced user settings.
 
 * * * 
 
@@ -692,6 +692,10 @@ Scope: `html`
 
 It impacts `body`, `p`, `li`, `div`, `dt`, `dd` and phrasing elements which don’t have a `lang` or `xml:lang` attribute.
 
+Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)` | `<string>`
+
+For Japanese, possible values become: `var(--RS__serif-ja)` (horizontal writing) | `var(--RS__sans-serif-ja)` (horizontal writing) | `var(--RS__serif-ja-v)` (vertical writing) | `var(--RS__sans-serif-ja-v)` (vertical writing) | `<string>`
+
 Required flag: `:--fontOverride`
 
 Override class: User settings (should be applied by any means necessary)
@@ -708,11 +712,7 @@ Increasing and decreasing the root `font-size`. It will serve as a reference for
 
 Scope: `html`
 
-Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)` | `<string>`
-
-For Japanese, possible values become: `var(--RS__serif-ja)` (horizontal writing) | `var(--RS__sans-serif-ja)` (horizontal writing) | `var(--RS__serif-ja-v)` (vertical writing) | `var(--RS__sans-serif-ja-v)` (vertical writing) | `<string>`
-
-Required flag: `:--fontOverride`
+Possible values: unitless `number` or percentage.
 
 Override class: User settings (should be applied by any means necessary)
 

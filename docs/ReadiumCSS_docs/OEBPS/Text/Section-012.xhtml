@@ -120,7 +120,7 @@ root.style.setProperty("name of var", "");</code></pre>
 
         <p>Supported value: <code>readium-advanced-on</code></p>
 
-        <p>Override class: None. This flag is required to apply the <code>font-family</code>, the <code>font-size</code> and/or advanced user settings.</p>
+        <p>Override class: None. This flag is required to apply the <code>font-family</code> and advanced user settings.</p>
 
         <p>To switch back to the publisher’s styles, you can either set an empty string as a value or remove the property. This will disable all advanced settings requiring the flag.</p>
       </section>
@@ -297,9 +297,11 @@ root.style.setProperty("name of var", "");</code></pre>
         <section id="font-size" class="level4">
           <h4 class="sigil_not_in_toc">Font size</h4>
 
-          <p>We have to normalize <code>font-size</code> for body copy elements so that it can work in pure CSS. In order to do so, we are using a normalize. The <code>--USER__advancedSettings: readium-advanced-on</code> inline style must be set for <code>html</code> in order for the font-size setting to work.</p>
+          <p>In version 1 we had to normalize <code>font-size</code> for body copy elements so that it could work in pure CSS. In order to do so, we were using a normalize, and the <code>--USER__advancedSettings: readium-advanced-on</code> inline style needed to be set for <code>html</code> in order for the font-size setting to work.</p>
 
-          <p>Although it might be an issue to authors at first sight, this approach is backed by actual data.</p>
+          <p>Although this approach was backed by actual data (published books), it was an issue to authors and, occasionally, readers too.</p>
+
+          <p>In version 2, this normalization is deprecated, and will only be used behind the scenes when there is no other way to make the font-size setting work reliably.</p>
 
           <pre><code>--USER__fontSize</code></pre>
 
@@ -308,22 +310,6 @@ root.style.setProperty("name of var", "");</code></pre>
           <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
 
           <p>Override class: User settings (should be applied by any means necessary)</p>
-        </section>
-
-        <section id="type-scale" class="level4">
-          <h4 class="sigil_not_in_toc">Type scale</h4>
-
-          <p>If the <code>--USER__advancedSettings: readium-advanced-on</code> style is set for <code>html</code>, you can customize the <code>font-size</code> of all elements using a factor. This may come in handy on mobile devices, if the user sets a large font-size.</p>
-
-          <pre><code>--USER__typeScale</code></pre>
-
-          <p>Possible values: <code>1</code> | <code>1.067</code> | <code>1.125</code> | <code>1.2</code> (suggested default) | <code>1.25</code> | <code>1.333</code> | <code>1.414</code> | <code>1.5</code> | <code>1.618</code></p>
-
-          <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
-
-          <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
-
-          <p>You can use different type scale values depending on the <code>font-size</code>. For instance, if the user sets a large one, you might want to decrease the type scale so that headings are not super large.</p>
         </section>
 
         <section id="line-height" class="level4">

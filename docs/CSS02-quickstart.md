@@ -164,9 +164,9 @@ root.style.removeProperty("--USER__var");
 
 Please note you must implement a fallback strategy if you want to support Internet Explorer 11 and early versions of Microsoft Edge.
 
-### Examples
+### Example
 
-#### Changing hyphenation and justification
+To change hyphenation and justification you would do the following:
 
 ```
 root.style.setProperty("--USER__advancedSettings", "readium-advanced-on");
@@ -176,13 +176,6 @@ root.style.setProperty("--USER__bodyHyphens", "auto");
 
 Of course this example is simplistic. You could for instance create an helper to set multiple properties at once.
 
-#### Changing the type scale 
-
-You might want to change the type scale in order to adjust the `font-size` of all elements to the size of the screen and the global `font-size` set by the user. It can indeed help solve overflow issues for long words in headings, ridiculously large sizes, etc.
-
-```
-root.style.setProperty("--USER__advancedSettings", "readium-advanced-on");
-root.style.setProperty("--USER__typeScale", "1.067");
 ```
 
 ## Create Themes

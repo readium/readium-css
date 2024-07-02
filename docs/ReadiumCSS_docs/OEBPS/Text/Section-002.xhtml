@@ -217,27 +217,16 @@ root.style.removeProperty("--USER__var");</code></pre>
         <p>Please note you must implement a fallback strategy if you want to support Internet Explorer 11 and early versions of Microsoft Edge.</p>
       </section>
 
-      <section id="examples" class="level3">
-        <h3 class="sigil_not_in_toc">Examples</h3>
+      <section id="example" class="level3">
+        <h3 class="sigil_not_in_toc">Example</h3>
 
-        <section id="changing-hyphenation-and-justification" class="level4">
-          <h4 class="sigil_not_in_toc">Changing hyphenation and justification</h4>
+        <p>To change hyphenation and justification, you would do the following:</p>
 
-          <pre><code>root.style.setProperty("--USER__advancedSettings", "readium-advanced-on"); 
+        <pre><code>root.style.setProperty("--USER__advancedSettings", "readium-advanced-on"); 
 root.style.setProperty("--USER__textAlign", "justify"); 
 root.style.setProperty("--USER__bodyHyphens", "auto");</code></pre>
 
-          <p>Of course this example is simplistic. You could for instance create an helper to set multiple properties at once.</p>
-        </section>
-
-        <section id="changing-the-type-scale" class="level4">
-          <h4 class="sigil_not_in_toc">Changing the type scale</h4>
-
-          <p>You might want to change the type scale in order to adjust the <code>font-size</code> of all elements to the size of the screen and the global <code>font-size</code> set by the user. It can indeed help solve overflow issues for long words in headings, ridiculously large sizes, etc.</p>
-
-          <pre><code>root.style.setProperty("--USER__advancedSettings", "readium-advanced-on"); 
-root.style.setProperty("--USER__typeScale", "1.067");</code></pre>
-        </section>
+        <p>Of course this example is simplistic. You could for instance create an helper to set multiple properties at once.</p>
       </section>
     </section>
 

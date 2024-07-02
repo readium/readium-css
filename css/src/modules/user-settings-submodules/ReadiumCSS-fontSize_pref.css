@@ -7,5 +7,11 @@
    Repo: https://github.com/readium/readium-css */
 
 :root[style*="--USER__fontSize"] {
-  font-size: var(--USER__fontSize) !important;
+  zoom: var(--USER__fontSize) !important;
+}
+
+@supports not (zoom: 1) {
+  :root[style*="--USER__fontSize"] {
+    font-size: var(--USER__fontSize) !important;
+  }
 }

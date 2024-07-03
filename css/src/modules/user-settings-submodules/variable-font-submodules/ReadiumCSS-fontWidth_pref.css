@@ -1,0 +1,12 @@
+/* Readium CSS
+   Font width pref
+
+   A submodule managing font width for user settings
+   Part of “User Overrides” class – “font override” flag required.
+
+   Repo: https://github.com/readium/readium-css */
+
+/* We’re using calc to make sure the prop gets a percentage, and is not unitless */
+:root:--font-override[style*="--USER__fontWidth"] body {
+  font-stretch: calc(var(--USER__fontWidth) * 1%) !important;
+}

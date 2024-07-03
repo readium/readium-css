@@ -10,7 +10,7 @@
   font-weight: var(--USER__fontWeight) !important;
 }
 
-/* Attempt to handle known strongs */
+/* Attempt to handle known bolds */
 :root:--font-override[style*="--USER__fontWeight"] b,
 :root:--font-override[style*="--USER__fontWeight"] strong {
   font-weight: bolder;

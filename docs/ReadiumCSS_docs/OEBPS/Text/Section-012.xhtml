@@ -416,7 +416,7 @@ root.style.setProperty("name of var", "");</code></pre>
 
         <p>If a variable font is available and is currently used, the user can enable it’s optical sizing, and set its `weight` and `width`.</p>
 
-        <p>**Warning: All fonts don’t support all these variations.** ReadiumCSS provides these user settings for convenience but their implementation and use depends on the variable fonts you ship in your app. By very far, the most common variation is `weight` and may be considered a common denominator.</p>
+        <p><strong>Warning: All fonts don’t support all these variations.</strong> ReadiumCSS provides these user settings for convenience but their implementation and use depends on the variable fonts you ship in your app. By very far, the most common variation is `weight` and may be considered a common denominator.</p>
 
         <section id="font-optical-sizing" class="level4">
           <h4 class="sigil_not_in_toc">Font Optical Sizing</h4>
@@ -441,6 +441,8 @@ root.style.setProperty("name of var", "");</code></pre>
 
           <p>Possible values: number e.g. <code>230</code>, <code>400</code>, <code>750</code></p>
 
+          <p><strong>Warning: possible values depend on the variable font you may be using.</strong> You can use services such as <a href="https://wakamaifondue.com">Wakamai Fondue</a> to get the values.</p>
+
           <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
 
           <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
@@ -452,6 +454,8 @@ root.style.setProperty("name of var", "");</code></pre>
           <pre><code>--USER__fontWidth</code></pre>
 
           <p>Possible values: number e.g. <code>50</code>, <code>125</code></p>
+
+          <p><strong>Warning: possible values depend on the variable font you may be using.</strong> You can use services such as <a href="https://wakamaifondue.com">Wakamai Fondue</a> to get the values.</p>
 
           <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
 

@@ -870,6 +870,8 @@ It impacts all text.
 
 Possible values: `number`
 
+**Warning: possible values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
+
 Required flag: `:--fontOverride`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
@@ -887,6 +889,8 @@ Scope: `html`
 It impacts all text.
 
 Possible values: `number`
+
+**Warning: possible values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
 
 Required flag: `:--fontOverride`
 

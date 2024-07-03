@@ -412,6 +412,8 @@ Override class: User settings advanced (optional but should be applied by any me
 
 Possible values: number e.g. `230`, `400`, `750`
 
+**Warning: possible values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
+
 Required flag: `--USER__fontOverride: readium-font-on`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
@@ -423,6 +425,8 @@ Override class: User settings advanced (optional but should be applied by any me
 ```
 
 Possible values: number e.g. `50`, `125`
+
+**Warning: possible values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
 
 Required flag: `--USER__fontOverride: readium-font-on`
 

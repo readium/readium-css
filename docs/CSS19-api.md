@@ -837,3 +837,57 @@ Possible values: `none` | `common-ligatures`
 Required flag: `:--advancedSettings`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+* * *
+
+```
+--USER__fontOpticalSizing
+```
+
+Enabling and disabling optical sizing (stroke optimizations).
+
+Scope: `html`
+
+It impacts all text.
+
+Possible values: `none` | `auto`
+
+Required flag: `:--fontOverride`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+* * *
+
+```
+--USER__fontWeight
+```
+
+Setting the weight of the variable font.
+
+Scope: `html`
+
+It impacts all text.
+
+Possible values: `number`
+
+Required flag: `:--fontOverride`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+* * *
+
+```
+--USER__fontWidth
+```
+
+Setting the width of the variable font.
+
+Scope: `html`
+
+It impacts all text.
+
+Possible values: `number`
+
+Required flag: `:--fontOverride`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)

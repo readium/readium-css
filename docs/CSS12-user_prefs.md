@@ -382,6 +382,52 @@ Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
+### Font variations
+
+If a variable font is available and is currently used, the user can enable it’s optical sizing, and set its `weight` and `width`.
+
+**Warning: All fonts don’t support all these variations.** ReadiumCSS provides these user settings for convenience but their implementation and use depends on the variable fonts you ship in your app. By very far, the most common variation is `weight` and may be considered a common denominator. 
+
+#### Font Optical Sizing
+
+```
+--USER__fontOpticalSizing
+```
+
+Rendering engines and browsers enable optical sizing by default for fonts that have an optical size variation axis.
+
+When optical sizing is used, small text sizes are often rendered with thicker strokes and larger serifs, whereas larger text is often rendered more delicately with more contrast between thicker and thinner strokes.
+
+Possible values: `none` | `auto` (default)
+
+Required flag: `--USER__fontOverride: readium-font-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+#### Font Weight
+
+```
+--USER__fontWeight
+```
+
+Possible values: number e.g. `230`, `400`, `750`
+
+Required flag: `--USER__fontOverride: readium-font-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+#### Font Width
+
+```
+--USER__fontWidth
+```
+
+Possible values: number e.g. `50`, `125`
+
+Required flag: `--USER__fontOverride: readium-font-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
 ## Themes
 
 In this model, themes are just a set of user variables with specific values.

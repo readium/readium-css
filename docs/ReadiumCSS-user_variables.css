@@ -32,4 +32,8 @@
   --USER__invertImages: ;     /* any value */
 
   --USER__ligatures: ;        /* none | common-ligatures */
+
+  --USER__fontOpticalSizing: ; /* none | auto */
+  --USER__fontWeight: ; /* number */
+  --USER__fontWidth: ; /* number */
 }

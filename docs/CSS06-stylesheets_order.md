@@ -64,4 +64,5 @@ The following modules must be appended after the author’s stylesheets (`Readiu
     12. `ReadiumCSS-wordSpacing_pref.css` (does not apply to RTL and CJK scripts)
     13. `ReadiumCSS-letterSpacing_pref.css` (does not apply to RTL and CJK scripts)
     14. `ReadiumCSS-arabicLigatures_pref.css` (RTL only)
+    15. `ReadiumCSS-variableFont_pref.css` (this contains optical sizing, weight and width prefs)
 8. `ReadiumCSS-fs_normalize.css`

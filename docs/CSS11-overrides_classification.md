@@ -36,7 +36,7 @@ The following settings are required and should be applied with their required fl
 
 ## User overrides advanced
 
-The following settings are optional but should be applied by any means necessary, with the `:--advanced-setting` flag, if they are provided to users:
+The following settings are optional but should be applied by any means necessary, with the `:--advanced-setting` flag unless otherwise stated, if they are provided to users:
 
 - line-height;
 - text-align and hyphens (those two should probably work together);
@@ -46,6 +46,9 @@ The following settings are optional but should be applied by any means necessary
 - word-spacing;
 - arabic ligatures;
 - accessibility normalization;
+- font optical sizing (requires `:--font-overide` flag and a variable font);
+- font weight (requires `:--font-overide` flag and a variable font);
+- font width (requires `:--font-overide` flag and a variable font);
 - type scale.
 
 Please note this classification might change and additional items be added in the future.

@@ -410,6 +410,54 @@ root.style.setProperty("name of var", "");</code></pre>
           <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
         </section>
       </section>
+
+      <section id="font-variations" class="level3">
+        <h3 class="sigil_not_in_toc">Font variations</h3>
+
+        <p>If a variable font is available and is currently used, the user can enable it’s optical sizing, and set its `weight` and `width`.</p>
+
+        <p>**Warning: All fonts don’t support all these variations.** ReadiumCSS provides these user settings for convenience but their implementation and use depends on the variable fonts you ship in your app. By very far, the most common variation is `weight` and may be considered a common denominator.</p>
+
+        <section id="font-optical-sizing" class="level4">
+          <h4 class="sigil_not_in_toc">Font Optical Sizing</h4>
+
+          <pre><code>--USER__fontOpticalSizing</code></pre>
+
+          <p>Rendering engines and browsers enable optical sizing by default for fonts that have an optical size variation axis.</p>
+
+          <p>When optical sizing is used, small text sizes are often rendered with thicker strokes and larger serifs, whereas larger text is often rendered more delicately with more contrast between thicker and thinner strokes.</p>
+
+          <p>Possible values: <code>none</code> | <code>auto</code> (default)</p>
+
+          <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
+
+          <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+        </section>
+
+        <section id="font-weight" class="level4">
+          <h4 class="sigil_not_in_toc">Font Weight</h4>
+
+          <pre><code>--USER__fontWeight</code></pre>
+
+          <p>Possible values: number e.g. <code>230</code>, <code>400</code>, <code>750</code></p>
+
+          <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
+
+          <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+        </section>
+
+        <section id="font-width" class="level4">
+          <h4 class="sigil_not_in_toc">Font Width</h4>
+
+          <pre><code>--USER__fontWidth</code></pre>
+
+          <p>Possible values: number e.g. <code>50</code>, <code>125</code></p>
+
+          <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
+
+          <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+        </section>
+      </section>
     </section>
 
     <section id="themes" class="level2">

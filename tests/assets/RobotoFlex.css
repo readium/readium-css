@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "RobotoFlex";
+  src: url(RobotoFlex.ttf) format("truetype");
+  font-stretch: 50% 200%;
+  font-style: normal;
+  font-weight: 100 1000;
+}

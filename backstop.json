@@ -187,6 +187,27 @@
       "delay": 0,
       "selectors": ["document"],
       "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Font optical sizing pref",
+      "url": "http://localhost:8000/tests/font-optical-sizing.html",
+      "delay": 0,
+      "selectors": ["document"],
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Font weight pref",
+      "url": "http://localhost:8000/tests/font-weight.html",
+      "delay": 0,
+      "selectors": ["document"],
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Font width pref",
+      "url": "http://localhost:8000/tests/font-width.html",
+      "delay": 0,
+      "selectors": ["document"],
+      "misMatchThreshold" : 0.1
     }
   ],
   "paths": {

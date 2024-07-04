@@ -35,5 +35,5 @@
 
   --USER__fontOpticalSizing: ; /* none | auto */
   --USER__fontWeight: ; /* number */
-  --USER__fontWidth: ; /* number */
+  --USER__fontWidth: ; /* ultra-condensed | extra-condensed | condensed | semi-condensed | normal | semi-expanded | expanded | extra-expanded | ultra-expanded | percentage */
 }

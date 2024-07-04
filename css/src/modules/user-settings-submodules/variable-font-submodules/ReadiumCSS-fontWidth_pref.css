@@ -6,7 +6,6 @@
 
    Repo: https://github.com/readium/readium-css */
 
-/* We’re using calc to make sure the prop gets a percentage, and is not unitless */
 :root:--font-override[style*="--USER__fontWidth"] body {
-  font-stretch: calc(var(--USER__fontWidth) * 1%) !important;
+  font-stretch: var(--USER__fontWidth) !important;
 }

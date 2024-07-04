@@ -410,7 +410,7 @@ Override class: User settings advanced (optional but should be applied by any me
 --USER__fontWeight
 ```
 
-Possible values: number e.g. `230`, `400`, `750`
+Possible values: `number` e.g. `230`, `400`, `750`
 
 **Warning: possible values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
 
@@ -424,9 +424,9 @@ Override class: User settings advanced (optional but should be applied by any me
 --USER__fontWidth
 ```
 
-Possible values: number e.g. `50`, `125`
+Possible values: `ultra-condensed` | `extra-condensed` | `condensed` | `semi-condensed` | `normal` | `semi-expanded` | `expanded` | `extra-expanded` | `ultra-expanded` | `percentage` e.g. `50%`, `125%`
 
-**Warning: possible values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
+**Warning: the percentage values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
 
 Required flag: `--USER__fontOverride: readium-font-on`
 

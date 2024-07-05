@@ -85,7 +85,7 @@
 }
 
 body {
-  /*  overflow: hidden; bugfix: contents won’t paginate in Firefox and one sample in Safari */
+  overflow: hidden;
   width: 100%;
 
   /* Limit line-length but we have to reset when 2 columns and control the viewport.
@@ -99,4 +99,15 @@ body {
      which means it impacts colWidth and max-width */
   box-sizing: border-box;
   padding: 0 var(--RS__pageGutter) !important;
+}
+
+@supports (overflow: clip) {
+   :root {
+      overflow: clip;
+   }
+
+   body {
+      overflow: clip;
+      overflow-clip-margin: content-box;
+   }
 }

@@ -235,6 +235,11 @@
       font-stretch: extra-expanded;
     }
 
+    .optical-sizing-heading {
+      font-family: var(--custom-font);
+      font-size: 2rem;
+    }
+
     .optical-sizing {
       font-family: var(--custom-font);
     }
@@ -1157,9 +1162,20 @@
     <section id="font-optical-sizing" data-checker="on">
       <h3>Font optical sizing</h3>
 
-      <p class="optical-sizing">This paragraph should allow the browser to enable optical sizing i.e. contrast of strokes and serifs.</p>
+      <div>
+        <div class="optical-sizing">
+          <h4 class="optical-sizing-heading">Optical sizing auto</h4>
 
-      <p class="optical-sizing-none">This paragraph should forbid the browser to enable optical sizing i.e. contrast of strokes and serifs.</p>
+          <p>This section should allow the browser to enable optical sizing i.e. contrast of strokes and serifs.</p>
+        </div>
+      
+
+      <div class="optical-sizing-none">
+        <h4 class="optical-sizing-heading">Optical sizing none</h4>
+
+        <p>This section should forbid the browser to enable optical sizing i.e. contrast of strokes and serifs.</p>
+      </div>
+    </div>
     </section>
   </section>
 </main>

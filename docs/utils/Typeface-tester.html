@@ -273,7 +273,9 @@
   <section id="how-to">
     <h2>How-to</h2>
     
-    <p>First pick a reference (default) font then a custom one in the inputs located in the top right corner so that you can compare them. Both can either be a font installed locally e.g. <code>Georgia</code> or a google font e.g. <code>google:Noto Serif</code> – there should be no space after the <code>google:</code> prefix and you must use the name of the font as seen on Google Fonts without quotes.</p>
+    <p>First pick a reference (default) font then a custom one in the inputs located in the top right corner so that you can compare them. Both can either be a font installed locally e.g. <code>Georgia</code> or a google font e.g. <code>google:Noto Serif</code>.</p>
+
+    <p>If testing a variable font, add the variations Google Fonts gives you for this font e.g. <br/><code>google:Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000</code></p>
 
     <p>You can quickly compare their metrics (you can change the word and text by clicking the left sample in “Comparison”, typing your text then pressing return) to see if the custom font can be a proper alternative.</p>
 
@@ -1232,7 +1234,7 @@
         previousLoader.parentElement.removeChild(previousLoader);
       }
 
-      var val = customFont.value,
+      var val = customFont.value.replace("+", " "),
           loadFont = val.split(":");
       
       if (loadFont[0] === "google") {
@@ -1240,7 +1242,7 @@
         
         newCustom = loadFont[1];
         loader.id = "font-loader";
-        loader.innerHTML = "WebFont.load({ google:{families:['"+ loadFont[1] +"']}});";
+        loader.innerHTML = "WebFont.load({ google:{families:['"+ val.replace("google:", "") +"']}});";
         document.body.appendChild(loader);
       } else {
         newCustom = customFont.value;

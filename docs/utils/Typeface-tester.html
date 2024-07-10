@@ -201,34 +201,46 @@
     }
 
     .weight-230 {
+      font-family: var(--custom-font);
       font-weight: 230;
     }
 
     .weight-normal {
+      font-family: var(--custom-font);
       font-weight: normal;
     }
 
     .weight-bold {
+      font-family: var(--custom-font);
       font-weight: bold;
     }
 
     .weight-850 {
+      font-family: var(--custom-font);
       font-weight: 850;
     }
 
     .width-ec {
+      font-family: var(--custom-font);
       font-stretch: extra-condensed;
     }
 
     .width-normal {
+      font-family: var(--custom-font);
       font-stretch: normal;
     }
 
     .width-ee {
+      font-family: var(--custom-font);
       font-stretch: extra-expanded;
     }
 
     .optical-sizing {
+      font-family: var(--custom-font);
+    }
+
+    .optical-sizing-none {
+      font-family: var(--custom-font);
       font-optical-sizing: none;
     }
 
@@ -1143,9 +1155,9 @@
     <section id="font-optical-sizing" data-checker="on">
       <h3>Font optical sizing</h3>
 
-      <p>This paragraph should allow the browser to enable optical sizing i.e. contrast of strokes and serifs.</p>
+      <p class="optical-sizing">This paragraph should allow the browser to enable optical sizing i.e. contrast of strokes and serifs.</p>
 
-      <p class="optical-sizing">This paragraph should forbid the browser to enable optical sizing i.e. contrast of strokes and serifs.</p>
+      <p class="optical-sizing-none">This paragraph should forbid the browser to enable optical sizing i.e. contrast of strokes and serifs.</p>
     </section>
   </section>
 </main>

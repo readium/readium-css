@@ -166,7 +166,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: none.
 
-Variations: weight.
+Variations: weight (300–800).
 
 #### IBM Plex Serif
 
@@ -222,7 +222,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: small caps, numeric figure values, numeric spacing values.
 
-Variations: optical sizing, weight.
+Variations: optical sizing, weight (200–900).
 
 #### Merriweather
 
@@ -306,7 +306,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: small caps, numeric figure values, numeric spacing values (and more).
 
-Variations: weight.
+Variations: weight (400–900).
 
 ### Sans-serif fonts
 
@@ -336,7 +336,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: numeric figure values, numeric spacing values.
 
-Variations: weight, width.
+Variations: weight (100–700), width (85–100).
 
 #### Fira Sans
 
@@ -392,7 +392,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: none.
 
-Variations: weight.
+Variations: weight (100–900).
 
 #### Merriweather Sans
 
@@ -420,7 +420,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: none.
 
-Variations: weight.
+Variations: weight (300–800).
 
 #### PT Sans
 
@@ -476,7 +476,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: numeric figure values.
 
-Variations: weight.
+Variations: weight (200–900).
 
 ### Windows
 

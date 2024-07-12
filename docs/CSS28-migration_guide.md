@@ -72,3 +72,19 @@ As a side effect, `--RS__pageGutter` is now set to `0` as default. This means no
 You can set the value yourself so that you are aware of it, or design the setting logic around it. 
 
 This setting will be applied in all conditions (1 or 2-col pagination, scroll) so you might want to make sure it can work for all three, and maybe adjust the values accordingly.
+
+## Support for variable fonts
+
+In version 2, ReadiumCSS provides support for three registered (read common) axes so that you can expose them as user settings. 
+
+1. `--USER__fontWeight`
+2. `--USER__fontWidth`
+3. `--USER__fontOpticalSizing`
+
+These are documented in [User Settings, Reading Modes, and Themes](CSS12-user_prefs.md#font-variations).
+
+To help implementers, a new document specific to [variable fonts](CSS10b-variable_fonts.md) has been created. It explains the challenges they’ll encounter, and lists a selection of open source and libre fonts they can embed in their Reading Systems/Apps.
+
+While it’s possible to provide users with a complete selection of variable fonts, implementation will be limited to font-weight (`--USER__fontWeight`) as it’s the most common axis all fonts support.
+
+If you want to implement the other two, you will have to do so on a variable font basis.

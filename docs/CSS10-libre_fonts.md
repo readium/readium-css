@@ -55,8 +55,6 @@ Then each font was:
 3. tested against the small capitals and numeric OpenType features;
 4. tested against the font-width, font-weight, and optical-sizing variations.
 
-**Note:** For some reason, a lot of Google Fonts don’t have the “™” character. Font stacks should consequently be fine-tuned so that this character doesn’t disrupt the reading experience.
-
 ## Results
 
 It is important to state that implementers can’t really go wrong with those 27 fonts. 

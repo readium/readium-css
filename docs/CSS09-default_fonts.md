@@ -98,7 +98,7 @@ Open Type features available for those fonts are:
 
 | Typeface       | Small-caps | Oldstyle nums | Linear nums | Proportional nums | Tabular nums |
 |----------------|:----------:|:-------------:|:-----------:|:-----------------:|:------------:|
-| San Fransisco  |      ✓     |       ✕       |      ✕      |         ✓         |       ✓      |
+| San Francisco  |      ✓     |       ✕       |      ✕      |         ✓         |       ✓      |
 | Segoe UI       |      ✓     |       ✓       |      ✓      |         ✓         |       ✓      |
 | Roboto         |      ✓     |       ✓       |      ✓      |         ✓         |       ✓      |
 | Helvetica Neue |      ✕     |       ✕       |      ✕      |         ✓         |       ✓      |
@@ -127,7 +127,7 @@ font-family: "Andale Mono", Consolas, monospace;
 
 Monospace will resolve to Droid Sans Mono on Android. 
 
-Apple is shipping a monospaced San Fransisco in High Sierra but it is still unclear how you can access it in CSS.
+Apple is shipping a monospaced San Francisco in High Sierra but it is still unclear how you can access it in CSS.
 
 ### Unicode ranges
 

@@ -113,7 +113,7 @@ Then each font was:
 
 #### Newsreader
 
-![](assets/Newsreader.png)
+![Newsreader compared to Palatino. Its x-height is slightly smaller but it’s also thicker. This is particularly noticeable at smaller font-sizes.](assets/Newsreader.png)
 
 Global info:
 
@@ -135,7 +135,7 @@ Variations: weight (`200–800`), optical sizing.
 
 #### EB Garamond
 
-![](assets/EB-Garamond.png)
+![EB Garamond compared to Iowan Old Style. Its x-height is significantly smaller, and it doesn’t feel specifically designed for lower-definition screens. Its main benefit is offering some familiarity as lots of books are using Adobe Garamond.](assets/EB-Garamond.png)
 
 Global info:
 
@@ -157,7 +157,7 @@ Variations: weight (`400–800`)
 
 #### Crimson Pro
 
-![](assets/Crimson-pro.png)
+![Crimson Pro compared to Charter. A lot smaller, a lot thicker. It works in body copy, although some readers may increase the font-size due to its x-height.](assets/Crimson-pro.png)
 
 Global info:
 
@@ -187,7 +187,7 @@ Variations: weight (`200–900`)
 
 #### Roboto Serif
 
-![](assets/Roboto-serif.png)
+![Roboto Serif compared to Georgia. It is remarkably larger and simpler in its design, so much so that it feels like a slab serif. There’s very little contrast in strokes, but it looks readable in body copy, although the user might want to increase line-height.](assets/Roboto-serif.png)
 
 Global info:
 
@@ -209,7 +209,7 @@ Variations: weight (`100–900`), width (`50–150`), optical sizing
 
 #### Source Serif Pro
 
-![](assets/Source-serif-pro.png)
+![Source Serif Pro compared to Georgia. It has a similar x-height but slightly less contrast in strokes. It is quite a good replacement and is as readable as its reference.](assets/Source-serif-pro.png)
 
 Global info:
 
@@ -239,7 +239,7 @@ Variations: weight (`200–900`), optical sizing
 
 #### Roboto Flex
 
-![](assets/Roboto-flex.png)
+![Roboto Flex compared to San Francisco Pro. It’s difficult to tell at first sight because it’s thicker, but its x-height is slightly smaller. Both look very similar though, and could help offer a consistent user experience across platforms.](assets/Roboto-flex.png)
 
 Global info:
 
@@ -250,7 +250,7 @@ Global info:
 
 Technical details:
 
-- Reference: San Fransisco (SF Pro)
+- Reference: San Francisco (SF Pro)
 - Classification: Sans serif
 
 Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Greek, Russian.
@@ -261,7 +261,7 @@ Variations: weight (`100–1000`), width (`25–151`), optical sizing
 
 #### Public Sans
 
-![](assets/Public-sans.png)
+![Public Sans compared to San Francisco Pro. It’s a little bit thicker and larger, with more complex shapes. This is quite noticeable in body copy, with a less neutral look that can work well in the reading context.](assets/Public-sans.png)
 
 Global info:
 
@@ -272,7 +272,7 @@ Global info:
 
 Technical details:
 
-- Reference: San Fransisco (SF Pro)
+- Reference: San Francisco (SF Pro)
 - Classification: Sans serif
 
 Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish.
@@ -289,7 +289,7 @@ Variations: weight (`100–900`)
 
 #### Cabin
 
-![](assets/Cabin.png)
+![Cabin compared to Gill Sans. It’s quite a reasonable match, but with a larger x-height that makes it easier to use on screens. It’s a lot more readable in body copy as a consequence, and also because it doesn’t borrow the design quirks of its reference.](assets/Cabin.png)
 
 Global info:
 
@@ -313,7 +313,7 @@ Variations: weight (`400–700`), width (`75–100`)
 
 #### Source Code Pro
 
-![](assets/Source-code-pro.png)
+![Source Code Pro compared to San Francisco Mono. Its design is less squarish and condensed, and it looks less mechanical as a consequence. It doesn’t necessarily make it more readable though, just different, especially as its x-height is smaller.](assets/Source-code-pro.png)
 
 Global info:
 
@@ -324,7 +324,7 @@ Global info:
 
 Technical details:
 
-- Reference: San Fransisco Code
+- Reference: San Francisco Mono
 - Classification: monospace
 
 Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Italian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Turkish, Greek, Russian.

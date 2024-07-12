@@ -311,7 +311,7 @@ Variations: weight (`400–900`).
 
 #### IBM Plex Sans
 
-![IBM Plex Sans compared to San Fransisco, the Apple’s system typeface. The typeface appears a little bit thicker and the design of some glyphs make it more legible. When comparing an entire paragraph, it feels quite similar but some letters like capital I are easier to differentiate, which is a plus for accessibility.](assets/plex-sans.png)
+![IBM Plex Sans compared to San Francisco, the Apple’s system typeface. The typeface appears a little bit thicker and the design of some glyphs make it more legible. When comparing an entire paragraph, it feels quite similar but some letters like capital I are easier to differentiate, which is a plus for accessibility.](assets/plex-sans.png)
 
 Global info:
 
@@ -322,7 +322,7 @@ Global info:
 
 Technical details:
 
-- Reference: San Fransisco
+- Reference: San Francisco
 - Classification: Sans
 - Styles: 16
 - Metrics: 
@@ -367,7 +367,7 @@ Variations: none.
 
 #### Libre Franklin
 
-![Libre Franklin compared to San Fransisco, the Apple’s system typeface. Libre Franklin appears a little bit thinner and feels definitely larger. When comparing an entire paragraph, it shows, although it is capable of keeping the same amount of words on each line.](assets/libre-franklin.png)
+![Libre Franklin compared to San Francisco, the Apple’s system typeface. Libre Franklin appears a little bit thinner and feels definitely larger. When comparing an entire paragraph, it shows, although it is capable of keeping the same amount of words on each line.](assets/libre-franklin.png)
 
 Global info:
 
@@ -395,7 +395,7 @@ Variations: weight (`100–900`).
 
 #### Merriweather Sans
 
-![Merriweather Sans compared to San Fransisco, the Apple’s system typeface. It appears bolder and feels decidedly larger. This is remarkable when comparing an entire paragraph, especially as its design is less neutral.](assets/merriweather-sans.png)
+![Merriweather Sans compared to San Francisco, the Apple’s system typeface. It appears bolder and feels decidedly larger. This is remarkable when comparing an entire paragraph, especially as its design is less neutral.](assets/merriweather-sans.png)
 
 Global info:
 
@@ -406,7 +406,7 @@ Global info:
 
 Technical details:
 
-- Reference: San Fransisco, Roboto
+- Reference: San Francisco, Roboto
 - Classification: Sans
 - Styles: 8
 - Metrics: 

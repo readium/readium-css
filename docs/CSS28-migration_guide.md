@@ -73,6 +73,16 @@ You can set the value yourself so that you are aware of it, or design the settin
 
 This setting will be applied in all conditions (1 or 2-col pagination, scroll) so you might want to make sure it can work for all three, and maybe adjust the values accordingly.
 
+## Improvement of overflow
+
+Version 2 ships with a couple of improvements specific to `overflow`.
+
+In version 1, some longer strings the rendering engine could not break and wrap would be visibly overflowing in the next column. In version 2, this is now clipped/hidden at the `body` level, in line with what other Reading Systems have been doing to mitigate this issue. 
+
+As a consequence, you should check whether this impacts progression within XHTML documents, depending on your implementation of gestures, taps, etc.
+
+If you already solved this issue by adding some styles for `overflow`, you may also have to remove these styles if possible, or report possible issues and malfunctions so that ReadiumCSS can improve `overflow` management more reliably.
+
 ## Updated default font stacks
 
 The default font stacks for latin in `ReadiumCSS-base` module have been updated to benefit from newer fonts on the Windows platform. They have also been extended to offer better coverage for Linux distributions, with project [modern font stacks](https://modernfontstacks.com) as a reference.

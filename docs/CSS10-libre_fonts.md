@@ -493,7 +493,11 @@ ReadiumCSS is shipping with 2 a11y-related fonts to be found in the `dist/fonts`
 
 Those fonts should be applied by those exact names as we need very precise fallbacks for missing characters. We may create variables in the future, once those fonts have been properly reviewed and validated.
 
-We can also recommend [Open Dyslexic](https://github.com/antijingoist/open-dyslexic), either in addition to or replacement of AccessibleDfa.
+In addition or replacement of AccessibleDfa, we can also recommend:
+
+- [Open Dyslexic](https://github.com/antijingoist/open-dyslexic);
+- [Luciole Vision](https://www.luciole-vision.com/luciole-en.html);
+- [Atkinson Hyperlegible](https://brailleinstitute.org/freefont).
 
 ## Recommended fonts for CJK
 

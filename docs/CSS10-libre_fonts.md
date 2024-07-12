@@ -52,7 +52,8 @@ Then each font was:
 
 1. compared to its closest reference (system font);
 2. tested against the latin, cyrillic and greek alphabets and languages;
-3. tested against the small capitals and numeric OpenType features.
+3. tested against the small capitals and numeric OpenType features;
+4. tested against the font-width, font-weight, and optical-sizing variations.
 
 **Note:** For some reason, a lot of Google Fonts don’t have the “™” character. Font stacks should consequently be fine-tuned so that this character doesn’t disrupt the reading experience.
 
@@ -166,7 +167,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: none.
 
-Variations: weight (300–800).
+Variations: weight (`300–800`).
 
 #### IBM Plex Serif
 
@@ -222,7 +223,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: small caps, numeric figure values, numeric spacing values.
 
-Variations: optical sizing, weight (200–900).
+Variations: optical sizing, weight (`200–900`).
 
 #### Merriweather
 
@@ -306,7 +307,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: small caps, numeric figure values, numeric spacing values (and more).
 
-Variations: weight (400–900).
+Variations: weight (`400–900`).
 
 ### Sans-serif fonts
 
@@ -336,7 +337,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: numeric figure values, numeric spacing values.
 
-Variations: weight (100–700), width (85–100).
+Variations: weight (`100–700`), width (`85–100`).
 
 #### Fira Sans
 
@@ -392,7 +393,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: none.
 
-Variations: weight (100–900).
+Variations: weight (`100–900`).
 
 #### Merriweather Sans
 
@@ -420,7 +421,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: none.
 
-Variations: weight (300–800).
+Variations: weight (`300–800`).
 
 #### PT Sans
 
@@ -476,7 +477,7 @@ Supported Languages: Albanian, Bosnian, Czech, Danish, Dutch, Estonian, Finnish,
 
 OpenType Features: numeric figure values.
 
-Variations: weight (200–900).
+Variations: weight (`200–900`).
 
 ### Windows
 

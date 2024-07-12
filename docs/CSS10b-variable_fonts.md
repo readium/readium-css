@@ -34,7 +34,7 @@ Usually, you will end up with font faces that are commonly bundled in OSes (syst
 
 Unfortunately, the challenge with variable fonts is that few of the system fonts actually are variable. Which makes it very challenging to create font-stacks with extensive fallbacks. 
 
-To date, it seems that you can only cover MacOS and iOS reliably, thanks to San Fransisco Pro (`sans-serif`, `monospace`) and New York (`serif`).
+To date, it seems that you can only cover MacOS and iOS reliably, thanks to San Francisco (SF Pro for `sans-serif`, SF Mono for `monospace`) and New York (`serif`).
 
 This means your variable font stacks will look something like this.
 
@@ -53,6 +53,44 @@ If anything it shows how important it is at the moment to:
 
 1. make sure the variable fonts you’ll pick can be loaded reliably; 
 2. cover the languages you’re targeting.
+
+## System Fonts
+
+### MacOS/iOS
+
+#### San Francisco Pro (sans-serif)
+
+![San Francisco Pro compared to Helvetica. It has a smaller x-height but is no less legible. If feels like a little bit more rounded in body copy as well.](assets/sf-pro.png)
+
+CSS Mapping: `ui-sans-serif`
+
+OpenType Features: small caps, numeric spacing values.
+
+Variations: weight (`1–1000`), width (`30–150`), optical sizing.
+
+#### New York (serif)
+
+![New York compared to Times. It has a larger x-height and feels more sharp, with greater contrast in strokes and simpler serifs. It’s a lot more readable and balanced in small body copy.](assets/new-york.png)
+
+CSS Mapping: `ui-serif`
+
+OpenType Features: small caps, numeric figure values, numeric spacing values.
+
+Variations: weight (`400–1000`), optical sizing.
+
+#### San Francisco Mono (monospace)
+
+![SF Mono compared to Courier. It’s a lot more modern and has a larger x-height. With a simpler design, it’s also a lot more neutral and readable.](assets/sf-monospace.png)
+
+CSS Mapping: `ui-monospace`
+
+OpenType Features: small caps.
+
+Variations: weight (`300–900`).
+
+### Others
+
+TBD
 
 ## How were these fonts picked
 

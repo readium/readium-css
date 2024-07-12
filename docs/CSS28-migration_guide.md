@@ -83,6 +83,14 @@ As a consequence, you should check whether this impacts progression within XHTML
 
 If you already solved this issue by adding some styles for `overflow`, you may also have to remove these styles if possible, or report possible issues and malfunctions so that ReadiumCSS can improve `overflow` management more reliably.
 
+## Re-implementation of the font-size user setting
+
+In version 1, ReadiumCSS had to rely on the `:root`’s `font-size` and the cascade. In order to make it reliable, a font-normalization patch was used to get around author stylesheets’ using absolute values like `px` or `pt`. This created important side effects and their resolution was long overdue.
+
+In version 2, ReadiumCSS switched to `zoom`, which makes the patch no longer needed, except for rendering engines/browsers that don’t support this CSS property.
+
+It doesn’t need any change at the implementation level, and should work out of the box. All is handled behind the scenes in ReadiumCSS font-size module.
+
 ## Updated default font stacks
 
 The default font stacks for latin in `ReadiumCSS-base` module have been updated to benefit from newer fonts on the Windows platform. They have also been extended to offer better coverage for Linux distributions, with project [modern font stacks](https://modernfontstacks.com) as a reference.

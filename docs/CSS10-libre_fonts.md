@@ -4,7 +4,7 @@
 
 While we recommend using system fonts to get the best performance whenever possible, implementers might want to use Open Source Fonts to offer more choice to users. On the Android platform, for instance, system fonts are limited to one typeface per generic family (`serif`, `sans-serif`, `fantasy`, `monospace`, and `cursive`), which means implementers don’t get a lot of options out of the box.
 
-Consequently, amongst the thousands of fonts available online, a pre-selection of 28 typefaces have been reviewed extensively. Those typefaces were selected based on multiple factors: 
+Consequently, amongst the thousands of fonts available online, a pre-selection of 27 typefaces have been reviewed extensively. Those typefaces were selected based on multiple factors: 
 
 1. they have enough styles (at least the 4 “core styles” i.e. `regular`, `italic`, `bold`, `bold italic`) so that implementers don’t break authors’ expectations;
 2. they can be used in body copy;
@@ -46,7 +46,7 @@ Here’s the complete list of those 27 fonts:
 
 Each of the 27 fonts has been undergoing tests in real rendering situations. 
 
-They were rendered on the Android, iOS, MacOS, and Windows platforms, using SD and HD displays when possible, in multiple browsers (IE11, Edge, Safari, Chrome, Firefox), and in different reading modes (day, sepia, night).
+They were rendered on the Android, iOS, MacOS, and Windows platforms, using SD and HD displays when possible, in multiple browsers (Edge, Safari, Chrome, Firefox), and in different reading modes (day, sepia, night).
 
 Then each font was:
 

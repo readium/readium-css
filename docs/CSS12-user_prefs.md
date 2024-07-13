@@ -384,7 +384,7 @@ Override class: User settings advanced (optional but should be applied by any me
 
 ### Font variations
 
-If a variable font is available and is currently used, the user can enable it’s optical sizing, and set its `weight` and `width`.
+If a variable font is available and is currently used, the user can disable its optical sizing, and set its `weight` and `width`.
 
 **Warning: All fonts don’t support all these variations.** ReadiumCSS provides these user settings for convenience but their implementation and use depends on the variable fonts you ship in your app. By very far, the most common variation is `weight` and may be considered a common denominator. 
 

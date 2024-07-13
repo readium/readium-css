@@ -6,7 +6,7 @@ With the advent of variable fonts, the font-weight user setting has become a sta
 
 The custom properties were chosen as they are part of the registered, or most common axes (see [MDN’s Variable fonts guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) for more). But that doesn’t mean all variable fonts support these axes.
 
-By very far, the most common axis is `font-weight`, which might explain why reading apps and devices limit user settings to it. And why you might want to, if you don’t want to handle user settings on a variable font basis.
+By very far, the most common axis is `font-weight`, which might explain why reading apps and devices limit user settings to it. And why you actually might want too, as handling the font variation settings on a font basis might not fit your User Experience.
 
 In addition, availability of bundled/system fonts in OSes makes it even more challenging, which is why we are providing a list of variable fonts you can embed/bundle/import in your Reading System or app.
 
@@ -94,7 +94,7 @@ TBD
 
 ## How were these fonts picked
 
-The overarching goal was to provide variable font stacks mapped to the default ones listed in [Typefaces and font-stacks](CSS09-default_fonts.md) e.g. in Latin, Old Style, Modern, Neutral, Humanist, and monospace.
+The overarching goal was to provide variable fonts mapped to the default stacks listed in [Typefaces and font-stacks](CSS09-default_fonts.md) e.g. in Latin, Old Style, Modern, Neutral, Humanist, and monospace.
 
 Then, each of the fonts has been undergoing tests in real rendering situations. 
 
@@ -179,7 +179,7 @@ Variations: weight (`200–900`)
 
 ### Modern (serif)
 
-#### From Open source and libre fonts we already Recommended
+#### From Open source and libre fonts we already recommended
 
 - [Faustina](CSS10-libre_fonts.md#faustina)
 - [Literata](CSS10-libre_fonts.md#literata)
@@ -231,7 +231,7 @@ Variations: weight (`200–900`), optical sizing
 
 ### Neutral (sans-serif)
 
-#### From Open source and libre fonts we already Recommended
+#### From Open source and libre fonts we already recommended
 
 - [IBM Plex Sans](CSS10-libre_fonts.md#ibm-plex-sans)
 - [Libre Franklin](CSS10-libre_fonts.md#libre-franklin)
@@ -283,7 +283,7 @@ Variations: weight (`100–900`)
 
 ### Humanist (sans-serif)
 
-#### From Open source and libre fonts we already Recommended
+#### From Open source and libre fonts we already recommended
 
 - [Source Sans Pro](CSS10-libre_fonts.md#source-sans-pro)
 

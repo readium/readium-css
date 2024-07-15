@@ -57,7 +57,7 @@
     <item href="Text/Section-010.xhtml" id="Section-010.xhtml" media-type="application/xhtml+xml"/>
     <item href="Text/Section-021.xhtml" id="Section-021.xhtml" media-type="application/xhtml+xml"/>
     <item href="Images/charis-sil.png" id="charis-sil.png" media-type="image/png"/>
-    <item href="Images/clear-sans.png" id="clear-sans.png" media-type="image/png"/>
+    <item href="Images/plex-sans.png" id="plex-sans.png" media-type="image/png"/>
     <item href="Images/faustina.png" id="faustina.png" media-type="image/png"/>
     <item href="Images/fira-sans.png" id="fira-sans.png" media-type="image/png"/>
     <item href="Images/libre-franklin.png" id="libre-franklin.png" media-type="image/png"/>
@@ -76,6 +76,19 @@
     <item href="Text/Section-016.xhtml" id="Section-016.xhtml" media-type="application/xhtml+xml"/>
     <item href="Text/Section-027.xhtml" id="Section-027.xhtml" media-type="application/xhtml+xml"/>
     <item href="Images/alt-lines.png" id="alt-lines.png" media-type="image/png"/>
+    <item href="Text/Section-010b.xhtml" id="Section-010b.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Cabin.png" href="Images/Cabin.png" media-type="image/png"/>
+    <item id="Crimson-pro.png" href="Images/Crimson-pro.png" media-type="image/png"/>
+    <item id="EB-Garamond.png" href="Images/EB-Garamond.png" media-type="image/png"/>
+    <item id="new-york.png" href="Images/new-york.png" media-type="image/png"/>
+    <item id="Newsreader.png" href="Images/Newsreader.png" media-type="image/png"/>
+    <item id="Public-sans.png" href="Images/Public-sans.png" media-type="image/png"/>
+    <item id="Roboto-flex.png" href="Images/Roboto-flex.png" media-type="image/png"/>
+    <item id="Roboto-serif.png" href="Images/Roboto-serif.png" media-type="image/png"/>
+    <item id="sf-monospace.png" href="Images/sf-monospace.png" media-type="image/png"/>
+    <item id="sf-pro.png" href="Images/sf-pro.png" media-type="image/png"/>
+    <item id="Source-code-pro.png" href="Images/Source-code-pro.png" media-type="image/png"/>
+    <item id="Source-serif-pro.png" href="Images/Source-serif-pro.png" media-type="image/png"/>
   </manifest>
   <spine toc="ncx">
     <itemref idref="cover_xhtml"/>
@@ -90,6 +103,7 @@
     <itemref idref="Section-008.xhtml"/>
     <itemref idref="Section-009.xhtml"/>
     <itemref idref="Section-010.xhtml"/>
+    <itemref idref="Section-010b.xhtml"/>
     <itemref idref="Section-011.xhtml"/>
     <itemref idref="Section-012.xhtml"/>
     <itemref idref="Section-013.xhtml"/>

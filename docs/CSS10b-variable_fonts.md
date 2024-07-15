@@ -43,7 +43,7 @@ This means your variable font stacks will look something like this.
 font-family: "Name of your variable font", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
 /** Serif **/
-font-family: "Name of your variable font", ui-serif, serif
+font-family: "Name of your variable font", ui-serif, serif;
 
 /** Monospace **/
 font-family: "Name of your variable font", ui-monospace, monospace;

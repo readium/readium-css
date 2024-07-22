@@ -56,7 +56,7 @@ If anything it shows how important it is at the moment to:
 
 ## System Fonts
 
-It is important to note OSes may bundle fonts in a wide variety of weights, but that are not variable fonts *per se* e.g. True Type Collection (`.ttc`) on MacOS for instance.
+It is important to note OSes may bundle fonts in a wide variety of weights, but that are not variable fonts *per se* e.g. True Type Collection (`.ttc`).
 
 This is the case for Helvetica Neue or Seravek, but this means their weight can not be arbitrarily set on a range, they only offers predefined values (`100, 200, 300, 400, 500, 700`).
 
@@ -93,6 +93,28 @@ CSS Mapping: `ui-monospace`
 OpenType Features: small caps.
 
 Variations: weight (`300–900`).
+
+### Windows 11
+
+#### Segoe UI Variable (sans-serif)
+
+![Segoe UI Variable compared to Arial. It’s more readable with a smaller x-height but larger ascenders and descenders. It’s also more condensed, which makes some glyphs more legible.](assets/segoe-ui-variable.png)
+
+CSS Mapping: `Segoe UI Variable`
+
+OpenType Features: small caps, numeric figure values.
+
+Variations: weight (`200–700`), optical sizing.
+
+#### Sitka (serif)
+
+![Sitka compared to Times New Roman. It’s a lot thicker and sharper, which helps on all types of screens. It’s far more readable as body copy, with a larger x-height.](assets/sitka.png)
+
+CSS Mapping: `Sitka`
+
+OpenType Features: small caps, numeric figure values.
+
+Variations: weight (`400–700`), optical sizing.
 
 ### Others
 

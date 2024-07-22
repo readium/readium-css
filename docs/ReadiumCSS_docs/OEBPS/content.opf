@@ -89,6 +89,8 @@
     <item id="sf-pro.png" href="Images/sf-pro.png" media-type="image/png"/>
     <item id="Source-code-pro.png" href="Images/Source-code-pro.png" media-type="image/png"/>
     <item id="Source-serif-pro.png" href="Images/Source-serif-pro.png" media-type="image/png"/>
+    <item id="segoe-ui-variable.png" href="Images/segoe-ui-variable.png" media-type="image/png"/>
+    <item id="sitka.png" href="Images/sitka.png" media-type="image/png"/>
   </manifest>
   <spine toc="ncx">
     <itemref idref="cover_xhtml"/>

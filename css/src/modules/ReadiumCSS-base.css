@@ -17,11 +17,11 @@
 
 :root {
   /* Default font-stacks */
-  --RS__oldStyleTf: "Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif;
-  --RS__modernTf: Athelas, Constantia, Georgia, serif;
-  --RS__sansTf: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --RS__humanistTf: Seravek, Calibri, Roboto, Arial, sans-serif;
-  --RS__monospaceTf: "Andale Mono", Consolas, monospace;
+  --RS__oldStyleTf: "Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", "URW Palladio L", P052, serif;
+  --RS__modernTf: Athelas, Constantia, Charter, "Bitstream Charter", Cambria, "Georgia Pro", Georgia, serif;
+  --RS__sansTf: -ui-sans-serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", "Arial Nova", "Liberation Sans", Arial, sans-serif;
+  --RS__humanistTf: Seravek, Calibri, "Gill Sans Nova", Roboto, Ubuntu, "DejaVu Sans", source-sans-pro, sans-serif;
+  --RS__monospaceTf: ui-monospace, "Andale Mono", "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 
   /* Config */
   --RS__baseFontFamily: var(--RS__oldStyleTf);

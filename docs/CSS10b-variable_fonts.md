@@ -56,6 +56,12 @@ If anything it shows how important it is at the moment to:
 
 ## System Fonts
 
+It is important to note OSes may bundle fonts in a wide variety of weights, but that are not variable fonts *per se* e.g. True Type Collection (`.ttc`) on MacOS for instance.
+
+This is the case for Helvetica Neue or Seravek, but this means their weight can not be arbitrarily set on a range, they only offers predefined values (`100, 200, 300, 400, 500, 700`).
+
+You may however find that acceptable as pseudo-variable fonts to expose to users since the `--USER__fontWeight` setting will mostly work as expected, or at least fallback fonts.
+ 
 ### MacOS/iOS
 
 #### San Francisco Pro (sans-serif)

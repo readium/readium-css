@@ -75,6 +75,12 @@ font-family: "Name of your variable font", ui-monospace, monospace;</code></pre>
     <section id="system-fonts" class="level2">
       <h2 id="sigil_toc_id_201">System Fonts</h2>
 
+      <p>It is important to note OSes may bundle fonts in a wide variety of weights, but that are not variable fonts <i>per se</i> e.g. True Type Collection (<code>.ttc</code>) on MacOS for instance.</p>
+
+      <p>This is the case for Helvetica Neue or Seravek, but this means their weight can not be arbitrarily set on a range, they only offers predefined values (`100, 200, 300, 400, 500, 700`).</p>
+
+      <p>You may however find them acceptable as pseudo-variable fonts to expose to users since the <code>--USER__fontWeight`</code> setting will mostly work as expected, or at least fallback fonts.</p>
+
       <section id="macosios" class="level3">
         <h3 class="sigil_not_in_toc">MacOS/iOS</h3>
 

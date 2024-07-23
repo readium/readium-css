@@ -73,6 +73,16 @@ You can set the value yourself so that you are aware of it, or design the settin
 
 This setting will be applied in all conditions (1 or 2-col pagination, scroll) so you might want to make sure it can work for all three, and maybe adjust the values accordingly.
 
+## Updated default font stacks
+
+The default font stacks for latin in `ReadiumCSS-base` module have been updated to benefit from newer fonts on the Windows platform. They have also been extended to offer better coverage for Linux distributions, with project [modern font stacks](https://modernfontstacks.com) as a reference.
+
+## Updated recommandations for libre and open source fonts
+
+Typeface Clear Sans has been replaced with IBM Plex Sans, the former project having been archived, with no more design and development happening in the future.
+
+Luciole Vision and Atkinson Hyperlegible have been added to the list of recommended fonts for accessibility. Due to its unknown copyright, font [Maqroo](https://maqroo.com) couldn’t be added to this list for arabic.
+
 ## Support for variable fonts
 
 In version 2, ReadiumCSS provides support for three registered (read common) axes so that you can expose them as user settings. 

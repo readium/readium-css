@@ -57,7 +57,7 @@ This is a modernized version taking popular Linux distros and emoji into account
 ### Old Style (serif)
 
 ```
-font-family: "Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", "URW Palladio L", P052, serif;
+font-family: "Iowan Old Style", Sitka, "Sitka Text", Palatino, "Book Antiqua", "URW Palladio L", P052, serif;
 ```
 
 Serif will resolve to Droid Serif on Android.
@@ -91,7 +91,7 @@ Open Type features available for those fonts are:
 Same as UI font-stack or the following simplified version:
 
 ```
-font-family: -ui-sans-serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Noto, "Helvetica Neue", "Arial Nova", "Liberation Sans", Arial, sans-serif;
+font-family: -ui-sans-serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Inter, Roboto, Noto, "Helvetica Neue", "Arial Nova", "Liberation Sans", Arial, sans-serif;
 ```
 
 Open Type features available for those fonts are:

@@ -33,7 +33,7 @@ div {
 
 /* Size medias */
 /* You can override CSS variables by re-defining it for all elements or a specific one */
-img, svg, audio, video {
+img, svg|svg, audio, video {
   /* We probably don’t need to use modern box-sizing as auto behaves like it */
   box-sizing: var(--RS__boxSizingMedia);
 

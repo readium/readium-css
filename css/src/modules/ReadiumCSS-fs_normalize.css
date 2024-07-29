@@ -13,7 +13,7 @@
    Once the “Publisher’s styles” checkbox is unchecked, the normalize is applied automatically */
 
 @supports not (zoom: 1) {
-:root:--advanced-settings {
+  :root:--advanced-settings {
     --USER__typeScale: 1.2;
     /* This is the default type scale you’ll find in most publications */
   }

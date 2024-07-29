@@ -69,25 +69,15 @@ You can control horizontal margins in several ways:
 
 Please note that when using `padding`, you must take it into account when sizing `:root` and/or `body`. Their widths contain the padding set for the element.
 
-### The auto pagination model
+### The pagination model
 
-TODO: update section once tested and validated.
-
-The following illustrations are the two models you’ll have to deal with.
+This is the model you’re dealing with. It’s been simplified in version 2 in order to be more reliable.
 
 ![The single page model relies on the column width of the :root element. Line-length is constrained by the max-width of the body element, including its padding. Finally an auto margin centers the content.](assets/Page-Model.jpg)
 
-A single page is just a column which can grow to the entire width of the web view/iframe since it is declared for `html`.
+Page gutters are part of `body` (`--RS__pageGutter`), hence `--USER__lineLength` (or `--RS__defaultLineLength` if no user preference is set). Contents are centered in `:root` using the `auto` value for `body` margins.
 
-Page margins are part of `body`, hence `--RS__maxLineLength`. Contents are centered using the `auto` value for `body` margins.
-
-![The two-column spread model is somehow simpler in the sense the column width is the minimum value that must be reached for this model to be applied. We are relying on left and right padding instead of column-gap for gutters.](assets/spread-model.jpg)
-
-In the spread model, i.e. two columns, the `--RS__colWidth` is a floor: once the minimum width available (viewport) can’t contain 2 columns (the value is computed from the `font-size` user setting), we switch to the single page model.
-
-For instance, if `--RS__colWidth` is `20em` and the `font-size`, `100%` (`16px`), then the floor is `320px`. If 2 columns can fit in the viewport, the spread model is applied. If they can’t, the page model is applied. Hence, if the user sets the `font-size` at `200%` (`32px`), the floor is `640px`, which means the viewport should be at least `1240px`-wide to apply the spread model.
-
-Since we still limit line-length in the spread model, you might want to limit the web view/iframe size so that you don’t end up with wide gaps on large screens (or add `padding` to `:root`, and take it into account when scrolling).
+By default, `--RS__pageGutter` is set to `0`. You can set it as you wish, but take into account it will substract from `--USER__lineLength`. 
 
 #### Variables you can set
 
@@ -135,7 +125,15 @@ The horizontal page margins. It must be set in pixels so that it won’t resize 
 --RS__defaultLineLength
 ```
 
-The default line-length when none is set by the user. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
+The default line-length when none is set by the user. It should be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
+
+* * *
+
+```
+__USER__lineLength
+```
+
+The line-length set by the user. It can be set in any unit CSS property `max-width` accepts.
 
 ### Right-to-left progression
 

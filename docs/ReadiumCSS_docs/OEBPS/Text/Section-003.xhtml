@@ -175,7 +175,7 @@
       <section id="right-to-left-progression" class="level3">
         <h3 class="sigil_not_in_toc">Right-to-left progression</h3>
 
-        <p>The auto pagination model will take care of itself if the correct <code>dir</code> attribute is set on <code>html</code> and <code>body</code>.</p>
+        <p>The pagination model will take care of itself if the correct <code>dir</code> attribute is set on <code>html</code> and <code>body</code>.</p>
 
         <p>In other words, if <code>dir="rtl"</code> is set for both elements, the column-progression will be automatically reversed.</p>
 
@@ -325,9 +325,11 @@ body {
       <section id="the-pagination-model-for-vertical-writing-modes" class="level3">
         <h3 class="sigil_not_in_toc">The pagination model for vertical writing modes</h3>
 
-        <p>When publications are in Chinese, Japanese, Korean, and Mongolian, and laid out with a <code>vertical-*</code> writing mode, we must switch to a different model since we can’t do a two-column spread.</p>
+        <p>When publications are in Chinese, Japanese, Korean, and Mongolian, and laid out with a <code>vertical-*</code> writing mode, we must switch to a different model.</p>
 
-        <p>Indeed, columns are automatically laid out on the <code>y-axis</code> (vertical) with such writing modes, and <a href="https://www.w3.org/TR/css-writing-modes-3/#changes-201512">the behavior of multi-column in orthogonal flows has been deferred to CSS Writing Modes Level 4</a>.</p>
+        <p>Indeed, columns are automatically laid out on the <code>y-axis</code> (vertical) with such writing modes, and <a href="https://www.w3.org/TR/css-writing-modes-3/#changes-201512">the behavior of multi-column in orthogonal flows has been deferred to CSS Writing Modes Level 4</a>. This means we must stick to a single column, and can’t support several columns – they are stacked on top of one another, which is not what is expected.</p>
+
+        <p>This also implies the scroll progression is vertical, hence horizontal navigation/swipes have to be re-mapped on this <code>y-axis</code>. You may also want to disable animations so that it doesn’t feel disorienting to users.</p>
 
         <p>We consequently use a “Fragmented Model”, as it differs significantly from the “Pagination Model”, especially the column-axis.</p>
 
@@ -520,7 +522,7 @@ body {
         <section id="when-not-to-use-the-fragmented-model" class="level4">
           <h4 class="sigil_not_in_toc">When not to use the fragmented model</h4>
 
-          <p>If a publication doesn’t need to be laid out in a <code>vertical-*</code> writing mode, the auto pagination model can be used.</p>
+          <p>If a publication doesn’t need to be laid out in a <code>vertical-*</code> writing mode, the default pagination model must be used.</p>
 
           <p>There are still specific styles for CJK Horizontal to load though.</p>
 

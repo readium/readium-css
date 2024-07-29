@@ -137,7 +137,7 @@ The line-length set by the user. It can be set in any unit CSS property `max-wid
 
 ### Right-to-left progression
 
-The auto pagination model will take care of itself if the correct `dir` attribute is set on `html` and `body`.
+The pagination model will take care of itself if the correct `dir` attribute is set on `html` and `body`.
 
 In other words, if `dir="rtl"` is set for both elements, the column-progression will be automatically reversed.
 
@@ -201,9 +201,11 @@ Note: While this isn’t necessarily the case in practice, in Blink, Gecko/Quant
 
 ### The pagination model for vertical writing modes
 
-When publications are in Chinese, Japanese, Korean, and Mongolian, and laid out with a `vertical-*` writing mode, we must switch to a different model since we can’t do a two-column spread.
+When publications are in Chinese, Japanese, Korean, and Mongolian, and laid out with a `vertical-*` writing mode, we must switch to a different model of pagination.
 
-Indeed, columns are automatically laid out on the `y-axis` (vertical) with such writing modes, and [the behavior of multi-column in orthogonal flows has been deferred to CSS Writing Modes Level 4](https://www.w3.org/TR/css-writing-modes-3/#changes-201512).
+Indeed, columns are automatically laid out on the `y-axis` (vertical) with such writing modes, and [the behavior of multi-column in orthogonal flows has been deferred to CSS Writing Modes Level 4](https://www.w3.org/TR/css-writing-modes-3/#changes-201512). This means we must stick to a single column, and can’t support several columns – they are stacked on top of one another, which is not what is expected.
+
+This also implies the scroll progression is vertical, hence horizontal navigation/swipes have to be re-mapped on this `y-axis`. You may also want to disable animations so that it doesn’t feel disorienting to users.
 
 We consequently use a “Fragmented Model”, as it differs significantly from the “Pagination Model”, especially the column-axis.
 
@@ -243,7 +245,7 @@ Test files can be retrieved from [the Readium CSS’ i18n-samples OPDS feed](htt
 
 #### When not to use the fragmented model
 
-If a publication doesn’t need to be laid out in a `vertical-*` writing mode, the auto pagination model can be used.
+If a publication doesn’t need to be laid out in a `vertical-*` writing mode, the default pagination model must be used.
 
 There are still specific styles for CJK Horizontal to load though.
 

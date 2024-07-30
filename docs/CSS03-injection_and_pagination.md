@@ -117,7 +117,7 @@ You must account for this gap when scrolling.
 --RS__pageGutter
 ```
 
-The horizontal page margins. It must be set in pixels so that it won’t resize with font size.
+The inline (horizontal by default, vertical in vertical-writing) page margins. It must be set in pixels so that it won’t resize with font size.
 
 * * *
 

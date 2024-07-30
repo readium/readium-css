@@ -211,9 +211,7 @@ We consequently use a “Fragmented Model”, as it differs significantly from t
 
 ![The fragmented Model is kind of a superset of the single page model in the vertical direction, with extra padding added to the root element for extra horizontal gutters.](assets/Fragmented-Model.jpg)
 
-One can think of the fragmented model as the single page model rotated 90% clockwise. The only difference is that `padding` is added to the `:root` (`html`) element so that text doesn’t run from edge to edge.
-
-Other options have been explored, e.g. a pseudo-algorithm mimicking `margin: auto`, using the `calc()` function, but it proved complex to manage well and raised serious performance issues, especially when resizing the window of a browser with documents making heavy use of `text-direction` and `text-combine-upright`.
+One can think of the fragmented model as the single page model rotated 90% clockwise.
 
 #### When to use the fragmented model
 

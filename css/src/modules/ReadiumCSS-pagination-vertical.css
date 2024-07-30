@@ -54,7 +54,7 @@
   height: 100vh;
   max-height: 100vh;
   margin: 0 !important;
-  padding: 0 var(--RS__pageGutter) !important;
+  padding: 0 !important;
 
   /* Init pagination */
   /* TODO: document columns’ logic cos it might feel weird at first */

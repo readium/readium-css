@@ -142,6 +142,18 @@ Override class: Chrome advanced (optional but should be applied by any means nec
 
 This will only apply in night mode to invert images and impact `img`.
 
+* * *
+
+```
+:--no-vertical-pagination
+```
+
+Preset: `--RS__disablePagination: readium-noVerticalPagination-on`
+
+Scope: `html`
+
+Override class: None. It’s a flag meant for implementers’ convenience as it disables vertical-writing pagination so that they can implement theirs.
+
 * * * 
 
 ```

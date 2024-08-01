@@ -213,6 +213,8 @@ We consequently use a “Fragmented Model”, as it differs significantly from t
 
 One can think of the fragmented model as the single page model rotated 90% clockwise.
 
+Since pagination is the default view, if you don’t want to use this model and implement yours, you can set `--RS__disablePagination: readium-noVerticalPagination-on` on the `:root` (`html`) element.
+
 #### When to use the fragmented model
 
 What implementers need to do:

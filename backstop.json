@@ -49,6 +49,13 @@
       "misMatchThreshold" : 0.1
     },
     {
+      "label": "3 columns pref",
+      "url": "http://localhost:8000/tests/cols-3.html",
+      "delay": 0,
+      "selectors": ["viewport"],
+      "misMatchThreshold" : 0.1
+    },
+    {
       "label": "Line length pref",
       "url": "http://localhost:8000/tests/line-length.html",
       "delay": 0,

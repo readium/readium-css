@@ -171,7 +171,7 @@ The user can set the number of columns and line length.
 --USER__colCount
 ```
 
-Possible values: `1` | `2`
+Possible values: `integer`
 
 Required flag: none
 
@@ -179,7 +179,7 @@ Override class: Chrome advanced (optional but should be applied by any means nec
 
 To reset, remove the variable.
 
-By default, this setting behaves as `1`.
+By default, this setting behaves as `1`. Value `0` is handled as an error and resolves to `1`.
 
 It is up to implementers to decide whether they want this setting to be available and override any configuration or only some (e.g. setting only available in landscape and/or larger screens).
 

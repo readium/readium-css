@@ -7,7 +7,7 @@
    Repo: https://github.com/readium/readium-css */
 
 :root {
-  --USER__colCount: ;         /* 1, 2 */
+  --USER__colCount: ;         /* integer */
   --USER__lineLength: ;       /* any value property max-width|height accepts */
 
   --USER__backgroundColor: ;  /* Custom color (not preset mode) */

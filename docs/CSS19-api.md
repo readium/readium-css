@@ -568,11 +568,11 @@ Custom properties for user settings are prefixed with `--USER__`.
 --USER__colCount
 ```
 
-The number of columns (`column-count`) the user wants displayed (one-page view or two-page spread).
+The number of columns (`column-count`) the user wants displayed (one-page view, two-page spread, 3 columns, etc.).
 
 Scope: `html`
 
-Possible values: `1` | `2`
+Possible values: `integer`. Value `0` is handled as an error and resolves to `1`.
 
 Required flag: none
 

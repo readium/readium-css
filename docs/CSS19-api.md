@@ -690,7 +690,7 @@ The typeface (`font-family`) the user wants to read with.
 
 Scope: `html`
 
-It impacts `body`, `p`, `li`, `div`, `dt`, `dd` and phrasing elements which don’t have a `lang` or `xml:lang` attribute.
+It impacts everything except `code `, `var`, `kbd`, and `samp`.
 
 Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)` | `<string>`
 

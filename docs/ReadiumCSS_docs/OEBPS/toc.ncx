@@ -1270,5 +1270,29 @@
       <content src="Text/Section-027.xhtml#sigil_toc_id_190" />
     </navPoint>
   </navPoint>
+  <navPoint id="navPoint205">
+    <navLabel>
+      <text>Migration Guide</text>
+    </navLabel>
+    <content src="Text/Section-028.xhtml" />
+    <navPoint id="navPoint206">
+      <navLabel>
+        <text>Removal of responsive columns</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_191" />
+    </navPoint>
+    <navPoint id="navPoint207">
+      <navLabel>
+        <text>Removal of -webkit-perspective hack for older versions of Chromium</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_192" />
+    </navPoint>
+    <navPoint id="navPoint208">
+      <navLabel>
+        <text>Replacement of page margins user setting with line length user setting</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_193" />
+    </navPoint>
+  </navPoint>
 </navMap>
 </ncx>

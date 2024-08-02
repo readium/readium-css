@@ -279,7 +279,7 @@ unicode-range: U+1400-167F;
 ## Japanese (ja)
 
 ```
-font-family: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
+font-family: YuGothic, "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
 ```
 
 ```

@@ -254,7 +254,7 @@ The box model (`box-sizing`) you want to use for tables.
 
 An old style serif font-stack relying on pre-installed fonts.
 
-Default is `"Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif`.
+Default is `"Iowan Old Style", Sitka, "Sitka Text", Palatino, "Book Antiqua", "URW Palladio L", P052, serif`.
 
 * * *
 
@@ -264,7 +264,7 @@ Default is `"Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif`.
 
 A modern serif font-stack relying on pre-installed fonts.
 
-Default is `Athelas, Constantia, Georgia, serif`.
+Default is `Athelas, Constantia, Charter, "Bitstream Charter", Cambria, "Georgia Pro", Georgia, serif`.
 
 * * *
 
@@ -274,7 +274,7 @@ Default is `Athelas, Constantia, Georgia, serif`.
 
 A neutral sans-serif font-stack relying on pre-installed fonts.
 
-Default is `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`.
+Default is `-ui-sans-serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Inter, Roboto, "Helvetica Neue", "Arial Nova", "Liberation Sans", Arial, sans-serif`.
 
 * * *
 
@@ -284,7 +284,7 @@ Default is `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "H
 
 A humanist sans-serif font-stack relying on pre-installed fonts.
 
-Default is `Seravek, Calibri, Roboto, Arial, sans-serif`.
+Default is `Seravek, Calibri, "Gill Sans Nova", Roboto, Ubuntu, "DejaVu Sans", source-sans-pro, sans-serif`.
 
 * * *
 
@@ -294,7 +294,7 @@ Default is `Seravek, Calibri, Roboto, Arial, sans-serif`.
 
 A monospace font-stack relying on pre-installed fonts.
 
-Default is `"Andale Mono", Consolas, monospace`.
+Default is `ui-monospace, "Andale Mono", "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace`.
 
 ### Default font-stacks for Japanese publications
 

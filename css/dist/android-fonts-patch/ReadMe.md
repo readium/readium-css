@@ -6,7 +6,7 @@ See https://github.com/readium/readium-css/issues/149
 
 ## What it does
 
-It declares open source fonts alternatives (Nimbus Roman and Nimbus Sans) as the font-families that generic font-family `serif` and `sans-serif` are usually resolving too on other platforms:
+It declares open source fonts alternatives (Nimbus Roman and Nimbus Sans) as the font-families that generic font-family `serif` and `sans-serif` are usually resolving to on other platforms:
 
 - `Nimbus Roman` as `Times` and `Times New Roman`;
 - `Nimbus Sans` as `Helvetica` and `Arial`.

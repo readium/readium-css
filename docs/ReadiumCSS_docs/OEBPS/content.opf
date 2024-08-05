@@ -6,9 +6,9 @@
     <meta property="role" refines="#cre" scheme="marc:relators">aut</meta>
     <dc:date id="epub-date">2017-08-24T14:12:26Z</dc:date>
     <dc:language>en</dc:language>
-    <dc:identifier id="epub-id-1">urn:uuid:91cab77e-946f-4814-9e61-8494a5d5cb0f</dc:identifier>
+    <dc:identifier id="epub-id-1">urn:uuid:527D093B-9C0A-4C83-8AF6-0A40E91D30FC</dc:identifier>
     <meta name="cover" content="cover_jpg"/>
-    <meta property="dcterms:modified">2024-08-02T14:18:00Z</meta>
+    <meta property="dcterms:modified">2024-08-05T08:35:00Z</meta>
     <meta content="0.9.5" name="Sigil version"/>
     <meta property="schema:accessibilityFeature">displayTransformability</meta>
     <meta property="schema:accessibilityFeature">readingOrder</meta>

@@ -35,8 +35,24 @@
       <p>If you want to reimplement an “auto” user setting, and switch to 1 or 2 columns depending on the orientation of the device or the width of the window, you now have to handle it programmatically.</p>
     </section>
 
+    <section id="number-of-columns-is-no-longer-limited" class="level2">
+      <h2 id="sigil_toc_id_192">Number of columns is no longer limited</h2>
+
+      <p>In version 1, ReadiumCSS limited the number of columns to <code>1</code> or <code>2</code>.</p>
+
+      <p>In version 2, the number of columns is no longer limited. Please note value <code>0</code> is handled as an error and resolves to <code>1</code> though.</p>
+    </section>
+
+    <section id="addition-of-a-flag-to-disable-vertical-writing-pagination" class="level2">
+      <h2 id="sigil_toc_id_193">Addition of a flag to disable vertical-writing pagination</h2>
+
+      <p>Given the limitations of columns fragmentation in vertical writing – progression direction from top to bottom instead of right to left, columns stacked on the <code>y-axis</code> –, some Reading Systems and apps have been disabling it, and implement their own logic.</p>
+
+      <p>Since pagination is the default view, it is now possible to disable it by appending <code>--RS__disablePagination: readium-noVerticalPagination-on</code> on the <code>:root</code> (<code>html</code>) element.</p>
+    </section>
+
     <section id="removal-of--webkit-perspective-hack-for-older-versions-of-chromium" class="level2">
-      <h2 id="sigil_toc_id_192">Removal of -webkit-perspective hack for older versions of Chromium</h2>
+      <h2 id="sigil_toc_id_194">Removal of -webkit-perspective hack for older versions of Chromium</h2>
 
       <p>The following hack was used in version 1:</p>
 
@@ -62,7 +78,7 @@
     </section>
 
     <section id="replacement-of-page-margins-user-setting-with-line-length-user-setting" class="level2">
-      <h2 id="sigil_toc_id_193">Replacement of page margins user setting with line length user setting</h2>
+      <h2 id="sigil_toc_id_195">Replacement of page margins user setting with line length user setting</h2>
 
       <p>In version 1 ReadiumCSS implemented a page margins user setting: <code>--USER__pageMargins</code>.</p>
 
@@ -79,6 +95,14 @@
       <p>You can set the value yourself so that you are aware of it, or design the setting logic around it.</p>
 
       <p>This setting will be applied in all conditions (1 or 2-col pagination, scroll) so you might want to make sure it can work for all three, and maybe adjust the values accordingly.</p>
+    </section>
+
+    <section id="extension-of-the-font-family-user-setting-override" class="level2">
+      <h2 id="sigil_toc_id_196">Extension of the font-family user setting override</h2>
+
+      <p>In version 1, the font-family user setting overrode a selection of elements of body copy e.g. <code>p</code>, <code>li</code>, <code>dt</code>, etc. This explained why the font-family of headings would remain the same as the one set in authors’ stylesheets for instance.</p>
+
+      <p>In version 2, the logic has changed and the override will now apply to everything except a handful of tags e.g. <code>code</code>, <code>var</code>, <code>samp</code>, and <code>kbd</code>. It is actually borrowed from the accessibility fonts and normalization module.</p>
     </section>
   </section>
 </body>

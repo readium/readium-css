@@ -15,7 +15,19 @@ As a side-effect, this “auto-pagination model” (think of it as an “auto”
 
 In version 2, ReadiumCSS removed these media queries and the “auto-pagination model” entirely. It applies styles the Reading System/app provides to it. Consequently, control over breakpoints is now the responsibility of the app. 
 
-If you want to reimplement an “auto” user setting, and switch to 1 or 2 columns depending on the orientation of the device or the width of the window, you now have to handle it programmatically. 
+If you want to reimplement an “auto” user setting, and switch to 1 or 2 columns depending on the orientation of the device or the width of the window, you now have to handle it programmatically.
+
+## Number of columns is no longer limited
+
+In version 1, ReadiumCSS limited the number of columns to `1` or `2`.
+
+In version 2, the number of columns is no longer limited. Please note value `0` is handled as an error and resolves to `1` though.
+
+## Addition of a flag to disable vertical-writing pagination
+
+Given the limitations of columns fragmentation in vertical writing – progression direction from top to bottom instead of right to left, columns stacked on the `y-axis` –, some Reading Systems and apps have been disabling it, and implement their own logic.
+
+Since pagination is the default view, it is now possible to disable it by appending `--RS__disablePagination: readium-noVerticalPagination-on` on the `:root` (`html`) element.
 
 ## Removal of -webkit-perspective hack for older versions of Chromium
 
@@ -90,6 +102,12 @@ In version 1, ReadiumCSS had to rely on the `:root`’s `font-size` and the casc
 In version 2, ReadiumCSS switched to `zoom`, which makes the patch no longer needed, except for rendering engines/browsers that don’t support this CSS property.
 
 It doesn’t need any change at the implementation level, and should work out of the box. All is handled behind the scenes in ReadiumCSS font-size module.
+
+## Extension of the font-family user setting override
+
+In version 1, the font-family user setting overrode a selection of elements of body copy e.g. `p`, `li`, `dt`, etc. This explained why the font-family of headings would remain the same as the one set in authors’ stylesheets for instance.
+
+In version 2, the logic has changed and the override will now apply to everything except a handful of tags e.g. `code`, `var`, `samp`, and `kbd`. It is actually borrowed from the accessibility fonts and normalization module.
 
 ## Updated default font stacks
 

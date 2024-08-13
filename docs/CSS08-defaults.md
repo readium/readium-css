@@ -92,7 +92,7 @@ A Mincho font-stack whose fonts with proportional latin characters are prioritiz
 
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
-Default is `"ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif`.
+Default is `"Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "BIZ UDPMincho", "Yu Mincho", "ＭＳ Ｐ明朝", "MS PMincho", serif`.
 
 * * *
 
@@ -104,7 +104,7 @@ A Gothic font-stack whose fonts with proportional latin characters are prioritiz
 
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
-Default is `"ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif`.
+Default is `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3", "YuGothic", "Yu Gothic Medium", "BIZ UDPGothic", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif`.
 
 * * *
 
@@ -116,7 +116,7 @@ A Mincho font-stack whose fonts with fixed-width latin characters are prioritize
 
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
-Default is `"ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif`.
+Default is `"Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "BIZ UDMincho", "Yu Mincho", "ＭＳ明朝", "MS Mincho", serif`.
 
 * * *
 
@@ -128,7 +128,7 @@ A Gothic font-stack whose fonts with fixed-width latin characters are prioritize
 
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
-Default is `"ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif`.
+Default is `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3", "YuGothic", "Yu Gothic Medium", "BIZ UDGothic", "Yu Gothic", "ＭＳゴシック", "MS Gothic", sans-serif`.
 
 #### Absolute defaults for all ebooks
 

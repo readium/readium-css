@@ -213,6 +213,8 @@ We consequently use a “Fragmented Model”, as it differs significantly from t
 
 One can think of the fragmented model as the single page model rotated 90% clockwise.
 
+Due to the limitations listed above, implementers may want to use their own model. It is not uncommon to handle vertical writing pagination programmatically, as it can be done relatively easily and efficiently thanks to characters being (mostly) monospace e.g. scrolling the viewport by an offset based on these characters.
+
 Since pagination is the default view, if you don’t want to use this model and implement yours, you can set `--RS__disablePagination: readium-noVerticalPagination-on` on the `:root` (`html`) element.
 
 #### When to use the fragmented model

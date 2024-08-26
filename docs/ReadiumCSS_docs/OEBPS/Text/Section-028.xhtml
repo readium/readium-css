@@ -97,12 +97,80 @@
       <p>This setting will be applied in all conditions (1 or 2-col pagination, scroll) so you might want to make sure it can work for all three, and maybe adjust the values accordingly.</p>
     </section>
 
+    <section id="improvement-of-overflow" class="level2">
+      <h2 id="sigil_toc_id_196">Improvement of overflow</h2>
+  
+      <p>Version 2 ships with a couple of improvements specific to <code>overflow</code>.</p>
+  
+      <p>In version 1, some longer strings the rendering engine could not break and wrap would be visibly overflowing in the next column. In version 2, this is now clipped/hidden at the <code>body</code> level, in line with what other Reading Systems have been doing to mitigate this issue.</p>
+  
+      <p>As a consequence, you should check whether this impacts progression within XHTML documents, depending on your implementation of gestures, taps, etc.</p>
+  
+      <p>If you already solved this issue by adding some styles for <code>overflow</code>, you may also have to remove these styles if possible, or report possible issues and malfunctions so that ReadiumCSS can improve <code>overflow</code> management more reliably.</p>
+    </section>
+
+    <section id="re-implementation-of-the-font-size-user-setting" class="level2">
+      <h2 id="sigil_toc_id_197">Re-implementation of the font-size user setting</h2>
+  
+      <p>In version 1, ReadiumCSS had to rely on the <code>:root</code>’s <code>font-size</code> and the cascade. In order to make it reliable, a font-normalization patch was used to get around author stylesheets’ using absolute values like <code>px</code> or <code>pt</code>. This created important side effects and their resolution was long overdue.</p>
+  
+      <p>In version 2, ReadiumCSS switched to <code>zoom</code>, which makes the patch no longer needed, except for rendering engines/browsers that don’t support this CSS property.</p>
+  
+      <p>It doesn’t need any change at the implementation level, and should work out of the box. All is handled behind the scenes in ReadiumCSS font-size module.</p>
+    </section>
+
     <section id="extension-of-the-font-family-user-setting-override" class="level2">
-      <h2 id="sigil_toc_id_196">Extension of the font-family user setting override</h2>
+      <h2 id="sigil_toc_id_198">Extension of the font-family user setting override</h2>
 
       <p>In version 1, the font-family user setting overrode a selection of elements of body copy e.g. <code>p</code>, <code>li</code>, <code>dt</code>, etc. This explained why the font-family of headings would remain the same as the one set in authors’ stylesheets for instance.</p>
 
       <p>In version 2, the logic has changed and the override will now apply to everything except a handful of tags e.g. <code>code</code>, <code>var</code>, <code>samp</code>, and <code>kbd</code>. It is actually borrowed from the accessibility fonts and normalization module.</p>
+    </section>
+
+    <section id="updated-default-font-stacks" class="level2">
+      <h2 id="sigil_toc_id_199">Updated default font stacks</h2>
+  
+      <p>The default font stacks for latin in <code>ReadiumCSS-base</code> module have been updated to benefit from newer fonts on the Windows platform. They have also been extended to offer better coverage for Linux distributions, with project <a href="https://modernfontstacks.com">modern font stacks</a> as a reference.</p>
+    </section>
+
+    <section id="updated-recommandations-for-libre-and-open-source-fonts" class="level2">
+      <h2 id="sigil_toc_id_200">Updated recommandations for libre and open source fonts</h2>
+  
+      <p>Typeface Clear Sans has been replaced with IBM Plex Sans, the former project having been archived, with no more design and development happening in the future.</p>
+  
+      <p>Luciole Vision and Atkinson Hyperlegible have been added to the list of recommended fonts for accessibility. Due to its unknown copyright, font <a href="https://maqroo.com">Maqroo</a> couldn’t be added to this list for arabic.</p>
+    </section>
+
+    <section id="support-for-variable-fonts" class="level2">
+      <h2 id="sigil_toc_id_201">Support for variable fonts</h2>
+  
+      <p>In version 2, ReadiumCSS provides support for three registered (read common) axes so that you can expose them as user settings.</p>
+  
+      <ol>
+        <li><code>--USER__fontWeight</code></li>
+  
+        <li><code>--USER__fontWidth</code></li>
+  
+        <li><code>--USER__fontOpticalSizing</code></li>
+      </ol>
+  
+      <p>These are documented in <a href="CSS12-user_prefs.md#font-variations">User Settings, Reading Modes, and Themes</a>.</p>
+  
+      <p>To help implementers, a new document specific to <a href="CSS10b-variable_fonts.md">variable fonts</a> has been created. It explains the challenges they’ll encounter, and lists a selection of open source and libre fonts they can embed in their Reading Systems/Apps.</p>
+  
+      <p>While it’s possible to provide users with a complete selection of variable fonts, implementation will be limited to font-weight (<code>--USER__fontWeight</code>) as it’s the most common axis all fonts support.</p>
+  
+      <p>If you want to implement the other two, you will have to do so on a variable font basis.</p>
+    </section>
+
+    <section id="addition-of-a-fonts-patch-for-android" class="level2">
+      <h2 id="sigil_toc_id_202">Addition of a fonts patch for Android</h2>
+  
+      <p>This patch is intended to fix a <a href="https://github.com/readium/readium-css/issues/149">Fixed-Layout issue on Android</a>, and only on this platform. <strong>It doesn’t apply to reflowable EPUBs or any other platform.</strong></p>
+  
+      <p>It declares fully metric compatible open source fonts alternatives (Nimbus Roman and Nimbus Sans) as the font-families that generic font-family <code>serif</code> and <code>sans-serif</code> are usually resolving to on other platforms. Droid Serif and Roboto are not, which creates issues with text that is absolutely positioned in Fixed-Layout e.g.&#160;overlapping or overflowing text, etc.</p>
+  
+      <p>The logic for loading this patch is up to implementers.</p>
     </section>
   </section>
 </body>

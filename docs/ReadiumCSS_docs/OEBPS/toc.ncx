@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
-<head>
-  <meta name="dtb:uid" content="urn:uuid:527D093B-9C0A-4C83-8AF6-0A40E91D30FC" />
-  <meta name="dtb:depth" content="2" />
-  <meta name="dtb:totalPageCount" content="0" />
-  <meta name="dtb:maxPageNumber" content="0" />
-</head>
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:527D093B-9C0A-4C83-8AF6-0A40E91D30FC" />
+    <meta name="dtb:depth" content="2" />
+    <meta name="dtb:totalPageCount" content="0" />
+    <meta name="dtb:maxPageNumber" content="0" />
+  </head>
 <docTitle>
   <text>Readium CSS Implementers’ doc</text>
 </docTitle>
@@ -1270,28 +1270,82 @@
       <content src="Text/Section-027.xhtml#sigil_toc_id_190" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint205">
+  <navPoint id="navPoint211">
     <navLabel>
       <text>Migration Guide</text>
     </navLabel>
     <content src="Text/Section-028.xhtml" />
-    <navPoint id="navPoint206">
+    <navPoint id="navPoint212">
       <navLabel>
         <text>Removal of responsive columns</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_191" />
     </navPoint>
-    <navPoint id="navPoint207">
+    <navPoint id="navPoint213">
       <navLabel>
-        <text>Removal of -webkit-perspective hack for older versions of Chromium</text>
+        <text>Number of columns is no longer limited</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_192" />
     </navPoint>
-    <navPoint id="navPoint208">
+    <navPoint id="navPoint214">
+      <navLabel>
+        <text>Addition of a flag to disable vertical-writing pagination</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_193" />
+    </navPoint>
+    <navPoint id="navPoint215">
+      <navLabel>
+        <text>Removal of -webkit-perspective hack for older versions of Chromium</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_194" />
+    </navPoint>
+    <navPoint id="navPoint216">
       <navLabel>
         <text>Replacement of page margins user setting with line length user setting</text>
       </navLabel>
-      <content src="Text/Section-028.xhtml#sigil_toc_id_193" />
+      <content src="Text/Section-028.xhtml#sigil_toc_id_195" />
+    </navPoint>
+    <navPoint id="navPoint217">
+      <navLabel>
+        <text>Improvement of overflow</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_196" />
+    </navPoint>
+    <navPoint id="navPoint218">
+      <navLabel>
+        <text>Re-implementation of the font-size user setting</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_197" />
+    </navPoint>
+    <navPoint id="navPoint219">
+      <navLabel>
+        <text>Extension of the font-family user setting override</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_198" />
+    </navPoint>
+    <navPoint id="navPoint220">
+      <navLabel>
+        <text>Updated default font stacks</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_199" />
+    </navPoint>
+    <navPoint id="navPoint221">
+      <navLabel>
+        <text>Updated recommandations for libre and open source fonts</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_200" />
+    </navPoint>
+    <navPoint id="navPoint222">
+      <navLabel>
+        <text>Support for variable fonts</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_201" />
+    </navPoint>
+    <navPoint id="navPoint223">
+      <navLabel>
+        <text>Addition of a fonts patch for Android</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_202" />
     </navPoint>
   </navPoint>
 </navMap>

@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 1.1.0)
+ * Readium CSS (v. 2.0.0-alpha.1)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -24,11 +24,11 @@
 }
 
 :root{
-  --RS__oldStyleTf:"Iowan Old Style", "Sitka Text", palatino, "Book Antiqua", serif;
-  --RS__modernTf:athelas, constantia, georgia, serif;
-  --RS__sansTf:-apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif;
-  --RS__humanistTf:seravek, calibri, roboto, arial, sans-serif;
-  --RS__monospaceTf:"Andale Mono", consolas, monospace;
+  --RS__oldStyleTf:"Iowan Old Style", sitka, "Sitka Text", palatino, "Book Antiqua", "URW Palladio L", p052, serif;
+  --RS__modernTf:athelas, constantia, charter, "Bitstream Charter", cambria, "Georgia Pro", georgia, serif;
+  --RS__sansTf:-ui-sans-serif, -apple-system, system-ui, blinkmacsystemfont, "Segoe UI Variable", "Segoe UI", inter, roboto, "Helvetica Neue", "Arial Nova", "Liberation Sans", arial, sans-serif;
+  --RS__humanistTf:seravek, calibri, "Gill Sans Nova", roboto, ubuntu, "DejaVu Sans", source-sans-pro, sans-serif;
+  --RS__monospaceTf:ui-monospace, "Andale Mono", "Cascadia Code", "Source Code Pro", menlo, consolas, "DejaVu Sans Mono", monospace;
   --RS__baseFontFamily:var(--RS__oldStyleTf);
   --RS__lineHeightCompensation:1;
   --RS__baseLineHeight:calc((1em + (2ex - 1ch) - ((1rem - 16px) * 0.1667)) * var(--RS__lineHeightCompensation));
@@ -382,15 +382,7 @@ ruby > rt, ruby > rp{
   --RS__boxSizingTable:border-box;
 }
 
-html{
-  -webkit-line-box-contain:block glyphs replaced;
-}
-
-:lang(ja){
-  -webkit-line-box-contain:block inline replaced;
-}
-
-a, h1, h2, h3, h4, h5, h6{
+a, a span, span a, h1, h2, h3, h4, h5, h6{
   word-wrap:break-word;
 }
 
@@ -398,7 +390,7 @@ div{
   max-width:var(--RS__maxMediaWidth);
 }
 
-img, svg, video{
+img, svg|svg, video{
   object-fit:contain;
 
   width:auto;

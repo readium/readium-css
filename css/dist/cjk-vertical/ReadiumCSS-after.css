@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 1.1.0)
+ * Readium CSS (v. 2.0.0-alpha.1)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -18,8 +18,8 @@
   --RS__colWidth:100vh;
   --RS__colCount:1;
   --RS__colGap:0;
-  --RS__maxLineLength:40rem;
-  --RS__pageGutter:20px;
+  --RS__defaultLineLength:40rem;
+  --RS__pageGutter:0;
 }
 
 @page{
@@ -47,7 +47,7 @@
   max-height:100vh;
   min-width:100%;
   min-height:100vh;
-  padding:0 var(--RS__pageGutter) !important;
+  padding:0 !important;
   margin:0 !important;
   font-size:100% !important;
 
@@ -55,7 +55,6 @@
   box-sizing:border-box;
 
   hanging-punctuation:last allow-end;
-  -webkit-perspective:1;
   -webkit-touch-callout:none;
   -ms-writing-mode:tb-rl;
   -webkit-writing-mode:vertical-rl;
@@ -70,41 +69,27 @@
 
 body{
   width:100%;
-  max-height:var(--RS__maxLineLength) !important;
+  max-height:var(--RS__defaultLineLength) !important;
   padding:var(--RS__pageGutter) 0 !important;
   margin:auto 0 !important;
+  overflow:hidden;
   box-sizing:border-box;
 }
 
-@media screen and (min-width: 35em){
+@supports (overflow: clip){
 
   :root{
-    --RS__pageGutter:30px;
+     overflow:clip;
+  }
+
+  body{
+     overflow:clip;
+     overflow-clip-margin:content-box;
   }
 }
 
-@media screen and (min-width: 45em){
-
-  :root{
-    --RS__pageGutter:40px;
-  }
-}
-
-@media screen and (min-width: 60em){
-
-  :root{
-    --RS__pageGutter:50px;
-  }
-}
-
-@media screen and (min-width: 75em){
-
-  :root{
-    --RS__pageGutter:60px;
-  }
-}
-
-:root[style*="readium-scroll-on"]{
+:root[style*="readium-scroll-on"],
+:root[style*="readium-noVerticalPagination-on"]{
   -webkit-columns:auto auto !important;
   -moz-columns:auto auto !important;
   columns:auto auto !important;
@@ -114,8 +99,20 @@ body{
   min-width:0 !important;
 }
 
-:root[style*="readium-scroll-on"] body{
-  --RS__maxLineLength:40.01rem !important;
+:root[style*="readium-scroll-on"] body,
+:root[style*="readium-noVerticalPagination-on"] body{
+  --RS__defaultLineLength:40.01rem !important;
+}
+
+@supports (overflow: clip){
+
+  :root[style*="readium-scroll-on"]{
+     overflow:auto;
+  }
+
+  :root[style*="readium-scroll-on"] body{
+     overflow:clip;
+  }
 }
 
 :root[style*="readium-night-on"]{
@@ -180,7 +177,7 @@ body{
   --RS__selectionBackgroundColor:#b4d8fe;
   --RS__selectionTextColor:inherit;
 
-  --RS__maxLineLength:40.01rem;
+  --RS__defaultLineLength:40.01rem;
 }
 
 :root[style*="readium-sepia-on"] *:not(a){
@@ -270,9 +267,9 @@ body{
 @media screen and (prefers-reduced-motion){
 }
 
-:root[style*="--USER__pageMargins"] body{
-  padding:calc(var(--RS__pageGutter) * var(--USER__pageMargins)) 0 !important;
-}
+:root[style*="--USER__lineLength"] body{
+    max-height:var(--USER__lineLength) !important;
+  }
 
 :root[style*="--USER__backgroundColor"]{
   background-color:var(--USER__backgroundColor) !important;
@@ -294,32 +291,19 @@ body{
   font-family:var(--USER__fontFamily) !important;
 }
 
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] body,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] p,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] li,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] div,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] dt,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] dd{
-  font-family:inherit !important;
-}
-
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] i:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] i:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] em:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] em:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] cite:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] cite:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] b:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] b:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] strong:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] strong:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] span:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] span:not([xml\:lang]){
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] *:not(code):not(var):not(kbd):not(samp){
   font-family:inherit !important;
 }
 
 :root[style*="--USER__fontSize"]{
-  font-size:var(--USER__fontSize) !important;
+  zoom:var(--USER__fontSize) !important;
+}
+
+@supports not (zoom: 1){
+
+  :root[style*="--USER__fontSize"]{
+    font-size:var(--USER__fontSize) !important;
+  }
 }
 
 :root[style*="readium-advanced-on"][style*="--USER__lineHeight"]{
@@ -336,6 +320,23 @@ body{
 :root[style*="readium-advanced-on"][style*="--USER__paraSpacing"] p{
   margin-right:var(--USER__paraSpacing) !important;
   margin-left:var(--USER__paraSpacing) !important;
+}
+
+:root[style*="readium-font-on"][style*="--USER__fontWeight"] body{
+  font-weight:var(--USER__fontWeight) !important;
+}
+
+:root[style*="readium-font-on"][style*="--USER__fontWeight"] b,
+:root[style*="readium-font-on"][style*="--USER__fontWeight"] strong{
+  font-weight:bolder;
+}
+
+:root[style*="readium-font-on"][style*="--USER__fontWidth"] body{
+  font-stretch:var(--USER__fontWidth) !important;
+}
+
+:root[style*="readium-font-on"][style*="--USER__fontOpticalSizing"] body{
+  font-optical-sizing:var(--USER__fontOpticalSizing) !important;
 }
 
 :root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] h1,
@@ -356,56 +357,59 @@ body{
   display:none;
 }
 
-:root[style*="readium-advanced-on"]{
-  --USER__typeScale:1.2;
-}
+@supports not (zoom: 1){
 
-:root[style*="readium-advanced-on"] p,
-:root[style*="readium-advanced-on"] li,
-:root[style*="readium-advanced-on"] div,
-:root[style*="readium-advanced-on"] pre,
-:root[style*="readium-advanced-on"] dd{
-  font-size:1rem !important;
-}
+  :root[style*="readium-advanced-on"]{
+    --USER__typeScale:1.2;
+  }
 
-:root[style*="readium-advanced-on"] h1{
-  font-size:1.75rem !important;
-  font-size:calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
-}
+  :root[style*="readium-advanced-on"] p,
+  :root[style*="readium-advanced-on"] li,
+  :root[style*="readium-advanced-on"] div,
+  :root[style*="readium-advanced-on"] pre,
+  :root[style*="readium-advanced-on"] dd{
+    font-size:1rem !important;
+  }
 
-:root[style*="readium-advanced-on"] h2{
-  font-size:1.5rem !important;
-  font-size:calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
-}
+  :root[style*="readium-advanced-on"] h1{
+    font-size:1.75rem !important;
+    font-size:calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+  }
 
-:root[style*="readium-advanced-on"] h3{
-  font-size:1.25rem !important;
-  font-size:calc(1rem * var(--USER__typeScale)) !important;
-}
+  :root[style*="readium-advanced-on"] h2{
+    font-size:1.5rem !important;
+    font-size:calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+  }
 
-:root[style*="readium-advanced-on"] h4,
-:root[style*="readium-advanced-on"] h5,
-:root[style*="readium-advanced-on"] h6{
-  font-size:1rem !important;
-}
+  :root[style*="readium-advanced-on"] h3{
+    font-size:1.25rem !important;
+    font-size:calc(1rem * var(--USER__typeScale)) !important;
+  }
 
-:root[style*="readium-advanced-on"] small{
-  font-size:smaller !important;
-}
+  :root[style*="readium-advanced-on"] h4,
+  :root[style*="readium-advanced-on"] h5,
+  :root[style*="readium-advanced-on"] h6{
+    font-size:1rem !important;
+  }
 
-:root[style*="readium-advanced-on"] sub,
-:root[style*="readium-advanced-on"] sup{
-  font-size:67.5% !important;
-}
+  :root[style*="readium-advanced-on"] small{
+    font-size:smaller !important;
+  }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h1{
-  font-size:calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
-}
+  :root[style*="readium-advanced-on"] sub,
+  :root[style*="readium-advanced-on"] sup{
+    font-size:67.5% !important;
+  }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h2{
-  font-size:calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
-}
+  :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h1{
+    font-size:calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+  }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3{
-  font-size:calc(1rem * var(--USER__typeScale)) !important;
+  :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h2{
+    font-size:calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+  }
+
+  :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3{
+    font-size:calc(1rem * var(--USER__typeScale)) !important;
+  }
 }

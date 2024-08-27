@@ -32,6 +32,9 @@
 /* Disabling pagination for vertical writing */
 @custom-selector :--no-vertical-pagination [style*="readium-noVerticalPagination-on"];
 
+/* Hiding ruby */
+@custom-selector :--no-ruby [style*="readium-noRuby-on"];
+
 /* Accessibility normalization */
 @custom-selector :--a11y-normalize [style*="readium-a11y-on"];
 

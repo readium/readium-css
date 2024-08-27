@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 1.0.0-beta.3)
+ * Readium CSS (v. 1.1.0)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -398,7 +398,7 @@ div{
   max-width:var(--RS__maxMediaWidth);
 }
 
-img, svg, audio, video{
+img, svg, video{
   object-fit:contain;
 
   width:auto;
@@ -410,6 +410,13 @@ img, svg, audio, video{
   page-break-inside:avoid;
   break-inside:avoid;
 }
+
+audio{
+    max-width:100%;
+    -webkit-column-break-inside:avoid;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
 
 table{
   max-width:var(--RS__maxMediaWidth);

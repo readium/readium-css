@@ -12,4 +12,6 @@
 @import "modules/user-settings-submodules/ReadiumCSS-lineHeight_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-paraSpacing-vertical_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-variableFont_pref.css";
+@import "modules/user-settings-submodules/ReadiumCSS-letterSpacing_pref.css";
+@import "modules/user-settings-submodules/ReadiumCSS-ruby_pref.css";
 @import "modules/ReadiumCSS-fs_normalize.css";

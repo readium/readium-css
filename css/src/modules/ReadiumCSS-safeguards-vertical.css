@@ -33,7 +33,7 @@ div {
 
 /* Size medias */
 /* You can override CSS variables by re-defining it for all elements or a specific one */
-img, svg|svg, audio, video {
+img, svg|svg, video {
   /* We probably don’t need to use modern box-sizing as auto behaves like it */
   box-sizing: var(--RS__boxSizingMedia);
 
@@ -51,6 +51,15 @@ img, svg|svg, audio, video {
 
   /* For page-break, we must use those 3
      We can’t use a variable there, webkit seems to no support them for those properties */
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Setting width and height for audio creates issues with controls (invisible in Chromium, only the play button is displayed in Webkit).
+   These styles should just help a little bit if the fallback is displayed cos audio is not supported. */
+audio {
+  max-width: 100%;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
   break-inside: avoid;

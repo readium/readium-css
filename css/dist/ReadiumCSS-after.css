@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 1.0.0-beta.3)
+ * Readium CSS (v. 1.1.0)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -316,22 +316,10 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
 :root[style*="readium-advanced-on"][style*="--USER__textAlign"] body,
 :root[style*="readium-advanced-on"][style*="--USER__textAlign"] *:not(blockquote):not(figcaption) p,
 :root[style*="readium-advanced-on"][style*="--USER__textAlign"] li{
-  text-align:inherit !important;
+  text-align:var(--USER__textAlign) !important;
   -moz-text-align-last:auto !important;
   -epub-text-align-last:auto !important;
   text-align-last:auto !important;
-}
-
-:root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign: left"],
-:root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign:left"],
-:root[style*="readium-advanced-on"][style*="--USER__textAlign: left"] *[dir="rtl"],
-:root[style*="readium-advanced-on"][style*="--USER__textAlign:left"] *[dir="rtl"]{
-  text-align:right;
-}
-
-:root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign: start"],
-:root[style*="readium-advanced-on"][dir="rtl"][style*="--USER__textAlign:start"]{
-  text-align:right;
 }
 
 :root[style*="readium-advanced-on"][style*="--USER__textAlign: justify"] body,

@@ -45,7 +45,7 @@ div {
 
 /* Size medias */
 /* You can override CSS variables by re-defining it for all elements or a specific one */
-img, svg, audio, video {
+img, svg, video {
   /* We probably don’t need to use modern box-sizing as auto behaves like it */
   box-sizing: var(--RS__boxSizingMedia);
 
@@ -67,6 +67,15 @@ img, svg, audio, video {
   page-break-inside: avoid;
   break-inside: avoid;
 }
+
+/* Setting width and height for audio creates issues with controls (invisible in Chromium, only the play button is displayed in Webkit).
+   These styles should just help a little bit if the fallback is displayed cos audio is not supported. */
+   audio {
+    max-width: 100%;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 
 /* Try preventing border being cut-off, webkit + blink have content-box by default */
 table {

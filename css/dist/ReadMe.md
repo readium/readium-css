@@ -54,8 +54,11 @@ Disabled user settings:
 - `text-align`;
 - `hyphens`;
 - paragraphs’ indent;
-- `word-spacing`;
-- `letter-spacing`.
+- `word-spacing`.
+
+Added user settings:
+
+- hiding/disabling ruby (mapped to `--USER__noRuby: readium-noRuby-on` flag).
 
 ### Vertical
 
@@ -87,8 +90,11 @@ Disabled user settings:
 - `text-align`;
 - `hyphens`;
 - paragraphs’ indent;
-- `word-spacing`;
-- `letter-spacing`.
+- `word-spacing`.
+
+Added user settings:
+
+- hiding/disabling ruby (mapped to `--USER__noRuby: readium-noRuby-on` flag).
 
 ### EBPAJ Polyfill
 

@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 1.0.0-beta.3)
+ * Readium CSS (v. 1.1.0)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -336,6 +336,24 @@ body{
 :root[style*="readium-advanced-on"][style*="--USER__paraSpacing"] p{
   margin-right:var(--USER__paraSpacing) !important;
   margin-left:var(--USER__paraSpacing) !important;
+}
+
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] h1,
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] h2,
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] h3,
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] h4,
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] h5,
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] h6,
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] p,
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] li,
+:root[style*="readium-advanced-on"][style*="--USER__letterSpacing"] div{
+  letter-spacing:var(--USER__letterSpacing);
+  font-variant:none;
+}
+
+:root[style*="readium-advanced-on"][style*="readium-noRuby-on"] body rt,
+:root[style*="readium-advanced-on"][style*="readium-noRuby-on"] body rp{
+  display:none;
 }
 
 :root[style*="readium-advanced-on"]{

@@ -186,6 +186,20 @@
 
       <hr/>
 
+      <pre><code>:--no-ruby</code></pre>
+
+	    <p>Preset: <code>--USER__noRuby: readium-noRuby-on</code></p>
+
+	    <p>Scope: <code>html</code></p>
+
+	    <p>Required flag: <code>:--advancedSettings</code></p>
+
+	    <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+	    <p>This will hide ruby annotations i.e. <code>rt</code> and <code>rb</code>.</p>
+
+	    <hr/>
+
       <p><strong>Warning:</strong> if you customize those flags, all ReadiumCSS <code>dist</code> stylesheets must be rebuilt.</p>
     </section>
 
@@ -614,7 +628,7 @@
 
       <p>It impacts <code>body</code>, <code>li</code>, and <code>p</code> which are not children of <code>blockquote</code> and <code>figcaption</code>.</p>
 
-      <p>Possible values: <code>left</code> (LTR) or <code>right</code> (RTL) | <code>justify</code></p>
+      <p>Possible values: <code>left</code> (LTR) or <code>right</code> (RTL) | <code>start</code> (logical property resolving to <code>left</code> in LTR, <code>right</code> in RTL) | <code>justify</code></p>
 
       <p>Required flag: <code>:--advancedSettings</code></p>
 

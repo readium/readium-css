@@ -45,6 +45,7 @@ The following settings are optional but should be applied by any means necessary
 - letter-spacing;
 - word-spacing;
 - arabic ligatures;
+- hiding ruby (CJK);
 - accessibility normalization;
 - type scale.
 

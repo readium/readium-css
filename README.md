@@ -14,8 +14,6 @@ Readium CSS provides styles for reflowable text:
 - user settings;
 - a set of baselines and recommendations for accessibility, overrides, and internationalization.
 
-**Readium CSS is currently in beta** (version `1.0.0-beta.2`).
-
 ## License
 
 BSD-3-Clause (http://opensource.org/licenses/BSD-3-Clause)

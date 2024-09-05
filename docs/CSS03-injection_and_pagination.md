@@ -130,7 +130,7 @@ The default line-length when none is set by the user. It should be set in `rem` 
 * * *
 
 ```
-__USER__lineLength
+--USER__lineLength
 ```
 
 The line-length set by the user. It can be set in any unit CSS property `max-width` accepts.

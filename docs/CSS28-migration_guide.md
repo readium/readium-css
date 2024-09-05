@@ -75,7 +75,10 @@ This is no longer supported in version 2, as it has been replaced with a user se
 
 The user setting should consequently be updated, either in the form of replacement or mimicking of the old one.
 
-It is indeed possible to re-implement the page margins user setting by using the new variable, given margin will adjust automatically to the line length, but this also means that your updated logic will have to work backwards.
+It is indeed possible to re-implement the page margins user setting by using the new variable, given margin will adjust automatically to the line length, but this also means that your updated logic will have to work backwards: 
+
+- in version 1, you would just decrease/increase the value of `--USER__pageMargins`.
+- in version 2, you would decrease `--USER__lineLength` to increase page margins, and increase `--USER__lineLength` to decrease page margins.
 
 Otherwise, the line-length user setting can be a set of predefined values, a range, etc. It accepts the values that the CSS properties `max-width|height` do.
 
@@ -102,6 +105,8 @@ In version 1, ReadiumCSS had to rely on the `:root`’s `font-size` and the casc
 In version 2, ReadiumCSS switched to `zoom`, which makes the patch no longer needed, except for rendering engines/browsers that don’t support this CSS property.
 
 It doesn’t need any change at the implementation level, and should work out of the box. All is handled behind the scenes in ReadiumCSS font-size module.
+
+As a side-effect of this new implementation, please note the `--USER__typeScale` setting is no longer available.
 
 ## Extension of the font-family user setting override
 

@@ -50,7 +50,7 @@ The scale to be used for computing all elements’ `font-size`. Since those font
 
 Possible values: `1` | `1.067` | `1.125` (suggested default) | `1.2` | `1.25` | `1.333` | `1.414` | `1.5` | `1.618`
 
-The suggested default will accomodate most configurations, from small to large screens.  Please note it is different from the `--USER__typeScale` suggested default, which was designed to accomodate the publisher’s styles.
+The suggested default will accomodate most configurations, from small to large screens.
 
 * * *
 

@@ -749,26 +749,6 @@ To reset, remove the required flag.
 * * *
 
 ```
---USER__typeScale
-```
-
-The type scale the user wants to use for the publication.
-
-Scope: `html`
-
-It requires the `ReadiumCSS-fs_normalize.css` stylesheet.
-
-It impacts headings, `p`, `li`, `div`, `pre`, `dd`, `small`, `sub`, and `sup`.
-
-Recommended values: a range from `75%` to `250%`. Increments are left to implementers’ judgment.
-
-Required flag: `:--advancedSettings`
-
-Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
-
-* * *
-
-```
 --USER__lineHeight
 ```
 

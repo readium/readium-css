@@ -130,35 +130,6 @@ An optional primary accentuation `color` you could use for headings or any other
 
 An optional secondary accentuation `color` you could use for any element of your choice.
 
-## Font Size Normalize and the Type Scale
-
-The assumption is that at least basic semantic elements’ `font-size` can be interpolated to a type scale, with minimal variation (±1–2 pixels difference for each element) in comparison to authors’ styles.
-
-We’re using the `calc()` function to emulate the following: 
-
-```
-h1   = base font-size × typeScale ^ 3 (power of 3)
-h2   = base font-size × typeScale ^ 2 (power of 2)
-h3   = base font-size × typeScale
-h4   = base font-size
-body = base font-size
-```
-
-In which `typeScale` can be customized to match the actual scale used in the publication. There lies the flexibility of this normalize.
-
-Getting the type scale is a one-two punch:
-
-1. `parseInt` of the computed `font-size` for a heading and the base (division = result)*
-2. `Math.pow(result, 1/n)`, in which `n` is `3` for `h1` (cubic root) and `2` for `h2` (square root).
-
-\* `h3` stops here.
-
-Then the `font-size` for each heading and body copy element will be recomputed based on this type scale.
-
-Of course this approach is limited, there is little we can do to account for ids, classes, etc.
-
-But it can at least be used for themes, or an opt-in user setting.
-
 ## Dynamic leading
 
 Readium CSS automagically finds the ideal `line-height` of the current font and `font-size` in use if the author hasn’t set an explicit value.

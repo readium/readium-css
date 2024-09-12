@@ -917,431 +917,425 @@
     </navPoint>
     <navPoint id="navPoint152">
       <navLabel>
-        <text>Font Size Normalize and the Type Scale</text>
-      </navLabel>
-      <content src="Text/Section-018.xhtml#sigil_toc_id_52" />
-    </navPoint>
-    <navPoint id="navPoint153">
-      <navLabel>
         <text>Dynamic leading</text>
       </navLabel>
       <content src="Text/Section-018.xhtml#sigil_toc_id_35" />
     </navPoint>
-    <navPoint id="navPoint154">
+    <navPoint id="navPoint153">
       <navLabel>
         <text>Conditional Selectors for user settings</text>
       </navLabel>
       <content src="Text/Section-018.xhtml#sigil_toc_id_53" />
     </navPoint>
-    <navPoint id="navPoint155">
+    <navPoint id="navPoint154">
       <navLabel>
         <text>Themes</text>
       </navLabel>
       <content src="Text/Section-018.xhtml#sigil_toc_id_54" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint156">
+  <navPoint id="navPoint155">
     <navLabel>
       <text>Readium CSS Variables API</text>
     </navLabel>
     <content src="Text/Section-019.xhtml" />
-    <navPoint id="navPoint157">
+    <navPoint id="navPoint156">
       <navLabel>
         <text>How to set and remove user preferences</text>
       </navLabel>
       <content src="Text/Section-019.xhtml#sigil_toc_id_182" />
     </navPoint>
-    <navPoint id="navPoint158">
+    <navPoint id="navPoint157">
       <navLabel>
         <text>Customizable medias</text>
       </navLabel>
       <content src="Text/Section-019.xhtml#sigil_toc_id_183" />
     </navPoint>
-    <navPoint id="navPoint159">
+    <navPoint id="navPoint158">
       <navLabel>
         <text>Customizable flags</text>
       </navLabel>
       <content src="Text/Section-019.xhtml#sigil_toc_id_184" />
     </navPoint>
-    <navPoint id="navPoint160">
+    <navPoint id="navPoint159">
       <navLabel>
         <text>Reading System Styles</text>
       </navLabel>
       <content src="Text/Section-019.xhtml#sigil_toc_id_185" />
     </navPoint>
-    <navPoint id="navPoint161">
+    <navPoint id="navPoint160">
       <navLabel>
         <text>Reading Modes</text>
       </navLabel>
       <content src="Text/Section-019.xhtml#sigil_toc_id_186" />
     </navPoint>
-    <navPoint id="navPoint162">
+    <navPoint id="navPoint161">
       <navLabel>
         <text>User Settings</text>
       </navLabel>
       <content src="Text/Section-019.xhtml#sigil_toc_id_187" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint163">
+  <navPoint id="navPoint162">
     <navLabel>
       <text>List of proposals and specs impacting Readium CSS</text>
     </navLabel>
     <content src="Text/Section-020.xhtml" />
-    <navPoint id="navPoint164">
+    <navPoint id="navPoint163">
       <navLabel>
         <text>Media Queries Level 5</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_103" />
     </navPoint>
-    <navPoint id="navPoint165">
+    <navPoint id="navPoint164">
       <navLabel>
         <text>Logical Properties and Values</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_128" />
     </navPoint>
-    <navPoint id="navPoint166">
+    <navPoint id="navPoint165">
       <navLabel>
         <text>CSS Extensions</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_33" />
     </navPoint>
-    <navPoint id="navPoint167">
+    <navPoint id="navPoint166">
       <navLabel>
         <text>Calc notation: min() and max()</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_104" />
     </navPoint>
-    <navPoint id="navPoint168">
+    <navPoint id="navPoint167">
       <navLabel>
         <text>User Agent Properties</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_105" />
     </navPoint>
-    <navPoint id="navPoint169">
+    <navPoint id="navPoint168">
       <navLabel>
         <text>CSS Rhythmic Sizing</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_106" />
     </navPoint>
-    <navPoint id="navPoint170">
+    <navPoint id="navPoint169">
       <navLabel>
         <text>CSS Fonts Module Level 4</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_107" />
     </navPoint>
-    <navPoint id="navPoint171">
+    <navPoint id="navPoint170">
       <navLabel>
         <text>COGA Semantics to Enable Personalization</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_108" />
     </navPoint>
-    <navPoint id="navPoint172">
+    <navPoint id="navPoint171">
       <navLabel>
         <text>Multicol editing</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_109" />
     </navPoint>
-    <navPoint id="navPoint173">
+    <navPoint id="navPoint172">
       <navLabel>
         <text>W3C i18n</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_110" />
     </navPoint>
-    <navPoint id="navPoint174">
+    <navPoint id="navPoint173">
       <navLabel>
         <text>CSSOM (a.k.a. Houdini)</text>
       </navLabel>
       <content src="Text/Section-020.xhtml#sigil_toc_id_111" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint175">
+  <navPoint id="navPoint174">
     <navLabel>
       <text>EPUB Compatibility</text>
     </navLabel>
     <content src="Text/Section-021.xhtml" />
-    <navPoint id="navPoint176">
+    <navPoint id="navPoint175">
       <navLabel>
         <text>Introduction</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_39" />
     </navPoint>
-    <navPoint id="navPoint177">
+    <navPoint id="navPoint176">
       <navLabel>
         <text>CSS At-rules</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_40" />
     </navPoint>
-    <navPoint id="navPoint178">
+    <navPoint id="navPoint177">
       <navLabel>
         <text>Non-standard Kindle Media queries</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_95" />
     </navPoint>
-    <navPoint id="navPoint179">
+    <navPoint id="navPoint178">
       <navLabel>
         <text>Interactive and Fixed-layout EPUB 2</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_96" />
     </navPoint>
-    <navPoint id="navPoint180">
+    <navPoint id="navPoint179">
       <navLabel>
         <text>Metadata</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_97" />
     </navPoint>
-    <navPoint id="navPoint181">
+    <navPoint id="navPoint180">
       <navLabel>
         <text>Attributes</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_98" />
     </navPoint>
-    <navPoint id="navPoint182">
+    <navPoint id="navPoint181">
       <navLabel>
         <text>Webkit’s CSS multi-column extensions</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_129" />
     </navPoint>
-    <navPoint id="navPoint183">
+    <navPoint id="navPoint182">
       <navLabel>
         <text>Non-standard CSS properties</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_136" />
     </navPoint>
-    <navPoint id="navPoint184">
+    <navPoint id="navPoint183">
       <navLabel>
         <text>EPUB properties</text>
       </navLabel>
       <content src="Text/Section-021.xhtml#sigil_toc_id_137" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint185">
+  <navPoint id="navPoint184">
     <navLabel>
       <text>Install, test and build Readium CSS</text>
     </navLabel>
     <content src="Text/Section-022.xhtml" />
-    <navPoint id="navPoint186">
+    <navPoint id="navPoint185">
       <navLabel>
         <text>Install and init references for regression tests</text>
       </navLabel>
       <content src="Text/Section-022.xhtml#sigil_toc_id_27" />
     </navPoint>
-    <navPoint id="navPoint187">
+    <navPoint id="navPoint186">
       <navLabel>
         <text>Build</text>
       </navLabel>
       <content src="Text/Section-022.xhtml#sigil_toc_id_36" />
     </navPoint>
-    <navPoint id="navPoint188">
+    <navPoint id="navPoint187">
       <navLabel>
         <text>Test</text>
       </navLabel>
       <content src="Text/Section-022.xhtml#sigil_toc_id_37" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint189">
+  <navPoint id="navPoint188">
     <navLabel>
       <text>Fixed-layouts’ Reading Systems Requirements</text>
     </navLabel>
     <content src="Text/Section-023.xhtml" />
-    <navPoint id="navPoint190">
+    <navPoint id="navPoint189">
       <navLabel>
         <text>Styling</text>
       </navLabel>
       <content src="Text/Section-023.xhtml#sigil_toc_id_60" />
     </navPoint>
-    <navPoint id="navPoint191">
+    <navPoint id="navPoint190">
       <navLabel>
         <text>Scaling</text>
       </navLabel>
       <content src="Text/Section-023.xhtml#sigil_toc_id_61" />
     </navPoint>
-    <navPoint id="navPoint192">
+    <navPoint id="navPoint191">
       <navLabel>
         <text>Notes</text>
       </navLabel>
       <content src="Text/Section-023.xhtml#sigil_toc_id_62" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint193">
+  <navPoint id="navPoint192">
     <navLabel>
       <text>E-production feedback and requests</text>
     </navLabel>
     <content src="Text/Section-024.xhtml" />
-    <navPoint id="navPoint194">
+    <navPoint id="navPoint193">
       <navLabel>
         <text>CSS Authors’ typical profile</text>
       </navLabel>
       <content src="Text/Section-024.xhtml#sigil_toc_id_112" />
     </navPoint>
-    <navPoint id="navPoint195">
+    <navPoint id="navPoint194">
       <navLabel>
         <text>Workflow and authoring</text>
       </navLabel>
       <content src="Text/Section-024.xhtml#sigil_toc_id_113" />
     </navPoint>
-    <navPoint id="navPoint196">
+    <navPoint id="navPoint195">
       <navLabel>
         <text>Worries and issues</text>
       </navLabel>
       <content src="Text/Section-024.xhtml#sigil_toc_id_114" />
     </navPoint>
-    <navPoint id="navPoint197">
+    <navPoint id="navPoint196">
       <navLabel>
         <text>Popular requests</text>
       </navLabel>
       <content src="Text/Section-024.xhtml#sigil_toc_id_115" />
     </navPoint>
-    <navPoint id="navPoint198">
+    <navPoint id="navPoint197">
       <navLabel>
         <text>Interoperability issues reported</text>
       </navLabel>
       <content src="Text/Section-024.xhtml#sigil_toc_id_116" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint199">
+  <navPoint id="navPoint198">
     <navLabel>
       <text>CSS Performance Hacks</text>
     </navLabel>
     <content src="Text/Section-025.xhtml" />
-    <navPoint id="navPoint200">
+    <navPoint id="navPoint199">
       <navLabel>
         <text>Will-change</text>
       </navLabel>
       <content src="Text/Section-025.xhtml#sigil_toc_id_63" />
     </navPoint>
-    <navPoint id="navPoint201">
+    <navPoint id="navPoint200">
       <navLabel>
         <text>CSS Containment</text>
       </navLabel>
       <content src="Text/Section-025.xhtml#sigil_toc_id_64" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint202">
+  <navPoint id="navPoint201">
     <navLabel>
       <text>i18n glossary</text>
     </navLabel>
     <content src="Text/Section-026.xhtml" />
-    <navPoint id="navPoint203">
+    <navPoint id="navPoint202">
       <navLabel>
         <text>Arabic</text>
       </navLabel>
       <content src="Text/Section-026.xhtml#sigil_toc_id_159" />
     </navPoint>
-    <navPoint id="navPoint204">
+    <navPoint id="navPoint203">
       <navLabel>
         <text>Chinese</text>
       </navLabel>
       <content src="Text/Section-026.xhtml#sigil_toc_id_160" />
     </navPoint>
-    <navPoint id="navPoint205">
+    <navPoint id="navPoint204">
       <navLabel>
         <text>Indic</text>
       </navLabel>
       <content src="Text/Section-026.xhtml#sigil_toc_id_161" />
     </navPoint>
-    <navPoint id="navPoint206">
+    <navPoint id="navPoint205">
       <navLabel>
         <text>Japanese</text>
       </navLabel>
       <content src="Text/Section-026.xhtml#sigil_toc_id_162" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint207">
+  <navPoint id="navPoint206">
     <navLabel>
       <text>Features that were considered but not implemented</text>
     </navLabel>
     <content src="Text/Section-027.xhtml" />
-    <navPoint id="navPoint208">
+    <navPoint id="navPoint207">
       <navLabel>
         <text>Alternate background colors for lines (A11Y)</text>
       </navLabel>
       <content src="Text/Section-027.xhtml#sigil_toc_id_188" />
     </navPoint>
-    <navPoint id="navPoint209">
+    <navPoint id="navPoint208">
       <navLabel>
         <text>Contrasting text against backgrounds in custom user themes</text>
       </navLabel>
       <content src="Text/Section-027.xhtml#sigil_toc_id_189" />
     </navPoint>
-    <navPoint id="navPoint210">
+    <navPoint id="navPoint209">
       <navLabel>
         <text>Handle day/night theme based on OSs’ light/dark mode</text>
       </navLabel>
       <content src="Text/Section-027.xhtml#sigil_toc_id_190" />
     </navPoint>
   </navPoint>
-  <navPoint id="navPoint211">
+  <navPoint id="navPoint210">
     <navLabel>
       <text>Migration Guide</text>
     </navLabel>
     <content src="Text/Section-028.xhtml" />
-    <navPoint id="navPoint212">
+    <navPoint id="navPoint211">
       <navLabel>
         <text>Removal of responsive columns</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_191" />
     </navPoint>
-    <navPoint id="navPoint213">
+    <navPoint id="navPoint212">
       <navLabel>
         <text>Number of columns is no longer limited</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_192" />
     </navPoint>
-    <navPoint id="navPoint214">
+    <navPoint id="navPoint213">
       <navLabel>
         <text>Addition of a flag to disable vertical-writing pagination</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_193" />
     </navPoint>
-    <navPoint id="navPoint215">
+    <navPoint id="navPoint214">
       <navLabel>
         <text>Removal of -webkit-perspective hack for older versions of Chromium</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_194" />
     </navPoint>
-    <navPoint id="navPoint216">
+    <navPoint id="navPoint215">
       <navLabel>
         <text>Replacement of page margins user setting with line length user setting</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_195" />
     </navPoint>
-    <navPoint id="navPoint217">
+    <navPoint id="navPoint216">
       <navLabel>
         <text>Improvement of overflow</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_196" />
     </navPoint>
-    <navPoint id="navPoint218">
+    <navPoint id="navPoint217">
       <navLabel>
         <text>Re-implementation of the font-size user setting</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_197" />
     </navPoint>
-    <navPoint id="navPoint219">
+    <navPoint id="navPoint218">
       <navLabel>
         <text>Extension of the font-family user setting override</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_198" />
     </navPoint>
-    <navPoint id="navPoint220">
+    <navPoint id="navPoint219">
       <navLabel>
         <text>Updated default font stacks</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_199" />
     </navPoint>
-    <navPoint id="navPoint221">
+    <navPoint id="navPoint220">
       <navLabel>
         <text>Updated recommandations for libre and open source fonts</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_200" />
     </navPoint>
-    <navPoint id="navPoint222">
+    <navPoint id="navPoint221">
       <navLabel>
         <text>Support for variable fonts</text>
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_201" />
     </navPoint>
-    <navPoint id="navPoint223">
+    <navPoint id="navPoint222">
       <navLabel>
         <text>Addition of a fonts patch for Android</text>
       </navLabel>

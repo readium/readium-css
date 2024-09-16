@@ -89,9 +89,7 @@ Please note those variables’ value can be redefined using media queries. You d
 --RS__colWidth
 ```
 
-The optimal column’s width. It serves as a floor in our design.
-
-It must not be set in `rem` as there is currently a bug with this unit in some implementations (the `em` unit is fine).
+The optimal column’s width. We set it to `auto` so that the column-count can be prioritized.
 
 * * *
 

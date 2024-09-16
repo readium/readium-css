@@ -23,12 +23,3 @@
   -moz-column-count: 1;
   column-count: 1;
 }
-
-/* If one column, make sure we limit line-length */
-:root[style*="--USER__colCount: 0"],
-:root[style*="--USER__colCount:0"],
-:root[style*="--USER__colCount: 1"],
-:root[style*="--USER__colCount:1"] {
-  --RS__defaultLineLength: 40rem !important; /* This is the only way for the user setting to work in webkit… */
-  --RS__colWidth: 100vw;
-}

@@ -11,8 +11,8 @@
 
 /* Default for smartphone portrait (small screens) */
 :root {
-  /* The column will be the height of the web view/iframe */
-  --RS__colWidth: 100vh;
+  /* The column algorithm will prioritize column-count */
+  --RS__colWidth: auto;
 
   /* Since columns are laid out on the y-axis in vertical-*, we can only use 1 */
   --RS__colCount: 1;

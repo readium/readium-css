@@ -202,7 +202,7 @@ Custom properties for the Reading System are prefixed with `--RS__`.
 --RS__colWidth
 ```
 
-The optimal column’s width. It serves as a floor in our design.
+The optimal column’s width. We set it to `auto` so that the column-count can be prioritized
 
 * * *
 

@@ -15,7 +15,7 @@
 @namespace svg url("http://www.w3.org/2000/svg");
 
 :root{
-  --RS__colWidth:100vw;
+  --RS__colWidth:auto;
   --RS__colCount:1;
   --RS__colGap:0;
   --RS__defaultLineLength:40rem;
@@ -271,14 +271,6 @@ body{
   -webkit-column-count:1;
   -moz-column-count:1;
   column-count:1;
-}
-
-:root[style*="--USER__colCount: 0"],
-:root[style*="--USER__colCount:0"],
-:root[style*="--USER__colCount: 1"],
-:root[style*="--USER__colCount:1"]{
-  --RS__defaultLineLength:40rem !important;
-  --RS__colWidth:100vw;
 }
 
 :root[style*="--USER__lineLength"] body{

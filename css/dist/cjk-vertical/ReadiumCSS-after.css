@@ -15,7 +15,7 @@
 @namespace svg url("http://www.w3.org/2000/svg");
 
 :root{
-  --RS__colWidth:100vh;
+  --RS__colWidth:auto;
   --RS__colCount:1;
   --RS__colGap:0;
   --RS__defaultLineLength:40rem;

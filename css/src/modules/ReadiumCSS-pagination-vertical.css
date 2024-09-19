@@ -11,20 +11,7 @@
 
 /* Default for smartphone portrait (small screens) */
 :root {
-  /* The column algorithm will prioritize column-count */
-  --RS__colWidth: auto;
-
-  /* Since columns are laid out on the y-axis in vertical-*, we can only use 1 */
-  --RS__colCount: 1;
-
-  /* Gap between columns (in pixels so that it won’t resize with font-size) */
-  --RS__colGap: 0;
-
-  /* Optimal line-length (rem will take :root font-size into account, whatever the body’s font-size) */
-  --RS__defaultLineLength: 40rem;
-
-  /* Default page vertical margins (in pixels so that it won’t resize with font-size) */
-  --RS__pageGutter: 0;
+   @import-json "../../vars/pagination.json";
 }
 
 /* Reset page margins for Forward compatibility */

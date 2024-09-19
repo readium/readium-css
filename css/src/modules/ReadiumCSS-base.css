@@ -17,7 +17,7 @@
 
 :root {
   /* Default font-stacks */
-  @import-json "../../fontStacks.json";
+  @import-json "../../vars/fontStacks.json";
 
   /* Config */
   --RS__baseFontFamily: var(--RS__oldStyleTf);

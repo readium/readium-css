@@ -6,7 +6,6 @@ module.exports = (ctx) => ({
     require("postcss-import")({
       root: ctx.file.dirname
     }),
-    require("postcss-custom-media")({}),
     require("postcss-custom-selectors")({}),
     require("postcss-discard-comments")({}),
     require("stylelint")({

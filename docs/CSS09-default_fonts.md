@@ -57,7 +57,7 @@ This is a modernized version taking popular Linux distros and emoji into account
 ### Old Style (serif)
 
 ```
-font-family: "Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif;
+font-family: "Iowan Old Style", Sitka, "Sitka Text", Palatino, "Book Antiqua", "URW Palladio L", P052, serif;
 ```
 
 Serif will resolve to Droid Serif on Android.
@@ -73,7 +73,7 @@ Open Type features available for those fonts are:
 ### Modern (serif)
 
 ```
-font-family: Athelas, Constantia, Georgia, serif;
+font-family: Athelas, Constantia, Charter, "Bitstream Charter", Cambria, "Georgia Pro", Georgia, serif;
 ```
 
 Serif will resolve to Droid Serif on Android.
@@ -91,14 +91,14 @@ Open Type features available for those fonts are:
 Same as UI font-stack or the following simplified version:
 
 ```
-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Noto, "Helvetica Neue", Arial, sans-serif;
+font-family: -ui-sans-serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Inter, Roboto, Noto, "Helvetica Neue", "Arial Nova", "Liberation Sans", Arial, sans-serif;
 ```
 
 Open Type features available for those fonts are:
 
 | Typeface       | Small-caps | Oldstyle nums | Linear nums | Proportional nums | Tabular nums |
 |----------------|:----------:|:-------------:|:-----------:|:-----------------:|:------------:|
-| San Fransisco  |      ✓     |       ✕       |      ✕      |         ✓         |       ✓      |
+| San Francisco  |      ✓     |       ✕       |      ✕      |         ✓         |       ✓      |
 | Segoe UI       |      ✓     |       ✓       |      ✓      |         ✓         |       ✓      |
 | Roboto         |      ✓     |       ✓       |      ✓      |         ✓         |       ✓      |
 | Helvetica Neue |      ✕     |       ✕       |      ✕      |         ✓         |       ✓      |
@@ -106,7 +106,7 @@ Open Type features available for those fonts are:
 ### Humanist (sans)
 
 ```
-font-family: Seravek, Calibri, Roboto, Arial, sans-serif;
+font-family: Seravek, Calibri, "Gill Sans Nova", Roboto, Ubuntu, "DejaVu Sans", source-sans-pro, sans-serif;
 ```
 
 Sans-serif will resolve to Droid Sans or Roboto on Android.
@@ -122,12 +122,12 @@ Open Type features available for those fonts are:
 ### Monospace
 
 ```
-font-family: "Andale Mono", Consolas, monospace;
+font-family: ui-monospace, "Andale Mono", "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 ```
 
 Monospace will resolve to Droid Sans Mono on Android. 
 
-Apple is shipping a monospaced San Fransisco in High Sierra but it is still unclear how you can access it in CSS.
+Apple is shipping a monospaced San Francisco in High Sierra but it is still unclear how you can access it in CSS.
 
 ### Unicode ranges
 

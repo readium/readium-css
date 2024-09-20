@@ -23,5 +23,16 @@
 
 /* Make sure line-length is limited in all configs */
 :root:--scroll-view body {
-  --RS__maxLineLength: 40rem !important;
+  overflow: auto;
+  --RS__defaultLineLength: 40rem !important;
+}
+
+@supports (overflow: clip) {
+  :root:--scroll-view {
+     overflow: auto;
+  }
+
+  :root:--scroll-view body {
+     overflow: clip;
+  }
 }

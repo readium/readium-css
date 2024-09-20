@@ -30,44 +30,6 @@ var root = document.documentElement;
 root.style.removeProperty("--USER__var");
 ```
 
-## Customizable medias
-
-You will find those customizable medias in `ReadiumCSS-config.css`. The values defined are used in media queries to control use of the auto pagination model.
-
-* * *
-
-```
---responsive-columns
-```
-
-Default is `60em`
-
-The `min-width` at which the auto pagination model must be used – will switch from 1 to 2 columns and vice versa.
-
-* * *
-
-```
---min-device-columns
-```
-
-Default is `36em`
-
-The minimum device width of the mobile device for which the auto pagination model must be used.
-
-* * *
-
-```
---max-device-columns
-```
-
-Default is `47em`
-
-The maximum device width of the mobile device for which the auto pagination model must be used.
-
-* * *
-
-**Warning:** if you customize those medias, all ReadiumCSS `dist` stylesheets must be rebuilt.
-
 ## Customizable flags
 
 You will find those customizable flags in `ReadiumCSS-config.css`, and can think of the preset values as boolean inline styles: if they are set on the `:root` element (i.e. `html`) then the flag is enabled. If another value is, or they are removed, then the flag is disabled.
@@ -122,7 +84,7 @@ Preset: `--USER__advancedSettings: readium-advanced-on`
 
 Scope: `html`
 
-Override class: None. This flag is required to apply the `font-family`, the `font-size` and/or advanced user settings.
+Override class: None. This flag is required to apply the `font-family` and advanced user settings.
 
 * * * 
 
@@ -180,6 +142,18 @@ Override class: Chrome advanced (optional but should be applied by any means nec
 
 This will only apply in night mode to invert images and impact `img`.
 
+* * *
+
+```
+:--no-vertical-pagination
+```
+
+Preset: `--RS__disablePagination: readium-noVerticalPagination-on`
+
+Scope: `html`
+
+Override class: None. It’s a flag meant for implementers’ convenience as it disables vertical-writing pagination so that they can implement theirs.
+
 * * * 
 
 ```
@@ -228,7 +202,7 @@ Custom properties for the Reading System are prefixed with `--RS__`.
 --RS__colWidth
 ```
 
-The optimal column’s width. It serves as a floor in our design.
+The optimal column’s width. We set it to `auto` so that the column-count can be prioritized
 
 * * *
 
@@ -254,15 +228,15 @@ You must account for this gap when scrolling.
 --RS__pageGutter
 ```
 
-The horizontal page margins. It must be set in pixels so that it won’t resize with font size.
+The inline (horizontal by default, vertical in vertical-writing) page margins. It must be set in pixels so that it won’t resize with font size.
 
 * * *
 
 ```
---RS__maxLineLength
+--RS__defaultLineLength
 ```
 
-The optimal line-length. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
+The default line-length when none is set by the user. It must be set in `rem` in order to take `:root`’s `font-size` as a reference, whichever the `body`’s `font-size` might be.
 
 ### Safeguards
 
@@ -308,7 +282,7 @@ The box model (`box-sizing`) you want to use for tables.
 
 An old style serif font-stack relying on pre-installed fonts.
 
-Default is `"Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif`.
+Default is `"Iowan Old Style", Sitka, "Sitka Text", Palatino, "Book Antiqua", "URW Palladio L", P052, serif`.
 
 * * *
 
@@ -318,7 +292,7 @@ Default is `"Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif`.
 
 A modern serif font-stack relying on pre-installed fonts.
 
-Default is `Athelas, Constantia, Georgia, serif`.
+Default is `Athelas, Constantia, Charter, "Bitstream Charter", Cambria, "Georgia Pro", Georgia, serif`.
 
 * * *
 
@@ -328,7 +302,7 @@ Default is `Athelas, Constantia, Georgia, serif`.
 
 A neutral sans-serif font-stack relying on pre-installed fonts.
 
-Default is `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`.
+Default is `-ui-sans-serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Inter, Roboto, "Helvetica Neue", "Arial Nova", "Liberation Sans", Arial, sans-serif`.
 
 * * *
 
@@ -338,7 +312,7 @@ Default is `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "H
 
 A humanist sans-serif font-stack relying on pre-installed fonts.
 
-Default is `Seravek, Calibri, Roboto, Arial, sans-serif`.
+Default is `Seravek, Calibri, "Gill Sans Nova", Roboto, Ubuntu, "DejaVu Sans", source-sans-pro, sans-serif`.
 
 * * *
 
@@ -348,7 +322,7 @@ Default is `Seravek, Calibri, Roboto, Arial, sans-serif`.
 
 A monospace font-stack relying on pre-installed fonts.
 
-Default is `"Andale Mono", Consolas, monospace`.
+Default is `ui-monospace, "Andale Mono", "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace`.
 
 ### Default font-stacks for Japanese publications
 
@@ -622,37 +596,37 @@ Custom properties for user settings are prefixed with `--USER__`.
 --USER__colCount
 ```
 
-The number of columns (`column-count`) the user wants displayed (one-page view or two-page spread).
+The number of columns (`column-count`) the user wants displayed (one-page view, two-page spread, 3 columns, etc.).
 
 Scope: `html`
 
-Possible values: `1` | `2` | `auto` (default)
+Possible values: `integer`. Value `0` is handled as an error and resolves to `1`.
 
 Required flag: none
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
-To reset, change the value to `auto`.
+To reset, remove the variable.
 
 * * *
 
 ```
---USER__pageMargins
+--USER__lineLength
 ```
 
-A factor applied to horizontal margins (`padding-left` and `padding-right`) the user wants to set.
+The `max-width` of `body` (to shrink or grow the line-length of body copy).
 
 Scope: `html`
 
 It impacts `body`.
 
-Recommended values: a range from `0.5` to `2`.  Increments are left to implementers’ judgment.
+Possible values: any value CSS property `max-width|height` accepts.
 
 Required flag: none
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
-To reset, change the value to `1`.
+To reset, remove the variable.
 
 * * *
 
@@ -744,7 +718,11 @@ The typeface (`font-family`) the user wants to read with.
 
 Scope: `html`
 
-It impacts `body`, `p`, `li`, `div`, `dt`, `dd` and phrasing elements which don’t have a `lang` or `xml:lang` attribute.
+It impacts everything except `code `, `var`, `kbd`, and `samp`.
+
+Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)` | `<string>`
+
+For Japanese, possible values become: `var(--RS__serif-ja)` (horizontal writing) | `var(--RS__sans-serif-ja)` (horizontal writing) | `var(--RS__serif-ja-v)` (vertical writing) | `var(--RS__sans-serif-ja-v)` (vertical writing) | `<string>`
 
 Required flag: `:--fontOverride`
 
@@ -762,35 +740,11 @@ Increasing and decreasing the root `font-size`. It will serve as a reference for
 
 Scope: `html`
 
-Possible values: `var(--RS__oldStyleTf)` | `var(--RS__modernTf)` | `var(--RS__sansTf)` | `var(--RS__humanistTf)` | `<string>`
-
-For Japanese, possible values become: `var(--RS__serif-ja)` (horizontal writing) | `var(--RS__sans-serif-ja)` (horizontal writing) | `var(--RS__serif-ja-v)` (vertical writing) | `var(--RS__sans-serif-ja-v)` (vertical writing) | `<string>`
-
-Required flag: `:--fontOverride`
+Possible values: unitless `number` or percentage.
 
 Override class: User settings (should be applied by any means necessary)
 
 To reset, remove the required flag.
-
-* * *
-
-```
---USER__typeScale
-```
-
-The type scale the user wants to use for the publication.
-
-Scope: `html`
-
-It requires the `ReadiumCSS-fs_normalize.css` stylesheet.
-
-It impacts headings, `p`, `li`, `div`, `pre`, `dd`, `small`, `sub`, and `sup`.
-
-Recommended values: a range from `75%` to `250%`. Increments are left to implementers’ judgment.
-
-Required flag: `:--advancedSettings`
-
-Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 
 * * *
 
@@ -889,5 +843,63 @@ It impacts all text.
 Possible values: `none` | `common-ligatures`
 
 Required flag: `:--advancedSettings`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+* * *
+
+```
+--USER__fontOpticalSizing
+```
+
+Enabling and disabling optical sizing (stroke optimizations).
+
+Scope: `html`
+
+It impacts all text.
+
+Possible values: `none` | `auto`
+
+Required flag: `:--fontOverride`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+* * *
+
+```
+--USER__fontWeight
+```
+
+Setting the weight of the variable font.
+
+Scope: `html`
+
+It impacts all text.
+
+Possible values: `number`
+
+**Warning: possible values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
+
+Required flag: `:--fontOverride`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+* * *
+
+```
+--USER__fontWidth
+```
+
+Setting the width of the variable font.
+
+Scope: `html`
+
+It impacts all text.
+
+Possible values: `ultra-condensed` | `extra-condensed` | `condensed` | `semi-condensed` | `normal` | `semi-expanded` | `expanded` | `extra-expanded` | `ultra-expanded` | `percentage`
+
+**Warning: the percentage values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
+
+Required flag: `:--fontOverride`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)

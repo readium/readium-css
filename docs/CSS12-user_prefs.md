@@ -101,7 +101,7 @@ If you provide users with a “Publisher’s styles” toggle, it must be enable
 
 Supported value: `readium-advanced-on`
 
-Override class: None. This flag is required to apply the `font-family`, the `font-size` and/or advanced user settings.
+Override class: None. This flag is required to apply the `font-family` and advanced user settings.
 
 To switch back to the publisher’s styles, you can either set an empty string as a value or remove the property. This will disable all advanced settings requiring the flag.
 
@@ -179,7 +179,7 @@ To disable the hiding and show ruby annotations, you can either set an empty str
 
 ### Layout 
 
-The user can set the number of columns and page margins.
+The user can set the number of columns and line length.
 
 #### Number of columns
 
@@ -187,35 +187,31 @@ The user can set the number of columns and page margins.
 --USER__colCount
 ```
 
-Possible values: `1` | `2` | `auto` (default)
+Possible values: `integer`
 
 Required flag: none
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
-To reset, change the value to `auto`.
+To reset, remove the variable.
 
-By default, this setting behaves as an `auto` value, it will switch to 1 or 2 columns depending on the minimum `width` available and `font-size`.
+By default, this setting behaves as `1`. Value `0` is handled as an error and resolves to `1`.
 
 It is up to implementers to decide whether they want this setting to be available and override any configuration or only some (e.g. setting only available in landscape and/or larger screens).
 
-#### Page margins
+#### Line length
 
 ```
---USER__pageMargins
+--USER__lineLength
 ```
 
-Recommended values: a range from `0.5` to `2`.  Increments are left to implementers’ judgment.
+Possible values: any value CSS property `max-width|height` accepts.
 
 Required flag: none
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
-To reset, change the value to `1`.
-
-The user margins are a factor of the reference we set.
-
-This will probably be fine-tuned in the next version (beta).
+To reset, remove the variable.
 
 ### Themes (background and text colors)
 
@@ -292,9 +288,11 @@ To reset, remove the required flag.
 
 #### Font size
 
-We have to normalize `font-size` for body copy elements so that it can work in pure CSS. In order to do so, we are using a normalize. The `--USER__advancedSettings: readium-advanced-on` inline style must be set for `html` in order for the font-size setting to work.
+In version 1, we had to normalize `font-size` for body copy elements so that it could work in pure CSS. In order to do so, we were using a normalize, and the `--USER__advancedSettings: readium-advanced-on` inline style needed to be set for `html` in order for the font-size setting to work.
 
-Although it might be an issue to authors at first sight, this approach is backed by actual data.
+Although this approach was backed by actual data (published books), it was an issue to authors and, occasionally, readers too.
+
+In version 2, this normalization is deprecated, and will only be used behind the scenes when there is no other way to make the font-size setting work reliably.
 
 ```
 --USER__fontSize
@@ -305,22 +303,6 @@ Recommended values: a range from `75%` to `250%`. Increments are left to impleme
 Required flag: `--USER__advancedSettings: readium-advanced-on`
 
 Override class: User settings (should be applied by any means necessary)
-
-#### Type scale
-
-If the `--USER__advancedSettings: readium-advanced-on` style is set for `html`, you can customize the `font-size` of all elements using a factor. This may come in handy on mobile devices, if the user sets a large font-size.
-
-```
---USER__typeScale
-```
-
-Possible values: `1` | `1.067` | `1.125` | `1.2` (suggested default) | `1.25` | `1.333` | `1.414` | `1.5` | `1.618`
-
-Required flag: `--USER__advancedSettings: readium-advanced-on`
-
-Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
-
-You can use different type scale values depending on the `font-size`. For instance, if the user sets a large one, you might want to decrease the type scale so that headings are not super large.
 
 #### Line height
 
@@ -399,6 +381,56 @@ Override class: User settings advanced (optional but should be applied by any me
 Possible values: `none` | `common-ligatures`
 
 Required flag: `--USER__advancedSettings: readium-advanced-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+### Font variations
+
+If a variable font is available and is currently used, the user can disable its optical sizing, and set its `weight` and `width`.
+
+**Warning: All fonts don’t support all these variations.** ReadiumCSS provides these user settings for convenience but their implementation and use depends on the variable fonts you ship in your app. By very far, the most common variation is `weight` and may be considered a common denominator. 
+
+#### Font Optical Sizing
+
+```
+--USER__fontOpticalSizing
+```
+
+Rendering engines and browsers enable optical sizing by default for fonts that have an optical size variation axis.
+
+When optical sizing is used, small text sizes are often rendered with thicker strokes and larger serifs, whereas larger text is often rendered more delicately with more contrast between thicker and thinner strokes.
+
+Possible values: `none` | `auto` (default)
+
+Required flag: `--USER__fontOverride: readium-font-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+#### Font Weight
+
+```
+--USER__fontWeight
+```
+
+Possible values: `number` e.g. `230`, `400`, `750`
+
+**Warning: possible values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
+
+Required flag: `--USER__fontOverride: readium-font-on`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+#### Font Width
+
+```
+--USER__fontWidth
+```
+
+Possible values: `ultra-condensed` | `extra-condensed` | `condensed` | `semi-condensed` | `normal` | `semi-expanded` | `expanded` | `extra-expanded` | `ultra-expanded` | `percentage` e.g. `50%`, `125%`
+
+**Warning: the percentage values depend on the variable font you may be using.** You can use services such as [Wakamai Fondue](https://wakamaifondue.com) to get the values.
+
+Required flag: `--USER__fontOverride: readium-font-on`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
 

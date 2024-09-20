@@ -39,40 +39,6 @@
       </section>
     </section>
 
-    <section id="customizable-medias" class="level2">
-      <h2 id="sigil_toc_id_183">Customizable medias</h2>
-
-	  <p>You will find those customizable medias in <code>ReadiumCSS-config.css</code>. The values defined are used in media queries to control use of the auto pagination model.</p>
-
-      <hr/>
-
-      <pre><code>--responsive-columns</code></pre>
-
-      <p>Default is <code>60em</code></p>
-
-      <p>The <code>min-width</code> at which the auto pagination model must be used – will switch from 1 to 2 columns and vice versa.</p>
-
-      <hr/>
-
-      <pre><code>--min-device-columns</code></pre>
-
-      <p>Default is <code>36em</code></p>
-
-      <p>The minimum device width of the mobile device for which the auto pagination model must be used.</p>
-
-      <hr/>
-
-      <pre><code>--max-device-columns</code></pre>
-
-      <p>Default is <code>47em</code></p>
-
-      <p>The maximum device width of the mobile device for which the auto pagination model must be used.</p>
-
-      <hr/>
-
-      <p><strong>Warning:</strong> if you customize those medias, all ReadiumCSS <code>dist</code> stylesheets must be rebuilt.</p>
-    </section>
-
     <section id="customizable-flags" class="level2">
       <h2 id="sigil_toc_id_184">Customizable flags</h2>
 
@@ -120,7 +86,7 @@
 
       <p>Scope: <code>html</code></p>
 
-      <p>Override class: None. This flag is required to apply the <code>font-family</code>, the <code>font-size</code> and/or advanced user settings.</p>
+      <p>Override class: None. This flag is required to apply the <code>font-family</code> and advanced user settings.</p>
 
       <hr/>
 
@@ -172,6 +138,16 @@
 
       <hr/>
 
+      <pre><code>:--no-vertical-pagination</code></pre>
+
+      <p>Preset: <code>--RS__disablePagination: readium-noVerticalPagination-on</code></p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>Override class: None. It’s a flag meant for implementers’ convenience as it disables vertical-writing pagination so that they can implement theirs.</p>
+
+      <hr/>
+
       <pre><code>:--a11y-normalize</code></pre>
 
       <p>Preset: <code>--USER__a11yNormalize: readium-a11y-on</code></p>
@@ -215,7 +191,7 @@
 
         <pre><code>--RS__colWidth</code></pre>
 
-        <p>The optimal column’s width. It serves as a floor in our design.</p>
+        <p>The optimal column’s width. We set it to <code>auto</code> so that the column-count can be prioritized</p>
 
         <hr/>
 
@@ -235,13 +211,13 @@
 
         <pre><code>--RS__pageGutter</code></pre>
 
-        <p>The horizontal page margins. It must be set in pixels so that it won’t resize with font size.</p>
+        <p>The inline (horizontal by default, vertical in vertical-writing) page margins. It must be set in pixels so that it won’t resize with font size.</p>
 
         <hr/>
 
-        <pre><code>--RS__maxLineLength</code></pre>
+        <pre><code>--RS__defaultLineLength</code></pre>
 
-        <p>The optimal line-length. It must be set in <code>rem</code> in order to take <code>:root</code>’s <code>font-size</code> as a reference, whichever the <code>body</code>’s <code>font-size</code> might be.</p>
+        <p>The default line-length when none is set by the user. It must be set in <code>rem</code> in order to take <code>:root</code>’s <code>font-size</code> as a reference, whichever the <code>body</code>’s <code>font-size</code> might be.</p>
       </section>
 
       <section id="safeguards" class="level3">
@@ -281,7 +257,7 @@
 
         <p>An old style serif font-stack relying on pre-installed fonts.</p>
 
-        <p>Default is <code>"Iowan Old Style", "Sitka Text", Palatino, "Book Antiqua", serif</code>.</p>
+        <p>Default is <code>"Iowan Old Style", Sitka, "Sitka Text", Palatino, "Book Antiqua", "URW Palladio L", P052, serif</code>.</p>
 
         <hr/>
 
@@ -289,7 +265,7 @@
 
         <p>A modern serif font-stack relying on pre-installed fonts.</p>
 
-        <p>Default is <code>Athelas, Constantia, Georgia, serif</code>.</p>
+        <p>Default is <code>Athelas, Constantia, Charter, "Bitstream Charter", Cambria, "Georgia Pro", Georgia, serif</code>.</p>
 
         <hr/>
 
@@ -297,7 +273,7 @@
 
         <p>A neutral sans-serif font-stack relying on pre-installed fonts.</p>
 
-        <p>Default is <code>-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif</code>.</p>
+        <p>Default is <code>-ui-sans-serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Inter, Roboto, "Helvetica Neue", "Arial Nova", "Liberation Sans", Arial, sans-serif</code>.</p>
 
         <hr/>
 
@@ -305,7 +281,7 @@
 
         <p>A humanist sans-serif font-stack relying on pre-installed fonts.</p>
 
-        <p>Default is <code>Seravek, Calibri, Roboto, Arial, sans-serif</code>.</p>
+        <p>Default is <code>Seravek, Calibri, "Gill Sans Nova", Roboto, Ubuntu, "DejaVu Sans", source-sans-pro, sans-serif</code>.</p>
 
         <hr/>
 
@@ -313,7 +289,7 @@
 
         <p>A monospace font-stack relying on pre-installed fonts.</p>
 
-        <p>Default is <code>"Andale Mono", Consolas, monospace</code>.</p>
+        <p>Default is <code>ui-monospace, "Andale Mono", "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace</code>.</p>
       </section>
 
       <section id="default-font-stacks-for-japanese-publications" class="level3">
@@ -552,35 +528,35 @@
 
       <pre><code>--USER__colCount</code></pre>
 
-      <p>The number of columns (<code>column-count</code>) the user wants displayed (one-page view or two-page spread).</p>
+      <p>The number of columns (<code>column-count</code>) the user wants displayed (one-page view, two-page spread, 3 columns, etc.).</p>
 
       <p>Scope: <code>html</code></p>
 
-      <p>Possible values: <code>1</code> | <code>2</code> | <code>auto</code> (default)</p>
+      <p>Possible values: <code>integer</code>. Value <code>0</code> is handled as an error and resolves to <code>1</code>.</p>
 
       <p>Required flag: none</p>
 
       <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
-      <p>To reset, change the value to <code>auto</code>.</p>
+      <p>To reset, remove the variable.</p>
 
       <hr/>
 
-      <pre><code>--USER__pageMargins</code></pre>
+      <pre><code>--USER__lineLength</code></pre>
 
-      <p>A factor applied to horizontal margins (<code>padding-left</code> and <code>padding-right</code>) the user wants to set.</p>
+      <p>The <code>max-width</code> of <code>body</code> (to shrink or grow the line-length of body copy).</p>
 
       <p>Scope: <code>html</code></p>
 
       <p>It impacts <code>body</code>.</p>
 
-      <p>Recommended values: a range from <code>0.5</code> to <code>2</code>. Increments are left to implementers’ judgment.</p>
+      <p>Possible values: any value CSS property <code>max-width|height</code> accepts.</p>
 
       <p>Required flag: none</p>
 
       <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
-      <p>To reset, change the value to <code>1</code>.</p>
+      <p>To reset, remove the variable.</p>
 
       <hr/>
 
@@ -662,7 +638,11 @@
 
       <p>Scope: <code>html</code></p>
 
-      <p>It impacts <code>body</code>, <code>p</code>, <code>li</code>, <code>div</code>, <code>dt</code>, <code>dd</code> and phrasing elements which don’t have a <code>lang</code> or <code>xml:lang</code> attribute.</p>
+      <p>It impacts everything except <code>code</code>, <code>var</code>, <code>kbd</code>, and <code>samp</code>.</p>
+
+      <p>Possible values: <code>var(--RS__oldStyleTf)</code> | <code>var(--RS__modernTf)</code> | <code>var(--RS__sansTf)</code> | <code>var(--RS__humanistTf)</code> | <code>&lt;string&gt;</code></p>
+
+      <p>For Japanese, possible values become: <code>var(--RS__serif-ja)</code> (horizontal writing) | <code>var(--RS__sans-serif-ja)</code> (horizontal writing) | <code>var(--RS__serif-ja-v)</code> (vertical writing) | <code>var(--RS__sans-serif-ja-v)</code> (vertical writing) | <code>&lt;string&gt;</code></p>
 
       <p>Required flag: <code>:--fontOverride</code></p>
 
@@ -678,33 +658,11 @@
 
       <p>Scope: <code>html</code></p>
 
-      <p>Possible values: <code>var(--RS__oldStyleTf)</code> | <code>var(--RS__modernTf)</code> | <code>var(--RS__sansTf)</code> | <code>var(--RS__humanistTf)</code> | <code>&lt;string&gt;</code></p>
-
-      <p>For Japanese, possible values become: <code>var(--RS__serif-ja)</code> (horizontal writing) | <code>var(--RS__sans-serif-ja)</code> (horizontal writing) | <code>var(--RS__serif-ja-v)</code> (vertical writing) | <code>var(--RS__sans-serif-ja-v)</code> (vertical writing) | <code>&lt;string&gt;</code></p>
-
-      <p>Required flag: <code>:--fontOverride</code></p>
+      <p>Possible values: unitless <code>number</code> or percentage</p>
 
       <p>Override class: User settings (should be applied by any means necessary)</p>
 
       <p>To reset, remove the required flag.</p>
-
-      <hr/>
-
-      <pre><code>--USER__typeScale</code></pre>
-
-      <p>The type scale the user wants to use for the publication.</p>
-
-      <p>Scope: <code>html</code></p>
-
-      <p>It requires the <code>ReadiumCSS-fs_normalize.css</code> stylesheet.</p>
-
-      <p>It impacts headings, <code>p</code>, <code>li</code>, <code>div</code>, <code>pre</code>, <code>dd</code>, <code>small</code>, <code>sub</code>, and <code>sup</code>.</p>
-
-      <p>Recommended values: a range from <code>75%</code> to <code>250%</code>. Increments are left to implementers’ judgment.</p>
-
-      <p>Required flag: <code>:--advancedSettings</code></p>
-
-      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
 
       <hr/>
 
@@ -791,6 +749,58 @@
       <p>Possible values: <code>none</code> | <code>common-ligatures</code></p>
 
       <p>Required flag: <code>:--advancedSettings</code></p>
+
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+      <hr/>
+
+      <pre><code>--USER__fontOpticalSizing</code></pre>
+
+      <p>Enabling and disabling optical sizing (stroke optimizations).</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all text.</p>
+
+      <p>Possible values: <code>none</code> | <code>auto</code></p>
+
+      <p>Required flag: <code>:--fontOverride</code></p>
+
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+      <hr/>
+
+      <pre><code>--USER__fontWeight</code></pre>
+
+      <p>Setting the weight of the variable font.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all text.</p>
+
+      <p>Possible values: <code>number</code></p>
+
+      <p><strong>Warning: possible values depend on the variable font you may be using.</strong> You can use services such as <a href="https://wakamaifondue.com">Wakamai Fondue</a> to get the values.</p>
+
+      <p>Required flag: <code>:--fontOverride</code></p>
+
+      <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+      <hr/>
+
+      <pre><code>--USER__fontWidth</code></pre>
+
+      <p>Setting the width of the variable font.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all text.</p>
+
+      <p>Possible values: <code>ultra-condensed</code> | <code>extra-condensed</code> | <code>condensed</code> | <code>semi-condensed</code> | <code>normal</code> | <code>semi-expanded</code> | <code>expanded</code> | <code>extra-expanded</code> | <code>ultra-expanded</code> | <code>percentage</code></p>
+
+      <p><strong>Warning: the percentage values depend on the variable font you may be using.</strong> You can use services such as <a href="https://wakamaifondue.com">Wakamai Fondue</a> to get the values.</p>
+
+      <p>Required flag: <code>:--fontOverride</code></p>
 
       <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
     </section>

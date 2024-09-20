@@ -19,7 +19,7 @@
   --RS__selectionBackgroundColor: #b4d8fe;
   --RS__selectionTextColor: inherit;
 
-  --RS__maxLineLength: 40.01rem; /* Forcing a reflow in Blink/Webkit so that blend mode can work */
+  --RS__defaultLineLength: 40.01rem; /* Forcing a reflow in Blink/Webkit so that blend mode can work */
 }
 
 /* we don’t need to redeclare bg-color and color for :root since we will inherit and update from day/default mode */

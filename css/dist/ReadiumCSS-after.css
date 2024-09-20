@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 1.1.0)
+ * Readium CSS (v. 2.0.0-alpha.1)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -15,11 +15,11 @@
 @namespace svg url("http://www.w3.org/2000/svg");
 
 :root{
-  --RS__colWidth:45em;
+  --RS__colWidth:auto;
   --RS__colCount:1;
   --RS__colGap:0;
-  --RS__maxLineLength:40rem;
-  --RS__pageGutter:20px;
+  --RS__defaultLineLength:40rem;
+  --RS__pageGutter:0;
   --RS__viewportWidth:100%;
 }
 
@@ -54,47 +54,28 @@
 
   -webkit-text-size-adjust:100%;
   box-sizing:border-box;
-  -webkit-perspective:1;
   -webkit-touch-callout:none;
 }
 
 body{
   width:100%;
-  max-width:var(--RS__maxLineLength) !important;
+  max-width:var(--RS__defaultLineLength) !important;
   padding:0 var(--RS__pageGutter) !important;
   margin:0 auto !important;
+  overflow:hidden;
   box-sizing:border-box;
 }
 
-@media screen and (min-width: 35em){
+@supports (overflow: clip){
 
-  :root{
-    --RS__pageGutter:30px;
-  }
-}
+   :root{
+      overflow:clip;
+   }
 
-@media screen and (min-width: 45em){
-
-  :root{
-    --RS__pageGutter:40px;
-  }
-}
-
-@media screen and (min-width: 75em){
-
-  :root{
-    --RS__pageGutter:50px;
-  }
-}
-
-@media screen and (min-width: 60em),
-screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientation: landscape){
-
-  :root{
-    --RS__colWidth:20em;
-    --RS__colCount:2;
-    --RS__maxLineLength:39.99rem;
-  }
+   body{
+      overflow:clip;
+      overflow-clip-margin:content-box;
+   }
 }
 
 :root[style*="readium-scroll-on"]{
@@ -110,7 +91,19 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
 }
 
 :root[style*="readium-scroll-on"] body{
-  --RS__maxLineLength:40rem !important;
+  overflow:auto;
+  --RS__defaultLineLength:40rem !important;
+}
+
+@supports (overflow: clip){
+
+  :root[style*="readium-scroll-on"]{
+     overflow:auto;
+  }
+
+  :root[style*="readium-scroll-on"] body{
+     overflow:clip;
+  }
 }
 
 :root[style*="readium-night-on"]{
@@ -175,7 +168,7 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
   --RS__selectionBackgroundColor:#b4d8fe;
   --RS__selectionTextColor:inherit;
 
-  --RS__maxLineLength:40.01rem;
+  --RS__defaultLineLength:40.01rem;
 }
 
 :root[style*="readium-sepia-on"] *:not(a){
@@ -265,33 +258,24 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
 @media screen and (prefers-reduced-motion){
 }
 
-@media screen and (min-width: 60em),
-screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientation: landscape){
+:root[style*="--USER__colCount"]{
+  -webkit-column-count:var(--USER__colCount);
+  -moz-column-count:var(--USER__colCount);
+  column-count:var(--USER__colCount);
 
-  :root[style*="--USER__colCount: 1"],
-  :root[style*="--USER__colCount:1"],
-  :root[style*="--USER__colCount: 2"],
-  :root[style*="--USER__colCount:2"]{
-    -webkit-column-count:var(--USER__colCount);
-    -moz-column-count:var(--USER__colCount);
-    column-count:var(--USER__colCount);
-  }
-
-  :root[style*="--USER__colCount: 1"],
-  :root[style*="--USER__colCount:1"]{
-    --RS__maxLineLength:40rem !important;
-    --RS__colWidth:100vw;
-  }
-
-  :root[style*="--USER__colCount: 2"],
-  :root[style*="--USER__colCount:2"]{
-    --RS__colWidth:auto;
-  }
+  --RS__colWidth:auto;
 }
 
-:root[style*="--USER__pageMargins"] body{
-  padding:0 calc(var(--RS__pageGutter) * var(--USER__pageMargins)) !important;
+:root[style*="--USER__colCount: 0"],
+:root[style*="--USER__colCount:0"]{
+  -webkit-column-count:1;
+  -moz-column-count:1;
+  column-count:1;
 }
+
+:root[style*="--USER__lineLength"] body{
+    max-width:var(--USER__lineLength) !important;
+  }
 
 :root[style*="--USER__backgroundColor"]{
   background-color:var(--USER__backgroundColor) !important;
@@ -366,27 +350,7 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
   font-family:var(--USER__fontFamily) !important;
 }
 
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] body,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] p,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] li,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] div,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] dt,
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] dd{
-  font-family:inherit !important;
-}
-
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] i:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] i:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] em:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] em:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] cite:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] cite:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] b:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] b:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] strong:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] strong:not([xml\:lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] span:not([lang]),
-:root[style*="readium-font-on"][style*="--USER__fontFamily"] span:not([xml\:lang]){
+:root[style*="readium-font-on"][style*="--USER__fontFamily"] *:not(code):not(var):not(kbd):not(samp){
   font-family:inherit !important;
 }
 
@@ -436,7 +400,14 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
 }
 
 :root[style*="--USER__fontSize"]{
-  font-size:var(--USER__fontSize) !important;
+  zoom:var(--USER__fontSize) !important;
+}
+
+@supports not (zoom: 1){
+
+  :root[style*="--USER__fontSize"]{
+    font-size:var(--USER__fontSize) !important;
+  }
 }
 
 :root[style*="readium-advanced-on"][style*="--USER__lineHeight"]{
@@ -489,56 +460,76 @@ screen and (min-device-width: 36em) and (max-device-width: 47em) and (orientatio
   font-variant:none;
 }
 
-:root[style*="readium-advanced-on"]{
-  --USER__typeScale:1.2;
+:root[style*="readium-font-on"][style*="--USER__fontWeight"] body{
+  font-weight:var(--USER__fontWeight) !important;
 }
 
-:root[style*="readium-advanced-on"] p,
-:root[style*="readium-advanced-on"] li,
-:root[style*="readium-advanced-on"] div,
-:root[style*="readium-advanced-on"] pre,
-:root[style*="readium-advanced-on"] dd{
-  font-size:1rem !important;
+:root[style*="readium-font-on"][style*="--USER__fontWeight"] b,
+:root[style*="readium-font-on"][style*="--USER__fontWeight"] strong{
+  font-weight:bolder;
 }
 
-:root[style*="readium-advanced-on"] h1{
-  font-size:1.75rem !important;
-  font-size:calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+:root[style*="readium-font-on"][style*="--USER__fontWidth"] body{
+  font-stretch:var(--USER__fontWidth) !important;
 }
 
-:root[style*="readium-advanced-on"] h2{
-  font-size:1.5rem !important;
-  font-size:calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+:root[style*="readium-font-on"][style*="--USER__fontOpticalSizing"] body{
+  font-optical-sizing:var(--USER__fontOpticalSizing) !important;
 }
 
-:root[style*="readium-advanced-on"] h3{
-  font-size:1.25rem !important;
-  font-size:calc(1rem * var(--USER__typeScale)) !important;
-}
+@supports not (zoom: 1){
 
-:root[style*="readium-advanced-on"] h4,
-:root[style*="readium-advanced-on"] h5,
-:root[style*="readium-advanced-on"] h6{
-  font-size:1rem !important;
-}
+  :root[style*="readium-advanced-on"]{
+    --USER__typeScale:1.2;
+  }
 
-:root[style*="readium-advanced-on"] small{
-  font-size:smaller !important;
-}
+  :root[style*="readium-advanced-on"] p,
+  :root[style*="readium-advanced-on"] li,
+  :root[style*="readium-advanced-on"] div,
+  :root[style*="readium-advanced-on"] pre,
+  :root[style*="readium-advanced-on"] dd{
+    font-size:1rem !important;
+  }
 
-:root[style*="readium-advanced-on"] sub,
-:root[style*="readium-advanced-on"] sup{
-  font-size:67.5% !important;
-}
+  :root[style*="readium-advanced-on"] h1{
+    font-size:1.75rem !important;
+    font-size:calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+  }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h1{
-  font-size:calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
-}
+  :root[style*="readium-advanced-on"] h2{
+    font-size:1.5rem !important;
+    font-size:calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+  }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h2{
-  font-size:calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
-}
+  :root[style*="readium-advanced-on"] h3{
+    font-size:1.25rem !important;
+    font-size:calc(1rem * var(--USER__typeScale)) !important;
+  }
 
-:root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3{
-  font-size:calc(1rem * var(--USER__typeScale)) !important;
+  :root[style*="readium-advanced-on"] h4,
+  :root[style*="readium-advanced-on"] h5,
+  :root[style*="readium-advanced-on"] h6{
+    font-size:1rem !important;
+  }
+
+  :root[style*="readium-advanced-on"] small{
+    font-size:smaller !important;
+  }
+
+  :root[style*="readium-advanced-on"] sub,
+  :root[style*="readium-advanced-on"] sup{
+    font-size:67.5% !important;
+  }
+
+  :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h1{
+    font-size:calc(((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+  }
+
+  :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h2{
+    font-size:calc((1rem * var(--USER__typeScale)) * var(--USER__typeScale)) !important;
+  }
+
+  :root[style*="readium-advanced-on"][style*="--USER__typeScale"] h3{
+    font-size:calc(1rem * var(--USER__typeScale)) !important;
+  }
 }

@@ -44,26 +44,9 @@ By default, we inject all stylesheets on load and rely on custom properties (a.k
 
 ## Customize
 
-ReadiumCSS ships with a `ReadiumCSS-config.css` file you can use to customize it a little bit. It allows implementers to:
+ReadiumCSS ships with a `ReadiumCSS-config.css` file you can use to customize it a little bit. It allows implementers to choose selectors for the user settings’ flags.
 
-1. define in which conditions the auto pagination model is used;
-2. choose selectors for the user settings’ flags.
-
-In order to provide this customization, we use custom media and custom selectors, which will hopefully become [standards implemented at some point](https://drafts.csswg.org/css-extensions/), but require PostCSS at the moment. Consequently, you’ll have to rebuild all `dist` stylesheets if you’re changing this file.
-
-### Auto pagination model
-
-The auto pagination model switches from 1 to 2 columns, and vice versa, when the conditions defined in `ReadiumCSS-config.css` are met. Further details about this model can be found in [“Injection and pagination” doc](../docs/CSS03-injection_and_pagination.md).
-
-On desktop, `--responsive-columns` is the `min-width` at which the model must be used. Default is `60em`, a relative unit since it is responsive by default and will switch depending on the window’s dimensions and the font size.
-
-Should you want it never or always applied, you can either define a `min-width` large or small enough, or remove the media queries entirely in `ReadiumCSS-pagination.css` and `ReadiumCSS-colNumber_pref.css`.
-
-On mobile, `--min-device-columns` and `--max-device-columns` is the range of (minimum and maximum) device widths in which the model must be used. We are forcing the orientation in `landscape`.
-
-We recommend not trying to apply it in portrait orientation because 2 columns will provide users with quite a terrible reading experience in this configuration.
-
-Those custom medias may be extended at some point, depending on implementers’ feedbacks and issues.
+In order to provide this customization, we use custom selectors, which will hopefully become [standards implemented at some point](https://drafts.csswg.org/css-extensions/), but require PostCSS at the moment. Consequently, you’ll have to rebuild all `dist` stylesheets if you’re changing this file.
 
 ### Flags for user settings
 
@@ -181,9 +164,9 @@ root.style.removeProperty("--USER__var");
 
 Please note you must implement a fallback strategy if you want to support Internet Explorer 11 and early versions of Microsoft Edge.
 
-### Examples
+### Example
 
-#### Changing hyphenation and justification
+To change hyphenation and justification you would do the following:
 
 ```
 root.style.setProperty("--USER__advancedSettings", "readium-advanced-on");
@@ -193,13 +176,6 @@ root.style.setProperty("--USER__bodyHyphens", "auto");
 
 Of course this example is simplistic. You could for instance create an helper to set multiple properties at once.
 
-#### Changing the type scale 
-
-You might want to change the type scale in order to adjust the `font-size` of all elements to the size of the screen and the global `font-size` set by the user. It can indeed help solve overflow issues for long words in headings, ridiculously large sizes, etc.
-
-```
-root.style.setProperty("--USER__advancedSettings", "readium-advanced-on");
-root.style.setProperty("--USER__typeScale", "1.067");
 ```
 
 ## Create Themes

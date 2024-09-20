@@ -120,7 +120,7 @@ root.style.setProperty("name of var", "");</code></pre>
 
         <p>Supported value: <code>readium-advanced-on</code></p>
 
-        <p>Override class: None. This flag is required to apply the <code>font-family</code>, the <code>font-size</code> and/or advanced user settings.</p>
+        <p>Override class: None. This flag is required to apply the <code>font-family</code> and advanced user settings.</p>
 
         <p>To switch back to the publisher’s styles, you can either set an empty string as a value or remove the property. This will disable all advanced settings requiring the flag.</p>
       </section>
@@ -200,42 +200,38 @@ root.style.setProperty("name of var", "");</code></pre>
       <section id="layout" class="level3">
         <h3 class="sigil_not_in_toc">Layout</h3>
 
-        <p>The user can set the number of columns and page margins.</p>
+        <p>The user can set the number of columns and line length.</p>
 
         <section id="number-of-columns" class="level4">
           <h4 class="sigil_not_in_toc">Number of columns</h4>
 
           <pre><code>--USER__colCount</code></pre>
 
-          <p>Possible values: <code>1</code> | <code>2</code> | <code>auto</code> (default)</p>
+          <p>Possible values: <code>integer</code></p>
 
           <p>Required flag: none</p>
 
           <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
-          <p>To reset, change the value to <code>auto</code>.</p>
+          <p>To reset, remove the variable.</p>
 
-          <p>By default, this setting behaves as an <code>auto</code> value, it will switch to 1 or 2 columns depending on the minimum <code>width</code> available and <code>font-size</code>.</p>
+          <p>By default, this setting behaves as <code>1</code>. Value <code>0</code> is handled as an error and resolves to <code>1</code>.</p>
 
           <p>It is up to implementers to decide whether they want this setting to be available and override any configuration or only some (e.g. setting only available in landscape and/or larger screens).</p>
         </section>
 
-        <section id="page-margins" class="level4">
-          <h4 class="sigil_not_in_toc">Page margins</h4>
+        <section id="line-length" class="level4">
+          <h4 class="sigil_not_in_toc">Line length</h4>
 
-          <pre><code>--USER__pageMargins</code></pre>
+          <pre><code>--USER__lineLength</code></pre>
 
-          <p>Recommended values: a range from <code>0.5</code> to <code>2</code>. Increments are left to implementers’ judgment.</p>
+          <p>Possible values: any value CSS property `max-width|height` accepts.</p>
 
           <p>Required flag: none</p>
 
           <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
-          <p>To reset, change the value to <code>1</code>.</p>
-
-          <p>The user margins are a factor of the reference we set.</p>
-
-          <p>This will probably be fine-tuned in the next version (beta).</p>
+          <p>To reset, remove the variable.</p>
         </section>
       </section>
 
@@ -317,9 +313,11 @@ root.style.setProperty("name of var", "");</code></pre>
         <section id="font-size" class="level4">
           <h4 class="sigil_not_in_toc">Font size</h4>
 
-          <p>We have to normalize <code>font-size</code> for body copy elements so that it can work in pure CSS. In order to do so, we are using a normalize. The <code>--USER__advancedSettings: readium-advanced-on</code> inline style must be set for <code>html</code> in order for the font-size setting to work.</p>
+          <p>In version 1 we had to normalize <code>font-size</code> for body copy elements so that it could work in pure CSS. In order to do so, we were using a normalize, and the <code>--USER__advancedSettings: readium-advanced-on</code> inline style needed to be set for <code>html</code> in order for the font-size setting to work.</p>
 
-          <p>Although it might be an issue to authors at first sight, this approach is backed by actual data.</p>
+          <p>Although this approach was backed by actual data (published books), it was an issue to authors and, occasionally, readers too.</p>
+
+          <p>In version 2, this normalization is deprecated, and will only be used behind the scenes when there is no other way to make the font-size setting work reliably.</p>
 
           <pre><code>--USER__fontSize</code></pre>
 
@@ -328,22 +326,6 @@ root.style.setProperty("name of var", "");</code></pre>
           <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
 
           <p>Override class: User settings (should be applied by any means necessary)</p>
-        </section>
-
-        <section id="type-scale" class="level4">
-          <h4 class="sigil_not_in_toc">Type scale</h4>
-
-          <p>If the <code>--USER__advancedSettings: readium-advanced-on</code> style is set for <code>html</code>, you can customize the <code>font-size</code> of all elements using a factor. This may come in handy on mobile devices, if the user sets a large font-size.</p>
-
-          <pre><code>--USER__typeScale</code></pre>
-
-          <p>Possible values: <code>1</code> | <code>1.067</code> | <code>1.125</code> | <code>1.2</code> (suggested default) | <code>1.25</code> | <code>1.333</code> | <code>1.414</code> | <code>1.5</code> | <code>1.618</code></p>
-
-          <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
-
-          <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
-
-          <p>You can use different type scale values depending on the <code>font-size</code>. For instance, if the user sets a large one, you might want to decrease the type scale so that headings are not super large.</p>
         </section>
 
         <section id="line-height" class="level4">
@@ -426,6 +408,58 @@ root.style.setProperty("name of var", "");</code></pre>
           <p>Possible values: <code>none</code> | <code>common-ligatures</code></p>
 
           <p>Required flag: <code>--USER__advancedSettings: readium-advanced-on</code></p>
+
+          <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+        </section>
+      </section>
+
+      <section id="font-variations" class="level3">
+        <h3 class="sigil_not_in_toc">Font variations</h3>
+
+        <p>If a variable font is available and is currently used, the user can disable its optical sizing, and set its `weight` and `width`.</p>
+
+        <p><strong>Warning: All fonts don’t support all these variations.</strong> ReadiumCSS provides these user settings for convenience but their implementation and use depends on the variable fonts you ship in your app. By very far, the most common variation is `weight` and may be considered a common denominator.</p>
+
+        <section id="font-optical-sizing" class="level4">
+          <h4 class="sigil_not_in_toc">Font Optical Sizing</h4>
+
+          <pre><code>--USER__fontOpticalSizing</code></pre>
+
+          <p>Rendering engines and browsers enable optical sizing by default for fonts that have an optical size variation axis.</p>
+
+          <p>When optical sizing is used, small text sizes are often rendered with thicker strokes and larger serifs, whereas larger text is often rendered more delicately with more contrast between thicker and thinner strokes.</p>
+
+          <p>Possible values: <code>none</code> | <code>auto</code> (default)</p>
+
+          <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
+
+          <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+        </section>
+
+        <section id="font-weight" class="level4">
+          <h4 class="sigil_not_in_toc">Font Weight</h4>
+
+          <pre><code>--USER__fontWeight</code></pre>
+
+          <p>Possible values: <code>number</code> e.g. <code>230</code>, <code>400</code>, <code>750</code></p>
+
+          <p><strong>Warning: possible values depend on the variable font you may be using.</strong> You can use services such as <a href="https://wakamaifondue.com">Wakamai Fondue</a> to get the values.</p>
+
+          <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
+
+          <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+        </section>
+
+        <section id="font-width" class="level4">
+          <h4 class="sigil_not_in_toc">Font Width</h4>
+
+          <pre><code>--USER__fontWidth</code></pre>
+
+          <p>Possible values: <code>ultra-condensed</code> | <code>extra-condensed</code> | <code>condensed</code> | <code>semi-condensed</code> | <code>normal</code> | <code>semi-expanded</code> | <code>expanded</code> | <code>extra-expanded</code> | <code>ultra-expanded</code> | <code>percentage</code> e.g. <code>50%</code>, <code>125%</code></p>
+
+          <p><strong>Warning: the percentage values depend on the variable font you may be using.</strong> You can use services such as <a href="https://wakamaifondue.com">Wakamai Fondue</a> to get the values.</p>
+
+          <p>Required flag: <code>--USER__fontOverride: readium-font-on</code></p>
 
           <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
         </section>

@@ -6,7 +6,8 @@
 
    Repo: https://github.com/readium/readium-css */
 
-:root:--scroll-view {
+:root:--scroll-view,
+:root:--no-vertical-pagination {
   /* Reset html size so that the user can scroll */
   min-width: 0 !important;
   width: auto !important;
@@ -21,10 +22,17 @@
 }
 
 /* Make sure line-length is limited in all configs */
-:root:--scroll-view body {
-  --RS__maxLineLength: 40.01rem !important; /* Fixes fragmentation update issues in Webkit i.e. value must be slightly different than the one for pagination */
+:root:--scroll-view body,
+:root:--no-vertical-pagination body {
+  --RS__defaultLineLength: 40.01rem !important; /* Fixes fragmentation update issues in Webkit i.e. value must be slightly different than the one for pagination */
 }
 
-/* Scroll mode horizontal */
+@supports (overflow: clip) {
+  :root:--scroll-view {
+     overflow: auto;
+  }
 
-/* Do we add a top/bottom margin for body in vertical scroll or not? */
+  :root:--scroll-view body {
+     overflow: clip;
+  }
+}

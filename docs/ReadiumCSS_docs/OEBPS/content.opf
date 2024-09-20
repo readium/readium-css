@@ -6,9 +6,9 @@
     <meta property="role" refines="#cre" scheme="marc:relators">aut</meta>
     <dc:date id="epub-date">2017-08-24T14:12:26Z</dc:date>
     <dc:language>en</dc:language>
-    <dc:identifier id="epub-id-1">urn:uuid:91cab77e-946f-4814-9e61-8494a5d5cb0f</dc:identifier>
+    <dc:identifier id="epub-id-1">urn:uuid:527D093B-9C0A-4C83-8AF6-0A40E91D30FC</dc:identifier>
     <meta name="cover" content="cover_jpg"/>
-    <meta property="dcterms:modified">2020-06-03T19:52:07Z</meta>
+    <meta property="dcterms:modified">2024-08-05T08:35:00Z</meta>
     <meta content="0.9.5" name="Sigil version"/>
     <meta property="schema:accessibilityFeature">displayTransformability</meta>
     <meta property="schema:accessibilityFeature">readingOrder</meta>
@@ -57,7 +57,7 @@
     <item href="Text/Section-010.xhtml" id="Section-010.xhtml" media-type="application/xhtml+xml"/>
     <item href="Text/Section-021.xhtml" id="Section-021.xhtml" media-type="application/xhtml+xml"/>
     <item href="Images/charis-sil.png" id="charis-sil.png" media-type="image/png"/>
-    <item href="Images/clear-sans.png" id="clear-sans.png" media-type="image/png"/>
+    <item href="Images/plex-sans.png" id="plex-sans.png" media-type="image/png"/>
     <item href="Images/faustina.png" id="faustina.png" media-type="image/png"/>
     <item href="Images/fira-sans.png" id="fira-sans.png" media-type="image/png"/>
     <item href="Images/libre-franklin.png" id="libre-franklin.png" media-type="image/png"/>
@@ -75,7 +75,23 @@
     <item href="Text/Section-025.xhtml" id="Section-025.xhtml" media-type="application/xhtml+xml"/>
     <item href="Text/Section-016.xhtml" id="Section-016.xhtml" media-type="application/xhtml+xml"/>
     <item href="Text/Section-027.xhtml" id="Section-027.xhtml" media-type="application/xhtml+xml"/>
+    <item href="Text/Section-028.xhtml" id="Section-028.xhtml" media-type="application/xhtml+xml"/>
     <item href="Images/alt-lines.png" id="alt-lines.png" media-type="image/png"/>
+    <item href="Text/Section-010b.xhtml" id="Section-010b.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Cabin.png" href="Images/Cabin.png" media-type="image/png"/>
+    <item id="Crimson-pro.png" href="Images/Crimson-pro.png" media-type="image/png"/>
+    <item id="EB-Garamond.png" href="Images/EB-Garamond.png" media-type="image/png"/>
+    <item id="new-york.png" href="Images/new-york.png" media-type="image/png"/>
+    <item id="Newsreader.png" href="Images/Newsreader.png" media-type="image/png"/>
+    <item id="Public-sans.png" href="Images/Public-sans.png" media-type="image/png"/>
+    <item id="Roboto-flex.png" href="Images/Roboto-flex.png" media-type="image/png"/>
+    <item id="Roboto-serif.png" href="Images/Roboto-serif.png" media-type="image/png"/>
+    <item id="sf-monospace.png" href="Images/sf-monospace.png" media-type="image/png"/>
+    <item id="sf-pro.png" href="Images/sf-pro.png" media-type="image/png"/>
+    <item id="Source-code-pro.png" href="Images/Source-code-pro.png" media-type="image/png"/>
+    <item id="Source-serif-pro.png" href="Images/Source-serif-pro.png" media-type="image/png"/>
+    <item id="segoe-ui-variable.png" href="Images/segoe-ui-variable.png" media-type="image/png"/>
+    <item id="sitka.png" href="Images/sitka.png" media-type="image/png"/>
   </manifest>
   <spine toc="ncx">
     <itemref idref="cover_xhtml"/>
@@ -90,6 +106,7 @@
     <itemref idref="Section-008.xhtml"/>
     <itemref idref="Section-009.xhtml"/>
     <itemref idref="Section-010.xhtml"/>
+    <itemref idref="Section-010b.xhtml"/>
     <itemref idref="Section-011.xhtml"/>
     <itemref idref="Section-012.xhtml"/>
     <itemref idref="Section-013.xhtml"/>
@@ -107,6 +124,7 @@
     <itemref idref="Section-025.xhtml"/>
     <itemref idref="Section-026.xhtml"/>
     <itemref idref="Section-027.xhtml"/>
+    <itemref idref="Section-028.xhtml"/>
   </spine>
   <guide>
     <reference href="Text/cover.xhtml" title="Cover" type="cover"/>

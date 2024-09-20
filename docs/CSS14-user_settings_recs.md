@@ -59,7 +59,7 @@ Does not apply to authors.
 
 It depends on the implementers’ approach (presets with typographic rules as references Vs. the user can override on a setting-by-setting basis). 
 
-## Page margins
+## Line length
 
 ### User’s intent
 

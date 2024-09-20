@@ -23,19 +23,8 @@
   --RS__boxSizingTable: border-box;
 }
 
-/* Sanitize line-heights in webkit e.g. raised cap without a declared line-height
-   See effect by checking this demo in Safari: https://codepen.io/JayPanoz/pen/gRmzrE
-   Note: glyphs has to be reset to inline for CJK */
-html {
-  -webkit-line-box-contain: block glyphs replaced;
-}
-
-:lang(ja) {
-  -webkit-line-box-contain: block inline replaced;
-}
-
 /* Wrap long strings if larger than line-length */
-a, h1, h2, h3, h4, h5, h6 {
+a, a span, span a, h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
@@ -45,7 +34,7 @@ div {
 
 /* Size medias */
 /* You can override CSS variables by re-defining it for all elements or a specific one */
-img, svg, video {
+img, svg|svg, video {
   /* We probably don’t need to use modern box-sizing as auto behaves like it */
   box-sizing: var(--RS__boxSizingMedia);
 

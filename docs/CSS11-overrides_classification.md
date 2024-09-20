@@ -23,7 +23,7 @@ The following settings are required and should be applied by any means necessary
 The following settings are optional but should be applied by any means necessary, without any flag, if they are provided to users:
 
 - number of columns;
-- page margins;
+- line length;
 - custom reading modes (background and text color);
 - filters (darken and invert for night mode).
 
@@ -32,11 +32,11 @@ The following settings are optional but should be applied by any means necessary
 The following settings are required and should be applied with their required flag by any means necessary:
 
 - font-family (requires `:--font-overide` flag);
-- font-size (requires `:--advanced-settings` flag).
+- font-size.
 
 ## User overrides advanced
 
-The following settings are optional but should be applied by any means necessary, with the `:--advanced-setting` flag, if they are provided to users:
+The following settings are optional but should be applied by any means necessary, with the `:--advanced-setting` flag unless otherwise stated, if they are provided to users:
 
 - line-height;
 - text-align and hyphens (those two should probably work together);
@@ -47,6 +47,9 @@ The following settings are optional but should be applied by any means necessary
 - arabic ligatures;
 - hiding ruby (CJK);
 - accessibility normalization;
+- font optical sizing (requires `:--font-overide` flag and a variable font);
+- font weight (requires `:--font-overide` flag and a variable font);
+- font width (requires `:--font-overide` flag and a variable font);
 - type scale.
 
 Please note this classification might change and additional items be added in the future.

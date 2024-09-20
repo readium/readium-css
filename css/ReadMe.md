@@ -42,26 +42,9 @@ By default, we inject all stylesheets on load and rely on custom properties (a.k
 
 ## Customize
 
-ReadiumCSS ships with a `ReadiumCSS-config.css` file you can use to customize it a little bit. It allows implementers to:
+ReadiumCSS ships with a `ReadiumCSS-config.css` file you can use to customize it a little bit. It allows implementers to choose selectors for the user settings’ flags.
 
-1. define in which conditions the auto pagination model is used;
-2. choose selectors for the user settings’ flags.
-
-In order to provide this customization, we use custom media and custom selectors, which will hopefully become [standards implemented at some point](https://drafts.csswg.org/css-extensions/), but require PostCSS at the moment. Consequently, you’ll have to rebuild all `dist` stylesheets if you’re changing this file.
-
-### Auto pagination model
-
-The auto pagination model switches from 1 to 2 columns, and vice versa, when the conditions defined in `ReadiumCSS-config.css` are met. Further details about this model can be found in [“Injection and pagination” doc](../docs/CSS03-injection_and_pagination.md).
-
-On desktop, `--responsive-columns` is the `min-width` at which the model must be used. Default is `60em`, a relative unit since it is responsive by default and will switch depending on the window’s dimensions and the font size.
-
-Should you want it never or always applied, you can either define a `min-width` large or small enough, or remove the media queries entirely in `ReadiumCSS-pagination.css` and `ReadiumCSS-colNumber_pref.css`.
-
-On mobile, `--min-device-columns` and `--max-device-columns` is the range of (minimum and maximum) device widths in which the model must be used. We are forcing the orientation in `landscape`.
-
-We recommend not trying to apply it in portrait orientation because 2 columns will provide users with quite a terrible reading experience in this configuration.
-
-Those custom medias may be extended at some point, depending on implementers’ feedbacks and issues.
+In order to provide this customization, we use custom selectors, which will hopefully become [standards implemented at some point](https://drafts.csswg.org/css-extensions/), but require PostCSS at the moment. Consequently, you’ll have to rebuild all `dist` stylesheets if you’re changing this file.
 
 ### Flags for user settings
 

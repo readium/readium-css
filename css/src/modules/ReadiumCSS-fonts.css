@@ -10,9 +10,26 @@
 @font-face {
   font-family: AccessibleDfA;
   src: local("AccessibleDfA"),
-    url("fonts/AccessibleDfA.otf") format("opentype");
+    url("fonts/AccessibleDfA-Regular.woff2") format("woff2"),
+    url("fonts/AccessibleDfA-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: AccessibleDfA;
+  src: local("AccessibleDfA"),
+    url("fonts/AccessibleDfA-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: AccessibleDfA;
+  src: local("AccessibleDfA"),
+    url("fonts/AccessibleDfA-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {

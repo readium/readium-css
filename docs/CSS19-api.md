@@ -198,6 +198,22 @@ It impacts font style, weight and variant, text decoration, super and subscripts
 
 * * *
 
+```
+:--no-ruby
+```
+
+Preset: `--USER__noRuby: readium-noRuby-on`
+
+Scope: `html`
+
+Required flag: `:--advancedSettings`
+
+Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+This will hide ruby annotations i.e. `rt` and `rb`.
+
+* * *
+
 **Warning:** if you customize those flags, all ReadiumCSS `dist` stylesheets must be rebuilt.
 
 ## Reading System Styles
@@ -344,7 +360,7 @@ Default is `"Andale Mono", Consolas, monospace`.
 
 A Mincho font-stack whose fonts with proportional latin characters are prioritized for horizontal writing.
 
-Default is `"ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif`.
+Default is `"Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "BIZ UDPMincho", "Yu Mincho", "ＭＳ Ｐ明朝", "MS PMincho", serif`.
 
 * * *
 
@@ -354,7 +370,7 @@ Default is `"ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギ�
 
 A Gothic font-stack whose fonts with proportional latin characters are prioritized for horizontal writing.
 
-Default is `"ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif`.
+Default is `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3", "YuGothic", "Yu Gothic Medium", "BIZ UDPGothic", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif`.
 
 * * *
 
@@ -364,7 +380,7 @@ Default is `"ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3
 
 A Mincho font-stack whose fonts with fixed-width latin characters are prioritized for vertical writing.
 
-Default is `"ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif`.
+Default is `"Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "BIZ UDMincho", "Yu Mincho", "ＭＳ明朝", "MS Mincho", serif`.
 
 * * *
 
@@ -374,7 +390,7 @@ Default is `"ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ�
 
 A Gothic font-stack whose fonts with fixed-width latin characters are prioritized for vertical writing.
 
-Default is `"ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif`.
+Default is `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3", "YuGothic", "Yu Gothic Medium", "BIZ UDGothic", "Yu Gothic", "ＭＳゴシック", "MS Gothic", sans-serif`.
 
 ### Base styles for all ebooks
 
@@ -690,7 +706,7 @@ Scope: `html`
 
 It impacts `body`, `li`, and `p` which are not children of `blockquote` and `figcaption`.
 
-Possible values: `left` (LTR) or `right` (RTL) | `justify`
+Possible values: `left` (LTR) or `right` (RTL) | `start` (logical property resolving to `left` in LTR, `right` in RTL) | `justify`
 
 Required flag: `:--advancedSettings`
 

@@ -161,6 +161,13 @@
       "misMatchThreshold" : 0.1
     },
     {
+      "label": "Letterspacing CJK pref",
+      "url": "http://localhost:8000/tests/letter-spacing-cjk.html",
+      "delay": 0,
+      "selectors": ["document"],
+      "misMatchThreshold" : 0.1
+    },
+    {
       "label": "Ligatures pref",
       "url": "http://localhost:8000/tests/arabic-ligatures.html",
       "delay": 0,
@@ -170,7 +177,7 @@
     {
       "label": "Accessibility font pref",
       "url": "http://localhost:8000/tests/a11y-font.html",
-      "delay": 0,
+      "delay": 200,
       "selectors": ["document"],
       "misMatchThreshold" : 0.1
     },
@@ -184,6 +191,13 @@
     {
       "label": "Accessibility custom pref",
       "url": "http://localhost:8000/tests/a11y-custom.html",
+      "delay": 200,
+      "selectors": ["document"],
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "no Ruby pref",
+      "url": "http://localhost:8000/tests/no-ruby.html",
       "delay": 0,
       "selectors": ["document"],
       "misMatchThreshold" : 0.1

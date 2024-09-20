@@ -12,10 +12,7 @@ Readium CSS provides styles for reflowable text:
 - reading modes (day, night, and sepia);
 - themes;
 - user settings;
-- media overlays and user highlights;
 - a set of baselines and recommendations for accessibility, overrides, and internationalization.
-
-**Readium CSS is currently in alpha** (version `1.0.0-beta.1`).
 
 ## License
 
@@ -46,6 +43,46 @@ You can also use the [webpub manifest prototype](https://github.com/HadrienGarde
 There is no external implementation of Readium CSS so far.
 
 Consequently, if you are encountering rendering issues with Readium (iOS apps, Android apps, or the Readium Chrome App), please report them on the [github section dedicated to the proper Readium project](https://github.com/readium) (readium-js, readium-shared-js, readium-sdk, etc.).
+
+## Development
+
+Active development is pulled in branch `develop` first, and then made available in the main branch when sufficiently tested and deemed stable.
+
+### Init
+
+Building and testing are relying on npm packages and scripts. To initialize your clone/fork, first install dev dependencies:
+
+```
+npm install
+```
+
+In case you’re encountering an error with Puppeteer, make sure you’re using at least Node v.20.11.1 – it might work with an earlier version but only the latest LTS as of March 21, 2024 has been tested.
+
+Then create reference bitmaps for visual regression testing:
+
+```
+npm run test:ref
+```
+
+### Build
+
+To transpile all stylesheets using PostCSS:
+
+```
+npm run build
+```
+
+To test the updated styles and catch visual regression bugs:
+
+```
+npm run test
+```
+
+To update reference bitmaps after a bugfix:
+
+```
+npm run test:approve
+```
 
 ## Docs
 

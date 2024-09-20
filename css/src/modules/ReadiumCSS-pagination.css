@@ -28,6 +28,10 @@
 
   /* Default page horizontal margins (in pixels so that it won’t resize with font-size) */
   --RS__pageGutter: 20px; /* See if colGap and pageGutter can be the same var */
+
+  /* Default viewport width, this var is exposed so that it can be easier to get around the
+     fractional pixel density bug on Android, cf. https://github.com/readium/readium-css/issues/97 */
+  --RS__viewportWidth: 100%;
 }
 
 /* Reset page margins for Forward compatibility */
@@ -53,9 +57,9 @@
 
   /* Switch to newer box model (not inherited by authors’ styles) */
   box-sizing: border-box;
-  min-width: 100%;
-  width: 100%;
-  max-width: 100%;
+  min-width: var(--RS__viewportWidth);
+  width: var(--RS__viewportWidth);
+  max-width: var(--RS__viewportWidth);
   min-height: 100vh;
   height: 100vh;
   max-height: 100vh;

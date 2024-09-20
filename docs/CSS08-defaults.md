@@ -7,7 +7,6 @@ Defaults is currently made of 5 stylesheets:
 - 1 base stylesheet for all ebooks;
 - 1 default reading mode stylesheet for all ebooks (day mode);
 - 1 default stylesheet for unstyled ebooks;
-- 1 stylesheet for user highlights and media overlays;
 - 1 stylesheet to deal with the OS’ a11y modes.
 
 **Note:** The default stylesheet should not be appended if there are author styles in the EPUB file.
@@ -93,7 +92,7 @@ A Mincho font-stack whose fonts with proportional latin characters are prioritiz
 
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
-Default is `"ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif`.
+Default is `"Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "BIZ UDPMincho", "Yu Mincho", "ＭＳ Ｐ明朝", "MS PMincho", serif`.
 
 * * *
 
@@ -105,7 +104,7 @@ A Gothic font-stack whose fonts with proportional latin characters are prioritiz
 
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
-Default is `"ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif`.
+Default is `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3", "YuGothic", "Yu Gothic Medium", "BIZ UDPGothic", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif`.
 
 * * *
 
@@ -117,7 +116,7 @@ A Mincho font-stack whose fonts with fixed-width latin characters are prioritize
 
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
-Default is `"ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif`.
+Default is `"Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "BIZ UDMincho", "Yu Mincho", "ＭＳ明朝", "MS Mincho", serif`.
 
 * * *
 
@@ -129,7 +128,7 @@ A Gothic font-stack whose fonts with fixed-width latin characters are prioritize
 
 Fonts are not necessarily pre-installed, which is the reason why this font-stack is extensive.
 
-Default is `"ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif`.
+Default is `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3", "YuGothic", "Yu Gothic Medium", "BIZ UDGothic", "Yu Gothic", "ＭＳゴシック", "MS Gothic", sans-serif`.
 
 #### Absolute defaults for all ebooks
 
@@ -362,41 +361,7 @@ An optional primary accentuation `color` you could use for headings or any other
 
 An optional secondary accentuation `color` you could use for any element of your choice.
 
-## User highlights and media overlays
-
-### Highlights
-
-You can use classic [insert famous highlighters’ brand] colors in all their neon glory:
-
-- yellow;
-- green;
-- orange;
-- pink.
-
-There’s no blue since it is too close to the default `::selection`.
-
-Ideally, you should offer users the possibility to switch colors when highlighting as they might use a color pattern to manage different types of highlights/notes.
-
-There’s a class syntax you can use to differentiate highlights: `.readiumCSS-{color}-highlight` e.g. `.readiumCSS-yellow-highlight` or `.readiumCSS-pink-highlight`.
-
-Values are declared in `rgba` so that those colors don’t have to be redefined in night modes.
-
-At first sight, contrast is OK for those colors in default and night mode, but it will obviously depend on the `background-color` and `color` values you’re using for themes.
-
-### Media Overlays
-
-We’re using the same one as Readium 1 for interop reasons.
-
-```
-.readiumCSS-mo-active-default {
-  background-color: yellow !important;
-  color: black !important;
-}
-```
-
-It has been prefixed with `readiumCSS-` but you can get rid of it if needed.
-
-### OS’ a11y modes
+## OS’ a11y modes
 
 This stylesheet is intended to deal with a11y settings users can set at the OS level, whenever possible: 
 

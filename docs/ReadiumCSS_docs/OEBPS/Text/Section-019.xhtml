@@ -186,6 +186,20 @@
 
       <hr/>
 
+      <pre><code>:--no-ruby</code></pre>
+
+	    <p>Preset: <code>--USER__noRuby: readium-noRuby-on</code></p>
+
+	    <p>Scope: <code>html</code></p>
+
+	    <p>Required flag: <code>:--advancedSettings</code></p>
+
+	    <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+	    <p>This will hide ruby annotations i.e. <code>rt</code> and <code>rb</code>.</p>
+
+	    <hr/>
+
       <p><strong>Warning:</strong> if you customize those flags, all ReadiumCSS <code>dist</code> stylesheets must be rebuilt.</p>
     </section>
 
@@ -311,7 +325,7 @@
 
         <p>A Mincho font-stack whose fonts with proportional latin characters are prioritized for horizontal writing.</p>
 
-        <p>Default is <code>"ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ 明朝", "MS Mincho", "Hiragino Mincho ProN", serif</code>.</p>
+        <p>Default is <code>"Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "BIZ UDPMincho", "Yu Mincho", "ＭＳ Ｐ明朝", "MS PMincho", serif</code>.</p>
 
         <hr/>
 
@@ -319,7 +333,7 @@
 
         <p>A Gothic font-stack whose fonts with proportional latin characters are prioritized for horizontal writing.</p>
 
-        <p>Default is <code>"ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ ゴシック", "MS Gothic", "Hiragino Sans", sans-serif</code>.</p>
+        <p>Default is <code>""Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3", "YuGothic", "Yu Gothic Medium", "BIZ UDPGothic", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif</code>.</p>
 
         <hr/>
 
@@ -327,7 +341,7 @@
 
         <p>A Mincho font-stack whose fonts with fixed-width latin characters are prioritized for vertical writing.</p>
 
-        <p>Default is <code>"ＭＳ 明朝", "MS Mincho", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "游明朝", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", "Hiragino Mincho ProN", serif</code>.</p>
+        <p>Default is <code>"Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "BIZ UDMincho", "Yu Mincho", "ＭＳ明朝", "MS Mincho", serif</code>.</p>
 
         <hr/>
 
@@ -335,7 +349,7 @@
 
         <p>A Gothic font-stack whose fonts with fixed-width latin characters are prioritized for vertical writing.</p>
 
-        <p>Default is <code>"ＭＳ ゴシック", "MS Gothic", "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Hiragino Sans GB", "ヒラギノ角ゴシック W3", "游ゴシック", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Sans", sans-serif</code>.</p>
+        <p>Default is <code>"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3", "YuGothic", "Yu Gothic Medium", "BIZ UDGothic", "Yu Gothic", "ＭＳゴシック", "MS Gothic", sans-serif</code>.</p>
       </section>
 
       <section id="base-styles-for-all-ebooks" class="level3">
@@ -614,7 +628,7 @@
 
       <p>It impacts <code>body</code>, <code>li</code>, and <code>p</code> which are not children of <code>blockquote</code> and <code>figcaption</code>.</p>
 
-      <p>Possible values: <code>left</code> (LTR) or <code>right</code> (RTL) | <code>justify</code></p>
+      <p>Possible values: <code>left</code> (LTR) or <code>right</code> (RTL) | <code>start</code> (logical property resolving to <code>left</code> in LTR, <code>right</code> in RTL) | <code>justify</code></p>
 
       <p>Required flag: <code>:--advancedSettings</code></p>
 

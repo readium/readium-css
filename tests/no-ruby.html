@@ -1,0 +1,39 @@
+<!doctype html>
+<html style="--USER__view: readium-scroll-on; --USER__advancedSettings: readium-advanced-on; --USER__noRuby: readium-noRuby-on;">
+<head>
+  <title>Test</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="../css/dist/cjk-horizontal/ReadiumCSS-before.css" />
+  <link rel="stylesheet" href="../css/dist/cjk-horizontal/ReadiumCSS-default.css" />
+  <link rel="stylesheet" href="../css/dist/cjk-horizontal/ReadiumCSS-after.css" />
+  <style type="text/css">
+    ruby {
+      background-color: yellow;
+    }
+    rt, rp {
+      background-color: lightcoral;
+    }
+    .spacer {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>ルビ</h1>
+
+  <p>ルビを振りたい親字を含む全体をrubyタグで囲み、その中のrtタグをつけた箇所がルビ部分となる。rubyタグの内側でrpタグで囲った部分は、rubyタグをサポートしていない環境で表示するためのタグであり、rubyタグをサポートしている環境では非表示になる。</p>
+
+  <p class="spacer">Ruby to hide: かんじ</p>
+
+  <p>表意文字である<ruby>漢字<rp>（</rp><rt>かんじ</rt><rp>）</rp></ruby>にルビを振る。</p>
+
+  <p class="spacer">Ruby to hide: Kan ji</p>
+
+  <p><ruby>漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>。</p>
+
+  <p class="spacer">Ruby to hide: Ashita</p>
+
+  <p><ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>。</p>
+</body>
+</html>

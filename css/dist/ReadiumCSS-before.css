@@ -360,12 +360,21 @@ ruby > rt, ruby > rp{
   user-select:none;
 }
 
-*:lang(ja),
-*:lang(zh),
-*:lang(ko),
-:lang(ja) cite, :lang(ja) dfn, :lang(ja) em, :lang(ja) i,
-:lang(zh) cite, :lang(zh) dfn, :lang(zh) em, :lang(zh) i,
-:lang(ko) cite, :lang(ko) dfn, :lang(ko) em, :lang(ko) i{
+*:lang(ja):not(:lang(ja-Latn)):not(:lang(ja-Cyrl)),
+*:lang(zh):not(:lang(zh-Latn)):not(:lang(zh-Cyrl)),
+*:lang(ko):not(:lang(ko-Latn)):not(:lang(ko-Cyrl)),
+:lang(ja):not(:lang(ja-Latn)):not(:lang(ja-Cyrl)) cite, 
+:lang(ja):not(:lang(ja-Latn)):not(:lang(ja-Cyrl)) dfn, 
+:lang(ja):not(:lang(ja-Latn)):not(:lang(ja-Cyrl)) em, 
+:lang(ja):not(:lang(ja-Latn)):not(:lang(ja-Cyrl)) i,
+:lang(zh):not(:lang(zh-Latn)):not(:lang(zh-Cyrl)) cite, 
+:lang(zh):not(:lang(zh-Latn)):not(:lang(zh-Cyrl)) dfn, 
+:lang(zh):not(:lang(zh-Latn)):not(:lang(zh-Cyrl)) em, 
+:lang(zh):not(:lang(zh-Latn)):not(:lang(zh-Cyrl)) i,
+:lang(ko):not(:lang(ko-Latn)):not(:lang(ko-Cyrl)) cite, 
+:lang(ko):not(:lang(ko-Latn)):not(:lang(ko-Cyrl)) dfn, 
+:lang(ko):not(:lang(ko-Latn)):not(:lang(ko-Cyrl)) em, 
+:lang(ko):not(:lang(ko-Latn)):not(:lang(ko-Cyrl)) i{
   font-style:normal;
 }
 

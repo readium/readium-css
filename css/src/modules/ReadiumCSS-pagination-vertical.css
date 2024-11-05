@@ -11,8 +11,8 @@
 
 /* Default for smartphone portrait (small screens) */
 :root {
-  /* The column algorithm will prioritize column-count */
-  --RS__colWidth: auto;
+  /* We need to set this for Safari as it won’t take auto for a single-col */
+  --RS__colWidth: 100vh;
 
   /* Since columns are laid out on the y-axis in vertical-*, we can only use 1 */
   --RS__colCount: 1;

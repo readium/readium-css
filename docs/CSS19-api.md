@@ -202,7 +202,7 @@ Custom properties for the Reading System are prefixed with `--RS__`.
 --RS__colWidth
 ```
 
-The optimal column’s width. We set it to `auto` so that the column-count can be prioritized
+The optimal column’s width. We set it to `100vw` (`100vh` in vertical-writing) for a single-column for Safari – otherwise it won’t fragment content, and `auto` for multiple so that the column-count can be prioritized.
 
 * * *
 

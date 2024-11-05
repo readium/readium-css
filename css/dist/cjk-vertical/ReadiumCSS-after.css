@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 2.0.0-alpha.2)
+ * Readium CSS (v. 2.0.0-alpha.3)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -15,7 +15,7 @@
 @namespace svg url("http://www.w3.org/2000/svg");
 
 :root{
-  --RS__colWidth:auto;
+  --RS__colWidth:100vh;
   --RS__colCount:1;
   --RS__colGap:0;
   --RS__defaultLineLength:40rem;

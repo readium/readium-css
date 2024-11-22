@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 2.0.0-alpha.5)
+ * Readium CSS (v. 2.0.0-alpha.6)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -101,7 +101,7 @@ body{
 
 :root[style*="readium-scroll-on"] body,
 :root[style*="readium-noVerticalPagination-on"] body{
-  --RS__defaultLineLength:40.01rem !important;
+  max-width:var(--RS__defaultLineLength) !important;
 }
 
 @supports (overflow: clip){

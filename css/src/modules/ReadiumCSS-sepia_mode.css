@@ -18,8 +18,6 @@
   /* This can be customized but initial will re-use default value of the browser */
   --RS__selectionBackgroundColor: #b4d8fe;
   --RS__selectionTextColor: inherit;
-
-  --RS__defaultLineLength: 40.01rem; /* Forcing a reflow in Blink/Webkit so that blend mode can work */
 }
 
 /* we don’t need to redeclare bg-color and color for :root since we will inherit and update from day/default mode */

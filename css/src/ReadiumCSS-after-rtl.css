@@ -14,6 +14,7 @@
 @import "modules/user-settings-submodules/ReadiumCSS-lineHeight_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-paraSpacing_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-paraIndent_pref.css";
+@import "modules/user-settings-submodules/ReadiumCSS-wordSpacing_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-arabicLigatures_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-variableFont_pref.css";
 @import "modules/ReadiumCSS-fs_normalize.css";

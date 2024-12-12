@@ -23,3 +23,11 @@
   -moz-column-count: 1;
   column-count: 1;
 }
+
+/* If one column, make sure we reset colWidth for Safari. There is no colNumber setting in vertical writing so we don’t need to address vw/vh */
+:root[style*="--USER__colCount: 0"],
+:root[style*="--USER__colCount:0"],
+:root[style*="--USER__colCount: 1"],
+:root[style*="--USER__colCount:1"] {
+  --RS__colWidth: 100vw;
+}

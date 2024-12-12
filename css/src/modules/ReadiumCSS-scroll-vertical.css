@@ -24,7 +24,7 @@
 /* Make sure line-length is limited in all configs */
 :root:--scroll-view body,
 :root:--no-vertical-pagination body {
-  --RS__defaultLineLength: 40.01rem !important; /* Fixes fragmentation update issues in Webkit i.e. value must be slightly different than the one for pagination */
+  max-width: var(--RS__defaultLineLength) !important;
 }
 
 @supports (overflow: clip) {

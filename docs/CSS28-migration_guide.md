@@ -147,3 +147,17 @@ This patch is intended to fix a [Fixed-Layout issue on Android](https://github.c
 It declares fully metric compatible open source fonts alternatives (Nimbus Roman and Nimbus Sans) as the font-families that generic font-family `serif` and `sans-serif` are usually resolving to on other platforms. Droid Serif and Roboto are not, which creates issues with text that is absolutely positioned in Fixed-Layout e.g. overlapping or overflowing text, etc.
 
 The logic for loading this patch is up to implementers.
+
+## Public exposition of some Reading System Variables
+
+Since version `2.0.0-alpha.8`, ReadiumCSS is exposing variables for pagination, default font-stacks, and day, sepia, and night modes, in JSON form.
+
+This is intended to make it easier for consumers to retrieve important values they need w/o having to get it from the DOM at runtime. For instance, this can be leveraged to keep the theme of the UI and contents in sync (colors and typeface).
+
+For instance, in NodeJS, you would add ReadiumCSS to your dependencies then import it like this:
+
+```
+import sepiaMode from "readium-css/css/vars/sepia.json";
+
+const sepiaBackground = sepiaMode.sepiaMode.RS__backgroundColor;
+```

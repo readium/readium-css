@@ -10,15 +10,7 @@
 
 /* [style*="--USER__appearance"] can be used to increase specificity but performance hit */
 :root:--night-mode {
-  --RS__backgroundColor: #000000;
-  --RS__textColor: #FEFEFE;
-
-  --RS__linkColor: #63caff;
-  --RS__visitedColor: #0099E5;
-
-  /* This can be customized but initial will re-use default value of the browser */
-  --RS__selectionBackgroundColor: #b4d8fe;
-  --RS__selectionTextColor: inherit;
+  @import-json "../../vars/night.json";
 }
 
 /* we don’t need to redeclare bg-color and color for :root since we will inherit and update from day/default mode */

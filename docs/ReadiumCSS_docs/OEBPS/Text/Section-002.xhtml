@@ -218,15 +218,27 @@ root.style.removeProperty("--USER__var");</code></pre>
       </section>
 
       <section id="example" class="level3">
-        <h3 class="sigil_not_in_toc">Example</h3>
+        <h3 class="sigil_not_in_toc">Examples</h3>
 
-        <p>To change hyphenation and justification, you would do the following:</p>
+        <section id="hyphenation-justification" class="level4">
+          <h4 class="sigil_not_in_toc">Changing hyphenation and justification</h4>
 
-        <pre><code>root.style.setProperty("--USER__advancedSettings", "readium-advanced-on"); 
+          <p>To change hyphenation and justification, you would do the following:</p>
+
+          <pre><code>root.style.setProperty("--USER__advancedSettings", "readium-advanced-on"); 
 root.style.setProperty("--USER__textAlign", "justify"); 
 root.style.setProperty("--USER__bodyHyphens", "auto");</code></pre>
 
-        <p>Of course this example is simplistic. You could for instance create an helper to set multiple properties at once.</p>
+          <p>Of course this example is simplistic. You could for instance create an helper to set multiple properties at once.</p>
+        </section>
+
+        <section id="apply-sepia-mode" class="level4">
+          <h4 class="sigil_not_in_toc">Apply sepia mode/theme</h4>
+
+          <p>To apply the sepia theme/mode, you can use a flag that will apply preset values.</p>
+
+          <pre><code>root.style.setProperty("--USER__appearance", "readium-sepia-on");</code></pre>
+        </section>
       </section>
     </section>
 
@@ -236,6 +248,12 @@ root.style.setProperty("--USER__bodyHyphens", "auto");</code></pre>
       <p>In this model, themes are a set of user settings you can store and retrieve. Add the properties to <code>html</code> and you get a theme.</p>
 
       <p>Check the <a href="../Text/Section-012.xhtml">User Preferences doc</a> for a list of available user variables.</p>
+
+      <p>You can also retrieve ReadiumCSS presets for font-stacks and modes by adding it as a dependency, then importing its exposed json files. For instance in JS/TS:</p>
+
+      <pre><code>import sepiaMode from "readium-css/css/vars/sepia.json";
+        
+const sepiaBackground = sepiaMode.sepiaMode.RS__backgroundColor;</code></pre>
     </section>
   </section>
 </body>

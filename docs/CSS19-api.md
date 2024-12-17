@@ -196,6 +196,8 @@ Custom properties for the Reading System are prefixed with `--RS__`.
 
 ### Pagination
 
+Note these variables are publicly exposed as JSON in `css/vars` so that it’s easier to retrieve their value and use it in your codebase.
+
 * * *
 
 ```
@@ -273,6 +275,8 @@ The box model (`box-sizing`) you want to use for media elements.
 The box model (`box-sizing`) you want to use for tables.
 
 ### Default font-stacks
+
+Note these variables are publicly exposed as JSON in `css/vars` so that it’s easier to retrieve their value and use it in your codebase.
 
 * * *
 
@@ -537,6 +541,8 @@ An optional secondary accentuation `color` you could use for any element of your
 ## Reading Modes
 
 Custom properties for reading modes are prefixed with `--RS__`.
+
+Note these variables are publicly exposed as JSON in `css/vars` so that it’s easier to retrieve their value and use it in your codebase.
 
 * * *
 

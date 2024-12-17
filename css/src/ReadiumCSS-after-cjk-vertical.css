@@ -4,6 +4,7 @@
 @import "modules/ReadiumCSS-scroll-vertical.css";
 @import "modules/ReadiumCSS-night_mode.css";
 @import "modules/ReadiumCSS-sepia_mode.css";
+@import "modules/ReadiumCSS-theming.css";
 @import "modules/ReadiumCSS-os_a11y.css";
 @import "modules/user-settings-submodules/ReadiumCSS-lineLength-vertical_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-customColors_pref.css";
@@ -14,4 +15,5 @@
 @import "modules/user-settings-submodules/ReadiumCSS-variableFont_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-letterSpacing_pref.css";
 @import "modules/user-settings-submodules/ReadiumCSS-ruby_pref.css";
+@import "modules/user-settings-submodules/ReadiumCSS-imageFilters_pref.css";
 @import "modules/ReadiumCSS-fs_normalize.css";

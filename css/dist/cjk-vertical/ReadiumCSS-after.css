@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 2.0.0-alpha.6)
+ * Readium CSS (v. 2.0.0-alpha.9)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -296,8 +296,6 @@ body{
 }
 
 :root[style*="--USER__fontSize"]{
-     -webkit-text-size-adjust:none;
-     
   zoom:var(--USER__fontSize) !important;
 }
 

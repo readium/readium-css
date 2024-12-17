@@ -196,8 +196,8 @@ body{
   color:var(--RS__linkColor) !important;
 }
 
-:root[style*="--RS__linkColor"] a:visited,
-:root[style*="--RS__linkColor"] a:visited *{
+:root[style*="--RS__visitedColor"] a:visited,
+:root[style*="--RS__visitedColor"] a:visited *{
   color:var(--RS__visitedColor) !important;
 }
 

@@ -100,6 +100,8 @@
 
       <p>This flag applies the sepia reading mode.</p>
 
+      <p><strong>Note: sepia mode automatically blends images so that you don’t have to manually set the flag.</strong></p>
+
       <hr/>
 
       <pre><code>:--night-mode</code></pre>
@@ -112,6 +114,20 @@
 
       <p>This flag applies the night reading mode.</p>
 
+      <p><strong>Note: night mode automatically inverts gaiji so that you don’t have to manually set the flag.</strong></p>
+
+      <hr/>
+
+      <pre><code>:--blend-filter</code></pre>
+
+      <p>Preset: <code>--USER__blendImages: readium-blend-on</code></p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+      <p>It impacts <code>img</code> and blends them using <code>mix-blend-mode</code>.</p>
+
       <hr/>
 
       <pre><code>:--darken-filter</code></pre>
@@ -122,7 +138,7 @@
 
       <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
-      <p>This will only apply in night mode to darken images and impact <code>img</code>.</p>
+      <p>It impacts <code>img</code> and darken them using a filter (<code>brightness(80%)</code>).</p>
 
       <hr/>
 
@@ -134,7 +150,21 @@
 
       <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
 
-      <p>This will only apply in night mode to invert images and impact <code>img</code>.</p>
+      <p>It impacts <code>img</code> and inverts them using a filter (<code>invert(100%)</code>).</p>
+
+      <p><strong>Note: this will automatically invert gaiji since they are images.</strong></p>
+
+      <hr/>
+
+      <pre><code>:--invert-gaiji</code></pre>
+
+      <p>Preset: <code>--USER__invertGaiji: readium-invertGaiji-on</code></p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+      <p>It impacts gaiji (valid Japanese character as <code>img</code>) and inverts them using a filter (<code>invert(100%)</code>).</p>
 
       <hr/>
 
@@ -809,6 +839,54 @@
       <p>Required flag: <code>:--fontOverride</code></p>
 
       <p>Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)</p>
+
+      <hr/>
+
+      <pre><code>--USER__blendImages</code></pre>
+
+      <p>Blending images with the background color of the current theme.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all images.</p>
+
+      <p>Possible values: <code>readium-blend-on</code></p>
+
+      <hr/>
+
+      <pre><code>--USER__darkenImages</code></pre>
+
+      <p>Darkening images.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all images.</p>
+
+      <p>Possible values: <code>readium-darken-on</code> | <code>percentage</code> e.g. <code>50%</code></p>
+
+      <hr/>
+
+      <pre><code>--USER__invertImages</code></pre>
+
+      <p>Inverting colors of images.</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts all images, including gaiji</p>
+
+      <p>Possible values: <code>readium-invert-on</code> | <code>percentage</code> e.g. <code>50%</code></p>
+
+      <hr/>
+
+      <pre><code>--USER__invertGaiji</code></pre>
+
+      <p>Inverting colors of gaiji (valid Japanese character as image).</p>
+
+      <p>Scope: <code>html</code></p>
+
+      <p>It impacts images with a <code>gaiji</code> class name.</p>
+
+      <p>Possible values: <code>readium-invertGaiji-on</code> | <code>percentage</code> e.g. <code>50%</code></p>
     </section>
   </section>
 </body>

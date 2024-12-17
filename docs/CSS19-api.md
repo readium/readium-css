@@ -100,6 +100,8 @@ Override class: Chrome (should be applied by any means necessary)
 
 This flag applies the sepia reading mode.
 
+**Note: sepia mode automatically blends images so that you don’t have to manually set the flag.**
+
 * * * 
 
 ```
@@ -114,6 +116,23 @@ Override class: Chrome (should be applied by any means necessary)
 
 This flag applies the night reading mode.
 
+**Note: night mode automatically inverts gaiji so that you don’t have to manually set the flag.**
+
+* * * 
+
+```
+:--blend-filter
+```
+
+Preset: `--USER__blendImages: readium-blend-on`
+
+Scope: `html`
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+It impacts `img` and blends them using `mix-blend-mode`.
+
+
 * * * 
 
 ```
@@ -126,7 +145,7 @@ Scope: `html`
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
-This will only apply in night mode to darken images and impact `img`.
+It impacts `img` and darken them using a filter (`brightness(80%)`).
 
 * * * 
 
@@ -140,7 +159,23 @@ Scope: `html`
 
 Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
 
-This will only apply in night mode to invert images and impact `img`.
+It impacts `img` and invert them using a filter (`invert(100%)`).
+
+**Note: this will automatically invert gaiji since they are images.**
+
+* * * 
+
+```
+:--invert-gaiji
+```
+
+Preset: `--USER__invertGaiji: readium-invertGaiji-on`
+
+Scope: `html`
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+It impacts gaiji (valid Japanese character as `img`) and invert them using a filter (`invert(100%)`).
 
 * * *
 
@@ -909,3 +944,59 @@ Possible values: `ultra-condensed` | `extra-condensed` | `condensed` | `semi-con
 Required flag: `:--fontOverride`
 
 Override class: User settings advanced (optional but should be applied by any means necessary if provided to users)
+
+* * *
+
+```
+--USER__blendImages
+```
+
+Blending images with the background color of the current theme.
+
+Scope: `html`
+
+It impacts all images.
+
+Possible values: `readium-blend-on`
+
+* * *
+
+```
+--USER__darkenImages
+```
+
+Darkening images.
+
+Scope: `html`
+
+It impacts all images.
+
+Possible values: `readium-darken-on` | `percentage` e.g. `50%`
+
+* * *
+
+```
+--USER__invertImages
+```
+
+Inverting colors of images.
+
+Scope: `html`
+
+It impacts all images, including gaiji.
+
+Possible values: `readium-invert-on` | `percentage` e.g. `50%`
+
+* * *
+
+```
+--USER__invertGaiji
+```
+
+Inverting colors of gaiji (valid Japanese character as image).
+
+Scope: `html`
+
+It impacts images with a `gaiji` class name.
+
+Possible values: `readium-invertGaiji-on` | `percentage` e.g. `50`

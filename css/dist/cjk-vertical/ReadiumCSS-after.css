@@ -15,11 +15,18 @@
 @namespace svg url("http://www.w3.org/2000/svg");
 
 :root{
-  --RS__colWidth:100vh;
-  --RS__colCount:1;
-  --RS__colGap:0;
-  --RS__defaultLineLength:40rem;
-  --RS__pageGutter:0;
+
+   --RS__viewportWidth:100%;
+
+   --RS__pageGutter:0;
+
+   --RS__defaultLineLength:40rem;
+
+   --RS__colGap:0;
+
+   --RS__colCount:1;
+
+   --RS__colWidth:100vw;
 }
 
 @page{
@@ -101,7 +108,7 @@ body{
 
 :root[style*="readium-scroll-on"] body,
 :root[style*="readium-noVerticalPagination-on"] body{
-  --RS__defaultLineLength:40.01rem !important;
+  max-width:var(--RS__defaultLineLength) !important;
 }
 
 @supports (overflow: clip){
@@ -116,13 +123,18 @@ body{
 }
 
 :root[style*="readium-night-on"]{
-  --RS__backgroundColor:#000000;
-  --RS__textColor:#FEFEFE;
+
+  --RS__selectionTextColor:inherit;
+
+  --RS__selectionBackgroundColor:#b4d8fe;
+
+  --RS__visitedColor:#0099E5;
 
   --RS__linkColor:#63caff;
-  --RS__visitedColor:#0099E5;
-  --RS__selectionBackgroundColor:#b4d8fe;
-  --RS__selectionTextColor:inherit;
+
+  --RS__textColor:#FEFEFE;
+
+  --RS__backgroundColor:#000000;
 }
 
 :root[style*="readium-night-on"] *:not(a){
@@ -169,15 +181,18 @@ body{
 }
 
 :root[style*="readium-sepia-on"]{
-  --RS__backgroundColor:#faf4e8;
-  --RS__textColor:#121212;
 
-  --RS__linkColor:#0000EE;
-  --RS__visitedColor:#551A8B;
-  --RS__selectionBackgroundColor:#b4d8fe;
   --RS__selectionTextColor:inherit;
 
-  --RS__defaultLineLength:40.01rem;
+  --RS__selectionBackgroundColor:#b4d8fe;
+
+  --RS__visitedColor:#551A8B;
+
+  --RS__linkColor:#0000EE;
+
+  --RS__textColor:#121212;
+
+  --RS__backgroundColor:#faf4e8;
 }
 
 :root[style*="readium-sepia-on"] *:not(a){

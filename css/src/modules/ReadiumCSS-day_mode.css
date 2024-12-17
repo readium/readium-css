@@ -9,12 +9,7 @@
 /* CONFIG */
 
 :root {
-  --RS__backgroundColor: #FFFFFF;
-  --RS__textColor: #121212;
-
-  /* This can be customized but initial will re-use default value of the browser */
-  --RS__selectionBackgroundColor: #b4d8fe;
-  --RS__selectionTextColor: inherit;
+  @import-json "../../vars/day.json";
 }
 
 :root {

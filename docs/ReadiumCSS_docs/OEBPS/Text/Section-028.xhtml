@@ -142,7 +142,7 @@
     </section>
 
     <section id="updated-recommandations-for-libre-and-open-source-fonts" class="level2">
-      <h2 id="sigil_toc_id_200">Updated recommandations for libre and open source fonts</h2>
+      <h2 id="sigil_toc_id_205">Updated recommandations for libre and open source fonts</h2>
   
       <p>Typeface Clear Sans has been replaced with IBM Plex Sans, the former project having been archived, with no more design and development happening in the future.</p>
   
@@ -150,7 +150,7 @@
     </section>
 
     <section id="support-for-variable-fonts" class="level2">
-      <h2 id="sigil_toc_id_201">Support for variable fonts</h2>
+      <h2 id="sigil_toc_id_206">Support for variable fonts</h2>
   
       <p>In version 2, ReadiumCSS provides support for three registered (read common) axes so that you can expose them as user settings.</p>
   
@@ -172,13 +172,27 @@
     </section>
 
     <section id="addition-of-a-fonts-patch-for-android" class="level2">
-      <h2 id="sigil_toc_id_202">Addition of a fonts patch for Android</h2>
+      <h2 id="sigil_toc_id_207">Addition of a fonts patch for Android</h2>
   
       <p>This patch is intended to fix a <a href="https://github.com/readium/readium-css/issues/149">Fixed-Layout issue on Android</a>, and only on this platform. <strong>It doesn’t apply to reflowable EPUBs or any other platform.</strong></p>
   
       <p>It declares fully metric compatible open source fonts alternatives (Nimbus Roman and Nimbus Sans) as the font-families that generic font-family <code>serif</code> and <code>sans-serif</code> are usually resolving to on other platforms. Droid Serif and Roboto are not, which creates issues with text that is absolutely positioned in Fixed-Layout e.g.&#160;overlapping or overflowing text, etc.</p>
   
       <p>The logic for loading this patch is up to implementers.</p>
+    </section>
+
+    <section id="public-exposition-of-some-rs-variables" class="level2">
+      <h2 id="sigil_toc_id_208">Public exposition of some Reading System Variables</h2>
+
+      <p>Since version <code>2.0.0-alpha.8</code>, ReadiumCSS is exposing variables for pagination, default font-stacks, and day, sepia, and night modes, in JSON form.</p>
+
+      <p>This is intended to make it easier for consumers to retrieve important values they need w/o having to get it from the DOM at runtime. For instance, this can be leveraged to keep the theme of the UI and contents in sync (colors and typeface).</p>
+
+      <p>For instance, in NodeJS, you would add ReadiumCSS to your dependencies then import it like this:</p>
+
+      <pre><code>import sepiaMode from "readium-css/css/vars/sepia.json";
+
+const sepiaBackground = sepiaMode.sepiaMode.RS__backgroundColor;</code></pre>
     </section>
   </section>
 </body>

@@ -7,6 +7,7 @@ module.exports = (ctx) => ({
       root: ctx.file.dirname
     }),
     require("postcss-custom-selectors")({}),
+    require("@daltontan/postcss-import-json")({}),
     require("postcss-discard-comments")({}),
     require("stylelint")({
       "fix": true,

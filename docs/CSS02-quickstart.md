@@ -164,7 +164,9 @@ root.style.removeProperty("--USER__var");
 
 Please note you must implement a fallback strategy if you want to support Internet Explorer 11 and early versions of Microsoft Edge.
 
-### Example
+### Examples
+
+#### Changing hyphenation and justification
 
 To change hyphenation and justification you would do the following:
 
@@ -176,6 +178,13 @@ root.style.setProperty("--USER__bodyHyphens", "auto");
 
 Of course this example is simplistic. You could for instance create an helper to set multiple properties at once.
 
+#### Apply sepia theme/mode
+
+To apply the sepia theme/mode, you can use a flag that will apply preset values.
+
+```
+root.style.setProperty("--USER__appearance", "readium-sepia-on");
+
 ```
 
 ## Create Themes
@@ -183,3 +192,11 @@ Of course this example is simplistic. You could for instance create an helper to
 In this model, themes are a set of user settings you can store and retrieve. Add the properties to `html` and you get a theme.
 
 Check the [User Preferences doc](../docs/CSS12-user_prefs.md) for a list of available user variables.
+
+You can also retrieve ReadiumCSS presets for font-stacks and modes by adding it as a dependency, then importing its exposed json files. For instance in JS/TS:
+
+```
+import sepiaMode from "readium-css/css/vars/sepia.json";
+
+const sepiaBackground = sepiaMode.sepiaMode.RS__backgroundColor;
+```

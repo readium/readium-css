@@ -1327,19 +1327,19 @@
       <navLabel>
         <text>Updated recommandations for libre and open source fonts</text>
       </navLabel>
-      <content src="Text/Section-028.xhtml#sigil_toc_id_200" />
+      <content src="Text/Section-028.xhtml#sigil_toc_id_205" />
     </navPoint>
     <navPoint id="navPoint221">
       <navLabel>
         <text>Support for variable fonts</text>
       </navLabel>
-      <content src="Text/Section-028.xhtml#sigil_toc_id_201" />
+      <content src="Text/Section-028.xhtml#sigil_toc_id_206" />
     </navPoint>
     <navPoint id="navPoint222">
       <navLabel>
         <text>Addition of a fonts patch for Android</text>
       </navLabel>
-      <content src="Text/Section-028.xhtml#sigil_toc_id_202" />
+      <content src="Text/Section-028.xhtml#sigil_toc_id_207" />
     </navPoint>
   </navPoint>
 </navMap>

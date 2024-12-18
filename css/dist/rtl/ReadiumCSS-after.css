@@ -315,7 +315,7 @@ body{
   color:var(--USER__textColor) !important;
 }
 
-:root[style*="--USER__textColor"] *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre):not(a){
+:root[style*="--USER__textColor"] *:not(a){
   color:inherit !important;
 }
 

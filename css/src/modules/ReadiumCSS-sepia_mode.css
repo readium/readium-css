@@ -28,10 +28,3 @@
 :root:--sepia-mode a:visited * {
   color: var(--RS__visitedColor);
 }
-
-:root:--sepia-mode svg,
-:root:--sepia-mode img {
-  /* Make sure the proper bg-color is used for the blend mode */
-  background-color: transparent !important;
-  mix-blend-mode: multiply;
-}

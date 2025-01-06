@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 2.0.0-alpha.10)
+ * Readium CSS (v. 2.0.0-alpha.11)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -185,12 +185,6 @@ body{
   color:var(--RS__visitedColor);
 }
 
-:root[style*="readium-sepia-on"] svg,
-:root[style*="readium-sepia-on"] img{
-  background-color:transparent !important;
-  mix-blend-mode:multiply;
-}
-
 :root[style*="--RS__linkColor"] a:link,
 :root[style*="--RS__linkColor"] a:link *{
   color:var(--RS__linkColor) !important;
@@ -317,6 +311,13 @@ body{
 
 :root[style*="--USER__textColor"] *:not(a){
   color:inherit !important;
+  background-color:transparent !important;
+  border-color:currentcolor !important;
+}
+
+:root[style*="--USER__textColor"] svg text{
+  fill:currentcolor !important;
+  stroke:none !important;
 }
 
 :root[style*="readium-font-on"][style*="--USER__fontFamily"]{

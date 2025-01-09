@@ -474,6 +474,48 @@ root.style.setProperty("name of var", "");</code></pre>
       <p>It becomes even easier to override them for the user as the values are already user settings.</p>
 
       <p>In other words, think of preset and custom themes as a set of variables, which makes it easier to create, manipulate and cache them.</p>
+
+      <section id="theming-features" class="level3">
+        <h3 class="sigil_not_in_toc">Theming Features</h3>
+
+        <section id="blending-images" class="level4">
+          <h4 class="sigil_not_in_toc">Blending images</h4>
+
+          <pre><code>--USER__blendImages</code></pre>
+
+          <p>Possible values: <code>readium-blend-on</code>.</p>
+
+          <p>This will apply a <code>mix-blend-mode</code> of <code>multiply</code> with a transparent background to blend images with a white background with the background-color of your theme.</p>
+        </section>
+
+        <section id="darkening-images" class="level4">
+          <h4 class="sigil_not_in_toc">Darkening images</h4>
+
+          <pre><code>--USER__darkenImages</code></pre>
+
+          <p>Possible values: <code>readium-darken-on</code> | <code>percentage</code> e.g. <code>50%</code>.</p>
+
+          <p>This will apply a <code>brightness</code> filter with the percentage value it’s given, or a preset of <code>80%</code> if using it as a flag.</p>
+        </section>
+
+        <section id="inverting-images" class="level4">
+          <h4 class="sigil_not_in_toc">Inverting images (and/or Gaiji)</h4>
+
+          <pre><code>--USER__invertImages</code></pre>
+
+          <p>Possible values: <code>readium-invert-on</code> | <code>percentage</code> e.g. <code>50%</code>.</p>
+
+          <p>This will apply an <code>invert</code> filter with the percentage value it’s given, or a preset of <code>100%</code> if using it as a flag.</p>
+
+          <p>If you want to only invert gaiji (valid Japanese character as <code>img</code>), you can use:</p>
+
+          <pre><code>--USER__invertGaiji</code></pre>
+
+          <p>Possible values: <code>readium-invertGaiji-on</code> | <code>percentage</code> e.g. <code>50%</code>.</p>
+
+          <p>This will apply an <code>invert</code> filter with the percentage value it’s given, or a preset of <code>100%</code> if using it as a flag, only to <code>img class="gaiji"</code>.</p>
+        </section>
+      </section>
     </section>
 
     <section id="alternative-options" class="level2">

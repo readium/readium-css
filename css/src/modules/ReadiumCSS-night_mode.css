@@ -44,21 +44,3 @@
   -webkit-filter: invert(100%);
   filter: invert(100%);
 }
-
-/* Darken all images on user’s demand */
-:root:--night-mode:--darken-filter img {
-  -webkit-filter: brightness(80%);
-  filter: brightness(80%);
-}
-
-/* Invert all images on user’s demand */
-:root:--night-mode:--invert-filter img {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
-
-/* Darken and invert on user’s demand */
-:root:--night-mode:--darken-filter:--invert-filter img {
-  -webkit-filter: brightness(80%) invert(100%);
-  filter: brightness(80%) invert(100%);
-}

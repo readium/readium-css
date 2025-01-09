@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 2.0.0-alpha.9)
+ * Readium CSS (v. 2.0.0-beta.1)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -165,21 +165,6 @@ body{
   filter:invert(100%);
 }
 
-:root[style*="readium-night-on"][style*="readium-darken-on"] img{
-  -webkit-filter:brightness(80%);
-  filter:brightness(80%);
-}
-
-:root[style*="readium-night-on"][style*="readium-invert-on"] img{
-  -webkit-filter:invert(100%);
-  filter:invert(100%);
-}
-
-:root[style*="readium-night-on"][style*="readium-darken-on"][style*="readium-invert-on"] img{
-  -webkit-filter:brightness(80%) invert(100%);
-  filter:brightness(80%) invert(100%);
-}
-
 :root[style*="readium-sepia-on"]{
 
   --RS__selectionTextColor:inherit;
@@ -210,10 +195,24 @@ body{
   color:var(--RS__visitedColor);
 }
 
-:root[style*="readium-sepia-on"] svg,
-:root[style*="readium-sepia-on"] img{
-  background-color:transparent !important;
-  mix-blend-mode:multiply;
+:root[style*="--RS__linkColor"] a:link,
+:root[style*="--RS__linkColor"] a:link *{
+  color:var(--RS__linkColor) !important;
+}
+
+:root[style*="--RS__visitedColor"] a:visited,
+:root[style*="--RS__visitedColor"] a:visited *{
+  color:var(--RS__visitedColor) !important;
+}
+
+:root[style*="--RS__selectionBackgroundColor"][style*="--RS__selectionTextColor"] ::-moz-selection{
+  color:var(--RS__selectionTextColor) !important;
+  background-color:var(--RS__selectionBackgroundColor) !important;
+}
+
+:root[style*="--RS__selectionBackgroundColor"][style*="--RS__selectionTextColor"] ::selection{
+  color:var(--RS__selectionTextColor) !important;
+  background-color:var(--RS__selectionBackgroundColor) !important;
 }
 
 @media screen and (-ms-high-contrast: active){
@@ -298,8 +297,15 @@ body{
   color:var(--USER__textColor) !important;
 }
 
-:root[style*="--USER__textColor"] *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre){
+:root[style*="--USER__textColor"] *:not(a){
   color:inherit !important;
+  background-color:transparent !important;
+  border-color:currentcolor !important;
+}
+
+:root[style*="--USER__textColor"] svg text{
+  fill:currentcolor !important;
+  stroke:none !important;
 }
 
 :root[style*="readium-font-on"][style*="--USER__fontFamily"]{
@@ -370,6 +376,62 @@ body{
 :root[style*="readium-advanced-on"][style*="readium-noRuby-on"] body rt,
 :root[style*="readium-advanced-on"][style*="readium-noRuby-on"] body rp{
   display:none;
+}
+
+:root[style*="readium-blend-on"] svg,
+:root[style*="readium-blend-on"] img{
+  background-color:transparent !important;
+  mix-blend-mode:multiply !important;
+}
+
+:root[style*="--USER__darkenImages"] img{
+  -webkit-filter:brightness(var(--USER__darkenImages)) !important;
+  filter:brightness(var(--USER__darkenImages)) !important;
+}
+
+:root[style*="readium-darken-on"] img{
+  -webkit-filter:brightness(80%) !important;
+  filter:brightness(80%) !important;
+}
+
+:root[style*="--USER__invertImages"] img{
+  -webkit-filter:invert(var(--USER__invertImages)) !important;
+  filter:invert(var(--USER__invertImages)) !important;
+}
+
+:root[style*="readium-invert-on"] img{
+  -webkit-filter:invert(100%) !important;
+  filter:invert(100%) !important;
+}
+
+:root[style*="--USER__darkenImages"][style*="--USER__invertImages"] img{
+  -webkit-filter:brightness(var(--USER__darkenImages)) invert(var(--USER__invertImages)) !important;
+  filter:brightness(var(--USER__darkenImages)) invert(var(--USER__invertImages)) !important;
+}
+
+:root[style*="readium-darken-on"][style*="--USER__invertImages"] img{
+  -webkit-filter:brightness(80%) invert(var(--USER__invertImages)) !important;
+  filter:brightness(80%) invert(var(--USER__invertImages)) !important;
+}
+
+:root[style*="--USER__darkenImages"][style*="readium-invert-on"] img{
+  -webkit-filter:brightness(var(--USER__darkenImages)) invert(100%) !important;
+  filter:brightness(var(--USER__darkenImages)) invert(100%) !important;
+}
+
+:root[style*="readium-darken-on"][style*="readium-invert-on"] img{
+  -webkit-filter:brightness(80%) invert(100%) !important;
+  filter:brightness(80%) invert(100%) !important;
+}
+
+:root[style*="--USER__invertGaiji"] img[class*="gaiji"]{
+  -webkit-filter:invert(var(--USER__invertGaiji)) !important;
+  filter:invert(var(--USER__invertGaiji)) !important;
+}
+
+:root[style*="readium-invertGaiji-on"] img[class*="gaiji"]{
+  -webkit-filter:invert(100%) !important;
+  filter:invert(100%) !important;
 }
 
 @supports not (zoom: 1){

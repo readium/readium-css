@@ -26,8 +26,10 @@
 @custom-selector :--night-mode [style*="readium-night-on"];
 
 /* Filters (images) */
+@custom-selector :--blend-filter [style*="readium-blend-on"];
 @custom-selector :--darken-filter [style*="readium-darken-on"];
 @custom-selector :--invert-filter [style*="readium-invert-on"];
+@custom-selector :--invert-gaiji [style*="readium-invertGaiji-on"];
 
 /* Disabling pagination for vertical writing */
 @custom-selector :--no-vertical-pagination [style*="readium-noVerticalPagination-on"];

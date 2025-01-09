@@ -442,6 +442,50 @@ It becomes even easier to override them for the user as the values are already u
 
 In other words, think of preset and custom themes as a set of variables, which makes it easier to create, manipulate and cache them.
 
+### Theming Features
+
+Filters are available for theming purposes so that you can handle images more precisely. 
+
+#### Blending images
+
+```
+--USER__blendImages
+```
+
+Possible values: `readium-blend-on`.
+
+This will apply a `mix-blend-mode` of `multiply` with a transparent background to blend images with a white background with the background-color of your theme. 
+
+#### Darkening images
+
+```
+--USER__darkenImages
+```
+
+Possible values: `readium-darken-on` | `percentage` e.g. `50%`.
+
+This will apply a `brightness` filter with the percentage value it’s given, or a preset of `80%` if using it as a flag. 
+
+#### Inverting images (and/or Gaiji)
+
+```
+--USER__invertImages
+```
+
+Possible values: `readium-invert-on` | `percentage` e.g. `50%`.
+
+This will apply an `invert` filter with the percentage value it’s given, or a preset of `100%` if using it as a flag.
+
+If you want to only invert gaiji (valid Japanese character as `img`), you can use:
+
+```
+--USER__invertGaiji
+```
+
+Possible values: `readium-invertGaiji-on` | `percentage` e.g. `50%`.
+
+This will apply an `invert` filter with the percentage value it’s given, or a preset of `100%` if using it as a flag, only to `img class="gaiji"`.
+
 ## Alternative options
 
 There is not a lot of alternatives when it comes to managing user settings. Options include:

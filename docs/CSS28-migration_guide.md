@@ -161,3 +161,15 @@ import sepiaMode from "readium-css/css/vars/sepia.json";
 
 const sepiaBackground = sepiaMode.sepiaMode.RS__backgroundColor;
 ```
+
+## Theming Improvements
+
+Since version `2.0.0-alpha.10`, ReadiumCSS is enforcing the color of links if their custom properties are set on `:root/html`, and exposing the blending, darkening, and inverting of images globally. 
+
+The motivation is to make life of consumers a little bit easier when it comes to creating custom themes.
+
+Previously, you had to rely on day, sepia, and night mode to enforce the color of links and benefit from their specific image flags/features. 
+
+These decisions are now made to consumers’ discretion, which means they can invert images in their darkest custom themes without having to override ReadiumCSS’ night mode colors for instance, or offer these features to users as they see fit – globally or scoped to a subset of themes – in their app. 
+
+**Note you’ll have to take gaiji into account in dark custom themes as inverting them so that they match the color of text can only be done automatically in readiumCSS’ own night mode.**

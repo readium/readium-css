@@ -24,8 +24,8 @@ The following settings are optional but should be applied by any means necessary
 
 - number of columns;
 - line length;
-- custom reading modes (background and text color);
-- filters (darken and invert for night mode).
+- custom reading modes/themes (background, text, link and selection colors);
+- image filters (blend, darken and invert).
 
 ## User overrides
 
@@ -50,6 +50,6 @@ The following settings are optional but should be applied by any means necessary
 - font optical sizing (requires `:--font-overide` flag and a variable font);
 - font weight (requires `:--font-overide` flag and a variable font);
 - font width (requires `:--font-overide` flag and a variable font);
-- type scale.
+- image filters.
 
 Please note this classification might change and additional items be added in the future.

@@ -1341,6 +1341,18 @@
       </navLabel>
       <content src="Text/Section-028.xhtml#sigil_toc_id_207" />
     </navPoint>
+    <navPoint id="navPoint223">
+      <navLabel>
+        <text>Public exposition of some Reading System Variables</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_208" />
+    </navPoint>
+    <navPoint id="navPoint224">
+      <navLabel>
+        <text>Theming improvements</text>
+      </navLabel>
+      <content src="Text/Section-028.xhtml#sigil_toc_id_209" />
+    </navPoint>
   </navPoint>
 </navMap>
 </ncx>

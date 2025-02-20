@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 2.0.0-beta.2)
+ * Readium CSS (v. 2.0.0-beta.3)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -276,22 +276,22 @@ body{
 
 :root[style*="--USER__linkColor"] a:link,
 :root[style*="--USER__linkColor"] a:link *{
-  color:var(--RS__linkColor) !important;
+  color:var(--USER__linkColor) !important;
 }
 
 :root[style*="--USER__visitedColor"] a:visited,
 :root[style*="--USER__visitedColor"] a:visited *{
-  color:var(--RS__visitedColor) !important;
+  color:var(--USER__visitedColor) !important;
 }
 
 :root[style*="--USER__selectionBackgroundColor"][style*="--USER__selectionTextColor"] ::-moz-selection{
-  color:var(--RS__selectionTextColor) !important;
-  background-color:var(--RS__selectionBackgroundColor) !important;
+  color:var(--USER__selectionTextColor) !important;
+  background-color:var(--USER__selectionBackgroundColor) !important;
 }
 
 :root[style*="--USER__selectionBackgroundColor"][style*="--USER__selectionTextColor"] ::selection{
-  color:var(--RS__selectionTextColor) !important;
-  background-color:var(--RS__selectionBackgroundColor) !important;
+  color:var(--USER__selectionTextColor) !important;
+  background-color:var(--USER__selectionBackgroundColor) !important;
 }
 
 :root[style*="--USER__colCount"]{

@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 2.0.0-beta.1)
+ * Readium CSS (v. 2.0.0-beta.2)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -185,26 +185,6 @@ body{
   color:var(--RS__visitedColor);
 }
 
-:root[style*="--RS__linkColor"] a:link,
-:root[style*="--RS__linkColor"] a:link *{
-  color:var(--RS__linkColor) !important;
-}
-
-:root[style*="--RS__visitedColor"] a:visited,
-:root[style*="--RS__visitedColor"] a:visited *{
-  color:var(--RS__visitedColor) !important;
-}
-
-:root[style*="--RS__selectionBackgroundColor"][style*="--RS__selectionTextColor"] ::-moz-selection{
-  color:var(--RS__selectionTextColor) !important;
-  background-color:var(--RS__selectionBackgroundColor) !important;
-}
-
-:root[style*="--RS__selectionBackgroundColor"][style*="--RS__selectionTextColor"] ::selection{
-  color:var(--RS__selectionTextColor) !important;
-  background-color:var(--RS__selectionBackgroundColor) !important;
-}
-
 @media screen and (-ms-high-contrast: active){
 
   :root{
@@ -271,6 +251,49 @@ body{
 @media screen and (prefers-reduced-motion){
 }
 
+:root[style*="--USER__backgroundColor"]{
+  background-color:var(--USER__backgroundColor) !important;
+}
+
+:root[style*="--USER__backgroundColor"] *{
+  background-color:transparent !important;
+}
+
+:root[style*="--USER__textColor"]{
+  color:var(--USER__textColor) !important;
+}
+
+:root[style*="--USER__textColor"] *:not(a){
+  color:inherit !important;
+  background-color:transparent !important;
+  border-color:currentcolor !important;
+}
+
+:root[style*="--USER__textColor"] svg text{
+  fill:currentcolor !important;
+  stroke:none !important;
+}
+
+:root[style*="--USER__linkColor"] a:link,
+:root[style*="--USER__linkColor"] a:link *{
+  color:var(--RS__linkColor) !important;
+}
+
+:root[style*="--USER__visitedColor"] a:visited,
+:root[style*="--USER__visitedColor"] a:visited *{
+  color:var(--RS__visitedColor) !important;
+}
+
+:root[style*="--USER__selectionBackgroundColor"][style*="--USER__selectionTextColor"] ::-moz-selection{
+  color:var(--RS__selectionTextColor) !important;
+  background-color:var(--RS__selectionBackgroundColor) !important;
+}
+
+:root[style*="--USER__selectionBackgroundColor"][style*="--USER__selectionTextColor"] ::selection{
+  color:var(--RS__selectionTextColor) !important;
+  background-color:var(--RS__selectionBackgroundColor) !important;
+}
+
 :root[style*="--USER__colCount"]{
   -webkit-column-count:var(--USER__colCount);
   -moz-column-count:var(--USER__colCount);
@@ -296,29 +319,6 @@ body{
 :root[style*="--USER__lineLength"] body{
     max-width:var(--USER__lineLength) !important;
   }
-
-:root[style*="--USER__backgroundColor"]{
-  background-color:var(--USER__backgroundColor) !important;
-}
-
-:root[style*="--USER__backgroundColor"] *{
-  background-color:transparent !important;
-}
-
-:root[style*="--USER__textColor"]{
-  color:var(--USER__textColor) !important;
-}
-
-:root[style*="--USER__textColor"] *:not(a){
-  color:inherit !important;
-  background-color:transparent !important;
-  border-color:currentcolor !important;
-}
-
-:root[style*="--USER__textColor"] svg text{
-  fill:currentcolor !important;
-  stroke:none !important;
-}
 
 :root[style*="readium-advanced-on"][style*="--USER__textAlign"]{
   text-align:var(--USER__textAlign);

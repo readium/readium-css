@@ -1,5 +1,5 @@
 /*
- * Readium CSS (v. 2.0.0-beta.1)
+ * Readium CSS (v. 2.0.0-beta.2)
  * Developers: Jiminy Panoz 
  * Copyright (c) 2017. Readium Foundation. All rights reserved.
  * Use of this source code is governed by a BSD-style license which is detailed in the
@@ -197,6 +197,10 @@ math{
   --RS__selectionTextColor:inherit;
 
   --RS__selectionBackgroundColor:#b4d8fe;
+
+  --RS__visitedColor:#551A8B;
+
+  --RS__linkColor:#0000EE;
 
   --RS__textColor:#121212;
 

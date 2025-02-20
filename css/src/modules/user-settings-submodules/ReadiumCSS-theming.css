@@ -11,12 +11,12 @@
 
 :root[style*="--USER__linkColor"] a:link,
 :root[style*="--USER__linkColor"] a:link * {
-  color: var(--RS__linkColor) !important;
+  color: var(--USER__linkColor) !important;
 }
    
 :root[style*="--USER__visitedColor"] a:visited,
 :root[style*="--USER__visitedColor"] a:visited * {
-  color: var(--RS__visitedColor) !important;
+  color: var(--USER__visitedColor) !important;
 }
 
 /* Color of ::selection */
@@ -24,11 +24,11 @@
    as it is using !important and will override authors’ styles. */
 
 :root[style*="--USER__selectionBackgroundColor"][style*="--USER__selectionTextColor"] ::-moz-selection {
-  background-color: var(--RS__selectionBackgroundColor) !important;
-  color: var(--RS__selectionTextColor) !important;
+  background-color: var(--USER__selectionBackgroundColor) !important;
+  color: var(--USER__selectionTextColor) !important;
 }
 
 :root[style*="--USER__selectionBackgroundColor"][style*="--USER__selectionTextColor"] ::selection {
-  background-color: var(--RS__selectionBackgroundColor) !important;
-  color: var(--RS__selectionTextColor) !important;
+  background-color: var(--USER__selectionBackgroundColor) !important;
+  color: var(--USER__selectionTextColor) !important;
 }

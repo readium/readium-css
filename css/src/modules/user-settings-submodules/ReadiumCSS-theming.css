@@ -1,7 +1,7 @@
 /* Readium CSS
    Theming module
 
-   A stylesheet to enforce link colors and image filters
+   A stylesheet to enforce link colors
    This is intended to make it easier to create custom themes
    without having to rely on preset modes as a base to override
 
@@ -9,13 +9,13 @@
 
 /* Color of links (:link + :visited) */
 
-:root[style*="--RS__linkColor"] a:link,
-:root[style*="--RS__linkColor"] a:link * {
+:root[style*="--USER__linkColor"] a:link,
+:root[style*="--USER__linkColor"] a:link * {
   color: var(--RS__linkColor) !important;
 }
    
-:root[style*="--RS__visitedColor"] a:visited,
-:root[style*="--RS__visitedColor"] a:visited * {
+:root[style*="--USER__visitedColor"] a:visited,
+:root[style*="--USER__visitedColor"] a:visited * {
   color: var(--RS__visitedColor) !important;
 }
 
@@ -23,12 +23,12 @@
 /* This differs from the implementation inherited in (default) day mode 
    as it is using !important and will override authors’ styles. */
 
-:root[style*="--RS__selectionBackgroundColor"][style*="--RS__selectionTextColor"] ::-moz-selection {
+:root[style*="--USER__selectionBackgroundColor"][style*="--USER__selectionTextColor"] ::-moz-selection {
   background-color: var(--RS__selectionBackgroundColor) !important;
   color: var(--RS__selectionTextColor) !important;
 }
 
-:root[style*="--RS__selectionBackgroundColor"][style*="--RS__selectionTextColor"] ::selection {
+:root[style*="--USER__selectionBackgroundColor"][style*="--USER__selectionTextColor"] ::selection {
   background-color: var(--RS__selectionBackgroundColor) !important;
   color: var(--RS__selectionTextColor) !important;
 }

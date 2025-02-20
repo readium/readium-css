@@ -213,16 +213,27 @@ Override class: Chrome advanced (optional but should be applied by any means nec
 
 To reset, remove the variable.
 
-### Themes (background and text colors)
+### Themes
 
-The user can set a `background-color` and `color`. 
+The user can set at least a `background-color` and `color`. 
 
-The following two variables must be used together.
+At minimal, the following two variables should therefore must be used together.
 
 ```
 --USER__backgroundColor
 --USER__textColor
 ```
+
+You can use 4 other properties to handle the color of links and selection:
+
+```
+--USER__linkColor
+--USER__visitedColor
+--USER__selectionBackgroundColor
+--USER__selectionTextColor
+```
+
+It’s up to implementers to decide whether they want to expose these as user settings i.e. for power/advanced users, or set them after deriving the value from background and text color (e.g. a contrast algorithm). 
 
 Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
 

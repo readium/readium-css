@@ -12,6 +12,10 @@
 
   --USER__backgroundColor: ;  /* Custom color (not preset mode) */
   --USER__textColor: ;        /* Custom color (not preset mode) */
+  --USER__linkColor: ;        /* Custom color (not preset mode) */
+  --USER__visitedColor: ;     /* Custom color (not preset mode) */
+  --USER__selectionBackgroundColor: ; /* Custom color (not preset mode) */
+  --USER__selectionTextColor: ; /* Custom color (not preset mode) */
 
   --USER__textAlign: ;        /* left, justify */
   --USER__bodyHyphens: ;      /* none, auto */

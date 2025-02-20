@@ -699,7 +699,87 @@ The `color` for textual contents.
 
 Scope: `html`
 
-It impacts all elements but headings and `pre` in the DOM.
+It impacts all elements in the DOM.
+
+Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
+
+Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+To reset, remove the CSS variable.
+
+* * *
+
+```
+--USER__linkColor
+```
+
+The `color` for links.
+
+Scope: `html`
+
+It impacts all anchor elements in the DOM that have not been visited yet.
+
+Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
+
+Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+To reset, remove the CSS variable.
+
+* * *
+
+```  
+--USER__visitedColor
+```
+
+The `color` for visited links.
+
+Scope: `html`
+
+It impacts all anchor elements in the DOM that have already been visited.
+
+Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
+
+Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+To reset, remove the CSS variable.
+
+* * *
+
+```
+--USER__selectionBackgroundColor
+```
+
+The `background-color` for selected text.
+
+Scope: `html`
+
+It impacts all elements in the DOM.
+
+Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
+
+Required flag: none
+
+Override class: Chrome advanced (optional but should be applied by any means necessary if provided to users)
+
+To reset, remove the CSS variable.
+
+* * *
+
+```
+--USER__selectionTextColor
+```
+
+The `color` for selected text.
+
+Scope: `html`
+
+It impacts all elements in the DOM.
 
 Possible values: Color HEX (e.g. `#FFFFFF`), `rgb(a)`, `hsl`.
 

@@ -235,14 +235,24 @@ root.style.setProperty("name of var", "");</code></pre>
         </section>
       </section>
 
-      <section id="themes-background-and-text-colors" class="level3">
-        <h3 class="sigil_not_in_toc">Themes (background and text colors)</h3>
+      <section id="themes" class="level3">
+        <h3 class="sigil_not_in_toc">Themes</h3>
 
-        <p>The user can set a <code>background-color</code> and <code>color</code>.</p>
+        <p>The user can set at least a <code>background-color</code> and <code>color</code>.</p>
 
-        <p>The following two variables must be used together.</p>
+        <p>At minimal, the following two variables should therefore must be used together.</p>
 
-        <pre><code>--USER__backgroundColor --USER__textColor</code></pre>
+        <pre><code>--USER__backgroundColor 
+--USER__textColor</code></pre>
+
+        <p>You can use 4 other properties to handle the color of links and selection:</p>
+
+        <pre><code>--USER__linkColor
+--USER__visitedColor
+--USER__selectionBackgroundColor
+--USER__selectionTextColor</code></pre>
+
+        <p>It’s up to implementers to decide whether they want to expose these as user settings i.e. for power/advanced users, or set them after deriving the value from background and text color (e.g. a contrast algorithm).</p> 
 
         <p>Possible values: Color HEX (e.g. <code>#FFFFFF</code>), <code>rgb(a)</code>, <code>hsl</code>.</p>
 

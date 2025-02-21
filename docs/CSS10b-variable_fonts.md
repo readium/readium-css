@@ -145,7 +145,7 @@ Then each font was:
 
 Global info:
 
-- Source: https://github.com/productiontype/Newsreader
+- Source: [https://github.com/productiontype/Newsreader](https://github.com/productiontype/Newsreader)
 - Google Fonts: YES
 - Design: Production Type
 - License: SIL-OFL
@@ -167,7 +167,7 @@ Variations: weight (`200–800`), optical sizing.
 
 Global info:
 
-- Source: https://github.com/georgd/EB-Garamond
+- Source: [https://github.com/georgd/EB-Garamond](https://github.com/georgd/EB-Garamond)
 - Google Fonts: YES
 - Design: Georg Duffner, Octavio Pardo
 - License: SIL-OFL
@@ -189,7 +189,7 @@ Variations: weight (`400–800`)
 
 Global info:
 
-- Source: https://github.com/Fonthausen/CrimsonPro
+- Source: [https://github.com/Fonthausen/CrimsonPro](https://github.com/Fonthausen/CrimsonPro)
 - Google Fonts: YES
 - Design: Jacques Le Bailly
 - License: SIL-OFL
@@ -219,7 +219,7 @@ Variations: weight (`200–900`)
 
 Global info:
 
-- Source: https://github.com/CommercialType/RobotoSerif
+- Source: [https://github.com/CommercialType/RobotoSerif](https://github.com/CommercialType/RobotoSerif)
 - Google Fonts: YES
 - Design: Commercial Type, Greg Gazdowicz
 - License: SIL-OFL
@@ -241,7 +241,7 @@ Variations: weight (`100–900`), width (`50–150`), optical sizing
 
 Global info:
 
-- Source: http://github.com/adobe-fonts/source-serif-pro/releases/latest
+- Source: [http://github.com/adobe-fonts/source-serif-pro/releases/latest](http://github.com/adobe-fonts/source-serif-pro/releases/latest)
 - Google Fonts: YES
 - Design: Frank Grießhammer
 - License: SIL-OFL
@@ -271,7 +271,7 @@ Variations: weight (`200–900`), optical sizing
 
 Global info:
 
-- Source: https://github.com/googlefonts/roboto-flex
+- Source: [https://github.com/googlefonts/roboto-flex](https://github.com/googlefonts/roboto-flex)
 - Google Fonts: YES
 - Design: Font Bureau, David Berlow, Santiago Orozco, Irene Vlachou, Ilya Ruderman, Yury Ostromentsky, Mikhail Strukov
 - License: SIL-OFL
@@ -293,7 +293,7 @@ Variations: weight (`100–1000`), width (`25–151`), optical sizing
 
 Global info:
 
-- Source: https://github.com/uswds/public-sans
+- Source: [https://github.com/uswds/public-sans](https://github.com/uswds/public-sans)
 - Google Fonts: YES
 - Design: USWDS, Dan Williams, Pablo Impallari, Rodrigo Fuenzalida
 - License: SIL-OFL
@@ -321,7 +321,7 @@ Variations: weight (`100–900`)
 
 Global info:
 
-- Source: https://github.com/impallari/Cabin
+- Source: [https://github.com/impallari/Cabin](https://github.com/impallari/Cabin)
 - Google Fonts: YES
 - Design: Impallari Type, Rodrigo Fuenzalida
 - License: SIL-OFL
@@ -345,7 +345,7 @@ Variations: weight (`400–700`), width (`75–100`)
 
 Global info:
 
-- Source: https://github.com/adobe-fonts/source-code-pro/releases/latest
+- Source: [https://github.com/adobe-fonts/source-code-pro/releases/latest](https://github.com/adobe-fonts/source-code-pro/releases/latest)
 - Google Fonts: YES
 - Design: Paul D. Hunt
 - License: SIL-OFL
@@ -361,14 +361,31 @@ OpenType Features: none.
 
 Variations: weight (`200–900`)
 
+## Accessibility
+
+A variable version of [Atkinson Hyperlegible Next](https://www.brailleinstitute.org/freefont/?_sc=NjQ1ODg2NiM2ODIzNA%3D%3D#:~:text=The%20Atkinson%20Hyperlegible%20Next%E2%84%A2%20Font) and [Atkinson Hyperlegible Mono](https://www.brailleinstitute.org/freefont/?_sc=NjQ1ODg2NiM2ODIzNA%3D%3D#:~:text=The%20Atkinson%20Hyperlegible%20Mono%E2%84%A2%20Font) are available, with support for over 150 languages.
+
+These 2 fonts are also available on [Google Fonts](https://fonts.google.com/?query=Atkinson).
+
+Global info:
+
+- Source: [https://www.brailleinstitute.org/freefont](https://www.brailleinstitute.org/freefont)
+- Google Fonts: YES
+- Design: Braille Institute, Applied Design Works, Elliott Scott, Megan Eiswerth, Letters from Sweden
+- License: SIL-OFL
+
+OpenType Features: numeric figure values.
+
+Variations: weight (`200–800`)
+
 ## Arabic (ar) and Persian (fa)
 
 ### Estedad
 
 Global info:
 
-- Source: https://github.com/aminabedi68/Estedad
-- Google Fonts: No
+- Source: [https://github.com/aminabedi68/Estedad](https://github.com/aminabedi68/Estedad)
+- Google Fonts: NO
 - Design: Amin Abedi
 - License: SIL-OFL
 
@@ -380,7 +397,7 @@ Variations: weight (`100–900`)
 
 Global info:
 
-- Source: https://github.com/BornaIz/markazitext
+- Source: [https://github.com/BornaIz/markazitext](https://github.com/BornaIz/markazitext)
 - Google Fonts: YES
 - Design: Borna Izadpanah, Florian Runge, Fiona Ross
 - License: SIL-OFL
